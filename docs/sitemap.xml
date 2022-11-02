@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>/docs/wisecost/</loc>
+  </url><url>
+    <loc>/products/</loc>
+  </url><url>
+    <loc>/docs/</loc>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/tags/product/</loc>
+  </url><url>
+    <loc>/tags/</loc>
+  </url><url>
+    <loc>/tags/wisecost/</loc>
+  </url><url>
+    <loc>/categories/wisecost/</loc>
+  </url><url>
+    <loc>/</loc>
+  </url><url>
+    <loc>/search/</loc>
+  </url><url>
+    <loc>/about/</loc>
+  </url><url>
+    <loc>/solutions/</loc>
+  </url><url>
+    <loc>/consultations/</loc>
+  </url>
+</urlset>

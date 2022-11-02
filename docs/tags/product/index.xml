@@ -1,0 +1,109 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – product</title>
+    <link>/tags/product/</link>
+    <description>Recent content in product on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/tags/product/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 成本管理</title>
+      <link>/docs/wisecost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/docs/wisecost/featured-clustercost-get_hu29dd6219042c2feab3b2402370bd556b_62321_640x0_resize_q75_catmullrom.jpg" width="640" height="295"/>]]>
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost提供了云原生应用成本监控、管理和优化能力。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Wisecost能够帮助用户对云原生应用的成本监控、管理和优化，主要功能包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;评估云原生应用的成本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;评估集群的整体成本以及分类成本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;评估集群和应用的健康性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提供优化建议。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/featured-clustercost-get_hu29dd6219042c2feab3b2402370bd556b_62321_600x300_fill_q75_catmullrom_smart1.jpg&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+集群成本展示
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/featured-namespacecost-get_hu3ffbbbf40b0460fec8ac4e695d51d7c4_68602_600x300_fill_q75_catmullrom_smart1.jpg&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+名称空间成本展示
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/featured-namespacedailycost-get_hu8becfc7e359ba1d5d51c393edd7ae8a0_76067_600x300_fill_q75_catmullrom_smart1.jpg&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+名称空间成本展示
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

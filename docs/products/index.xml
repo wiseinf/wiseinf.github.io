@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Product</title>
+    <link>/products/</link>
+    <description>Recent content in Product on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/products/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
