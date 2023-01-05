@@ -2,7 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/docs/wisecost/setup/</loc>
+  </url><url>
     <loc>/docs/wisecost/</loc>
+  </url><url>
+    <loc>/docs/wisecost/import-aliyun/</loc>
+  </url><url>
+    <loc>/docs/wisecost/cluster-cost/</loc>
+  </url><url>
+    <loc>/docs/wisecost/cost/</loc>
+  </url><url>
+    <loc>/docs/wisecost/optimize/</loc>
   </url><url>
     <loc>/products/</loc>
   </url><url>
@@ -15,6 +25,8 @@
     <loc>/tags/wisecost/</loc>
   </url><url>
     <loc>/</loc>
+  </url><url>
+    <loc>/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
   </url><url>
     <loc>/search/</loc>
   </url><url>

@@ -13,5 +13,332 @@
       
     
     
+    <item>
+      <title>Docs: 安装部署</title>
+      <link>/docs/wisecost/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/setup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost提供了云原生应用成本监控、管理和优化能力。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;前置条件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mysql数据库&lt;/li&gt;
+&lt;li&gt;kubernetes集群，版本1.20及以上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正在撰写中，敬请期待。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 导入阿里云集群</title>
+      <link>/docs/wisecost/import-aliyun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/import-aliyun/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本节描述导入阿里云集群的详细步骤。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;完成Wisecost安装之后，登录系统，选择“概览”，可见&lt;code&gt;概览页面&lt;/code&gt;，&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-01_hud8965e357a159a39d1a1f512c93ab966_99152_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+概览页面
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在“导入阿里云集群-设置阿里云访问凭据页面”设置&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;，&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;可从阿里云获得，具体请参考&lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;创建Access Key&lt;/a&gt;。设置完成&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;后，点击下一步。系统完成验证&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;的正确性后，进入“导入阿里云集群-Kubernetes集群及访问设置页面”。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在“导入阿里云集群-设置阿里云访问凭据页面”，也可以选择“使用已有凭据”，选择一个已经存在的凭据。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-02_hu586c8a1becbc05e284939f91daadb27a_113445_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+导入阿里云集群-设置阿里云访问凭据页面
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在“导入阿里云集群-Kubernetes集群及访问设置页面”，可以选择&lt;code&gt;托管集群&lt;/code&gt;，也可以选择&lt;code&gt;自建集群&lt;/code&gt;。下面以&lt;code&gt;自建集群&lt;/code&gt;为例，说明相应的参数。完成参数设置后点击&lt;code&gt;下一步&lt;/code&gt;，系统完成参数正确性验证后，进入“导入阿里云集群-设置Prometheus访问页面”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;集群地域&lt;/td&gt;
+&lt;td&gt;集群地域指集群所部署的地域，务必正确制定地域，否则会导致集群无法访问。具体请参见&lt;a href=&#34;https://help.aliyun.com/document_detail/40654.htm&#34;&gt;地域和可用区&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;集群ID&lt;/td&gt;
+&lt;td&gt;唯一标识ID，用于唯一的标识一个集群&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;集群名称&lt;/td&gt;
+&lt;td&gt;集群名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;描述&lt;/td&gt;
+&lt;td&gt;集群相关描述&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeconfig&lt;/td&gt;
+&lt;td&gt;访问集群的Kubeconfig文件，需开通对于集群的只读访问权限。不正确的设置会导致无法访问集群或者获取集群中的对象出错。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-03_huc147e3acda1852672af64d72e460f678_213466_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+导入阿里云集群-Kubernetes集群及访问设置页面
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;在“导入阿里云集群-设置Prometheus访问页面”，设置Prometheus访问地址。完成参数设置后点击&lt;code&gt;下一步&lt;/code&gt;，进入&lt;code&gt;导入阿里云集群-导入页面&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-04_hu3a9e998635effd9d0941e230833f287d_99312_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+导入阿里云集群-设置Prometheus访问页面
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;在&lt;code&gt;导入阿里云集群-导入页面&lt;/code&gt;点击&lt;code&gt;导入&lt;/code&gt;按钮，系统提交完信息后，显示&lt;code&gt;导入阿里云集群-导入成功页面&lt;/code&gt;。至此，阿里云集群已经导入成功。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-05_huc147e3acda1852672af64d72e460f678_178791_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+导入阿里云集群-导入成功页面
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;返回“概览页”，可以在列表中看到已经导入的集群。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-06_hud8965e357a159a39d1a1f512c93ab966_107599_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+概览页-已导入阿里云集群
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;在完成集群导入之后，可以进入“集群”和“成本”标签栏，查看该集群的总体整体以及相应的名称空间的成本。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 查看集群成本</title>
+      <link>/docs/wisecost/cluster-cost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/cluster-cost/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看集群成本及其各项指标含义。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h1 id=&#34;查看集群整体成本&#34;&gt;查看集群整体成本&lt;/h1&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cluster-cost/cluster_hu4bfafccac42b9b6a42c1edc84e13cdde_163621_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+集群成本展示
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 查看应用成本</title>
+      <link>/docs/wisecost/cost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/cost/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看和分析应用成本.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h1 id=&#34;查看名称空间累计成本&#34;&gt;查看名称空间累计成本&lt;/h1&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/cost-acc_hu307bdfdbfd550fbf632e967b3585b6ea_163412_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+名称空间累计成本
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;查看名称空间分时成本&#34;&gt;查看名称空间分时成本&lt;/h1&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/cost-steps_hu397de65b7bd5f2bc371731638a0b82fe_177252_900x417_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+名称空间分时成本
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 成本优化</title>
+      <link>/docs/wisecost/optimize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/optimize/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述了基于Wisecost内置策略，优化成本的过程.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
