@@ -1,21 +1,21 @@
 {
   "name": "wiseinf-site",
   "version": "0.0.1",
-  "description": "Hugo theme for technical documentation.",
+  "description": "Wiseinf Inc. official website.",
   "main": "none.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/google/docsy-example.git"
+    "url": "git+https://github.com/wiseinf/wiseinf.github.io"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/google/docsy-example/issues"
+    "url": "https://github.com/wiseinf/wiseinf.github.io"
   },
-  "homepage": "https://github.com/google/docsy-example#readme",
+  "homepage": "https://github.com/wiseinf/wiseinf.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
