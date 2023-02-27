@@ -17,8 +17,18 @@ resources:
 Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看集群成本及其各项指标含义。
 {{% /pageinfo %}}
 
-# 查看集群整体成本
+## 查看集群整体成本
 
-{{< imgproc cluster Fill "900x414" >}}
-集群成本展示
+{{< imgproc cluster-1 Resize "900x" >}}
+集群整体成本
+{{< /imgproc >}}
+
+{{< imgproc cluster-2 Resize "900x" >}}
+集群整体成本分解
+{{< /imgproc >}}
+
+## 查看单个集群成本
+
+{{< imgproc cluster-3 Resize "900x" >}}
+单个集群成本
 {{< /imgproc >}}
