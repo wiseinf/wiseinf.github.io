@@ -38,8 +38,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.a4d314009f60e29ebc2320719ffeeed9e6cfa98affda431d1e00a19f7e8d0abf.css" as="style">
-<link href="/scss/main.min.a4d314009f60e29ebc2320719ffeeed9e6cfa98affda431d1e00a19f7e8d0abf.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.51516168c89c428d96dee216c68e4cd8e718706b4a855562f76258200c963235.css" as="style">
+<link href="/scss/main.min.51516168c89c428d96dee216c68e4cd8e718706b4a855562f76258200c963235.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -80,11 +80,7 @@ if (!doNotTrack) {
       </ul>
   </div>
   <div class="navbar-nav d-none d-lg-block">
-    <div class="td-search">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
-</div>
-
+    
   </div>
 </nav>
     </header>
@@ -126,7 +122,7 @@ if (!doNotTrack) {
     
     
 	
-<li>1: <a href="#pg-ce3d627338373eb36647f1856751531a">安装部署</a></li>
+<li>1: <a href="#pg-d1501d8c0fcaf4a0c0134a7c69ba635e">安装部署</a></li>
 
 
     
@@ -145,7 +141,7 @@ if (!doNotTrack) {
     
     
 	
-<li>2: <a href="#pg-51629354a79a06a5357fc0c14900f096">导入阿里云集群</a></li>
+<li>2: <a href="#pg-f8724eef5ecfc709ba9ec953f1658ee2">导入阿里云集群</a></li>
 
 
     
@@ -164,7 +160,7 @@ if (!doNotTrack) {
     
     
 	
-<li>3: <a href="#pg-647f461749e2a664df9a7c650689fa91">查看集群成本</a></li>
+<li>3: <a href="#pg-79c3c5401e75cd51b9d3c28865234518">查看集群成本</a></li>
 
 
     
@@ -183,7 +179,7 @@ if (!doNotTrack) {
     
     
 	
-<li>4: <a href="#pg-b02e1dc4633161178a0c3360d4b92649">查看应用成本</a></li>
+<li>4: <a href="#pg-8aaf6cb4995450b6fc76e7ad887b0eb3">查看节点成本</a></li>
 
 
     
@@ -202,7 +198,26 @@ if (!doNotTrack) {
     
     
 	
-<li>5: <a href="#pg-3cdb4833066d311ff61c2c2217a63af0">成本优化</a></li>
+<li>5: <a href="#pg-aea197f3575cb0df1ded1df55290950c">查看应用成本</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-0d313d792f0ef08d3b1695b67d8bddea">成本优化</a></li>
 
 
     
@@ -258,7 +273,7 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ce3d627338373eb36647f1856751531a">1 - 安装部署</h1>
+	<h1 id="pg-d1501d8c0fcaf4a0c0134a7c69ba635e">1 - 安装部署</h1>
     <div class="lead">描述了如何安装Wisecost的详细步骤.</div>
 	
 
@@ -267,14 +282,550 @@ if (!doNotTrack) {
 
 </div>
 
-<p>前置条件</p>
+<h2 id="前置条件">前置条件</h2>
 <ul>
 <li>Mysql数据库</li>
 <li>kubernetes集群，版本1.20及以上</li>
 </ul>
+<h2 id="克隆安装脚本">克隆安装脚本</h2>
+<ol>
+<li>打开控制台，输入<code>git clone https://github.com/wiseinf/setup.git</code>,将安装脚本克隆到本地。
+我们提供了2个仓库地址，方便大家根据需求来克隆到本地。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>仓库</th>
+<th style="text-align:left">仓库地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Github</td>
+<td style="text-align:left"><a href="https://github.com/wiseinf/setup.git">https://github.com/wiseinf/setup.git</a></td>
+</tr>
+<tr>
+<td>Gitee</td>
+<td style="text-align:left"><a href="https://gitee.com/wiseinf/setup.git">https://gitee.com/wiseinf/setup.git</a></td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>正在撰写中，敬请期待。</p>
+<p>后续步骤都假设已将<code>setup</code>库克隆到用户主目录，若未克隆到用户主目录，则需要根据实际情况调整命令中的文件路径。</p>
 </blockquote>
+<h2 id="初始化数据库">初始化数据库</h2>
+<blockquote>
+<p>假设Mysql数据库主机地址为：<code>127.0.0.1</code>.</p>
+</blockquote>
+<ol>
+<li>
+<p>在控制台执行命令<code>mysql -h127.0.0.1 -uroot</code>，输入密码，登录mysql数据库。其中<code>127.0.0.1</code>为Mysql主机地址。</p>
+</li>
+<li>
+<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>storage</code>库和<code>wisecost</code>库及相应表。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/wisecost/sql/create_database.sql
+</span></span></code></pre></div></li>
+<li>
+<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>wisecost</code>用户（默认密码为<code>Wisecost~</code>）并为其赋予<code>storage</code>库和<code>wisecost</code>库的完全访问权限。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/wisecost/sql/create_user.sql
+</span></span></code></pre></div></li>
+<li>
+<p>在控制台执行命令<code>mysql -h127.0.0.1 -uwisecost</code>，输入密码（默认密码为<code>Wisecost~</code>），登录mysql数据库。</p>
+</li>
+<li>
+<p>在<code>mysql&gt;</code>提示符下执行<code>show database</code>，确认<code>storage</code>库和<code>wisecost</code>库已经创建。可以通过<code>select</code>语句（例如<code>select * from storage.pv</code>）查询库中相应的数据表确认用户的权限是否正常。</p>
+</li>
+<li>
+<p>至此，数据库初始化完毕。</p>
+</li>
+</ol>
+<h2 id="部署应用">部署应用</h2>
+<ol>
+<li>通过 <code>kubectl apply -f ~/setup/wisecost/namespace.yaml</code>将如下文件应用到集群，创建名称空间<code>wiseinf-system</code>。
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">v1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Namespace</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf-system</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf-system</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span></code></pre></div>
+    
+</li>
+<li>通过 <code>kubectl apply -f ~/setup/wisecost/wisecost.yaml</code>将如下文件应用到集群，部署应用<strong>Wise Cost</strong>。
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">v1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ConfigMap</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">nginx-config</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">namespace</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf-system</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">data</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">default.conf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">|-</span><span style="color:#8f5902;font-style:italic">
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      server {
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        listen 80;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        location / {
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">          root /usr/share/nginx/html/;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">          include /etc/nginx/mime.types;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">          try_files $uri $uri/ /index.html;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">          location /api/ {
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">            rewrite ^/api/(.*) /$1 break;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">            proxy_set_header Host $host;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">            proxy_set_header X-Real-IP $remote_addr;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">            proxy_set_header X-NginX-Proxy true;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">            proxy_pass http://localhost:7070;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">          }
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        }
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      }</span><span style="color:#f8f8f8;text-decoration:underline">      
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">v1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ConfigMap</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-conf</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">namespace</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf-system</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">data</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">wisecost.yaml</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">|-</span><span style="color:#8f5902;font-style:italic">
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">    server:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      port: 7070
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      allowedOrigins:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      - &#34;http://wisecost&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      - &#34;https://wisecost&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      - &#34;http://47.92.69.144&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">    engine:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      defaultClusterId: default
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      max_prometheus_query_duration: 1440m
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      scrape_interval: 30s
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      aggregate_labels:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        environment:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - env
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        product:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - product
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        application:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - application
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - app
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        department:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - department
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        team:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - team
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - group
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        owner:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        - owner
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">    optimize:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      dataSourceName: &#34;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      maxOpenConns: 10
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">    storage:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      type: file
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      parameters:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        path: &#34;data/clusters.yaml&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        directory: &#34;data/&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">    kubestore:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      type: mysql
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">      parameters:
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        dataSourceName: &#34;wisecost:Wisecost~@tcp(mysql:3306)/storage?charset=utf8mb4&amp;parseTime=true&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">        maxOpenConns: 10</span><span style="color:#f8f8f8;text-decoration:underline">    
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Deployment</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">apps/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">namespace</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf-system</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">replicas</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">revisionHistoryLimit</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">selector</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">matchLabels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">hostNetwork</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">dnsPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ClusterFirstWithHostNet</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">securityContext</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">runAsUser</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-ui</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf/wisecost-ui:eebb346</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">imagePullPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">IfNotPresent</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">nginx-config</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">/etc/nginx/conf.d</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">containerPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">80</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">protocol</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">TCP</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">requests</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">cpu</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">200m</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">memory</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">500M</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">limits</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">cpu</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1000m</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">memory</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">2G</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wiseinf/wisecost:3f3e222</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">command</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#4e9a06">&#34;/wisecost/wisecost&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">imagePullPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">IfNotPresent</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-data-volume</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">/wisecost/data</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-logs-volume</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">/wisecost/logs</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-conf-volume</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">/wisecost/conf</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">#              subPath: wisecost.yml</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">containerPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">7070</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">protocol</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">TCP</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">requests</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">cpu</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">200m</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">memory</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">500M</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">limits</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">cpu</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1000m</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">memory</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">2G</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">volumes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># Config for wisecost-ui</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">nginx-config</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">configMap</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">nginx-config</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic"># Configs for wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-data-volume</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">hostPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">/wisecost/data1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">type</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DirectoryOrCreate</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-logs-volume</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">hostPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">path</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">/wisecost/logs</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">type</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DirectoryOrCreate</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-conf-volume</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">configMap</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-conf</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">---</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Service</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">v1</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost-ui</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">wisecost-ui-service</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">80</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">targetPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">80</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">selector</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">type</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NodePort</span></span></span></code></pre></div>
+    
+</li>
+<li>通过<code>kubectl port-forward svc/wisecost-ui-service 80:80</code></li>
+<li>访问URL<code>http://localhost</code>，即可看到Wise Cost首页。</li>
+<li>至此，应用<strong>Wise Cost</strong>部署完毕。</li>
+</ol>
+<h2 id="下一步导入集群">下一步：导入集群</h2>
+<p>下一步，您可以添加一个集群，查看其各项成本。详见导入集群<a href="/docs/wisecost/import-aliyun">导入阿里云集群</a></p>
+<h2 id="附录">附录</h2>
+<ul>
+<li>脚本<code>create_user.sql</code>
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">USER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">@</span><span style="color:#4e9a06">&#39;%&#39;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">IDENTIFIED</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">BY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;Wisecost~&#39;</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">GRANT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ALL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ON</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TO</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">@</span><span style="color:#4e9a06">&#39;%&#39;</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">GRANT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ALL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ON</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TO</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">@</span><span style="color:#4e9a06">&#39;%&#39;</span><span style="color:#000;font-weight:bold">;</span></span></span></code></pre></div>
+    
+</li>
+<li>脚本<code>create_database.sql</code>
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- MySQL Workbench Migration
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Migrated Schemata: storage, user, wisecost
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Source Schemata: storage, user, wisecost
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Created: Thu Feb  2 19:28:13 2023
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Workbench Version: 8.0.31
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">FOREIGN_KEY_CHECKS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Schema storage
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">DROP</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SCHEMA</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SCHEMA</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.namespace
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">namespace</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_ns_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.node
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_node_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.pod
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">pod</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_pod_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.pv
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">pv</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_pv_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.pvc
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">pvc</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_pvc_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.service
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">service</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_service_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table storage.storageclass
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">storageclass</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">mode</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">resourceVersion</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">node</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">idx_sc_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Schema wisecost
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">DROP</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SCHEMA</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SCHEMA</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table wisecost.cloud_provider
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cloud_provider</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">accessKey</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">accessKeySecret</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cloud_type</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">UNIQUE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name_UNIQUE</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table wisecost.cloud_provider_params
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cloud_provider_params</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cloud_provider_id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">param_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">param_value</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">512</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">UNIQUE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">IDX_CPID_PARAM_NAME</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cloud_provider_id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">param_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table wisecost.cluster
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">cluster</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cluster_id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cluster_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">description</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">512</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">region_id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cloudprovider_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">kube_config</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">MEDIUMTEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">prometheus_addr</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">45</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cluster_id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">INDEX</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">IDX_NAME</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">cluster_name</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">ASC</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- Table wisecost.optimize_item
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">CREATE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">TABLE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">IF</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">EXISTS</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">wisecost</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">.</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">optimize_item</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">INT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AUTO_INCREMENT</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">rule</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">description</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">TEXT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">64</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">timestamp</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">DATETIME</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">CURRENT_TIMESTAMP</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">saving</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">FLOAT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NOT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;0&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">actions</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">VARCHAR</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">32</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">ignore</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">TINYINT</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;0&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#204a87;font-weight:bold">delete</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">TINYINT</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">NULL</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;0&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PRIMARY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">KEY</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">`</span><span style="color:#000;font-weight:bold">))</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000">ENGINE</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">InnoDB</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">DEFAULT</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87">CHARACTER</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">SET</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">utf8mb4</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">
+    </span></span></span></code></pre></div>
+    
+</li>
+</ul>
 
 </div>
 
@@ -302,7 +853,7 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-51629354a79a06a5357fc0c14900f096">2 - 导入阿里云集群</h1>
+	<h1 id="pg-f8724eef5ecfc709ba9ec953f1658ee2">2 - 导入阿里云集群</h1>
     <div class="lead">本节描述导入阿里云集群的详细步骤.</div>
 	
 
@@ -312,8 +863,8 @@ if (!doNotTrack) {
 </div>
 
 <ol>
-<li>完成Wisecost安装之后，登录系统，选择“概览”，可见<code>概览页面</code>，</li>
-</ol>
+<li>
+<p>完成Wisecost安装之后，登录系统，选择“概览”，可见<code>概览页面</code>，
 
 
 
@@ -331,13 +882,14 @@ if (!doNotTrack) {
 	</figcaption>
 	
 </figure>
-
-<ol start="2">
-<li>在“导入阿里云集群-设置阿里云访问凭据页面”设置<code>Access Key</code>和<code>Access Key Secret</code>，<code>Access Key</code>和<code>Access Key Secret</code>可从阿里云获得，具体请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。设置完成<code>Access Key</code>和<code>Access Key Secret</code>后，点击下一步。系统完成验证<code>Access Key</code>和<code>Access Key Secret</code>的正确性后，进入“导入阿里云集群-Kubernetes集群及访问设置页面”。</li>
+</p>
+</li>
+<li>
+<p>在“导入阿里云集群-设置阿里云访问凭据页面”设置<code>Access Key</code>和<code>Access Key Secret</code>，<code>Access Key</code>和<code>Access Key Secret</code>可从阿里云获得，具体请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。设置完成<code>Access Key</code>和<code>Access Key Secret</code>后，点击下一步。系统完成验证<code>Access Key</code>和<code>Access Key Secret</code>的正确性后，进入“导入阿里云集群-Kubernetes集群及访问设置页面”。</p>
+</li>
 </ol>
 <blockquote>
-<p>在“导入阿里云集群-设置阿里云访问凭据页面”，也可以选择“使用已有凭据”，选择一个已经存在的凭据。</p>
-</blockquote>
+<p>在“导入阿里云集群-设置阿里云访问凭据页面”，也可以选择“使用已有凭据”，选择一个已经存在的凭据。
 
 
 
@@ -355,7 +907,8 @@ if (!doNotTrack) {
 	</figcaption>
 	
 </figure>
-
+</p>
+</blockquote>
 <ol start="3">
 <li>在“导入阿里云集群-Kubernetes集群及访问设置页面”，可以选择<code>托管集群</code>，也可以选择<code>自建集群</code>。下面以<code>自建集群</code>为例，说明相应的参数。完成参数设置后点击<code>下一步</code>，系统完成参数正确性验证后，进入“导入阿里云集群-设置Prometheus访问页面”</li>
 </ol>
@@ -500,7 +1053,7 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-647f461749e2a664df9a7c650689fa91">3 - 查看集群成本</h1>
+	<h1 id="pg-79c3c5401e75cd51b9d3c28865234518">3 - 查看集群成本</h1>
     <div class="lead">描述了如何查看和分析集群整体成本.</div>
 	
 
@@ -509,7 +1062,7 @@ if (!doNotTrack) {
 
 </div>
 
-<h1 id="查看集群整体成本">查看集群整体成本</h1>
+<h2 id="查看集群整体成本">查看集群整体成本</h2>
 
 
 
@@ -518,11 +1071,48 @@ if (!doNotTrack) {
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-	<img class="card-img-top" src="/docs/wisecost/cluster-cost/cluster_hu4bfafccac42b9b6a42c1edc84e13cdde_163621_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	<img class="card-img-top" src="/docs/wisecost/cluster-cost/cluster-1_hu9386f43e6fffa22228347f34146fc35b_156504_900x0_resize_catmullrom_3.png" width="900" height="388">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-集群成本展示
+集群整体成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/cluster-cost/cluster-2_hu8df7dfe3748412eed29420f91a32e85c_137781_900x0_resize_catmullrom_3.png" width="900" height="358">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+集群整体成本分解
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="查看单个集群成本">查看单个集群成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/cluster-cost/cluster-3_hu41d2df885f0270c87d1ee7b4ec2c5e92_144315_900x0_resize_catmullrom_3.png" width="900" height="417">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+单个集群成本
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -555,7 +1145,99 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b02e1dc4633161178a0c3360d4b92649">4 - 查看应用成本</h1>
+	<h1 id="pg-8aaf6cb4995450b6fc76e7ad887b0eb3">4 - 查看节点成本</h1>
+    <div class="lead">描述了如何查看和分析节点整体成本.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看节点成本及其各项指标含义。</p>
+
+</div>
+
+<h2 id="查看节点整体成本">查看节点整体成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/node-cost/node-1_hu75571daf753b1528af155b01a3a46732_216015_900x0_resize_catmullrom_3.png" width="900" height="387">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+节点整体成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/node-cost/node-2_hud14bc57c8e8b54563bbb85fde7d79e40_218471_900x0_resize_catmullrom_3.png" width="900" height="412">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+节点整体成本分解
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="查看单个节点成本">查看单个节点成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/node-cost/node-3_hu68f4c02bdee6f069f5706d794bd1b072_255353_900x0_resize_catmullrom_3.png" width="900" height="418">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+单节点成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aea197f3575cb0df1ded1df55290950c">5 - 查看应用成本</h1>
     <div class="lead">描述如何查看和分析应用成本.</div>
 	
 
@@ -564,7 +1246,7 @@ if (!doNotTrack) {
 
 </div>
 
-<h1 id="查看名称空间累计成本">查看名称空间累计成本</h1>
+<h2 id="查看名称空间成本">查看名称空间成本</h2>
 
 
 
@@ -573,17 +1255,16 @@ if (!doNotTrack) {
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-	<img class="card-img-top" src="/docs/wisecost/cost/cost-acc_hu307bdfdbfd550fbf632e967b3585b6ea_163412_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	<img class="card-img-top" src="/docs/wisecost/cost/namespace-1_hud84a5484e7411474683c506fc18d85bf_185074_900x0_resize_catmullrom_3.png" width="900" height="323">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-名称空间累计成本
+名称空间累计成本及利用率
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<h1 id="查看名称空间分时成本">查看名称空间分时成本</h1>
 
 
 
@@ -592,7 +1273,63 @@ if (!doNotTrack) {
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-	<img class="card-img-top" src="/docs/wisecost/cost/cost-steps_hu397de65b7bd5f2bc371731638a0b82fe_177252_900x417_fill_catmullrom_smart1_3.png" width="900" height="417">
+	<img class="card-img-top" src="/docs/wisecost/cost/namespace-2_hu0683868b0a89a61f2790babad8579e94_272727_900x0_resize_catmullrom_3.png" width="900" height="260">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+名称空间分时成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="查看产品成本">查看产品成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/cost/product-1_hue482c5ef76f206dad3043c87478904a0_168742_900x0_resize_catmullrom_3.png" width="900" height="298">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+产品累计成本及利用率
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/cost/product-2_hudcb30c2598ce67584624d0fbc71b184a_155549_900x0_resize_catmullrom_3.png" width="900" height="262">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+产品分时成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="自定义查询">自定义查询</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/wisecost/cost/custom-1_hubb8eef4e201ee755282e6123f8f7c76d_282976_900x0_resize_catmullrom_3.png" width="900" height="456">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -629,7 +1366,7 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-3cdb4833066d311ff61c2c2217a63af0">5 - 成本优化</h1>
+	<h1 id="pg-0d313d792f0ef08d3b1695b67d8bddea">6 - 成本优化</h1>
     <div class="lead">描述了基于Wisecost内置策略，优化成本的过程.</div>
 	
 
@@ -672,6 +1409,18 @@ if (!doNotTrack) {
         
         
         
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="帮助和支持" aria-label="帮助和支持">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
       </div>
       <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
         
@@ -679,8 +1428,14 @@ if (!doNotTrack) {
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/site" aria-label="GitHub">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="商务合作" aria-label="商务合作">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
       <i class="fab fa-github"></i>
     </a>
   </li>
@@ -703,7 +1458,8 @@ if (!doNotTrack) {
 
 
     </div>
-    <script src="/js/main.min.be25a680a0d95dc8b5d6664622e2134aa894220e2f224ef609e00f633a3a1b32.js" integrity="sha256-viWmgKDZXci11mZGIuITSqiUIg4vIk72CeAPYzo6GzI=" crossorigin="anonymous"></script>
+    
+  <script src="/js/main.min.be25a680a0d95dc8b5d6664622e2134aa894220e2f224ef609e00f633a3a1b32.js" integrity="sha256-viWmgKDZXci11mZGIuITSqiUIg4vIk72CeAPYzo6GzI=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

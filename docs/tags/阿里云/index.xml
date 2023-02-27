@@ -30,8 +30,8 @@
 &lt;/div&gt;
 
 &lt;ol&gt;
-&lt;li&gt;完成Wisecost安装之后，登录系统，选择“概览”，可见&lt;code&gt;概览页面&lt;/code&gt;，&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
+&lt;p&gt;完成Wisecost安装之后，登录系统，选择“概览”，可见&lt;code&gt;概览页面&lt;/code&gt;，
 
 
 
@@ -49,13 +49,14 @@
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
-
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;在“导入阿里云集群-设置阿里云访问凭据页面”设置&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;，&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;可从阿里云获得，具体请参考&lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;创建Access Key&lt;/a&gt;。设置完成&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;后，点击下一步。系统完成验证&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;的正确性后，进入“导入阿里云集群-Kubernetes集群及访问设置页面”。&lt;/li&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在“导入阿里云集群-设置阿里云访问凭据页面”设置&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;，&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;可从阿里云获得，具体请参考&lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;创建Access Key&lt;/a&gt;。设置完成&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;后，点击下一步。系统完成验证&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;的正确性后，进入“导入阿里云集群-Kubernetes集群及访问设置页面”。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在“导入阿里云集群-设置阿里云访问凭据页面”，也可以选择“使用已有凭据”，选择一个已经存在的凭据。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;在“导入阿里云集群-设置阿里云访问凭据页面”，也可以选择“使用已有凭据”，选择一个已经存在的凭据。
 
 
 
@@ -73,7 +74,8 @@
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
-
+&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;在“导入阿里云集群-Kubernetes集群及访问设置页面”，可以选择&lt;code&gt;托管集群&lt;/code&gt;，也可以选择&lt;code&gt;自建集群&lt;/code&gt;。下面以&lt;code&gt;自建集群&lt;/code&gt;为例，说明相应的参数。完成参数设置后点击&lt;code&gt;下一步&lt;/code&gt;，系统完成参数正确性验证后，进入“导入阿里云集群-设置Prometheus访问页面”&lt;/li&gt;
 &lt;/ol&gt;
