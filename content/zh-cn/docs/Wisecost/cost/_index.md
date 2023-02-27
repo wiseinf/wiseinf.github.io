@@ -20,25 +20,25 @@ Wisecost提供了云原生应用成本监控、管理和优化能力。本文档
 ## 查看名称空间成本
 
 {{< imgproc namespace-1 Resize "900x" >}}
-名称空间累计成本
+名称空间累计成本及利用率
 {{< /imgproc >}}
 
 {{< imgproc namespace-2 Resize "900x" >}}
-名称空间累计成本
+名称空间分时成本
 {{< /imgproc >}}
 
 ## 查看产品成本
 
 {{< imgproc product-1 Resize "900x" >}}
-名称空间分时成本
+产品累计成本及利用率
 {{< /imgproc >}}
 
 {{< imgproc product-2 Resize "900x" >}}
-名称空间累计成本
+产品分时成本
 {{< /imgproc >}}
 
 ## 自定义查询
 
 {{< imgproc custom-1 Resize "900x" >}}
-名称空间累计成本
+名称空间分时成本
 {{< /imgproc >}}
