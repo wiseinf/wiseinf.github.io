@@ -42,7 +42,6 @@ data:
       allowedOrigins:
       - "http://wisecost"
       - "https://wisecost"
-      - "http://47.92.69.144"
     engine:
       defaultClusterId: default
       max_prometheus_query_duration: 1440m
@@ -101,7 +100,7 @@ spec:
         runAsUser: 0
       containers:
         - name: wisecost-ui
-          image: wiseinf/wisecost-ui:eebb346
+          image: wiseinf/wisecost-ui:aa385ea
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: nginx-config
@@ -117,17 +116,17 @@ spec:
               cpu: 1000m
               memory: 2G
         - name: wisecost
-          image: wiseinf/wisecost:3f3e222
+          image: wiseinf/wisecost:8e38796
           command:
-            - "/wisecost/wisecost"
+            - "/wiseinf/wisecost"
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: wisecost-data-volume
-              mountPath: /wisecost/data
+              mountPath: /wiseinf/data
             - name: wisecost-logs-volume
-              mountPath: /wisecost/logs
+              mountPath: /wiseinf/logs
             - name: wisecost-conf-volume
-              mountPath: /wisecost/conf
+              mountPath: /wiseinf/conf
 #              subPath: wisecost.yml
           ports:
             - containerPort: 7070
@@ -147,7 +146,7 @@ spec:
         # Configs for wisecost
         - name: wisecost-data-volume
           hostPath:
-            path: /wisecost/data1
+            path: /wisecost/data
             type: DirectoryOrCreate
         - name: wisecost-logs-volume
           hostPath:
