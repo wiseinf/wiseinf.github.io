@@ -39,12 +39,13 @@ Wisecost提供了云原生应用成本监控、管理和优化能力。
 > 假设Mysql数据库主机地址为：`127.0.0.1`.
 
 1. 在控制台执行命令`mysql -h127.0.0.1 -uroot`，输入密码，登录mysql数据库。其中`127.0.0.1`为Mysql主机地址。
-2. 在`mysql>`提示符下执行如下命令，创建`storage`库和`wisecost`库及相应表。
+2. 在`mysql>`提示符下执行如下命令，创建`storage`库和`wisecost`库，相应表后续由应用程序自动创建。
 
     ```sh
         mysql> source ~/setup/wisecost/sql/create_database.sql
     ```
 
+    > 注意：请关注数据丢失风险。若mysql数据库中已经存在`storage`库和`wisecost`库，则上述脚本会删除`storage`库和`wisecost`库后创建新库。
 3. 在`mysql>`提示符下执行如下命令，创建`wisecost`用户（默认密码为`Wisecost~`）并为其赋予`storage`库和`wisecost`库的完全访问权限。
 
     ```sh
@@ -59,8 +60,10 @@ Wisecost提供了云原生应用成本监控、管理和优化能力。
 
 1. 通过 `kubectl apply -f ~/setup/wisecost/namespace.yaml`将如下文件应用到集群，创建名称空间`wiseinf-system`。
     {{< readfile file="wisecost/namespace.yaml" code="true" lang="yaml" >}}
+1. 根据Mysql的配置调整文件`~/setup/wisecost/wisecost.yaml`中的**ConfigMap**`wisecost-conf`，将其配置项`optimize`和`kubestore`下的`dataSourceName: "wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&parseTime=true`中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。
 1. 通过 `kubectl apply -f ~/setup/wisecost/wisecost.yaml`将如下文件应用到集群，部署应用**Wise Cost**。
     {{< readfile file="wisecost/wisecost.yaml" code="true" lang="yaml" >}}
+    > 注意：
 1. 通过`kubectl port-forward svc/wisecost-ui-service 80:80`
 1. 访问URL`http://localhost`，即可看到Wise Cost首页。
 1. 至此，应用**Wise Cost**部署完毕。
