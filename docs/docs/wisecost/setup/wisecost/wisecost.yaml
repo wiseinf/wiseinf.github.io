@@ -39,36 +39,9 @@ data:
   wisecost.yaml: |-
     server:
       port: 7070
-      allowedOrigins:
-      - "http://wisecost"
-      - "https://wisecost"
-    engine:
-      defaultClusterId: default
-      max_prometheus_query_duration: 1440m
-      scrape_interval: 30s
-      aggregate_labels:
-        environment:
-        - env
-        product:
-        - product
-        application:
-        - application
-        - app
-        department:
-        - department
-        team:
-        - team
-        - group
-        owner:
-        - owner
     optimize:
       dataSourceName: "wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&parseTime=true"
       maxOpenConns: 10
-    storage:
-      type: file
-      parameters:
-        path: "data/clusters.yaml"
-        directory: "data/"
     kubestore:
       type: mysql
       parameters:
@@ -100,7 +73,7 @@ spec:
         runAsUser: 0
       containers:
         - name: wisecost-ui
-          image: wiseinf/wisecost-ui:aa385ea
+          image: wiseinf/wisecost-ui:701d19d
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: nginx-config
@@ -116,7 +89,7 @@ spec:
               cpu: 1000m
               memory: 2G
         - name: wisecost
-          image: wiseinf/wisecost:8e38796
+          image: wiseinf/wisecost:99e308e
           command:
             - "/wiseinf/wisecost"
           imagePullPolicy: IfNotPresent
