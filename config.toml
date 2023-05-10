@@ -61,7 +61,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.zh-cn]
-title = "Wiseinf"
+title = "云智优本"
 description = "一站式数智基建平台"
 languageName ="中文"
 contentDir = "content/zh-cn"
