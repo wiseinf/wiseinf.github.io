@@ -12,14 +12,14 @@ BUILDDATE = $(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
 # Images management
 REGISTRY ?= registry.cn-hangzhou.aliyuncs.com
 REGISTRY_NAMESPACE ?= wiseinf
-REGISTRY_USER_NAME?="hi31467542@aliyun.com"
-REGISTRY_PASSWORD?="Dr19820824"
+REGISTRY_USER_NAME?=""
+REGISTRY_PASSWORD?=""
 
 WISEINF_SITE_IMG ?= "${REGISTRY}/${REGISTRY_NAMESPACE}/wiseinf-site:${GIT_VERSION}"
 
 DOCKERHUB_NAMESPACE ?= wiseinf
-DOCKERHUB_USER ?= "wiseinf"
-DOCKERHUB_PASSWORD ?= "Dh19820824"
+DOCKERHUB_USER ?= ""
+DOCKERHUB_PASSWORD ?= ""
 DOCKERHUB_WISEINF_SITE_IMG ?= "${DOCKERHUB_NAMESPACE}/wiseinf-site:${GIT_VERSION}"
 
 # Get the currently used golang install path (in GOPATH/bin, unless GOBIN is set)
