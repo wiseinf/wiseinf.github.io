@@ -1,0 +1,3351 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Wiseinf Wisecost OpenAPI 1.0.0",
+    "description": "Wiseinf Wisecost OpenAPI provides a set of API for cost monitoring, management and optimize.",
+    "termsOfService": "http://www.wiseinf.com/terms/",
+    "contact": {
+      "email": "wisecost@wiseinf.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://www.wiseinf.com/docs/wisecost/"
+  },
+  "servers": [
+    {
+      "url": "https://cost.wiseinf.com/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "cost",
+      "description": "Cost",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://cost.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "optimize",
+      "description": "Optimize",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://cost.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "cluster",
+      "description": "Cluster",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://cost.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "application",
+      "description": "Application",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://cost.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "config",
+      "description": "Operations about user & configs"
+    }
+  ],
+  "paths": {
+    "/api/currentUser": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "获取当前的用户",
+        "operationId": "getCurrentUser",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrentUser"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/logout": {
+      "post": {
+        "description": "登录接口",
+        "operationId": "logout",
+        "tags": [
+          "login"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/login": {
+      "post": {
+        "tags": [
+          "login"
+        ],
+        "description": "登录接口",
+        "operationId": "login",
+        "requestBody": {
+          "description": "登录系统",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginParams"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cost": {
+      "get": {
+        "tags": [
+          "cost"
+        ],
+        "summary": "Get costs.",
+        "description": "Get costs.",
+        "operationId": "getCosts",
+        "parameters": [
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "example": "2023-03-01T00:00:00Z,2023-04-01T00:00:00Z",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "aggregate",
+            "in": "query",
+            "description": "aggregate by cluster,namespace,pod,node,controllerKind,controller,env,application,group,department and so on.",
+            "example": "cluster,namespace",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "description": "step",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "accumulate",
+            "in": "query",
+            "description": "accumulate all costs according to a named key.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "format": "string"
+            }
+          },
+          {
+            "name": "accumulateBy",
+            "in": "query",
+            "description": "accumulate costs by time of a named key, it will generate a series cost which can be used to generate line charts.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "accumulate costs",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "align",
+            "in": "query",
+            "description": "time alignment",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CostResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      }
+    },
+    "/cluster/breakdown": {
+      "get": {
+        "tags": [
+          "cost"
+        ],
+        "summary": "Get cost of clusters.",
+        "description": "Get cost of clusters.",
+        "operationId": "getClusterBreakdowns",
+        "parameters": [
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "description": "step",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "clusters",
+            "in": "query",
+            "description": "step",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "breakdown",
+            "in": "query",
+            "description": "breakdown costs.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "format": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/ResourceBreakdown"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      }
+    },
+    "/cluster": {
+      "get": {
+        "tags": [
+          "cost"
+        ],
+        "summary": "Get cost of clusters.",
+        "description": "Get cost of clusters.",
+        "operationId": "getClusterCosts",
+        "parameters": [
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "example": "2023-03-01T00:00:00Z,2023-04-01T00:00:00Z",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "aggregate",
+            "in": "query",
+            "description": "aggregate by region,cloudprovider",
+            "example": "region,cloudprovider",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "description": "step",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "accumulate",
+            "in": "query",
+            "description": "accumulate all costs according to a named key.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "format": "string"
+            }
+          },
+          {
+            "name": "accumulateBy",
+            "in": "query",
+            "description": "accumulate costs by time of a named key, it will generate a series cost which can be used to generate line charts.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "filters",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "align",
+            "in": "query",
+            "description": "time alignment",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Costs"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      }
+    },
+    "/node/breakdown": {
+      "get": {
+        "tags": [
+          "cost"
+        ],
+        "summary": "Get cost of nodes.",
+        "description": "Get cost of nodes.",
+        "operationId": "getNodeBreakdowns",
+        "parameters": [
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "example": "2023-03-01T00:00:00Z,2023-04-01T00:00:00Z",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "description": "step",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "clusters",
+            "in": "query",
+            "description": "return nodes in clusters",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "breakdown",
+            "in": "query",
+            "description": "breakdown costs.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "format": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/ResourceBreakdown"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      }
+    },
+    "/node": {
+      "get": {
+        "tags": [
+          "cost"
+        ],
+        "summary": "Get cost of nodes.",
+        "description": "Get cost of nodes.",
+        "operationId": "getNodeCosts",
+        "parameters": [
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "example": "2023-03-01T00:00:00Z,2023-04-01T00:00:00Z",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "aggregate",
+            "in": "query",
+            "description": "aggregate by cluster,region,zone,nodepool,type,tag,chargetype,label:***",
+            "example": "cluster,region",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "description": "step",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "accumulate",
+            "in": "query",
+            "description": "accumulate all costs according to a named key.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "format": "string"
+            }
+          },
+          {
+            "name": "accumulateBy",
+            "in": "query",
+            "description": "accumulate costs by time of a named key, it will generate a series cost which can be used to generate line charts.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "accumulate costs",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "align",
+            "in": "query",
+            "description": "time alignment",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Costs"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      }
+    },
+    "/clusters/{clusterId}/nodes": {
+      "get": {
+        "tags": [
+          "node"
+        ],
+        "summary": "Get cluster's nodes.",
+        "description": "Get cluster's nodes according to clusterId.",
+        "operationId": "getClusterNodes",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Node"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodes/{nodeName}": {
+      "get": {
+        "tags": [
+          "node"
+        ],
+        "summary": "Get cluster's nodes.",
+        "description": "Get cluster's nodes according to clusterId.",
+        "operationId": "getClusterNode",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "nodeName",
+            "in": "path",
+            "description": "node name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NodeDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/optimize/resource/recommendations": {
+      "get": {
+        "tags": [
+          "optimize"
+        ],
+        "summary": "Get resource recommendations.",
+        "description": "Get resource recommendations.",
+        "operationId": "getResourceRecommendations",
+        "parameters": [
+          {
+            "name": "cluster",
+            "in": "query",
+            "description": "filter resource recommendations by cluster.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "query",
+            "description": "filter resource recommendations by namespace.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceRecommendationResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/optimize/resource/noquotas": {
+      "get": {
+        "tags": [
+          "optimize"
+        ],
+        "summary": "Get resource no quotas.",
+        "description": "Get resource no quotas.",
+        "operationId": "getResourceNoQuotas",
+        "parameters": [
+          {
+            "name": "cluster",
+            "in": "query",
+            "description": "filter resource no quotas by cluster.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "query",
+            "description": "filter resource no quotas by namespace.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceNoQuotaResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/optimize/node/lowutilizationrate": {
+      "get": {
+        "tags": [
+          "optimize"
+        ],
+        "summary": "Get nodes with low utilization rate.",
+        "description": "Get  nodes with low utilization rate.",
+        "operationId": "getLowUtilizationRateNodes",
+        "parameters": [
+          {
+            "name": "cluster",
+            "in": "query",
+            "description": "filter resource no quotas by cluster.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LowUtilizationRateNode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/optimize/app/oom": {
+      "get": {
+        "tags": [
+          "optimize"
+        ],
+        "summary": "Get oom events.",
+        "description": "Get oom events.",
+        "operationId": "getOOMEvents",
+        "parameters": [
+          {
+            "name": "cluster",
+            "in": "query",
+            "description": "filter oom events by cluster.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OOMEvent"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/clusters": {
+      "post": {
+        "tags": [
+          "management",
+          "cluster"
+        ],
+        "summary": "Create or import a cluster.",
+        "description": "Get cost of clusters.",
+        "operationId": "importCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "management",
+          "cluster"
+        ],
+        "summary": "Get cluster configs.",
+        "description": "Get cluster configs.",
+        "operationId": "getClusterConfigs",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClusterConfig"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/clusters/{clusterId}": {
+      "get": {
+        "tags": [
+          "management",
+          "cluster"
+        ],
+        "summary": "Get cluster config.",
+        "description": "Multiple status values can be provided with comma separated strings",
+        "operationId": "getClusterConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "management",
+          "cluster"
+        ],
+        "summary": "Create or import a cluster.",
+        "description": "Get cost of clusters.",
+        "operationId": "updateCluster",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "management",
+          "cluster"
+        ],
+        "summary": "Create or import a cluster.",
+        "description": "Get cost of clusters.",
+        "operationId": "deleteClusterConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/labels": {
+      "put": {
+        "tags": [
+          "management",
+          "label"
+        ],
+        "summary": "Update labels.",
+        "description": "Update labels.",
+        "operationId": "updateLabels",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AggregateLabel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "management",
+          "label"
+        ],
+        "summary": "Get labels.",
+        "description": "Get labels.",
+        "operationId": "getLabels",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AggregateLabel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/cloudproviders": {
+      "post": {
+        "tags": [
+          "management",
+          "cloud provider"
+        ],
+        "summary": "Create or import a cloud provider.",
+        "description": "Create or import a cloud provider.",
+        "operationId": "importCloudProvider",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProvider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "management",
+          "cloud provider"
+        ],
+        "summary": "Get cloud provider.",
+        "description": "Get cloud provider.",
+        "operationId": "getCloudProviders",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CloudProvider"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/cloudproviders/{providerId}": {
+      "get": {
+        "tags": [
+          "management",
+          "cloud provider"
+        ],
+        "summary": "Get a cloud provider.",
+        "description": "Get a cloud provider.",
+        "operationId": "getCloudProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "providerId id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CloudProvider"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "management",
+          "cloud provider"
+        ],
+        "summary": "Update a cloud provider.",
+        "description": "Update a cloud provider.",
+        "operationId": "updateCloudProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "provider id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProvider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "management",
+          "cloud provider"
+        ],
+        "summary": "Delete a cloud provider.",
+        "description": "Delete a cloud provider.",
+        "operationId": "deleteCloudProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "provider id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "write:wisecost",
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/cloudproviders/{providerId}/connectivity": {
+      "post": {
+        "tags": [
+          "management",
+          "cloud provider",
+          "connectivity"
+        ],
+        "summary": "test a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test  a cloud provider.",
+        "operationId": "testCloudProviderConnectivityOnTheFly",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "providerId id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProvider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "management",
+          "cloud provider",
+          "connectivity"
+        ],
+        "summary": "test a connectivity of a existing cloud provider.",
+        "description": "Get a cloud provider.",
+        "operationId": "testCloudProviderConnectivity",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "providerId id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/aliyun/regions": {
+      "get": {
+        "tags": [
+          "management"
+        ],
+        "summary": "get regions of aliyun.",
+        "description": "get regions of aliyun.",
+        "operationId": "getAliyunRegions",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Region"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/import/aliyun/validateAccessToken": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "validate a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test  a cloud provider.",
+        "operationId": "validateAccessToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/managedClusters": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "get managed kubernetes clusters of aliyun.",
+        "description": "get managed kubernetes clusters of aliyun.",
+        "operationId": "getAliyunManagedClusters",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ManagedCluster"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/kubeconfig": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "get kubeconfig of a managed kubernetes cluster.",
+        "description": "get kubeconfig of a managed kubernetes cluster.",
+        "operationId": "getAliyunKubeConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "query",
+            "description": "cluster id of the kubernetes.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "private",
+            "in": "query",
+            "description": "use kubernetes's private address, default false.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "minutes",
+            "in": "query",
+            "description": "lifecycle of the kube config, default is about 1 year.",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/validateKubeconfig": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "validate kubeconfig of a managed kubernetes cluster.",
+        "description": "validate kubeconfig of a managed kubernetes cluster.",
+        "operationId": "validateAliyunKubeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/validatePrometheusConfig": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "validate prometheus config of a managed kubernetes cluster.",
+        "description": "validate prometheus config  of a managed kubernetes cluster.",
+        "operationId": "validateAlibabaCloudPrometheusConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrometheusConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/huaweicloud/regions": {
+      "get": {
+        "tags": [
+          "management"
+        ],
+        "summary": "get regions of aliyun.",
+        "description": "get regions of aliyun.",
+        "operationId": "getHuaweiCloudRegions",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Region"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/import/huaweicloud/validateAccessToken": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "validate a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test  a cloud provider.",
+        "operationId": "validateHuaweiCloudAccessToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/managedClusters": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "get managed kubernetes clusters of aliyun.",
+        "description": "get managed kubernetes clusters of aliyun.",
+        "operationId": "getHuaweiCloudManagedClusters",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ManagedCluster"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/kubeconfig": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "get kubeconfig of a managed kubernetes cluster.",
+        "description": "get kubeconfig of a managed kubernetes cluster.",
+        "operationId": "getHuaweiCloudKubeConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "query",
+            "description": "cluster id of the kubernetes.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "private",
+            "in": "query",
+            "description": "use kubernetes's private address, default false.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "minutes",
+            "in": "query",
+            "description": "lifecycle of the kube config, default is about 1 year.",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/validateKubeconfig": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "validate kubeconfig of a managed kubernetes cluster.",
+        "description": "validate kubeconfig of a managed kubernetes cluster.",
+        "operationId": "validateHuaweiCloudKubeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/validatePrometheusConfig": {
+      "post": {
+        "tags": [
+          "management",
+          "import"
+        ],
+        "summary": "validate prometheus config of a managed kubernetes cluster.",
+        "description": "validate prometheus config  of a managed kubernetes cluster.",
+        "operationId": "validateHuaweiCloudPrometheusConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrometheusConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "petstore_auth": [
+              "read:wisecost"
+            ]
+          }
+        ]
+      }
+    },
+    "/version": {
+      "get": {
+        "tags": [
+          "version"
+        ],
+        "description": "获取当前系统版本",
+        "operationId": "getVersion",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Version"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CurrentUser": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "userid": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "signature": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "notifyCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unreadCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "country": {
+            "type": "string"
+          },
+          "access": {
+            "type": "string"
+          },
+          "geographic": {
+            "type": "object",
+            "properties": {
+              "province": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "key": {
+                    "type": "string"
+                  }
+                }
+              },
+              "city": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "key": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          }
+        }
+      },
+      "AccessToken": {
+        "type": "object",
+        "required": [
+          "accessKey",
+          "accessKeySecret"
+        ],
+        "properties": {
+          "accessKey": {
+            "type": "string"
+          },
+          "accessKeySecret": {
+            "type": "string"
+          }
+        }
+      },
+      "Status": {
+        "type": "object",
+        "required": [
+          "success",
+          "code"
+        ],
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ManagedCluster": {
+        "type": "object",
+        "required": [
+          "clusterName",
+          "clusterId",
+          "regionId",
+          "clusterType"
+        ],
+        "properties": {
+          "clusterName": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "clusterType": {
+            "type": "string"
+          }
+        }
+      },
+      "KubeConfig": {
+        "type": "object",
+        "required": [
+          "config"
+        ],
+        "properties": {
+          "config": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          }
+        }
+      },
+      "PrometheusConfig": {
+        "type": "object",
+        "required": [
+          "address"
+        ],
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "isThanos": {
+            "type": "boolean"
+          },
+          "enableRateLimit": {
+            "type": "boolean"
+          },
+          "maxBurst": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LoginParams": {
+        "type": "object",
+        "required": [
+          "username",
+          "password",
+          "type"
+        ],
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "autoLogin": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "LoginResult": {
+        "type": "object",
+        "required": [
+          "status",
+          "type",
+          "currentAuthority"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "currentAuthority": {
+            "type": "string"
+          }
+        }
+      },
+      "ResourceRecommendationResult": {
+        "type": "object",
+        "required": [
+          "cpuSummary",
+          "memorySummary",
+          "resourceRecommendations"
+        ],
+        "properties": {
+          "cpuSummary": {
+            "$ref": "#/components/schemas/Summary"
+          },
+          "memorySummary": {
+            "$ref": "#/components/schemas/Summary"
+          },
+          "resourceRecommendations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceRecommendation"
+            }
+          }
+        }
+      },
+      "Summary": {
+        "type": "object",
+        "required": [
+          "type",
+          "request",
+          "usage",
+          "underProvisioning",
+          "overProvisioning",
+          "saving"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "int32"
+          },
+          "request": {
+            "type": "number",
+            "format": "float64"
+          },
+          "usage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "underProvisioning": {
+            "type": "number",
+            "format": "float64"
+          },
+          "overProvisioning": {
+            "type": "number",
+            "format": "float64"
+          },
+          "saving": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "ResourceRecommendation": {
+        "type": "object",
+        "required": [
+          "id",
+          "cluster",
+          "namespace",
+          "workloadType",
+          "workloadName",
+          "cpuRequest",
+          "cpuLimit",
+          "cpuAvgUsage",
+          "cpuMaxUsage",
+          "cpuRecommendedRequest",
+          "cpuRecommendedLimit",
+          "memoryRequest",
+          "memoryLimit",
+          "memoryAvgUsage",
+          "memoryMaxUsage",
+          "memoryRecommendedRequest",
+          "memoryRecommendedLimit",
+          "efficiency",
+          "saving"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cluster": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "workloadType": {
+            "type": "string"
+          },
+          "workloadName": {
+            "type": "string"
+          },
+          "cpuRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuAvgUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuMaxUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuRecommendedRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuRecommendedLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryAvgUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryMaxUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRecommendedRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRecommendedLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "efficiency": {
+            "type": "number",
+            "format": "float64"
+          },
+          "saving": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "ResourceNoQuotaResult": {
+        "type": "object",
+        "required": [
+          "containerQuotas"
+        ],
+        "properties": {
+          "containerQuotas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceNoQuota"
+            }
+          }
+        }
+      },
+      "ResourceNoQuota": {
+        "type": "object",
+        "required": [
+          "id",
+          "cluster",
+          "namespace",
+          "workloadType",
+          "workloadName",
+          "container",
+          "noCpuRequest",
+          "noCpuLimit",
+          "cpuRecommendedRequest",
+          "cpuRecommendedLimit",
+          "noMemoryRequest",
+          "noMemoryLimit",
+          "memoryRecommendedRequest",
+          "memoryRecommendedLimit"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cluster": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "workloadType": {
+            "type": "string"
+          },
+          "workloadName": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          },
+          "noCpuRequest": {
+            "type": "boolean"
+          },
+          "noCpuLimit": {
+            "type": "boolean"
+          },
+          "cpuRecommendedRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuRecommendedLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "noMemoryRequest": {
+            "type": "boolean"
+          },
+          "noMemoryLimit": {
+            "type": "boolean"
+          },
+          "memoryRecommendedRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRecommendedLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "LowUtilizationRateNode": {
+        "type": "object",
+        "required": [
+          "id",
+          "cluster",
+          "nodeName",
+          "reasons",
+          "cpuCores",
+          "cpuAvg",
+          "cpuMax",
+          "memoryBytes",
+          "memoryAvg",
+          "memoryMax"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cluster": {
+            "type": "string"
+          },
+          "nodeName": {
+            "type": "string"
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LowUtilizationRateReason"
+            }
+          },
+          "cpuCores": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "LowUtilizationRateReason": {
+        "type": "object",
+        "required": [
+          "category",
+          "threshold"
+        ],
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/LowUtilizationRateCategory"
+          },
+          "rate": {
+            "type": "number",
+            "format": "float64"
+          },
+          "threshold": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "LowUtilizationRateCategory": {
+        "type": "string",
+        "enum": [
+          "CpuAvg",
+          "CpuMax",
+          "MemoryAvg",
+          "MemoryMax"
+        ]
+      },
+      "OOMEvent": {
+        "type": "object",
+        "required": [
+          "id",
+          "cluster",
+          "namespace",
+          "workloadType",
+          "workloadName",
+          "pod",
+          "container",
+          "oomTime",
+          "memoryRequest",
+          "memoryLimit"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cluster": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "workloadType": {
+            "type": "string"
+          },
+          "workloadName": {
+            "type": "string"
+          },
+          "pod": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          },
+          "oomTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "memoryRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "AggregateLabel": {
+        "type": "object",
+        "required": [
+          "environment",
+          "product",
+          "application",
+          "department",
+          "team",
+          "owner"
+        ],
+        "properties": {
+          "environment": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "product": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "application": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "department": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "team": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CloudProvider": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "accessKey",
+          "accessKeySecret"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "accessKey": {
+            "type": "string"
+          },
+          "accessKeySecret": {
+            "type": "string"
+          },
+          "parameters": {
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ClusterConfig": {
+        "type": "object",
+        "required": [
+          "regionId",
+          "clusterId",
+          "clusterName",
+          "cloudProviderName",
+          "kubeConfig",
+          "prometheus"
+        ],
+        "properties": {
+          "regionId": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "clusterName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "cloudProviderName": {
+            "type": "string"
+          },
+          "kubeConfig": {
+            "type": "string"
+          },
+          "prometheus": {
+            "$ref": "#/components/schemas/PrometheusConfig"
+          }
+        }
+      },
+      "Region": {
+        "type": "object",
+        "required": [
+          "regionName",
+          "regionId"
+        ],
+        "properties": {
+          "regionName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          }
+        }
+      },
+      "ResourceBreakdown": {
+        "type": "object",
+        "required": [
+          "timeRange",
+          "cpu",
+          "memory"
+        ],
+        "properties": {
+          "timeRange": {
+            "$ref": "#/components/schemas/TimeRange"
+          },
+          "cpu": {
+            "$ref": "#/components/schemas/Breakdown"
+          },
+          "memory": {
+            "$ref": "#/components/schemas/Breakdown"
+          },
+          "gpu": {
+            "$ref": "#/components/schemas/Breakdown"
+          },
+          "storage": {
+            "$ref": "#/components/schemas/Breakdown"
+          }
+        }
+      },
+      "Breakdown": {
+        "type": "object",
+        "required": [
+          "user",
+          "system",
+          "idle"
+        ],
+        "properties": {
+          "user": {
+            "type": "number",
+            "format": "float64"
+          },
+          "system": {
+            "type": "number",
+            "format": "float64"
+          },
+          "idle": {
+            "type": "number",
+            "format": "float64"
+          },
+          "other": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "CostDetail": {
+        "type": "object",
+        "required": [
+          "user",
+          "system",
+          "idle"
+        ],
+        "properties": {
+          "user": {
+            "type": "number",
+            "format": "float64"
+          },
+          "system": {
+            "type": "number",
+            "format": "float64"
+          },
+          "idle": {
+            "type": "number",
+            "format": "float64"
+          },
+          "other": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "CostResponse": {
+        "type": "object",
+        "required": [
+          "code",
+          "data"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "format": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Costs"
+            }
+          }
+        }
+      },
+      "Costs": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/Cost"
+        }
+      },
+      "Cost": {
+        "type": "object",
+        "required": [
+          "start",
+          "end"
+        ],
+        "properties": {
+          "window": {
+            "$ref": "#/components/schemas/TimeRange"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          },
+          "cpuCoreHours": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuCoreUsageAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuCoreRequestAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuCoreLimitAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuRequestCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuLimitCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuDiscountedCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryByteHours": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytesUsageAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytesRequestAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytesLimitAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRequestCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryLimitCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryDiscountedCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuHours": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuRequestCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuLimitCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuDiscountedCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageByteHours": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageBytesUsageAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageBytesRequestAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageBytesLimitAverage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageRequestCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageLimitCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageDiscountedCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkTransferBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkReceiveBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkDiscountedCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "loadBalancerCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "loadBalancerDiscountedCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "loadBalancerActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "externalCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "adjustment": {
+            "$ref": "#/components/schemas/CostAdjustment"
+          },
+          "costs": {
+            "$ref": "#/components/schemas/Costs"
+          }
+        }
+      },
+      "CostAdjustment": {
+        "type": "object",
+        "properties": {
+          "cpuCostAdjustment": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryCostAdjustment": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuCostAdjustment": {
+            "type": "number",
+            "format": "float64"
+          },
+          "storageCostAdjustment": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkCostAdjustment": {
+            "type": "number",
+            "format": "float64"
+          },
+          "loadBalancerCostAdjustment": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "TimeRange": {
+        "type": "object",
+        "required": [
+          "start",
+          "end"
+        ],
+        "properties": {
+          "start": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Node": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "format": "name",
+            "example": "iz8vb95bn9x4oa8z85o4awz"
+          }
+        }
+      },
+      "NodeDetail": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "format": "string",
+            "example": "iz8vb95bn9x4oa8z85o4awz"
+          }
+        }
+      },
+      "Version": {
+        "type": "object",
+        "required": [
+          "versionType",
+          "version"
+        ],
+        "properties": {
+          "versionType": {
+            "$ref": "#/components/schemas/VersionType"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "VersionType": {
+        "type": "string",
+        "enum": [
+          "community",
+          "business",
+          "enterprise"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "petstore_auth": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://cost.wisecost.com/oauth/authorize",
+            "scopes": {
+              "write:wisecost": "write permission for wisecost",
+              "read:wisecost": "read permission for wisecost"
+            }
+          }
+        }
+      },
+      "api_key": {
+        "type": "apiKey",
+        "name": "api_key",
+        "in": "header"
+      }
+    }
+  }
+}
