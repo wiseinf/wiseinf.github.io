@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – 成本管理</title>
+    <title>云智优本 – 成本管理</title>
     <link>/docs/wisecost/</link>
-    <description>Recent content in 成本管理 on Wiseinf</description>
+    <description>Recent content in 成本管理 on 云智优本</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/wisecost/index.xml" rel="self" type="application/rss+xml" />
@@ -31,7 +31,7 @@
 
 &lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Mysql数据库&lt;/li&gt;
+&lt;li&gt;Mysql数据库，版本5.7及以上&lt;/li&gt;
 &lt;li&gt;kubernetes集群，版本1.20及以上&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;克隆安装脚本&#34;&gt;克隆安装脚本&lt;/h2&gt;
@@ -841,6 +841,26 @@
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述了基于Wisecost内置策略，优化成本的过程.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 开发手册</title>
+      <link>/docs/wisecost/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/development/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本部分包括Wisecost API相关接口使用说明。详细接口文档请参见：API URL&lt;/p&gt;
 
 &lt;/div&gt;
 

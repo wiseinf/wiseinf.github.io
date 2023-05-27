@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – 安装部署</title>
+    <title>云智优本 – 安装部署</title>
     <link>/docs/wisecost/setup/</link>
-    <description>Recent content in 安装部署 on Wiseinf</description>
+    <description>Recent content in 安装部署 on 云智优本</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/wisecost/setup/index.xml" rel="self" type="application/rss+xml" />

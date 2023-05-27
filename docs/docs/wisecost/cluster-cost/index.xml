@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – 查看集群成本</title>
+    <title>云智优本 – 查看集群成本</title>
     <link>/docs/wisecost/cluster-cost/</link>
-    <description>Recent content in 查看集群成本 on Wiseinf</description>
+    <description>Recent content in 查看集群成本 on 云智优本</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/wisecost/cluster-cost/index.xml" rel="self" type="application/rss+xml" />
