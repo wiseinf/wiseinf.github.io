@@ -97,9 +97,10 @@ weight = 1
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "Wiseinf Inc."
+copyright = "北京云智优本科技有限公司"
 #privacy_policy = "https://policies.google.com/privacy"
 icp = "https://beian.miit.gov.cn/"
+gabeian = "https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -123,9 +124,9 @@ version = "0.0"
 url_latest_version = "https://www.wiseinf.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/wiseinf/site"
+github_repo = "https://github.com/wiseinf/wiseinf.github.io"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/wiseinf/site"
+github_project_repo = "https://github.com/wiseinf/wiseinf.github.io"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -151,7 +152,7 @@ prism_syntax_highlighting = false
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
-footer_about_disable = false
+footer_about_disable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
