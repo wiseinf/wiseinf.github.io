@@ -1,0 +1,698 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<link rel="alternate" type="text/html" href="/docs/ruyi/configuration/nodegroup/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/ruyi/configuration/nodegroup/index.xml">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>节点组配置参数 | 云智优本</title>
+<meta name="description" content="描述了Ruyi：云原生集群扩缩容引擎的节点组配置参数.
+">
+<meta property="og:title" content="节点组配置参数" />
+<meta property="og:description" content="描述了Ruyi：云原生集群扩缩容引擎的节点组配置参数.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/ruyi/configuration/nodegroup/" /><meta property="og:site_name" content="云智优本" />
+<meta itemprop="name" content="节点组配置参数">
+<meta itemprop="description" content="描述了Ruyi：云原生集群扩缩容引擎的节点组配置参数.
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="节点组配置参数"/>
+<meta name="twitter:description" content="描述了Ruyi：云原生集群扩缩容引擎的节点组配置参数.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" as="style">
+<link href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">云智优本</span></a>
+<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+  <ul class="navbar-nav mt-2 mt-lg-0">
+    <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/products/wisecost"> Wisecost：云原生成本管理平台 </a>
+        <a class="dropdown-item" href="/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+      </div>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <a class="nav-link active" href="/docs/"><span class="active">文档</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <a class="nav-link" href="/pricing/"><span>价格</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <a class="nav-link" href="/services/"><span>服务</span></a>
+      </li>
+      </ul>
+</div>
+<div class="navbar-nav d-none d-lg-block">
+  
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">文档</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecost-li">
+  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost：云原生成本管理和优化平台</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostsetup-li">
+  <a href="/docs/wisecost/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostsetup"><span class="">安装部署</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostimport-aliyun-li">
+  <a href="/docs/wisecost/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostimport-aliyun"><span class="">导入阿里云集群</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcluster-cost-li">
+  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">查看集群成本</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
+  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">查看节点成本</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcost-li">
+  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">查看应用成本</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostoptimize-li">
+  <a href="/docs/wisecost/optimize/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostoptimize"><span class="">成本优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecostdevelopment-li">
+  <a href="/docs/wisecost/development/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopment"><span class="">开发手册</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
+  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class="">API文档</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
+  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API接口参考</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsruyi-li">
+  <a href="/docs/ruyi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi：云原生集群扩缩容引擎</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyisetup-li">
+  <a href="/docs/ruyi/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyisetup"><span class="">安装部署</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiautoscaling-li">
+  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">自动扩缩容</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyivirtualcapacity-li">
+  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class="">虚拟容量</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsruyiconfiguration-li">
+  <a href="/docs/ruyi/configuration/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfiguration"><span class="">配置</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsruyiconfigurationnodegroup-li">
+  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class="td-sidebar-nav-active-item">节点组配置参数</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiconfigurationcommand-line-li">
+  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">命令行参数</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyimonitoring-li">
+  <a href="/docs/ruyi/monitoring/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyimonitoring"><span class="">监控</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyitroubleshooting-li">
+  <a href="/docs/ruyi/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyitroubleshooting"><span class="">常见问题</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/wiseinf/wiseinf.github.io/tree/master/content/zh-cn/docs/ruyi/configuration/nodegroup/_index.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> 查看页面源码</a>
+  <a href="https://github.com/wiseinf/wiseinf.github.io/edit/master/content/zh-cn/docs/ruyi/configuration/nodegroup/_index.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> 编辑此页</a>
+  <a href="https://github.com/wiseinf/wiseinf.github.io/new/master/content/zh-cn/docs/ruyi/configuration/nodegroup/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> 添加子页面</a>
+  <a href="https://github.com/wiseinf/wiseinf.github.io/issues/new?title=%e8%8a%82%e7%82%b9%e7%bb%84%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> 提交文档问题</a>
+  <a href="https://github.com/wiseinf/wiseinf.github.io/issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> 提交项目问题</a>
+  <a id="print" href="/docs/ruyi/configuration/nodegroup/_print/"><i class="fa-solid fa-print fa-fw"></i> 整节打印</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#节点组配置参数概述">节点组配置参数概述</a></li>
+    <li><a href="#配置参数">配置参数</a>
+      <ul>
+        <li><a href="#name"><code>name</code></a></li>
+        <li><a href="#labelslabelkey-and-labelvalue"><code>labels</code>，<code>label.Key</code> and <code>label.Value</code></a></li>
+        <li><a href="#dryrun"><code>dryRun</code></a></li>
+        <li><a href="#nodegroupid"><code>nodeGroupId</code></a></li>
+        <li><a href="#enableautoscaling"><code>enableAutoscaling</code></a></li>
+        <li><a href="#autoscaling"><code>autoscaling</code></a></li>
+        <li><a href="#enablevirtualcapacity"><code>enableVirtualCapacity</code></a></li>
+        <li><a href="#virtualcapacity"><code>virtualCapacity</code></a></li>
+        <li><a href="#alicloud"><code>alicloud</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#自动扩缩容配置">自动扩缩容配置</a>
+      <ul>
+        <li><a href="#minnodes和maxnodes"><code>minNodes</code>和<code>maxNodes</code></a></li>
+        <li><a href="#enablescaleup"><code>enableScaleUp</code></a></li>
+        <li><a href="#enablescaledown"><code>enableScaleDown</code></a></li>
+        <li><a href="#scaleup"><code>scaleUp</code></a></li>
+        <li><a href="#scaleupthreshold"><code>scaleUp.threshold</code></a></li>
+        <li><a href="#scaleupscaleonpodpending"><code>scaleUp.scaleOnPodPending</code></a></li>
+        <li><a href="#scaleupsilenceperiod"><code>scaleUp.silencePeriod</code></a></li>
+        <li><a href="#scaledown"><code>scaleDown</code></a></li>
+        <li><a href="#scaledownthreshold"><code>scaleDown.threshold</code></a></li>
+        <li><a href="#scaledownsoftdeletegraceperiod"><code>scaleDown.softDeleteGracePeriod</code></a></li>
+        <li><a href="#scaledownharddeletegraceperiod"><code>scaleDown.hardDeleteGracePeriod</code></a></li>
+        <li><a href="#scaledownmaxnoderemovalrate"><code>scaleDown.maxNodeRemovalRate</code></a></li>
+        <li><a href="#scaledowntainteffect"><code>scaleDown.taintEffect</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#虚拟容量配置">虚拟容量配置</a>
+      <ul>
+        <li><a href="#prometheusaddress"><code>prometheusAddress</code></a></li>
+        <li><a href="#prometheuswindow"><code>prometheusWindow</code></a></li>
+        <li><a href="#isthanos"><code>isThanos</code></a></li>
+        <li><a href="#thanosclusterkey和thanosclustervalue"><code>thanosClusterKey</code>和<code>thanosClusterValue</code></a></li>
+        <li><a href="#increasesilenceperiod"><code>increaseSilencePeriod</code></a></li>
+        <li><a href="#decreasesilenceperiod"><code>decreaseSilencePeriod</code></a></li>
+        <li><a href="#stabilitywindow"><code>stabilityWindow</code></a></li>
+        <li><a href="#tolerance"><code>tolerance</code></a></li>
+        <li><a href="#cpumaxusage"><code>cpuMaxUsage</code></a></li>
+        <li><a href="#maxvalue和minvalue"><code>maxValue</code>和<code>minValue</code></a></li>
+        <li><a href="#resourcereservation"><code>resourceReservation</code></a></li>
+        <li><a href="#resourcereservationkubereserved和resourcereservationsystemreserved"><code>resourceReservation.kubeReserved</code>和<code>resourceReservation.systemReserved</code></a></li>
+        <li><a href="#resourcereservationreservedpercentage"><code>resourceReservation.reservedPercentage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#阿里云服务商配置">阿里云服务商配置</a>
+      <ul>
+        <li><a href="#alicloudclusterid"><code>alicloud.clusterId</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#aws云服务商配置">AWS云服务商配置</a>
+      <ul>
+        <li><a href="#awslaunchtemplateid和awslaunchtemplateversion"><code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code></a></li>
+        <li><a href="#awsinstancereadytimeout"><code>aws.instanceReadyTimeout</code></a></li>
+        <li><a href="#awslifecyle"><code>aws.lifecyle</code></a></li>
+        <li><a href="#awsinstancetypeoverrides"><code>aws.instanceTypeOverrides</code></a></li>
+        <li><a href="#awsresourcetagging"><code>aws.resourceTagging</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+	
+		
+			
+				
+			
+			
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      
+        <h5 class="taxonomy-title">Tag Cloud</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">2</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">9</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">10</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/%E5%A6%82%E6%84%8F/" data-taxonomy-term="%E5%A6%82%E6%84%8F"><span class="taxonomy-label">如意</span><span class="taxonomy-count">8</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" data-taxonomy-term="%E9%98%BF%E9%87%8C%E4%BA%91"><span class="taxonomy-label">阿里云</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/%E9%9B%86%E7%BE%A4%E6%89%A9%E7%BC%A9%E5%AE%B9/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E6%89%A9%E7%BC%A9%E5%AE%B9"><span class="taxonomy-label">集群扩缩容</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+		
+			
+				
+			
+			
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      
+        <h5 class="taxonomy-title">Categories</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="/categories/%E5%BC%B9%E6%80%A7%E8%AE%A1%E7%AE%97/" data-taxonomy-term="%E5%BC%B9%E6%80%A7%E8%AE%A1%E7%AE%97"><span class="taxonomy-label">弹性计算</span><span class="taxonomy-count">8</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/categories/%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" data-taxonomy-term="%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="taxonomy-label">成本管理</span><span class="taxonomy-count">10</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/categories/%E6%89%A9%E7%BC%A9%E5%AE%B9/" data-taxonomy-term="%E6%89%A9%E7%BC%A9%E5%AE%B9"><span class="taxonomy-label">扩缩容</span><span class="taxonomy-count">8</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/categories/%E9%9B%86%E7%BE%A4%E6%89%A9%E7%BC%A9%E5%AE%B9/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E6%89%A9%E7%BC%A9%E5%AE%B9"><span class="taxonomy-label">集群扩缩容</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+		
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">文档</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/docs/ruyi/">Ruyi：云原生集群扩缩容引擎</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/docs/ruyi/configuration/">配置</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="/docs/ruyi/configuration/nodegroup/" aria-disabled="true" class="btn-link disabled">节点组配置参数</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>节点组配置参数</h1>
+  <div class="lead">描述了Ruyi：云原生集群扩缩容引擎的节点组配置参数.</div>
+	<header class="article-meta">
+		
+
+  
+    
+      
+
+
+<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span></a></li>
+    
+      <li><a class="taxonomy-term" href="/tags/%E5%A6%82%E6%84%8F/" data-taxonomy-term="%E5%A6%82%E6%84%8F"><span class="taxonomy-label">如意</span></a></li>
+    
+  </ul>
+</div>
+
+    
+      
+
+
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/categories/%E5%BC%B9%E6%80%A7%E8%AE%A1%E7%AE%97/" data-taxonomy-term="%E5%BC%B9%E6%80%A7%E8%AE%A1%E7%AE%97"><span class="taxonomy-label">弹性计算</span></a></li>
+    
+      <li><a class="taxonomy-term" href="/categories/%E6%89%A9%E7%BC%A9%E5%AE%B9/" data-taxonomy-term="%E6%89%A9%E7%BC%A9%E5%AE%B9"><span class="taxonomy-label">扩缩容</span></a></li>
+    
+  </ul>
+</div>
+
+    
+  
+
+		
+	</header>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Ruyi：云原生集群扩缩容引擎配置。</p>
+
+</div>
+
+<h2 id="节点组配置参数概述">节点组配置参数概述</h2>
+<p>引擎必须依赖于节点组配置参数才能运行。节点组配置参数通过命令行参数<code>--config</code>来制定配置文件位置。例如：<code>--config=/etc/ruyi/config.yaml</code></p>
+<p>配置文件格式为YAML格式，示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">nodeGroups</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;default-pool&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">nodeGroupId</span>: <span style="color:#e6db74">&#34;np1234567890&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">key</span>: <span style="color:#ae81ff">spot_type</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">value</span>: <span style="color:#ae81ff">cpu</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">dryRun</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enableAutoscaling</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">autoscaling</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minNodes</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxNodes</span>: <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleDown</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleUp</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.70</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">scaleOnPodPending</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">silencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleDown</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.40</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">softDeleteGracePeriod</span>: <span style="color:#ae81ff">1m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hardDeleteGracePeriod</span>: <span style="color:#ae81ff">10m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">maxNodeRemovalRate</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">taintEffect</span>: <span style="color:#ae81ff">NoExecute</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enableVirtualCapacity</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">virtualCapacity</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusAddress</span>: <span style="color:#e6db74">&#34;http://prometheus:9090&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusWindow</span>: <span style="color:#e6db74">&#34;2m&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">isThanos</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterKey</span>: <span style="color:#ae81ff">cluster</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterValue</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">reservationRatio</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">increaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">decreaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">stabilityWindow</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tolerance</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>: 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">lifecycle</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h2 id="配置参数">配置参数</h2>
+<h3 id="name"><code>name</code></h3>
+<p>参数<code>name</code>是引擎运行过程中使用的名称，可用于输出友好的日志信息等。不同的节点组名称必须唯一。</p>
+<h3 id="labelslabelkey-and-labelvalue"><code>labels</code>，<code>label.Key</code> and <code>label.Value</code></h3>
+<p>参数<code>labels</code>是一个键值对数组，引擎通过此键值对数组来选择节点组。
+其中，<code>label.Key</code> 和 <code>label.Value</code> 是键-值对中的键和值，</p>
+<h3 id="dryrun"><code>dryRun</code></h3>
+<p>参数<code>dryRun</code>表示仅运行，不对实际环境做任何修改。该值为<code>false</code>时，可呗命令行参数的<code>dryRun</code>覆盖。</p>
+<h3 id="nodegroupid"><code>nodeGroupId</code></h3>
+<p>参数<code>nodeGroupId</code>是节点组在云服务商的节点组ID，云服务商通过此参数来从对应云服务商获取改节点组信息。</p>
+<h3 id="enableautoscaling"><code>enableAutoscaling</code></h3>
+<p>参数<code>enableAutoscaling</code>指示是否启用自动扩缩容特性，默认为<code>true</code>。</p>
+<h3 id="autoscaling"><code>autoscaling</code></h3>
+<p>参数<code>autoscaling</code>为自动扩缩容提供相应参数，具体请参见<a href="#%E8%87%AA%E5%8A%A8%E6%89%A9%E7%BC%A9%E5%AE%B9%E9%85%8D%E7%BD%AE">自动扩缩容配置</a></p>
+<h3 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h3>
+<p>参数<code>enableVirtualCapacity</code>指示是否启用虚拟容量特性，默认为<code>true</code>。</p>
+<h3 id="virtualcapacity"><code>virtualCapacity</code></h3>
+<p>参数 <code>virtualCapacity</code>为虚拟容量提供相应参数，具体请参见<a href="#%E8%99%9A%E6%8B%9F%E5%AE%B9%E9%87%8F%E9%85%8D%E7%BD%AE">虚拟容量</a></p>
+<h3 id="alicloud"><code>alicloud</code></h3>
+<p>参数<code>alicloud</code>为云服务商阿里云提供相应参数，具体请参见<a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%95%86%E9%85%8D%E7%BD%AE">阿里云服务商配置</a></p>
+<h2 id="自动扩缩容配置">自动扩缩容配置</h2>
+<p>自动扩缩容配置为节点组自动扩缩容提供相应参数，示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">autoscaling</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minNodes</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxNodes</span>: <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleUp</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleDown</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleUp</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.70</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">scaleOnPodPending</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">silencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleDown</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.40</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">softDeleteGracePeriod</span>: <span style="color:#ae81ff">1m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hardDeleteGracePeriod</span>: <span style="color:#ae81ff">10m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">maxNodeRemovalRate</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">taintEffect</span>: <span style="color:#ae81ff">NoExecute</span>
+</span></span></code></pre></div><h3 id="minnodes和maxnodes"><code>minNodes</code>和<code>maxNodes</code></h3>
+<p>参数<code>minNodes</code>和<code>maxNodes</code>是节点池大小的最大值和最小值。在进行节点扩缩容时，会保证节点池大小满足最大值和最小值的约束。</p>
+<h3 id="enablescaleup"><code>enableScaleUp</code></h3>
+<p>参数<code>enableScaleUp</code>指示是否启用扩容，默认为<code>true</code>。</p>
+<h3 id="enablescaledown"><code>enableScaleDown</code></h3>
+<p>参数<code>enableScaleUp</code>指示是否启用缩容，默认为<code>true</code>。</p>
+<h3 id="scaleup"><code>scaleUp</code></h3>
+<p>参数<code>scaleUp</code>提供扩容相关参数。</p>
+<h3 id="scaleupthreshold"><code>scaleUp.threshold</code></h3>
+<p>参数<code>scaleUp.threshold</code>是扩容的阈值，当节点组上所有运行Pod的Request总和与节点组Allocatable总和的比值大于此值时，则执行扩容操作。</p>
+<h3 id="scaleupscaleonpodpending"><code>scaleUp.scaleOnPodPending</code></h3>
+<p>参数<code>scaleUp.scaleOnPodPending</code>指示当Pod Pending时是否执行扩容，默认值为<code>false</code>。当节点组中所有节点都不满足该节点资源需求时，则执行扩容操作。</p>
+<h3 id="scaleupsilenceperiod"><code>scaleUp.silencePeriod</code></h3>
+<p>参数<code>silencePeriod</code>是沉默时间，当发生扩容事件后，后续在<code>silencePeriod</code>时间内，不再执行扩容操作。</p>
+<h3 id="scaledown"><code>scaleDown</code></h3>
+<p>参数 <code>scaleDown</code>提供缩容相关参数。</p>
+<h3 id="scaledownthreshold"><code>scaleDown.threshold</code></h3>
+<p>参数<code>scaleDown.threshold</code>是扩容的阈值，当节点组上所有运行Pod的Request总和与节点组Allocatable总和的比值小于此值时，则执行缩容操作。</p>
+<h3 id="scaledownsoftdeletegraceperiod"><code>scaleDown.softDeleteGracePeriod</code></h3>
+<p>参数<code>scaleDown.softDeleteGracePeriod</code>是节点软删除等待时间，在软删除等待时间内，引擎不执行缩容操作。</p>
+<h3 id="scaledownharddeletegraceperiod"><code>scaleDown.hardDeleteGracePeriod</code></h3>
+<p>参数<code>scaleDown.hardDeleteGracePeriod</code>是节点硬删除等待时间，当在软删除等待时间到硬删除等待时间内，只有当节点上的Pod为空时，才会删除节点。在硬删除等待时间之后，引擎会强制删除节点。</p>
+<!-- 
+节点是否为空的逻辑请参见 `pkg/k8s` `NodeEmpty()` -->
+<h3 id="scaledownmaxnoderemovalrate"><code>scaleDown.maxNodeRemovalRate</code></h3>
+<p>参数<code>scaleDown.maxNodeRemovalRate</code>是同时缩容节点的最大值。</p>
+<h3 id="scaledowntainteffect"><code>scaleDown.taintEffect</code></h3>
+<p>参数<code>scaleDown.taintEffect</code>指缩容时的操作，在执行缩容时，将首先给节点打上<code>taint</code>标签，其值取值范围如下：</p>
+<ul>
+<li>NoSchedule</li>
+<li>NoExecute</li>
+<li>PreferNoSchedule</li>
+</ul>
+<p>具体含义，请参见<a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration">污点和容忍度</a></p>
+<h2 id="虚拟容量配置">虚拟容量配置</h2>
+<p>虚拟容量配置为虚拟容量提供相应参数。示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">virtualCapacity</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusAddress</span>: <span style="color:#e6db74">&#34;http://prometheus:9090&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusWindow</span>: <span style="color:#e6db74">&#34;2m&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">isThanos</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterKey</span>: <span style="color:#ae81ff">cluster</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterValue</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">reservationRatio</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">increaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">decreaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">stabilityWindow</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tolerance</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>: 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
+</span></span></code></pre></div><h3 id="prometheusaddress"><code>prometheusAddress</code></h3>
+<p>参数 <code>prometheusAddress</code>是当前集群节点Metrics监控的Prometheus地址。</p>
+<h3 id="prometheuswindow"><code>prometheusWindow</code></h3>
+<p>参数 <code>prometheusWindow</code>是引擎查询prometheus时的时间窗口。</p>
+<h3 id="isthanos"><code>isThanos</code></h3>
+<p>参数<code>isThanos</code>指参数 <code>prometheusAddress</code>对应的Prometheus地址是否为Thanos，默认为false。当prometheus地址是Thanos时，引擎查询时将附加Thanos相关参数。</p>
+<h3 id="thanosclusterkey和thanosclustervalue"><code>thanosClusterKey</code>和<code>thanosClusterValue</code></h3>
+<p>参数<code>thanosClusterKey</code>和<code>thanosClusterValue</code>是附加到引擎查询时的参数名和参数值（当参数<code>isThanos</code>为<code>true</code>时）。附加参数<code>thanosClusterKey</code>和<code>thanosClusterValue</code>可提升查询性能。</p>
+<h3 id="increasesilenceperiod"><code>increaseSilencePeriod</code></h3>
+<p>参数<code>increaseSilencePeriod</code>是节点虚拟容量率增加时的静默时间，当节点虚拟容量率增加时，在静默时间窗口<code>increaseSilencePeriod</code>内，将一直保持此值。</p>
+<h3 id="decreasesilenceperiod"><code>decreaseSilencePeriod</code></h3>
+<p>参数<code>decreaseSilencePeriod</code>是节点虚拟容量率降低时的静默时间，当节点虚拟容量率降低时，在静默时间窗口<code>decreaseSilencePeriod</code>内，将一直保持此值。</p>
+<h3 id="stabilitywindow"><code>stabilityWindow</code></h3>
+<p>参数<code>stabilityWindow</code>是稳定性窗口，引擎将在每隔一段时间计算一次虚拟容量率，最终决策时将选择稳定性窗口范围内最低值，避免虚拟容量率变化过大，从而引起虚拟容量变化过快。</p>
+<h3 id="tolerance"><code>tolerance</code></h3>
+<p>参数<code>tolerance</code>是每次应用虚拟容量率时与上次最大差值，此值可防止节点的Allocatable上升过于迅速。</p>
+<h3 id="cpumaxusage"><code>cpuMaxUsage</code></h3>
+<p>参数<code>cpuMaxUsage</code>是指当CPU利用率最大值，当节点的CPU利用率大于此值时，将不再调度新的Pod。</p>
+<h3 id="maxvalue和minvalue"><code>maxValue</code>和<code>minValue</code></h3>
+<p>参数<code>maxValue</code>和<code>minValue</code>是虚拟容量率的最大值和最小值。<code>minValue</code>的默认值为1。</p>
+<p>虚拟容量率是节点的<code>Allocatable</code>与节点原始的<code>Allocatable</code>的比值。</p>
+<h3 id="resourcereservation"><code>resourceReservation</code></h3>
+<p>参数<code>resourceReservation</code>是计算虚拟容量率时预留的资源，参数默认值为空。</p>
+<p>当参数默认值为空时，引擎将从节点池的节点中获取节点的KubeletConfiguration，并从KubeletConfiguration获取相应值。</p>
+<h3 id="resourcereservationkubereserved和resourcereservationsystemreserved"><code>resourceReservation.kubeReserved</code>和<code>resourceReservation.systemReserved</code></h3>
+<p>参数<code>resourceReservation.kubeReserved</code>和<code>resourceReservation.systemReserved</code>分别是为kubelet和系统预留的CPU资源。</p>
+<h3 id="resourcereservationreservedpercentage"><code>resourceReservation.reservedPercentage</code></h3>
+<p>参数<code>resourceReservation.reservedPercentage</code>是引擎为节点上的Pod运行额外预留的资源。</p>
+<h2 id="阿里云服务商配置">阿里云服务商配置</h2>
+<p>阿里云服务商配置为云服务商阿里云提供相应参数。示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">lifecycle</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="alicloudclusterid"><code>alicloud.clusterId</code></h3>
+<p>参数<code>alicloud.clusterId</code>是阿里云ACK集群的集群ID，一般是通过节点上的标签<code>ack.aliyun.com</code>来标识。例如：</p>
+<pre tabindex="0"><code>ack.aliyun.com=c1234567890
+</code></pre><p>其中，<code>c1234567890</code>即为集群ID。</p>
+<h2 id="aws云服务商配置">AWS云服务商配置</h2>
+<p>AWS云服务商配置为云服务商AWS提供相应参数，示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">aws</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateId</span>: <span style="color:#ae81ff">lt-</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateVersion</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">instanceReadyTimeout</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="awslaunchtemplateid和awslaunchtemplateversion"><code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code></h3>
+<p>参数<code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code>分别是AWS启动模板ID和模板版本值，用于配置扩容过程中的启动模板。</p>
+<p>通过此参数，引擎可以使用AWS Fleet API来一次性将节点池扩容到期望的容量。</p>
+<p>参数<code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code>的值可通过两种途径获取：</p>
+<ul>
+<li>通过AWS EC2控制台中的启动模板页面获取。</li>
+<li>通过<a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/create-launch-template.html">创建启动模板</a>中的CLI命令
+或者AWS API中返回中的<code>LatestVersionNumber</code>或者<code>DefaultVersionNumber</code>中获取。</li>
+</ul>
+<h3 id="awsinstancereadytimeout"><code>aws.instanceReadyTimeout</code></h3>
+<p>参数<code>aws.instanceReadyTimeout</code>是使用AWS Fleet API来一次性将节点池扩容时等待EC2实例就绪的超时时间。</p>
+<p>此参数是可选参数，默认值为1分钟。</p>
+<!-- This is an optional field. The default value is 1 minute.
+
+When using the one-shot capacity acquisition for AWS (see `aws.launch_template_id`), this is the maximum amount of time
+that Escalator will block waiting for new EC2 instances to become ready so that they can be added to the node group.
+This roughly corresponds to the amount of time it takes an instance to boot to multi-user mode and for the EC2 control
+plane to notice that it is healthy. This generally takes much less than a minute.
+
+**Note:** Escalator will block other scaling operations for, at most, this amount of time while new capacity comes
+online. -->
+<h3 id="awslifecyle"><code>aws.lifecyle</code></h3>
+<p>参数<code>aws.lifecyle</code>指定实例的生命周期，其取值为<code>on-demand</code>或者<code>spot</code>或者<code>on-demand,spot</code>。</p>
+<p>此参数为可选参数，默认值为<code>on-demand</code>。</p>
+<p><code>on-demand</code>指示引擎扩容时使用按需实例，<code>spot</code>指示引擎扩容时使用竞价实例。</p>
+<h3 id="awsinstancetypeoverrides"><code>aws.instanceTypeOverrides</code></h3>
+<p>参数<code>aws.lifecyle</code>指定实例的类型。此参数为可选参数，无默认值。</p>
+<p>引擎创建扩容请求时可以使用参数<code>aws.lifecyle</code>指定的多个实例类型，从而增加扩容的成功几率。</p>
+<h3 id="awsresourcetagging"><code>aws.resourceTagging</code></h3>
+<p>参数<code>aws.resourceTagging</code>指示是否给引擎管理的节点打上资源标签<code>autoscaling.wiseinf.com\enabled</code>:<code>true</code>。</p>
+<p>该标签不影响引擎任何功能，主要是便于利用标签对EC2实例进行管理。具体请参考<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">使用标签</a>。</p>
+
+        <div class="section-index">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+	
+	
+	
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="帮助和支持" aria-label="帮助和支持">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="商务合作" aria-label="商务合作">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2023 北京云智优本科技有限公司 保留所有权利</small>
+        
+        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
+        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+	
+		<p class="mt-2"><a href="/about/">关于我们</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+<script src="/local/cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="/local/stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.604e1b596f799449dffc6f056b597a5d8c1bfedb73f2844175ff85802887b69d.js" integrity="sha256-YE4bWW95lEnf/G8Fa1l6XYwb/ttz8oRBdf&#43;FgCiHtp0=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

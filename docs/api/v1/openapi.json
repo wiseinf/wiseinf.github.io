@@ -3072,7 +3072,7 @@
             "type": "number",
             "format": "float64"
           },
-          "cpuCost": {
+          "cpuUsage": {
             "type": "number",
             "format": "float64"
           },
@@ -3108,7 +3108,7 @@
             "type": "number",
             "format": "float64"
           },
-          "memoryCost": {
+          "memoryUsage": {
             "type": "number",
             "format": "float64"
           },
@@ -3132,7 +3132,7 @@
             "type": "number",
             "format": "float64"
           },
-          "gpuCost": {
+          "gpuUsage": {
             "type": "number",
             "format": "float64"
           },
@@ -3176,7 +3176,7 @@
             "type": "number",
             "format": "float64"
           },
-          "storageCost": {
+          "storageUsage": {
             "type": "number",
             "format": "float64"
           },
@@ -3196,7 +3196,11 @@
             "type": "number",
             "format": "float64"
           },
-          "networkCost": {
+          "networkUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "networkLimitCost": {
             "type": "number",
             "format": "float64"
           },
@@ -3208,7 +3212,11 @@
             "type": "number",
             "format": "float64"
           },
-          "loadBalancerCost": {
+          "loadBalancerUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "loadBalancerLimitCost": {
             "type": "number",
             "format": "float64"
           },
@@ -3217,6 +3225,10 @@
             "format": "float64"
           },
           "loadBalancerActualCost": {
+            "type": "number",
+            "format": "float64"
+          },
+          "externalUsage": {
             "type": "number",
             "format": "float64"
           },
@@ -3329,14 +3341,15 @@
       }
     },
     "securitySchemes": {
-      "petstore_auth": {
+      "wisecost_auth": {
         "type": "oauth2",
         "flows": {
           "implicit": {
             "authorizationUrl": "https://cost.wisecost.com/oauth/authorize",
             "scopes": {
               "write:wisecost": "write permission for wisecost",
-              "read:wisecost": "read permission for wisecost"
+              "read:wisecost": "read permission for wisecost",
+              "admin:wisecost": "admin permission for wisecost"
             }
           }
         }

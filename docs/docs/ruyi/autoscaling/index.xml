@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>云智优本 – 自动扩缩容</title>
+    <link>/docs/ruyi/autoscaling/</link>
+    <description>Recent content in 自动扩缩容 on 云智优本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/ruyi/autoscaling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
