@@ -1,0 +1,175 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: optimizer-nginx-config
+  namespace: wiseinf-system
+  labels:
+    app: optimizer
+data:
+  default.conf: |-
+      server {
+        listen 80;
+
+        location / {
+          root /usr/share/nginx/html/;
+          include /etc/nginx/mime.types;
+          try_files $uri $uri/ /index.html;
+
+          location /api/ {
+            rewrite ^/api/(.*) /$1 break;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-NginX-Proxy true;
+
+            proxy_pass http://localhost:7070;
+          }
+        }
+      }
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: optimizer-conf
+  namespace: wiseinf-system
+  labels:
+    app: optimizer
+data:
+  cluster-optimizer.yaml: |-
+    server:
+      port: 7070
+    engine:
+      maxQueryDuration: 1h
+    storage:
+      type: mysql
+      parameters:
+        dataSourceName: "optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&parseTime=true&loc=Local"
+        maxOpenConns: 10
+    optimize:
+      dataSource:
+        name: "optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&parseTime=true&loc=Local"
+        maxOpenConns: 10
+      strategyConfigs:
+        "OOM": 
+          enabled: true
+        "Resource Recommendation":
+          enabled: true
+        "No Quota":
+          enabled: true
+      enabled: true
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    app: optimizer
+  name: optimizer
+  namespace: wiseinf-system
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: optimizer
+  template:
+    metadata:
+      labels:
+        app: optimizer
+        group: wiseinf
+    spec:
+      dnsPolicy: ClusterFirstWithHostNet
+      securityContext:
+        runAsUser: 0
+      containers:
+        - name: optimizer-ui
+          image: wiseinf/cluster-optimizer-ui:1.0.0-preview
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: optimizer-nginx-config
+              mountPath: /etc/nginx/conf.d
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200M
+            limits:
+              cpu: 1000m
+              memory: 1G
+        - name: optimizer
+          image: wiseinf/optimizer:1.0.0-preview
+          command:
+            - "/wiseinf/optimizer"
+            - "--features=APIServer"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: optimizer-data-volume
+              mountPath: /wiseinf/data
+            - name: optimizer-logs-volume
+              mountPath: /wiseinf/logs
+            - name: optimizer-conf-volume
+              mountPath: /wiseinf/conf
+          ports:
+            - containerPort: 7070
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200M
+            limits:
+              cpu: 1000m
+              memory: 1G
+      volumes:
+        # Config for optimizer-ui
+        - name: optimizer-nginx-config
+          configMap:
+            name: optimizer-nginx-config
+        # Configs for optimizer
+        - name: optimizer-data-volume
+          hostPath:
+            path: /optimizer/data
+            type: DirectoryOrCreate
+        - name: optimizer-logs-volume
+          hostPath:
+            path: /optimizer/logs
+            type: DirectoryOrCreate
+        - name: optimizer-conf-volume
+          configMap:
+            name: optimizer-conf
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: optimizer
+  name:  optimizer
+  namespace: wiseinf-system
+spec:
+  ports:
+    - port: 80
+      nodePort: 30000
+      targetPort: 80
+  selector:
+    app: optimizer
+  type: NodePort
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: optimizer
+#   namespace: wiseinf-system
+# spec:
+#   rules:
+#     - host: optimizer.{your domain name}
+#       http:
+#         paths:
+#           - backend:
+#               service:
+#                 name: optimizer
+#                 port:
+#                   number: 80
+#             path: /
+#             pathType: ImplementationSpecific
