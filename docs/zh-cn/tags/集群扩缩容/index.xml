@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – 集群扩缩容</title>
+    <link>/zh-cn/tags/%E9%9B%86%E7%BE%A4%E6%89%A9%E7%BC%A9%E5%AE%B9/</link>
+    <description>Recent content in 集群扩缩容 on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/tags/%E9%9B%86%E7%BE%A4%E6%89%A9%E7%BC%A9%E5%AE%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Ruyi：云原生集群扩缩容引擎</title>
+      <link>/zh-cn/docs/ruyi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi提供了自动化智能化云原生集群扩缩容引擎.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Ruyi提供了自动化智能化云原生集群扩缩容引擎，主要功能包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动扩缩容：提供基于Pod Request的自动扩缩容。&lt;/li&gt;
+&lt;li&gt;虚拟容量：通过自动化智能化的技术对节点容量进行弹性伸缩，支持尽可能的调度更多的Pod。&lt;/li&gt;
+&lt;li&gt;多云支持：支持AWS、阿里云，更多云服务商正在集成中。&lt;/li&gt;
+&lt;li&gt;监控管理：提供多维度的监控指标数据。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

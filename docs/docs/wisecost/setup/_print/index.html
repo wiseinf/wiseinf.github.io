@@ -1,9 +1,9 @@
 <!doctype html>
-<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.109.0">
+<meta name="generator" content="Hugo 0.121.2">
 <link rel="canonical" type="text/html" href="/docs/wisecost/setup/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/wisecost/setup/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -20,26 +20,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>安装部署 | 云智优本</title>
-<meta name="description" content="描述了如何安装Wisecost的详细步骤.
+<title>Installation and Deployment | Wiseinf</title>
+<meta name="description" content="Describes the detailed steps to install Wisecost.
 ">
-<meta property="og:title" content="安装部署" />
-<meta property="og:description" content="描述了如何安装Wisecost的详细步骤.
+<meta property="og:title" content="Installation and Deployment" />
+<meta property="og:description" content="Describes the detailed steps to install Wisecost.
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/wisecost/setup/" /><meta property="og:site_name" content="云智优本" />
-<meta itemprop="name" content="安装部署">
-<meta itemprop="description" content="描述了如何安装Wisecost的详细步骤.
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="安装部署"/>
-<meta name="twitter:description" content="描述了如何安装Wisecost的详细步骤.
+<meta property="og:url" content="/docs/wisecost/setup/" /><meta property="og:site_name" content="Wiseinf" />
+
+<meta itemprop="name" content="Installation and Deployment">
+<meta itemprop="description" content="Describes the detailed steps to install Wisecost.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Installation and Deployment"/>
+<meta name="twitter:description" content="Describes the detailed steps to install Wisecost.
 "/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" as="style">
-<link href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" as="style">
+<link href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,31 +59,42 @@ if (!doNotTrack) {
   <body class="td-section">
     <header>
       <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">云智优本</span></a>
+<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Wiseinf</span></a>
 <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
   <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item dropdown mr-4 d-none d-lg-block">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      aria-haspopup="true" aria-expanded="false"><span>Product</span></a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer：云原生集群优化平台 </a>
-        <a class="dropdown-item" href="/products/wisecost"> Wisecost：云原生成本管理平台 </a>
-        <a class="dropdown-item" href="/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer: Cloud Native Optimization Platform </a>
+        <a class="dropdown-item" href="/products/wisecost"> Wisecost: Cloud Native Cost Management Platform </a>
+        <a class="dropdown-item" href="/products/ruyi"> Ruyi: Cloud Native Cluster Autoscaling Engine</a>
       </div>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link active" href="/docs/"><span class="active">文档</span></a>
+      <a class="nav-link active" href="/docs/"><span class="active">Documentation</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/pricing/"><span>价格</span></a>
+      <a class="nav-link" href="/pricing/"><span>Price</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/services/"><span>服务</span></a>
+      <a class="nav-link" href="/services/"><span>Service</span></a>
       </li>
-      </ul>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/zh-cn/docs/wisecost/setup/">中文</a>
+	
+</div></li>
+    </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
   
@@ -102,17 +113,17 @@ if (!doNotTrack) {
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-这是本节的多页打印视图。
-<a href="#" onclick="print();return false;">点击此处打印</a>.
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/wisecost/setup/">返回本页常规视图</a>.
+<a href="/docs/wisecost/setup/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">安装部署</h1>
-<div class="lead">描述了如何安装Wisecost的详细步骤.</div>
+<h1 class="title">Installation and Deployment</h1>
+<div class="lead">Describes the detailed steps to install Wisecost.</div>
 
 
 
@@ -133,25 +144,25 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Wisecost提供了云原生应用成本监控、管理和优化能力。</p>
+<p>Wisecost provides cloud-native application cost monitoring, management, and optimization capabilities.</p>
 
 </div>
 
-<h2 id="前置条件">前置条件</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Mysql数据库，版本5.7及以上</li>
-<li>kubernetes集群，版本1.20及以上</li>
+<li>Mysql database, version 5.7 or higher</li>
+<li>kubernetes cluster, version 1.20 or higher</li>
 </ul>
-<h2 id="克隆安装脚本">克隆安装脚本</h2>
+<h2 id="clone-installation-scripts">Clone Installation Scripts</h2>
 <ol>
-<li>打开控制台，输入<code>git clone https://github.com/wiseinf/setup.git</code>,将安装脚本克隆到本地。
-我们提供了2个仓库地址，方便大家根据需求来克隆到本地。</li>
+<li>Open the console, enter <code>git clone https://github.com/wiseinf/setup.git</code>, and clone the installation scripts to your local machine.
+We provide 2 repo addresses for you to clone to your local machine according to your needs.</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th>仓库</th>
-<th style="text-align:left">仓库地址</th>
+<th>Repository</th>
+<th style="text-align:left">Repository Address</th>
 </tr>
 </thead>
 <tbody>
@@ -166,40 +177,40 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <blockquote>
-<p>后续步骤都假设已将<code>setup</code>库克隆到用户主目录，若未克隆到用户主目录，则需要根据实际情况调整命令中的文件路径。</p>
+<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it hasn&rsquo;t been cloned to the user&rsquo;s home directory, you need to adjust the file paths in the commands accordingly.</p>
 </blockquote>
-<h2 id="初始化数据库">初始化数据库</h2>
+<h2 id="initialize-the-database">Initialize the Database</h2>
 <blockquote>
-<p>假设Mysql数据库主机地址为：<code>127.0.0.1</code>.</p>
+<p>Assuming the Mysql database host address is: <code>127.0.0.1</code>.</p>
 </blockquote>
 <ol>
 <li>
-<p>在控制台执行命令<code>mysql -h127.0.0.1 -uroot</code>，输入密码，登录mysql数据库。其中<code>127.0.0.1</code>为Mysql主机地址。</p>
+<p>In the console, execute the command <code>mysql -h127.0.0.1 -uroot</code>, enter the password, and log into the mysql database. Where <code>127.0.0.1</code> is the Mysql host address.</p>
 </li>
 <li>
-<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>storage</code>库和<code>wisecost</code>库，相应表后续由应用程序自动创建。</p>
+<p>At the <code>mysql&gt;</code> prompt, execute the following command to create the <code>storage</code> database and <code>wisecost</code> database, and the corresponding tables will be automatically created by the application later.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/wisecost/sql/create_database.sql
 </span></span></code></pre></div><blockquote>
-<p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>storage</code>库和<code>wisecost</code>库，则上述脚本会删除<code>storage</code>库和<code>wisecost</code>库后创建新库。</p>
+<p>Note: Please pay attention to the risk of data loss. If the <code>storage</code> database and <code>wisecost</code> database already exist in the mysql database, the above script will delete the <code>storage</code> database and <code>wisecost</code> database and create a new one.</p>
 </blockquote>
 </li>
 <li>
-<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>wisecost</code>用户（默认密码为<code>Wisecost~</code>）并为其赋予<code>storage</code>库和<code>wisecost</code>库的完全访问权限。</p>
+<p>At the <code>mysql&gt;</code> prompt, execute the following command to create the <code>wisecost</code> user (the default password is <code>Wisecost~</code>) and grant it full access permissions to the <code>storage</code> database and <code>wisecost</code> database.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/wisecost/sql/create_user.sql
 </span></span></code></pre></div></li>
 <li>
-<p>在控制台执行命令<code>mysql -h127.0.0.1 -uwisecost</code>，输入密码（默认密码为<code>Wisecost~</code>），登录mysql数据库。</p>
+<p>In the console, execute the command <code>mysql -h127.0.0.1 -uwisecost</code>, enter the password (the default password is <code>Wisecost~</code>), and log into the mysql database.</p>
 </li>
 <li>
-<p>在<code>mysql&gt;</code>提示符下执行<code>show database</code>，确认<code>storage</code>库和<code>wisecost</code>库已经创建。可以通过<code>select</code>语句（例如<code>select * from storage.pv</code>）查询库中相应的数据表确认用户的权限是否正常。</p>
+<p>At the <code>mysql&gt;</code> prompt, execute <code>show database</code> to confirm that the <code>storage</code> database and <code>wisecost</code> database have been created. You can query the corresponding data tables in the library with <code>select</code> statements (for example, <code>select * from storage.pv</code>) to confirm whether the user&rsquo;s permissions are normal.</p>
 </li>
 <li>
-<p>至此，数据库初始化完毕。</p>
+<p>At this point, the database initialization is complete.</p>
 </li>
 </ol>
-<h2 id="部署应用">部署应用</h2>
+<h2 id="deploy-the-application">Deploy the Application</h2>
 <ol>
-<li>通过 <code>kubectl apply -f ~/setup/wisecost/namespace.yaml</code>将如下文件应用到集群，创建名称空间<code>wiseinf-system</code>。
+<li>Apply the following file to the cluster with <code>kubectl apply -f ~/setup/wisecost/namespace.yaml</code>, creating the namespace <code>wiseinf-system</code>.
 
     
       
@@ -232,8 +243,8 @@ if (!doNotTrack) {
     </span></span></code></pre></div>
     
 </li>
-<li>根据Mysql的配置调整文件<code>~/setup/wisecost/wisecost.yaml</code>中的<strong>ConfigMap</strong><code>wisecost-conf</code>，将其配置项<code>optimize</code>和<code>kubestore</code>下的<code>dataSourceName: &quot;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true</code>中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</li>
-<li>通过 <code>kubectl apply -f ~/setup/wisecost/wisecost.yaml</code>将如下文件应用到集群，部署应用<strong>Wise Cost</strong>。
+<li>Adjust the <strong>ConfigMap</strong> <code>wisecost-conf</code> in the file <code>~/setup/wisecost/wisecost.yaml</code> according to the configuration of Mysql, and adjust the configuration items <code>optimize</code> and <code>kubestore</code> under <code>dataSourceName: &quot;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true</code> to the corresponding information of Mysql database.</li>
+<li>Apply the following file to the cluster with <code>kubectl apply -f ~/setup/wisecost/wisecost.yaml</code>, deploying the application <strong>Wise Cost</strong>.
 
     
       
@@ -404,18 +415,18 @@ if (!doNotTrack) {
     
 
 <blockquote>
-<p>注意：</p>
+<p>Note:</p>
 </blockquote>
 </li>
-<li>通过<code>kubectl port-forward svc/wisecost-ui-service 80:80</code></li>
-<li>访问URL<code>http://localhost</code>，即可看到Wise Cost首页。</li>
-<li>至此，应用<strong>Wise Cost</strong>部署完毕。</li>
+<li>Use <code>kubectl port-forward svc/wisecost-ui-service 80:80</code></li>
+<li>Access URL <code>http://localhost</code>, and you can see the Wise Cost homepage.</li>
+<li>At this point, the application <strong>Wise Cost</strong> is deployed.</li>
 </ol>
-<h2 id="下一步导入集群">下一步：导入集群</h2>
-<p>下一步，您可以添加一个集群，查看其各项成本。详见导入集群<a href="/docs/wisecost/import-aliyun">导入阿里云集群</a></p>
-<h2 id="附录">附录</h2>
+<h2 id="next-step-import-cluster">Next Step: Import Cluster</h2>
+<p>Next, you can add a cluster and view its various costs. See Import Cluster <a href="/docs/wisecost/import-aliyun">Import Alibaba Cloud Cluster</a> for details.</p>
+<h2 id="annex">Annex</h2>
 <ul>
-<li>脚本<code>create_user.sql</code>
+<li>Script <code>create_user.sql</code>
 
     
       
@@ -444,7 +455,7 @@ if (!doNotTrack) {
     </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">ON</span> wisecost.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> wisecost<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span>;</span></span></code></pre></div>
     
 </li>
-<li>脚本<code>create_database.sql</code>
+<li>Script <code>create_database.sql</code>
 
     
       
@@ -548,12 +559,12 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2024 北京云智优本科技有限公司 保留所有权利</small>
+        <small class="text-white">&copy; 2024 Wiseinf Inc. All Rights Reserved</small>
         
-        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
-        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+        
+        
 	
-		<p class="mt-2"><a href="/about/">关于我们</a></p>
+		<p class="mt-2"><a href="/about/">About Us</a></p>
 	
       </div>
     </div>

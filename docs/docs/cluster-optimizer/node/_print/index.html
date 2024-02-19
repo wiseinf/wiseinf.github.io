@@ -1,9 +1,9 @@
 <!doctype html>
-<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.109.0">
+<meta name="generator" content="Hugo 0.121.2">
 <link rel="canonical" type="text/html" href="/docs/cluster-optimizer/node/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/cluster-optimizer/node/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -20,26 +20,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>节点优化 | 云智优本</title>
-<meta name="description" content="描述了节点相关信息及优化建议。
+<title>Node Optimization | Wiseinf</title>
+<meta name="description" content="Describes node-related information and optimization suggestions.
 ">
-<meta property="og:title" content="节点优化" />
-<meta property="og:description" content="描述了节点相关信息及优化建议。
+<meta property="og:title" content="Node Optimization" />
+<meta property="og:description" content="Describes node-related information and optimization suggestions.
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/cluster-optimizer/node/" /><meta property="og:site_name" content="云智优本" />
-<meta itemprop="name" content="节点优化">
-<meta itemprop="description" content="描述了节点相关信息及优化建议。
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="节点优化"/>
-<meta name="twitter:description" content="描述了节点相关信息及优化建议。
+<meta property="og:url" content="/docs/cluster-optimizer/node/" /><meta property="og:site_name" content="Wiseinf" />
+
+<meta itemprop="name" content="Node Optimization">
+<meta itemprop="description" content="Describes node-related information and optimization suggestions.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node Optimization"/>
+<meta name="twitter:description" content="Describes node-related information and optimization suggestions.
 "/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" as="style">
-<link href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" as="style">
+<link href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,31 +59,42 @@ if (!doNotTrack) {
   <body class="td-section">
     <header>
       <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">云智优本</span></a>
+<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Wiseinf</span></a>
 <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
   <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item dropdown mr-4 d-none d-lg-block">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      aria-haspopup="true" aria-expanded="false"><span>Product</span></a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer：云原生集群优化平台 </a>
-        <a class="dropdown-item" href="/products/wisecost"> Wisecost：云原生成本管理平台 </a>
-        <a class="dropdown-item" href="/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer: Cloud Native Optimization Platform </a>
+        <a class="dropdown-item" href="/products/wisecost"> Wisecost: Cloud Native Cost Management Platform </a>
+        <a class="dropdown-item" href="/products/ruyi"> Ruyi: Cloud Native Cluster Autoscaling Engine</a>
       </div>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link active" href="/docs/"><span class="active">文档</span></a>
+      <a class="nav-link active" href="/docs/"><span class="active">Documentation</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/pricing/"><span>价格</span></a>
+      <a class="nav-link" href="/pricing/"><span>Price</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/services/"><span>服务</span></a>
+      <a class="nav-link" href="/services/"><span>Service</span></a>
       </li>
-      </ul>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/zh-cn/docs/cluster-optimizer/node/">中文</a>
+	
+</div></li>
+    </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
   
@@ -102,17 +113,17 @@ if (!doNotTrack) {
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-这是本节的多页打印视图。
-<a href="#" onclick="print();return false;">点击此处打印</a>.
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/cluster-optimizer/node/">返回本页常规视图</a>.
+<a href="/docs/cluster-optimizer/node/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">节点优化</h1>
-<div class="lead">描述了节点相关信息及优化建议。</div>
+<h1 class="title">Node Optimization</h1>
+<div class="lead">Describes node-related information and optimization suggestions.</div>
 
 
 
@@ -133,11 +144,11 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>描述了节点相关信息及优化建议。</p>
+<p>Describes node-related information and optimization suggestions.</p>
 
 </div>
 
-<p>点击平台左侧菜单栏的<code>节点</code>菜单，则显示节点页，如下图所示。</p>
+<p>Click the <code>Nodes</code> menu in the left menu bar of the platform to display the Nodes page, as shown below.</p>
 
 
 
@@ -150,19 +161,19 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-节点页
+Nodes Page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>节点页分为3个区：</p>
+<p>The Nodes page is divided into three sections:</p>
 <ol>
-<li>集群选择区：选择相应的集群。</li>
-<li>查询区：可根据节点组名称和节点组ID过滤列表项。</li>
-<li>列表区：展示节点组的信息、其当前设置和优化设置。</li>
+<li>Cluster Selection Area: Select the corresponding cluster.</li>
+<li>Query Area: Filter list items by Node Group Name and Node Group ID.</li>
+<li>List Area: Displays information about Node Groups, their current settings, and optimized settings.</li>
 </ol>
-<p>选择集群的节点页如下所示：
+<p>The Nodes page for selecting a cluster is shown below:
 
 
 
@@ -175,21 +186,21 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-节点页-选择集群
+Nodes Page - Select Cluster
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 </p>
-<p>列表区显示分为5栏：</p>
+<p>The List Area display is divided into five columns:</p>
 <ol>
-<li>节点信息栏：展示节点名称、实例ID和地域信息。</li>
-<li>当前设置栏：展示节点的实例类型、CPU核数和内存大小。</li>
-<li>策略名称栏：展示节点优化所使用的策略，目前仅支持低利用率节点策略。</li>
-<li>详情栏：展示策略所提供的信息。例如，对于低利用率节点策略来说，会观测CPU和内存的平均利用率，并同平台设置的阈值进行比较，帮助用户调整节点实例类型。</li>
-<li>操作栏：展示对节点相应的操作</li>
+<li>Node Information Column: Displays the Node Name, Instance ID, and Region information.</li>
+<li>Current Settings Column: Displays the instance type, CPU cores, and memory size of the node.</li>
+<li>Policy Name Column: Displays the policy used for node optimization; currently, only the low utilization node strategy is supported.</li>
+<li>Details Column: Displays information provided by the policy. For example, for the low utilization node strategy, it monitors the average utilization of CPU and memory and compares it with the threshold set by the platform to help users adjust the node instance type.</li>
+<li>Actions Column: Displays corresponding actions for the node.</li>
 </ol>
-<p>点击的<code>调整</code>链接可打开调整节点对话框，对话框中展示了详细的调整信息和推荐的调整方案，如下图所示。</p>
+<p>Clicking the <code>Adjust</code> link opens the Adjust Nodes dialog box, which displays detailed adjustment information and recommended adjustment plans, as shown below.</p>
 
 
 
@@ -202,7 +213,7 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-调整节点页
+Adjust Nodes Page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -273,12 +284,12 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2024 北京云智优本科技有限公司 保留所有权利</small>
+        <small class="text-white">&copy; 2024 Wiseinf Inc. All Rights Reserved</small>
         
-        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
-        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+        
+        
 	
-		<p class="mt-2"><a href="/about/">关于我们</a></p>
+		<p class="mt-2"><a href="/about/">About Us</a></p>
 	
       </div>
     </div>

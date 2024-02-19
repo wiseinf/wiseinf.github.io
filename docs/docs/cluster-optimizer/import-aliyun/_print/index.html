@@ -1,9 +1,9 @@
 <!doctype html>
-<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.109.0">
+<meta name="generator" content="Hugo 0.121.2">
 <link rel="canonical" type="text/html" href="/docs/cluster-optimizer/import-aliyun/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/cluster-optimizer/import-aliyun/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -20,26 +20,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>导入阿里云集群 | 云智优本</title>
-<meta name="description" content="本节描述导入阿里云集群的详细步骤.
+<title>Import Alibaba Cloud Cluster | Wiseinf</title>
+<meta name="description" content="This section describes the detailed steps for importing Alibaba Cloud clusters.
 ">
-<meta property="og:title" content="导入阿里云集群" />
-<meta property="og:description" content="本节描述导入阿里云集群的详细步骤.
+<meta property="og:title" content="Import Alibaba Cloud Cluster" />
+<meta property="og:description" content="This section describes the detailed steps for importing Alibaba Cloud clusters.
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/cluster-optimizer/import-aliyun/" /><meta property="og:site_name" content="云智优本" />
-<meta itemprop="name" content="导入阿里云集群">
-<meta itemprop="description" content="本节描述导入阿里云集群的详细步骤.
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="导入阿里云集群"/>
-<meta name="twitter:description" content="本节描述导入阿里云集群的详细步骤.
+<meta property="og:url" content="/docs/cluster-optimizer/import-aliyun/" /><meta property="og:site_name" content="Wiseinf" />
+
+<meta itemprop="name" content="Import Alibaba Cloud Cluster">
+<meta itemprop="description" content="This section describes the detailed steps for importing Alibaba Cloud clusters.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Import Alibaba Cloud Cluster"/>
+<meta name="twitter:description" content="This section describes the detailed steps for importing Alibaba Cloud clusters.
 "/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" as="style">
-<link href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" as="style">
+<link href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,31 +59,42 @@ if (!doNotTrack) {
   <body class="td-section">
     <header>
       <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">云智优本</span></a>
+<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Wiseinf</span></a>
 <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
   <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item dropdown mr-4 d-none d-lg-block">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      aria-haspopup="true" aria-expanded="false"><span>Product</span></a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer：云原生集群优化平台 </a>
-        <a class="dropdown-item" href="/products/wisecost"> Wisecost：云原生成本管理平台 </a>
-        <a class="dropdown-item" href="/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer: Cloud Native Optimization Platform </a>
+        <a class="dropdown-item" href="/products/wisecost"> Wisecost: Cloud Native Cost Management Platform </a>
+        <a class="dropdown-item" href="/products/ruyi"> Ruyi: Cloud Native Cluster Autoscaling Engine</a>
       </div>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link active" href="/docs/"><span class="active">文档</span></a>
+      <a class="nav-link active" href="/docs/"><span class="active">Documentation</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/pricing/"><span>价格</span></a>
+      <a class="nav-link" href="/pricing/"><span>Price</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/services/"><span>服务</span></a>
+      <a class="nav-link" href="/services/"><span>Service</span></a>
       </li>
-      </ul>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/zh-cn/docs/cluster-optimizer/import-aliyun/">中文</a>
+	
+</div></li>
+    </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
   
@@ -102,17 +113,17 @@ if (!doNotTrack) {
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-这是本节的多页打印视图。
-<a href="#" onclick="print();return false;">点击此处打印</a>.
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/cluster-optimizer/import-aliyun/">返回本页常规视图</a>.
+<a href="/docs/cluster-optimizer/import-aliyun/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">导入阿里云集群</h1>
-<div class="lead">本节描述导入阿里云集群的详细步骤.</div>
+<h1 class="title">Import Alibaba Cloud Cluster</h1>
+<div class="lead">This section describes the detailed steps for importing Alibaba Cloud clusters.</div>
 
 
 
@@ -133,128 +144,175 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>本节描述导入阿里云集群的详细步骤。</p>
+<p>This section describes the detailed steps for importing Alibaba Cloud clusters.</p>
 
 </div>
 
-<h2 id="前置条件">前置条件</h2>
+<h2 id="preconditions">Preconditions</h2>
 <ol>
-<li>获取阿里云Access Key和Access Key Secret，具备如下权限。具体申请过程请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。
+<li>
+<p>Obtain the Alibaba Cloud Access Key and Access Key Secret and have the following permissions. For the specific application process, please refer to <a href="https://help.aliyun.com/document_detail/116401.htm">Create Access Key</a>.</p>
 <table>
 <thead>
 <tr>
-<th>服务</th>
-<th>权限</th>
-<th>说明</th>
+<th>Services</th>
+<th>Permissions</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>云服务器（ECS）</td>
+<td>Cloud Server (ECS)</td>
 <td>ecs:DescribeDisks<br/> ecs:DescribeInstances<br/> ecs:DescribeRegions</td>
-<td>需此权限获取磁盘、实例和地域信息</td>
+<td>This permission is required to obtain disk, instance and region information</td>
 </tr>
 <tr>
-<td>容器服务Kubernetes版（CS）</td>
-<td>cs:DescribeClusterNodePools<br/> cs:DescribeClusterNodePoolDetail<br/> cs:DescribeClusters <br/> cs:DescribeClusterV2UserKubeconfig<br/> cs:DescribeClusterNodes</td>
-<td>需此权限获取集群、节点池、节点、Kubeconfig等信息</td>
+<td>Container Service Kubernetes version (CS)</td>
+<td>cs:DescribeClusterNodePools<br/> cs:DescribeClusterNodePoolDetail<br/> cs:DescribeClusters <br/> cs:DescribeClusterUserKubeconfig<br/> cs:DescribeClusterNodes</td>
+<td>This permission is required to obtain the cluster, node pool, Node, Kubeconfig and other information</td>
 </tr>
 </tbody>
 </table>
+<p>The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to [Creating a custom permission policy through script editing mode](<a href="https://help.aliyun.com/zh/ram/user-">https://help.aliyun.com/zh/ram/user-</a> guide/create-a-custom-policy#section-kwn-gu8-48m)</p>
 </li>
 </ol>
-<p>其权限策略文件描述如下，您可以直接在阿里云控制台中导入该策略，具体请参考<a href="https://help.aliyun.com/zh/ram/user-guide/create-a-custom-policy#section-kwn-gu8-48m">通过脚本编辑模式创建自定义权限策略</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ecs:DescribeDisks&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ecs:DescribeInstances&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ecs:DescribeRegions&#34;</span>
-</span></span><span style="display:flex;"><span>      ],
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: [
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;*&#34;</span>
-</span></span><span style="display:flex;"><span>      ],
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Condition&#34;</span>: {}
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;cs:DescribeClusterNodePools&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;cs:DescribeClusterNodePoolDetail&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;cs:DescribeClusters&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;cs:DescribeClusterV2UserKubeconfig&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;cs:DescribeClusterNodes&#34;</span>
-</span></span><span style="display:flex;"><span>      ],
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: [
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;*&#34;</span>
-</span></span><span style="display:flex;"><span>      ],
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Condition&#34;</span>: {}
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>     {
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;ecs:DescribeDisks&#34;</span>,
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;ecs:DescribeInstances&#34;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;ecs:DescribeRegions&#34;</span>
+</span></span><span style="display:flex;"><span>       ],
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Resource&#34;</span>: [
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>       ],
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Condition&#34;</span>: {}
+</span></span><span style="display:flex;"><span>     },
+</span></span><span style="display:flex;"><span>     {
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;cs:DescribeClusterNodePools&#34;</span>,
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;cs:DescribeClusterNodePoolDetail&#34;</span>,
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;cs:DescribeClusters&#34;</span>,
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;cs:DescribeClusterUserKubeconfig&#34;</span>,
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;cs:DescribeClusterNodes&#34;</span>
+</span></span><span style="display:flex;"><span>       ],
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Resource&#34;</span>: [
+</span></span><span style="display:flex;"><span>         <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>       ],
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&#34;Condition&#34;</span>: {}
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>   ]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ol start="2">
-<li>阿里云Kubernetes集群Kubeconfig。集群版本1.20及以上，建议使用ACK集群。具体请参见<a href="https://help.aliyun.com/zh/ack/">容器服务Kubernetes版</a>。Kubeconfig需具备如下权限。
+<li>Alibaba Cloud Kubernetes cluster Kubeconfig. For cluster versions 1.20 and above, it is recommended to use ACK cluster. For details, please see <a href="https://help.aliyun.com/zh/ack/">Container Service Kubernetes version</a>. Kubeconfig requires the following permissions.
 <table>
 <thead>
 <tr>
-<th>资源</th>
-<th>权限</th>
-<th>说明</th>
+<th>Resources</th>
+<th>Permissions</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Node</td>
-<td>List<br/> Watch</td>
-<td>获取节点列表</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get node information</td>
 </tr>
 <tr>
 <td>Pod</td>
-<td>List<br/> Watch</td>
-<td>获取Pod列表</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Pod information</td>
 </tr>
 <tr>
-<td>Deployment<br/>StatefulSet<br/>DaemonSet<br/>Job<br/>CronJob<br/>ReplicaSet<br>ReplicationControllers<br/></td>
+<td>Namespace</td>
 <td>List<br/>Get<br/> Watch</td>
-<td>获取Deployment、StatefulSet、DaemonSet、Job、CronJob、ReplicaSet列表</td>
+<td>Get Namespace information</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Service information</td>
+</tr>
+<tr>
+<td>Persistent Volume<br/> Persistent Volume Claim</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Persistent Volume, Persistent Volume Claim information</td>
+</tr>
+<tr>
+<td>Deployment<br/>StatefulSet<br/>DaemonSet<br/><br/>ReplicaSet<br>ReplicationControllers<br/></td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Deployment, StatefulSet, DaemonSet, ReplicaSet , ReplicationContoller information</td>
+</tr>
+<tr>
+<td>Job<br/>CronJob</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Job and CronJob information</td>
 </tr>
 </tbody>
 </table>
 </li>
 </ol>
-<p>权限文件如下：</p>
+<p>The permissions file is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">ruyi</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">rules</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">nodes</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods/status</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">deployments</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">statefulsets</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">daemonsets</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">jobs</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">cronjobs</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">replicasets</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">replicationcontollers</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>   - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">nodes</span>
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">pods</span>
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">pods/status</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">persistentvolumes</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">persistentvolumeclaims</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">services</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">namespaces</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>   - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#e6db74">&#34;apps/v1&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">deployments</span>
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">replicasets</span>
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">replicationcontollers</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">statefulsets</span>
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">daemonsets</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>   - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#e6db74">&#34;batch/v1&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">jobs</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">cronjobs</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>   - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#e6db74">&#34;storage/v1&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>       -<span style="color:#ae81ff">storageclasses</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">watch</span>
 </span></span></code></pre></div><ol start="4">
-<li>Prometheus监控或者Thanos监控。该监控用于给集群中的节点、容器等提供监控数据。</li>
+<li>Prometheus monitoring or Thanos monitoring. This monitoring is used to provide monitoring data for nodes, containers, etc. in the cluster.</li>
 </ol>
-<h2 id="导入步骤">导入步骤</h2>
-<h3 id="添加阿里云账号">添加阿里云账号</h3>
+<h2 id="import-steps">Import steps</h2>
+<h3 id="add-alibaba-cloud-account">Add Alibaba Cloud account</h3>
 <ol>
-<li>选择<code>设置</code>菜单，选择<code>云账户</code>标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。</li>
+<li>Select the <code>Settings</code> menu and select the <code>Cloud Account</code> tab to enter the cloud account management page. By default, this page will display all cloud accounts managed by the platform in pages, including names and corresponding cloud service providers. It also provides an operation bar to facilitate users to perform corresponding operations, as shown in the figure below.</li>
 </ol>
 
 
@@ -268,14 +326,14 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-云账户管理主页面
+Cloud account management main page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
 <ol start="2">
-<li>在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。</li>
+<li>On the cloud account management page, click the Add button to add a cloud account. The interface is as shown below. In this interface, the user enters the cloud account name, selects the corresponding cloud service provider, enters the Access Key and Access Key Secret, and clicks the OK button to complete adding the cloud account. After adding parameters, users can also click the Test Connectivity button to test whether the cloud account is correct. The platform currently supports Alibaba Cloud, which can be selected from the cloud service provider drop-down box. Access Key and Access Key Secret are account information for accessing the cloud service. Please obtain them from the corresponding cloud service provider.</li>
 </ol>
 
 
@@ -289,16 +347,16 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-添加云账户界面
+Add cloud account interface
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<h3 id="添加阿里云集群">添加阿里云集群</h3>
+<h3 id="add-alibaba-cloud-cluster">Add Alibaba Cloud cluster</h3>
 <ol>
 <li>
-<p>选择<code>设置</code>菜单，选择集群标签进入集群管理页面。默认情况下，该页面将分页展示平台管理的所有集群，包括名称、集群ID集群地域、Access Token名称，对应的云服务商以及Prometheus地址，同时也提供了操作栏，方便用户进行相应的操作，如图 24所示。
+<p>Select the <code>Settings</code> menu and select the cluster tab to enter the cluster management page. By default, this page will display all clusters managed by the platform in pages, including name, cluster ID, cluster region, Access Token name, corresponding cloud service provider and Prometheus address. It also provides an operation bar to facilitate users to perform corresponding operations. As shown in Figure 24.
 
 
 
@@ -311,7 +369,7 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-集群管理主页面
+Cluster management main page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -319,17 +377,17 @@ if (!doNotTrack) {
 </p>
 </li>
 <li>
-<p>点击<code>导入集群</code>按钮即弹出导入对话框，可在此导入集群。导入集群分为5个步骤，目前仅支持阿里云集群。</p>
+<p>Click the <code>Import Cluster</code> button to pop up the import dialog box, where you can import the cluster. There are 5 steps to import a cluster. Currently, only Alibaba Cloud clusters are supported.</p>
 <ol>
-<li>设置阿里云访问凭据</li>
-<li>连接Kubernetes集群</li>
-<li>连接Prometheus</li>
-<li>查看配置</li>
-<li>完成</li>
+<li>Set Alibaba Cloud access credentials</li>
+<li>Connect to the Kubernetes cluster</li>
+<li>Connect to Prometheus</li>
+<li>View configuration</li>
+<li>Complete</li>
 </ol>
 </li>
 <li>
-<p>设置阿里云访问凭据界面如下图所示。在阿里云访问凭据界面，通过使用已有凭据来设置阿里云访问凭据，此处选择<code>添加阿里云账号</code>中添加的阿里云账号，如下图所示。
+<p>The interface for setting Alibaba Cloud access credentials is as shown in the figure below. In the Alibaba Cloud access credentials interface, set the Alibaba Cloud access credentials by using existing credentials. Here, select the Alibaba Cloud account added in <code>Add Alibaba Cloud Account</code>, as shown in the figure below.
 
 
 
@@ -342,7 +400,7 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-导入集群界面-设置阿里云访问凭据
+Import cluster interface-set Alibaba Cloud access credentials
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -350,7 +408,7 @@ if (!doNotTrack) {
 </p>
 </li>
 <li>
-<p>设置完阿里云访问凭据后，点击下一步按钮，即可进入连接Kubernetes集群页面，如下图所示。平台支持连接2种类型的Kubernetes集群，包括托管集群和自建集群。连接托管集群页面如下图所示。此处我们选择托管集群，平台通过云账户自动获取用户集群，用户通过集群下拉框来选择相应的集群、输入描述字段、选择是否使用API Server私网地址、选择是否自动刷新KubeConfig以及KubeConfig生命周期，最后输入节点组标签即可。
+<p>After setting the Alibaba Cloud access credentials, click the Next button to enter the page for connecting to the Kubernetes cluster, as shown in the figure below. The platform supports connecting to two types of Kubernetes clusters, including managed clusters and self-built clusters. The Connect Hosting Cluster page is shown in the figure below. Here we choose the managed cluster, and the platform automatically obtains the user cluster through the cloud account. The user selects the corresponding cluster through the cluster drop-down box, enters the description field, selects whether to use the API Server private network address, selects whether to automatically refresh KubeConfig and the KubeConfig life cycle. Finally enter the node group label.
 
 
 
@@ -363,7 +421,7 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-连接Kubernetes集群页面
+Connect to Kubernetes cluster page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -371,7 +429,7 @@ if (!doNotTrack) {
 </p>
 </li>
 <li>
-<p>连接Prometheus页面如下图所示。用户在此页面输入信息后，点击下一步按钮进入查看配置页面。输入信息明细如下表所示。
+<p>The connection page to Prometheus is as shown in the figure below. After the user enters information on this page, click the Next button to enter the view configuration page. The input information details are shown in the table below.
 
 
 
@@ -384,50 +442,50 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-连接Prometheus页面
+Connect to Prometheus page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-连接Prometheus参数说明如表所示：</p>
+The parameter description for connecting to Prometheus is as shown in the table:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">是否Thanos</td>
-<td style="text-align:left">若后端集群为Thanos，则应勾选此项。</td>
+<td style="text-align:left">Whether Thanos</td>
+<td style="text-align:left">If the backend cluster is Thanos, this should be checked.</td>
 </tr>
 <tr>
-<td style="text-align:left">Prometheus地址</td>
-<td style="text-align:left">Prometheus地址，必须可访问。</td>
+<td style="text-align:left">Prometheus address</td>
+<td style="text-align:left">Prometheus address, must be accessible.</td>
 </tr>
 <tr>
-<td style="text-align:left">限制访问速率</td>
-<td style="text-align:left">若需要现在平台对Prometheus的访问速率，则应勾选此项。</td>
+<td style="text-align:left">Limit access rate</td>
+<td style="text-align:left">If you need the current platform&rsquo;s access rate to Prometheus, you should check this option.</td>
 </tr>
 <tr>
-<td style="text-align:left">最大并发数</td>
-<td style="text-align:left">平台访问Prometheus的最大并发数。</td>
+<td style="text-align:left">Maximum number of concurrencies</td>
+<td style="text-align:left">The maximum number of concurrencies for the platform to access Prometheus.</td>
 </tr>
 <tr>
-<td style="text-align:left">集群标签</td>
-<td style="text-align:left">集群标签用于从Prometheus或者Thanos中筛选该集群的监控指标</td>
+<td style="text-align:left">Cluster label</td>
+<td style="text-align:left">Cluster label is used to filter the monitoring indicators of the cluster from Prometheus or Thanos</td>
 </tr>
 <tr>
-<td style="text-align:left">集群标签值</td>
-<td style="text-align:left">集群标签值用于从Prometheus或者Thanos中筛选该集群的监控指标</td>
+<td style="text-align:left">Cluster tag value</td>
+<td style="text-align:left">Cluster tag value is used to filter the monitoring indicators of the cluster from Prometheus or Thanos</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>查看配置页面如下图所示，该页面显示了阿里云访问凭据、连接Kubernetes集群和连接Prometheus集群的详细参数，方便用户确认。当用户完成确认后，点击导入按钮，即可进入完成页面。
+<p>View the configuration page as shown in the figure below. This page displays Alibaba Cloud access credentials, detailed parameters for connecting to the Kubernetes cluster and connecting to the Prometheus cluster, which is convenient for users to confirm. When the user completes the confirmation, click the Import button to enter the completion page.
 
 
 
@@ -440,7 +498,7 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-查看配置页面
+View configuration page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -448,7 +506,7 @@ if (!doNotTrack) {
 </p>
 </li>
 <li>
-<p>完成页面如图下图所示，页面将显示提交情况。点击完成，即完成集群导入。
+<p>The completed page is as shown in the figure below, and the submission status will be displayed on the page. Click Finish to complete the cluster import.
 
 
 
@@ -461,7 +519,7 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-完成页面
+Complete page
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -469,8 +527,8 @@ if (!doNotTrack) {
 </p>
 </li>
 </ol>
-<h2 id="下一步操作">下一步操作</h2>
-<p>导入集群完成后，等待一段时间，即可查看该集群多个维度的优化建议。</p>
+<h2 id="next-steps">Next steps</h2>
+<p>After the cluster is imported, wait for a while to view optimization suggestions for the cluster in multiple dimensions.</p>
 
 </div>
 </div>
@@ -536,12 +594,12 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2024 北京云智优本科技有限公司 保留所有权利</small>
+        <small class="text-white">&copy; 2024 Wiseinf Inc. All Rights Reserved</small>
         
-        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
-        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+        
+        
 	
-		<p class="mt-2"><a href="/about/">关于我们</a></p>
+		<p class="mt-2"><a href="/about/">About Us</a></p>
 	
       </div>
     </div>

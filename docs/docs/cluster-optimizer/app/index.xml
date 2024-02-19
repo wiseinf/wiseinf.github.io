@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – 应用优化</title>
+    <title>Wiseinf – Application Optimization</title>
     <link>/docs/cluster-optimizer/app/</link>
-    <description>Recent content in 应用优化 on 云智优本</description>
+    <description>Recent content in Application Optimization on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/docs/cluster-optimizer/app/index.xml" rel="self" type="application/rss+xml" />
     

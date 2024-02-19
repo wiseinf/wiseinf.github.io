@@ -1,9 +1,9 @@
 <!doctype html>
-<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.109.0">
+<meta name="generator" content="Hugo 0.121.2">
 <link rel="canonical" type="text/html" href="/docs/ruyi/configuration/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/ruyi/configuration/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -20,26 +20,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>配置 | 云智优本</title>
-<meta name="description" content="描述Ruyi：云原生集群扩缩容引擎的配置.
+<title>Configuration | Wiseinf</title>
+<meta name="description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
 ">
-<meta property="og:title" content="配置" />
-<meta property="og:description" content="描述Ruyi：云原生集群扩缩容引擎的配置.
+<meta property="og:title" content="Configuration" />
+<meta property="og:description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/ruyi/configuration/" /><meta property="og:site_name" content="云智优本" />
-<meta itemprop="name" content="配置">
-<meta itemprop="description" content="描述Ruyi：云原生集群扩缩容引擎的配置.
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="配置"/>
-<meta name="twitter:description" content="描述Ruyi：云原生集群扩缩容引擎的配置.
+<meta property="og:url" content="/docs/ruyi/configuration/" /><meta property="og:site_name" content="Wiseinf" />
+
+<meta itemprop="name" content="Configuration">
+<meta itemprop="description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Configuration"/>
+<meta name="twitter:description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
 "/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" as="style">
-<link href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" as="style">
+<link href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,31 +59,42 @@ if (!doNotTrack) {
   <body class="td-section">
     <header>
       <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">云智优本</span></a>
+<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Wiseinf</span></a>
 <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
   <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item dropdown mr-4 d-none d-lg-block">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      aria-haspopup="true" aria-expanded="false"><span>Product</span></a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer：云原生集群优化平台 </a>
-        <a class="dropdown-item" href="/products/wisecost"> Wisecost：云原生成本管理平台 </a>
-        <a class="dropdown-item" href="/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer: Cloud Native Optimization Platform </a>
+        <a class="dropdown-item" href="/products/wisecost"> Wisecost: Cloud Native Cost Management Platform </a>
+        <a class="dropdown-item" href="/products/ruyi"> Ruyi: Cloud Native Cluster Autoscaling Engine</a>
       </div>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link active" href="/docs/"><span class="active">文档</span></a>
+      <a class="nav-link active" href="/docs/"><span class="active">Documentation</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/pricing/"><span>价格</span></a>
+      <a class="nav-link" href="/pricing/"><span>Price</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/services/"><span>服务</span></a>
+      <a class="nav-link" href="/services/"><span>Service</span></a>
       </li>
-      </ul>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/zh-cn/docs/ruyi/configuration/">中文</a>
+	
+</div></li>
+    </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
   
@@ -102,17 +113,17 @@ if (!doNotTrack) {
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-这是本节的多页打印视图。
-<a href="#" onclick="print();return false;">点击此处打印</a>.
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/ruyi/configuration/">返回本页常规视图</a>.
+<a href="/docs/ruyi/configuration/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">配置</h1>
-<div class="lead">描述Ruyi：云原生集群扩缩容引擎的配置.</div>
+<h1 class="title">Configuration</h1>
+<div class="lead">Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.</div>
 
 
 
@@ -128,7 +139,7 @@ if (!doNotTrack) {
     
     
 	
-<li>1: <a href="#pg-311560d092771780a32c6c35dc00ad8c">节点组配置参数</a></li>
+<li>1: <a href="#pg-743cd90d3c1ba1709b66bd0042c39a58">Command Line Arguments</a></li>
 
 
     
@@ -147,7 +158,7 @@ if (!doNotTrack) {
     
     
 	
-<li>2: <a href="#pg-743cd90d3c1ba1709b66bd0042c39a58">命令行参数</a></li>
+<li>2: <a href="#pg-311560d092771780a32c6c35dc00ad8c"></a></li>
 
 
     
@@ -171,26 +182,26 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Ruyi：云原生集群扩缩容引擎。</p>
+<p>Ruyi: Cloud-native cluster scaling and expansion engine.</p>
 
 </div>
 
-<h2 id="配置ruyi云原生集群扩缩容引擎">配置Ruyi：云原生集群扩缩容引擎</h2>
-<p>Ruyi：云原生集群扩缩容引擎提供了自动扩缩容和虚拟容量两大特性。可单独使用某项特性或同时使用两项特性。</p>
-<p>可通过命令行参数<code>--features</code>指定。</p>
-<p>下面描述单独配置自动扩缩容特性或者虚拟容量特性的主要配置参数。</p>
-<h3 id="配置自动扩缩容特性">配置自动扩缩容特性</h3>
+<h2 id="configuring-ruyi-cloud-native-cluster-scaling-and-expansion-engine">Configuring Ruyi: Cloud-native Cluster Scaling and Expansion Engine</h2>
+<p>Ruyi: Cloud-native cluster scaling and expansion engine provides two main features: automatic scaling and virtual capacity. You can use either feature individually or use both features at the same time.</p>
+<p>You can specify the features using the command line parameter <code>--features</code>.</p>
+<p>The following describes the main configuration parameters for configuring the automatic scaling feature or the virtual capacity feature separately.</p>
+<h3 id="configuring-the-automatic-scaling-feature">Configuring the Automatic Scaling Feature</h3>
 <pre tabindex="0"><code>$ ruyi --features=Autoscaling --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
-</code></pre><h3 id="配置虚拟容量特性">配置虚拟容量特性</h3>
+</code></pre><h3 id="configuring-the-virtual-capacity-feature">Configuring the Virtual Capacity Feature</h3>
 <pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --webhook-cert-dir=/opt/ruyi/certs/
-</code></pre><p>虚拟容量特性涉及到虚拟容量控制器以及Webhook，可通过参数分别控制。</p>
-<p>例如，可通过如下命令单独启用虚拟容量控制器：</p>
+</code></pre><p>The virtual capacity feature involves a virtual capacity controller and a webhook. You can control them separately using parameters.</p>
+<p>For example, you can enable the virtual capacity controller alone by running the following command:</p>
 <pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --enable-virtual-capacity-controller=true  --enable-webhook=false
       
-</code></pre><p>或者，通过如下命令单独启动Webhook：</p>
+</code></pre><p>Or, you can start the webhook alone by running the following command:</p>
 <pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
 --enable-virtual-capacity-controller=false  --enable-webhook=true --webhook-cert-dir=/opt/ruyi/certs/
-</code></pre><p>在配置Webhook时，必须指定<code>MutatingWebhookConfiguration</code>，如下：</p>
+</code></pre><p>When configuring the webhook, you must specify the <code>MutatingWebhookConfiguration</code>, as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">admissionregistration.k8s.io/v1</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">MutatingWebhookConfiguration</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
@@ -218,68 +229,68 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">failurePolicy</span>: <span style="color:#ae81ff">Ignore</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">sideEffects</span>: <span style="color:#ae81ff">None</span>
 </span></span></code></pre></div><blockquote>
-<p>注意：必须正确指定<code>MutatingWebhookConfiguration</code>的<code>caBundle</code>，否则Webhook不会生效。</p>
+<p>Note: You must correctly specify the <code>caBundle</code> in the <code>MutatingWebhookConfiguration</code> to make the webhook work properly.</p>
 </blockquote>
-<h3 id="环境变量">环境变量</h3>
-<p>使用自动扩缩容特性特性时，需通过环境变量提供云服务商的相关信息。</p>
-<p>若使用阿里云，则需通过环境变量配置阿里云的AccessKey及其Region。</p>
+<h3 id="environment-variables">Environment Variables</h3>
+<p>When using the automatic scaling feature, you need to provide cloud service provider-related information through environment variables.</p>
+<p>If you are using Alibaba Cloud, you need to configure the AccessKey and its region through environment variables.</p>
 <table>
 <thead>
 <tr>
-<th>环境变量名称</th>
-<th>说明</th>
-<th>默认值</th>
+<th>Environment Variable Name</th>
+<th>Description</th>
+<th>Default Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ALIBABA_CLOUD_ACCESS_KEY_ID</td>
-<td>阿里云AccessKeyID</td>
-<td>无默认值</td>
+<td>Alibaba Cloud AccessKeyID</td>
+<td>No default value</td>
 </tr>
 <tr>
 <td>ALIBABA_CLOUD_ACCESS_KEY_SECRET</td>
-<td>阿里云AccessKeySecret</td>
-<td>无默认值</td>
+<td>Alibaba Cloud AccessKeySecret</td>
+<td>No default value</td>
 </tr>
 <tr>
 <td>ALIBABA_CLOUD_REGION_ID</td>
-<td>阿里云集群所在地域ID</td>
+<td>The ID of the region where the Alibaba Cloud cluster is located</td>
 <td>cn-hangzhou</td>
 </tr>
 </tbody>
 </table>
-<p>若使用AWS，则需通过环境变量配置AWS的的AccessKey。</p>
+<p>If you are using AWS, you need to configure the AccessKey through environment variables.</p>
 <table>
 <thead>
 <tr>
-<th>环境变量名称</th>
-<th>说明</th>
-<th>默认值</th>
+<th>Environment Variable Name</th>
+<th>Description</th>
+<th>Default Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>AWS_ACCESS_KEY_ID 或 AWS_ACCESS_KEY</td>
-<td>AWS云AccessKeyID</td>
-<td>无默认值</td>
+<td>AWS_ACCESS_KEY_ID or AWS_ACCESS_KEY</td>
+<td>AWS AccessKeyID</td>
+<td>No default value</td>
 </tr>
 <tr>
-<td>AWS_SECRET_ACCESS_KEY 或 AWS_SECRET_KEY</td>
-<td>AWS云AccessKeySecret</td>
-<td>无默认值</td>
+<td>AWS_SECRET_ACCESS_KEY or AWS_SECRET_KEY</td>
+<td>AWS AccessKeySecret</td>
+<td>No default value</td>
 </tr>
 <tr>
 <td>AWS_ASSUME_ROLE_ARN</td>
-<td>AWS云ASSUME_ROLE_ARN</td>
-<td>无默认值</td>
+<td>AWS ASSUME_ROLE_ARN</td>
+<td>No default value</td>
 </tr>
 </tbody>
 </table>
-<p>详细配置项，请参考：</p>
+<p>For more detailed configuration items, please refer to:</p>
 <ul>
-<li><a href="/docs/ruyi/configuration/command-line/">命令行配置</a></li>
-<li><a href="/docs/ruyi/configuration/nodegroup/">节点组配置</a></li>
+<li><a href="/docs/ruyi/configuration/command-line">Command Line Configuration</a></li>
+<li><a href="/docs/ruyi/configuration/nodegroup">Node Group Configuration</a></li>
 </ul>
 
 </div>
@@ -302,18 +313,132 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-311560d092771780a32c6c35dc00ad8c">1 - 节点组配置参数</h1>
-    <div class="lead">描述了Ruyi：云原生集群扩缩容引擎的节点组配置参数.</div>
+	<h1 id="pg-743cd90d3c1ba1709b66bd0042c39a58">1 - Command Line Arguments</h1>
+    <div class="lead">Describes the command line arguments of Ruyi: Cloud Native Cluster Autoscaling Engine.</div>
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Ruyi：云原生集群扩缩容引擎配置。</p>
+<p>Ruyi: Cloud Native Cluster Autoscaling Engine.</p>
 
 </div>
 
-<h2 id="节点组配置参数概述">节点组配置参数概述</h2>
-<p>引擎必须依赖于节点组配置参数才能运行。节点组配置参数通过命令行参数<code>--config</code>来制定配置文件位置。例如：<code>--config=/etc/ruyi/config.yaml</code></p>
-<p>配置文件格式为YAML格式，示例如下：</p>
+<h2 id="command-line-arguments">Command Line Arguments</h2>
+<p>You can get the usage of Ruyi engine by <code>--help</code>, as follows:</p>
+<pre tabindex="0"><code>$ruyi --help
+usage: ruyi --config=CONFIG [&lt;flags&gt;]
+
+Flags:
+      --help                     Show context-sensitive help (also try --help-long and --help-man).
+  -f, --features=&#34;Autoscaling,VirtualCapacity&#34;  
+                                 Enable ruyi features. Available options are Autoscaling, VirtualCapacity
+      --cloud-provider=aws       Set cloud provider to use. Available options are (aws, alicloud)
+      --config=CONFIG            Set config file location
+      --kubeconfig=KUBECONFIG    Set kubeconfig file location
+      --interval=60s             Set interval for evaluating node scale up or down
+      --metrics-address=&#34;:8080&#34;  Set address for /metrics
+      --health-probe-address=&#34;:8090&#34;  
+                                 Set address for health probe
+      --port=8443                Set port
+      --dry-run                  Set dry-run argument. If true, forces dry run on all nodegroups
+  -v, --loglevel=info            Set logging level. Available options are (trace, debug, info, warning, error, fatal, panic)
+      --logfmt=text              Set logging format. Available options are (text, json)
+      --enable-virtual-capacity-controller  
+                                 Set enable virtual capacity controller
+      --enable-webhook           Set enable webhook for virtual capacity
+      --webhook-cert-dir=&#34;&#34;      Set webhook certificate directory
+      --concurrency=5            Set concurrency
+      --leader-elect             Enable leader election
+      --leader-elect-lease-duration=15s  
+                                 Set leader election lease duration
+      --leader-elect-renew-deadline=10s  
+                                 Set leader election renew deadline
+      --leader-elect-retry-period=2s  
+                                 Set leader election retry period
+      --leader-elect-lease-namespace=&#34;wiseinf-system&#34;  
+                                 Set leader election lease object namespace
+      --leader-elect-lease-name=&#34;ruyi-lease&#34;  
+                                 Set leader election lease object name
+</code></pre><p>The following describes the parameters in detail.</p>
+<h2 id="parameter-description">Parameter Description</h2>
+<h3 id="--help"><code>--help</code></h3>
+<p>The <code>--help</code> parameter provides the usage of the command line.</p>
+<h3 id="-f---features"><code>-f, --features</code></h3>
+<p>The <code>-f, --features</code> parameter indicates the features enabled by the engine. The <code>Autoscaling</code> option enables the autoscaling feature, and the <code>VirtualCapacity</code> option enables the virtual capacity feature.</p>
+<p>The default value is <code>Autoscaling,VirtualCapacity</code>, which means both autoscaling and virtual capacity features are enabled by default.</p>
+<h3 id="--cloud-provider"><code>--cloud-provider</code></h3>
+<p>The <code>--cloud-provider</code> parameter indicates the cloud service provider used by the engine. Its value can be <code>aws</code> or <code>alicloud</code>, and the default value is <code>aws</code>.</p>
+<h3 id="--config"><code>--config</code></h3>
+<p>The <code>--config</code> parameter indicates the location of the node group configuration file used by the engine. For more information on the node group configuration, please see <a href="/docs/ruyi/configuration/nodegroup">Node Group Configuration</a>.</p>
+<h3 id="--kubeconfig"><code>--kubeconfig</code></h3>
+<p>The <code>--kubeconfig</code> parameter indicates the location of the kubeconfig file used by the engine. The default value is empty, in which case the cluster access configuration will be used.</p>
+<h3 id="--interval"><code>--interval</code></h3>
+<p>The <code>--interval</code> parameter indicates the scheduling interval used by the function features of the engine. For example, the autoscaling feature evaluates whether to expand or shrink the node pool at this time interval.</p>
+<p>The default value is 60 seconds.</p>
+<h3 id="--metrics-address"><code>--metrics-address</code></h3>
+<p>The <code>--metrics-address</code> parameter indicates the port used by the monitoring metrics of the engine, from which you can obtain specific metric data at the <code>/metrics</code> endpoint.</p>
+<h3 id="--health-probe-address"><code>--health-probe-address</code></h3>
+<p>The <code>--health-probe-address</code> parameter indicates the monitoring probe address used by the engine, from which you can perform health probe and readiness probe at the <code>/healthz</code> and <code>/readyz</code> endpoints respectively.</p>
+<h3 id="--port"><code>--port</code></h3>
+<p>The <code>--port</code> parameter is the port used by the Webhook of the engine, and the default value is 8443.</p>
+<h3 id="--dry-run"><code>--dry-run</code></h3>
+<p>The <code>--dry-run</code> parameter indicates that the engine only runs without making any changes to the environment or nodes.</p>
+<h3 id="-v---loglevelinfo"><code>-v, --loglevel=info</code></h3>
+<p>The <code>--dry-run</code> parameter sets the log level. The available options are <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warning</code>, <code>error</code>, <code>fatal</code>, <code>panic</code>, and the default value is <code>info</code>.</p>
+<h3 id="--logfmt"><code>--logfmt</code></h3>
+<p>The <code>--dry-run</code> parameter sets the output format of the log. The available options are <code>text</code>, <code>json</code>, and the default value is <code>text</code>, which means the output is in text format.</p>
+<h3 id="--enable-virtual-capacity-controller"><code>--enable-virtual-capacity-controller</code></h3>
+<p>The <code>--enable-virtual-capacity-controller</code> parameter indicates whether to enable the virtual capacity controller, and the default value is <code>true</code>.</p>
+<h3 id="--enable-webhook"><code>--enable-webhook</code></h3>
+<p>The <code>--enable-webhook</code> parameter indicates whether to enable Webhook, and the default value is <code>true</code>.</p>
+<h3 id="--webhook-cert-dir"><code>--webhook-cert-dir</code></h3>
+<p>The <code>--webhook-cert-dir</code> parameter indicates the directory location of the certificate when enabling Webhook. The engine will initialize the certificate of the Webhook through the files <code>tls.crt</code> and <code>tls.key</code> in this directory location.
+If its value is empty, the Webhook will find the certificate in the directory <code>/tmp/k8s-webhook-server/serving-certs</code>.</p>
+<h3 id="--concurrency"><code>--concurrency</code></h3>
+<p>The <code>--concurrency</code> parameter indicates the number of concurrent processes. The default value is 5, but it is currently not used.</p>
+<h3 id="--leader-elect"><code>--leader-elect</code></h3>
+<p>The <code>--leader-elect</code> parameter sets whether to enable leader election. It is generally used in high availability environments.</p>
+<h3 id="leader-elect-lease-duration"><code>leader-elect-lease-duration</code></h3>
+<p>The <code>leader-elect-lease-duration</code> parameter sets the waiting time for non-master nodes to obtain the leader lease. The default value is 15 seconds.</p>
+<h3 id="--leader-elect-renew-deadline"><code>--leader-elect-renew-deadline</code></h3>
+<p>The <code>--leader-elect-renew-deadline</code> parameter sets the timeout for the master node to update the lease. The default value is 10 seconds.</p>
+<h3 id="--leader-elect-retry-period"><code>--leader-elect-retry-period</code></h3>
+<p>The <code>--leader-elect-retry-period</code> parameter sets the waiting time for nodes to retry when there is an error. The default value is 2 seconds.</p>
+<h3 id="--leader-elect-lease-namespace"><code>--leader-elect-lease-namespace</code></h3>
+<p>The <code>--leader-elect-lease-namespace</code> parameter sets the namespace where the lease is stored. The default value is <code>wiseinf-system</code>.</p>
+<h3 id="--leader-elect-lease-name"><code>--leader-elect-lease-name</code></h3>
+<p>The <code>--leader-elect-lease-name</code> parameter sets the name of the lease. The default value is <code>ruyi-lease</code>.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-311560d092771780a32c6c35dc00ad8c">2 - </h1>
+    
+	<h2 id="节点组配置参数">节点组配置参数</h2>
+<p>Ruyi：云原生集群扩缩容引擎的节点组配置参数。</p>
+<h3 id="配置示例">配置示例</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">nodeGroups</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;default-pool&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">nodeGroupId</span>: <span style="color:#e6db74">&#34;np1234567890&#34;</span>
@@ -353,301 +478,31 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>: 
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">lifecycle</span>: <span style="color:#ae81ff">spot</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><h2 id="配置参数">配置参数</h2>
-<h3 id="name"><code>name</code></h3>
-<p>参数<code>name</code>是引擎运行过程中使用的名称，可用于输出友好的日志信息等。不同的节点组名称必须唯一。</p>
-<h3 id="labelslabelkey-and-labelvalue"><code>labels</code>，<code>label.Key</code> and <code>label.Value</code></h3>
-<p>参数<code>labels</code>是一个键值对数组，引擎通过此键值对数组来选择节点组。
-其中，<code>label.Key</code> 和 <code>label.Value</code> 是键-值对中的键和值，</p>
-<h3 id="dryrun"><code>dryRun</code></h3>
-<p>参数<code>dryRun</code>表示仅运行，不对实际环境做任何修改。该值为<code>false</code>时，可呗命令行参数的<code>dryRun</code>覆盖。</p>
-<h3 id="nodegroupid"><code>nodeGroupId</code></h3>
-<p>参数<code>nodeGroupId</code>是节点组在云服务商的节点组ID，云服务商通过此参数来从对应云服务商获取改节点组信息。</p>
-<h3 id="enableautoscaling"><code>enableAutoscaling</code></h3>
-<p>参数<code>enableAutoscaling</code>指示是否启用自动扩缩容特性，默认为<code>true</code>。</p>
-<h3 id="autoscaling"><code>autoscaling</code></h3>
-<p>参数<code>autoscaling</code>为自动扩缩容提供相应参数，具体请参见<a href="#%E8%87%AA%E5%8A%A8%E6%89%A9%E7%BC%A9%E5%AE%B9%E9%85%8D%E7%BD%AE">自动扩缩容配置</a></p>
-<h3 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h3>
-<p>参数<code>enableVirtualCapacity</code>指示是否启用虚拟容量特性，默认为<code>true</code>。</p>
-<h3 id="virtualcapacity"><code>virtualCapacity</code></h3>
-<p>参数 <code>virtualCapacity</code>为虚拟容量提供相应参数，具体请参见<a href="#%E8%99%9A%E6%8B%9F%E5%AE%B9%E9%87%8F%E9%85%8D%E7%BD%AE">虚拟容量</a></p>
-<h3 id="alicloud"><code>alicloud</code></h3>
-<p>参数<code>alicloud</code>为云服务商阿里云提供相应参数，具体请参见<a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%95%86%E9%85%8D%E7%BD%AE">阿里云服务商配置</a></p>
-<h2 id="自动扩缩容配置">自动扩缩容配置</h2>
-<p>自动扩缩容配置为节点组自动扩缩容提供相应参数，示例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">autoscaling</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minNodes</span>: <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxNodes</span>: <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleUp</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleDown</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleUp</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.70</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">scaleOnPodPending</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">silencePeriod</span>: <span style="color:#ae81ff">2m</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleDown</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.40</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">softDeleteGracePeriod</span>: <span style="color:#ae81ff">1m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hardDeleteGracePeriod</span>: <span style="color:#ae81ff">10m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">maxNodeRemovalRate</span>: <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">taintEffect</span>: <span style="color:#ae81ff">NoExecute</span>
-</span></span></code></pre></div><h3 id="minnodes和maxnodes"><code>minNodes</code>和<code>maxNodes</code></h3>
-<p>参数<code>minNodes</code>和<code>maxNodes</code>是节点池大小的最大值和最小值。在进行节点扩缩容时，会保证节点池大小满足最大值和最小值的约束。</p>
-<h3 id="enablescaleup"><code>enableScaleUp</code></h3>
-<p>参数<code>enableScaleUp</code>指示是否启用扩容，默认为<code>true</code>。</p>
-<h3 id="enablescaledown"><code>enableScaleDown</code></h3>
-<p>参数<code>enableScaleUp</code>指示是否启用缩容，默认为<code>true</code>。</p>
-<h3 id="scaleup"><code>scaleUp</code></h3>
-<p>参数<code>scaleUp</code>提供扩容相关参数。</p>
-<h3 id="scaleupthreshold"><code>scaleUp.threshold</code></h3>
-<p>参数<code>scaleUp.threshold</code>是扩容的阈值，当节点组上所有运行Pod的Request总和与节点组Allocatable总和的比值大于此值时，则执行扩容操作。</p>
-<h3 id="scaleupscaleonpodpending"><code>scaleUp.scaleOnPodPending</code></h3>
-<p>参数<code>scaleUp.scaleOnPodPending</code>指示当Pod Pending时是否执行扩容，默认值为<code>false</code>。当节点组中所有节点都不满足该节点资源需求时，则执行扩容操作。</p>
-<h3 id="scaleupsilenceperiod"><code>scaleUp.silencePeriod</code></h3>
-<p>参数<code>silencePeriod</code>是沉默时间，当发生扩容事件后，后续在<code>silencePeriod</code>时间内，不再执行扩容操作。</p>
-<h3 id="scaledown"><code>scaleDown</code></h3>
-<p>参数 <code>scaleDown</code>提供缩容相关参数。</p>
-<h3 id="scaledownthreshold"><code>scaleDown.threshold</code></h3>
-<p>参数<code>scaleDown.threshold</code>是扩容的阈值，当节点组上所有运行Pod的Request总和与节点组Allocatable总和的比值小于此值时，则执行缩容操作。</p>
-<h3 id="scaledownsoftdeletegraceperiod"><code>scaleDown.softDeleteGracePeriod</code></h3>
-<p>参数<code>scaleDown.softDeleteGracePeriod</code>是节点软删除等待时间，在软删除等待时间内，引擎不执行缩容操作。</p>
-<h3 id="scaledownharddeletegraceperiod"><code>scaleDown.hardDeleteGracePeriod</code></h3>
-<p>参数<code>scaleDown.hardDeleteGracePeriod</code>是节点硬删除等待时间，当在软删除等待时间到硬删除等待时间内，只有当节点上的Pod为空时，才会删除节点。在硬删除等待时间之后，引擎会强制删除节点。</p>
-<!-- 
-节点是否为空的逻辑请参见 `pkg/k8s` `NodeEmpty()` -->
-<h3 id="scaledownmaxnoderemovalrate"><code>scaleDown.maxNodeRemovalRate</code></h3>
-<p>参数<code>scaleDown.maxNodeRemovalRate</code>是同时缩容节点的最大值。</p>
-<h3 id="scaledowntainteffect"><code>scaleDown.taintEffect</code></h3>
-<p>参数<code>scaleDown.taintEffect</code>指缩容时的操作，在执行缩容时，将首先给节点打上<code>taint</code>标签，其值取值范围如下：</p>
-<ul>
-<li>NoSchedule</li>
-<li>NoExecute</li>
-<li>PreferNoSchedule</li>
-</ul>
-<p>具体含义，请参见<a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration">污点和容忍度</a></p>
-<h2 id="虚拟容量配置">虚拟容量配置</h2>
-<p>虚拟容量配置为虚拟容量提供相应参数。示例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">virtualCapacity</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusAddress</span>: <span style="color:#e6db74">&#34;http://prometheus:9090&#34;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusWindow</span>: <span style="color:#e6db74">&#34;2m&#34;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">isThanos</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterKey</span>: <span style="color:#ae81ff">cluster</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterValue</span>: <span style="color:#ae81ff">default</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">reservationRatio</span>: <span style="color:#ae81ff">0.1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">increaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">decreaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">stabilityWindow</span>: <span style="color:#ae81ff">5m</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tolerance</span>: <span style="color:#ae81ff">0.1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>: 
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
-</span></span></code></pre></div><h3 id="prometheusaddress"><code>prometheusAddress</code></h3>
-<p>参数 <code>prometheusAddress</code>是当前集群节点Metrics监控的Prometheus地址。</p>
-<h3 id="prometheuswindow"><code>prometheusWindow</code></h3>
-<p>参数 <code>prometheusWindow</code>是引擎查询prometheus时的时间窗口。</p>
-<h3 id="isthanos"><code>isThanos</code></h3>
-<p>参数<code>isThanos</code>指参数 <code>prometheusAddress</code>对应的Prometheus地址是否为Thanos，默认为false。当prometheus地址是Thanos时，引擎查询时将附加Thanos相关参数。</p>
-<h3 id="thanosclusterkey和thanosclustervalue"><code>thanosClusterKey</code>和<code>thanosClusterValue</code></h3>
-<p>参数<code>thanosClusterKey</code>和<code>thanosClusterValue</code>是附加到引擎查询时的参数名和参数值（当参数<code>isThanos</code>为<code>true</code>时）。附加参数<code>thanosClusterKey</code>和<code>thanosClusterValue</code>可提升查询性能。</p>
-<h3 id="increasesilenceperiod"><code>increaseSilencePeriod</code></h3>
-<p>参数<code>increaseSilencePeriod</code>是节点虚拟容量率增加时的静默时间，当节点虚拟容量率增加时，在静默时间窗口<code>increaseSilencePeriod</code>内，将一直保持此值。</p>
-<h3 id="decreasesilenceperiod"><code>decreaseSilencePeriod</code></h3>
-<p>参数<code>decreaseSilencePeriod</code>是节点虚拟容量率降低时的静默时间，当节点虚拟容量率降低时，在静默时间窗口<code>decreaseSilencePeriod</code>内，将一直保持此值。</p>
-<h3 id="stabilitywindow"><code>stabilityWindow</code></h3>
-<p>参数<code>stabilityWindow</code>是稳定性窗口，引擎将在每隔一段时间计算一次虚拟容量率，最终决策时将选择稳定性窗口范围内最低值，避免虚拟容量率变化过大，从而引起虚拟容量变化过快。</p>
-<h3 id="tolerance"><code>tolerance</code></h3>
-<p>参数<code>tolerance</code>是每次应用虚拟容量率时与上次最大差值，此值可防止节点的Allocatable上升过于迅速。</p>
-<h3 id="cpumaxusage"><code>cpuMaxUsage</code></h3>
-<p>参数<code>cpuMaxUsage</code>是指当CPU利用率最大值，当节点的CPU利用率大于此值时，将不再调度新的Pod。</p>
-<h3 id="maxvalue和minvalue"><code>maxValue</code>和<code>minValue</code></h3>
-<p>参数<code>maxValue</code>和<code>minValue</code>是虚拟容量率的最大值和最小值。<code>minValue</code>的默认值为1。</p>
-<p>虚拟容量率是节点的<code>Allocatable</code>与节点原始的<code>Allocatable</code>的比值。</p>
-<h3 id="resourcereservation"><code>resourceReservation</code></h3>
-<p>参数<code>resourceReservation</code>是计算虚拟容量率时预留的资源，参数默认值为空。</p>
-<p>当参数默认值为空时，引擎将从节点池的节点中获取节点的KubeletConfiguration，并从KubeletConfiguration获取相应值。</p>
-<h3 id="resourcereservationkubereserved和resourcereservationsystemreserved"><code>resourceReservation.kubeReserved</code>和<code>resourceReservation.systemReserved</code></h3>
-<p>参数<code>resourceReservation.kubeReserved</code>和<code>resourceReservation.systemReserved</code>分别是为kubelet和系统预留的CPU资源。</p>
-<h3 id="resourcereservationreservedpercentage"><code>resourceReservation.reservedPercentage</code></h3>
-<p>参数<code>resourceReservation.reservedPercentage</code>是引擎为节点上的Pod运行额外预留的资源。</p>
-<h2 id="阿里云服务商配置">阿里云服务商配置</h2>
-<p>阿里云服务商配置为云服务商阿里云提供相应参数。示例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">lifecycle</span>: <span style="color:#ae81ff">spot</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><h3 id="alicloudclusterid"><code>alicloud.clusterId</code></h3>
-<p>参数<code>alicloud.clusterId</code>是阿里云ACK集群的集群ID，一般是通过节点上的标签<code>ack.aliyun.com</code>来标识。例如：</p>
-<pre tabindex="0"><code>ack.aliyun.com=c1234567890
-</code></pre><p>其中，<code>c1234567890</code>即为集群ID。</p>
-<h2 id="aws云服务商配置">AWS云服务商配置</h2>
-<p>AWS云服务商配置为云服务商AWS提供相应参数，示例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">aws</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateId</span>: <span style="color:#ae81ff">lt-</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateVersion</span>: <span style="color:#ae81ff">spot</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">instanceReadyTimeout</span>: <span style="color:#ae81ff">2m</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><h3 id="awslaunchtemplateid和awslaunchtemplateversion"><code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code></h3>
-<p>参数<code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code>分别是AWS启动模板ID和模板版本值，用于配置扩容过程中的启动模板。</p>
-<p>通过此参数，引擎可以使用AWS Fleet API来一次性将节点池扩容到期望的容量。</p>
-<p>参数<code>aws.launchTemplateId</code>和<code>aws.launchTemplateVersion</code>的值可通过两种途径获取：</p>
-<ul>
-<li>通过AWS EC2控制台中的启动模板页面获取。</li>
-<li>通过<a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/create-launch-template.html">创建启动模板</a>中的CLI命令
-或者AWS API中返回中的<code>LatestVersionNumber</code>或者<code>DefaultVersionNumber</code>中获取。</li>
-</ul>
-<h3 id="awsinstancereadytimeout"><code>aws.instanceReadyTimeout</code></h3>
-<p>参数<code>aws.instanceReadyTimeout</code>是使用AWS Fleet API来一次性将节点池扩容时等待EC2实例就绪的超时时间。</p>
-<p>此参数是可选参数，默认值为1分钟。</p>
-<!-- This is an optional field. The default value is 1 minute.
-
-When using the one-shot capacity acquisition for AWS (see `aws.launch_template_id`), this is the maximum amount of time
-that Escalator will block waiting for new EC2 instances to become ready so that they can be added to the node group.
-This roughly corresponds to the amount of time it takes an instance to boot to multi-user mode and for the EC2 control
-plane to notice that it is healthy. This generally takes much less than a minute.
-
-**Note:** Escalator will block other scaling operations for, at most, this amount of time while new capacity comes
-online. -->
-<h3 id="awslifecyle"><code>aws.lifecyle</code></h3>
-<p>参数<code>aws.lifecyle</code>指定实例的生命周期，其取值为<code>on-demand</code>或者<code>spot</code>或者<code>on-demand,spot</code>。</p>
-<p>此参数为可选参数，默认值为<code>on-demand</code>。</p>
-<p><code>on-demand</code>指示引擎扩容时使用按需实例，<code>spot</code>指示引擎扩容时使用竞价实例。</p>
-<h3 id="awsinstancetypeoverrides"><code>aws.instanceTypeOverrides</code></h3>
-<p>参数<code>aws.lifecyle</code>指定实例的类型。此参数为可选参数，无默认值。</p>
-<p>引擎创建扩容请求时可以使用参数<code>aws.lifecyle</code>指定的多个实例类型，从而增加扩容的成功几率。</p>
-<h3 id="awsresourcetagging"><code>aws.resourceTagging</code></h3>
-<p>参数<code>aws.resourceTagging</code>指示是否给引擎管理的节点打上资源标签<code>autoscaling.wiseinf.com\enabled</code>:<code>true</code>。</p>
-<p>该标签不影响引擎任何功能，主要是便于利用标签对EC2实例进行管理。具体请参考<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">使用标签</a>。</p>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-743cd90d3c1ba1709b66bd0042c39a58">2 - 命令行参数</h1>
-    <div class="lead">描述了Ruyi：云原生集群扩缩容引擎的命令行参数。</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>Ruyi：云原生集群扩缩容引擎。</p>
-
-</div>
-
-<h2 id="命令行参数">命令行参数</h2>
-<p>通过 <code>--help</code> 可以获取Ruyi引擎的用法，如下：</p>
-<pre tabindex="0"><code>$ruyi --help
-usage: ruyi --config=CONFIG [&lt;flags&gt;]
-
-Flags:
-      --help                     Show context-sensitive help (also try --help-long and --help-man).
-  -f, --features=&#34;Autoscaling,VirtualCapacity&#34;  
-                                 Enable ruyi features. Available options are Autoscaling, VirtualCapacity
-      --cloud-provider=aws       Set cloud provider to use. Available options are (aws, alicloud)
-      --config=CONFIG            Set config file location
-      --kubeconfig=KUBECONFIG    Set kubeconfig file location
-      --interval=60s             Set interval for evaluating node scale up or down
-      --metrics-address=&#34;:8080&#34;  Set address for /metrics
-      --health-probe-address=&#34;:8090&#34;  
-                                 Set address for health probe
-      --port=8443                Set port
-      --dry-run                  Set dry-run argument. If true, forces dry run on all nodegroups
-  -v, --loglevel=info            Set logging level. Available options are (trace, debug, info, warning, error, fatal, panic)
-      --logfmt=text              Set logging format. Available options are (text, json)
-      --enable-virtual-capacity-controller  
-                                 Set enable virtual capacity controller
-      --enable-webhook           Set enable webhook for virtual capacity
-      --webhook-cert-dir=&#34;&#34;      Set webhook certificate directory
-      --concurrency=5            Set concurrency
-      --leader-elect             Enable leader election
-      --leader-elect-lease-duration=15s  
-                                 Set leader election lease duration
-      --leader-elect-renew-deadline=10s  
-                                 Set leader election renew deadline
-      --leader-elect-retry-period=2s  
-                                 Set leader election retry period
-      --leader-elect-lease-namespace=&#34;wiseinf-system&#34;  
-                                 Set leader election lease object namespace
-      --leader-elect-lease-name=&#34;ruyi-lease&#34;  
-                                 Set leader election lease object name
-</code></pre><p>下面将对参数进行详细描述。</p>
-<h2 id="参数描述">参数描述</h2>
-<h3 id="--help"><code>--help</code></h3>
-<p>参数<code>--help</code>提供命令行的用法帮助。</p>
-<h3 id="-f---features"><code>-f, --features</code></h3>
-<p>参数 <code>-f, --features</code>指示引擎启动的特性，其中<code>Autoscaling</code>表示启用自动扩缩容特性，<code>VirtualCapacity</code>表示启动虚拟容量特性。</p>
-<p>默认值为<code>Autoscaling,VirtualCapacity</code>，表示同时启用自动扩缩容特性和虚拟容量特性。</p>
-<h3 id="--cloud-provider"><code>--cloud-provider</code></h3>
-<p>参数<code>--cloud-provider</code>指示引擎所使用的云服务提供商。其取值为aws或者alicloud，默认值为aws。</p>
-<h3 id="--config"><code>--config</code></h3>
-<p>参数<code>--config</code>指示引擎所使用的节点组配置文件位置。节点组配置请参见<a href="/docs/ruyi/configuration/nodegroup">节点组配置</a></p>
-<h3 id="--kubeconfig"><code>--kubeconfig</code></h3>
-<p>参数<code>--kubeconfig</code>指示引擎所使用的kubeconfig文件位置。默认为空，此时将使用集群内访问配置。</p>
-<h3 id="--interval"><code>--interval</code></h3>
-<p>参数<code>--interval</code>指示引擎中功能特性所使用的调度间隔。比如，自动扩缩容每间隔此时间就评估节点池是扩容还是缩容。</p>
-<p>此默认值为60秒。</p>
-<h3 id="--metrics-address"><code>--metrics-address</code></h3>
-<p>参数<code>--metrics-address</code>指示引擎所使用的监控指标的端口，可从此端口的<code>/metrics</code>获取具体的指标数据。</p>
-<h3 id="--health-probe-address"><code>--health-probe-address</code></h3>
-<p>参数<code>--health-probe-address</code>指示引擎所使用的监控探测地址，可从此端口的<code>/healthz</code>和<code>/readyz</code>分别进行健康探测和就绪探测。</p>
-<h3 id="--port"><code>--port</code></h3>
-<p>参数<code>--port</code>是引擎Webhook所使用的端口，默认值是8443.</p>
-<h3 id="--dry-run"><code>--dry-run</code></h3>
-<p>参数<code>--dry-run</code>指示引擎仅运行，不对环境、节点做任何修改。</p>
-<h3 id="-v---loglevelinfo"><code>-v, --loglevel=info</code></h3>
-<p>参数<code>--dry-run</code>设置日志级别。可选值包括<code>trace</code>, <code>debug</code>, <code>info</code>, <code>warning</code>, <code>error</code>, <code>fatal</code>, <code>panic</code>，默认值为<code>info</code>。</p>
-<h3 id="--logfmt"><code>--logfmt</code></h3>
-<p>参数<code>--dry-run</code>设置日志输出格式。可选值包括<code>text</code>, <code>json</code>，默认值为<code>text</code>，表示输出位文本格式。</p>
-<h3 id="--enable-virtual-capacity-controller"><code>--enable-virtual-capacity-controller</code></h3>
-<p>参数<code>--enable-virtual-capacity-controller</code>表示是否启用虚拟容量控制器，默认值为<code>true</code>。</p>
-<h3 id="--enable-webhook"><code>--enable-webhook</code></h3>
-<p>参数<code>--enable-webhook</code>表示是否启用Webhook，默认值为<code>true</code>。</p>
-<h3 id="--webhook-cert-dir"><code>--webhook-cert-dir</code></h3>
-<p>参数<code>--webhook-cert-dir</code>标明启用Webhook时证书的目录位置。引擎将通过此目录位置下的文件<code>tls.crt</code>和<code>tls.key</code>来初始化Webhook的证书。
-若其值为空，则Webhook将在目录<code>/tmp/k8s-webhook-server/serving-certs</code>中查找证书</p>
-<!-- ### `--concurrency`
-
-参数`--concurrency`指示并发数。默认值为5，暂未使用。 -->
-<h3 id="--leader-elect"><code>--leader-elect</code></h3>
-<p>参数<code>--leader-elect</code>设置是否启用选主机制。一般在高可用环境下使用。</p>
-<h3 id="leader-elect-lease-duration"><code>leader-elect-lease-duration</code></h3>
-<p>参数 <code>leader-elect-lease-duration</code>设置非主节点获取选主租约的等待时间。默认值为15秒。</p>
-<h3 id="--leader-elect-renew-deadline"><code>--leader-elect-renew-deadline</code></h3>
-<p>参数<code>--leader-elect-renew-deadline</code>设置主节点更新租约的超时时间。默认值为10秒。</p>
-<h3 id="--leader-elect-retry-period"><code>--leader-elect-retry-period</code></h3>
-<p>参数<code>--leader-elect-renew-deadline</code>设置节点重试时的等待时间。默认值为2秒。</p>
-<h3 id="--leader-elect-lease-namespace"><code>--leader-elect-lease-namespace</code></h3>
-<p>参数<code>--leader-elect-lease-namespace</code>设置存储租约的名称空间。默认值为<code>wiseinf-system</code>.</p>
-<h3 id="--leader-elect-lease-name"><code>--leader-elect-lease-name</code></h3>
-<p>参数<code>--leader-elect-lease-name</code>设置租约的名称。默认值为<code>ruyi-lease</code>.</p>
+</span></span></code></pre></div><h3 id="配置参数说明">配置参数说明</h3>
+<h4 id="name"><code>name</code></h4>
+<p>节点组名称，用于输出日志等。不同的节点组名称必须唯一。</p>
+<h4 id="labels和labelkey以及labelvalue"><code>labels</code>和<code>label.Key</code>以及<code>label.Value</code></h4>
+<p>标签键值对数组，引擎通过此标签键值对数组来选择节点组。其中，<code>label.Key</code>和<code>label.Value</code>分别是键值对中的键和值。</p>
+<h4 id="dryrun"><code>dryRun</code></h4>
+<p>是否仅运行，不对实际环境做任何修改。该值为<code>false</code>时，可被子命令行参数的<code>dryRun</code>覆盖。</p>
+<h4 id="nodegroupid"><code>nodeGroupId</code></h4>
+<p>节点组ID，在云服务商的节点组ID，云服务商通过此参数来从对应云服务商获取改节点组信息。</p>
+<h4 id="enableautoscaling"><code>enableAutoscaling</code></h4>
+<p>指示是否启用自动扩缩容特性，默认为<code>true</code>。</p>
+<h4 id="autoscaling"><code>autoscaling</code></h4>
+<p>自动扩缩容配置，具体请参见<a href="#%E8%87%AA%E5%8A%A8%E6%89%A9%E7%BC%A9%E5%AE%B9%E9%85%8D%E7%BD%AE">自动扩缩容配置</a>。</p>
+<h4 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h4>
+<p>指示是否启用虚拟容量特性，默认为<code>true</code>。</p>
+<h4 id="virtualcapacity"><code>virtualCapacity</code></h4>
+<p>虚拟容量配置，具体请参见<a href="#%E8%99%9A%E6%8B%9F%E5%AE%B9%E9%87%8F%E9%85%8D%E7%BD%AE">虚拟容量配置</a>。</p>
+<h4 id="alicloud"><code>alicloud</code></h4>
+<p>阿里云服务商配置，具体请参见<a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%95%86%E9%85%8D%E7%BD%AE">阿里云服务商配置</a>。</p>
 
 </div>
 
@@ -719,12 +574,12 @@ Flags:
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2024 北京云智优本科技有限公司 保留所有权利</small>
+        <small class="text-white">&copy; 2024 Wiseinf Inc. All Rights Reserved</small>
         
-        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
-        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+        
+        
 	
-		<p class="mt-2"><a href="/about/">关于我们</a></p>
+		<p class="mt-2"><a href="/about/">About Us</a></p>
 	
       </div>
     </div>

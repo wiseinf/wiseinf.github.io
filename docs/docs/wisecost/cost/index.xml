@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – 查看应用成本</title>
+    <title>Wiseinf – View Application Costs</title>
     <link>/docs/wisecost/cost/</link>
-    <description>Recent content in 查看应用成本 on 云智优本</description>
+    <description>Recent content in View Application Costs on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/docs/wisecost/cost/index.xml" rel="self" type="application/rss+xml" />
     

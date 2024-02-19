@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – 关于我们</title>
+    <title>Wiseinf – About Us</title>
     <link>/about/</link>
-    <description>Recent content in 关于我们 on 云智优本</description>
+    <description>Recent content in About Us on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     

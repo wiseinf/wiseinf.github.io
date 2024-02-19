@@ -1,9 +1,9 @@
 <!doctype html>
-<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.109.0">
+<meta name="generator" content="Hugo 0.121.2">
 <link rel="canonical" type="text/html" href="/docs/ruyi/monitoring/">
 <link rel="alternate" type="application/rss&#43;xml" href="/docs/ruyi/monitoring/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -20,26 +20,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>监控 | 云智优本</title>
-<meta name="description" content="描述了Ruyi：云原生扩缩容引擎相关的监控机制
+<title>Monitoring | Wiseinf</title>
+<meta name="description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
 ">
-<meta property="og:title" content="监控" />
-<meta property="og:description" content="描述了Ruyi：云原生扩缩容引擎相关的监控机制
+<meta property="og:title" content="Monitoring" />
+<meta property="og:description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/ruyi/monitoring/" /><meta property="og:site_name" content="云智优本" />
-<meta itemprop="name" content="监控">
-<meta itemprop="description" content="描述了Ruyi：云原生扩缩容引擎相关的监控机制
-"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="监控"/>
-<meta name="twitter:description" content="描述了Ruyi：云原生扩缩容引擎相关的监控机制
+<meta property="og:url" content="/docs/ruyi/monitoring/" /><meta property="og:site_name" content="Wiseinf" />
+
+<meta itemprop="name" content="Monitoring">
+<meta itemprop="description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Monitoring"/>
+<meta name="twitter:description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
 "/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" as="style">
-<link href="/scss/main.min.4ea71155ebbab2b450693bf10712664219e8a57790acd926d2754dbbccf92827.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" as="style">
+<link href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,31 +59,42 @@ if (!doNotTrack) {
   <body class="td-section">
     <header>
       <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">云智优本</span></a>
+<a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Wiseinf</span></a>
 <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
   <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item dropdown mr-4 d-none d-lg-block">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      aria-haspopup="true" aria-expanded="false"><span>Product</span></a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer：云原生集群优化平台 </a>
-        <a class="dropdown-item" href="/products/wisecost"> Wisecost：云原生成本管理平台 </a>
-        <a class="dropdown-item" href="/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+        <a class="dropdown-item" href="/products/cluster-optimizer"> Cluster Optimizer: Cloud Native Optimization Platform </a>
+        <a class="dropdown-item" href="/products/wisecost"> Wisecost: Cloud Native Cost Management Platform </a>
+        <a class="dropdown-item" href="/products/ruyi"> Ruyi: Cloud Native Cluster Autoscaling Engine</a>
       </div>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link active" href="/docs/"><span class="active">文档</span></a>
+      <a class="nav-link active" href="/docs/"><span class="active">Documentation</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/pricing/"><span>价格</span></a>
+      <a class="nav-link" href="/pricing/"><span>Price</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link" href="/services/"><span>服务</span></a>
+      <a class="nav-link" href="/services/"><span>Service</span></a>
       </li>
-      </ul>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/zh-cn/docs/ruyi/monitoring/">中文</a>
+	
+</div></li>
+    </ul>
 </div>
 <div class="navbar-nav d-none d-lg-block">
   
@@ -102,17 +113,17 @@ if (!doNotTrack) {
 <div class="td-content">
 <div class="pageinfo pageinfo-primary d-print-none">
 <p>
-这是本节的多页打印视图。
-<a href="#" onclick="print();return false;">点击此处打印</a>.
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
 </p><p>
-<a href="/docs/ruyi/monitoring/">返回本页常规视图</a>.
+<a href="/docs/ruyi/monitoring/">Return to the regular view of this page</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">监控</h1>
-<div class="lead">描述了Ruyi：云原生扩缩容引擎相关的监控机制</div>
+<h1 class="title">Monitoring</h1>
+<div class="lead">Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine</div>
 
 
 
@@ -133,97 +144,97 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Ruyi：云原生集群扩缩容引擎监控。</p>
+<p>Monitoring of Ruyi: Cloud-Native Cluster Scaling Engine.</p>
 
 </div>
 
-<h2 id="监控">监控</h2>
-<p>云原生扩缩容引擎提供了一些列的监控指标，支持通过Prometheus/Thanos对其进行监控。</p>
-<h3 id="自动扩缩容指标">自动扩缩容指标</h3>
+<h2 id="monitoring">Monitoring</h2>
+<p>The cloud-native scaling engine provides a series of monitoring metrics, supporting monitoring through Prometheus/Thanos.</p>
+<h3 id="auto-scaling-metrics">Auto-Scaling Metrics</h3>
 <table>
 <thead>
 <tr>
-<th>指标名称</th>
-<th>标签</th>
-<th>说明</th>
+<th>Metric Name</th>
+<th>Tags</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ruyi_autoscaling_run_count</td>
-<td>无</td>
-<td>自动扩缩容运行次数</td>
+<td>None</td>
+<td>Number of auto-scaling runs</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_nodes</td>
-<td>nodegroup: 节点组名称<br/>type: 节点类型</td>
-<td>节点组各类型节点数量</td>
+<td>nodegroup: Node group name<br/>type: Node type</td>
+<td>Number of nodes of each type in the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_pods</td>
-<td>nodegroup: 节点组名称</td>
-<td>节点组各类型Pod数量</td>
+<td>nodegroup: Node group name</td>
+<td>Number of Pods of each type in the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_request</td>
-<td>nodegroup: 节点组名称<br/> resource: 资源类型</td>
-<td>节点组请求量</td>
+<td>nodegroup: Node group name<br/>resource: Resource type</td>
+<td>Request volume of the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_capacity</td>
-<td>nodegroup: 节点组名称<br/> resource: 资源类型</td>
-<td>节点组容量</td>
+<td>nodegroup: Node group name<br/>resource: Resource type</td>
+<td>Capacity of the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_percent</td>
-<td>nodegroup: 节点组名称<br/> resource: 资源类型</td>
-<td>节点组请求量百分比</td>
+<td>nodegroup: Node group name<br/>resource: Resource type</td>
+<td>Percentage of request volume of the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_scale_delta</td>
-<td>nodegroup: 节点组名称</td>
-<td>节点组节点调整量</td>
+<td>nodegroup: Node group name</td>
+<td>Node adjustment amount of the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_size</td>
-<td>nodegroup: 节点组名称<br/> id: 节点组ID <br/> cloud_provider: 云服务商 <br/> type: 类型</td>
-<td>节点组大小</td>
+<td>nodegroup: Node group name<br/>id: Node group ID<br/>cloud_provider: Cloud provider<br/>type: Type</td>
+<td>Size of the node group</td>
 </tr>
 </tbody>
 </table>
-<h3 id="虚拟容量指标">虚拟容量指标</h3>
+<h3 id="virtual-capacity-metrics">Virtual Capacity Metrics</h3>
 <table>
 <thead>
 <tr>
-<th>指标名称</th>
-<th>标签</th>
-<th>说明</th>
+<th>Metric Name</th>
+<th>Tags</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ruyi_virtual_capacity_run_count</td>
 <td></td>
-<td>虚拟容量运行次数</td>
+<td>Number of virtual capacity runs</td>
 </tr>
 <tr>
 <td>ruyi_node_request_sum</td>
-<td>node: 节点名称<br/> id: 节点组ID <br/> nodegroup: 节点组名称<br/> resource: 资源类型</td>
-<td>节点请求量</td>
+<td>node: Node name<br/>id: Node group ID<br/>nodegroup: Node group name<br/>resource: Resource type</td>
+<td>Node request volume</td>
 </tr>
 <tr>
 <td>ruyi_node_allocatable</td>
-<td>node: 节点名称<br/> id: 节点组ID <br/> nodegroup: 节点组名称<br/> resource: 资源类型</td>
-<td>节点虚拟容量Allocatable</td>
+<td>node: Node name<br/>id: Node group ID<br/>nodegroup: Node group name<br/>resource: Resource type</td>
+<td>Allocatable of node virtual capacity</td>
 </tr>
 <tr>
 <td>ruyi_virtual_capacity_ratio</td>
-<td>node: 节点名称<br/> id: 节点组ID <br/> nodegroup: 节点组名称<br/>  type：类型</td>
-<td>虚拟容量率</td>
+<td>node: Node name<br/>id: Node group ID<br/>nodegroup: Node group name<br/>type: Type</td>
+<td>Virtual capacity ratio</td>
 </tr>
 </tbody>
 </table>
-<p>另外，用户也可以通过Kubernetes的指标<code>kube_node_status_allocatable</code>查看实际虚拟容量的变化情况。</p>
+<p>Additionally, users can also view the actual changes in virtual capacity through the Kubernetes metric <code>kube_node_status_allocatable</code>.</p>
 
 </div>
 </div>
@@ -289,12 +300,12 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2024 北京云智优本科技有限公司 保留所有权利</small>
+        <small class="text-white">&copy; 2024 Wiseinf Inc. All Rights Reserved</small>
         
-        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
-        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+        
+        
 	
-		<p class="mt-2"><a href="/about/">关于我们</a></p>
+		<p class="mt-2"><a href="/about/">About Us</a></p>
 	
       </div>
     </div>

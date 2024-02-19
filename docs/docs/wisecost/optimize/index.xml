@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – 成本优化</title>
+    <title>Wiseinf – Cost Optimization</title>
     <link>/docs/wisecost/optimize/</link>
-    <description>Recent content in 成本优化 on 云智优本</description>
+    <description>Recent content in Cost Optimization on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/docs/wisecost/optimize/index.xml" rel="self" type="application/rss+xml" />
     

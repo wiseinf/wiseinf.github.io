@@ -1,0 +1,946 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Cost Management</title>
+    <link>/categories/cost-management/</link>
+    <description>Recent content in Cost Management on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/categories/cost-management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Installation and Deployment</title>
+      <link>/docs/wisecost/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/setup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost provides cloud-native application cost monitoring, management, and optimization capabilities.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mysql database, version 5.7 or higher&lt;/li&gt;
+&lt;li&gt;kubernetes cluster, version 1.20 or higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;clone-installation-scripts&#34;&gt;Clone Installation Scripts&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the console, enter &lt;code&gt;git clone https://github.com/wiseinf/setup.git&lt;/code&gt;, and clone the installation scripts to your local machine.
+We provide 2 repo addresses for you to clone to your local machine according to your needs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Repository&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Repository Address&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Github&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://github.com/wiseinf/setup.git&#34;&gt;https://github.com/wiseinf/setup.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gitee&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://gitee.com/wiseinf/setup.git&#34;&gt;https://gitee.com/wiseinf/setup.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The subsequent steps assume that the &lt;code&gt;setup&lt;/code&gt; library has been cloned to the user&amp;rsquo;s home directory. If it hasn&amp;rsquo;t been cloned to the user&amp;rsquo;s home directory, you need to adjust the file paths in the commands accordingly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;initialize-the-database&#34;&gt;Initialize the Database&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Assuming the Mysql database host address is: &lt;code&gt;127.0.0.1&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In the console, execute the command &lt;code&gt;mysql -h127.0.0.1 -uroot&lt;/code&gt;, enter the password, and log into the mysql database. Where &lt;code&gt;127.0.0.1&lt;/code&gt; is the Mysql host address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt, execute the following command to create the &lt;code&gt;storage&lt;/code&gt; database and &lt;code&gt;wisecost&lt;/code&gt; database, and the corresponding tables will be automatically created by the application later.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; source ~/setup/wisecost/sql/create_database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: Please pay attention to the risk of data loss. If the &lt;code&gt;storage&lt;/code&gt; database and &lt;code&gt;wisecost&lt;/code&gt; database already exist in the mysql database, the above script will delete the &lt;code&gt;storage&lt;/code&gt; database and &lt;code&gt;wisecost&lt;/code&gt; database and create a new one.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt, execute the following command to create the &lt;code&gt;wisecost&lt;/code&gt; user (the default password is &lt;code&gt;Wisecost~&lt;/code&gt;) and grant it full access permissions to the &lt;code&gt;storage&lt;/code&gt; database and &lt;code&gt;wisecost&lt;/code&gt; database.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; source ~/setup/wisecost/sql/create_user.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the console, execute the command &lt;code&gt;mysql -h127.0.0.1 -uwisecost&lt;/code&gt;, enter the password (the default password is &lt;code&gt;Wisecost~&lt;/code&gt;), and log into the mysql database.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt, execute &lt;code&gt;show database&lt;/code&gt; to confirm that the &lt;code&gt;storage&lt;/code&gt; database and &lt;code&gt;wisecost&lt;/code&gt; database have been created. You can query the corresponding data tables in the library with &lt;code&gt;select&lt;/code&gt; statements (for example, &lt;code&gt;select * from storage.pv&lt;/code&gt;) to confirm whether the user&amp;rsquo;s permissions are normal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At this point, the database initialization is complete.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;deploy-the-application&#34;&gt;Deploy the Application&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Apply the following file to the cluster with &lt;code&gt;kubectl apply -f ~/setup/wisecost/namespace.yaml&lt;/code&gt;, creating the namespace &lt;code&gt;wiseinf-system&lt;/code&gt;.
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Namespace&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;: 
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+&lt;/li&gt;
+&lt;li&gt;Adjust the &lt;strong&gt;ConfigMap&lt;/strong&gt; &lt;code&gt;wisecost-conf&lt;/code&gt; in the file &lt;code&gt;~/setup/wisecost/wisecost.yaml&lt;/code&gt; according to the configuration of Mysql, and adjust the configuration items &lt;code&gt;optimize&lt;/code&gt; and &lt;code&gt;kubestore&lt;/code&gt; under &lt;code&gt;dataSourceName: &amp;quot;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;amp;parseTime=true&lt;/code&gt; to the corresponding information of Mysql database.&lt;/li&gt;
+&lt;li&gt;Apply the following file to the cluster with &lt;code&gt;kubectl apply -f ~/setup/wisecost/wisecost.yaml&lt;/code&gt;, deploying the application &lt;strong&gt;Wise Cost&lt;/strong&gt;.
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ConfigMap&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;data&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;default.conf&lt;/span&gt;: |-&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      server {
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        listen 80;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        location / {
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          root /usr/share/nginx/html/;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          include /etc/nginx/mime.types;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          try_files $uri $uri/ /index.html;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          location /api/ {
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            rewrite ^/api/(.*) /$1 break;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header Host $host;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header X-Real-IP $remote_addr;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header X-NginX-Proxy true;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_pass http://localhost:7070;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          }
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        }
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      }&lt;/span&gt;      
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ConfigMap&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-conf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;data&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;wisecost.yaml&lt;/span&gt;: |-&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    server:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      port: 7070
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    optimize:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      dataSourceName: &amp;#34;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;amp;parseTime=true&amp;#34;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      maxOpenConns: 10
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    kubestore:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      type: mysql
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      parameters:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        dataSourceName: &amp;#34;wisecost:Wisecost~@tcp(mysql:3306)/storage?charset=utf8mb4&amp;amp;parseTime=true&amp;#34;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        maxOpenConns: 10&lt;/span&gt;    
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deployment&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;apps/v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;replicas&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;revisionHistoryLimit&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;selector&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;matchLabels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;hostNetwork&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;dnsPolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ClusterFirstWithHostNet&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;securityContext&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;runAsUser&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;containers&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-ui&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf/wisecost-ui:701d19d&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;imagePullPolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;IfNotPresent&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;volumeMounts&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/etc/nginx/conf.d&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;containerPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;protocol&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;TCP&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;requests&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;500M&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;limits&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1000m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2G&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf/wisecost:99e308e&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;command&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/wiseinf/wisecost&amp;#34;&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;imagePullPolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;IfNotPresent&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;volumeMounts&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-data-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wiseinf/data&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-logs-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wiseinf/logs&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-conf-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wiseinf/conf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#              subPath: wisecost.yml&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;containerPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;7070&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;protocol&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;TCP&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;requests&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;500M&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;limits&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1000m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2G&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Config for wisecost-ui&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;configMap&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Configs for wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-data-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;hostPath&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wisecost/data&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;DirectoryOrCreate&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-logs-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;hostPath&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wisecost/logs&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;DirectoryOrCreate&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-conf-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;configMap&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-conf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Service&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-ui&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;:  &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost-ui-service&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;port&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;targetPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;selector&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wisecost&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;NodePort&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+
+&lt;blockquote&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;kubectl port-forward svc/wisecost-ui-service 80:80&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Access URL &lt;code&gt;http://localhost&lt;/code&gt;, and you can see the Wise Cost homepage.&lt;/li&gt;
+&lt;li&gt;At this point, the application &lt;strong&gt;Wise Cost&lt;/strong&gt; is deployed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;next-step-import-cluster&#34;&gt;Next Step: Import Cluster&lt;/h2&gt;
+&lt;p&gt;Next, you can add a cluster and view its various costs. See Import Cluster &lt;a href=&#34;/docs/wisecost/import-aliyun&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt; for details.&lt;/p&gt;
+&lt;h2 id=&#34;annex&#34;&gt;Annex&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Script &lt;code&gt;create_user.sql&lt;/code&gt;
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; wisecost&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Wisecost~&amp;#39;&lt;/span&gt;;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;storage&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; wisecost&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt;;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; wisecost.&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; wisecost&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+&lt;/li&gt;
+&lt;li&gt;Script &lt;code&gt;create_database.sql&lt;/code&gt;
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- ----------------------------------------------------------------------------
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- Schema wisecost
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- ----------------------------------------------------------------------------
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;SCHEMA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IF&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;EXISTS&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;wisecost&lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt; ;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;SCHEMA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IF&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;EXISTS&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;wisecost&lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt; ;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- ----------------------------------------------------------------------------
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- Schema storage
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- ----------------------------------------------------------------------------
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;SCHEMA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IF&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;EXISTS&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;storage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt; ;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;SCHEMA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IF&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;EXISTS&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;storage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt; ;
+    &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Wisecost: A Cloud-native Cost Management and Optimization Platform</title>
+      <link>/docs/wisecost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost provides capabilities for monitoring, managing, and optimizing the costs of cloud-native applications.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Wisecost helps users to monitor, manage, and optimize the costs of cloud-native applications, with key features including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assess overall cluster costs and breakdown costs.&lt;/li&gt;
+&lt;li&gt;Evaluate the costs of cloud-native applications, providing cost analysis across multiple dimensions such as namespace, load, department, team, and application environment.&lt;/li&gt;
+&lt;li&gt;Provide optimization suggestions.&lt;/li&gt;
+&lt;li&gt;Assess the health of clusters and applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Import Alibaba Cloud Cluster</title>
+      <link>/docs/wisecost/import-aliyun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/import-aliyun/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section describes the detailed steps to import an Alibaba Cloud cluster.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;After completing the installation of Wisecost, log in to the system and select &amp;ldquo;Overview&amp;rdquo; to see the &lt;code&gt;Overview Page&lt;/code&gt;.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-01_hud8965e357a159a39d1a1f512c93ab966_99152_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Overview Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Set Alibaba Cloud Access Credentials Page&lt;/code&gt;, set the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;. The &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt; can be obtained from Alibaba Cloud. For specific instructions, please refer to &lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;Create Access Key&lt;/a&gt;. After setting the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, click Next. The system will complete the verification of the correctness of the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and enter the &amp;ldquo;Import Alibaba Cloud Cluster - Kubernetes Cluster and Access Settings Page&amp;rdquo;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the &amp;ldquo;Import Alibaba Cloud Cluster - Set Alibaba Cloud Access Credentials Page&amp;rdquo;, you can also choose to use existing credentials and select an existing credential.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-02_hu586c8a1becbc05e284939f91daadb27a_113445_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Set Alibaba Cloud Access Credentials Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Kubernetes Cluster and Access Settings Page&lt;/code&gt;, you can choose to select a &lt;code&gt;Managed Cluster&lt;/code&gt;, or a &lt;code&gt;Self-built Cluster&lt;/code&gt;. Below is described with &lt;code&gt;Self-built Cluster&lt;/code&gt; as an example, the corresponding parameters are described. After setting the parameter, click &lt;code&gt;Next&lt;/code&gt;, the system completes the validation of the correctness of the parameter, and enters the &amp;ldquo;Import Alibaba Cloud Cluster - Set Prometheus Access Page&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster Region&lt;/td&gt;
+&lt;td&gt;The cluster region refers to the region where the cluster is deployed. Be sure to correctly specify the region, otherwise it will cause the cluster to be inaccessible. For specific instructions, please refer to &lt;a href=&#34;https://help.aliyun.com/document_detail/40654.htm&#34;&gt;Regions and Availability Zones&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster ID&lt;/td&gt;
+&lt;td&gt;A unique identifier ID, used to uniquely identify a cluster&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster Name&lt;/td&gt;
+&lt;td&gt;Cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Description&lt;/td&gt;
+&lt;td&gt;Cluster related description&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeconfig&lt;/td&gt;
+&lt;td&gt;Access to the Kubeconfig file of the cluster, you need to open read-only access permissions for the cluster. Incorrect settings will cause the cluster to be inaccessible or fail to obtain objects in the cluster.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-03_huc147e3acda1852672af64d72e460f678_213466_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Kubernetes Cluster and Access Settings Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Set Prometheus Access Page&lt;/code&gt;, set the Prometheus access address. After setting the parameter, click &lt;code&gt;Next&lt;/code&gt;, and enter the &lt;code&gt;Import Alibaba Cloud Cluster - Import Page&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-04_hu3a9e998635effd9d0941e230833f287d_99312_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Set Prometheus Access Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Import Page&lt;/code&gt;, click the &lt;code&gt;Import&lt;/code&gt; button. After the system submits the information, it displays the &lt;code&gt;Import Alibaba Cloud Cluster - Import Success Page&lt;/code&gt;. At this point, the Alibaba Cloud cluster has been successfully imported.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-05_huc147e3acda1852672af64d72e460f678_178791_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Import Success Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Return to the &amp;ldquo;Overview Page&amp;rdquo;, you can see that the imported cluster is already in the list.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-06_hud8965e357a159a39d1a1f512c93ab966_107599_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Overview Page - Imported Alibaba Cloud Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;After completing the cluster import, you can go to the &amp;ldquo;Cluster&amp;rdquo; and &amp;ldquo;Cost&amp;rdquo; tabs to view the overall cost of the cluster and the corresponding namespace cost.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: View Node Cost</title>
+      <link>/docs/wisecost/node-cost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/node-cost/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost provides cloud-native application cost monitoring, management, and optimization capabilities. This document describes how to view the cost of a node and the meaning of each indicator.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-the-overall-cost-of-the-node&#34;&gt;View the overall cost of the node&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/node-cost/node-1_hu75571daf753b1528af155b01a3a46732_216015_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Overall cost of the node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/node-cost/node-2_hud14bc57c8e8b54563bbb85fde7d79e40_218471_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;412&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Breakdown of the overall cost of the node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;view-the-cost-of-a-single-node&#34;&gt;View the cost of a single node&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/node-cost/node-3_hu68f4c02bdee6f069f5706d794bd1b072_255353_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;418&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cost of a single node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Viewing Cluster Costs</title>
+      <link>/docs/wisecost/cluster-cost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/cluster-cost/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost offers capabilities for monitoring, managing, and optimizing the costs of cloud-native applications. This document describes how to view cluster costs and the meanings of various metrics.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;viewing-overall-cluster-costs&#34;&gt;Viewing Overall Cluster Costs&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cluster-cost/cluster-1_hu9386f43e6fffa22228347f34146fc35b_156504_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Overall Cluster Costs
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cluster-cost/cluster-2_hu8df7dfe3748412eed29420f91a32e85c_137781_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;358&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Breakdown of Overall Cluster Costs
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;viewing-costs-of-an-individual-cluster&#34;&gt;Viewing Costs of an Individual Cluster&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cluster-cost/cluster-3_hu41d2df885f0270c87d1ee7b4ec2c5e92_144315_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Costs of an Individual Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;key-takeaways&#34;&gt;Key Takeaways&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wisecost provides a visual interface for understanding and analyzing the costs associated with clusters.&lt;/li&gt;
+&lt;li&gt;The ability to view both overall and individual cluster costs is essential for effective cost management.&lt;/li&gt;
+&lt;li&gt;Utilizing tools like Wisecost can help optimize resource allocation and reduce unnecessary expenditure.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: View Application Costs</title>
+      <link>/docs/wisecost/cost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/cost/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost provides cloud-native application cost monitoring, management, and optimization capabilities. This document describes how to view and analyze application costs.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-namespace-costs&#34;&gt;View Namespace Costs&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/namespace-1_hud84a5484e7411474683c506fc18d85bf_185074_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cumulative cost and utilization of the namespace
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/namespace-2_hu0683868b0a89a61f2790babad8579e94_272727_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;260&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Time-phased cost of the namespace
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;view-product-costs&#34;&gt;View Product Costs&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/product-1_hue482c5ef76f206dad3043c87478904a0_168742_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;298&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cumulative cost and utilization of the product
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/product-2_hudcb30c2598ce67584624d0fbc71b184a_155549_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;262&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Time-phased cost of the product
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;custom-query&#34;&gt;Custom Query&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/cost/custom-1_hubb8eef4e201ee755282e6123f8f7c76d_282976_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;456&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Time-phased cost of the namespace
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cost Optimization</title>
+      <link>/docs/wisecost/optimize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/optimize/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Wisecost provides cloud-native application cost monitoring, management, and optimization capabilities. This document describes the process of optimizing costs based on Wisecost&amp;rsquo;s built-in strategies.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Development Manual</title>
+      <link>/docs/wisecost/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/development/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section includes the Wisecost API related interface usage instructions. For detailed interface documentation, please see: API URL&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: API Reference</title>
+      <link>/docs/wisecost/development/reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/development/reference/</guid>
+      <description>
+        
+        
+        
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+  &lt;meta
+    name=&#34;description&#34;
+    content=&#34;SwaggerUI&#34;
+  /&gt;
+  &lt;title&gt;Wisecost API Reference&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&#34; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&#34;swagger-ui&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&#34; crossorigin&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    window.ui = SwaggerUIBundle({
+      url: &#39;/api/v1/openapi.json&#39;,
+      dom_id: &#39;#swagger-ui&#39;,
+    });
+  };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

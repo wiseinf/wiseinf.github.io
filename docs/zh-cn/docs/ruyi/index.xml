@@ -1,0 +1,530 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Ruyi：云原生集群扩缩容引擎</title>
+    <link>/zh-cn/docs/ruyi/</link>
+    <description>Recent content in Ruyi：云原生集群扩缩容引擎 on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/docs/ruyi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 安装部署</title>
+      <link>/zh-cn/docs/ruyi/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/setup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi：云原生集群扩缩容引擎。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;正在更新中，请稍后。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 自动扩缩容</title>
+      <link>/zh-cn/docs/ruyi/autoscaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/autoscaling/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi：云原生集群扩缩容引擎。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;扩缩容原理&#34;&gt;扩缩容原理&lt;/h2&gt;
+&lt;p&gt;正在更新中，请稍后。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 虚拟容量</title>
+      <link>/zh-cn/docs/ruyi/virtualcapacity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/virtualcapacity/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi：云原生集群扩缩容引擎虚拟容量基于对节点请求量、使用量等的分析，动态扩展节点容量，支持用户调度更多的应用，同时尽量保障稳定性。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;虚拟容量概述&#34;&gt;虚拟容量概述&lt;/h2&gt;
+&lt;p&gt;虚拟容量可在特定条件下，将节点容量增长为其原容量3倍（甚至更多），从而支持在节点上调度更多的Pod（应用）。&lt;/p&gt;
+&lt;p&gt;通过虚拟容量，用户可以显著节省其IT成本。&lt;/p&gt;
+&lt;h2 id=&#34;虚拟容量原理&#34;&gt;虚拟容量原理&lt;/h2&gt;
+&lt;p&gt;要理解虚拟容量，首先要了解Kuberente的调度机制。在Kubernetes中，调度是为应用的Pod指定其运行节点的过程。Pod在被调度时一般都指定其资源需求，其中对于CPU资源，会指定其Request和Limit属性（后面称为&lt;code&gt;CPU Request&lt;/code&gt;和&lt;code&gt;CPU Limit&lt;/code&gt;）。对于Kubernetes中的节点，一般都有容量属性，容量属性分为两种：1，&lt;code&gt;Capacity&lt;/code&gt;：节点的容量上限；2，&lt;code&gt;Allocatable&lt;/code&gt;：节点可分配容量上限，会在节点容量上限的基础上去除系统用的资源以及一些预留资源而得到。Kubernetes调度时，在容量方面，会主要考虑Pod的&lt;code&gt;CPU Request&lt;/code&gt;和节点的&lt;code&gt;Allocatable&lt;/code&gt;是否匹配。匹配的含义是指：当前节点&lt;code&gt;Allocatable&lt;/code&gt;的剩余容量，应当大于或等于当前Pod的&lt;code&gt;CPU Request&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;当节点&lt;code&gt;Allocatable&lt;/code&gt;的剩余容量小于当前Pod的&lt;code&gt;CPU Request&lt;/code&gt;时，则不可将此Pod调度到此节点。此时，调度会考虑其他节点，当所有节点都不满足要求时，会直接将Pod挂起，等待有合适的资源再调度。当Pod挂起时，部分Kubernetes提供商提供了集群扩缩容机制，当用户启用此机制时，会在集群中扩展新的节点，将此Pod调度到新的节点中。&lt;/p&gt;
+&lt;p&gt;事实上，当节点&lt;code&gt;Allocatable&lt;/code&gt;的剩余容量小于当前Pod的&lt;code&gt;CPU Request&lt;/code&gt;时，可能当前节点上的使用量较低，节点上实际剩余资源要大于当前Pod的&lt;code&gt;CPU Request&lt;/code&gt;。从理论上来说，可以将该Pod调度到该节点上。虚拟容量提供了一种机制，可以在特定条件下扩展节点的&lt;code&gt;Allocatable&lt;/code&gt;值，让调度认为当前节点&lt;code&gt;Allocatable&lt;/code&gt;的剩余容量仍然大于或等于当前Pod的&lt;code&gt;CPU Request&lt;/code&gt;，从而将Pod调度到该节点。&lt;/p&gt;
+&lt;p&gt;通过扩展节点的虚拟容量，可以显著节约IT成本，特别是在开发、测试等资源利用率较低的场合。&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;注意&lt;/h4&gt;
+
+    节点上调度过多Pod可能对节点和应用的稳定性有一定的影响。因此，需根据实际状况设置合适的值，同时利用一些平衡的调度算法。
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;案例&#34;&gt;案例&lt;/h2&gt;
+&lt;p&gt;下面我们以一个案例说明如何虚拟容量。&lt;/p&gt;
+&lt;p&gt;案例中，节点资源为4核8G，我们通过&lt;code&gt;kubectl apply -f nginx.yaml&lt;/code&gt;将在其上调度4个Nginx Pod（Pod的&lt;code&gt;CPU Request&lt;/code&gt;是2核），如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;apps/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx-deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;selector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;matchLabels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;replicas&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;containers&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx:1.14.2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;containerPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;requests&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;500Mi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;limits&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1024Mi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过&lt;code&gt;kubectl get po&lt;/code&gt;查看状态，可以看到有一个Pod处于Pending状态，说明当前节点的&lt;code&gt;Allocatable&lt;/code&gt;无法满足&lt;code&gt;nginx-deployment&lt;/code&gt;的资源需求。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;********:~/src/nginx$ kubectl get po
+NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment-7dc45fbc49-5k9gd   1/1     Running   0          6s
+nginx-deployment-7dc45fbc49-gpq77   1/1     Running   0          2d14h
+nginx-deployment-7dc45fbc49-snj6k   0/1     Pending   0          6s
+nginx-deployment-7dc45fbc49-v4xsq   1/1     Running   0          41h
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;等待一段时间后，再执行通过&lt;code&gt;kubectl get po&lt;/code&gt;查看状态，可以看到所有的Pod都已经运行在节点上。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;********:~/src/nginx$ kubectl get po
+NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment-7dc45fbc49-5k9gd   1/1     Running   0          23m
+nginx-deployment-7dc45fbc49-gpq77   1/1     Running   0          2d14h
+nginx-deployment-7dc45fbc49-snj6k   1/1     Running   0          23m
+nginx-deployment-7dc45fbc49-v4xsq   1/1     Running   0          41h
+
+WUYING\wiseinf_131347202297@6w49f6pbp2eeds8:~/src/nginx$ kubectl describe node 6w49f6pbp2eeds8
+Name:               6w49f6pbp2eeds8
+Roles:              control-plane,master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=6w49f6pbp2eeds8
+                    ...
+Annotations:        virtualcapacity.wiseinf.com/allocatable: 10200
+                    virtualcapacity.wiseinf.com/last-decrease-timestamp: 2023-08-31T10:34:57+08:00
+                    virtualcapacity.wiseinf.com/last-increase-timestamp: 2023-08-31T10:37:57+08:00
+                    virtualcapacity.wiseinf.com/ratio: 3.000
+                    ...
+CreationTimestamp:  Fri, 25 Aug 2023 16:23:13 +0800
+Taints:             &amp;lt;none&amp;gt;
+Unschedulable:      false
+Lease:
+  HolderIdentity:  6w49f6pbp2eeds8
+  AcquireTime:     &amp;lt;unset&amp;gt;
+  RenewTime:       Thu, 31 Aug 2023 10:52:51 +0800
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  ...
+Addresses:
+  InternalIP:  198.19.3.220
+  Hostname:    6w49f6pbp2eeds8
+Capacity:
+  cpu:                4
+  ephemeral-storage:  82437788Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             7784472Ki
+  pods:               110
+Allocatable:
+  cpu:                10200m
+  ephemeral-storage:  75974665296
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             7682072Ki
+  pods:               110
+System Info:
+  Machine ID:                 20220524174107033216151293301385
+  System UUID:                eddd0796-49a7-4094-afd0-961b8a826663
+  Boot ID:                    1b9bde42-fadf-4e83-8af8-3f6cc44a0b99
+  Kernel Version:             5.4.0-113-generic
+  OS Image:                   Ubuntu 20.04.4 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://24.0.5
+  Kubelet Version:            v1.22.17
+  Kube-Proxy Version:         v1.22.17
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+Non-terminated Pods:          (16 in total)
+  Namespace                   Name                                       CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                       ------------  ----------  ---------------  -------------  ---
+  default                     nginx-deployment-7dc45fbc49-5k9gd          2 (19%)       2 (19%)     500Mi (6%)       1Gi (13%)      39m
+  default                     nginx-deployment-7dc45fbc49-gpq77          2 (19%)       2 (19%)     500Mi (6%)       1Gi (13%)      2d15h
+  default                     nginx-deployment-7dc45fbc49-snj6k          2 (19%)       2 (19%)     500Mi (6%)       1Gi (13%)      39m
+  default                     nginx-deployment-7dc45fbc49-v4xsq          2 (19%)       2 (19%)     500Mi (6%)       1Gi (13%)      41h
+  ...
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests          Limits
+  --------           --------          ------
+  cpu                9650m (94%)       11100m (108%)
+  memory             3901239040 (49%)  7595365Ki (98%)
+  ephemeral-storage  0 (0%)            0 (0%)
+  hugepages-1Gi      0 (0%)            0 (0%)
+  hugepages-2Mi      0 (0%)            0 (0%)
+Events:              &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;从监控指标&lt;code&gt;kube_node_status_allocatable&lt;/code&gt;中，可以看到节点&lt;code&gt;6w49f6pbp2eeds8&lt;/code&gt;的可分配CPU核数&lt;code&gt;Allocatable&lt;/code&gt;一直在增长，直到&lt;strong&gt;10.2&lt;/strong&gt;核。同时，从监控指标&lt;code&gt;kube_node_status_capacity&lt;/code&gt;中可以到到该节点的容量一直是&lt;strong&gt;4&lt;/strong&gt;核。可以看到，节点&lt;code&gt;6w49f6pbp2eeds8&lt;/code&gt;的CPU容量扩展了大概2.55倍。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/ruyi/virtualcapacity/node-allocatable_hu31e328ed3036e9882644702f546ce89e_132311_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;433&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点的CPU Allocatable
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/ruyi/virtualcapacity/node-capacity_hub4e37652f76e254a84e610246b6d8089_55563_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;434&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点的CPU Capacity
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;从监控指标&lt;code&gt;ruyi_node_request_sum&lt;/code&gt;中，可以看到节点&lt;code&gt;6w49f6pbp2eeds8&lt;/code&gt;上的Pod的CPU请求总和一直在增长，直到&lt;code&gt;nginx-deployment&lt;/code&gt;的4个副本调度到节点上并运行。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/ruyi/virtualcapacity/node-cpu-request-sum_huf30fc5671e2b9ef5baf3f476ab942257_107595_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;457&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点的CPU请求总和
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;通过这个案例，可知若能合理利用虚拟容量，将可以节省大量CPU成本。&lt;/p&gt;
+&lt;p&gt;想了解如何为节点池配置虚拟容量，请参考&lt;a href=&#34;/docs/ruyi/configuration/nodegroup/#%E8%99%9A%E6%8B%9F%E5%AE%B9%E9%87%8F%E9%85%8D%E7%BD%AE&#34;&gt;虚拟容量配置&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 配置</title>
+      <link>/zh-cn/docs/ruyi/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/configuration/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi：云原生集群扩缩容引擎。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;配置ruyi云原生集群扩缩容引擎&#34;&gt;配置Ruyi：云原生集群扩缩容引擎&lt;/h2&gt;
+&lt;p&gt;Ruyi：云原生集群扩缩容引擎提供了自动扩缩容和虚拟容量两大特性。可单独使用某项特性或同时使用两项特性。&lt;/p&gt;
+&lt;p&gt;可通过命令行参数&lt;code&gt;--features&lt;/code&gt;指定。&lt;/p&gt;
+&lt;p&gt;下面描述单独配置自动扩缩容特性或者虚拟容量特性的主要配置参数。&lt;/p&gt;
+&lt;h3 id=&#34;配置自动扩缩容特性&#34;&gt;配置自动扩缩容特性&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=Autoscaling --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;配置虚拟容量特性&#34;&gt;配置虚拟容量特性&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --webhook-cert-dir=/opt/ruyi/certs/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;虚拟容量特性涉及到虚拟容量控制器以及Webhook，可通过参数分别控制。&lt;/p&gt;
+&lt;p&gt;例如，可通过如下命令单独启用虚拟容量控制器：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --enable-virtual-capacity-controller=true  --enable-webhook=false
+      
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;或者，通过如下命令单独启动Webhook：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
+--enable-virtual-capacity-controller=false  --enable-webhook=true --webhook-cert-dir=/opt/ruyi/certs/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在配置Webhook时，必须指定&lt;code&gt;MutatingWebhookConfiguration&lt;/code&gt;，如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;admissionregistration.k8s.io/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;MutatingWebhookConfiguration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-webhooks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;webhooks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ruyi.wiseinf-system.svc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;admissionReviewVersions&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;clientConfig&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;caBundle&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;CA Bundle&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;service&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ruyi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/mutate--v1-node&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;rules&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;apiVersions&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          - &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;operations&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UPDATE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          - &lt;span style=&#34;color:#ae81ff&#34;&gt;nodes/status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;scope&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Cluster&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;failurePolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Ignore&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;sideEffects&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：必须正确指定&lt;code&gt;MutatingWebhookConfiguration&lt;/code&gt;的&lt;code&gt;caBundle&lt;/code&gt;，否则Webhook不会生效。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;环境变量&#34;&gt;环境变量&lt;/h3&gt;
+&lt;p&gt;使用自动扩缩容特性特性时，需通过环境变量提供云服务商的相关信息。&lt;/p&gt;
+&lt;p&gt;若使用阿里云，则需通过环境变量配置阿里云的AccessKey及其Region。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;环境变量名称&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ALIBABA_CLOUD_ACCESS_KEY_ID&lt;/td&gt;
+&lt;td&gt;阿里云AccessKeyID&lt;/td&gt;
+&lt;td&gt;无默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ALIBABA_CLOUD_ACCESS_KEY_SECRET&lt;/td&gt;
+&lt;td&gt;阿里云AccessKeySecret&lt;/td&gt;
+&lt;td&gt;无默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ALIBABA_CLOUD_REGION_ID&lt;/td&gt;
+&lt;td&gt;阿里云集群所在地域ID&lt;/td&gt;
+&lt;td&gt;cn-hangzhou&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;若使用AWS，则需通过环境变量配置AWS的的AccessKey。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;环境变量名称&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AWS_ACCESS_KEY_ID 或 AWS_ACCESS_KEY&lt;/td&gt;
+&lt;td&gt;AWS云AccessKeyID&lt;/td&gt;
+&lt;td&gt;无默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AWS_SECRET_ACCESS_KEY 或 AWS_SECRET_KEY&lt;/td&gt;
+&lt;td&gt;AWS云AccessKeySecret&lt;/td&gt;
+&lt;td&gt;无默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AWS_ASSUME_ROLE_ARN&lt;/td&gt;
+&lt;td&gt;AWS云ASSUME_ROLE_ARN&lt;/td&gt;
+&lt;td&gt;无默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;详细配置项，请参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/ruyi/configuration/command-line/&#34;&gt;命令行配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/ruyi/configuration/nodegroup/&#34;&gt;节点组配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 监控</title>
+      <link>/zh-cn/docs/ruyi/monitoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/monitoring/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi：云原生集群扩缩容引擎监控。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;监控&#34;&gt;监控&lt;/h2&gt;
+&lt;p&gt;云原生扩缩容引擎提供了一些列的监控指标，支持通过Prometheus/Thanos对其进行监控。&lt;/p&gt;
+&lt;h3 id=&#34;自动扩缩容指标&#34;&gt;自动扩缩容指标&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指标名称&lt;/th&gt;
+&lt;th&gt;标签&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_autoscaling_run_count&lt;/td&gt;
+&lt;td&gt;无&lt;/td&gt;
+&lt;td&gt;自动扩缩容运行次数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_nodes&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;br/&gt;type: 节点类型&lt;/td&gt;
+&lt;td&gt;节点组各类型节点数量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_pods&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;/td&gt;
+&lt;td&gt;节点组各类型Pod数量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_request&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;br/&gt; resource: 资源类型&lt;/td&gt;
+&lt;td&gt;节点组请求量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_capacity&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;br/&gt; resource: 资源类型&lt;/td&gt;
+&lt;td&gt;节点组容量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_percent&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;br/&gt; resource: 资源类型&lt;/td&gt;
+&lt;td&gt;节点组请求量百分比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_scale_delta&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;/td&gt;
+&lt;td&gt;节点组节点调整量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_nodegroup_size&lt;/td&gt;
+&lt;td&gt;nodegroup: 节点组名称&lt;br/&gt; id: 节点组ID &lt;br/&gt; cloud_provider: 云服务商 &lt;br/&gt; type: 类型&lt;/td&gt;
+&lt;td&gt;节点组大小&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;虚拟容量指标&#34;&gt;虚拟容量指标&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指标名称&lt;/th&gt;
+&lt;th&gt;标签&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_virtual_capacity_run_count&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;虚拟容量运行次数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_node_request_sum&lt;/td&gt;
+&lt;td&gt;node: 节点名称&lt;br/&gt; id: 节点组ID &lt;br/&gt; nodegroup: 节点组名称&lt;br/&gt; resource: 资源类型&lt;/td&gt;
+&lt;td&gt;节点请求量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_node_allocatable&lt;/td&gt;
+&lt;td&gt;node: 节点名称&lt;br/&gt; id: 节点组ID &lt;br/&gt; nodegroup: 节点组名称&lt;br/&gt; resource: 资源类型&lt;/td&gt;
+&lt;td&gt;节点虚拟容量Allocatable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ruyi_virtual_capacity_ratio&lt;/td&gt;
+&lt;td&gt;node: 节点名称&lt;br/&gt; id: 节点组ID &lt;br/&gt; nodegroup: 节点组名称&lt;br/&gt;  type：类型&lt;/td&gt;
+&lt;td&gt;虚拟容量率&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;另外，用户也可以通过Kubernetes的指标&lt;code&gt;kube_node_status_allocatable&lt;/code&gt;查看实际虚拟容量的变化情况。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 常见问题</title>
+      <link>/zh-cn/docs/ruyi/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/ruyi/troubleshooting/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;使用Ruyi：云原生集群扩缩容引擎的常见问题及排查流程。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;正在更新中，请稍后。&lt;/p&gt;
+&lt;!-- ## 问题1：
+
+## 问题2：
+
+## 问题3： --&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

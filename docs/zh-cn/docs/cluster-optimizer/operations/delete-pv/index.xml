@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – 删除Persistent Volume</title>
+    <link>/zh-cn/docs/cluster-optimizer/operations/delete-pv/</link>
+    <description>Recent content in 删除Persistent Volume on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/docs/cluster-optimizer/operations/delete-pv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

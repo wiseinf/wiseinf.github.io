@@ -1,0 +1,236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – 节点池优化</title>
+    <link>/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/</link>
+    <description>Recent content in 节点池优化 on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 集群概览</title>
+      <link>/zh-cn/docs/cluster-optimizer/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/cluster-optimizer/overview/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;查看平台中连接的集群。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;集群&lt;/code&gt;，显示集群概览页，如下图所示。主展示区将展示平台管理的集群列表。包括集群（集群名称和集群ID）、集群地域、Access Token名称、云服务商和Prometheus地址等信息。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/overview/overview_huc51d5935651b648a35188d358af3790b_63590_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;264&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+集群概览页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 节点池优化</title>
+      <link>/zh-cn/docs/cluster-optimizer/nodegroup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/cluster-optimizer/nodegroup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述了一站式云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;节点组&lt;/code&gt;菜单，则显示节点组页，如图 39所示。节点组页分为3个区：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;集群选择区：选择相应的集群。&lt;/li&gt;
+&lt;li&gt;查询区：可根据节点组名称和节点组ID过滤列表项。&lt;/li&gt;
+&lt;li&gt;列表区：展示节点组的信息、其当前设置和优化设置。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;324&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点组页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;用户选择集群后，列表区显示分为4栏：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;节点组栏：展示节点组名称和节点组ID。&lt;/li&gt;
+&lt;li&gt;当前设置栏：展示节点组当前的实例类型、是否自动扩缩容、最小节点数和最大节点数。&lt;/li&gt;
+&lt;li&gt;优化设置栏：展示平台智能推荐的节点组实例类型、推荐是否启动扩缩容、推荐的最小节点数和最大节点数。&lt;/li&gt;
+&lt;li&gt;操作栏：展示对节点组相应的操作。，&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;320&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点组页-选择集群
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;点击上图中的&lt;code&gt;调整&lt;/code&gt;链接，可打开调整节点组对话框，如下图所示。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 810px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_800x0_resize_catmullrom_3.png&#34; width=&#34;800&#34; height=&#34;410&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+调整节点组对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 节点优化</title>
+      <link>/zh-cn/docs/cluster-optimizer/node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/cluster-optimizer/node/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述了节点相关信息及优化建议。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;节点&lt;/code&gt;菜单，则显示节点页，如下图所示。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/node/node1_hucbd1b26c7c372bc6a3c143a2da6ffa06_32634_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;333&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;节点页分为3个区：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;集群选择区：选择相应的集群。&lt;/li&gt;
+&lt;li&gt;查询区：可根据节点组名称和节点组ID过滤列表项。&lt;/li&gt;
+&lt;li&gt;列表区：展示节点组的信息、其当前设置和优化设置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;选择集群的节点页如下所示：
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/node/node2_hu17fda8b599b1f8ac4ecabc25c3b623cd_82280_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;418&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+节点页-选择集群
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;列表区显示分为5栏：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;节点信息栏：展示节点名称、实例ID和地域信息。&lt;/li&gt;
+&lt;li&gt;当前设置栏：展示节点的实例类型、CPU核数和内存大小。&lt;/li&gt;
+&lt;li&gt;策略名称栏：展示节点优化所使用的策略，目前仅支持低利用率节点策略。&lt;/li&gt;
+&lt;li&gt;详情栏：展示策略所提供的信息。例如，对于低利用率节点策略来说，会观测CPU和内存的平均利用率，并同平台设置的阈值进行比较，帮助用户调整节点实例类型。&lt;/li&gt;
+&lt;li&gt;操作栏：展示对节点相应的操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;点击的&lt;code&gt;调整&lt;/code&gt;链接可打开调整节点对话框，对话框中展示了详细的调整信息和推荐的调整方案，如下图所示。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/node/node3_huf100fcca64e7c4f80e6e88bb3833e1ea_91312_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;296&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+调整节点页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,202 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Alibaba Cloud</title>
+    <link>/tags/alibaba-cloud/</link>
+    <description>Recent content in Alibaba Cloud on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/alibaba-cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Import Alibaba Cloud Cluster</title>
+      <link>/docs/wisecost/import-aliyun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/wisecost/import-aliyun/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section describes the detailed steps to import an Alibaba Cloud cluster.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;After completing the installation of Wisecost, log in to the system and select &amp;ldquo;Overview&amp;rdquo; to see the &lt;code&gt;Overview Page&lt;/code&gt;.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-01_hud8965e357a159a39d1a1f512c93ab966_99152_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Overview Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Set Alibaba Cloud Access Credentials Page&lt;/code&gt;, set the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;. The &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt; can be obtained from Alibaba Cloud. For specific instructions, please refer to &lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;Create Access Key&lt;/a&gt;. After setting the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, click Next. The system will complete the verification of the correctness of the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and enter the &amp;ldquo;Import Alibaba Cloud Cluster - Kubernetes Cluster and Access Settings Page&amp;rdquo;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the &amp;ldquo;Import Alibaba Cloud Cluster - Set Alibaba Cloud Access Credentials Page&amp;rdquo;, you can also choose to use existing credentials and select an existing credential.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-02_hu586c8a1becbc05e284939f91daadb27a_113445_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Set Alibaba Cloud Access Credentials Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Kubernetes Cluster and Access Settings Page&lt;/code&gt;, you can choose to select a &lt;code&gt;Managed Cluster&lt;/code&gt;, or a &lt;code&gt;Self-built Cluster&lt;/code&gt;. Below is described with &lt;code&gt;Self-built Cluster&lt;/code&gt; as an example, the corresponding parameters are described. After setting the parameter, click &lt;code&gt;Next&lt;/code&gt;, the system completes the validation of the correctness of the parameter, and enters the &amp;ldquo;Import Alibaba Cloud Cluster - Set Prometheus Access Page&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster Region&lt;/td&gt;
+&lt;td&gt;The cluster region refers to the region where the cluster is deployed. Be sure to correctly specify the region, otherwise it will cause the cluster to be inaccessible. For specific instructions, please refer to &lt;a href=&#34;https://help.aliyun.com/document_detail/40654.htm&#34;&gt;Regions and Availability Zones&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster ID&lt;/td&gt;
+&lt;td&gt;A unique identifier ID, used to uniquely identify a cluster&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster Name&lt;/td&gt;
+&lt;td&gt;Cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Description&lt;/td&gt;
+&lt;td&gt;Cluster related description&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeconfig&lt;/td&gt;
+&lt;td&gt;Access to the Kubeconfig file of the cluster, you need to open read-only access permissions for the cluster. Incorrect settings will cause the cluster to be inaccessible or fail to obtain objects in the cluster.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-03_huc147e3acda1852672af64d72e460f678_213466_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Kubernetes Cluster and Access Settings Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Set Prometheus Access Page&lt;/code&gt;, set the Prometheus access address. After setting the parameter, click &lt;code&gt;Next&lt;/code&gt;, and enter the &lt;code&gt;Import Alibaba Cloud Cluster - Import Page&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-04_hu3a9e998635effd9d0941e230833f287d_99312_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Set Prometheus Access Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;On the &lt;code&gt;Import Alibaba Cloud Cluster - Import Page&lt;/code&gt;, click the &lt;code&gt;Import&lt;/code&gt; button. After the system submits the information, it displays the &lt;code&gt;Import Alibaba Cloud Cluster - Import Success Page&lt;/code&gt;. At this point, the Alibaba Cloud cluster has been successfully imported.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-05_huc147e3acda1852672af64d72e460f678_178791_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import Alibaba Cloud Cluster - Import Success Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Return to the &amp;ldquo;Overview Page&amp;rdquo;, you can see that the imported cluster is already in the list.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/wisecost/import-aliyun/import-aliyun-06_hud8965e357a159a39d1a1f512c93ab966_107599_900x414_fill_catmullrom_smart1_3.png&#34; width=&#34;900&#34; height=&#34;414&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Overview Page - Imported Alibaba Cloud Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;After completing the cluster import, you can go to the &amp;ldquo;Cluster&amp;rdquo; and &amp;ldquo;Cost&amp;rdquo; tabs to view the overall cost of the cluster and the corresponding namespace cost.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

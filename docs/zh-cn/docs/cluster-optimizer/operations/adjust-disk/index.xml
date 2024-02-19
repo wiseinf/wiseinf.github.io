@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – 调整磁盘</title>
+    <link>/zh-cn/docs/cluster-optimizer/operations/adjust-disk/</link>
+    <description>Recent content in 调整磁盘 on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/docs/cluster-optimizer/operations/adjust-disk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

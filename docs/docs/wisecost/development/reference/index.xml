@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – API接口参考</title>
+    <title>Wiseinf – API Reference</title>
     <link>/docs/wisecost/development/reference/</link>
-    <description>Recent content in API接口参考 on 云智优本</description>
+    <description>Recent content in API Reference on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/docs/wisecost/development/reference/index.xml" rel="self" type="application/rss+xml" />
     

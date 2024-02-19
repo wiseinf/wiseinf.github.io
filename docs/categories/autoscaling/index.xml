@@ -1,0 +1,39 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Autoscaling</title>
+    <link>/categories/autoscaling/</link>
+    <description>Recent content in Autoscaling on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/categories/autoscaling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Installation and Deployment</title>
+      <link>/docs/ruyi/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/ruyi/setup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi: Cloud Native Scaling Engine.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

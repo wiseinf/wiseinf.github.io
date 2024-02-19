@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – Product</title>
+    <title>Wiseinf – Product</title>
     <link>/products/</link>
-    <description>Recent content in Product on 云智优本</description>
+    <description>Recent content in Product on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/products/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +15,7 @@
     
     
     <item>
-      <title>Products: Cluster Optimizer：云原生集群优化平台</title>
+      <title>Products: Cluster Optimizer: Cloud Native Cluster Optimization Platform</title>
       <link>/products/cluster-optimizer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -56,22 +57,22 @@
     &lt;div class=&#34;row&#34;&gt;
       &lt;div class=&#34;col-12&#34;&gt;
         &lt;div class=&#34;text-center&#34;&gt;
-          &lt;h1 class=&#34;display-1 mt-0 mt-md-5 pb-4&#34;&gt;Cluster Optimizer：云原生集群优化平台&lt;/h1&gt;
+          &lt;h1 class=&#34;display-1 mt-0 mt-md-5 pb-4&#34;&gt;Cluster Optimizer: Cloud-native cluster optimization platform&lt;/h1&gt;
           
           &lt;div class=&#34;pt-3 lead&#34;&gt;
             
                 &lt;div class=&#34;mx-auto&#34;&gt;
-	&lt;p class=&#34;lead mt-5&#34;&gt;内置多种智能优化策略，能够提供集群优化建议，帮助用户更好的优化集群及应用，保障稳定，避免浪费。&lt;/p&gt;
-	&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
-	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;http://optimizerdemo.wiseinf.com.cn:30000/&#34;&gt;
-		查看演示 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
-	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/docs/cluster-optimizer/&#34;&gt;
-		查看文档 &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
-	&lt;a class=&#34;btn btn-lg btn-secondary  mr-3 mb-4&#34; href=&#34;/contactus/&#34;&gt;
-		申请试用 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
+&lt;p class=&#34;lead mt-5&#34;&gt;A variety of built-in intelligent optimization strategies can provide cluster optimization suggestions to help users better optimize clusters and applications, ensure stability, and avoid waste. &lt;/p&gt;
+&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;http://optimizerdemo.wiseinf.com.cn:30000/&#34;&gt;
+View the demo &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/docs/cluster-optimizer/&#34;&gt;
+View documentation &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/contactus/&#34;&gt;
+Request a trial &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
 &lt;/div&gt;
 
             
@@ -96,31 +97,31 @@
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;多维度智能优化建议&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Multi-dimensional intelligent optimization suggestions&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;内置多种智能优化策略，涵盖节点组、节点、磁盘、Persistent Volume和应用。 能够提供集群优化建议，帮助用户更好的优化集群及应用，保障稳定，避免浪费。&lt;/p&gt;
+&lt;p&gt;A variety of built-in intelligent optimization strategies cover node groups, nodes, disks, persistent volumes and applications. It can provide cluster optimization suggestions to help users better optimize clusters and applications, ensure stability, and avoid waste.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;/docs/cluster-optimizer/&#34;&gt;更多 …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/cluster-optimizer/&#34;&gt;Read more …&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;col-lg-4 mb-5 mb-lg-0 text-center&#34;&gt;
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;多云支持&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Multi-cloud support&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;多云支持，目前支持阿里云，后续将扩展至AWS、华为云、腾讯云等。&lt;/p&gt;
+&lt;p&gt;Currently supporting Alibaba Cloud and AWS, it will be expanded to Azure, GCP, Huawei Cloud, Tencent Cloud, etc. in the future.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;/docs/cluster-optimizer/&#34;&gt;更多 …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/cluster-optimizer/&#34;&gt;Read more …&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;col-lg-4 mb-5 mb-lg-0 text-center&#34;&gt;
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;简单易用&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Easy to use&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;可视化操作界面，方便用户使用，降低学习成本。&lt;/p&gt;
+&lt;p&gt;The visual operation interface makes it convenient for users to use and reduces learning costs.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;/docs/cluster-optimizer/&#34;&gt;更多 …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/cluster-optimizer/&#34;&gt;Read more …&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 			
@@ -133,7 +134,7 @@
     </item>
     
     <item>
-      <title>Products: Wisecost：云原生成本管理平台</title>
+      <title>Products: Wisecost: Cloud Native Cost Management Platform</title>
       <link>/products/wisecost/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -175,22 +176,22 @@
     &lt;div class=&#34;row&#34;&gt;
       &lt;div class=&#34;col-12&#34;&gt;
         &lt;div class=&#34;text-center&#34;&gt;
-          &lt;h1 class=&#34;display-1 mt-0 mt-md-5 pb-4&#34;&gt;Wisecost：云原生成本管理平台&lt;/h1&gt;
+          &lt;h1 class=&#34;display-1 mt-0 mt-md-5 pb-4&#34;&gt;Wisecost: Cloud Native Cost Management Platform&lt;/h1&gt;
           
           &lt;div class=&#34;pt-3 lead&#34;&gt;
             
                 &lt;div class=&#34;mx-auto&#34;&gt;
-	&lt;p class=&#34;lead mt-5&#34;&gt;Wisecost可对云原生应用的成本进行管理、分析和优化，帮助企业管控数智化转型过程中的成本，避免浪费。&lt;/p&gt;
-	&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
-	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;http://optimizerdemo.wiseinf.com.cn/&#34;&gt;
-		查看演示 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
-	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/contactus/&#34;&gt;
-		申请试用 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
-	&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/docs/cluster-optimizer/&#34;&gt;
-		查看文档 &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
+&lt;p class=&#34;lead mt-5&#34;&gt;Wisecost can manage, analyze and optimize the costs of cloud native applications, helping enterprises manage costs in the process of digital intelligence transformation and avoid waste. &lt;/p&gt;
+&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;http://optimizerdemo.wiseinf.com.cn/&#34;&gt;
+View the demo &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/contactus/&#34;&gt;
+Request a trial &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/docs/cluster-optimizer/&#34;&gt;
+View documentation &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
 &lt;/div&gt;
 
             
@@ -215,31 +216,31 @@
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;成本管理&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Cost Management&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;评估集群整体成本以及分解成本。&lt;/p&gt;
+&lt;p&gt;Evaluate overall cluster costs as well as breakdown costs.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;/docs/wisecost/&#34;&gt;更多 …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/wisecost/&#34;&gt;Read more …&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;col-lg-4 mb-5 mb-lg-0 text-center&#34;&gt;
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;多维度聚合&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Multi-dimensional aggregation&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;评估云原生应用的成本，提供按照名称空间、负载、部门、小组、应用环境等多个维度的成本分析。&lt;/p&gt;
+&lt;p&gt;Evaluate the cost of cloud native applications and provide cost analysis based on multiple dimensions such as namespace, load, department, group, application environment, etc.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;/docs/wisecost/&#34;&gt;更多 …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/wisecost/&#34;&gt;Read more …&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;col-lg-4 mb-5 mb-lg-0 text-center&#34;&gt;
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;基础优化建议&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Basic optimization suggestions&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;提供优化建议&lt;/p&gt;
+&lt;p&gt;Provide optimization suggestions&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;/docs/wisecost/&#34;&gt;更多 …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/wisecost/&#34;&gt;Read more …&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 			
@@ -252,7 +253,7 @@
     </item>
     
     <item>
-      <title>Products: Ruyi：云原生集群扩缩容引擎</title>
+      <title>Products: Ruyi: Cloud native cluster autoscaling engine</title>
       <link>/products/ruyi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -294,22 +295,21 @@
     &lt;div class=&#34;row&#34;&gt;
       &lt;div class=&#34;col-12&#34;&gt;
         &lt;div class=&#34;text-center&#34;&gt;
-          &lt;h1 class=&#34;display-1 mt-0 mt-md-5 pb-4&#34;&gt;Ruyi：云原生集群扩缩容引擎&lt;/h1&gt;
+          &lt;h1 class=&#34;display-1 mt-0 mt-md-5 pb-4&#34;&gt;Ruyi: Cloud-native cluster autoscaling engine&lt;/h1&gt;
           
           &lt;div class=&#34;pt-3 lead&#34;&gt;
             
                 &lt;div class=&#34;mx-auto&#34;&gt;
-	&lt;!-- &lt;p class=&#34;lead mt-5&#34;&gt;Ruyi：云原生集群扩缩容组件。&lt;/p&gt; --&gt;
-  	&lt;p&gt;Ruyi（即如意，意味着集群和节点能够随心所欲的进行扩缩容）是云智优本公司研发的一款云原生集群扩缩容引擎，它提供了自动扩缩容和虚拟容量两大能力，能够帮助客户节省高达50%的云原生IT成本。&lt;/p&gt;
-	&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
-	&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/docs/ruyi/&#34;&gt;
-		查看文档 &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
-	  &lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/contactus/&#34;&gt;
-		申请试用 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
+&lt;!-- &lt;p class=&#34;lead mt-5&#34;&gt;Ruyi: Cloud native cluster expansion and contraction component. &lt;/p&gt; --&gt;
+   &lt;p&gt;Ruyi (Ruyi, meaning that clusters and nodes can be expanded and contracted as desired) is a cloud-native cluster expansion and contraction engine developed by Yunzhiyou. It provides both automatic expansion and contraction and virtual capacity. With great capabilities, it can help customers save up to 50% of cloud native IT costs. &lt;/p&gt;
+&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/docs/ruyi/&#34;&gt;
+View documentation &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/contactus/&#34;&gt;
+Request a trial &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
 &lt;/div&gt;
-
             
           &lt;/div&gt;
         &lt;/div&gt;
@@ -319,8 +319,8 @@
   
 &lt;/section&gt;
 
-  &lt;!-- 它能够监控调度在节点组（或节点池）上的Pod Request值，并基于此值对节点组进行扩缩容。&lt;/p&gt;
-  &lt;p&gt;它能够广泛的应用于在线服务、批量任务和大数据等场景中，帮助企业在性能和成本间取得平衡。&lt;/p&gt; --&gt;
+   &lt;!-- It can monitor the Pod Request value scheduled on the node group (or node pool), and expand or shrink the node group based on this value. &lt;/p&gt;
+   &lt;p&gt;It can be widely used in scenarios such as online services, batch tasks, and big data to help enterprises strike a balance between performance and cost. &lt;/p&gt; --&gt;
 &lt;!-- 
 
 
@@ -330,15 +330,15 @@
 	&lt;div class=&#34;container text-center td-arrow-down&#34;&gt;
 		&lt;div class=&#34;h4 mb-0&#34;&gt;
 			
-				&lt;p&gt;Ruyi（即如意，意味着集群能够随心所欲的进行扩缩容）是云智优本公司研发的一款集群自动扩缩容软件。它能够监控调度在节点组（或节点池）上的Pod Request值，并基于此值对节点组进行扩缩容。&lt;/p&gt;
-&lt;p&gt;它能够广泛的应用于在线服务、批量任务和大数据等场景中，帮助企业在性能和成本间取得平衡。&lt;/p&gt;
+				&lt;p&gt;Ruyi (meaning Ruyi, meaning the cluster can be expanded and contracted as desired) is a cluster automatic expansion and contraction software developed by Yunzhiyou. It can monitor the Pod Request value scheduled on the node group (or node pool), and scale the node group based on this value. &lt;/p&gt;
+&lt;p&gt;It can be widely used in scenarios such as online services, batch tasks, and big data to help enterprises strike a balance between performance and cost. &lt;/p&gt;
 &lt;div class=&#34;mx-auto&#34;&gt;
-  &lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/docs/ruyi/&#34;&gt;
-		申请试用 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
-	&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/docs/ruyi/&#34;&gt;
-		查看文档 &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
-	&lt;/a&gt;
+   &lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/docs/ruyi/&#34;&gt;
+Request a trial &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/docs/ruyi/&#34;&gt;
+View documentation &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
 &lt;/div&gt;
 
 			
@@ -359,30 +359,30 @@
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-list&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;自动扩缩容&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Autoscaling&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;基于Pod Request进行集群扩缩容，显著降低传统扩缩容方式中基于Pod Pending扩容导致的服务不可用风险。&lt;/p&gt;
-&lt;p&gt;优雅缩容策略，有效降低删除节点导致的服务不可用风险。
-&lt;p&gt;能够与云服务商提供的集群扩缩容机制协同工作。&lt;/p&gt;
+&lt;p&gt;Cluster expansion and contraction based on Pod Request significantly reduces the risk of service unavailability caused by Pod Pending expansion in traditional expansion and contraction methods. &lt;/p&gt;
+&lt;p&gt;Elegant scaling strategy effectively reduces the risk of service unavailability caused by deleting nodes.
+&lt;p&gt;Able to work together with the cluster expansion and contraction mechanism provided by cloud service providers. &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;col-lg-4 mb-5 mb-lg-0 text-center&#34;&gt;
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-gears&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;虚拟容量&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Virtual Capacity&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;在特定条件下，将节点容量增长为其原容量3倍（甚至更多），从而支持在节点上调度更多的Pod（应用）。&lt;/p&gt;
-&lt;p&gt;特别适用于开发、测试等资源利用率较低的场合。&lt;/p&gt;
+&lt;p&gt;Under certain conditions, the node capacity is increased by 3 times (or even more) of its original capacity to support scheduling more Pods (applications) on the node. &lt;/p&gt;
+&lt;p&gt;Especially suitable for development, testing and other occasions with low resource utilization. &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;col-lg-4 mb-5 mb-lg-0 text-center&#34;&gt;
 &lt;div class=&#34;mb-4 h1&#34;&gt;
   &lt;i class=&#34;fas fa-solid fa-cloud&#34;&gt;&lt;/i&gt;
 &lt;/div&gt;
-&lt;h4 class=&#34;h3&#34;&gt;多云支持&lt;/h4&gt;
+&lt;h4 class=&#34;h3&#34;&gt;Multi-cloud support&lt;/h4&gt;
 &lt;div class=&#34;mb-0&#34;&gt;
-&lt;p&gt;目前支持AWS、阿里云。&lt;/p&gt;
+&lt;p&gt;Currently supports AWS and Alibaba Cloud. &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 

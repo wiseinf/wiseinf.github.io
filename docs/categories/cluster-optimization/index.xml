@@ -1,0 +1,1492 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Cluster Optimization</title>
+    <link>/categories/cluster-optimization/</link>
+    <description>Recent content in Cluster Optimization on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/categories/cluster-optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Adjust Node Pool</title>
+      <link>/docs/cluster-optimizer/operations/adjust-nodegroup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/operations/adjust-nodegroup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the operation of adjusting the node pool.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Have the permission to edit the node pool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;operation-steps&#34;&gt;Operation Steps&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Log in to the container service management console and select Cluster on the left navigation bar.&lt;/li&gt;
+&lt;li&gt;On the cluster list page, click the target cluster name, and then on the left navigation bar, select Node Management &amp;gt; Node Pool.&lt;/li&gt;
+&lt;li&gt;On the Node Pool List page, click the Edit button in the operation column of the target Node Pool.&lt;/li&gt;
+&lt;li&gt;On the Edit Node Pool page, edit the configuration items of the Node Pool. The main focus of Node Pool optimization is the &lt;strong&gt;Instance Specification&lt;/strong&gt; and &lt;strong&gt;Auto Scaling&lt;/strong&gt; configuration items.
+&lt;ol&gt;
+&lt;li&gt;Select the corresponding instance specification according to the recommended instance rules in the Adjust Node Pool dialog box.&lt;/li&gt;
+&lt;li&gt;Make adjustments in the &lt;strong&gt;Auto Scaling&lt;/strong&gt; configuration item according to the recommended auto-scaling, minimum number of nodes, and maximum number of nodes in the Adjust Node Pool dialog box. If you have not enabled cluster auto-elasticity, you can refer to &lt;a href=&#34;https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/auto-scaling-of-nodes#section-i4v-dgt-7wv&#34;&gt;Node Auto Scaling&lt;/a&gt; for configuration.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For more details, please refer to: &lt;a href=&#34;https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/edit-node-pool&#34;&gt;Edit Node Pool&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cluster Optimizer: A One-Stop Cloud-Native Cluster Optimization Platform</title>
+      <link>/docs/cluster-optimizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;The one-stop cloud-native cluster optimization platform (Cluster Optimizer) provides capabilities for optimizing cloud-native clusters.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Cluster Optimizer can assist users in optimizing their cloud-native clusters, with key features including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Providing a variety of optimization strategies, including recommendations for multiple dimensions such as node groups, nodes, disks, Persistent volumes, and applications.&lt;/li&gt;
+&lt;li&gt;Cloud account (credential) management and cluster management.&lt;/li&gt;
+&lt;li&gt;User management (not supported in the community edition).&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installation and Deployment</title>
+      <link>/docs/cluster-optimizer/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/setup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This page describes the detailed steps to install the one-stop cloud-native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mysql database, version 5.7 or higher&lt;/li&gt;
+&lt;li&gt;Kubernetes cluster, version 1.20 or higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;clone-installation-scripts&#34;&gt;Clone Installation Scripts&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the console, enter &lt;code&gt;git clone https://github.com/wiseinf/setup.git&lt;/code&gt;, and clone the installation scripts to your local machine.
+We provide two repository addresses for you to clone to your local machine according to your needs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Repository&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Repository Address&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Github&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://github.com/wiseinf/setup.git&#34;&gt;https://github.com/wiseinf/setup.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gitee&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://gitee.com/wiseinf/setup.git&#34;&gt;https://gitee.com/wiseinf/setup.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The subsequent steps assume that the &lt;code&gt;setup&lt;/code&gt; library has been cloned to the user&amp;rsquo;s home directory. If it hasn&amp;rsquo;t been cloned to the user&amp;rsquo;s home directory, you need to adjust the file paths in the commands accordingly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;initialize-the-database&#34;&gt;Initialize the Database&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Assuming the Mysql database host address is: &lt;code&gt;127.0.0.1&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In the console, execute the command &lt;code&gt;mysql -h127.0.0.1 -uroot&lt;/code&gt;, enter the password, and log in to the mysql database. Where &lt;code&gt;127.0.0.1&lt;/code&gt; is the Mysql host address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt, execute the following command to create the &lt;code&gt;optimizer&lt;/code&gt; database, and the corresponding tables will be automatically created by the application later.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; source ~/setup/clusteroptimizer/sql/create_database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: Please pay attention to the risk of data loss. If the &lt;code&gt;optimizer&lt;/code&gt; database already exists in mysql database, the above script will first delete the &lt;code&gt;optimizer&lt;/code&gt; database and then create a new &lt;code&gt;optimizer&lt;/code&gt; database.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt, execute the following command to create the &lt;code&gt;optimizer&lt;/code&gt; user (default password is &lt;code&gt;Optimizer~&lt;/code&gt;) and grant it full access permissions to the &lt;code&gt;optimizer&lt;/code&gt; database.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the console, execute the command &lt;code&gt;mysql -h127.0.0.1 -uoptimizer&lt;/code&gt;, enter the password (default password is &lt;code&gt;Optimizer~&lt;/code&gt;), and log in to the mysql database.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt, execute &lt;code&gt;show database&lt;/code&gt; to confirm that the &lt;code&gt;optimizer&lt;/code&gt; database has been created. You can use &lt;code&gt;select&lt;/code&gt; statements (e.g. &lt;code&gt;select * from storage.pv&lt;/code&gt;) to query the corresponding data tables in the library to confirm whether the user&amp;rsquo;s permissions are normal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At this point, the database initialization is complete.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;deploy-application&#34;&gt;Deploy Application&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Apply the following file to the cluster with &lt;code&gt;kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml&lt;/code&gt;, creating the namespace &lt;code&gt;wiseinf-system&lt;/code&gt;.
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Namespace&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;: 
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+&lt;/li&gt;
+&lt;li&gt;Adjust the &lt;strong&gt;ConfigMap&lt;/strong&gt; &lt;code&gt;optimizer-conf&lt;/code&gt; in the file &lt;code&gt;~/setup/clusteroptimizer/optimizer.yaml&lt;/code&gt; based on the configuration of Mysql, and set its configuration item &lt;code&gt;optimize&lt;/code&gt; and &lt;code&gt;kubestore&lt;/code&gt; under &lt;code&gt;dataSourceName: &amp;quot;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;amp;parseTime=true&amp;amp;&amp;amp;loc=Local&lt;/code&gt; to the corresponding information of the Mysql database&amp;rsquo;s username, user password, database address, and port.&lt;/li&gt;
+&lt;li&gt;Apply the following file to the cluster with &lt;code&gt;kubectl apply -f ~/setup/clusteroptimizer/optimizer.yaml&lt;/code&gt;, deploying the application &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;.
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ConfigMap&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;data&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;default.conf&lt;/span&gt;: |-&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      server {
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        listen 80;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        location / {
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          root /usr/share/nginx/html/;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          include /etc/nginx/mime.types;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          try_files $uri $uri/ /index.html;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          location /api/ {
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            rewrite ^/api/(.*) /$1 break;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header Host $host;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header X-Real-IP $remote_addr;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_set_header X-NginX-Proxy true;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            proxy_pass http://localhost:7070;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          }
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        }
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      }&lt;/span&gt;      
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ConfigMap&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-conf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;data&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;cluster-optimizer.yaml&lt;/span&gt;: |-&lt;span style=&#34;color:#e6db74&#34;&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    server:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      port: 7070
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    engine:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      maxQueryDuration: 1h
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    storage:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      type: mysql
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      parameters:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        dataSourceName: &amp;#34;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;amp;parseTime=true&amp;amp;loc=Local&amp;#34;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        maxOpenConns: 10
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    optimize:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      dataSource:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        name: &amp;#34;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;amp;parseTime=true&amp;amp;loc=Local&amp;#34;
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        maxOpenConns: 10
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      strategyConfigs:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;#34;OOM&amp;#34;: 
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          enabled: true
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;#34;Resource Recommendation&amp;#34;:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          enabled: true
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;#34;No Quota&amp;#34;:
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          enabled: true
+    &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;      enabled: true&lt;/span&gt;    
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deployment&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;apps/v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;replicas&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;revisionHistoryLimit&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;selector&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;matchLabels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;group&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;dnsPolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ClusterFirstWithHostNet&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;securityContext&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;runAsUser&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;containers&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-ui&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf/cluster-optimizer-ui:1.0.0-preview&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;imagePullPolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;IfNotPresent&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;volumeMounts&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/etc/nginx/conf.d&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;containerPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;protocol&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;TCP&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;requests&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200M&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;limits&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1000m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1G&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf/optimizer:1.0.0-preview&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;command&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/wiseinf/optimizer&amp;#34;&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--features=APIServer&amp;#34;&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;imagePullPolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;IfNotPresent&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;volumeMounts&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-data-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wiseinf/data&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-logs-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wiseinf/logs&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-conf-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;mountPath&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/wiseinf/conf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;containerPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;7070&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;protocol&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;TCP&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;requests&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200M&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;limits&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1000m&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1G&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Config for optimizer-ui&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;configMap&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-nginx-config&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Configs for optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-data-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;hostPath&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/optimizer/data&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;DirectoryOrCreate&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-logs-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;hostPath&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/optimizer/logs&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;DirectoryOrCreate&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-conf-volume&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;configMap&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer-conf&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Service&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;:  &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;namespace&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;port&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;nodePort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;30000&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;targetPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;selector&lt;/span&gt;:
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;NodePort&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ---&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# apiVersion: networking.k8s.io/v1&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# kind: Ingress&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# metadata:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#   name: optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#   namespace: wiseinf-system&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# spec:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#   rules:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#     - host: optimizer.{your domain name}&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#       http:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#         paths:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#           - backend:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#               service:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#                 name: optimizer&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#                 port:&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#                   number: 80&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#             path: /&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#             pathType: ImplementationSpecific&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    
+
+&lt;blockquote&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Access URL &lt;code&gt;http://localhost&lt;/code&gt; via &lt;code&gt;kubectl port-forward svc/optimizer 80:80&lt;/code&gt;, and you can see the Cluster Optimizer homepage.&lt;/li&gt;
+&lt;li&gt;At this point, the application &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; has been deployed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;next-step-import-cluster&#34;&gt;Next Step: Import Cluster&lt;/h2&gt;
+&lt;p&gt;The next step is to add a cluster and view its various costs. See &lt;a href=&#34;/docs/clusteroptimizer/import-aliyun&#34;&gt;Import Aliyun Cluster&lt;/a&gt; for details.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Adjust Nodes</title>
+      <link>/docs/cluster-optimizer/operations/adjust-node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/operations/adjust-node/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the operation of adjusting nodes.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Import Alibaba Cloud Cluster</title>
+      <link>/docs/cluster-optimizer/import-aliyun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/import-aliyun/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section describes the detailed steps for importing Alibaba Cloud clusters.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Obtain the Alibaba Cloud Access Key and Access Key Secret and have the following permissions. For the specific application process, please refer to &lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;Create Access Key&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Services&lt;/th&gt;
+&lt;th&gt;Permissions&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloud Server (ECS)&lt;/td&gt;
+&lt;td&gt;ecs:DescribeDisks&lt;br/&gt; ecs:DescribeInstances&lt;br/&gt; ecs:DescribeRegions&lt;/td&gt;
+&lt;td&gt;This permission is required to obtain disk, instance and region information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Container Service Kubernetes version (CS)&lt;/td&gt;
+&lt;td&gt;cs:DescribeClusterNodePools&lt;br/&gt; cs:DescribeClusterNodePoolDetail&lt;br/&gt; cs:DescribeClusters &lt;br/&gt; cs:DescribeClusterUserKubeconfig&lt;br/&gt; cs:DescribeClusterNodes&lt;/td&gt;
+&lt;td&gt;This permission is required to obtain the cluster, node pool, Node, Kubeconfig and other information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to [Creating a custom permission policy through script editing mode](&lt;a href=&#34;https://help.aliyun.com/zh/ram/user-&#34;&gt;https://help.aliyun.com/zh/ram/user-&lt;/a&gt; guide/create-a-custom-policy#section-kwn-gu8-48m)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ecs:DescribeDisks&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ecs:DescribeInstances&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ecs:DescribeRegions&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       ],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       ],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;: {}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterNodePools&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterNodePoolDetail&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusters&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterUserKubeconfig&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterNodes&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       ],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       ],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;: {}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Alibaba Cloud Kubernetes cluster Kubeconfig. For cluster versions 1.20 and above, it is recommended to use ACK cluster. For details, please see &lt;a href=&#34;https://help.aliyun.com/zh/ack/&#34;&gt;Container Service Kubernetes version&lt;/a&gt;. Kubeconfig requires the following permissions.
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Resources&lt;/th&gt;
+&lt;th&gt;Permissions&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Node&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get node information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pod&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get Pod information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Namespace&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get Namespace information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Service&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get Service information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Persistent Volume&lt;br/&gt; Persistent Volume Claim&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get Persistent Volume, Persistent Volume Claim information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deployment&lt;br/&gt;StatefulSet&lt;br/&gt;DaemonSet&lt;br/&gt;&lt;br/&gt;ReplicaSet&lt;br&gt;ReplicationControllers&lt;br/&gt;&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get Deployment, StatefulSet, DaemonSet, ReplicaSet , ReplicationContoller information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Job&lt;br/&gt;CronJob&lt;/td&gt;
+&lt;td&gt;List&lt;br/&gt;Get&lt;br/&gt; Watch&lt;/td&gt;
+&lt;td&gt;Get Job and CronJob information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The permissions file is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;rbac.authorization.k8s.io/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ClusterRole&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;rules&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;nodes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;pods&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;pods/status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;persistentvolumes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;persistentvolumeclaims&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;services&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;namespaces&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;apps/v1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;deployments&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;replicasets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;replicationcontollers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;statefulsets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;daemonsets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;batch/v1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;jobs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;cronjobs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;storage/v1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       -&lt;span style=&#34;color:#ae81ff&#34;&gt;storageclasses&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Prometheus monitoring or Thanos monitoring. This monitoring is used to provide monitoring data for nodes, containers, etc. in the cluster.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;import-steps&#34;&gt;Import steps&lt;/h2&gt;
+&lt;h3 id=&#34;add-alibaba-cloud-account&#34;&gt;Add Alibaba Cloud account&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select the &lt;code&gt;Settings&lt;/code&gt; menu and select the &lt;code&gt;Cloud Account&lt;/code&gt; tab to enter the cloud account management page. By default, this page will display all cloud accounts managed by the platform in pages, including names and corresponding cloud service providers. It also provides an operation bar to facilitate users to perform corresponding operations, as shown in the figure below.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cp01_hua616eacb3aebae2f5f78241e609ab820_2687161_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cloud account management main page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;On the cloud account management page, click the Add button to add a cloud account. The interface is as shown below. In this interface, the user enters the cloud account name, selects the corresponding cloud service provider, enters the Access Key and Access Key Secret, and clicks the OK button to complete adding the cloud account. After adding parameters, users can also click the Test Connectivity button to test whether the cloud account is correct. The platform currently supports Alibaba Cloud, which can be selected from the cloud service provider drop-down box. Access Key and Access Key Secret are account information for accessing the cloud service. Please obtain them from the corresponding cloud service provider.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cp02_hu69f6a5ed4ee83792d28a08169d2eee0f_35990_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Add cloud account interface
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;add-alibaba-cloud-cluster&#34;&gt;Add Alibaba Cloud cluster&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Select the &lt;code&gt;Settings&lt;/code&gt; menu and select the cluster tab to enter the cluster management page. By default, this page will display all clusters managed by the platform in pages, including name, cluster ID, cluster region, Access Token name, corresponding cloud service provider and Prometheus address. It also provides an operation bar to facilitate users to perform corresponding operations. As shown in Figure 24.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cluster01_hu66289fd8e1bc98ec62da06f0c786c304_2419115_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;382&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cluster management main page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click the &lt;code&gt;Import Cluster&lt;/code&gt; button to pop up the import dialog box, where you can import the cluster. There are 5 steps to import a cluster. Currently, only Alibaba Cloud clusters are supported.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Set Alibaba Cloud access credentials&lt;/li&gt;
+&lt;li&gt;Connect to the Kubernetes cluster&lt;/li&gt;
+&lt;li&gt;Connect to Prometheus&lt;/li&gt;
+&lt;li&gt;View configuration&lt;/li&gt;
+&lt;li&gt;Complete&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The interface for setting Alibaba Cloud access credentials is as shown in the figure below. In the Alibaba Cloud access credentials interface, set the Alibaba Cloud access credentials by using existing credentials. Here, select the Alibaba Cloud account added in &lt;code&gt;Add Alibaba Cloud Account&lt;/code&gt;, as shown in the figure below.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cluster02_hu47cab88b789ca4733b076b8b85bee2ef_32066_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;175&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Import cluster interface-set Alibaba Cloud access credentials
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After setting the Alibaba Cloud access credentials, click the Next button to enter the page for connecting to the Kubernetes cluster, as shown in the figure below. The platform supports connecting to two types of Kubernetes clusters, including managed clusters and self-built clusters. The Connect Hosting Cluster page is shown in the figure below. Here we choose the managed cluster, and the platform automatically obtains the user cluster through the cloud account. The user selects the corresponding cluster through the cluster drop-down box, enters the description field, selects whether to use the API Server private network address, selects whether to automatically refresh KubeConfig and the KubeConfig life cycle. Finally enter the node group label.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;359&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Connect to Kubernetes cluster page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The connection page to Prometheus is as shown in the figure below. After the user enters information on this page, click the Next button to enter the view configuration page. The input information details are shown in the table below.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;359&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Connect to Prometheus page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+The parameter description for connecting to Prometheus is as shown in the table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Parameters&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Whether Thanos&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;If the backend cluster is Thanos, this should be checked.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Prometheus address&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Prometheus address, must be accessible.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Limit access rate&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;If you need the current platform&amp;rsquo;s access rate to Prometheus, you should check this option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Maximum number of concurrencies&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;The maximum number of concurrencies for the platform to access Prometheus.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Cluster label&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Cluster label is used to filter the monitoring indicators of the cluster from Prometheus or Thanos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Cluster tag value&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Cluster tag value is used to filter the monitoring indicators of the cluster from Prometheus or Thanos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;View the configuration page as shown in the figure below. This page displays Alibaba Cloud access credentials, detailed parameters for connecting to the Kubernetes cluster and connecting to the Prometheus cluster, which is convenient for users to confirm. When the user completes the confirmation, click the Import button to enter the completion page.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;359&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+View configuration page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The completed page is as shown in the figure below, and the submission status will be displayed on the page. Click Finish to complete the cluster import.
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;359&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Complete page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;After the cluster is imported, wait for a while to view optimization suggestions for the cluster in multiple dimensions.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Adjusting disks</title>
+      <link>/docs/cluster-optimizer/operations/adjust-disk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/operations/adjust-disk/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the operation of adjusting disks.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cluster Overview</title>
+      <link>/docs/cluster-optimizer/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/overview/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;View the clusters connected in the platform.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click on &lt;code&gt;Clusters&lt;/code&gt; in the left menu bar of the platform to display the Cluster Overview page, as shown below. The main display area will show the list of clusters managed by the platform. This includes information such as cluster (cluster name and cluster ID), cluster region, Access Token name, cloud service provider, and Prometheus address.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/overview/overview_huc51d5935651b648a35188d358af3790b_63590_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;264&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cluster Overview Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Deleting Persistent Volume</title>
+      <link>/docs/cluster-optimizer/operations/delete-pv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/operations/delete-pv/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the operation of deleting a Persistent Volume.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Node Pool Optimization</title>
+      <link>/docs/cluster-optimizer/nodegroup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/nodegroup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the cluster optimization operations provided by the one-stop cloud-native Cluster Optimizer platform.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click on the &lt;code&gt;Node Group&lt;/code&gt; menu in the left menu bar of the platform to display the Node Group page, as shown in Figure 39. The Node Group page is divided into three areas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster Selection Area: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Query Area: Filter list items based on node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;List Area: Displays information about the node groups, their current settings, and optimized settings.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;324&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node Group Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;After the user selects a cluster, the list area is displayed in four columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Node Group Column: Displays the node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;Current Settings Column: Displays the current instance type of the node group, whether it is automatically scaled, and the minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;Optimized Settings Column: Displays the instance type of the node group intelligently recommended by the platform, whether to start scaling is recommended, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;Operations Column: Displays the corresponding operations for the node group.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;320&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node Group Page - Cluster Selected
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;Clicking the &lt;code&gt;Adjust&lt;/code&gt; link in the figure above opens the Adjust Node Group dialog box, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 810px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_800x0_resize_catmullrom_3.png&#34; width=&#34;800&#34; height=&#34;410&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Node Group Dialog Box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Node Optimization</title>
+      <link>/docs/cluster-optimizer/node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/node/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes node-related information and optimization suggestions.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click the &lt;code&gt;Nodes&lt;/code&gt; menu in the left menu bar of the platform to display the Nodes page, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node1_hucbd1b26c7c372bc6a3c143a2da6ffa06_32634_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;333&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Nodes Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The Nodes page is divided into three sections:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster Selection Area: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Query Area: Filter list items by Node Group Name and Node Group ID.&lt;/li&gt;
+&lt;li&gt;List Area: Displays information about Node Groups, their current settings, and optimized settings.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Nodes page for selecting a cluster is shown below:
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node2_hu17fda8b599b1f8ac4ecabc25c3b623cd_82280_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;418&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Nodes Page - Select Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The List Area display is divided into five columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Node Information Column: Displays the Node Name, Instance ID, and Region information.&lt;/li&gt;
+&lt;li&gt;Current Settings Column: Displays the instance type, CPU cores, and memory size of the node.&lt;/li&gt;
+&lt;li&gt;Policy Name Column: Displays the policy used for node optimization; currently, only the low utilization node strategy is supported.&lt;/li&gt;
+&lt;li&gt;Details Column: Displays information provided by the policy. For example, for the low utilization node strategy, it monitors the average utilization of CPU and memory and compares it with the threshold set by the platform to help users adjust the node instance type.&lt;/li&gt;
+&lt;li&gt;Actions Column: Displays corresponding actions for the node.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Clicking the &lt;code&gt;Adjust&lt;/code&gt; link opens the Adjust Nodes dialog box, which displays detailed adjustment information and recommended adjustment plans, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node3_huf100fcca64e7c4f80e6e88bb3833e1ea_91312_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;296&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Nodes Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Disk Optimization</title>
+      <link>/docs/cluster-optimizer/disk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/disk/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This describes the information related to disks and optimization suggestions.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click the &lt;code&gt;Disk&lt;/code&gt; menu in the left menu bar of the platform to display the Disk page, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/disk/disk1_hu8eff269808ad90ec2980f382e0103d36_32479_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;334&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Disk Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The Disk page is divided into three sections:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster selection section: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Search section: Query the corresponding disks by disk ID, instance ID, and node name.&lt;/li&gt;
+&lt;li&gt;List section: Displaying disks, instances, usage, and operations column.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After selecting the cluster, the Disk page will look like this:&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/disk/disk2_hu5d129aa695fec5b501fbe2af2fc02371_92321_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;406&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Disk Page - Cluster Selected
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The list section shows four columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Disk column: Displays the disk ID, device name, and creation time.&lt;/li&gt;
+&lt;li&gt;Instance column: Shows the node ID where the disk resides, the node name, and the region.&lt;/li&gt;
+&lt;li&gt;Usage column: Shows the disk capacity, maximum utilization rate, average utilization rate, and last update time.&lt;/li&gt;
+&lt;li&gt;Operation column: Displays operations that can be performed on the disk.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When a user clicks the &lt;code&gt;Adjust&lt;/code&gt; link, a dialog box for adjusting the size of the disk opens, which displays detailed adjustment information and recommended adjustment plans for the disk, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/disk/disk3_hu8aac8a7a4525283cb7f898defaa8e7e4_130288_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;332&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Disk Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Persistent Volume Optimization</title>
+      <link>/docs/cluster-optimizer/pv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/pv/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This describes the cluster optimization operations provided by the one-stop cloud-native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click the &lt;code&gt;Persistent Volume&lt;/code&gt; menu on the left menu bar of the platform to display the Persistent Volume page, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv1_hue512a9c09cea6c77b3077e30f8fff04e_41899_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;365&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Persistent Volume Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The Persistent Volume page is divided into three sections:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster selection area: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Query area: Filter the list items according to the name, PVC namespace, PVC name, and policy name.&lt;/li&gt;
+&lt;li&gt;List area: Displays PV, PVC, policy name, usage, last update time, and operation column.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The disk page after selecting a cluster is shown below:&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv2_hu4f738f43cdbc3a30690ded55f2dfade5_68487_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;395&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Persistent Volume Page - Select Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The list area displays six columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;PV column: Shows the PV name, region, capacity, and creation time.&lt;/li&gt;
+&lt;li&gt;PVC column: Shows the PVC namespace and name.&lt;/li&gt;
+&lt;li&gt;Policy name column: Shows the optimization policy name, currently including two optimization policies for unused PVs and low-usage PVs.&lt;/li&gt;
+&lt;li&gt;Usage column: Shows the usage of the PV, only effective under the low-usage PV optimization strategy.&lt;/li&gt;
+&lt;li&gt;Last update time column: Shows the last update time.&lt;/li&gt;
+&lt;li&gt;Operation column: Shows the corresponding operations for the disk.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Users can click the &lt;code&gt;Delete&lt;/code&gt; link to open the Delete Persistent Volume dialog box, which displays detailed information about the Persistent Volume and recommended adjustment schemes, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv3_huee2a4ef5fd2b1fcd4d17f5564833ef4e_81179_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;263&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Delete Persistent Volume Dialog Box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Application Optimization</title>
+      <link>/docs/cluster-optimizer/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/app/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the application details and optimization suggestions.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click on the &lt;code&gt;Application&lt;/code&gt; menu in the left menu bar of the platform to display the application page, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app1_hu0e8572a06a553eaf35c04e55defb382f_42248_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;368&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Application Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The application page is divided into 3 sections:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster Selection Area: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Query Area: You can query by namespace, load name, load type, container, and policy name. Currently, the platform supports resource recommendation, not set resource quota, and memory overflow policy.&lt;/li&gt;
+&lt;li&gt;List Area: Displays name, container, current settings, policy name, details, and action columns. The displayed information varies with different policy names.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After selecting a cluster in the cluster selection area, the platform defaults to aggregating the results of all policies and displays them in a list, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Application Page - Select Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;If the policy name is resource recommendation, the list area will appear as shown above. The list area is divided into 6 columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Name Column: Displays load name, namespace, and load type.&lt;/li&gt;
+&lt;li&gt;Container Column: Displays the container name.&lt;/li&gt;
+&lt;li&gt;Current Settings: Displays the CPU Request, CPU Limit, memory Request, and memory Limit for that container.&lt;/li&gt;
+&lt;li&gt;Policy Name: Displays the policy name.&lt;/li&gt;
+&lt;li&gt;Details: Displays the average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, recommended CPU Request value, recommended CPU Limit value, recommended memory Request value, recommended memory Limit value, and the latest update time.&lt;/li&gt;
+&lt;li&gt;Action Column: Displays the corresponding actions for the application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Users can click the &lt;code&gt;Adjust&lt;/code&gt; link to open the dialog box for adjusting resource quotas, which displays application details, recommended values, and corresponding adjustment statements, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app3_hu880b20b69e27095c3257d5800759b1ca_101268_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;354&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Resource Quotas Dialog Box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;If the policy name is not set resource quota, the list area will display as follows:&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Application Page - Select Not Set Resource Quota Policy
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The list area is divided into 6 columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Name Column: Displays load name, namespace, and load type.&lt;/li&gt;
+&lt;li&gt;Container Column: Displays the container name.&lt;/li&gt;
+&lt;li&gt;Current Settings: Displays whether the CPU Request, CPU Limit, memory Request, and memory Limit for that container have been set.&lt;/li&gt;
+&lt;li&gt;Policy Name: Displays the policy name.&lt;/li&gt;
+&lt;li&gt;Details: Displays the recommended CPU Request value, recommended CPU Limit value, recommended memory Request value, recommended memory Limit value, and the latest update time.&lt;/li&gt;
+&lt;li&gt;Action Column: Displays the corresponding actions for the application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Users can click the &lt;code&gt;Adjust&lt;/code&gt; link in the above image to open the dialog box for setting application resource quotas, which displays application details, recommended values, and corresponding adjustment statements, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Set Application Resource Quotas Dialog Box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;If the policy name is memory overflow, the list area will display as follows:&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Application Page - Select Memory Overflow Policy
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The list area is divided into 6 columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Name Column: Displays load name, namespace, and load type.&lt;/li&gt;
+&lt;li&gt;Container Column: Displays the container name.&lt;/li&gt;
+&lt;li&gt;Current Settings: Displays the memory Request and memory Limit for that container.&lt;/li&gt;
+&lt;li&gt;Policy Name: Displays the policy name.&lt;/li&gt;
+&lt;li&gt;Details: Displays the recent OOM time, recent OOM Pod, number of OOMs, and the latest update time.&lt;/li&gt;
+&lt;li&gt;Action Column: Displays the corresponding actions for the application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Users can click the adjust link to open the dialog box for adjusting application memory size, which displays application details, recommended memory limit values, and corresponding adjustment statements, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Application Memory Size Dialog Box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cluster Optimization Operations</title>
+      <link>/docs/cluster-optimizer/operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/operations/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the cluster optimization operations provided by the one-stop cloud-native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;The main cluster optimization operations include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adjusting node pools&lt;/li&gt;
+&lt;li&gt;Adjusting nodes&lt;/li&gt;
+&lt;li&gt;Adjusting disks&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(Note: The translation provided aims to capture the original text&amp;rsquo;s meaning while adhering to English language conventions and idioms.)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

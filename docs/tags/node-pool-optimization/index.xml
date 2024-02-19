@@ -1,0 +1,236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Node Pool Optimization</title>
+    <link>/tags/node-pool-optimization/</link>
+    <description>Recent content in Node Pool Optimization on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/node-pool-optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Cluster Overview</title>
+      <link>/docs/cluster-optimizer/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/overview/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;View the clusters connected in the platform.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click on &lt;code&gt;Clusters&lt;/code&gt; in the left menu bar of the platform to display the Cluster Overview page, as shown below. The main display area will show the list of clusters managed by the platform. This includes information such as cluster (cluster name and cluster ID), cluster region, Access Token name, cloud service provider, and Prometheus address.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/overview/overview_huc51d5935651b648a35188d358af3790b_63590_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;264&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Cluster Overview Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Node Pool Optimization</title>
+      <link>/docs/cluster-optimizer/nodegroup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/nodegroup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the cluster optimization operations provided by the one-stop cloud-native Cluster Optimizer platform.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click on the &lt;code&gt;Node Group&lt;/code&gt; menu in the left menu bar of the platform to display the Node Group page, as shown in Figure 39. The Node Group page is divided into three areas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster Selection Area: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Query Area: Filter list items based on node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;List Area: Displays information about the node groups, their current settings, and optimized settings.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;324&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node Group Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;After the user selects a cluster, the list area is displayed in four columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Node Group Column: Displays the node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;Current Settings Column: Displays the current instance type of the node group, whether it is automatically scaled, and the minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;Optimized Settings Column: Displays the instance type of the node group intelligently recommended by the platform, whether to start scaling is recommended, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;Operations Column: Displays the corresponding operations for the node group.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;320&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node Group Page - Cluster Selected
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;Clicking the &lt;code&gt;Adjust&lt;/code&gt; link in the figure above opens the Adjust Node Group dialog box, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 810px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_800x0_resize_catmullrom_3.png&#34; width=&#34;800&#34; height=&#34;410&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Node Group Dialog Box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Node Optimization</title>
+      <link>/docs/cluster-optimizer/node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/node/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes node-related information and optimization suggestions.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Click the &lt;code&gt;Nodes&lt;/code&gt; menu in the left menu bar of the platform to display the Nodes page, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node1_hucbd1b26c7c372bc6a3c143a2da6ffa06_32634_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;333&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Nodes Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The Nodes page is divided into three sections:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster Selection Area: Select the corresponding cluster.&lt;/li&gt;
+&lt;li&gt;Query Area: Filter list items by Node Group Name and Node Group ID.&lt;/li&gt;
+&lt;li&gt;List Area: Displays information about Node Groups, their current settings, and optimized settings.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Nodes page for selecting a cluster is shown below:
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node2_hu17fda8b599b1f8ac4ecabc25c3b623cd_82280_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;418&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Nodes Page - Select Cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The List Area display is divided into five columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Node Information Column: Displays the Node Name, Instance ID, and Region information.&lt;/li&gt;
+&lt;li&gt;Current Settings Column: Displays the instance type, CPU cores, and memory size of the node.&lt;/li&gt;
+&lt;li&gt;Policy Name Column: Displays the policy used for node optimization; currently, only the low utilization node strategy is supported.&lt;/li&gt;
+&lt;li&gt;Details Column: Displays information provided by the policy. For example, for the low utilization node strategy, it monitors the average utilization of CPU and memory and compares it with the threshold set by the platform to help users adjust the node instance type.&lt;/li&gt;
+&lt;li&gt;Actions Column: Displays corresponding actions for the node.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Clicking the &lt;code&gt;Adjust&lt;/code&gt; link opens the Adjust Nodes dialog box, which displays detailed adjustment information and recommended adjustment plans, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node3_huf100fcca64e7c4f80e6e88bb3833e1ea_91312_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;296&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Nodes Page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

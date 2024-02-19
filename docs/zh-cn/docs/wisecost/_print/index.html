@@ -1,0 +1,1769 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.121.2">
+<link rel="canonical" type="text/html" href="/zh-cn/docs/wisecost/">
+<link rel="alternate" type="application/rss&#43;xml" href="/zh-cn/docs/wisecost/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Wisecost：云原生成本管理和优化平台 | Wiseinf</title>
+<meta name="description" content="一站式云原生应用成本监控、管理和优化平台.
+">
+<meta property="og:title" content="Wisecost：云原生成本管理和优化平台" />
+<meta property="og:description" content="一站式云原生应用成本监控、管理和优化平台.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/zh-cn/docs/wisecost/" /><meta property="og:site_name" content="云智优本" />
+
+<meta itemprop="name" content="Wisecost：云原生成本管理和优化平台">
+<meta itemprop="description" content="一站式云原生应用成本监控、管理和优化平台.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Wisecost：云原生成本管理和优化平台"/>
+<meta name="twitter:description" content="一站式云原生应用成本监控、管理和优化平台.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" as="style">
+<link href="/scss/main.min.b9f908f9939278827beae3d5d8ede093dde52fd2c4bcdf7ba620a3d524d46875.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+<a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Wiseinf</span></a>
+<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+  <ul class="navbar-nav mt-2 mt-lg-0">
+    <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false"><span>产品</span></a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/zh-cn/products/cluster-optimizer"> Cluster Optimizer：云原生集群优化平台 </a>
+        <a class="dropdown-item" href="/zh-cn/products/wisecost"> Wisecost：云原生成本管理平台 </a>
+        <a class="dropdown-item" href="/zh-cn/products/ruyi"> Ruyi：云原生集群扩缩容引擎</a>
+      </div>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <a class="nav-link active" href="/zh-cn/docs/"><span class="active">文档</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <a class="nav-link" href="/zh-cn/pricing/"><span>价格</span></a>
+      </li>
+      
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <a class="nav-link" href="/zh-cn/services/"><span>服务</span></a>
+      </li>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	中文
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/docs/wisecost/">English</a>
+	
+</div></li>
+    </ul>
+</div>
+<div class="navbar-nav d-none d-lg-block">
+  
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/wisecost/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Wisecost：云原生成本管理和优化平台</h1>
+<div class="lead">一站式云原生应用成本监控、管理和优化平台.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-d1501d8c0fcaf4a0c0134a7c69ba635e">安装部署</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-f8724eef5ecfc709ba9ec953f1658ee2">导入阿里云集群</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-79c3c5401e75cd51b9d3c28865234518">查看集群成本</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-8aaf6cb4995450b6fc76e7ad887b0eb3">查看节点成本</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-aea197f3575cb0df1ded1df55290950c">查看应用成本</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-0d313d792f0ef08d3b1695b67d8bddea">成本优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-eb8dcf79b1b7f912ed56305be6f0297f">开发手册</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>7.1: <a href="#pg-7498afe225cc47a707df513f40a91ac6">API文档</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7.2: <a href="#pg-ac38a1975f478ccb8a2806eda6f684b8">API接口参考</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。</p>
+
+</div>
+
+<p>Wisecost能够帮助用户对云原生应用的成本监控、管理和优化，主要功能包括：</p>
+<ul>
+<li>评估集群整体成本以及分解成本。</li>
+<li>评估云原生应用的成本，提供按照名称空间、负载、部门、小组、应用环境等多个维度的成本分析。</li>
+<li>提供优化建议。</li>
+<li>评估集群和应用的健康性。</li>
+</ul>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d1501d8c0fcaf4a0c0134a7c69ba635e">1 - 安装部署</h1>
+    <div class="lead">描述了如何安装Wisecost的详细步骤.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件</h2>
+<ul>
+<li>Mysql数据库，版本5.7及以上</li>
+<li>kubernetes集群，版本1.20及以上</li>
+</ul>
+<h2 id="克隆安装脚本">克隆安装脚本</h2>
+<ol>
+<li>打开控制台，输入<code>git clone https://github.com/wiseinf/setup.git</code>,将安装脚本克隆到本地。
+我们提供了2个仓库地址，方便大家根据需求来克隆到本地。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>仓库</th>
+<th style="text-align:left">仓库地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Github</td>
+<td style="text-align:left"><a href="https://github.com/wiseinf/setup.git">https://github.com/wiseinf/setup.git</a></td>
+</tr>
+<tr>
+<td>Gitee</td>
+<td style="text-align:left"><a href="https://gitee.com/wiseinf/setup.git">https://gitee.com/wiseinf/setup.git</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>后续步骤都假设已将<code>setup</code>库克隆到用户主目录，若未克隆到用户主目录，则需要根据实际情况调整命令中的文件路径。</p>
+</blockquote>
+<h2 id="初始化数据库">初始化数据库</h2>
+<blockquote>
+<p>假设Mysql数据库主机地址为：<code>127.0.0.1</code>.</p>
+</blockquote>
+<ol>
+<li>
+<p>在控制台执行命令<code>mysql -h127.0.0.1 -uroot</code>，输入密码，登录mysql数据库。其中<code>127.0.0.1</code>为Mysql主机地址。</p>
+</li>
+<li>
+<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>storage</code>库和<code>wisecost</code>库，相应表后续由应用程序自动创建。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/wisecost/sql/create_database.sql
+</span></span></code></pre></div><blockquote>
+<p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>storage</code>库和<code>wisecost</code>库，则上述脚本会删除<code>storage</code>库和<code>wisecost</code>库后创建新库。</p>
+</blockquote>
+</li>
+<li>
+<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>wisecost</code>用户（默认密码为<code>Wisecost~</code>）并为其赋予<code>storage</code>库和<code>wisecost</code>库的完全访问权限。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/wisecost/sql/create_user.sql
+</span></span></code></pre></div></li>
+<li>
+<p>在控制台执行命令<code>mysql -h127.0.0.1 -uwisecost</code>，输入密码（默认密码为<code>Wisecost~</code>），登录mysql数据库。</p>
+</li>
+<li>
+<p>在<code>mysql&gt;</code>提示符下执行<code>show database</code>，确认<code>storage</code>库和<code>wisecost</code>库已经创建。可以通过<code>select</code>语句（例如<code>select * from storage.pv</code>）查询库中相应的数据表确认用户的权限是否正常。</p>
+</li>
+<li>
+<p>至此，数据库初始化完毕。</p>
+</li>
+</ol>
+<h2 id="部署应用">部署应用</h2>
+<ol>
+<li>通过 <code>kubectl apply -f ~/setup/wisecost/namespace.yaml</code>将如下文件应用到集群，创建名称空间<code>wiseinf-system</code>。
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Namespace</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>: 
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wiseinf-system</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wiseinf-system</span>
+    </span></span></code></pre></div>
+    
+</li>
+<li>根据Mysql的配置调整文件<code>~/setup/wisecost/wisecost.yaml</code>中的<strong>ConfigMap</strong><code>wisecost-conf</code>，将其配置项<code>optimize</code>和<code>kubestore</code>下的<code>dataSourceName: &quot;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true</code>中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</li>
+<li>通过 <code>kubectl apply -f ~/setup/wisecost/wisecost.yaml</code>将如下文件应用到集群，部署应用<strong>Wise Cost</strong>。
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-config</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">default.conf</span>: |-<span style="color:#e6db74">
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      server {
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        listen 80;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        location / {
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          root /usr/share/nginx/html/;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          include /etc/nginx/mime.types;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          try_files $uri $uri/ /index.html;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          location /api/ {
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            rewrite ^/api/(.*) /$1 break;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header Host $host;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-Real-IP $remote_addr;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-NginX-Proxy true;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_pass http://localhost:7070;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          }
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      }</span>      
+    </span></span><span style="display:flex;"><span>---
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-conf</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">wisecost.yaml</span>: |-<span style="color:#e6db74">
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    server:
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      port: 7070
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    optimize:
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      dataSourceName: &#34;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      maxOpenConns: 10
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    kubestore:
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      type: mysql
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      parameters:
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        dataSourceName: &#34;wisecost:Wisecost~@tcp(mysql:3306)/storage?charset=utf8mb4&amp;parseTime=true&#34;
+    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        maxOpenConns: 10</span>    
+    </span></span><span style="display:flex;"><span>
+    </span></span><span style="display:flex;"><span>---
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">revisionHistoryLimit</span>: <span style="color:#ae81ff">10</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">hostNetwork</span>: <span style="color:#66d9ef">true</span>
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">dnsPolicy</span>: <span style="color:#ae81ff">ClusterFirstWithHostNet</span>
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">securityContext</span>:
+    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">runAsUser</span>: <span style="color:#ae81ff">0</span>
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-ui</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wiseinf/wisecost-ui:701d19d</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">volumeMounts</span>:
+    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-config</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/etc/nginx/conf.d</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
+    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">requests</span>:
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">200m</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">500M</span>
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">limits</span>:
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">1000m</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">2G</span>
+    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wiseinf/wisecost:99e308e</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">command</span>:
+    </span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;/wiseinf/wisecost&#34;</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">volumeMounts</span>:
+    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-data-volume</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/data</span>
+    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-logs-volume</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/logs</span>
+    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-conf-volume</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/conf</span>
+    </span></span><span style="display:flex;"><span><span style="color:#75715e">#              subPath: wisecost.yml</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
+    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">7070</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">requests</span>:
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">200m</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">500M</span>
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">limits</span>:
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">1000m</span>
+    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">2G</span>
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">volumes</span>:
+    </span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Config for wisecost-ui</span>
+    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-config</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMap</span>:
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-config</span>
+    </span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Configs for wisecost</span>
+    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-data-volume</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">hostPath</span>:
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/wisecost/data</span>
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">DirectoryOrCreate</span>
+    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-logs-volume</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">hostPath</span>:
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/wisecost/logs</span>
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">DirectoryOrCreate</span>
+    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-conf-volume</span>
+    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMap</span>:
+    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wisecost-conf</span>
+    </span></span><span style="display:flex;"><span>---
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost-ui</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>:  <span style="color:#ae81ff">wisecost-ui-service</span>
+    </span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
+    </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">80</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">wisecost</span>
+    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">NodePort</span></span></span></code></pre></div>
+    
+
+<blockquote>
+<p>注意：</p>
+</blockquote>
+</li>
+<li>通过<code>kubectl port-forward svc/wisecost-ui-service 80:80</code></li>
+<li>访问URL<code>http://localhost</code>，即可看到Wise Cost首页。</li>
+<li>至此，应用<strong>Wise Cost</strong>部署完毕。</li>
+</ol>
+<h2 id="下一步导入集群">下一步：导入集群</h2>
+<p>下一步，您可以添加一个集群，查看其各项成本。详见导入集群<a href="/docs/wisecost/import-aliyun">导入阿里云集群</a></p>
+<h2 id="附录">附录</h2>
+<ul>
+<li>脚本<code>create_user.sql</code>
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> wisecost<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;Wisecost~&#39;</span>;
+    </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">storage</span>.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> wisecost<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span>;
+    </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">ON</span> wisecost.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> wisecost<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span>;</span></span></code></pre></div>
+    
+</li>
+<li>脚本<code>create_database.sql</code>
+
+    
+      
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+      
+      
+      
+    
+    
+    
+    
+    
+    
+      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Schema wisecost
+    </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>wisecost<span style="color:#f92672">`</span> ;
+    </span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>wisecost<span style="color:#f92672">`</span> ;
+    </span></span><span style="display:flex;"><span>
+    </span></span><span style="display:flex;"><span><span style="color:#75715e">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Schema storage
+    </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- ----------------------------------------------------------------------------
+    </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">storage</span><span style="color:#f92672">`</span> ;
+    </span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">storage</span><span style="color:#f92672">`</span> ;
+    </span></span></code></pre></div>
+    
+</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f8724eef5ecfc709ba9ec953f1658ee2">2 - 导入阿里云集群</h1>
+    <div class="lead">本节描述导入阿里云集群的详细步骤.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本节描述导入阿里云集群的详细步骤。</p>
+
+</div>
+
+<ol>
+<li>
+<p>完成Wisecost安装之后，登录系统，选择“概览”，可见<code>概览页面</code>，
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/import-aliyun/import-aliyun-01_hud8965e357a159a39d1a1f512c93ab966_99152_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+概览页面
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+<li>
+<p>在“导入阿里云集群-设置阿里云访问凭据页面”设置<code>Access Key</code>和<code>Access Key Secret</code>，<code>Access Key</code>和<code>Access Key Secret</code>可从阿里云获得，具体请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。设置完成<code>Access Key</code>和<code>Access Key Secret</code>后，点击下一步。系统完成验证<code>Access Key</code>和<code>Access Key Secret</code>的正确性后，进入“导入阿里云集群-Kubernetes集群及访问设置页面”。</p>
+</li>
+</ol>
+<blockquote>
+<p>在“导入阿里云集群-设置阿里云访问凭据页面”，也可以选择“使用已有凭据”，选择一个已经存在的凭据。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/import-aliyun/import-aliyun-02_hu586c8a1becbc05e284939f91daadb27a_113445_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+导入阿里云集群-设置阿里云访问凭据页面
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</blockquote>
+<ol start="3">
+<li>在“导入阿里云集群-Kubernetes集群及访问设置页面”，可以选择<code>托管集群</code>，也可以选择<code>自建集群</code>。下面以<code>自建集群</code>为例，说明相应的参数。完成参数设置后点击<code>下一步</code>，系统完成参数正确性验证后，进入“导入阿里云集群-设置Prometheus访问页面”</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集群地域</td>
+<td>集群地域指集群所部署的地域，务必正确制定地域，否则会导致集群无法访问。具体请参见<a href="https://help.aliyun.com/document_detail/40654.htm">地域和可用区</a></td>
+</tr>
+<tr>
+<td>集群ID</td>
+<td>唯一标识ID，用于唯一的标识一个集群</td>
+</tr>
+<tr>
+<td>集群名称</td>
+<td>集群名称</td>
+</tr>
+<tr>
+<td>描述</td>
+<td>集群相关描述</td>
+</tr>
+<tr>
+<td>Kubeconfig</td>
+<td>访问集群的Kubeconfig文件，需开通对于集群的只读访问权限。不正确的设置会导致无法访问集群或者获取集群中的对象出错。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/import-aliyun/import-aliyun-03_huc147e3acda1852672af64d72e460f678_213466_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+导入阿里云集群-Kubernetes集群及访问设置页面
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<ol start="4">
+<li>在“导入阿里云集群-设置Prometheus访问页面”，设置Prometheus访问地址。完成参数设置后点击<code>下一步</code>，进入<code>导入阿里云集群-导入页面</code>。</li>
+</ol>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/import-aliyun/import-aliyun-04_hu3a9e998635effd9d0941e230833f287d_99312_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+导入阿里云集群-设置Prometheus访问页面
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<ol start="5">
+<li>在<code>导入阿里云集群-导入页面</code>点击<code>导入</code>按钮，系统提交完信息后，显示<code>导入阿里云集群-导入成功页面</code>。至此，阿里云集群已经导入成功。</li>
+</ol>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/import-aliyun/import-aliyun-05_huc147e3acda1852672af64d72e460f678_178791_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+导入阿里云集群-导入成功页面
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<ol start="6">
+<li>返回“概览页”，可以在列表中看到已经导入的集群。</li>
+</ol>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/import-aliyun/import-aliyun-06_hud8965e357a159a39d1a1f512c93ab966_107599_900x414_fill_catmullrom_smart1_3.png" width="900" height="414">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+概览页-已导入阿里云集群
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<ol start="7">
+<li>在完成集群导入之后，可以进入“集群”和“成本”标签栏，查看该集群的总体整体以及相应的名称空间的成本。</li>
+</ol>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-79c3c5401e75cd51b9d3c28865234518">3 - 查看集群成本</h1>
+    <div class="lead">描述了如何查看和分析集群整体成本.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看集群成本及其各项指标含义。</p>
+
+</div>
+
+<h2 id="查看集群整体成本">查看集群整体成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cluster-cost/cluster-1_hu9386f43e6fffa22228347f34146fc35b_156504_900x0_resize_catmullrom_3.png" width="900" height="388">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+集群整体成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cluster-cost/cluster-2_hu8df7dfe3748412eed29420f91a32e85c_137781_900x0_resize_catmullrom_3.png" width="900" height="358">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+集群整体成本分解
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="查看单个集群成本">查看单个集群成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cluster-cost/cluster-3_hu41d2df885f0270c87d1ee7b4ec2c5e92_144315_900x0_resize_catmullrom_3.png" width="900" height="417">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+单个集群成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8aaf6cb4995450b6fc76e7ad887b0eb3">4 - 查看节点成本</h1>
+    <div class="lead">描述了如何查看和分析节点整体成本.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看节点成本及其各项指标含义。</p>
+
+</div>
+
+<h2 id="查看节点整体成本">查看节点整体成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/node-cost/node-1_hu75571daf753b1528af155b01a3a46732_216015_900x0_resize_catmullrom_3.png" width="900" height="387">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+节点整体成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/node-cost/node-2_hud14bc57c8e8b54563bbb85fde7d79e40_218471_900x0_resize_catmullrom_3.png" width="900" height="412">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+节点整体成本分解
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="查看单个节点成本">查看单个节点成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/node-cost/node-3_hu68f4c02bdee6f069f5706d794bd1b072_255353_900x0_resize_catmullrom_3.png" width="900" height="418">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+单节点成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aea197f3575cb0df1ded1df55290950c">5 - 查看应用成本</h1>
+    <div class="lead">描述如何查看和分析应用成本.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述如何查看和分析应用成本.</p>
+
+</div>
+
+<h2 id="查看名称空间成本">查看名称空间成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cost/namespace-1_hud84a5484e7411474683c506fc18d85bf_185074_900x0_resize_catmullrom_3.png" width="900" height="323">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+名称空间累计成本及利用率
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cost/namespace-2_hu0683868b0a89a61f2790babad8579e94_272727_900x0_resize_catmullrom_3.png" width="900" height="260">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+名称空间分时成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="查看产品成本">查看产品成本</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cost/product-1_hue482c5ef76f206dad3043c87478904a0_168742_900x0_resize_catmullrom_3.png" width="900" height="298">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+产品累计成本及利用率
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cost/product-2_hudcb30c2598ce67584624d0fbc71b184a_155549_900x0_resize_catmullrom_3.png" width="900" height="262">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+产品分时成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="自定义查询">自定义查询</h2>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/wisecost/cost/custom-1_hubb8eef4e201ee755282e6123f8f7c76d_282976_900x0_resize_catmullrom_3.png" width="900" height="456">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+名称空间分时成本
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0d313d792f0ef08d3b1695b67d8bddea">6 - 成本优化</h1>
+    <div class="lead">描述了基于Wisecost内置策略，优化成本的过程.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Wisecost提供了云原生应用成本监控、管理和优化能力。本文档描述了基于Wisecost内置策略，优化成本的过程.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-eb8dcf79b1b7f912ed56305be6f0297f">7 - 开发手册</h1>
+    <div class="lead">一站式云原生应用成本监控、管理和优化平台.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本部分包括Wisecost API相关接口使用说明。详细接口文档请参见：API URL</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-7498afe225cc47a707df513f40a91ac6">7.1 - API文档</h1>
+    <div class="lead">一站式云原生应用成本监控、管理和优化平台API文档。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本部分描述了Wisecsost API相关文档。</p>
+
+</div>
+
+<h2 id="概述">概述</h2>
+<p>Wisecost API主要为集群、节点和容器提供多维度的成本查询和成本分解查询。</p>
+<p>Wisecost API主要通过HTTP的方式进行方式。其API文档请参见链接： 用户可通过Swagger Editor/Codegen等工具生成客户端代码。</p>
+<p>详见导入集群<a href="/docs/wisecost/import-aliyun">导入阿里云集群</a></p>
+<p>API接口文档下载地址如下：<a href="/api/v1/openapi.json">Wisecost API接口</a></p>
+<h2 id="通用参数描述">通用参数描述</h2>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>说明</th>
+<th>默认值</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window</td>
+<td>查询窗口范围</td>
+<td>无</td>
+<td>1. 时间范围格式：主要用于描述绝对时间，例如2023-05-24T18%3A00%3A00%2B08%3A00%2C2023-05-25T00%3A00%3A00%2B08%3A00 <br>2. 时间表达式：1d, 1h，lastday，lastweek等</td>
+</tr>
+<tr>
+<td>align</td>
+<td>时间对齐，主要用于时间表达式，对当前时间进行截断，将截断后的时间作为当前时间进行时间表达式计算，当截断后的时间不变化时，其查询结果是不变化的。</td>
+<td>1m</td>
+<td>例如1h，1m</td>
+</tr>
+<tr>
+<td>step</td>
+<td>查询步长，此值必须小于或等于时间窗口范围</td>
+<td>查询窗口window的范围</td>
+<td>1d</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>Prometheus分辨率</td>
+<td>2m</td>
+<td>2m</td>
+</tr>
+<tr>
+<td>aggregate</td>
+<td>聚合参数，集群成本、节点成本和容器成本聚合参数取值不同</td>
+<td>无</td>
+<td>1. cluster: 按集群聚合。<br/>2. namespace: 按名称空间聚合<br/> 3. cluster,namespace: 按集群和名称空间进行聚合</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>过滤参数，集群成本、节点成本和容器成本过滤参数取值不同</td>
+<td>无</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>所有参数均采用URL编码。</p>
+<h2 id="集群成本api">集群成本API</h2>
+<h3 id="查询集群成本">查询集群成本</h3>
+<p>端点：/api/cluster</p>
+<h4 id="实例1查询集群test1过去1个小时的成本">实例1：查询集群<code>test1</code>过去1个小时的成本</h4>
+<p>请求：</p>
+<pre tabindex="0"><code>${HOST}/api/cluster/window=1h&amp;filter=cluster:test1`
+</code></pre><p>响应中包括查询所在时间窗口、CPU成本、内存、存储和网络的相应成本。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;test1&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-04T14:37:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-04T15:37:00Z&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-04T14:37:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-04T15:37:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">0.1022572407401936</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">0.0511286203700968</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">0.004876883689704125</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuLimitCost&#34;</span>: <span style="color:#ae81ff">0.09538461343964662</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.00024035371519684083</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuActualCost&#34;</span>: <span style="color:#ae81ff">0.00024035371519684083</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">1970868694.0327873</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">1970868694.0327873</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">0.029179973608599755</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryLimitCost&#34;</span>: <span style="color:#ae81ff">0.06358974229309775</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.0014381140729231169</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryActualCost&#34;</span>: <span style="color:#ae81ff">0.0014381140729231169</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageByteHours&#34;</span>: <span style="color:#ae81ff">12.501899906846337</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkUsage&#34;</span>: <span style="color:#ae81ff">0.0523391093881065</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.0026294713433894375</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkActualCost&#34;</span>: <span style="color:#ae81ff">0.0026294713433894375</span>,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h4 id="实例2查询集群2023年4月份的成本以1天为步长">实例2：查询集群2023年4月份的成本，以1天为步长</h4>
+<p>请求如下所示，其中， <code>window=2023-04-01T00%3A00%3A00%2B08%3A00%2C2023-04-30T23%3A59%3A59%2B08%3A00</code>是 <code>window=2023-04-01T00:00:00+08:00,2023-05-01T00:00:00+08:00</code>的URL编码，<code>step=1d</code>表示步长是1天。</p>
+<pre tabindex="0"><code>${HOST}/api/cluster?window=2023-04-01T00%3A00%3A00%2B08%3A00%2C2023-04-30T23%3A59%3A59%2B08%3A00&amp;step=1d
+</code></pre><p>响应中包括每天的成本。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">...</span>
+</span></span><span style="display:flex;"><span>     {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;test1&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-04-16T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-04-17T00:00:00+08:00&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-04-16T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-04-17T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">2.39842986589827</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">0.049967288872880634</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">0.114386652810405</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuLimitCost&#34;</span>: <span style="color:#ae81ff">2.289230722551519</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.0056374641515348455</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuActualCost&#34;</span>: <span style="color:#ae81ff">0.0056374641515348455</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">46971476835.98894</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">1957144868.1662054</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">0.6954428057947072</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryLimitCost&#34;</span>: <span style="color:#ae81ff">1.5261538150343459</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.034274399947769485</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryActualCost&#34;</span>: <span style="color:#ae81ff">0.034274399947769485</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageByteHours&#34;</span>: <span style="color:#ae81ff">296.0557048723639</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageLimitCost&#34;</span>: <span style="color:#ae81ff">0.38230305987834323</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageUsage&#34;</span>: <span style="color:#ae81ff">0.11789896027827546</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.005920212076830545</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageActualCost&#34;</span>: <span style="color:#ae81ff">0.005920212076830545</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkUsage&#34;</span>: <span style="color:#ae81ff">1.2561386253145561</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.0631073122413465</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkActualCost&#34;</span>: <span style="color:#ae81ff">0.0631073122413465</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;test1&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-04-17T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-04-18T00:00:00+08:00&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-04-17T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-04-18T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">2.4017858534989167</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">0.05003720528122743</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">0.11454670760040295</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuLimitCost&#34;</span>: <span style="color:#ae81ff">2.289230722551519</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.005645352337076829</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuActualCost&#34;</span>: <span style="color:#ae81ff">0.005645352337076829</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">46969022844.09973</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">1957042618.5041554</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">0.6954064728726917</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryLimitCost&#34;</span>: <span style="color:#ae81ff">1.5261538150343459</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.03427260930576406</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryActualCost&#34;</span>: <span style="color:#ae81ff">0.03427260930576406</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageByteHours&#34;</span>: <span style="color:#ae81ff">296.51888150455557</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageLimitCost&#34;</span>: <span style="color:#ae81ff">0.38230305987834323</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageUsage&#34;</span>: <span style="color:#ae81ff">0.11808341219884944</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.005929474198270796</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageActualCost&#34;</span>: <span style="color:#ae81ff">0.005929474198270796</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkUsage&#34;</span>: <span style="color:#ae81ff">1.2561386253145561</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.0631073122413465</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;networkActualCost&#34;</span>: <span style="color:#ae81ff">0.0631073122413465</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">...</span>
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="查询集群成本分解">查询集群成本分解</h3>
+<p>端点：/api/cluster/breakdown</p>
+<blockquote>
+<p>TBD</p>
+</blockquote>
+<h2 id="节点成本api">节点成本API</h2>
+<h3 id="查询节点成本">查询节点成本</h3>
+<p>示例：查询2023年5月21日的成本，同时以集群维度进行聚合</p>
+<p>查询请求如下，<code>aggregate=cluster</code>表示以集群的维度进行对成本进行聚合。</p>
+<pre tabindex="0"><code>${HOST}/api//node?window=2023-05-21T00%3A00%3A00%2B08%3A00%2C2023-05-22T00%3A00%3A00%2B08%3A00&amp;aggregate=cluster&amp;step=1d
+</code></pre><p>响应如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;test1&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-21T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-22T00:00:00+08:00&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-21T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-22T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">10191.999645820562</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">11.849338429255141</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">1398.9775682219886</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuLimitCost&#34;</span>: <span style="color:#ae81ff">15249.214211755743</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuDiscountedCost&#34;</span>: <span style="color:#ae81ff">381.60351525705556</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;cpuActualCost&#34;</span>: <span style="color:#ae81ff">28.957126887351876</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">75542324732065.4</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">3204178398788.0137</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">1112.9733948614235</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryLimitCost&#34;</span>: <span style="color:#ae81ff">3346.309071231689</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryDiscountedCost&#34;</span>: <span style="color:#ae81ff">319.71875931585464</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;memoryActualCost&#34;</span>: <span style="color:#ae81ff">30.702726624974325</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;gpuLimitCost&#34;</span>: <span style="color:#ae81ff">8510.219221802927</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageByteHours&#34;</span>: <span style="color:#ae81ff">325888.80723224004</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageLimitCost&#34;</span>: <span style="color:#ae81ff">930.4165497908426</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageUsage&#34;</span>: <span style="color:#ae81ff">260.05386312757275</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageDiscountedCost&#34;</span>: <span style="color:#ae81ff">5527.065766508991</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;storageActualCost&#34;</span>: <span style="color:#ae81ff">589.8840784941499</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="查询节点成本分解">查询节点成本分解</h3>
+<blockquote>
+<p>TBD</p>
+</blockquote>
+<h2 id="容器成本api">容器成本API</h2>
+<h3 id="查询容器成本">查询容器成本</h3>
+<p>端点：/api/cost</p>
+<h4 id="示例1查询过去1小时的容器成本">示例1：查询过去1小时的容器成本</h4>
+<p>请求如下：</p>
+<pre tabindex="0"><code>${HOST}/api/cost?window=1h
+</code></pre><p>响应如下，其中，<code>test1/kube-system/kube-state-metrics-678c95bd66-zpxhr/kube-state-metrics/d222ea5b968281735981465d393dc140fae2fa6c82bca4ce7b0551094542b6cc</code>为容器键，可唯一定位集群中的容器，其集群是<code>test1</code>，名称空间是<code>kube-system</code>，Pod是<code>kube-state-metrics-678c95bd66-zpxhr</code>，容器名为<code>kube-state-metrics</code>, 容器ID是<code>d222ea5b968281735981465d393dc140fae2fa6c82bca4ce7b0551094542b6cc</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {    
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;test1/kube-system/kube-state-metrics-678c95bd66-zpxhr/kube-state-metrics/d222ea5b968281735981465d393dc140fae2fa6c82bca4ce7b0551094542b6cc&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-21T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-22T00:00:00+08:00&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-21T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-22T00:00:00+08:00&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">0.0006655009861111111</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">0.0006655009861111111</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">0.00018150026893939394</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">30465849.806451615</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;memoryByteUsageAverage&#34;</span>: <span style="color:#ae81ff">30465849.806451615</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">0.0025794121526902724</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;networkTransferBytes&#34;</span>: <span style="color:#ae81ff">155958130.4459916</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;networkReceiveBytes&#34;</span>: <span style="color:#ae81ff">7025546.93011364</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;networkUsage&#34;</span>: <span style="color:#ae81ff">0.12143230242737027</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">]</span>
+</span></span></code></pre></div><h4 id="示例2查询过去1小时的成本并按名称空间聚合">示例2：查询过去1小时的成本并按名称空间聚合</h4>
+<p>请求如下，<code>aggregate=cluster,namespace</code>表示按照集群<code>cluster</code>和名称空间<code>namespace</code>两个维度聚合。</p>
+<pre tabindex="0"><code>${HOST}/api/cost?window=1h&amp;aggregate=cluster,namespace
+</code></pre><p>响应如下，以键值对形式表示，其中<code>test1/default</code>和<code>test1/wiseinf-system</code>为聚合后的集群和名称空间构成（例如，<code>test1/wiseinf-system</code>表示集群是<code>test1</code>，名称空间是<code>wiseinf-system</code>），其值中为查询时间窗口以及CPU、内存、存储、网络的成本。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;test1/default&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-16T03:12:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-17T03:12:00Z&#34;</span>
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-16T03:12:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-17T03:12:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">110.37890957267645</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">4.599121232194852</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">14.534367730634747</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuDiscountedCost&#34;</span>: <span style="color:#ae81ff">5.087019014821965</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">855736964377.1166</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">35655706849.04652</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">16.161382539369775</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryDiscountedCost&#34;</span>: <span style="color:#ae81ff">5.656134320229584</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageByteHours&#34;</span>: <span style="color:#ae81ff">71415669997.57649</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">2975652916.565687</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageUsage&#34;</span>: <span style="color:#ae81ff">0.03335223778525009</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.8787704581851865</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;networkTransferBytes&#34;</span>: <span style="color:#ae81ff">1719133463220.9966</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;networkReceiveBytes&#34;</span>: <span style="color:#ae81ff">5342028979687.877</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;networkUsage&#34;</span>: <span style="color:#ae81ff">1436.257368277605</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;test1/wiseinf-system&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;window&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-16T03:12:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-17T03:12:00Z&#34;</span>
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2023-05-16T03:12:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2023-05-17T03:12:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuCoreHours&#34;</span>: <span style="color:#ae81ff">0.473797171047238</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuCoreUsageAverage&#34;</span>: <span style="color:#ae81ff">0.01974154879363492</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuUsage&#34;</span>: <span style="color:#ae81ff">0.08657493662239153</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;cpuDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.030290465709544856</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryByteHours&#34;</span>: <span style="color:#ae81ff">74778025427.29366</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">3115751059.4705696</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryUsage&#34;</span>: <span style="color:#ae81ff">1.4158569605645943</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;memoryDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.4953997082063547</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageByteHours&#34;</span>: <span style="color:#ae81ff">1515201139.4631371</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageBytesUsageAverage&#34;</span>: <span style="color:#ae81ff">63133380.81096403</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageUsage&#34;</span>: <span style="color:#ae81ff">0.0011343806651708506</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;storageDiscountedCost&#34;</span>: <span style="color:#ae81ff">0.06193233856164118</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;networkTransferBytes&#34;</span>: <span style="color:#ae81ff">11732534100151.451</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;networkReceiveBytes&#34;</span>: <span style="color:#ae81ff">15567186905652.652</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;networkUsage&#34;</span>: <span style="color:#ae81ff">7666.392896312047</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ac38a1975f478ccb8a2806eda6f684b8">7.2 - API接口参考</h1>
+    <div class="lead">成本管理API接口参考。</div>
+	
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="SwaggerUI"
+  />
+  <title>Wisecost API接口</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: '/api/v1/openapi.json',
+      dom_id: '#swagger-ui',
+    });
+  };
+</script>
+</body>
+</html>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="帮助和支持" aria-label="帮助和支持">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="商务合作" aria-label="商务合作">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2024 北京云智优本科技有限公司 保留所有权利</small>
+        
+        <p><small class="ms-1"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023011485号</a></small>
+        <small class="ms-1"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank" rel="noopener">京公安网备11010802042031号</a></small></p>
+	
+		<p class="mt-2"><a href="/zh-cn/about/">关于我们</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+<script src="/local/cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="/local/stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.604e1b596f799449dffc6f056b597a5d8c1bfedb73f2844175ff85802887b69d.js" integrity="sha256-YE4bWW95lEnf/G8Fa1l6XYwb/ttz8oRBdf&#43;FgCiHtp0=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

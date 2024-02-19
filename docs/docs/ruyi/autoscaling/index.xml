@@ -1,9 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>云智优本 – 自动扩缩容</title>
+    <title>Wiseinf – Automatic Scaling</title>
     <link>/docs/ruyi/autoscaling/</link>
-    <description>Recent content in 自动扩缩容 on 云智优本</description>
+    <description>Recent content in Automatic Scaling on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/docs/ruyi/autoscaling/index.xml" rel="self" type="application/rss+xml" />
     

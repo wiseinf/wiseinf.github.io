@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Cluster autoscaling</title>
+    <link>/tags/cluster-autoscaling/</link>
+    <description>Recent content in Cluster autoscaling on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/cluster-autoscaling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Ruyi: Cloud native cluster autoscaling engine</title>
+      <link>/docs/ruyi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/ruyi/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi provides an automated and intelligent cloud-native cluster expansion and contraction engine.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Ruyi provides an automated and intelligent cloud-native cluster expansion and contraction engine. Its main functions include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Autoscaling: Provides automatic expansion and contraction based on Pod Request.&lt;/li&gt;
+&lt;li&gt;Virtual capacity: Use automated and intelligent technology to elastically scale node capacity to support scheduling as many Pods as possible.&lt;/li&gt;
+&lt;li&gt;Multi-cloud support: Supports AWS, Alibaba Cloud, and more cloud service providers are being integrated.&lt;/li&gt;
+&lt;li&gt;Monitoring management: Provide multi-dimensional monitoring indicator data.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
