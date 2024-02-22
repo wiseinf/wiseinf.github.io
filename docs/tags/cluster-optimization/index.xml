@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>Docs: Cluster Optimizer: A One-Stop Cloud-Native Cluster Optimization Platform</title>
+      <title>Docs: Cluster Optimizer: Cloud native cluster optimization platform</title>
       <link>/docs/cluster-optimizer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -64,15 +64,23 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;The one-stop cloud-native cluster optimization platform (Cluster Optimizer) provides capabilities for optimizing cloud-native clusters.&lt;/p&gt;
+&lt;p&gt;The cluster optimizer is a cloud native cluster optimization platform, provides capabilities for optimizing cloud native kubernetes clusters.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;Cluster Optimizer can assist users in optimizing their cloud-native clusters, with key features including:&lt;/p&gt;
+&lt;p&gt;Cluster optimizer can assist users in optimizing their cloud native kubernetes clusters, with key features including:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Providing a variety of optimization strategies, including recommendations for multiple dimensions such as node groups, nodes, disks, Persistent volumes, and applications.&lt;/li&gt;
+&lt;li&gt;Providing a variety of optimization strategies, including recommendations for node groups, nodes, disks, Persistent volumes, and applications.&lt;/li&gt;
 &lt;li&gt;Cloud account (credential) management and cluster management.&lt;/li&gt;
-&lt;li&gt;User management (not supported in the community edition).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also, it provides following features in business version:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated action on adjust nodes, reduce persistet volumes, and reduce application resource and so on.&lt;/li&gt;
+&lt;li&gt;Advanced optimization strategies with more intelligent models.&lt;/li&gt;
+&lt;li&gt;Alert.&lt;/li&gt;
+&lt;li&gt;Authentication and authorization.&lt;/li&gt;
+&lt;li&gt;High availibility.&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -90,14 +98,14 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;This page describes the detailed steps to install the one-stop cloud-native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+&lt;p&gt;This page describes steps to install cluster optimizer.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Mysql database, version 5.7 or higher&lt;/li&gt;
-&lt;li&gt;Kubernetes cluster, version 1.20 or higher&lt;/li&gt;
+&lt;li&gt;Kubernetes cluster, version 1.22 or higher&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;clone-installation-scripts&#34;&gt;Clone Installation Scripts&lt;/h2&gt;
 &lt;ol&gt;
@@ -399,7 +407,7 @@ We provide two repository addresses for you to clone to your local machine accor
 &lt;li&gt;At this point, the application &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; has been deployed.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;next-step-import-cluster&#34;&gt;Next Step: Import Cluster&lt;/h2&gt;
-&lt;p&gt;The next step is to add a cluster and view its various costs. See &lt;a href=&#34;/docs/clusteroptimizer/import-aliyun&#34;&gt;Import Aliyun Cluster&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;The next step is to import a cluster and view its various costs. See &lt;a href=&#34;/docs/clusteroptimizer/import-aws&#34;&gt;Import AWS Cluster&lt;/a&gt; or &lt;a href=&#34;/docs/clusteroptimizer/import-aliyun&#34;&gt;Import Aliyun Cluster&lt;/a&gt; for details.&lt;/p&gt;
 
       </description>
     </item>

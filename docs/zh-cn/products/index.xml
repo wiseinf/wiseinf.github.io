@@ -183,13 +183,13 @@
                 &lt;div class=&#34;mx-auto&#34;&gt;
 	&lt;p class=&#34;lead mt-5&#34;&gt;Wisecost可对云原生应用的成本进行管理、分析和优化，帮助企业管控数智化转型过程中的成本，避免浪费。&lt;/p&gt;
 	&lt;p class=&#34;lead mt-5&#34;&gt;&amp;nbsp;&lt;/p&gt;
-	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;http://optimizerdemo.wiseinf.com.cn/&#34;&gt;
+	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;http://costdemo.wiseinf.com.cn/&#34;&gt;
 		查看演示 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
 	&lt;/a&gt;
 	&lt;a class=&#34;btn btn-lg btn-primary mr-3 mb-4&#34; href=&#34;/zh-cn/contactus/&#34;&gt;
 		申请试用 &lt;i class=&#34;fas fa-arrow-alt-circle-right ml-2&#34;&gt;&lt;/i&gt;
 	&lt;/a&gt;
-	&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/zh-cn/docs/cluster-optimizer/&#34;&gt;
+	&lt;a class=&#34;btn btn-lg btn-secondary mr-3 mb-4&#34; href=&#34;/zh-cn/docs/wisecost/&#34;&gt;
 		查看文档 &lt;i class=&#34;fas fa-list ml-2 &#34;&gt;&lt;/i&gt;
 	&lt;/a&gt;
 &lt;/div&gt;

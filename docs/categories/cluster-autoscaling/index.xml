@@ -35,7 +35,7 @@
 &lt;li&gt;Autoscaling: Provides automatic expansion and contraction based on Pod Request.&lt;/li&gt;
 &lt;li&gt;Virtual capacity: Use automated and intelligent technology to elastically scale node capacity to support scheduling as many Pods as possible.&lt;/li&gt;
 &lt;li&gt;Multi-cloud support: Supports AWS, Alibaba Cloud, and more cloud service providers are being integrated.&lt;/li&gt;
-&lt;li&gt;Monitoring management: Provide multi-dimensional monitoring indicator data.&lt;/li&gt;
+&lt;li&gt;Monitoring management: Provide multi-dimensional monitoring its metrics.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

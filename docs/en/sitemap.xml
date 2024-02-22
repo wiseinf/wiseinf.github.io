@@ -606,18 +606,6 @@
                 href="/search/"
                 />
   </url><url>
-    <loc>/services/solutions/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/services/solutions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/services/solutions/"
-                />
-  </url><url>
     <loc>/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -654,18 +642,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/"
-                />
-  </url><url>
-    <loc>/services/consultations/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/services/consultations/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/services/consultations/"
                 />
   </url>
 </urlset>

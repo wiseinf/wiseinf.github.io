@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – Cluster Optimizer: A One-Stop Cloud-Native Cluster Optimization Platform</title>
+    <title>Wiseinf – Cluster Optimizer: Cloud native cluster optimization platform</title>
     <link>/docs/cluster-optimizer/</link>
-    <description>Recent content in Cluster Optimizer: A One-Stop Cloud-Native Cluster Optimization Platform on Wiseinf</description>
+    <description>Recent content in Cluster Optimizer: Cloud native cluster optimization platform on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
@@ -26,14 +26,14 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;This page describes the detailed steps to install the one-stop cloud-native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+&lt;p&gt;This page describes steps to install cluster optimizer.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Mysql database, version 5.7 or higher&lt;/li&gt;
-&lt;li&gt;Kubernetes cluster, version 1.20 or higher&lt;/li&gt;
+&lt;li&gt;Kubernetes cluster, version 1.22 or higher&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;clone-installation-scripts&#34;&gt;Clone Installation Scripts&lt;/h2&gt;
 &lt;ol&gt;
@@ -335,7 +335,7 @@ We provide two repository addresses for you to clone to your local machine accor
 &lt;li&gt;At this point, the application &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; has been deployed.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;next-step-import-cluster&#34;&gt;Next Step: Import Cluster&lt;/h2&gt;
-&lt;p&gt;The next step is to add a cluster and view its various costs. See &lt;a href=&#34;/docs/clusteroptimizer/import-aliyun&#34;&gt;Import Aliyun Cluster&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;The next step is to import a cluster and view its various costs. See &lt;a href=&#34;/docs/clusteroptimizer/import-aws&#34;&gt;Import AWS Cluster&lt;/a&gt; or &lt;a href=&#34;/docs/clusteroptimizer/import-aliyun&#34;&gt;Import Aliyun Cluster&lt;/a&gt; for details.&lt;/p&gt;
 
       </description>
     </item>

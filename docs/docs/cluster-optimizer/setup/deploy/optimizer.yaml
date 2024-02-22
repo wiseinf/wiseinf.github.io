@@ -40,11 +40,10 @@ data:
     server:
       port: 7070
     engine:
-      maxQueryDuration: 1h
+      maxQueryDuration: 2h
     storage:
-      type: mysql
-      parameters:
-        dataSourceName: "optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&parseTime=true&loc=Local"
+      dataSource:
+        name: "optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&parseTime=true&loc=Local"
         maxOpenConns: 10
     optimize:
       dataSource:
@@ -84,7 +83,7 @@ spec:
         runAsUser: 0
       containers:
         - name: optimizer-ui
-          image: wiseinf/cluster-optimizer-ui:1.0.0-preview
+          image: wiseinf/cluster-optimizer-ui:1.1.0-preview
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: optimizer-nginx-config
@@ -100,7 +99,7 @@ spec:
               cpu: 1000m
               memory: 1G
         - name: optimizer
-          image: wiseinf/optimizer:1.0.0-preview
+          image: wiseinf/optimizer:1.1.0-preview
           command:
             - "/wiseinf/optimizer"
             - "--features=APIServer"

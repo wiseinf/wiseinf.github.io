@@ -623,16 +623,6 @@
     <loc>/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/</loc>
   </url><url>
     <loc>/zh-cn/services/solutions/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/services/solutions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/services/solutions/"
-                />
   </url><url>
     <loc>/zh-cn/categories/%E6%89%A9%E7%BC%A9%E5%AE%B9/</loc>
   </url><url>
@@ -653,15 +643,5 @@
     <loc>/zh-cn/tags/%E5%BA%94%E7%94%A8%E4%BC%98%E5%8C%96/</loc>
   </url><url>
     <loc>/zh-cn/services/consultations/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/services/consultations/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/services/consultations/"
-                />
   </url>
 </urlset>
