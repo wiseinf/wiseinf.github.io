@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Installation and Deployment | Wiseinf</title>
-<meta name="description" content="This page describes steps to install cluster optimizer.
+<title>Setup | Wiseinf</title>
+<meta name="description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
 ">
-<meta property="og:title" content="Installation and Deployment" />
-<meta property="og:description" content="This page describes steps to install cluster optimizer.
+<meta property="og:title" content="Setup" />
+<meta property="og:description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/setup/" /><meta property="og:site_name" content="Wiseinf" />
 
-<meta itemprop="name" content="Installation and Deployment">
-<meta itemprop="description" content="This page describes steps to install cluster optimizer.
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Installation and Deployment"/>
-<meta name="twitter:description" content="This page describes steps to install cluster optimizer.
+<meta itemprop="name" content="Setup">
+<meta itemprop="description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Setup"/>
+<meta name="twitter:description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
 "/>
 
 
@@ -122,8 +122,8 @@ This is the multi-page printable view of this section.
 
 
 
-<h1 class="title">Installation and Deployment</h1>
-<div class="lead">This page describes steps to install cluster optimizer.</div>
+<h1 class="title">Setup</h1>
+<div class="lead">Instructions for installing the <strong>Cluster Optimizer</strong>  on Kubernetes.</div>
 
 
 
@@ -144,316 +144,88 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>This page describes steps to install cluster optimizer.</p>
+<p>Instructions for installing the <strong>Cluster Optimizer</strong>  on Kubernetes.</p>
 
 </div>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
-<li>Mysql database, version 5.7 or higher</li>
-<li>Kubernetes cluster, version 1.22 or higher</li>
+<li>Mysql database, version 5.7 and above</li>
+<li>kubernetes cluster, version 1.22 and above</li>
+<li>Git</li>
 </ul>
-<h2 id="clone-installation-scripts">Clone Installation Scripts</h2>
-<ol>
-<li>Open the console, enter <code>git clone https://github.com/wiseinf/setup.git</code>, and clone the installation scripts to your local machine.
-We provide two repository addresses for you to clone to your local machine according to your needs.</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Repository</th>
-<th style="text-align:left">Repository Address</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Github</td>
-<td style="text-align:left"><a href="https://github.com/wiseinf/setup.git">https://github.com/wiseinf/setup.git</a></td>
-</tr>
-<tr>
-<td>Gitee</td>
-<td style="text-align:left"><a href="https://gitee.com/wiseinf/setup.git">https://gitee.com/wiseinf/setup.git</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="clone-installation-script">Clone installation script</h2>
 <blockquote>
-<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it hasn&rsquo;t been cloned to the user&rsquo;s home directory, you need to adjust the file paths in the commands accordingly.</p>
-</blockquote>
-<h2 id="initialize-the-database">Initialize the Database</h2>
-<blockquote>
-<p>Assuming the Mysql database host address is: <code>127.0.0.1</code>.</p>
+<p>We assume the installation script library has been cloned into <code>setup</code> subdirectory of user&rsquo;s home directory.</p>
 </blockquote>
 <ol>
-<li>
-<p>In the console, execute the command <code>mysql -h127.0.0.1 -uroot</code>, enter the password, and log in to the mysql database. Where <code>127.0.0.1</code> is the Mysql host address.</p>
-</li>
-<li>
-<p>At the <code>mysql&gt;</code> prompt, execute the following command to create the <code>optimizer</code> database, and the corresponding tables will be automatically created by the application later.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_database.sql
-</span></span></code></pre></div><blockquote>
-<p>Note: Please pay attention to the risk of data loss. If the <code>optimizer</code> database already exists in mysql database, the above script will first delete the <code>optimizer</code> database and then create a new <code>optimizer</code> database.</p>
-</blockquote>
-</li>
-<li>
-<p>At the <code>mysql&gt;</code> prompt, execute the following command to create the <code>optimizer</code> user (default password is <code>Optimizer~</code>) and grant it full access permissions to the <code>optimizer</code> database.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+<li>Clone installation script into local using git:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    cd ~
+</span></span><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
 </span></span></code></pre></div></li>
-<li>
-<p>In the console, execute the command <code>mysql -h127.0.0.1 -uoptimizer</code>, enter the password (default password is <code>Optimizer~</code>), and log in to the mysql database.</p>
-</li>
-<li>
-<p>At the <code>mysql&gt;</code> prompt, execute <code>show database</code> to confirm that the <code>optimizer</code> database has been created. You can use <code>select</code> statements (e.g. <code>select * from storage.pv</code>) to query the corresponding data tables in the library to confirm whether the user&rsquo;s permissions are normal.</p>
-</li>
-<li>
-<p>At this point, the database initialization is complete.</p>
+<li>Navigate to the <code>setup</code> directory.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>   cd setup
+</span></span></code></pre></div>The installation directory contains:
+<ul>
+<li>SQL script in <code>clusteroptimizer/sql/</code></li>
+<li>Kubernetes YAML files in <code>clusteroptimizer/</code></li>
+</ul>
 </li>
 </ol>
-<h2 id="deploy-application">Deploy Application</h2>
-<ol>
-<li>Apply the following file to the cluster with <code>kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml</code>, creating the namespace <code>wiseinf-system</code>.
-
-    
-      
-    
-    
-    
-    
-    	
-    
-    
-    
-    
-    
-    
-      
-      
-      
-    
-    
-    
-    
-    
-    
-      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Namespace</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>: 
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span></code></pre></div>
-    
-</li>
-<li>Adjust the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/clusteroptimizer/optimizer.yaml</code> based on the configuration of Mysql, and set its configuration item <code>optimize</code> and <code>kubestore</code> under <code>dataSourceName: &quot;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;parseTime=true&amp;&amp;loc=Local</code> to the corresponding information of the Mysql database&rsquo;s username, user password, database address, and port.</li>
-<li>Apply the following file to the cluster with <code>kubectl apply -f ~/setup/clusteroptimizer/optimizer.yaml</code>, deploying the application <strong>Cluster Optimizer</strong>.
-
-    
-      
-    
-    
-    
-    
-    	
-    
-    
-    
-    
-    
-    
-      
-      
-      
-    
-    
-    
-    
-    
-    
-      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">default.conf</span>: |-<span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      server {
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        listen 80;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        location / {
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          root /usr/share/nginx/html/;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          include /etc/nginx/mime.types;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          try_files $uri $uri/ /index.html;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          location /api/ {
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            rewrite ^/api/(.*) /$1 break;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header Host $host;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-Real-IP $remote_addr;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-NginX-Proxy true;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_pass http://localhost:7070;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          }
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      }</span>      
-    </span></span><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">cluster-optimizer.yaml</span>: |-<span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    server:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      port: 7070
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    engine:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      maxQueryDuration: 1h
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    storage:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      type: mysql
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      parameters:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        dataSourceName: &#34;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;parseTime=true&amp;loc=Local&#34;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        maxOpenConns: 10
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    optimize:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      dataSource:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        name: &#34;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;parseTime=true&amp;loc=Local&#34;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        maxOpenConns: 10
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      strategyConfigs:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;OOM&#34;: 
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          enabled: true
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;Resource Recommendation&#34;:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          enabled: true
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;No Quota&#34;:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          enabled: true
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      enabled: true</span>    
-    </span></span><span style="display:flex;"><span>
-    </span></span><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">revisionHistoryLimit</span>: <span style="color:#ae81ff">10</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">group</span>: <span style="color:#ae81ff">wiseinf</span>
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">dnsPolicy</span>: <span style="color:#ae81ff">ClusterFirstWithHostNet</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">securityContext</span>:
-    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">runAsUser</span>: <span style="color:#ae81ff">0</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-ui</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wiseinf/cluster-optimizer-ui:1.0.0-preview</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">volumeMounts</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/etc/nginx/conf.d</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">requests</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">100m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">200M</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">limits</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">1000m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">1G</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wiseinf/optimizer:1.0.0-preview</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">command</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;/wiseinf/optimizer&#34;</span>
-    </span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;--features=APIServer&#34;</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">volumeMounts</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-data-volume</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/data</span>
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-logs-volume</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/logs</span>
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf-volume</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/conf</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">7070</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">requests</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">100m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">200M</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">limits</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">1000m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">1G</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">volumes</span>:
-    </span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Config for optimizer-ui</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMap</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Configs for optimizer</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-data-volume</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">hostPath</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/optimizer/data</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">DirectoryOrCreate</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-logs-volume</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">hostPath</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/optimizer/logs</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">DirectoryOrCreate</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf-volume</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMap</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf</span>
-    </span></span><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>:  <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
-    </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">nodePort</span>: <span style="color:#ae81ff">30000</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">80</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">NodePort</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># ---</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># apiVersion: networking.k8s.io/v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># kind: Ingress</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># metadata:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#   name: optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#   namespace: wiseinf-system</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># spec:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#   rules:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#     - host: optimizer.{your domain name}</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#       http:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#         paths:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#           - backend:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#               service:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#                 name: optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#                 port:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#                   number: 80</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#             path: /</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#             pathType: ImplementationSpecific</span></span></span></code></pre></div>
-    
-
+<h2 id="setup-optimizer-database">Setup <code>optimizer</code> database</h2>
 <blockquote>
-<p>Note:</p>
+<p>Assume the Mysql database host address is: <code>127.0.0.1</code>.</p>
+</blockquote>
+<ol>
+<li>Login into mysql database using:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
+</span></span></code></pre></div></li>
+<li>Create <code>optimizer</code> database and its user <code>optimizer</code> with default password <code>Optimizer~</code> :
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_database.sql
+</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+</span></span></code></pre></div><blockquote>
+<p>Note: Please be aware of the risk of data loss. The script will drop <code>optimizer</code> database/schema first and then create a new <code>optimizer</code>. If you already have an <code>optimizer</code> database, your data in this database will be lost.</p>
 </blockquote>
 </li>
-<li>Access URL <code>http://localhost</code> via <code>kubectl port-forward svc/optimizer 80:80</code>, and you can see the Cluster Optimizer homepage.</li>
-<li>At this point, the application <strong>Cluster Optimizer</strong> has been deployed.</li>
+<li>Check if <code>optimizer</code> database is created using:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uoptimizer 
+</span></span><span style="display:flex;"><span>    mysql&gt; show databases;
+</span></span></code></pre></div>When propmted to input password, you can use the default password <code>Optimizer~</code>.</li>
+<li>Check permission by create a <code>test</code> table:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; USE optimizer;
+</span></span><span style="display:flex;"><span>    mysql&gt; CREATE TABLE test <span style="color:#f92672">(</span>id int<span style="color:#f92672">)</span>;
+</span></span></code></pre></div>If the table is created successfully, the permission is granted.</li>
+<li>Congratulations! You have successfully setup <code>optimizer</code> database.</li>
 </ol>
-<h2 id="next-step-import-cluster">Next Step: Import Cluster</h2>
-<p>The next step is to import a cluster and view its various costs. See <a href="/docs/clusteroptimizer/import-aws">Import AWS Cluster</a> or <a href="/docs/clusteroptimizer/import-aliyun">Import Aliyun Cluster</a> for details.</p>
+<h2 id="setup-deployment-cluster-optimizer">Setup deployment <strong>Cluster Optimizer</strong></h2>
+<ol>
+<li>Create namespace <code>wiseinf-system</code> using:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+</span></span></code></pre></div></li>
+<li>Create deployment <code>optimizer</code> using:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+</span></span></code></pre></div><blockquote>
+<p>NOTE: you should adjust the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/clusteroptimizer/optimizer.yaml</code>, change the value of <code>storage.dataSource.name</code> and <code>optimize.dataSource.name</code> according to your <code>optimizer</code> database&rsquo;s information.</p>
+</blockquote>
+</li>
+<li>Check if <code>optimizer</code> is running:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
+</span></span></code></pre></div>You can get:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    NAME                         READY   STATUS    RESTARTS   AGE
+</span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6   2/2     Running   <span style="color:#ae81ff">0</span>          1m
+</span></span></code></pre></div></li>
+<li>Create a <strong>port-forward</strong> to access <code>optimizer</code> service:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 80:80
+</span></span></code></pre></div></li>
+<li>Open your browser and visit url <code>http://localhost/</code>.</li>
+<li>If you can see the home page of <strong>Cluster Optimizer</strong>, you have successfully setup <code>optimizer</code>.</li>
+</ol>
+<h2 id="next-import-a-cluster">Next: Import a cluster</h2>
+<p>Next, you can import a cluster and view its optimization recommendations. For details, please visit following links:</p>
+<ul>
+<li><a href="/docs/cluster-optimizer/import-aws">Import Cluster from AWS</a></li>
+<li><a href="/docs/cluster-optimizer/import-aliyun">Import Cluster from Alibaba Cloud</a></li>
+</ul>
 
 </div>
 </div>

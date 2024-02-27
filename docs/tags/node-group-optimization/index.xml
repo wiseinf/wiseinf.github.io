@@ -1,0 +1,113 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiseinf – Node Group Optimization</title>
+    <link>/tags/node-group-optimization/</link>
+    <description>Recent content in Node Group Optimization on Wiseinf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/node-group-optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Node Group Optimization</title>
+      <link>/docs/cluster-optimizer/nodegroup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cluster-optimizer/nodegroup/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Provides recommended settings and actions for node group.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-node-group-recommended-settings&#34;&gt;View node group recommended settings&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Node Groups&lt;/code&gt; menu on the left menu bar to display the node group page, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng1_hu57170a98ebe6ce10f665738af21b1dfa_69789_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;260&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node group
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The node group page is divided into 3 areas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Cluster selection area&lt;/strong&gt;: Used for select a cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Query area&lt;/strong&gt;: Used for filtering node group by node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays node group information, its current settings and optimization settings.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After select a cluster, the list area will display node groups of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategy, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng2_hud5e03c5a36581ec1547108675dd87a38_101790_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;268&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node group: cluster selected
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;The list area is divided into four columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Node group column&lt;/strong&gt;: Displays the node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current settings column&lt;/strong&gt;: Displays node group&amp;rsquo;s current settings, includes current instance type of the node group, whether autoscaling is enabled, the minimum number of nodes, and the maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization settings column&lt;/strong&gt;: Displays recommended settings for node group, includess the recommended node group instance types, whether autoscaling is enabled,, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: Displays the corresponding operations on the node group.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust node group&lt;/h2&gt;
+&lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; in action colum above, it will open the &lt;code&gt;Adjust Node Group&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 810px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_800x0_resize_catmullrom_3.png&#34; width=&#34;800&#34; height=&#34;419&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Adjust Node Group Dialog
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Currently, it only shows tips on adjusting node group. In the future, we will provide automatic action on it which can adjust node group&amp;rsquo;s settings automatically according to settting provided.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

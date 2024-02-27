@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Monitoring | Wiseinf</title>
-<meta name="description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
+<meta name="description" content="Describes Ruyi: monitoring mechanism related to cloud native scaling engine
 ">
 <meta property="og:title" content="Monitoring" />
-<meta property="og:description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
+<meta property="og:description" content="Describes Ruyi: monitoring mechanism related to cloud native scaling engine
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/ruyi/monitoring/" /><meta property="og:site_name" content="Wiseinf" />
 
 <meta itemprop="name" content="Monitoring">
-<meta itemprop="description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
+<meta itemprop="description" content="Describes Ruyi: monitoring mechanism related to cloud native scaling engine
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Monitoring"/>
-<meta name="twitter:description" content="Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine
+<meta name="twitter:description" content="Describes Ruyi: monitoring mechanism related to cloud native scaling engine
 "/>
 
 
@@ -123,7 +123,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Monitoring</h1>
-<div class="lead">Describes the monitoring mechanism related to Ruyi: Cloud-Native Scaling Engine</div>
+<div class="lead">Describes Ruyi: monitoring mechanism related to cloud native scaling engine</div>
 
 
 
@@ -144,18 +144,18 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Monitoring of Ruyi: Cloud-Native Cluster Scaling Engine.</p>
+<p>Ruyi: Cloud native cluster expansion and contraction engine monitoring.</p>
 
 </div>
 
 <h2 id="monitoring">Monitoring</h2>
-<p>The cloud-native scaling engine provides a series of monitoring metrics, supporting monitoring through Prometheus/Thanos.</p>
-<h3 id="auto-scaling-metrics">Auto-Scaling Metrics</h3>
+<p>The cloud native expansion and contraction engine provides a series of monitoring indicators and supports monitoring through Prometheus/Thanos.</p>
+<h3 id="metrics">Metrics</h3>
 <table>
 <thead>
 <tr>
-<th>Metric Name</th>
-<th>Tags</th>
+<th>Metrics Name</th>
+<th>Label</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -163,51 +163,51 @@ This is the multi-page printable view of this section.
 <tr>
 <td>ruyi_autoscaling_run_count</td>
 <td>None</td>
-<td>Number of auto-scaling runs</td>
+<td>Number of automatic scaling runs</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_nodes</td>
-<td>nodegroup: Node group name<br/>type: Node type</td>
-<td>Number of nodes of each type in the node group</td>
+<td>nodegroup: node group name<br/>type: node type</td>
+<td>number of nodes of each type in the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_pods</td>
-<td>nodegroup: Node group name</td>
-<td>Number of Pods of each type in the node group</td>
+<td>nodegroup: node group name</td>
+<td>number of pods of each type in the node group</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_request</td>
-<td>nodegroup: Node group name<br/>resource: Resource type</td>
-<td>Request volume of the node group</td>
+<td>nodegroup: node group name<br/> resource: resource type</td>
+<td>node group request volume</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_capacity</td>
-<td>nodegroup: Node group name<br/>resource: Resource type</td>
-<td>Capacity of the node group</td>
+<td>nodegroup: node group name<br/> resource: resource type</td>
+<td>node group capacity</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_percent</td>
-<td>nodegroup: Node group name<br/>resource: Resource type</td>
-<td>Percentage of request volume of the node group</td>
+<td>nodegroup: node group name<br/> resource: resource type</td>
+<td>node group request percentage</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_scale_delta</td>
-<td>nodegroup: Node group name</td>
-<td>Node adjustment amount of the node group</td>
+<td>nodegroup: node group name</td>
+<td>node group node adjustment amount</td>
 </tr>
 <tr>
 <td>ruyi_nodegroup_size</td>
-<td>nodegroup: Node group name<br/>id: Node group ID<br/>cloud_provider: Cloud provider<br/>type: Type</td>
-<td>Size of the node group</td>
+<td>nodegroup: node group name<br/> id: node group ID <br/> cloud_provider: cloud service provider <br/> type: type</td>
+<td>node group size</td>
 </tr>
 </tbody>
 </table>
-<h3 id="virtual-capacity-metrics">Virtual Capacity Metrics</h3>
+<h3 id="virtual-capacity-indicator">Virtual capacity indicator</h3>
 <table>
 <thead>
 <tr>
-<th>Metric Name</th>
-<th>Tags</th>
+<th>Indicator name</th>
+<th>Label</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -219,22 +219,22 @@ This is the multi-page printable view of this section.
 </tr>
 <tr>
 <td>ruyi_node_request_sum</td>
-<td>node: Node name<br/>id: Node group ID<br/>nodegroup: Node group name<br/>resource: Resource type</td>
-<td>Node request volume</td>
+<td>node: node name<br/> id: node group ID <br/> nodegroup: node group name<br/> resource: resource type</td>
+<td>node request volume</td>
 </tr>
 <tr>
 <td>ruyi_node_allocatable</td>
-<td>node: Node name<br/>id: Node group ID<br/>nodegroup: Node group name<br/>resource: Resource type</td>
-<td>Allocatable of node virtual capacity</td>
+<td>node: node name<br/> id: node group ID <br/> nodegroup: node group name<br/> resource: resource type</td>
+<td>node virtual capacity Allocatable</td>
 </tr>
 <tr>
 <td>ruyi_virtual_capacity_ratio</td>
-<td>node: Node name<br/>id: Node group ID<br/>nodegroup: Node group name<br/>type: Type</td>
-<td>Virtual capacity ratio</td>
+<td>node: node name<br/> id: node group ID <br/> nodegroup: node group name<br/> type: type</td>
+<td>virtual capacity ratio</td>
 </tr>
 </tbody>
 </table>
-<p>Additionally, users can also view the actual changes in virtual capacity through the Kubernetes metric <code>kube_node_status_allocatable</code>.</p>
+<p>In addition, users can also view changes in actual virtual capacity through the Kubernetes indicator <code>kube_node_status_allocatable</code>.</p>
 
 </div>
 </div>

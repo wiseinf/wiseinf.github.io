@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>导入AWS EKS集群 | Wiseinf</title>
-<meta name="description" content="本节描述导入AWS EKS集群的详细步骤.
+<meta name="description" content="描述导入AWS EKS集群的详细步骤.
 ">
 <meta property="og:title" content="导入AWS EKS集群" />
-<meta property="og:description" content="本节描述导入AWS EKS集群的详细步骤.
+<meta property="og:description" content="描述导入AWS EKS集群的详细步骤.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/zh-cn/docs/cluster-optimizer/import-aws/" /><meta property="og:site_name" content="云智优本" />
 
 <meta itemprop="name" content="导入AWS EKS集群">
-<meta itemprop="description" content="本节描述导入AWS EKS集群的详细步骤.
+<meta itemprop="description" content="描述导入AWS EKS集群的详细步骤.
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="导入AWS EKS集群"/>
-<meta name="twitter:description" content="本节描述导入AWS EKS集群的详细步骤.
+<meta name="twitter:description" content="描述导入AWS EKS集群的详细步骤.
 "/>
 
 
@@ -130,14 +130,14 @@ if (!doNotTrack) {
   <a href="/zh-cn/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-zh-cndocs"><span class="">文档</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-zh-cndocscluster-optimizer-li">
-  <a href="/zh-cn/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizer"><span class="">Cluster Optimizer：一站式云原生集群优化平台</span></a>
+  <a href="/zh-cn/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizer"><span class="">Cluster Optimizer</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizersetup-li">
-  <a href="/zh-cn/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizersetup"><span class="">安装部署</span></a>
+  <a href="/zh-cn/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizersetup"><span class="">安装</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-zh-cndocscluster-optimizerimport-aws-li">
   <a href="/zh-cn/docs/cluster-optimizer/import-aws/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizerimport-aws"><span class="td-sidebar-nav-active-item">导入AWS EKS集群</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizerimport-aliyun-li">
-  <a href="/zh-cn/docs/cluster-optimizer/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizerimport-aliyun"><span class="">导入阿里云集群</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizerimport-alibaba-li">
+  <a href="/zh-cn/docs/cluster-optimizer/import-alibaba/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizerimport-alibaba"><span class="">导入阿里云集群</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizeroverview-li">
   <a href="/zh-cn/docs/cluster-optimizer/overview/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizeroverview"><span class="">集群概览</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizernodegroup-li">
@@ -234,6 +234,13 @@ if (!doNotTrack) {
         <nav id="TableOfContents">
   <ul>
     <li><a href="#前置条件">前置条件</a></li>
+    <li><a href="#导入-kuberentes-集群">导入 Kuberentes 集群</a>
+      <ul>
+        <li><a href="#添加云账号">添加云账号</a></li>
+        <li><a href="#导入集群">导入集群</a></li>
+      </ul>
+    </li>
+    <li><a href="#下一步">下一步</a></li>
   </ul>
 </nav>
       </div>
@@ -329,7 +336,7 @@ if (!doNotTrack) {
     <a href="/zh-cn/docs/">文档</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="/zh-cn/docs/cluster-optimizer/">Cluster Optimizer：一站式云原生集群优化平台</a>
+    <a href="/zh-cn/docs/cluster-optimizer/">Cluster Optimizer</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
     <a href="/zh-cn/docs/cluster-optimizer/import-aws/" aria-disabled="true" class="btn-link disabled">导入AWS EKS集群</a>
@@ -339,7 +346,7 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>导入AWS EKS集群</h1>
-  <div class="lead">本节描述导入AWS EKS集群的详细步骤.</div>
+  <div class="lead">描述导入AWS EKS集群的详细步骤.</div>
 	<header class="article-meta">
 		
 
@@ -412,7 +419,12 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>	]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ol start="2">
-<li>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</li>
+<li>
+<p>一个Kubernetes集群，版本1.22及以上，推荐使用EKS集群.</p>
+</li>
+<li>
+<p>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</p>
+</li>
 </ol>
 <pre tabindex="0"><code>apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -462,14 +474,280 @@ rules:
       - get
       - list
       - watch
-</code></pre><ol start="3">
+</code></pre><ol start="4">
 <li>
-<p>集群所对应的Prometheus/Thanos 地址，平台使用监控数据计算并提供操作建议。</p>
+<p>集群所对应的Prometheus/Thanos地址。</p>
 </li>
 <li>
-<p>应用需要有EKS集群和Prometheus/Thanos的访问权限。</p>
+<p>应用需要能够访问EKS集群和Prometheus/Thanos。</p>
 </li>
 </ol>
+<h2 id="导入-kuberentes-集群">导入 Kuberentes 集群</h2>
+<h3 id="添加云账号">添加云账号</h3>
+<ol>
+<li>
+<p>从<code>设置 --&gt; 云账号</code>进入云账号管理页面，如下图。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png" width="900" height="346">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+   云账户管理
+   <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+<li>
+<p>单击<code>新增</code>按钮添加云帐户。 可以输入<code>名称</code>，选择<code>Amazon AWS</code>作为<code>云提供商</code>，然后输入<code>Access Key</code>和<code>Access Key Secret</code>，最后单击<code>确认</code>。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png" width="500" height="350">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+   添加云账号
+   <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+</ol>
+<blockquote>
+<p>输入<code>Access Key</code>和<code>Access Key Secret</code>后，您还可以通过单击底部<code>测试连通性</code>按钮来测试访问凭据是否能够正常连接到云提供商。</p>
+</blockquote>
+<h3 id="导入集群">导入集群</h3>
+<ol>
+<li>
+<p>从<code>Settings --&gt; Clusters</code>进入集群管理页面，如下图。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png" width="900" height="345">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     集群管理
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+</li>
+<li>
+<p>单击<code>导入集群</code>按钮，然后单击<code>AWS</code>云提供商徽标以开始从AWS导入集群。 它包含五个步骤：</p>
+<ol>
+<li>连接AWS</li>
+<li>连接kubernetes</li>
+<li>连接Metrics Server</li>
+<li>查看配置</li>
+<li>完成</li>
+</ol>
+</li>
+<li>
+<p>在<code>连接AWS</code>步骤中，选择<code>使用已有凭据</code>，选择<code>添加云帐户</code>部分中创建的云帐户，如下图。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_600x0_resize_catmullrom_3.png" width="600" height="184">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    导入集群：连接到 AWS
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>然后单击<code>下一步</code>按钮转到<code>连接kubernetes</code>步骤。</p>
+</li>
+<li>
+<p>在<code>连接kubernetes</code>步骤中，选择<code>Managed cluster</code>，如下图。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_600x0_resize_catmullrom_3.png" width="600" height="402">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：连接kubernetes集群
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+先选择<code>地域</code>，然后选择<code>集群</code>，然后输入以下字段：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>描述</code></td>
+<td style="text-align:left">集群描述</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>使用私有API Server私有地址</code></td>
+<td style="text-align:left">是否使用私有API Server地址。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Kubeconfig</code></td>
+<td style="text-align:left">连接到集群的Kubeconfig。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>自动刷新Kubeconfig</code></td>
+<td style="text-align:left">是否自动刷新kubeconfig。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>节点组标签</code></td>
+<td style="text-align:left">用于标识节点所属的节点组。 对于EKS，默认值为<code>eks.amazonaws.com/nodegroup</code>。</td>
+</tr>
+</tbody>
+</table>
+<p>然后单击<code>下一步</code>按钮转到<code>连接Metrics服务</code>步骤。</p>
+</li>
+<li>
+<p>在<code>连接Metrics服务</code>步骤中，输入以下字段，如下所示。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>是否Thanos</code></td>
+<td style="text-align:left">若Metrics Server是 Thanos，则应选中此项。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Metrics服务地址</code></td>
+<td style="text-align:left">Metrics服务器地址，目前支持Prometheus和Thanos。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>限制访问速率</code></td>
+<td style="text-align:left">是否取用到Metrics服务地址的访问速率限制。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>最大并发数</code></td>
+<td style="text-align:left">指定访问Metrics服务地址的最大并发数。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>集群标签</code></td>
+<td style="text-align:left">用作标签名称，用于从Metrics服务过滤集群的指标。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>集群标签值</code></td>
+<td style="text-align:left">用作标签值，用于从Metrics服务过滤集群的指标。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_600x0_resize_catmullrom_3.png" width="600" height="298">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：连接Metrics服务
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>然后单击<code>下一步</code>按钮转到<code>查看配置</code>步骤。</p>
+</li>
+<li>
+<p>在<code>查看配置</code>步骤中，显示连接AWS、连接Kubernetes、连接Metrics服务的配置。您可以检查配置是否符合预期。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_600x0_resize_catmullrom_3.png" width="600" height="400">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：查看配置
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+确认这些配置后，您可以单击<code>导入</code>按钮转到<code>完成</code>步骤。</p>
+</li>
+<li>
+<p>在<code>完成</code>步骤中，会显示提交状态，如下图。 当提交状态显示集群已导入时，您可以点击<code>完成</code>按钮。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_600x0_resize_catmullrom_3.png" width="600" height="399">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：完成
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+</li>
+</ol>
+<h2 id="下一步">下一步</h2>
+<p>导入集群后，您可以查看集群多个方面的优化建议，包括：</p>
+<ul>
+<li><a href="/docs/clusteroptimizer/nodegroup">节点组</a></li>
+<li><a href="/docs/clusteroptimizer/node">节点</a></li>
+<li><a href="/docs/clusteroptimizer/disk">磁盘</a></li>
+<li><a href="/docs/clusteroptimizer/pv">持久卷</a></li>
+<li><a href="/docs/clusteroptimizer/application">应用程序</a></li>
+</ul>
 
         <div class="section-index">
     

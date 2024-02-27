@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Persistent Volume优化 | Wiseinf</title>
-<meta name="description" content="描述了节点池优化提供了信息及操作建议。
+<meta name="description" content="描述Persistent Volume相关信息及优化建议。
 ">
 <meta property="og:title" content="Persistent Volume优化" />
-<meta property="og:description" content="描述了节点池优化提供了信息及操作建议。
+<meta property="og:description" content="描述Persistent Volume相关信息及优化建议。
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/zh-cn/docs/cluster-optimizer/pv/" /><meta property="og:site_name" content="云智优本" />
 
 <meta itemprop="name" content="Persistent Volume优化">
-<meta itemprop="description" content="描述了节点池优化提供了信息及操作建议。
+<meta itemprop="description" content="描述Persistent Volume相关信息及优化建议。
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Persistent Volume优化"/>
-<meta name="twitter:description" content="描述了节点池优化提供了信息及操作建议。
+<meta name="twitter:description" content="描述Persistent Volume相关信息及优化建议。
 "/>
 
 
@@ -123,7 +123,7 @@ if (!doNotTrack) {
 
 
 <h1 class="title">Persistent Volume优化</h1>
-<div class="lead">描述了节点池优化提供了信息及操作建议。</div>
+<div class="lead">描述Persistent Volume相关信息及优化建议。</div>
 
 
 
@@ -144,10 +144,11 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>描述了一站式云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</p>
+<p>描述了Persistent Volume相关信息及优化建议。</p>
 
 </div>
 
+<h2 id="查看persistent-volume">查看Persistent Volume</h2>
 <p>点击平台左侧菜单栏的<code>Persistent Volume</code>菜单，则显示Persistent Volume页，如下图所示。</p>
 
 
@@ -201,7 +202,8 @@ Persistent Volume页-选择集群
 <li>最近更新时间栏：展示最后更新时间。</li>
 <li>操作栏：展示对磁盘相应的操作。</li>
 </ol>
-<p>用户点击<code>删除</code>链接可打开删除Persistent Volume对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，如下图所示。</p>
+<h2 id="删除persistent-volume">删除Persistent Volume</h2>
+<p>选择策略名称栏是<code>未使用PV</code>的行，点击该行操作栏中的<code>删除</code>链接可打开<code>删除Persistent Volume</code>对话框，其中展示了Persistent Volume详细信息和推荐方案，如下图。</p>
 
 
 
@@ -215,6 +217,26 @@ Persistent Volume页-选择集群
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
 删除Persistent Volume对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="调整persistent-volume大小">调整Persistent Volume大小</h2>
+<p>选择策略名称栏是<code>低利用率PV</code>的行，点击该行操作栏中的<code>调整</code>链接可打开<code>调整Persistent Volume大小</code>对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，如下图。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv4_huf3cacc24f0cdb0b5330e8b22584ca8bc_89249_600x0_resize_catmullrom_3.png" width="600" height="267">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+调整Persistent Volume大小
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	

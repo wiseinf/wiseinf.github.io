@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Disk Optimization | Wiseinf</title>
-<meta name="description" content="This describes the information related to disks and optimization suggestions.
+<meta name="description" content="Describes disk information and details provided by optimization strategy.
 ">
 <meta property="og:title" content="Disk Optimization" />
-<meta property="og:description" content="This describes the information related to disks and optimization suggestions.
+<meta property="og:description" content="Describes disk information and details provided by optimization strategy.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/disk/" /><meta property="og:site_name" content="Wiseinf" />
 
 <meta itemprop="name" content="Disk Optimization">
-<meta itemprop="description" content="This describes the information related to disks and optimization suggestions.
+<meta itemprop="description" content="Describes disk information and details provided by optimization strategy.
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Disk Optimization"/>
-<meta name="twitter:description" content="This describes the information related to disks and optimization suggestions.
+<meta name="twitter:description" content="Describes disk information and details provided by optimization strategy.
 "/>
 
 
@@ -123,7 +123,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Disk Optimization</h1>
-<div class="lead">This describes the information related to disks and optimization suggestions.</div>
+<div class="lead">Describes disk information and details provided by optimization strategy.</div>
 
 
 
@@ -144,11 +144,12 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>This describes the information related to disks and optimization suggestions.</p>
+<p>Describes disk information and details provided by optimization strategy.</p>
 
 </div>
 
-<p>Click the <code>Disk</code> menu in the left menu bar of the platform to display the Disk page, as shown below.</p>
+<h2 id="view-disk-information">View disk information</h2>
+<p>Click the <code>Disks</code> menu on the left menu bar to display the disk page, as shown below.</p>
 
 
 
@@ -157,23 +158,23 @@ This is the multi-page printable view of this section.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk1_hu8eff269808ad90ec2980f382e0103d36_32479_600x0_resize_catmullrom_3.png" width="600" height="334">
+	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk1_hua57c8dbd7330694b4f5ae3925cf4f78b_69060_600x0_resize_catmullrom_3.png" width="600" height="280">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Disk Page
+Disk
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>The Disk page is divided into three sections:</p>
+<p>Disk page are divided into tree areas:</p>
 <ol>
-<li>Cluster selection section: Select the corresponding cluster.</li>
-<li>Search section: Query the corresponding disks by disk ID, instance ID, and node name.</li>
-<li>List section: Displaying disks, instances, usage, and operations column.</li>
+<li><strong>Cluster selection area</strong>: Used for select a cluster.</li>
+<li><strong>Query area</strong>: Used for filtering disk by disk ID, instance ID and node name.</li>
+<li><strong>List area</strong>: Displays disk information, such as instances, usages and actions.</li>
 </ol>
-<p>After selecting the cluster, the Disk page will look like this:</p>
+<p>After select a cluster, the list area will display node of the selected cluster scaned by <strong>Cluster Optimizer</strong>&rsquo;s optimization strategy, as shown below.</p>
 
 
 
@@ -182,24 +183,25 @@ Disk Page
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk2_hu5d129aa695fec5b501fbe2af2fc02371_92321_600x0_resize_catmullrom_3.png" width="600" height="406">
+	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk2_hud98cc24762463067dbef8b620b8c9443_123173_600x0_resize_catmullrom_3.png" width="600" height="308">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Disk Page - Cluster Selected
+Disk: cluster selected
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>The list section shows four columns:</p>
+<p>The list area is divided into four columns:</p>
 <ol>
-<li>Disk column: Displays the disk ID, device name, and creation time.</li>
-<li>Instance column: Shows the node ID where the disk resides, the node name, and the region.</li>
-<li>Usage column: Shows the disk capacity, maximum utilization rate, average utilization rate, and last update time.</li>
-<li>Operation column: Displays operations that can be performed on the disk.</li>
+<li><strong>Disk column</strong>: displays disk ID, device name, storage size and creation time.</li>
+<li><strong>Instance column</strong>: displays the node ID, node name and region associate with the disk.</li>
+<li><strong>Usage column</strong>: displays disk capacity, maximum utilization, average utilization and last update time.</li>
+<li><strong>Action bar</strong>: displays actions on the disk.</li>
 </ol>
-<p>When a user clicks the <code>Adjust</code> link, a dialog box for adjusting the size of the disk opens, which displays detailed adjustment information and recommended adjustment plans for the disk, as shown below.</p>
+<h2 id="adjust-disk">Adjust disk</h2>
+<p>Click <code>Adjust</code> link to in action colum above, it will open the <code>Adjust Disk Size</code> dialog, as shown below.</p>
 
 
 
@@ -208,11 +210,11 @@ Disk Page - Cluster Selected
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk3_hu8aac8a7a4525283cb7f898defaa8e7e4_130288_600x0_resize_catmullrom_3.png" width="600" height="332">
+	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_600x0_resize_catmullrom_3.png" width="600" height="258">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Adjust Disk Page
+Disk: adjust disk size
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	

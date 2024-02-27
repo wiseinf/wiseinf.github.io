@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Configuration | Wiseinf</title>
-<meta name="description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
+<meta name="description" content="Describe Ruyi: Configuration of cloud native cluster scaling engine.
 ">
 <meta property="og:title" content="Configuration" />
-<meta property="og:description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
+<meta property="og:description" content="Describe Ruyi: Configuration of cloud native cluster scaling engine.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/ruyi/configuration/" /><meta property="og:site_name" content="Wiseinf" />
 
 <meta itemprop="name" content="Configuration">
-<meta itemprop="description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
+<meta itemprop="description" content="Describe Ruyi: Configuration of cloud native cluster scaling engine.
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Configuration"/>
-<meta name="twitter:description" content="Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.
+<meta name="twitter:description" content="Describe Ruyi: Configuration of cloud native cluster scaling engine.
 "/>
 
 
@@ -123,7 +123,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Configuration</h1>
-<div class="lead">Description of the configuration of Ruyi: the cloud-native cluster scaling and expansion engine.</div>
+<div class="lead">Describe Ruyi: Configuration of cloud native cluster scaling engine.</div>
 
 
 
@@ -139,7 +139,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-743cd90d3c1ba1709b66bd0042c39a58">Command Line Arguments</a></li>
+<li>1: <a href="#pg-743cd90d3c1ba1709b66bd0042c39a58">Command line parameters</a></li>
 
 
     
@@ -158,7 +158,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-311560d092771780a32c6c35dc00ad8c"></a></li>
+<li>2: <a href="#pg-311560d092771780a32c6c35dc00ad8c">Node group configurations</a></li>
 
 
     
@@ -182,26 +182,26 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Ruyi: Cloud-native cluster scaling and expansion engine.</p>
+<p>Ruyi: Cloud native cluster expansion and contraction engine.</p>
 
 </div>
 
-<h2 id="configuring-ruyi-cloud-native-cluster-scaling-and-expansion-engine">Configuring Ruyi: Cloud-native Cluster Scaling and Expansion Engine</h2>
-<p>Ruyi: Cloud-native cluster scaling and expansion engine provides two main features: automatic scaling and virtual capacity. You can use either feature individually or use both features at the same time.</p>
-<p>You can specify the features using the command line parameter <code>--features</code>.</p>
-<p>The following describes the main configuration parameters for configuring the automatic scaling feature or the virtual capacity feature separately.</p>
-<h3 id="configuring-the-automatic-scaling-feature">Configuring the Automatic Scaling Feature</h3>
+<h2 id="configure-ruyi-cloud-native-cluster-expansion-and-contraction-engine">Configure Ruyi: cloud native cluster expansion and contraction engine</h2>
+<p>Ruyi: The cloud native cluster expansion and contraction engine provides two major features: automatic expansion and contraction and virtual capacity. You can use one feature alone or both features together.</p>
+<p>Can be specified via the command line parameter <code>--features</code>.</p>
+<p>The following describes the main configuration parameters for individually configuring the automatic expansion and contraction feature or the virtual capacity feature.</p>
+<h3 id="configure-automatic-expansion-and-contraction-features">Configure automatic expansion and contraction features</h3>
 <pre tabindex="0"><code>$ ruyi --features=Autoscaling --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
-</code></pre><h3 id="configuring-the-virtual-capacity-feature">Configuring the Virtual Capacity Feature</h3>
-<pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --webhook-cert-dir=/opt/ruyi/certs/
-</code></pre><p>The virtual capacity feature involves a virtual capacity controller and a webhook. You can control them separately using parameters.</p>
-<p>For example, you can enable the virtual capacity controller alone by running the following command:</p>
-<pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --enable-virtual-capacity-controller=true  --enable-webhook=false
+</code></pre><h3 id="configure-virtual-capacity-characteristics">Configure virtual capacity characteristics</h3>
+<pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --webhook-cert -dir=/opt/ruyi/certs/
+</code></pre><p>The virtual capacity feature involves the virtual capacity controller and Webhook, which can be controlled separately through parameters.</p>
+<p>For example, the virtual capacity controller can be enabled individually with the following command:</p>
+<pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --enable-virtual -capacity-controller=true --enable-webhook=false
       
-</code></pre><p>Or, you can start the webhook alone by running the following command:</p>
+</code></pre><p>Or, start the webhook separately with the following command:</p>
 <pre tabindex="0"><code>$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
---enable-virtual-capacity-controller=false  --enable-webhook=true --webhook-cert-dir=/opt/ruyi/certs/
-</code></pre><p>When configuring the webhook, you must specify the <code>MutatingWebhookConfiguration</code>, as follows:</p>
+--enable-virtual-capacity-controller=false --enable-webhook=true --webhook-cert-dir=/opt/ruyi/certs/
+</code></pre><p>When configuring Webhook, you must specify <code>MutatingWebhookConfiguration</code>, as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">admissionregistration.k8s.io/v1</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">MutatingWebhookConfiguration</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
@@ -209,7 +209,7 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span><span style="color:#f92672">webhooks</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">ruyi.wiseinf-system.svc</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">admissionReviewVersions</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span>      -<span style="color:#ae81ff">v1</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">clientConfig</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">caBundle</span>: <span style="color:#ae81ff">&lt;CA Bundle&gt;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">service</span>:
@@ -224,22 +224,22 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">operations</span>:
 </span></span><span style="display:flex;"><span>          - <span style="color:#e6db74">&#34;UPDATE&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">resources</span>:
-</span></span><span style="display:flex;"><span>          - <span style="color:#ae81ff">nodes/status</span>
+</span></span><span style="display:flex;"><span>          -<span style="color:#ae81ff">nodes/status</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">scope</span>: <span style="color:#e6db74">&#34;Cluster&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">failurePolicy</span>: <span style="color:#ae81ff">Ignore</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">sideEffects</span>: <span style="color:#ae81ff">None</span>
 </span></span></code></pre></div><blockquote>
-<p>Note: You must correctly specify the <code>caBundle</code> in the <code>MutatingWebhookConfiguration</code> to make the webhook work properly.</p>
+<p>Note: The <code>caBundle</code> of <code>MutatingWebhookConfiguration</code> must be specified correctly, otherwise the Webhook will not take effect.</p>
 </blockquote>
-<h3 id="environment-variables">Environment Variables</h3>
-<p>When using the automatic scaling feature, you need to provide cloud service provider-related information through environment variables.</p>
-<p>If you are using Alibaba Cloud, you need to configure the AccessKey and its region through environment variables.</p>
+<h3 id="environment-variables">Environment variables</h3>
+<p>When using the automatic expansion and contraction feature, you need to provide relevant information about the cloud service provider through environment variables.</p>
+<p>If you use Alibaba Cloud, you need to configure Alibaba Cloud&rsquo;s AccessKey and its Region through environment variables.</p>
 <table>
 <thead>
 <tr>
-<th>Environment Variable Name</th>
+<th>Environment variable name</th>
 <th>Description</th>
-<th>Default Value</th>
+<th>Default value</th>
 </tr>
 </thead>
 <tbody>
@@ -255,42 +255,42 @@ This is the multi-page printable view of this section.
 </tr>
 <tr>
 <td>ALIBABA_CLOUD_REGION_ID</td>
-<td>The ID of the region where the Alibaba Cloud cluster is located</td>
+<td>Region ID of Alibaba Cloud cluster</td>
 <td>cn-hangzhou</td>
 </tr>
 </tbody>
 </table>
-<p>If you are using AWS, you need to configure the AccessKey through environment variables.</p>
+<p>If you use AWS, you need to configure AWS&rsquo;s AccessKey through environment variables.</p>
 <table>
 <thead>
 <tr>
-<th>Environment Variable Name</th>
+<th>Environment variable name</th>
 <th>Description</th>
-<th>Default Value</th>
+<th>Default value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>AWS_ACCESS_KEY_ID or AWS_ACCESS_KEY</td>
-<td>AWS AccessKeyID</td>
+<td>AWS Cloud AccessKeyID</td>
 <td>No default value</td>
 </tr>
 <tr>
 <td>AWS_SECRET_ACCESS_KEY or AWS_SECRET_KEY</td>
-<td>AWS AccessKeySecret</td>
+<td>AWS Cloud AccessKeySecret</td>
 <td>No default value</td>
 </tr>
 <tr>
 <td>AWS_ASSUME_ROLE_ARN</td>
-<td>AWS ASSUME_ROLE_ARN</td>
+<td>AWS Cloud ASSUME_ROLE_ARN</td>
 <td>No default value</td>
 </tr>
 </tbody>
 </table>
-<p>For more detailed configuration items, please refer to:</p>
+<p>For detailed configuration items, please refer to:</p>
 <ul>
-<li><a href="/docs/ruyi/configuration/command-line">Command Line Configuration</a></li>
-<li><a href="/docs/ruyi/configuration/nodegroup">Node Group Configuration</a></li>
+<li><a href="/docs/ruyi/configuration/command-line/">Command line configurations</a></li>
+<li><a href="/docs/ruyi/configuration/nodegroup/">Node group configurations</a></li>
 </ul>
 
 </div>
@@ -313,100 +313,101 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-743cd90d3c1ba1709b66bd0042c39a58">1 - Command Line Arguments</h1>
-    <div class="lead">Describes the command line arguments of Ruyi: Cloud Native Cluster Autoscaling Engine.</div>
+	<h1 id="pg-743cd90d3c1ba1709b66bd0042c39a58">1 - Command line parameters</h1>
+    <div class="lead">Describes the command line parameters of Ruyi: the cloud native cluster scaling engine.</div>
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Ruyi: Cloud Native Cluster Autoscaling Engine.</p>
+<p>Ruyi: Cloud native cluster expansion and contraction engine.</p>
 
 </div>
 
-<h2 id="command-line-arguments">Command Line Arguments</h2>
-<p>You can get the usage of Ruyi engine by <code>--help</code>, as follows:</p>
+<h2 id="command-line-parameters">Command line parameters</h2>
+<p>You can get the usage of Ruyi engine through <code>--help</code>, as follows:</p>
 <pre tabindex="0"><code>$ruyi --help
 usage: ruyi --config=CONFIG [&lt;flags&gt;]
 
 Flags:
-      --help                     Show context-sensitive help (also try --help-long and --help-man).
-  -f, --features=&#34;Autoscaling,VirtualCapacity&#34;  
+      --help Show context-sensitive help (also try --help-long and --help-man).
+  -f, --features=&#34;Autoscaling,VirtualCapacity&#34;
                                  Enable ruyi features. Available options are Autoscaling, VirtualCapacity
-      --cloud-provider=aws       Set cloud provider to use. Available options are (aws, alicloud)
-      --config=CONFIG            Set config file location
-      --kubeconfig=KUBECONFIG    Set kubeconfig file location
-      --interval=60s             Set interval for evaluating node scale up or down
-      --metrics-address=&#34;:8080&#34;  Set address for /metrics
-      --health-probe-address=&#34;:8090&#34;  
+      --cloud-provider=aws Set cloud provider to use. Available options are (aws, alicloud)
+      --config=CONFIG Set config file location
+      --kubeconfig=KUBECONFIG Set kubeconfig file location
+      --interval=60s Set interval for evaluating node scale up or down
+      --metrics-address=&#34;:8080&#34; Set address for /metrics
+      --health-probe-address=&#34;:8090&#34;
                                  Set address for health probe
-      --port=8443                Set port
-      --dry-run                  Set dry-run argument. If true, forces dry run on all nodegroups
-  -v, --loglevel=info            Set logging level. Available options are (trace, debug, info, warning, error, fatal, panic)
-      --logfmt=text              Set logging format. Available options are (text, json)
-      --enable-virtual-capacity-controller  
+      --port=8443 Set port
+      --dry-run Set dry-run argument. If true, forces dry run on all nodegroups
+  -v, --loglevel=info Set logging level. Available options are (trace, debug, info, warning, error, fatal, panic)
+      --logfmt=text Set logging format. Available options are (text, json)
+      --enable-virtual-capacity-controller
                                  Set enable virtual capacity controller
-      --enable-webhook           Set enable webhook for virtual capacity
-      --webhook-cert-dir=&#34;&#34;      Set webhook certificate directory
-      --concurrency=5            Set concurrency
-      --leader-elect             Enable leader election
-      --leader-elect-lease-duration=15s  
+      --enable-webhook Set enable webhook for virtual capacity
+      --webhook-cert-dir=&#34;&#34; Set webhook certificate directory
+      --concurrency=5 Set concurrency
+      --leader-elect Enable leader election
+      --leader-elect-lease-duration=15s
                                  Set leader election lease duration
-      --leader-elect-renew-deadline=10s  
-                                 Set leader election renew deadline
-      --leader-elect-retry-period=2s  
+      --leader-elect-renew-deadline=10s
+                                 Set leader election renewal deadline
+      --leader-elect-retry-period=2s
                                  Set leader election retry period
-      --leader-elect-lease-namespace=&#34;wiseinf-system&#34;  
+      --leader-elect-lease-namespace=&#34;wiseinf-system&#34;
                                  Set leader election lease object namespace
-      --leader-elect-lease-name=&#34;ruyi-lease&#34;  
+      --leader-elect-lease-name=&#34;ruyi-lease&#34;
                                  Set leader election lease object name
-</code></pre><p>The following describes the parameters in detail.</p>
+</code></pre><p>The parameters are described in detail below.</p>
 <h2 id="parameter-description">Parameter Description</h2>
 <h3 id="--help"><code>--help</code></h3>
-<p>The <code>--help</code> parameter provides the usage of the command line.</p>
+<p>The parameter <code>--help</code> provides command line usage help.</p>
 <h3 id="-f---features"><code>-f, --features</code></h3>
-<p>The <code>-f, --features</code> parameter indicates the features enabled by the engine. The <code>Autoscaling</code> option enables the autoscaling feature, and the <code>VirtualCapacity</code> option enables the virtual capacity feature.</p>
-<p>The default value is <code>Autoscaling,VirtualCapacity</code>, which means both autoscaling and virtual capacity features are enabled by default.</p>
+<p>The parameters <code>-f, --features</code> indicate the engine startup features, where <code>Autoscaling</code> means enabling the automatic expansion and contraction feature, and <code>VirtualCapacity</code> means enabling the virtual capacity feature.</p>
+<p>The default value is <code>Autoscaling,VirtualCapacity</code>, which means that both the automatic scaling feature and the virtual capacity feature are enabled.</p>
 <h3 id="--cloud-provider"><code>--cloud-provider</code></h3>
-<p>The <code>--cloud-provider</code> parameter indicates the cloud service provider used by the engine. Its value can be <code>aws</code> or <code>alicloud</code>, and the default value is <code>aws</code>.</p>
+<p>The parameter <code>--cloud-provider</code> indicates the cloud service provider used by the engine. Its value is aws or alicloud, and the default value is aws.</p>
 <h3 id="--config"><code>--config</code></h3>
-<p>The <code>--config</code> parameter indicates the location of the node group configuration file used by the engine. For more information on the node group configuration, please see <a href="/docs/ruyi/configuration/nodegroup">Node Group Configuration</a>.</p>
+<p>The parameter <code>--config</code> indicates the location of the node group configuration file used by the engine. For node group configuration, please see <a href="/docs/ruyi/configuration/nodegroup">Node Group Configuration</a></p>
 <h3 id="--kubeconfig"><code>--kubeconfig</code></h3>
-<p>The <code>--kubeconfig</code> parameter indicates the location of the kubeconfig file used by the engine. The default value is empty, in which case the cluster access configuration will be used.</p>
+<p>The parameter <code>--kubeconfig</code> indicates the location of the kubeconfig file used by the engine. The default is empty, in which case the in-cluster access configuration will be used.</p>
 <h3 id="--interval"><code>--interval</code></h3>
-<p>The <code>--interval</code> parameter indicates the scheduling interval used by the function features of the engine. For example, the autoscaling feature evaluates whether to expand or shrink the node pool at this time interval.</p>
-<p>The default value is 60 seconds.</p>
+<p>The parameter <code>--interval</code> indicates the scheduling interval used by the feature in the engine. For example, automatic expansion and contraction evaluates whether the node pool is expanding or shrinking at this interval.</p>
+<p>The default value for this is 60 seconds.</p>
 <h3 id="--metrics-address"><code>--metrics-address</code></h3>
-<p>The <code>--metrics-address</code> parameter indicates the port used by the monitoring metrics of the engine, from which you can obtain specific metric data at the <code>/metrics</code> endpoint.</p>
+<p>The parameter <code>--metrics-address</code> indicates the port used by the engine to monitor metrics. Specific metric data can be obtained from <code>/metrics</code> of this port.</p>
 <h3 id="--health-probe-address"><code>--health-probe-address</code></h3>
-<p>The <code>--health-probe-address</code> parameter indicates the monitoring probe address used by the engine, from which you can perform health probe and readiness probe at the <code>/healthz</code> and <code>/readyz</code> endpoints respectively.</p>
+<p>The parameter <code>--health-probe-address</code> indicates the monitoring detection address used by the engine. Health detection and readiness detection can be performed from <code>/healthz</code> and <code>/readyz</code> respectively on this port.</p>
 <h3 id="--port"><code>--port</code></h3>
-<p>The <code>--port</code> parameter is the port used by the Webhook of the engine, and the default value is 8443.</p>
+<p>The parameter <code>--port</code> is the port used by the engine webhook, and the default value is 8443.</p>
 <h3 id="--dry-run"><code>--dry-run</code></h3>
-<p>The <code>--dry-run</code> parameter indicates that the engine only runs without making any changes to the environment or nodes.</p>
+<p>The parameter <code>--dry-run</code> instructs the engine to only run without making any modifications to the environment or nodes.</p>
 <h3 id="-v---loglevelinfo"><code>-v, --loglevel=info</code></h3>
-<p>The <code>--dry-run</code> parameter sets the log level. The available options are <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warning</code>, <code>error</code>, <code>fatal</code>, <code>panic</code>, and the default value is <code>info</code>.</p>
+<p>The parameter <code>--dry-run</code> sets the log level. Optional values ​​include <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warning</code>, <code>error</code>, <code>fatal</code>, <code>panic</code>, and the default value is <code>info</code>.</p>
 <h3 id="--logfmt"><code>--logfmt</code></h3>
-<p>The <code>--dry-run</code> parameter sets the output format of the log. The available options are <code>text</code>, <code>json</code>, and the default value is <code>text</code>, which means the output is in text format.</p>
+<p>The parameter <code>--dry-run</code> sets the log output format. Optional values ​​include <code>text</code>, <code>json</code>, and the default value is <code>text</code>, which means the output is in text format.</p>
 <h3 id="--enable-virtual-capacity-controller"><code>--enable-virtual-capacity-controller</code></h3>
-<p>The <code>--enable-virtual-capacity-controller</code> parameter indicates whether to enable the virtual capacity controller, and the default value is <code>true</code>.</p>
+<p>The parameter <code>--enable-virtual-capacity-controller</code> indicates whether to enable the virtual capacity controller. The default value is <code>true</code>.</p>
 <h3 id="--enable-webhook"><code>--enable-webhook</code></h3>
-<p>The <code>--enable-webhook</code> parameter indicates whether to enable Webhook, and the default value is <code>true</code>.</p>
+<p>The parameter <code>--enable-webhook</code> indicates whether to enable Webhook, and the default value is <code>true</code>.</p>
 <h3 id="--webhook-cert-dir"><code>--webhook-cert-dir</code></h3>
-<p>The <code>--webhook-cert-dir</code> parameter indicates the directory location of the certificate when enabling Webhook. The engine will initialize the certificate of the Webhook through the files <code>tls.crt</code> and <code>tls.key</code> in this directory location.
-If its value is empty, the Webhook will find the certificate in the directory <code>/tmp/k8s-webhook-server/serving-certs</code>.</p>
-<h3 id="--concurrency"><code>--concurrency</code></h3>
-<p>The <code>--concurrency</code> parameter indicates the number of concurrent processes. The default value is 5, but it is currently not used.</p>
+<p>The parameter <code>--webhook-cert-dir</code> indicates the directory location of the certificate when Webhook is enabled. The engine will initialize the Webhook certificate through the files <code>tls.crt</code> and <code>tls.key</code> in this directory location.
+If its value is empty, the webhook will look for certificates in the directory <code>/tmp/k8s-webhook-server/serving-certs</code>��</p>
+<!-- ### `--concurrency`
+
+The parameter `--concurrency` indicates the number of concurrency. The default value is 5, which is not used yet. -->
 <h3 id="--leader-elect"><code>--leader-elect</code></h3>
-<p>The <code>--leader-elect</code> parameter sets whether to enable leader election. It is generally used in high availability environments.</p>
+<p>The parameter <code>--leader-elect</code> sets whether to enable the leader election mechanism. Generally used in high availability environments.</p>
 <h3 id="leader-elect-lease-duration"><code>leader-elect-lease-duration</code></h3>
-<p>The <code>leader-elect-lease-duration</code> parameter sets the waiting time for non-master nodes to obtain the leader lease. The default value is 15 seconds.</p>
+<p>The parameter <code>leader-elect-lease-duration</code> sets the waiting time for non-master nodes to obtain the leader lease. The default value is 15 seconds.</p>
 <h3 id="--leader-elect-renew-deadline"><code>--leader-elect-renew-deadline</code></h3>
-<p>The <code>--leader-elect-renew-deadline</code> parameter sets the timeout for the master node to update the lease. The default value is 10 seconds.</p>
+<p>The parameter <code>--leader-elect-renew-deadline</code> sets the timeout for the master node to renew the lease. The default value is 10 seconds.</p>
 <h3 id="--leader-elect-retry-period"><code>--leader-elect-retry-period</code></h3>
-<p>The <code>--leader-elect-retry-period</code> parameter sets the waiting time for nodes to retry when there is an error. The default value is 2 seconds.</p>
+<p>The parameter <code>--leader-elect-renew-deadline</code> sets the waiting time when the node retries. The default value is 2 seconds.</p>
 <h3 id="--leader-elect-lease-namespace"><code>--leader-elect-lease-namespace</code></h3>
-<p>The <code>--leader-elect-lease-namespace</code> parameter sets the namespace where the lease is stored. The default value is <code>wiseinf-system</code>.</p>
+<p>The parameter <code>--leader-elect-lease-namespace</code> sets the namespace in which leases are stored. The default value is <code>wiseinf-system</code>.</p>
 <h3 id="--leader-elect-lease-name"><code>--leader-elect-lease-name</code></h3>
-<p>The <code>--leader-elect-lease-name</code> parameter sets the name of the lease. The default value is <code>ruyi-lease</code>.</p>
+<p>The parameter <code>--leader-elect-lease-name</code> sets the name of the lease. The default value is <code>ruyi-lease</code>.</p>
 
 </div>
 
@@ -434,11 +435,18 @@ If its value is empty, the Webhook will find the certificate in the directory <c
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-311560d092771780a32c6c35dc00ad8c">2 - </h1>
-    
-	<h2 id="节点组配置参数">节点组配置参数</h2>
-<p>Ruyi：云原生集群扩缩容引擎的节点组配置参数。</p>
-<h3 id="配置示例">配置示例</h3>
+	<h1 id="pg-311560d092771780a32c6c35dc00ad8c">2 - Node group configurations</h1>
+    <div class="lead">Describes node group configurations of <strong>Ruyi</strong>.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Ruyi: Cloud native cluster expansion and contraction engine configuration.</p>
+
+</div>
+
+<h2 id="overview-of-node-group-configuration-parameters">Overview of node group configuration parameters</h2>
+<p>The engine must depend on the node group configuration parameters in order to run. The node group configuration parameters use the command line parameter <code>--config</code> to specify the configuration file location. For example: <code>--config=/etc/ruyi/config.yaml</code></p>
+<p>The configuration file format is YAML format, the example is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">nodeGroups</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;default-pool&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">nodeGroupId</span>: <span style="color:#e6db74">&#34;np1234567890&#34;</span>
@@ -476,33 +484,181 @@ If its value is empty, the Webhook will find the certificate in the directory <c
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>: 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReservedPercentage</span>: <span style="color:#ae81ff">0.1</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">lifecycle</span>: <span style="color:#ae81ff">spot</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><h3 id="配置参数说明">配置参数说明</h3>
-<h4 id="name"><code>name</code></h4>
-<p>节点组名称，用于输出日志等。不同的节点组名称必须唯一。</p>
-<h4 id="labels和labelkey以及labelvalue"><code>labels</code>和<code>label.Key</code>以及<code>label.Value</code></h4>
-<p>标签键值对数组，引擎通过此标签键值对数组来选择节点组。其中，<code>label.Key</code>和<code>label.Value</code>分别是键值对中的键和值。</p>
-<h4 id="dryrun"><code>dryRun</code></h4>
-<p>是否仅运行，不对实际环境做任何修改。该值为<code>false</code>时，可被子命令行参数的<code>dryRun</code>覆盖。</p>
-<h4 id="nodegroupid"><code>nodeGroupId</code></h4>
-<p>节点组ID，在云服务商的节点组ID，云服务商通过此参数来从对应云服务商获取改节点组信息。</p>
-<h4 id="enableautoscaling"><code>enableAutoscaling</code></h4>
-<p>指示是否启用自动扩缩容特性，默认为<code>true</code>。</p>
-<h4 id="autoscaling"><code>autoscaling</code></h4>
-<p>自动扩缩容配置，具体请参见<a href="#%E8%87%AA%E5%8A%A8%E6%89%A9%E7%BC%A9%E5%AE%B9%E9%85%8D%E7%BD%AE">自动扩缩容配置</a>。</p>
-<h4 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h4>
-<p>指示是否启用虚拟容量特性，默认为<code>true</code>。</p>
-<h4 id="virtualcapacity"><code>virtualCapacity</code></h4>
-<p>虚拟容量配置，具体请参见<a href="#%E8%99%9A%E6%8B%9F%E5%AE%B9%E9%87%8F%E9%85%8D%E7%BD%AE">虚拟容量配置</a>。</p>
-<h4 id="alicloud"><code>alicloud</code></h4>
-<p>阿里云服务商配置，具体请参见<a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%95%86%E9%85%8D%E7%BD%AE">阿里云服务商配置</a>。</p>
+</span></span></code></pre></div><h2 id="configuration-parameters">Configuration parameters</h2>
+<h3 id="name"><code>name</code></h3>
+<p>The parameter <code>name</code> is the name used during engine running and can be used to output friendly log information, etc. Different node group names must be unique.</p>
+<h3 id="labels-labelkey-and-labelvalue"><code>labels</code>, <code>label.Key</code> and <code>label.Value</code></h3>
+<p>The parameter <code>labels</code> is an array of key-value pairs through which the engine selects node groups.
+Among them, <code>label.Key</code> and <code>label.Value</code> are the key and value in the key-value pair,</p>
+<h3 id="dryrun"><code>dryRun</code></h3>
+<p>The parameter <code>dryRun</code> means only running without any modification to the actual environment. When this value is <code>false</code>, it can be overridden by the <code>dryRun</code> command line parameter.</p>
+<h3 id="nodegroupid"><code>nodeGroupId</code></h3>
+<p>The parameter <code>nodeGroupId</code> is the node group ID of the node group in the cloud service provider. The cloud service provider uses this parameter to obtain the node group information from the corresponding cloud service provider.</p>
+<h3 id="enableautoscaling"><code>enableAutoscaling</code></h3>
+<p>The parameter <code>enableAutoscaling</code> indicates whether to enable the automatic scaling feature, and the default is <code>true</code>.</p>
+<h3 id="autoscaling"><code>autoscaling</code></h3>
+<p>The parameter <code>autoscaling</code> provides corresponding parameters for automatic expansion and contraction. For details, please refer to [Automatic expansion and contraction configuration] (#automatic expansion and contraction configuration)</p>
+<h3 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h3>
+<p>The parameter <code>enableVirtualCapacity</code> indicates whether to enable the virtual capacity feature, and the default is <code>true</code>.</p>
+<h3 id="virtualcapacity"><code>virtualCapacity</code></h3>
+<p>The parameter <code>virtualCapacity</code> provides corresponding parameters for virtual capacity. For details, please see [Virtual Capacity](#Virtual Capacity Configuration)</p>
+<h3 id="alicloud"><code>alicloud</code></h3>
+<p>The parameter <code>alicloud</code> provides corresponding parameters for the cloud service provider Alibaba Cloud. For details, please refer to [Alibaba Cloud Service Provider Configuration](#Alibaba Cloud Service Provider Configuration)</p>
+<h2 id="automatic-expansion-and-contraction-configuration">Automatic expansion and contraction configuration</h2>
+<p>The automatic expansion and contraction configuration provides corresponding parameters for the automatic expansion and contraction of the node group. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">autoscaling</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minNodes</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxNodes</span>: <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleUp</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleDown</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleUp</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.70</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">scaleOnPodPending</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">silencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleDown</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.40</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">softDeleteGracePeriod</span>: <span style="color:#ae81ff">1m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hardDeleteGracePeriod</span>: <span style="color:#ae81ff">10m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">maxNodeRemovalRate</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">taintEffect</span>: <span style="color:#ae81ff">NoExecute</span>
+</span></span></code></pre></div><h3 id="minnodes-and-maxnodes"><code>minNodes</code> and <code>maxNodes</code></h3>
+<p>The parameters <code>minNodes</code> and <code>maxNodes</code> are the maximum and minimum values ​​for the node pool size. When performing node expansion and contraction, it will be ensured that the node pool size meets the maximum and minimum constraints.</p>
+<h3 id="enablescaleup"><code>enableScaleUp</code></h3>
+<p>The parameter <code>enableScaleUp</code> indicates whether to enable scaling, and the default is <code>true</code>.</p>
+<h3 id="enablescaledown"><code>enableScaleDown</code></h3>
+<p>The parameter <code>enableScaleUp</code> indicates whether to enable scaling, and the default is <code>true</code>.</p>
+<h3 id="scaleup"><code>scaleUp</code></h3>
+<p>The parameter <code>scaleUp</code> provides parameters related to expansion.</p>
+<h3 id="scaleupthreshold"><code>scaleUp.threshold</code></h3>
+<p>The parameter <code>scaleUp.threshold</code> is the threshold for expansion. When the ratio of the total Requests of all running Pods on the node group to the total Allocatable of the node group is greater than this value, the expansion operation will be performed.</p>
+<h3 id="scaleupscaleonpodpending"><code>scaleUp.scaleOnPodPending</code></h3>
+<p>The parameter <code>scaleUp.scaleOnPodPending</code> indicates whether to perform expansion when the Pod is Pending. The default value is <code>false</code>. When all nodes in the node group cannot meet the resource requirements of the node, the expansion operation is performed.</p>
+<h3 id="scaleupsilenceperiod"><code>scaleUp.silencePeriod</code></h3>
+<p>The parameter <code>silencePeriod</code> is the silence time. When an expansion event occurs, no expansion operations will be performed within the <code>silencePeriod</code> time.</p>
+<h3 id="scaledown"><code>scaleDown</code></h3>
+<p>The parameter <code>scaleDown</code> provides scaling-related parameters.</p>
+<h3 id="scaledownthreshold"><code>scaleDown.threshold</code></h3>
+<p>The parameter <code>scaleDown.threshold</code> is the threshold for expansion. When the ratio of the sum of Requests of all running Pods on the node group to the sum of Allocatables of the node group is less than this value, the scaling operation is performed.</p>
+<h3 id="scaledownsoftdeletegraceperiod"><code>scaleDown.softDeleteGracePeriod</code></h3>
+<p>The parameter <code>scaleDown.softDeleteGracePeriod</code> is the node soft deletion waiting time. During the soft deletion waiting time, the engine does not perform the reduction operation.</p>
+<h3 id="scaledownharddeletegraceperiod"><code>scaleDown.hardDeleteGracePeriod</code></h3>
+<p>The parameter <code>scaleDown.hardDeleteGracePeriod</code> is the node hard deletion waiting time. When the soft deletion waiting time reaches the hard deletion waiting time, the node will be deleted only when the Pod on the node is empty. After the hard deletion waiting time, the engine will forcefully delete the node.</p>
+<!--
+For the logic of whether the node is empty, please refer to `pkg/k8s` `NodeEmpty()` -->
+<h3 id="scaledownmaxnoderemovalrate"><code>scaleDown.maxNodeRemovalRate</code></h3>
+<p>The parameter <code>scaleDown.maxNodeRemovalRate</code> is the maximum value of nodes that can be reduced at the same time.</p>
+<h3 id="scaledowntainteffect"><code>scaleDown.taintEffect</code></h3>
+<p>The parameter <code>scaleDown.taintEffect</code> refers to the operation when scaling down. When scaling down, the node will first be labeled with <code>taint</code>, and its value range is as follows:</p>
+<p>-NoSchedule
+-NoExecute</p>
+<ul>
+<li>PreferNoSchedule</li>
+</ul>
+<p>For the specific meaning, please see <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration">taint and tolerance</a></p>
+<h2 id="virtual-capacity-configuration">Virtual capacity configuration</h2>
+<p>Virtual capacity configuration provides corresponding parameters for virtual capacity. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">virtualCapacity</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusAddress</span>: <span style="color:#e6db74">&#34;http://prometheus:9090&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusWindow</span>: <span style="color:#e6db74">&#34;2m&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">isThanos</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterKey</span>: <span style="color:#ae81ff">cluster</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterValue</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">reservationRatio</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">increaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">decreaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">stabilityWindow</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tolerance</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span>
+</span></span></code></pre></div><h3 id="prometheusaddress"><code>prometheusAddress</code></h3>
+<p>The parameter <code>prometheusAddress</code> is the Prometheus address monitored by Metrics of the current cluster node.</p>
+<h3 id="prometheuswindow"><code>prometheusWindow</code></h3>
+<p>The parameter <code>prometheusWindow</code> is the time window when the engine queries prometheus.</p>
+<h3 id="isthanos"><code>isThanos</code></h3>
+<p>The parameter <code>isThanos</code> refers to whether the Prometheus address corresponding to the parameter <code>prometheusAddress</code> is Thanos. The default is false. When the prometheus address is Thanos, Thanos related parameters will be appended when the engine queries.</p>
+<h3 id="thanosclusterkey-and-thanosclustervalue"><code>thanosClusterKey</code> and <code>thanosClusterValue</code></h3>
+<p>The parameters <code>thanosClusterKey</code> and <code>thanosClusterValue</code> are the parameter names and values ​​​​that are appended to the engine query (when the parameter <code>isThanos</code> is <code>true</code>). Additional parameters <code>thanosClusterKey</code> and <code>thanosClusterValue</code> can improve query performance.</p>
+<h3 id="increasesilenceperiod"><code>increaseSilencePeriod</code></h3>
+<p>The parameter <code>increaseSilencePeriod</code> is the silent time when the node virtual capacity rate increases. When the node virtual capacity rate increases, this value will be maintained within the silent time window <code>increaseSilencePeriod</code>.</p>
+<h3 id="decreasesilenceperiod"><code>decreaseSilencePeriod</code></h3>
+<p>The parameter <code>decreaseSilencePeriod</code> is the silent time when the node virtual capacity rate is reduced. When the node virtual capacity rate is reduced, this value will be maintained within the silent time window <code>decreaseSilencePeriod</code>.</p>
+<h3 id="stabilitywindow"><code>stabilityWindow</code></h3>
+<p>The parameter <code>stabilityWindow</code> is the stability window. The engine will calculate the virtual capacity rate at regular intervals. The lowest value within the stability window will be selected for the final decision to avoid excessive changes in the virtual capacity rate, which may cause the virtual capacity to change too quickly. .</p>
+<h3 id="tolerance"><code>tolerance</code></h3>
+<p>The parameter <code>tolerance</code> is the maximum difference between each time the virtual capacity rate is applied and the last time. This value can prevent the node&rsquo;s Allocatable from rising too quickly.</p>
+<h3 id="cpumaxusage"><code>cpuMaxUsage</code></h3>
+<p>The parameter <code>cpuMaxUsage</code> refers to the maximum CPU utilization. When the CPU utilization of a node is greater than this value, new Pods will no longer be scheduled.</p>
+<h3 id="maxvalue-and-minvalue"><code>maxValue</code> and <code>minValue</code></h3>
+<p>The parameters <code>maxValue</code> and <code>minValue</code> are the maximum and minimum values ​​of the virtual capacity rate. The default value of <code>minValue</code> is 1.</p>
+<p>The virtual capacity rate is the ratio of the node&rsquo;s <code>Allocatable</code> to the node&rsquo;s original <code>Allocatable</code>.</p>
+<h3 id="resourcereservation"><code>resourceReservation</code></h3>
+<p>The parameter <code>resourceReservation</code> is the resource reserved when calculating the virtual capacity rate. The default value of the parameter is empty.</p>
+<p>When the parameter default value is empty, the engine will obtain the KubeletConfiguration of the node from the node in the node pool and obtain the corresponding value from the KubeletConfiguration.</p>
+<h3 id="resourcereservationkubereserved-and-resourcereservationsystemreserved"><code>resourceReservation.kubeReserved</code> and <code>resourceReservation.systemReserved</code></h3>
+<p>The parameters <code>resourceReservation.kubeReserved</code> and <code>resourceReservation.systemReserved</code> are the CPU resources reserved for kubelet and system respectively.</p>
+<h3 id="resourcereservationreservedpercentage"><code>resourceReservation.reservedPercentage</code></h3>
+<p>The parameter <code>resourceReservation.reservedPercentage</code> is the additional resource reserved by the engine for Pod running on the node.</p>
+<h2 id="alibaba-cloud-service-provider-configuration">Alibaba Cloud Service Provider Configuration</h2>
+<p>Alibaba Cloud service provider configuration provides corresponding parameters to the cloud service provider Alibaba Cloud. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">life cycle</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="alicloudclusterid"><code>alicloud.clusterId</code></h3>
+<p>The parameter <code>alicloud.clusterId</code> is the cluster ID of the Alibaba Cloud ACK cluster, which is generally identified by the label <code>ack.aliyun.com</code> on the node. For example:</p>
+<pre tabindex="0"><code>ack.aliyun.com=c1234567890
+</code></pre><p>Among them, <code>c1234567890</code> is the cluster ID.</p>
+<h2 id="aws-cloud-service-provider-configuration">AWS cloud service provider configuration</h2>
+<p>The AWS cloud service provider configuration provides corresponding parameters for the cloud service provider AWS. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">aws</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateId</span>: <span style="color:#ae81ff">lt-</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateVersion</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">instanceReadyTimeout</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="awslaunchtemplateid-and-awslaunchtemplateversion"><code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code></h3>
+<p>The parameters <code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code> are the AWS launch template ID and template version values ​​respectively, which are used to configure startup during the expansion process.template.</p>
+<p>With this parameter, the engine can use the AWS Fleet API to expand the node pool to the desired capacity in one go.</p>
+<p>The values ​​of parameters <code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code> can be obtained in two ways:</p>
+<ul>
+<li>Obtained through the Launch Templates page in the AWS EC2 console.</li>
+<li>Via CLI command in <a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/create-launch-template.html">Create Launch Template</a>
+Or get it from the <code>LatestVersionNumber</code> or <code>DefaultVersionNumber</code> returned in the AWS API.</li>
+</ul>
+<h3 id="awsinstancereadytimeout"><code>aws.instanceReadyTimeout</code></h3>
+<p>The parameter <code>aws.instanceReadyTimeout</code> is the timeout period to wait for the EC2 instance to be ready when using the AWS Fleet API to expand the node pool at one time.</p>
+<p>This parameter is optional and the default value is 1 minute.</p>
+<!-- This is an optional field. The default value is 1 minute.
+
+When using the one-shot capacity acquisition for AWS (see `aws.launch_template_id`), this is the maximum amount of time
+that Escalator will block waiting for new EC2 instances to become ready so that they can be added to the node group.
+This roughly corresponds to the amount of time it takes an instance to boot to multi-user mode and for the EC2 control
+plane to notice that it is healthy. This generally takes much less than a minute.
+
+**Note:** Escalator will block other scaling operations for, at most, this amount of time while new capacity comes
+online. -->
+<h3 id="awslifecyle"><code>aws.lifecyle</code></h3>
+<p>The parameter <code>aws.lifecyle</code> specifies the life cycle of the instance, and its value is <code>on-demand</code> or <code>spot</code> or <code>on-demand,spot</code>.</p>
+<p>This parameter is optional and the default value is <code>on-demand</code>.</p>
+<p><code>on-demand</code> instructs the engine to use on-demand instances when scaling up, and <code>spot</code> instructs the engine to use spot instances when scaling up.</p>
+<h3 id="awsinstancetypeoverrides"><code>aws.instanceTypeOverrides</code></h3>
+<p>The parameter <code>aws.lifecyle</code> specifies the type of instance. This parameter is optional and has no default value.</p>
+<p>When the engine creates an expansion request, it can use multiple instance types specified by the parameter <code>aws.lifecyle</code> to increase the probability of successful expansion.</p>
+<h3 id="awsresourcetagging"><code>aws.resourceTagging</code></h3>
+<p>The parameter <code>aws.resourceTagging</code> indicates whether to add resource tags to the nodes managed by the engine <code>autoscaling.wiseinf.com\enabled</code>:<code>true</code>.</p>
+<p>This label does not affect any functions of the engine. It is mainly used to facilitate the management of EC2 instances using labels. For details, please refer to <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Using Tags</a>.</p>
 
 </div>
 

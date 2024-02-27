@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Node Pool Optimization | Wiseinf</title>
-<meta name="description" content="Provides information and operational recommendations for node pool optimization.
+<title>Node Group Optimization | Wiseinf</title>
+<meta name="description" content="Provides recommended settings and actions for node group.
 ">
-<meta property="og:title" content="Node Pool Optimization" />
-<meta property="og:description" content="Provides information and operational recommendations for node pool optimization.
+<meta property="og:title" content="Node Group Optimization" />
+<meta property="og:description" content="Provides recommended settings and actions for node group.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/nodegroup/" /><meta property="og:site_name" content="Wiseinf" />
 
-<meta itemprop="name" content="Node Pool Optimization">
-<meta itemprop="description" content="Provides information and operational recommendations for node pool optimization.
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node Pool Optimization"/>
-<meta name="twitter:description" content="Provides information and operational recommendations for node pool optimization.
+<meta itemprop="name" content="Node Group Optimization">
+<meta itemprop="description" content="Provides recommended settings and actions for node group.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node Group Optimization"/>
+<meta name="twitter:description" content="Provides recommended settings and actions for node group.
 "/>
 
 
@@ -122,8 +122,8 @@ This is the multi-page printable view of this section.
 
 
 
-<h1 class="title">Node Pool Optimization</h1>
-<div class="lead">Provides information and operational recommendations for node pool optimization.</div>
+<h1 class="title">Node Group Optimization</h1>
+<div class="lead">Provides recommended settings and actions for node group.</div>
 
 
 
@@ -144,16 +144,12 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes the cluster optimization operations provided by the one-stop cloud-native Cluster Optimizer platform.</p>
+<p>Provides recommended settings and actions for node group.</p>
 
 </div>
 
-<p>Click on the <code>Node Group</code> menu in the left menu bar of the platform to display the Node Group page, as shown in Figure 39. The Node Group page is divided into three areas:</p>
-<ol>
-<li>Cluster Selection Area: Select the corresponding cluster.</li>
-<li>Query Area: Filter list items based on node group name and node group ID.</li>
-<li>List Area: Displays information about the node groups, their current settings, and optimized settings.</li>
-</ol>
+<h2 id="view-node-group-recommended-settings">View node group recommended settings</h2>
+<p>Click the <code>Node Groups</code> menu on the left menu bar to display the node group page, as shown below.</p>
 
 
 
@@ -162,23 +158,23 @@ This is the multi-page printable view of this section.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_600x0_resize_catmullrom_3.png" width="600" height="324">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng1_hu57170a98ebe6ce10f665738af21b1dfa_69789_600x0_resize_catmullrom_3.png" width="600" height="260">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Node Group Page
+Node group
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>After the user selects a cluster, the list area is displayed in four columns:</p>
+<p>The node group page is divided into 3 areas:</p>
 <ol>
-<li>Node Group Column: Displays the node group name and node group ID.</li>
-<li>Current Settings Column: Displays the current instance type of the node group, whether it is automatically scaled, and the minimum and maximum number of nodes.</li>
-<li>Optimized Settings Column: Displays the instance type of the node group intelligently recommended by the platform, whether to start scaling is recommended, and the recommended minimum and maximum number of nodes.</li>
-<li>Operations Column: Displays the corresponding operations for the node group.</li>
+<li><strong>Cluster selection area</strong>: Used for select a cluster.</li>
+<li><strong>Query area</strong>: Used for filtering node group by node group name and node group ID.</li>
+<li><strong>List area</strong>: Displays node group information, its current settings and optimization settings.</li>
 </ol>
+<p>After select a cluster, the list area will display node groups of the selected cluster scaned by <strong>Cluster Optimizer</strong>&rsquo;s optimization strategy, as shown below.</p>
 
 
 
@@ -187,17 +183,25 @@ Node Group Page
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_600x0_resize_catmullrom_3.png" width="600" height="320">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng2_hud5e03c5a36581ec1547108675dd87a38_101790_600x0_resize_catmullrom_3.png" width="600" height="268">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Node Group Page - Cluster Selected
+Node group: cluster selected
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>Clicking the <code>Adjust</code> link in the figure above opens the Adjust Node Group dialog box, as shown below.</p>
+<p>The list area is divided into four columns:</p>
+<ol>
+<li><strong>Node group column</strong>: Displays the node group name and node group ID.</li>
+<li><strong>Current settings column</strong>: Displays node group&rsquo;s current settings, includes current instance type of the node group, whether autoscaling is enabled, the minimum number of nodes, and the maximum number of nodes.</li>
+<li><strong>Optimization settings column</strong>: Displays recommended settings for node group, includess the recommended node group instance types, whether autoscaling is enabled,, and the recommended minimum and maximum number of nodes.</li>
+<li><strong>Action column</strong>: Displays the corresponding operations on the node group.</li>
+</ol>
+<h2 id="adjust-node-group">Adjust node group</h2>
+<p>Click <code>Adjust</code> in action colum above, it will open the <code>Adjust Node Group</code> dialog, as shown below.</p>
 
 
 
@@ -206,16 +210,19 @@ Node Group Page - Cluster Selected
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_800x0_resize_catmullrom_3.png" width="800" height="410">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_800x0_resize_catmullrom_3.png" width="800" height="419">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Adjust Node Group Dialog Box
+Adjust Node Group Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<blockquote>
+<p>NOTE: Currently, it only shows tips on adjusting node group. In the future, we will provide automatic action on it which can adjust node group&rsquo;s settings automatically according to settting provided.</p>
+</blockquote>
 
 </div>
 </div>

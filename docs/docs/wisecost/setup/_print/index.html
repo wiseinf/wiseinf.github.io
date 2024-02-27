@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Installation and Deployment | Wiseinf</title>
-<meta name="description" content="Describes the detailed steps to install Wisecost.
+<meta name="description" content="Detailed steps on how to install Wisecost are described.
 ">
 <meta property="og:title" content="Installation and Deployment" />
-<meta property="og:description" content="Describes the detailed steps to install Wisecost.
+<meta property="og:description" content="Detailed steps on how to install Wisecost are described.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/wisecost/setup/" /><meta property="og:site_name" content="Wiseinf" />
 
 <meta itemprop="name" content="Installation and Deployment">
-<meta itemprop="description" content="Describes the detailed steps to install Wisecost.
+<meta itemprop="description" content="Detailed steps on how to install Wisecost are described.
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Installation and Deployment"/>
-<meta name="twitter:description" content="Describes the detailed steps to install Wisecost.
+<meta name="twitter:description" content="Detailed steps on how to install Wisecost are described.
 "/>
 
 
@@ -123,7 +123,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Installation and Deployment</h1>
-<div class="lead">Describes the detailed steps to install Wisecost.</div>
+<div class="lead">Detailed steps on how to install Wisecost are described.</div>
 
 
 
@@ -144,25 +144,25 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Wisecost provides cloud-native application cost monitoring, management, and optimization capabilities.</p>
+<p>Wisecost provides cloud native application cost monitoring, management and optimization capabilities.</p>
 
 </div>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
-<li>Mysql database, version 5.7 or higher</li>
-<li>kubernetes cluster, version 1.20 or higher</li>
+<li>Mysql database, version 5.7 and above</li>
+<li>kubernetes cluster, version 1.20 and above</li>
 </ul>
-<h2 id="clone-installation-scripts">Clone Installation Scripts</h2>
+<h2 id="clone-installation-script">Clone installation script</h2>
 <ol>
-<li>Open the console, enter <code>git clone https://github.com/wiseinf/setup.git</code>, and clone the installation scripts to your local machine.
-We provide 2 repo addresses for you to clone to your local machine according to your needs.</li>
+<li>Open the console and enter <code>git clone https://github.com/wiseinf/setup.git</code> to clone the installation script locally.
+We provide 2 warehouse addresses for everyone to clone locally according to their needs.</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th>Repository</th>
-<th style="text-align:left">Repository Address</th>
+<th>Warehouse</th>
+<th style="text-align:left">Warehouse address</th>
 </tr>
 </thead>
 <tbody>
@@ -177,40 +177,40 @@ We provide 2 repo addresses for you to clone to your local machine according to 
 </tbody>
 </table>
 <blockquote>
-<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it hasn&rsquo;t been cloned to the user&rsquo;s home directory, you need to adjust the file paths in the commands accordingly.</p>
+<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it has not been cloned to the user&rsquo;s home directory, the file path in the command needs to be adjusted according to the actual situation.</p>
 </blockquote>
-<h2 id="initialize-the-database">Initialize the Database</h2>
+<h2 id="initialize-database">Initialize database</h2>
 <blockquote>
-<p>Assuming the Mysql database host address is: <code>127.0.0.1</code>.</p>
+<p>Assume that the Mysql database host address is: <code>127.0.0.1</code>.</p>
 </blockquote>
 <ol>
 <li>
-<p>In the console, execute the command <code>mysql -h127.0.0.1 -uroot</code>, enter the password, and log into the mysql database. Where <code>127.0.0.1</code> is the Mysql host address.</p>
+<p>Execute the command <code>mysql -h127.0.0.1 -uroot</code> on the console, enter the password, and log in to the mysql database. Among them, <code>127.0.0.1</code> is the Mysql host address.</p>
 </li>
 <li>
-<p>At the <code>mysql&gt;</code> prompt, execute the following command to create the <code>storage</code> database and <code>wisecost</code> database, and the corresponding tables will be automatically created by the application later.</p>
+<p>Execute the following command at the <code>mysql&gt;</code> prompt to create the <code>storage</code> library and the <code>wisecost</code> library. The corresponding tables will be automatically created by the application later.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/wisecost/sql/create_database.sql
 </span></span></code></pre></div><blockquote>
-<p>Note: Please pay attention to the risk of data loss. If the <code>storage</code> database and <code>wisecost</code> database already exist in the mysql database, the above script will delete the <code>storage</code> database and <code>wisecost</code> database and create a new one.</p>
+<p>Note: Please be aware of the risk of data loss. If the <code>storage</code> library and <code>wisecost</code> library already exist in the mysql database, the above script will delete the <code>storage</code> library and <code>wisecost</code> library and create a new library.</p>
 </blockquote>
 </li>
 <li>
-<p>At the <code>mysql&gt;</code> prompt, execute the following command to create the <code>wisecost</code> user (the default password is <code>Wisecost~</code>) and grant it full access permissions to the <code>storage</code> database and <code>wisecost</code> database.</p>
+<p>Execute the following command at the <code>mysql&gt;</code> prompt to create the <code>wisecost</code> user (the default password is <code>Wisecost~</code>) and grant it full access permissions to the <code>storage</code> library and the <code>wisecost</code> library.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/wisecost/sql/create_user.sql
 </span></span></code></pre></div></li>
 <li>
-<p>In the console, execute the command <code>mysql -h127.0.0.1 -uwisecost</code>, enter the password (the default password is <code>Wisecost~</code>), and log into the mysql database.</p>
+<p>Execute the command <code>mysql -h127.0.0.1 -uwisecost</code> on the console, enter the password (the default password is <code>Wisecost~</code>), and log in to the mysql database.</p>
 </li>
 <li>
-<p>At the <code>mysql&gt;</code> prompt, execute <code>show database</code> to confirm that the <code>storage</code> database and <code>wisecost</code> database have been created. You can query the corresponding data tables in the library with <code>select</code> statements (for example, <code>select * from storage.pv</code>) to confirm whether the user&rsquo;s permissions are normal.</p>
+<p>Execute <code>show database</code> at the <code>mysql&gt;</code> prompt and confirm that the <code>storage</code> library and the <code>wisecost</code> library have been created. You can use the <code>select</code> statement (such as <code>select * from storage.pv</code>) to query the corresponding data table in the library to confirm whether the user&rsquo;s permissions are normal.</p>
 </li>
 <li>
-<p>At this point, the database initialization is complete.</p>
+<p>At this point, the database initialization is completed.</p>
 </li>
 </ol>
-<h2 id="deploy-the-application">Deploy the Application</h2>
+<h2 id="deploy-application">Deploy application</h2>
 <ol>
-<li>Apply the following file to the cluster with <code>kubectl apply -f ~/setup/wisecost/namespace.yaml</code>, creating the namespace <code>wiseinf-system</code>.
+<li>Use <code>kubectl apply -f ~/setup/wisecost/namespace.yaml</code> to apply the following file to the cluster and create the namespace <code>wiseinf-system</code>.
 
     
       
@@ -243,8 +243,8 @@ We provide 2 repo addresses for you to clone to your local machine according to 
     </span></span></code></pre></div>
     
 </li>
-<li>Adjust the <strong>ConfigMap</strong> <code>wisecost-conf</code> in the file <code>~/setup/wisecost/wisecost.yaml</code> according to the configuration of Mysql, and adjust the configuration items <code>optimize</code> and <code>kubestore</code> under <code>dataSourceName: &quot;wisecost:Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true</code> to the corresponding information of Mysql database.</li>
-<li>Apply the following file to the cluster with <code>kubectl apply -f ~/setup/wisecost/wisecost.yaml</code>, deploying the application <strong>Wise Cost</strong>.
+<li>Adjust the <strong>ConfigMap</strong> <code>wisecost-conf</code> in the file <code>~/setup/wisecost/wisecost.yaml</code> according to the configuration of Mysql, and change the <code>dataSourceName under its configuration items </code>optimize<code>and</code>kubestore<code>: &quot;wisecost The user name, user password, database address and port in :Wisecost~@tcp(mysql:3306)/wisecost?charset=utf8mb4&amp;parseTime=true</code> are adjusted to the corresponding information of the Mysql database.</li>
+<li>Use <code>kubectl apply -f ~/setup/wisecost/wisecost.yaml</code> to apply the following file to the cluster and deploy the application <strong>Wise Cost</strong>.
 
     
       
@@ -418,13 +418,13 @@ We provide 2 repo addresses for you to clone to your local machine according to 
 <p>Note:</p>
 </blockquote>
 </li>
-<li>Use <code>kubectl port-forward svc/wisecost-ui-service 80:80</code></li>
-<li>Access URL <code>http://localhost</code>, and you can see the Wise Cost homepage.</li>
-<li>At this point, the application <strong>Wise Cost</strong> is deployed.</li>
+<li>Pass <code>kubectl port-forward svc/wisecost-ui-service 80:80</code></li>
+<li>Visit the URL <code>http://localhost</code> and you will see the Wise Cost homepage.</li>
+<li>At this point, the application <strong>Wise Cost</strong> has been deployed.</li>
 </ol>
-<h2 id="next-step-import-cluster">Next Step: Import Cluster</h2>
-<p>Next, you can add a cluster and view its various costs. See Import Cluster <a href="/docs/wisecost/import-aliyun">Import Alibaba Cloud Cluster</a> for details.</p>
-<h2 id="annex">Annex</h2>
+<h2 id="next-step-import-the-cluster">Next step: Import the cluster</h2>
+<p>Next, you can add a cluster and view its various costs. For details, see Import Cluster <a href="/docs/wisecost/import-aliyun">Import Alibaba Cloud Cluster</a></p>
+<h2 id="appendix">Appendix</h2>
 <ul>
 <li>Script <code>create_user.sql</code>
 

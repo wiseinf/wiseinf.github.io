@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Persistent Volume Optimization | Wiseinf</title>
-<meta name="description" content="This describes the information and operational recommendations provided by node pool optimization.
+<meta name="description" content="Describes persistent volume information and details provided by optimization strategy.
 ">
 <meta property="og:title" content="Persistent Volume Optimization" />
-<meta property="og:description" content="This describes the information and operational recommendations provided by node pool optimization.
+<meta property="og:description" content="Describes persistent volume information and details provided by optimization strategy.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/pv/" /><meta property="og:site_name" content="Wiseinf" />
 
 <meta itemprop="name" content="Persistent Volume Optimization">
-<meta itemprop="description" content="This describes the information and operational recommendations provided by node pool optimization.
+<meta itemprop="description" content="Describes persistent volume information and details provided by optimization strategy.
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Persistent Volume Optimization"/>
-<meta name="twitter:description" content="This describes the information and operational recommendations provided by node pool optimization.
+<meta name="twitter:description" content="Describes persistent volume information and details provided by optimization strategy.
 "/>
 
 
@@ -123,7 +123,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Persistent Volume Optimization</h1>
-<div class="lead">This describes the information and operational recommendations provided by node pool optimization.</div>
+<div class="lead">Describes persistent volume information and details provided by optimization strategy.</div>
 
 
 
@@ -144,11 +144,12 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>This describes the cluster optimization operations provided by the one-stop cloud-native cluster optimization platform (Cluster Optimizer).</p>
+<p>Describes persistent volume information and details provided by optimization strategy.</p>
 
 </div>
 
-<p>Click the <code>Persistent Volume</code> menu on the left menu bar of the platform to display the Persistent Volume page, as shown below.</p>
+<h2 id="view-persistent-volume">View <code>Persistent Volume</code></h2>
+<p>Click <code>Persistent Volume</code> menu on the left menu bar to display the persistent volume page, as shown below.</p>
 
 
 
@@ -157,23 +158,23 @@ This is the multi-page printable view of this section.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv1_hue512a9c09cea6c77b3077e30f8fff04e_41899_600x0_resize_catmullrom_3.png" width="600" height="365">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv1_hucc5c08c08f6d52121947a6be0784ee01_87268_600x0_resize_catmullrom_3.png" width="600" height="285">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Persistent Volume Page
+Persistent Volume
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>The Persistent Volume page is divided into three sections:</p>
+<p>The persistent volume page is divided into thress areas:</p>
 <ol>
-<li>Cluster selection area: Select the corresponding cluster.</li>
-<li>Query area: Filter the list items according to the name, PVC namespace, PVC name, and policy name.</li>
-<li>List area: Displays PV, PVC, policy name, usage, last update time, and operation column.</li>
+<li><strong>Cluster selection area</strong>: Used for select a cluster.</li>
+<li><strong>Query area</strong>: Used for filtering persistent volume by name, persistent volume claim namespace and name, strategy name and so on.</li>
+<li><strong>List area</strong>: Displays persistent volume, persistent volume claim, strategy name, usage, latest update time and realted actions.</li>
 </ol>
-<p>The disk page after selecting a cluster is shown below:</p>
+<p>After select a cluster, the list area will display persistent volumes of the selected cluster scaned by <strong>Cluster Optimizer</strong>&rsquo;s optimization strategies, as shown below.</p>
 
 
 
@@ -182,26 +183,27 @@ Persistent Volume Page
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv2_hu4f738f43cdbc3a30690ded55f2dfade5_68487_600x0_resize_catmullrom_3.png" width="600" height="395">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv2_hu9e44c682a240125c901463ce98c3b340_95509_600x0_resize_catmullrom_3.png" width="600" height="265">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Persistent Volume Page - Select Cluster
+Persistent Volume: cluster selected
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>The list area displays six columns:</p>
+<p>The list area is divided into six columns:</p>
 <ol>
-<li>PV column: Shows the PV name, region, capacity, and creation time.</li>
-<li>PVC column: Shows the PVC namespace and name.</li>
-<li>Policy name column: Shows the optimization policy name, currently including two optimization policies for unused PVs and low-usage PVs.</li>
-<li>Usage column: Shows the usage of the PV, only effective under the low-usage PV optimization strategy.</li>
-<li>Last update time column: Shows the last update time.</li>
-<li>Operation column: Shows the corresponding operations for the disk.</li>
+<li><strong>PV column</strong>: displays the PV name, region, capacity and creation time.</li>
+<li><strong>PVC column</strong>: displays the PVC namespace and name.</li>
+<li><strong>Strategy name column</strong>: displays the name of the optimization strategy. it includes two optimization strategies: <code>unused PV</code> and <code>low utilization PV</code>.</li>
+<li><strong>Usage column</strong>: displays the usage of PV, which is only valid for the low utilization PV optimization strategy.</li>
+<li><strong>Last updated time column</strong>: displays the last updated time scaned by the optimization strategies.</li>
+<li><strong>Action column</strong>: displays the actions on the persistent volume.</li>
 </ol>
-<p>Users can click the <code>Delete</code> link to open the Delete Persistent Volume dialog box, which displays detailed information about the Persistent Volume and recommended adjustment schemes, as shown below.</p>
+<h2 id="delete-persistent-volume">Delete persistent volume</h2>
+<p>Click <code>Delete</code> in action column in the row with <code>Unused PV</code> strategy name above, it will open the <code>Delete Persistent Volume</code> dialog, as shown below.</p>
 
 
 
@@ -210,16 +212,38 @@ Persistent Volume Page - Select Cluster
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv3_huee2a4ef5fd2b1fcd4d17f5564833ef4e_81179_600x0_resize_catmullrom_3.png" width="600" height="263">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_600x0_resize_catmullrom_3.png" width="600" height="215">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Delete Persistent Volume Dialog Box
+Persistent Volume: delete persistent volume dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<p>It shows instructions on deleting persistent volume carefully.</p>
+<h2 id="adjust-persistent-volume-size">Adjust persistent volume size</h2>
+<p>Click <code>Adjust</code> in action column in the row with <code>Low Utilization PV</code> strategy name above, it will open the <code>Adjust Persistent Volume Size</code> dialog, as shown below.</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv4_hu40af59ab1d1b093aa299d9f21b874d7b_92240_600x0_resize_catmullrom_3.png" width="600" height="267">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Persistent Volume: adjust persistent volume size
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>It shows steps on resizing a persistent volume carefully.</p>
 
 </div>
 </div>

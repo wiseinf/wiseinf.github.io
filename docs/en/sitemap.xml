@@ -2,17 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/docs/cluster-optimizer/operations/adjust-nodegroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/operations/adjust-nodegroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/operations/adjust-nodegroup/"
-                />
+    <loc>/docs/cluster-optimizer/actions/adjust-nodegroup/</loc>
   </url><url>
     <loc>/docs/cluster-optimizer/</loc>
     <xhtml:link
@@ -36,18 +26,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/docs/ruyi/configuration/command-line/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/setup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/setup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/setup/"
                 />
   </url><url>
     <loc>/docs/ruyi/setup/</loc>
@@ -74,6 +52,30 @@
                 href="/docs/wisecost/setup/"
                 />
   </url><url>
+    <loc>/docs/ruyi/configuration/nodegroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/ruyi/configuration/nodegroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/ruyi/configuration/nodegroup/"
+                />
+  </url><url>
+    <loc>/docs/cluster-optimizer/setup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/cluster-optimizer/setup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/cluster-optimizer/setup/"
+                />
+  </url><url>
     <loc>/docs/wisecost/</loc>
     <xhtml:link
                 rel="alternate"
@@ -86,17 +88,7 @@
                 href="/docs/wisecost/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/operations/adjust-node/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/operations/adjust-node/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/operations/adjust-node/"
-                />
+    <loc>/docs/cluster-optimizer/actions/adjust-node/</loc>
   </url><url>
     <loc>/docs/ruyi/autoscaling/</loc>
     <xhtml:link
@@ -108,18 +100,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/docs/ruyi/autoscaling/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/import-aliyun/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/import-aliyun/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/import-aliyun/"
                 />
   </url><url>
     <loc>/docs/wisecost/import-aliyun/</loc>
@@ -134,6 +114,18 @@
                 href="/docs/wisecost/import-aliyun/"
                 />
   </url><url>
+    <loc>/docs/cluster-optimizer/import-aws/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/cluster-optimizer/import-aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/cluster-optimizer/import-aws/"
+                />
+  </url><url>
     <loc>/docs/ruyi/</loc>
     <xhtml:link
                 rel="alternate"
@@ -146,40 +138,18 @@
                 href="/docs/ruyi/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/operations/adjust-disk/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/operations/adjust-disk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/operations/adjust-disk/"
-                />
+    <loc>/docs/cluster-optimizer/actions/adjust-disk/</loc>
   </url><url>
-    <loc>/docs/cluster-optimizer/overview/</loc>
+    <loc>/docs/cluster-optimizer/import-alibaba/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/overview/"
+                href="/zh-cn/docs/cluster-optimizer/import-alibaba/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/cluster-optimizer/overview/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/node-cost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/node-cost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/node-cost/"
+                href="/docs/cluster-optimizer/import-alibaba/"
                 />
   </url><url>
     <loc>/docs/wisecost/cluster-cost/</loc>
@@ -194,6 +164,42 @@
                 href="/docs/wisecost/cluster-cost/"
                 />
   </url><url>
+    <loc>/docs/wisecost/node-cost/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/wisecost/node-cost/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/wisecost/node-cost/"
+                />
+  </url><url>
+    <loc>/docs/ruyi/virtualcapacity/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/ruyi/virtualcapacity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/ruyi/virtualcapacity/"
+                />
+  </url><url>
+    <loc>/docs/cluster-optimizer/overview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/cluster-optimizer/overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/cluster-optimizer/overview/"
+                />
+  </url><url>
     <loc>/docs/ruyi/configuration/</loc>
     <xhtml:link
                 rel="alternate"
@@ -206,29 +212,7 @@
                 href="/docs/ruyi/configuration/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/operations/delete-pv/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/operations/delete-pv/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/operations/delete-pv/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/nodegroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/nodegroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/nodegroup/"
-                />
+    <loc>/docs/cluster-optimizer/actions/delete-pv/</loc>
   </url><url>
     <loc>/docs/wisecost/cost/</loc>
     <xhtml:link
@@ -266,28 +250,16 @@
                 href="/docs/ruyi/monitoring/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/node/</loc>
+    <loc>/docs/cluster-optimizer/nodegroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/node/"
+                href="/zh-cn/docs/cluster-optimizer/nodegroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/cluster-optimizer/node/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/disk/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/disk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/disk/"
+                href="/docs/cluster-optimizer/nodegroup/"
                 />
   </url><url>
     <loc>/docs/ruyi/troubleshooting/</loc>
@@ -302,6 +274,18 @@
                 href="/docs/ruyi/troubleshooting/"
                 />
   </url><url>
+    <loc>/docs/cluster-optimizer/node/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/cluster-optimizer/node/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/cluster-optimizer/node/"
+                />
+  </url><url>
     <loc>/docs/wisecost/development/</loc>
     <xhtml:link
                 rel="alternate"
@@ -312,6 +296,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/docs/wisecost/development/"
+                />
+  </url><url>
+    <loc>/docs/cluster-optimizer/disk/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/cluster-optimizer/disk/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/cluster-optimizer/disk/"
                 />
   </url><url>
     <loc>/docs/cluster-optimizer/pv/</loc>
@@ -338,16 +334,18 @@
                 href="/docs/cluster-optimizer/app/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/operations/</loc>
+    <loc>/docs/cluster-optimizer/actions/</loc>
+  </url><url>
+    <loc>/docs/wisecost/development/api/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/operations/"
+                href="/zh-cn/docs/wisecost/development/api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/cluster-optimizer/operations/"
+                href="/docs/wisecost/development/api/"
                 />
   </url><url>
     <loc>/products/cluster-optimizer/</loc>
@@ -446,54 +444,6 @@
                 href="/services/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/import-aws/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/import-aws/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/import-aws/"
-                />
-  </url><url>
-    <loc>/docs/ruyi/configuration/nodegroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/configuration/nodegroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/configuration/nodegroup/"
-                />
-  </url><url>
-    <loc>/docs/ruyi/virtualcapacity/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/virtualcapacity/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/virtualcapacity/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/development/api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/development/api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/development/api/"
-                />
-  </url><url>
     <loc>/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -540,8 +490,6 @@
   </url><url>
     <loc>/categories/cluster-autoscaling/</loc>
   </url><url>
-    <loc>/tags/cluster-optimization/</loc>
-  </url><url>
     <loc>/categories/cluster-optimization/</loc>
   </url><url>
     <loc>/tags/cluster-optimizer/</loc>
@@ -555,6 +503,8 @@
                 hreflang="en"
                 href="/tags/cluster-optimizer/"
                 />
+  </url><url>
+    <loc>/tags/cluster-overview/</loc>
   </url><url>
     <loc>/contactus/</loc>
     <xhtml:link
@@ -570,11 +520,15 @@
   </url><url>
     <loc>/categories/cost-management/</loc>
   </url><url>
-    <loc>/tags/disk-optimization/</loc>
+    <loc>/tags/disk-optimizer/</loc>
   </url><url>
     <loc>/categories/elastic-computing/</loc>
   </url><url>
-    <loc>/tags/node-pool-optimization/</loc>
+    <loc>/categories/expansion-and-contraction/</loc>
+  </url><url>
+    <loc>/tags/node-group-optimization/</loc>
+  </url><url>
+    <loc>/tags/node-optimization/</loc>
   </url><url>
     <loc>/tags/persistent-volume-optimization/</loc>
   </url><url>
@@ -589,10 +543,6 @@
                 hreflang="en"
                 href="/tags/ruyi/"
                 />
-  </url><url>
-    <loc>/tags/ruyi-engine/</loc>
-  </url><url>
-    <loc>/categories/scaling/</loc>
   </url><url>
     <loc>/search/</loc>
     <xhtml:link
@@ -629,8 +579,6 @@
                 hreflang="en"
                 href="/tags/wisecost/"
                 />
-  </url><url>
-    <loc>/tags/wiseinf/</loc>
   </url><url>
     <loc>/</loc>
     <xhtml:link

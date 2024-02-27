@@ -15,22 +15,258 @@
     
     
     <item>
-      <title>Docs: Installation and Deployment</title>
-      <link>/docs/ruyi/setup/</link>
+      <title>Docs: Node group configurations</title>
+      <link>/docs/ruyi/configuration/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/ruyi/setup/</guid>
+      <guid>/docs/ruyi/configuration/nodegroup/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Ruyi: Cloud Native Scaling Engine.&lt;/p&gt;
+&lt;p&gt;Ruyi: Cloud native cluster expansion and contraction engine configuration.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;overview-of-node-group-configuration-parameters&#34;&gt;Overview of node group configuration parameters&lt;/h2&gt;
+&lt;p&gt;The engine must depend on the node group configuration parameters in order to run. The node group configuration parameters use the command line parameter &lt;code&gt;--config&lt;/code&gt; to specify the configuration file location. For example: &lt;code&gt;--config=/etc/ruyi/config.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The configuration file format is YAML format, the example is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;nodeGroups&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;default-pool&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;nodeGroupId&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;np1234567890&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;key&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;spot_type&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;value&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cpu&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;dryRun&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;enableAutoscaling&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;autoscaling&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;minNodes&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;maxNodes&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;enableScaleDown&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;scaleUp&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;threshold&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.70&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;scaleOnPodPending&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;silencePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;scaleDown&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;threshold&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.40&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;softDeleteGracePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;hardDeleteGracePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;maxNodeRemovalRate&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;taintEffect&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;NoExecute&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;enableVirtualCapacity&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;virtualCapacity&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;prometheusAddress&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://prometheus:9090&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;prometheusWindow&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2m&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;isThanos&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;thanosClusterKey&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cluster&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;thanosClusterValue&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;reservationRatio&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;increaseSilencePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;decreaseSilencePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;stabilityWindow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;5m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;tolerance&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;cpuMaxUsage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;maxValue&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;minValue&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;resourceReservation&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;kubeReserved&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;SystemReserved&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;SystemReservedPercentage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;alicloud&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;clusterId&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;c1234567890&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;lifecycle&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;spot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;resourceTagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h2&gt;
+&lt;h3 id=&#34;name&#34;&gt;&lt;code&gt;name&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;name&lt;/code&gt; is the name used during engine running and can be used to output friendly log information, etc. Different node group names must be unique.&lt;/p&gt;
+&lt;h3 id=&#34;labels-labelkey-and-labelvalue&#34;&gt;&lt;code&gt;labels&lt;/code&gt;, &lt;code&gt;label.Key&lt;/code&gt; and &lt;code&gt;label.Value&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;labels&lt;/code&gt; is an array of key-value pairs through which the engine selects node groups.
+Among them, &lt;code&gt;label.Key&lt;/code&gt; and &lt;code&gt;label.Value&lt;/code&gt; are the key and value in the key-value pair,&lt;/p&gt;
+&lt;h3 id=&#34;dryrun&#34;&gt;&lt;code&gt;dryRun&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;dryRun&lt;/code&gt; means only running without any modification to the actual environment. When this value is &lt;code&gt;false&lt;/code&gt;, it can be overridden by the &lt;code&gt;dryRun&lt;/code&gt; command line parameter.&lt;/p&gt;
+&lt;h3 id=&#34;nodegroupid&#34;&gt;&lt;code&gt;nodeGroupId&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;nodeGroupId&lt;/code&gt; is the node group ID of the node group in the cloud service provider. The cloud service provider uses this parameter to obtain the node group information from the corresponding cloud service provider.&lt;/p&gt;
+&lt;h3 id=&#34;enableautoscaling&#34;&gt;&lt;code&gt;enableAutoscaling&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;enableAutoscaling&lt;/code&gt; indicates whether to enable the automatic scaling feature, and the default is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;autoscaling&#34;&gt;&lt;code&gt;autoscaling&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;autoscaling&lt;/code&gt; provides corresponding parameters for automatic expansion and contraction. For details, please refer to [Automatic expansion and contraction configuration] (#automatic expansion and contraction configuration)&lt;/p&gt;
+&lt;h3 id=&#34;enablevirtualcapacity&#34;&gt;&lt;code&gt;enableVirtualCapacity&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;enableVirtualCapacity&lt;/code&gt; indicates whether to enable the virtual capacity feature, and the default is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;virtualcapacity&#34;&gt;&lt;code&gt;virtualCapacity&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;virtualCapacity&lt;/code&gt; provides corresponding parameters for virtual capacity. For details, please see [Virtual Capacity](#Virtual Capacity Configuration)&lt;/p&gt;
+&lt;h3 id=&#34;alicloud&#34;&gt;&lt;code&gt;alicloud&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;alicloud&lt;/code&gt; provides corresponding parameters for the cloud service provider Alibaba Cloud. For details, please refer to [Alibaba Cloud Service Provider Configuration](#Alibaba Cloud Service Provider Configuration)&lt;/p&gt;
+&lt;h2 id=&#34;automatic-expansion-and-contraction-configuration&#34;&gt;Automatic expansion and contraction configuration&lt;/h2&gt;
+&lt;p&gt;The automatic expansion and contraction configuration provides corresponding parameters for the automatic expansion and contraction of the node group. Examples are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;autoscaling&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;minNodes&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;maxNodes&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;enableScaleUp&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;enableScaleDown&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;scaleUp&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;threshold&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.70&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;scaleOnPodPending&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;silencePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;scaleDown&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;threshold&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.40&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;softDeleteGracePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;hardDeleteGracePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;maxNodeRemovalRate&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;taintEffect&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;NoExecute&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;minnodes-and-maxnodes&#34;&gt;&lt;code&gt;minNodes&lt;/code&gt; and &lt;code&gt;maxNodes&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameters &lt;code&gt;minNodes&lt;/code&gt; and &lt;code&gt;maxNodes&lt;/code&gt; are the maximum and minimum values ​​for the node pool size. When performing node expansion and contraction, it will be ensured that the node pool size meets the maximum and minimum constraints.&lt;/p&gt;
+&lt;h3 id=&#34;enablescaleup&#34;&gt;&lt;code&gt;enableScaleUp&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;enableScaleUp&lt;/code&gt; indicates whether to enable scaling, and the default is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;enablescaledown&#34;&gt;&lt;code&gt;enableScaleDown&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;enableScaleUp&lt;/code&gt; indicates whether to enable scaling, and the default is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;scaleup&#34;&gt;&lt;code&gt;scaleUp&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleUp&lt;/code&gt; provides parameters related to expansion.&lt;/p&gt;
+&lt;h3 id=&#34;scaleupthreshold&#34;&gt;&lt;code&gt;scaleUp.threshold&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleUp.threshold&lt;/code&gt; is the threshold for expansion. When the ratio of the total Requests of all running Pods on the node group to the total Allocatable of the node group is greater than this value, the expansion operation will be performed.&lt;/p&gt;
+&lt;h3 id=&#34;scaleupscaleonpodpending&#34;&gt;&lt;code&gt;scaleUp.scaleOnPodPending&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleUp.scaleOnPodPending&lt;/code&gt; indicates whether to perform expansion when the Pod is Pending. The default value is &lt;code&gt;false&lt;/code&gt;. When all nodes in the node group cannot meet the resource requirements of the node, the expansion operation is performed.&lt;/p&gt;
+&lt;h3 id=&#34;scaleupsilenceperiod&#34;&gt;&lt;code&gt;scaleUp.silencePeriod&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;silencePeriod&lt;/code&gt; is the silence time. When an expansion event occurs, no expansion operations will be performed within the &lt;code&gt;silencePeriod&lt;/code&gt; time.&lt;/p&gt;
+&lt;h3 id=&#34;scaledown&#34;&gt;&lt;code&gt;scaleDown&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleDown&lt;/code&gt; provides scaling-related parameters.&lt;/p&gt;
+&lt;h3 id=&#34;scaledownthreshold&#34;&gt;&lt;code&gt;scaleDown.threshold&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleDown.threshold&lt;/code&gt; is the threshold for expansion. When the ratio of the sum of Requests of all running Pods on the node group to the sum of Allocatables of the node group is less than this value, the scaling operation is performed.&lt;/p&gt;
+&lt;h3 id=&#34;scaledownsoftdeletegraceperiod&#34;&gt;&lt;code&gt;scaleDown.softDeleteGracePeriod&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleDown.softDeleteGracePeriod&lt;/code&gt; is the node soft deletion waiting time. During the soft deletion waiting time, the engine does not perform the reduction operation.&lt;/p&gt;
+&lt;h3 id=&#34;scaledownharddeletegraceperiod&#34;&gt;&lt;code&gt;scaleDown.hardDeleteGracePeriod&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleDown.hardDeleteGracePeriod&lt;/code&gt; is the node hard deletion waiting time. When the soft deletion waiting time reaches the hard deletion waiting time, the node will be deleted only when the Pod on the node is empty. After the hard deletion waiting time, the engine will forcefully delete the node.&lt;/p&gt;
+&lt;!--
+For the logic of whether the node is empty, please refer to `pkg/k8s` `NodeEmpty()` --&gt;
+&lt;h3 id=&#34;scaledownmaxnoderemovalrate&#34;&gt;&lt;code&gt;scaleDown.maxNodeRemovalRate&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleDown.maxNodeRemovalRate&lt;/code&gt; is the maximum value of nodes that can be reduced at the same time.&lt;/p&gt;
+&lt;h3 id=&#34;scaledowntainteffect&#34;&gt;&lt;code&gt;scaleDown.taintEffect&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;scaleDown.taintEffect&lt;/code&gt; refers to the operation when scaling down. When scaling down, the node will first be labeled with &lt;code&gt;taint&lt;/code&gt;, and its value range is as follows:&lt;/p&gt;
+&lt;p&gt;-NoSchedule
+-NoExecute&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PreferNoSchedule&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the specific meaning, please see &lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration&#34;&gt;taint and tolerance&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;virtual-capacity-configuration&#34;&gt;Virtual capacity configuration&lt;/h2&gt;
+&lt;p&gt;Virtual capacity configuration provides corresponding parameters for virtual capacity. Examples are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;virtualCapacity&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;prometheusAddress&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://prometheus:9090&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;prometheusWindow&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2m&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;isThanos&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;thanosClusterKey&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cluster&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;thanosClusterValue&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;reservationRatio&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;increaseSilencePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;decreaseSilencePeriod&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;stabilityWindow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;5m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;tolerance&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;cpuMaxUsage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;maxValue&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;minValue&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;resourceReservation&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;kubeReserved&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;systemReserved&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;200m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;reservedPercentage&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;prometheusaddress&#34;&gt;&lt;code&gt;prometheusAddress&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;prometheusAddress&lt;/code&gt; is the Prometheus address monitored by Metrics of the current cluster node.&lt;/p&gt;
+&lt;h3 id=&#34;prometheuswindow&#34;&gt;&lt;code&gt;prometheusWindow&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;prometheusWindow&lt;/code&gt; is the time window when the engine queries prometheus.&lt;/p&gt;
+&lt;h3 id=&#34;isthanos&#34;&gt;&lt;code&gt;isThanos&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;isThanos&lt;/code&gt; refers to whether the Prometheus address corresponding to the parameter &lt;code&gt;prometheusAddress&lt;/code&gt; is Thanos. The default is false. When the prometheus address is Thanos, Thanos related parameters will be appended when the engine queries.&lt;/p&gt;
+&lt;h3 id=&#34;thanosclusterkey-and-thanosclustervalue&#34;&gt;&lt;code&gt;thanosClusterKey&lt;/code&gt; and &lt;code&gt;thanosClusterValue&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameters &lt;code&gt;thanosClusterKey&lt;/code&gt; and &lt;code&gt;thanosClusterValue&lt;/code&gt; are the parameter names and values ​​​​that are appended to the engine query (when the parameter &lt;code&gt;isThanos&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;). Additional parameters &lt;code&gt;thanosClusterKey&lt;/code&gt; and &lt;code&gt;thanosClusterValue&lt;/code&gt; can improve query performance.&lt;/p&gt;
+&lt;h3 id=&#34;increasesilenceperiod&#34;&gt;&lt;code&gt;increaseSilencePeriod&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;increaseSilencePeriod&lt;/code&gt; is the silent time when the node virtual capacity rate increases. When the node virtual capacity rate increases, this value will be maintained within the silent time window &lt;code&gt;increaseSilencePeriod&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;decreasesilenceperiod&#34;&gt;&lt;code&gt;decreaseSilencePeriod&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;decreaseSilencePeriod&lt;/code&gt; is the silent time when the node virtual capacity rate is reduced. When the node virtual capacity rate is reduced, this value will be maintained within the silent time window &lt;code&gt;decreaseSilencePeriod&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;stabilitywindow&#34;&gt;&lt;code&gt;stabilityWindow&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;stabilityWindow&lt;/code&gt; is the stability window. The engine will calculate the virtual capacity rate at regular intervals. The lowest value within the stability window will be selected for the final decision to avoid excessive changes in the virtual capacity rate, which may cause the virtual capacity to change too quickly. .&lt;/p&gt;
+&lt;h3 id=&#34;tolerance&#34;&gt;&lt;code&gt;tolerance&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;tolerance&lt;/code&gt; is the maximum difference between each time the virtual capacity rate is applied and the last time. This value can prevent the node&amp;rsquo;s Allocatable from rising too quickly.&lt;/p&gt;
+&lt;h3 id=&#34;cpumaxusage&#34;&gt;&lt;code&gt;cpuMaxUsage&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;cpuMaxUsage&lt;/code&gt; refers to the maximum CPU utilization. When the CPU utilization of a node is greater than this value, new Pods will no longer be scheduled.&lt;/p&gt;
+&lt;h3 id=&#34;maxvalue-and-minvalue&#34;&gt;&lt;code&gt;maxValue&lt;/code&gt; and &lt;code&gt;minValue&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameters &lt;code&gt;maxValue&lt;/code&gt; and &lt;code&gt;minValue&lt;/code&gt; are the maximum and minimum values ​​of the virtual capacity rate. The default value of &lt;code&gt;minValue&lt;/code&gt; is 1.&lt;/p&gt;
+&lt;p&gt;The virtual capacity rate is the ratio of the node&amp;rsquo;s &lt;code&gt;Allocatable&lt;/code&gt; to the node&amp;rsquo;s original &lt;code&gt;Allocatable&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;resourcereservation&#34;&gt;&lt;code&gt;resourceReservation&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;resourceReservation&lt;/code&gt; is the resource reserved when calculating the virtual capacity rate. The default value of the parameter is empty.&lt;/p&gt;
+&lt;p&gt;When the parameter default value is empty, the engine will obtain the KubeletConfiguration of the node from the node in the node pool and obtain the corresponding value from the KubeletConfiguration.&lt;/p&gt;
+&lt;h3 id=&#34;resourcereservationkubereserved-and-resourcereservationsystemreserved&#34;&gt;&lt;code&gt;resourceReservation.kubeReserved&lt;/code&gt; and &lt;code&gt;resourceReservation.systemReserved&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameters &lt;code&gt;resourceReservation.kubeReserved&lt;/code&gt; and &lt;code&gt;resourceReservation.systemReserved&lt;/code&gt; are the CPU resources reserved for kubelet and system respectively.&lt;/p&gt;
+&lt;h3 id=&#34;resourcereservationreservedpercentage&#34;&gt;&lt;code&gt;resourceReservation.reservedPercentage&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;resourceReservation.reservedPercentage&lt;/code&gt; is the additional resource reserved by the engine for Pod running on the node.&lt;/p&gt;
+&lt;h2 id=&#34;alibaba-cloud-service-provider-configuration&#34;&gt;Alibaba Cloud Service Provider Configuration&lt;/h2&gt;
+&lt;p&gt;Alibaba Cloud service provider configuration provides corresponding parameters to the cloud service provider Alibaba Cloud. Examples are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;alicloud&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;clusterId&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;c1234567890&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;life cycle&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;spot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;resourceTagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;alicloudclusterid&#34;&gt;&lt;code&gt;alicloud.clusterId&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;alicloud.clusterId&lt;/code&gt; is the cluster ID of the Alibaba Cloud ACK cluster, which is generally identified by the label &lt;code&gt;ack.aliyun.com&lt;/code&gt; on the node. For example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ack.aliyun.com=c1234567890
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Among them, &lt;code&gt;c1234567890&lt;/code&gt; is the cluster ID.&lt;/p&gt;
+&lt;h2 id=&#34;aws-cloud-service-provider-configuration&#34;&gt;AWS cloud service provider configuration&lt;/h2&gt;
+&lt;p&gt;The AWS cloud service provider configuration provides corresponding parameters for the cloud service provider AWS. Examples are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;aws&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;launchTemplateId&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;lt-&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;launchTemplateVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;spot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;instanceReadyTimeout&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;resourceTagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;awslaunchtemplateid-and-awslaunchtemplateversion&#34;&gt;&lt;code&gt;aws.launchTemplateId&lt;/code&gt; and &lt;code&gt;aws.launchTemplateVersion&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameters &lt;code&gt;aws.launchTemplateId&lt;/code&gt; and &lt;code&gt;aws.launchTemplateVersion&lt;/code&gt; are the AWS launch template ID and template version values ​​respectively, which are used to configure startup during the expansion process.template.&lt;/p&gt;
+&lt;p&gt;With this parameter, the engine can use the AWS Fleet API to expand the node pool to the desired capacity in one go.&lt;/p&gt;
+&lt;p&gt;The values ​​of parameters &lt;code&gt;aws.launchTemplateId&lt;/code&gt; and &lt;code&gt;aws.launchTemplateVersion&lt;/code&gt; can be obtained in two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtained through the Launch Templates page in the AWS EC2 console.&lt;/li&gt;
+&lt;li&gt;Via CLI command in &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/reference/ec2/create-launch-template.html&#34;&gt;Create Launch Template&lt;/a&gt;
+Or get it from the &lt;code&gt;LatestVersionNumber&lt;/code&gt; or &lt;code&gt;DefaultVersionNumber&lt;/code&gt; returned in the AWS API.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;awsinstancereadytimeout&#34;&gt;&lt;code&gt;aws.instanceReadyTimeout&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;aws.instanceReadyTimeout&lt;/code&gt; is the timeout period to wait for the EC2 instance to be ready when using the AWS Fleet API to expand the node pool at one time.&lt;/p&gt;
+&lt;p&gt;This parameter is optional and the default value is 1 minute.&lt;/p&gt;
+&lt;!-- This is an optional field. The default value is 1 minute.
+
+When using the one-shot capacity acquisition for AWS (see `aws.launch_template_id`), this is the maximum amount of time
+that Escalator will block waiting for new EC2 instances to become ready so that they can be added to the node group.
+This roughly corresponds to the amount of time it takes an instance to boot to multi-user mode and for the EC2 control
+plane to notice that it is healthy. This generally takes much less than a minute.
+
+**Note:** Escalator will block other scaling operations for, at most, this amount of time while new capacity comes
+online. --&gt;
+&lt;h3 id=&#34;awslifecyle&#34;&gt;&lt;code&gt;aws.lifecyle&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;aws.lifecyle&lt;/code&gt; specifies the life cycle of the instance, and its value is &lt;code&gt;on-demand&lt;/code&gt; or &lt;code&gt;spot&lt;/code&gt; or &lt;code&gt;on-demand,spot&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This parameter is optional and the default value is &lt;code&gt;on-demand&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;on-demand&lt;/code&gt; instructs the engine to use on-demand instances when scaling up, and &lt;code&gt;spot&lt;/code&gt; instructs the engine to use spot instances when scaling up.&lt;/p&gt;
+&lt;h3 id=&#34;awsinstancetypeoverrides&#34;&gt;&lt;code&gt;aws.instanceTypeOverrides&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;aws.lifecyle&lt;/code&gt; specifies the type of instance. This parameter is optional and has no default value.&lt;/p&gt;
+&lt;p&gt;When the engine creates an expansion request, it can use multiple instance types specified by the parameter &lt;code&gt;aws.lifecyle&lt;/code&gt; to increase the probability of successful expansion.&lt;/p&gt;
+&lt;h3 id=&#34;awsresourcetagging&#34;&gt;&lt;code&gt;aws.resourceTagging&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;aws.resourceTagging&lt;/code&gt; indicates whether to add resource tags to the nodes managed by the engine &lt;code&gt;autoscaling.wiseinf.com\enabled&lt;/code&gt;:&lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This label does not affect any functions of the engine. It is mainly used to facilitate the management of EC2 instances using labels. For details, please refer to &lt;a href=&#34;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html&#34;&gt;Using Tags&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Autoscaling</title>
+      <link>/docs/ruyi/autoscaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/ruyi/autoscaling/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi: Cloud native cluster autoscaling engine.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;principle-of-autoscaling&#34;&gt;Principle of autoscaling&lt;/h2&gt;
+&lt;p&gt;Updating, please wait.&lt;/p&gt;
 
       </description>
     </item>

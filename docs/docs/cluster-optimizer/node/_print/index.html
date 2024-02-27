@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Node Optimization | Wiseinf</title>
-<meta name="description" content="Describes node-related information and optimization suggestions.
+<meta name="description" content="Describes node information and details provided by optimization strategy.
 ">
 <meta property="og:title" content="Node Optimization" />
-<meta property="og:description" content="Describes node-related information and optimization suggestions.
+<meta property="og:description" content="Describes node information and details provided by optimization strategy.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/node/" /><meta property="og:site_name" content="Wiseinf" />
 
 <meta itemprop="name" content="Node Optimization">
-<meta itemprop="description" content="Describes node-related information and optimization suggestions.
+<meta itemprop="description" content="Describes node information and details provided by optimization strategy.
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node Optimization"/>
-<meta name="twitter:description" content="Describes node-related information and optimization suggestions.
+<meta name="twitter:description" content="Describes node information and details provided by optimization strategy.
 "/>
 
 
@@ -123,7 +123,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Node Optimization</h1>
-<div class="lead">Describes node-related information and optimization suggestions.</div>
+<div class="lead">Describes node information and details provided by optimization strategy.</div>
 
 
 
@@ -144,11 +144,12 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes node-related information and optimization suggestions.</p>
+<p>Describes node information and details provided by optimization strategy.</p>
 
 </div>
 
-<p>Click the <code>Nodes</code> menu in the left menu bar of the platform to display the Nodes page, as shown below.</p>
+<h2 id="view-node-information">View node information</h2>
+<p>Click the <code>Nodes</code> menu on the left menu bar to display the node page, as shown below.</p>
 
 
 
@@ -157,23 +158,23 @@ This is the multi-page printable view of this section.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/node/node1_hucbd1b26c7c372bc6a3c143a2da6ffa06_32634_600x0_resize_catmullrom_3.png" width="600" height="333">
+	<img class="card-img-top" src="/docs/cluster-optimizer/node/node1_hu2c53deb4231ea2a8699f95c38ba1f137_72885_600x0_resize_catmullrom_3.png" width="600" height="280">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Nodes Page
+Node
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>The Nodes page is divided into three sections:</p>
+<p>The node page is divided into three areas:</p>
 <ol>
-<li>Cluster Selection Area: Select the corresponding cluster.</li>
-<li>Query Area: Filter list items by Node Group Name and Node Group ID.</li>
-<li>List Area: Displays information about Node Groups, their current settings, and optimized settings.</li>
+<li><strong>Cluster selection area</strong>: Used for select a cluster.</li>
+<li><strong>Query area</strong>: Used for filtering node by instance Id, instance type and node name.</li>
+<li><strong>List area</strong>: Displays node information, its current settings and recommendations.</li>
 </ol>
-<p>The Nodes page for selecting a cluster is shown below:
+<p>After select a cluster, the list area will display node of the selected cluster scaned by <strong>Cluster Optimizer</strong>&rsquo;s optimization strategy, as shown below.</p>
 
 
 
@@ -182,25 +183,26 @@ Nodes Page
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/node/node2_hu17fda8b599b1f8ac4ecabc25c3b623cd_82280_600x0_resize_catmullrom_3.png" width="600" height="418">
+	<img class="card-img-top" src="/docs/cluster-optimizer/node/node2_hu51efa93672742c92b05ae62a4461ee92_120186_600x0_resize_catmullrom_3.png" width="600" height="305">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Nodes Page - Select Cluster
+Node: cluster selected
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
-</p>
-<p>The List Area display is divided into five columns:</p>
+
+<p>The list area is divided into five columns:</p>
 <ol>
-<li>Node Information Column: Displays the Node Name, Instance ID, and Region information.</li>
-<li>Current Settings Column: Displays the instance type, CPU cores, and memory size of the node.</li>
-<li>Policy Name Column: Displays the policy used for node optimization; currently, only the low utilization node strategy is supported.</li>
-<li>Details Column: Displays information provided by the policy. For example, for the low utilization node strategy, it monitors the average utilization of CPU and memory and compares it with the threshold set by the platform to help users adjust the node instance type.</li>
-<li>Actions Column: Displays corresponding actions for the node.</li>
+<li><strong>Node column</strong>: displays node name, instance ID and region.</li>
+<li><strong>Current settings column</strong>: displays node’s instance type, number of CPU cores, and memory size.</li>
+<li><strong>Strategy name column</strong>: displays the strategy used for node optimization.</li>
+<li><strong>Details column</strong>: displays the information provided by the strategy in <strong>strategy name column</strong>. For example, for low utilization node strategy, the average utilization of CPU and memory will be listed and compared with the thresholds set by the platform to help users adjust node instance types.</li>
+<li><strong>Action bar</strong>: displays the corresponding operations on the node</li>
 </ol>
-<p>Clicking the <code>Adjust</code> link opens the Adjust Nodes dialog box, which displays detailed adjustment information and recommended adjustment plans, as shown below.</p>
+<h2 id="adjust-node">Adjust node</h2>
+<p>Click the <code>Adjust</code> in action colum above, it will open the <code>Adjust Node</code> dialog, as shown below.</p>
 
 
 
@@ -209,16 +211,19 @@ Nodes Page - Select Cluster
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/node/node3_huf100fcca64e7c4f80e6e88bb3833e1ea_91312_600x0_resize_catmullrom_3.png" width="600" height="296">
+	<img class="card-img-top" src="/docs/cluster-optimizer/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_600x0_resize_catmullrom_3.png" width="600" height="283">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Adjust Nodes Page
+Node: Adjust node
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<blockquote>
+<p>NOTE: Currently, it only shows tips on adjusting node group. In the future, we will provide automatic action on it which can adjust node group&rsquo;s settings automatically according to settting provided.</p>
+</blockquote>
 
 </div>
 </div>

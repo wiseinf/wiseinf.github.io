@@ -21,18 +21,18 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>节点池优化 | Wiseinf</title>
-<meta name="description" content="描述了节点池优化提供了信息及操作建议。
+<meta name="description" content="描述节点池相关信息及优化建议。
 ">
 <meta property="og:title" content="节点池优化" />
-<meta property="og:description" content="描述了节点池优化提供了信息及操作建议。
+<meta property="og:description" content="描述节点池相关信息及优化建议。
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/zh-cn/docs/cluster-optimizer/nodegroup/" /><meta property="og:site_name" content="云智优本" />
 
 <meta itemprop="name" content="节点池优化">
-<meta itemprop="description" content="描述了节点池优化提供了信息及操作建议。
+<meta itemprop="description" content="描述节点池相关信息及优化建议。
 "><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="节点池优化"/>
-<meta name="twitter:description" content="描述了节点池优化提供了信息及操作建议。
+<meta name="twitter:description" content="描述节点池相关信息及优化建议。
 "/>
 
 
@@ -130,14 +130,14 @@ if (!doNotTrack) {
   <a href="/zh-cn/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-zh-cndocs"><span class="">文档</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-zh-cndocscluster-optimizer-li">
-  <a href="/zh-cn/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizer"><span class="">Cluster Optimizer：一站式云原生集群优化平台</span></a>
+  <a href="/zh-cn/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizer"><span class="">Cluster Optimizer</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizersetup-li">
-  <a href="/zh-cn/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizersetup"><span class="">安装部署</span></a>
+  <a href="/zh-cn/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizersetup"><span class="">安装</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizerimport-aws-li">
   <a href="/zh-cn/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizerimport-aws"><span class="">导入AWS EKS集群</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizerimport-aliyun-li">
-  <a href="/zh-cn/docs/cluster-optimizer/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizerimport-aliyun"><span class="">导入阿里云集群</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizerimport-alibaba-li">
+  <a href="/zh-cn/docs/cluster-optimizer/import-alibaba/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizerimport-alibaba"><span class="">导入阿里云集群</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocscluster-optimizeroverview-li">
   <a href="/zh-cn/docs/cluster-optimizer/overview/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocscluster-optimizeroverview"><span class="">集群概览</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-zh-cndocscluster-optimizernodegroup-li">
@@ -230,7 +230,15 @@ if (!doNotTrack) {
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#查看节点池">查看节点池</a></li>
+    <li><a href="#调整节点池">调整节点池</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -322,7 +330,7 @@ if (!doNotTrack) {
     <a href="/zh-cn/docs/">文档</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="/zh-cn/docs/cluster-optimizer/">Cluster Optimizer：一站式云原生集群优化平台</a>
+    <a href="/zh-cn/docs/cluster-optimizer/">Cluster Optimizer</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
     <a href="/zh-cn/docs/cluster-optimizer/nodegroup/" aria-disabled="true" class="btn-link disabled">节点池优化</a>
@@ -332,7 +340,7 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>节点池优化</h1>
-  <div class="lead">描述了节点池优化提供了信息及操作建议。</div>
+  <div class="lead">描述节点池相关信息及优化建议。</div>
 	<header class="article-meta">
 		
 
@@ -379,6 +387,7 @@ if (!doNotTrack) {
 
 </div>
 
+<h2 id="查看节点池">查看节点池</h2>
 <p>点击平台左侧菜单栏的<code>节点组</code>菜单，则显示节点组页，如图 39所示。节点组页分为3个区：</p>
 <ol>
 <li>集群选择区：选择相应的集群。</li>
@@ -428,6 +437,7 @@ if (!doNotTrack) {
 	
 </figure>
 
+<h2 id="调整节点池">调整节点池</h2>
 <p>点击上图中的<code>调整</code>链接，可打开调整节点组对话框，如下图所示。</p>
 
 

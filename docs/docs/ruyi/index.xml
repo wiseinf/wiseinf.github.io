@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – Ruyi: Cloud native cluster autoscaling engine</title>
+    <title>Wiseinf – Ruyi</title>
     <link>/docs/ruyi/</link>
-    <description>Recent content in Ruyi: Cloud native cluster autoscaling engine on Wiseinf</description>
+    <description>Recent content in Ruyi on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
@@ -26,17 +26,17 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Ruyi: Cloud Native Scaling Engine.&lt;/p&gt;
+&lt;p&gt;Ruyi: Cloud native cluster expansion and contraction engine.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Updating, please wait.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Automatic Scaling</title>
+      <title>Docs: Autoscaling</title>
       <link>/docs/ruyi/autoscaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -47,12 +47,222 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Ruyi: The cloud-native cluster scaling engine.&lt;/p&gt;
+&lt;p&gt;Ruyi: Cloud native cluster autoscaling engine.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;scaling-principles&#34;&gt;Scaling Principles&lt;/h2&gt;
-&lt;p&gt;Updating, please stand by.&lt;/p&gt;
+&lt;h2 id=&#34;principle-of-autoscaling&#34;&gt;Principle of autoscaling&lt;/h2&gt;
+&lt;p&gt;Updating, please wait.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Virtual Capacity</title>
+      <link>/docs/ruyi/virtualcapacity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/ruyi/virtualcapacity/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Ruyi: The virtual capacity of the cloud native cluster expansion and contraction engine is based on the analysis of node requests, usage, etc., and dynamically expands node capacity to support users to schedule more applications while ensuring stability as much as possible.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;virtual-capacity-overview&#34;&gt;Virtual Capacity Overview&lt;/h2&gt;
+&lt;p&gt;Virtual capacity can increase the node capacity by three times (or even more) of its original capacity under certain conditions, thereby supporting the scheduling of more Pods (applications) on the node.&lt;/p&gt;
+&lt;p&gt;With virtual capacity, users can significantly save on their IT costs.&lt;/p&gt;
+&lt;h2 id=&#34;virtual-capacity-principle&#34;&gt;Virtual capacity principle&lt;/h2&gt;
+&lt;p&gt;To understand virtual capacity, you must first understand Kuberente&amp;rsquo;s scheduling mechanism. In Kubernetes, scheduling is the process of assigning an application&amp;rsquo;s Pods to the nodes on which they will run. Pods generally specify their resource requirements when being scheduled. For CPU resources, their Request and Limit attributes are specified (hereinafter referred to as &lt;code&gt;CPU Request&lt;/code&gt; and &lt;code&gt;CPU Limit&lt;/code&gt;). For nodes in Kubernetes, they generally have capacity attributes. The capacity attributes are divided into two types: 1. &lt;code&gt;Capacity&lt;/code&gt;: the upper limit of the node&amp;rsquo;s capacity; 2. &lt;code&gt;Allocatable&lt;/code&gt;: the upper limit of the node&amp;rsquo;s allocable capacity, which will be based on the upper limit of the node&amp;rsquo;s capacity. Obtained by removing the resources used by the system and some reserved resources. When Kubernetes schedules, in terms of capacity, whether the Pod&amp;rsquo;s &lt;code&gt;CPU Request&lt;/code&gt; and the node&amp;rsquo;s &lt;code&gt;Allocatable&lt;/code&gt; match. The meaning of matching means: the remaining capacity of the current node &lt;code&gt;Allocatable&lt;/code&gt; should be greater than or equal to the &lt;code&gt;CPU Request&lt;/code&gt; of the current Pod.&lt;/p&gt;
+&lt;p&gt;When the remaining capacity of the node &lt;code&gt;Allocatable&lt;/code&gt; is less than the &lt;code&gt;CPU Request&lt;/code&gt; of the current Pod, the Pod cannot be scheduled to this node. At this time, scheduling will consider other nodes. When all nodes do not meet the requirements, the Pod will be suspended directly and wait for suitable resources to be scheduled again. When a Pod is suspended, some Kubernetes providers provide a cluster expansion and contraction mechanism. When users enable this mechanism, new nodes will be expanded in the cluster and the Pod will be scheduled to the new node.&lt;/p&gt;
+&lt;p&gt;In fact, when the remaining capacity of the node &lt;code&gt;Allocatable&lt;/code&gt; is less than the &lt;code&gt;CPU Request&lt;/code&gt; of the current Pod, the usage on the current node may be low, and the actual remaining resources on the node are greater than the &lt;code&gt;CPU Request&lt;/code&gt; of the current Pod. Theoretically, the Pod can be scheduled to this node. Virtual capacity provides a mechanism that can expand the &lt;code&gt;Allocatable&lt;/code&gt; value of a node under certain conditions, allowing the scheduler to consider that the remaining capacity of the current node &lt;code&gt;Allocatable&lt;/code&gt; is still greater than or equal to the &lt;code&gt;CPU Request&lt;/code&gt; of the current Pod, thereby scheduling the Pod to the node.&lt;/p&gt;
+&lt;p&gt;By expanding the virtual capacity of nodes, IT costs can be significantly saved, especially in situations such as development and testing where resource utilization is low.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;
+
+    Scheduling too many Pods on a node may have a certain impact on the stability of the node and application. Therefore, it is necessary to set appropriate values ​​according to actual conditions and use some balanced scheduling algorithms.
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;case&#34;&gt;Case&lt;/h2&gt;
+&lt;p&gt;Below we use a case to illustrate how to virtualize capacity.&lt;/p&gt;
+&lt;p&gt;In the case, the node resource is 4 cores and 8G. We will schedule 4 Nginx Pods on it through &lt;code&gt;kubectl apply -f nginx.yaml&lt;/code&gt; (the &lt;code&gt;CPU Request&lt;/code&gt; of the Pod is 2 cores), as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;apps/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;Kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx-deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;selector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;matchLabels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;replicas&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;labels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;app&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;containers&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx:1.14.2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;containerPort&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;requests&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;500Mi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;limits&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;cpu&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1024Mi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check the status through &lt;code&gt;kubectl get po&lt;/code&gt; and you can see that a Pod is in the Pending state, indicating that the &lt;code&gt;Allocatable&lt;/code&gt; of the current node cannot meet the resource requirements of &lt;code&gt;nginx-deployment&lt;/code&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;********:~/src/nginx$ kubectl get po
+NAME READY STATUS RESTARTS AGE
+nginx-deployment-7dc45fbc49-5k9gd 1/1 Running 0 6s
+nginx-deployment-7dc45fbc49-gpq77 1/1 Running 0 2d14h
+nginx-deployment-7dc45fbc49-snj6k 0/1 Pending 0 6s
+nginx-deployment-7dc45fbc49-v4xsq 1/1 Running 0 41h
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After waiting for a period of time, execute &lt;code&gt;kubectl get po&lt;/code&gt; to view the status. You can see that all Pods are running on the node.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;********:~/src/nginx$ kubectl get po
+NAME READY STATUS RESTARTS AGE
+nginx-deployment-7dc45fbc49-5k9gd 1/1 Running 0 23m
+nginx-deployment-7dc45fbc49-gpq77 1/1 Running 0 2d14h
+nginx-deployment-7dc45fbc49-snj6k 1/1 Running 0 23m
+nginx-deployment-7dc45fbc49-v4xsq 1/1 Running 0 41h
+
+WUYING\wiseinf_131347202297@6w49f6pbp2eeds8:~/src/nginx$ kubectl describe node 6w49f6pbp2eeds8
+Name: 6w49f6pbp2eeds8
+Roles: control-plane,master
+Labels: beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64kubernetes.io/hostname=6w49f6pbp2eeds8
+                    ...
+Annotations: virtualcapacity.wiseinf.com/allocatable: 10200
+                    virtualcapacity.wiseinf.com/last-decrease-timestamp: 2023-08-31T10:34:57+08:00
+                    virtualcapacity.wiseinf.com/last-increase-timestamp: 2023-08-31T10:37:57+08:00
+                    virtualcapacity.wiseinf.com/ratio: 3.000
+                    ...
+CreationTimestamp: Fri, 25 Aug 2023 16:23:13 +0800
+Taints: &amp;lt;none&amp;gt;
+Unschedulable: false
+Lease:
+  HolderIdentity: 6w49f6pbp2eeds8
+  AcquireTime: &amp;lt;unset&amp;gt;
+  RenewTime: Thu, 31 Aug 2023 10:52:51 +0800
+Conditions:
+  Type Status LastHeartbeatTime LastTransitionTime Reason Message
+  ---- ------ ----------------- ------------------ ----- - -------
+  ...
+Addresses:
+  InternalIP: 198.19.3.220
+  Hostname: 6w49f6pbp2eeds8
+Capacity:
+  CPU: 4
+  ephemeral-storage: 82437788Ki
+  hugepages-1Gi: 0
+  hugepages-2Mi: 0
+  memory: 7784472Ki
+  pods: 110
+Allocable:
+  cpu: 10200m
+  ephemeral-storage: 75974665296
+  hugepages-1Gi: 0
+  hugepages-2Mi: 0
+  memory: 7682072Ki
+  pods: 110
+System Info:
+  Machine ID: 20220524174107033216151293301385
+  System UUID: eddd0796-49a7-4094-afd0-961b8a826663
+  Boot ID: 1b9bde42-fadf-4e83-8af8-3f6cc44a0b99
+  Kernel Version: 5.4.0-113-generic
+  OS Image: Ubuntu 20.04.4 LTS
+  Operating System: linux
+  Architecture: amd64
+  Container Runtime Version: docker://24.0.5
+  Kubelet Version: v1.22.17
+  Kube-Proxy Version: v1.22.17
+PodCIDR: 10.244.0.0/24
+PodCIDRs: 10.244.0.0/24
+Non-terminated Pods: (16 in total)
+  Namespace Name CPU Requests CPU Limits Memory Requests Memory Limits Age
+  --------- ---- ------------ ---------- --------------- ------------- ---
+  default nginx-deployment-7dc45fbc49-5k9gd 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 39m
+  default nginx-deployment-7dc45fbc49-gpq77 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 2d15h
+  default nginx-deployment-7dc45fbc49-snj6k 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 39m
+  default nginx-deployment-7dc45fbc49-v4xsq 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 41h
+  ...
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource Requests Limits
+  -------- -------- ------
+  cpu 9650m (94%) 11100m (108%)
+  memory 3901239040 (49%) 7595365Ki (98%)
+  ephemeral-storage 0 (0%) 0 (0%)
+  hugepages-1Gi 0 (0%) 0 (0%)
+  hugepages-2Mi 0 (0%) 0 (0%)
+Events: &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From the monitoring indicator &lt;code&gt;kube_node_status_allocatable&lt;/code&gt;, you can see that the number of allocable CPU cores &lt;code&gt;Allocatable&lt;/code&gt; of node &lt;code&gt;6w49f6pbp2eeds8&lt;/code&gt; has been growing until &lt;strong&gt;10.2&lt;/strong&gt; cores. At the same time, it can be seen from the monitoring indicator &lt;code&gt;kube_node_status_capacity&lt;/code&gt; that the node&amp;rsquo;s capacity has always been &lt;strong&gt;4&lt;/strong&gt; cores. It can be seen that the CPU capacity of node &lt;code&gt;6w49f6pbp2eeds8&lt;/code&gt; has been expanded by approximately 2.55 times.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/ruyi/virtualcapacity/node-allocatable_hu31e328ed3036e9882644702f546ce89e_132311_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;433&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Node’s CPU Allocatable
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/ruyi/virtualcapacity/node-capacity_hub4e37652f76e254a84e610246b6d8089_55563_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;434&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+The CPU Capacity of the node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;From the monitoring indicator &lt;code&gt;ruyi_node_request_sum&lt;/code&gt;, you can see that the sum of CPU requests of the Pod on node &lt;code&gt;6w49f6pbp2eeds8&lt;/code&gt; has been growing until 4 copies of &lt;code&gt;nginx-deployment&lt;/code&gt; are scheduled to the node and run.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/ruyi/virtualcapacity/node-cpu-request-sum_huf30fc5671e2b9ef5baf3f476ab942257_107595_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;457&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+The total CPU requests of the node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;p&gt;Through this case, we can see that if virtual capacity can be used rationally, a lot of CPU costs can be saved.&lt;/p&gt;
+&lt;p&gt;To learn how to configure virtual capacity for a node pool, please refer to [Virtual Capacity Configuration](/docs/ruyi/configuration/nodegroup/#Virtual Capacity Configuration)&lt;/p&gt;
 
       </description>
     </item>
@@ -69,26 +279,26 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Ruyi: Cloud-native cluster scaling and expansion engine.&lt;/p&gt;
+&lt;p&gt;Ruyi: Cloud native cluster expansion and contraction engine.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;configuring-ruyi-cloud-native-cluster-scaling-and-expansion-engine&#34;&gt;Configuring Ruyi: Cloud-native Cluster Scaling and Expansion Engine&lt;/h2&gt;
-&lt;p&gt;Ruyi: Cloud-native cluster scaling and expansion engine provides two main features: automatic scaling and virtual capacity. You can use either feature individually or use both features at the same time.&lt;/p&gt;
-&lt;p&gt;You can specify the features using the command line parameter &lt;code&gt;--features&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The following describes the main configuration parameters for configuring the automatic scaling feature or the virtual capacity feature separately.&lt;/p&gt;
-&lt;h3 id=&#34;configuring-the-automatic-scaling-feature&#34;&gt;Configuring the Automatic Scaling Feature&lt;/h3&gt;
+&lt;h2 id=&#34;configure-ruyi-cloud-native-cluster-expansion-and-contraction-engine&#34;&gt;Configure Ruyi: cloud native cluster expansion and contraction engine&lt;/h2&gt;
+&lt;p&gt;Ruyi: The cloud native cluster expansion and contraction engine provides two major features: automatic expansion and contraction and virtual capacity. You can use one feature alone or both features together.&lt;/p&gt;
+&lt;p&gt;Can be specified via the command line parameter &lt;code&gt;--features&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The following describes the main configuration parameters for individually configuring the automatic expansion and contraction feature or the virtual capacity feature.&lt;/p&gt;
+&lt;h3 id=&#34;configure-automatic-expansion-and-contraction-features&#34;&gt;Configure automatic expansion and contraction features&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=Autoscaling --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuring-the-virtual-capacity-feature&#34;&gt;Configuring the Virtual Capacity Feature&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --webhook-cert-dir=/opt/ruyi/certs/
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The virtual capacity feature involves a virtual capacity controller and a webhook. You can control them separately using parameters.&lt;/p&gt;
-&lt;p&gt;For example, you can enable the virtual capacity controller alone by running the following command:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --enable-virtual-capacity-controller=true  --enable-webhook=false
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configure-virtual-capacity-characteristics&#34;&gt;Configure virtual capacity characteristics&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --webhook-cert -dir=/opt/ruyi/certs/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The virtual capacity feature involves the virtual capacity controller and Webhook, which can be controlled separately through parameters.&lt;/p&gt;
+&lt;p&gt;For example, the virtual capacity controller can be enabled individually with the following command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml --enable-virtual -capacity-controller=true --enable-webhook=false
       
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Or, you can start the webhook alone by running the following command:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Or, start the webhook separately with the following command:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ruyi --features=VirtualCapacity --cloud-provider=alicloud --loglevel=debug --kubeconfig=/opt/ruyi/config/kubeconfig --config=/opt/ruyi/config/config.yaml
---enable-virtual-capacity-controller=false  --enable-webhook=true --webhook-cert-dir=/opt/ruyi/certs/
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When configuring the webhook, you must specify the &lt;code&gt;MutatingWebhookConfiguration&lt;/code&gt;, as follows:&lt;/p&gt;
+--enable-virtual-capacity-controller=false --enable-webhook=true --webhook-cert-dir=/opt/ruyi/certs/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When configuring Webhook, you must specify &lt;code&gt;MutatingWebhookConfiguration&lt;/code&gt;, as follows:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;admissionregistration.k8s.io/v1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;MutatingWebhookConfiguration&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
@@ -96,7 +306,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;webhooks&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ruyi.wiseinf-system.svc&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;admissionReviewVersions&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;v1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;clientConfig&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;caBundle&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;CA Bundle&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;service&lt;/span&gt;:
@@ -111,22 +321,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;operations&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UPDATE&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          - &lt;span style=&#34;color:#ae81ff&#34;&gt;nodes/status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          -&lt;span style=&#34;color:#ae81ff&#34;&gt;nodes/status&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;scope&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Cluster&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;failurePolicy&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Ignore&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;sideEffects&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;None&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Note: You must correctly specify the &lt;code&gt;caBundle&lt;/code&gt; in the &lt;code&gt;MutatingWebhookConfiguration&lt;/code&gt; to make the webhook work properly.&lt;/p&gt;
+&lt;p&gt;Note: The &lt;code&gt;caBundle&lt;/code&gt; of &lt;code&gt;MutatingWebhookConfiguration&lt;/code&gt; must be specified correctly, otherwise the Webhook will not take effect.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h3&gt;
-&lt;p&gt;When using the automatic scaling feature, you need to provide cloud service provider-related information through environment variables.&lt;/p&gt;
-&lt;p&gt;If you are using Alibaba Cloud, you need to configure the AccessKey and its region through environment variables.&lt;/p&gt;
+&lt;h3 id=&#34;environment-variables&#34;&gt;Environment variables&lt;/h3&gt;
+&lt;p&gt;When using the automatic expansion and contraction feature, you need to provide relevant information about the cloud service provider through environment variables.&lt;/p&gt;
+&lt;p&gt;If you use Alibaba Cloud, you need to configure Alibaba Cloud&amp;rsquo;s AccessKey and its Region through environment variables.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Environment Variable Name&lt;/th&gt;
+&lt;th&gt;Environment variable name&lt;/th&gt;
 &lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Default Value&lt;/th&gt;
+&lt;th&gt;Default value&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -142,42 +352,42 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ALIBABA_CLOUD_REGION_ID&lt;/td&gt;
-&lt;td&gt;The ID of the region where the Alibaba Cloud cluster is located&lt;/td&gt;
+&lt;td&gt;Region ID of Alibaba Cloud cluster&lt;/td&gt;
 &lt;td&gt;cn-hangzhou&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;If you are using AWS, you need to configure the AccessKey through environment variables.&lt;/p&gt;
+&lt;p&gt;If you use AWS, you need to configure AWS&amp;rsquo;s AccessKey through environment variables.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Environment Variable Name&lt;/th&gt;
+&lt;th&gt;Environment variable name&lt;/th&gt;
 &lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Default Value&lt;/th&gt;
+&lt;th&gt;Default value&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;AWS_ACCESS_KEY_ID or AWS_ACCESS_KEY&lt;/td&gt;
-&lt;td&gt;AWS AccessKeyID&lt;/td&gt;
+&lt;td&gt;AWS Cloud AccessKeyID&lt;/td&gt;
 &lt;td&gt;No default value&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AWS_SECRET_ACCESS_KEY or AWS_SECRET_KEY&lt;/td&gt;
-&lt;td&gt;AWS AccessKeySecret&lt;/td&gt;
+&lt;td&gt;AWS Cloud AccessKeySecret&lt;/td&gt;
 &lt;td&gt;No default value&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AWS_ASSUME_ROLE_ARN&lt;/td&gt;
-&lt;td&gt;AWS ASSUME_ROLE_ARN&lt;/td&gt;
+&lt;td&gt;AWS Cloud ASSUME_ROLE_ARN&lt;/td&gt;
 &lt;td&gt;No default value&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;For more detailed configuration items, please refer to:&lt;/p&gt;
+&lt;p&gt;For detailed configuration items, please refer to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/ruyi/configuration/command-line&#34;&gt;Command Line Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/ruyi/configuration/nodegroup&#34;&gt;Node Group Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/ruyi/configuration/command-line/&#34;&gt;Command line configurations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/ruyi/configuration/nodegroup/&#34;&gt;Node group configurations&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -195,18 +405,18 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Monitoring of Ruyi: Cloud-Native Cluster Scaling Engine.&lt;/p&gt;
+&lt;p&gt;Ruyi: Cloud native cluster expansion and contraction engine monitoring.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;monitoring&#34;&gt;Monitoring&lt;/h2&gt;
-&lt;p&gt;The cloud-native scaling engine provides a series of monitoring metrics, supporting monitoring through Prometheus/Thanos.&lt;/p&gt;
-&lt;h3 id=&#34;auto-scaling-metrics&#34;&gt;Auto-Scaling Metrics&lt;/h3&gt;
+&lt;p&gt;The cloud native expansion and contraction engine provides a series of monitoring indicators and supports monitoring through Prometheus/Thanos.&lt;/p&gt;
+&lt;h3 id=&#34;metrics&#34;&gt;Metrics&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Metric Name&lt;/th&gt;
-&lt;th&gt;Tags&lt;/th&gt;
+&lt;th&gt;Metrics Name&lt;/th&gt;
+&lt;th&gt;Label&lt;/th&gt;
 &lt;th&gt;Description&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -214,51 +424,51 @@
 &lt;tr&gt;
 &lt;td&gt;ruyi_autoscaling_run_count&lt;/td&gt;
 &lt;td&gt;None&lt;/td&gt;
-&lt;td&gt;Number of auto-scaling runs&lt;/td&gt;
+&lt;td&gt;Number of automatic scaling runs&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_nodes&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;br/&gt;type: Node type&lt;/td&gt;
-&lt;td&gt;Number of nodes of each type in the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;br/&gt;type: node type&lt;/td&gt;
+&lt;td&gt;number of nodes of each type in the node group&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_pods&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;/td&gt;
-&lt;td&gt;Number of Pods of each type in the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;/td&gt;
+&lt;td&gt;number of pods of each type in the node group&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_request&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;br/&gt;resource: Resource type&lt;/td&gt;
-&lt;td&gt;Request volume of the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;br/&gt; resource: resource type&lt;/td&gt;
+&lt;td&gt;node group request volume&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_capacity&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;br/&gt;resource: Resource type&lt;/td&gt;
-&lt;td&gt;Capacity of the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;br/&gt; resource: resource type&lt;/td&gt;
+&lt;td&gt;node group capacity&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_percent&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;br/&gt;resource: Resource type&lt;/td&gt;
-&lt;td&gt;Percentage of request volume of the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;br/&gt; resource: resource type&lt;/td&gt;
+&lt;td&gt;node group request percentage&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_scale_delta&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;/td&gt;
-&lt;td&gt;Node adjustment amount of the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;/td&gt;
+&lt;td&gt;node group node adjustment amount&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_nodegroup_size&lt;/td&gt;
-&lt;td&gt;nodegroup: Node group name&lt;br/&gt;id: Node group ID&lt;br/&gt;cloud_provider: Cloud provider&lt;br/&gt;type: Type&lt;/td&gt;
-&lt;td&gt;Size of the node group&lt;/td&gt;
+&lt;td&gt;nodegroup: node group name&lt;br/&gt; id: node group ID &lt;br/&gt; cloud_provider: cloud service provider &lt;br/&gt; type: type&lt;/td&gt;
+&lt;td&gt;node group size&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;virtual-capacity-metrics&#34;&gt;Virtual Capacity Metrics&lt;/h3&gt;
+&lt;h3 id=&#34;virtual-capacity-indicator&#34;&gt;Virtual capacity indicator&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Metric Name&lt;/th&gt;
-&lt;th&gt;Tags&lt;/th&gt;
+&lt;th&gt;Indicator name&lt;/th&gt;
+&lt;th&gt;Label&lt;/th&gt;
 &lt;th&gt;Description&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -270,22 +480,22 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_node_request_sum&lt;/td&gt;
-&lt;td&gt;node: Node name&lt;br/&gt;id: Node group ID&lt;br/&gt;nodegroup: Node group name&lt;br/&gt;resource: Resource type&lt;/td&gt;
-&lt;td&gt;Node request volume&lt;/td&gt;
+&lt;td&gt;node: node name&lt;br/&gt; id: node group ID &lt;br/&gt; nodegroup: node group name&lt;br/&gt; resource: resource type&lt;/td&gt;
+&lt;td&gt;node request volume&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_node_allocatable&lt;/td&gt;
-&lt;td&gt;node: Node name&lt;br/&gt;id: Node group ID&lt;br/&gt;nodegroup: Node group name&lt;br/&gt;resource: Resource type&lt;/td&gt;
-&lt;td&gt;Allocatable of node virtual capacity&lt;/td&gt;
+&lt;td&gt;node: node name&lt;br/&gt; id: node group ID &lt;br/&gt; nodegroup: node group name&lt;br/&gt; resource: resource type&lt;/td&gt;
+&lt;td&gt;node virtual capacity Allocatable&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ruyi_virtual_capacity_ratio&lt;/td&gt;
-&lt;td&gt;node: Node name&lt;br/&gt;id: Node group ID&lt;br/&gt;nodegroup: Node group name&lt;br/&gt;type: Type&lt;/td&gt;
-&lt;td&gt;Virtual capacity ratio&lt;/td&gt;
+&lt;td&gt;node: node name&lt;br/&gt; id: node group ID &lt;br/&gt; nodegroup: node group name&lt;br/&gt; type: type&lt;/td&gt;
+&lt;td&gt;virtual capacity ratio&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Additionally, users can also view the actual changes in virtual capacity through the Kubernetes metric &lt;code&gt;kube_node_status_allocatable&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In addition, users can also view changes in actual virtual capacity through the Kubernetes indicator &lt;code&gt;kube_node_status_allocatable&lt;/code&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -302,35 +512,16 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Common questions and troubleshooting processes for using Ruyi: the cloud-native cluster scaling engine.&lt;/p&gt;
+&lt;p&gt;Using Ruyi: Common problems and troubleshooting procedures for cloud native cluster expansion and contraction engines.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;p&gt;Updating, please wait.&lt;/p&gt;
-&lt;!-- ## Issue 1:
+&lt;!-- ## Question 1:
 
-## Issue 2:
+## Question 2:
 
-## Issue 3: --&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: </title>
-      <link>/docs/ruyi/virtualcapacity/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/ruyi/virtualcapacity/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Virtual capacity is a technology that increases the node capacity by three times (or even more) of its original capacity under certain conditions, thereby supporting the scheduling of more Pods (applications) on the node. With virtual capacity, users can significantly save on their IT costs.&lt;/p&gt;
-&lt;p&gt;To understand virtual capacity, you must first understand the scheduling mechanism of Kubernetes. In Kubernetes, scheduling is the process of assigning an application&amp;rsquo;s Pods to the nodes on which they will run. When a Pod is scheduled, its resource requirements are usually specified. For CPU resources, its Request and Limit attributes (referred to as CPU Request and CPU Limit respectively) are specified. For nodes in Kubernetes, they generally have capacity attributes and allocable capacity upper limit attributes. The capacity attributes include: 1. Capacity: the upper limit of the node’s capacity; 2. Allocatable: the upper limit of the node’s allocable capacity, which will be removed based on the upper limit of the node capacity. It is obtained from some resources used by the system and some reserved resources. When Kubernetes schedules, in terms of capacity, it mainly considers whether the Pod&amp;rsquo;s CPU Request and the node&amp;rsquo;s Allocatable match. The meaning of matching means: the remaining capacity of the current node Allocatable should be greater than or equal to the CPU Request of the current Pod.&lt;/p&gt;
-&lt;p&gt;When the remaining capacity of the node Allocatable is less than the current Pod&amp;rsquo;s CPU Request, the Pod cannot be scheduled to this node. At this time, scheduling will consider other nodes. When all nodes do not meet the requirements, the Pod will be suspended directly and wait for suitable resources to be scheduled again. When a Pod is suspended, some Kubernetes providers provide a cluster expansion and contraction mechanism. When users enable this mechanism, new nodes will be expanded in the cluster and the Pod will be scheduled to the new node.&lt;/p&gt;
-&lt;p&gt;In fact, when the remaining capacity of the node Allocatable is less than the current Pod&amp;rsquo;s CPU Request, the usage on the current node may be low, and the actual remaining resources on the node are greater than the current Pod&amp;rsquo;s CPU Request. Theoretically, the Pod can be scheduled to this node. Virtual capacity provides a mechanism to expand the Allocatable value of a node under certain conditions, allowing the scheduler to consider that the remaining capacity of the Allocatable of the current node is still greater than or equal to the CPU Request of the current Pod, thereby scheduling the Pod to the node.&lt;/p&gt;
-&lt;p&gt;By expanding the virtual capacity of nodes, IT costs can be significantly saved, especially in situations such as development and testing where resource utilization is low.&lt;/p&gt;
-&lt;p&gt;It should be noted that scheduling too many Pods on a node may have a certain impact on the stability of the node and application. Therefore, it is necessary to set appropriate values according to actual conditions and use some balanced scheduling algorithms.&lt;/p&gt;
-
+## Question 3: --&gt;
       </description>
     </item>
     

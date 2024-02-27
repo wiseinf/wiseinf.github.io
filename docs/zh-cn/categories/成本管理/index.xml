@@ -34,7 +34,7 @@
 &lt;ul&gt;
 &lt;li&gt;评估集群整体成本以及分解成本。&lt;/li&gt;
 &lt;li&gt;评估云原生应用的成本，提供按照名称空间、负载、部门、小组、应用环境等多个维度的成本分析。&lt;/li&gt;
-&lt;li&gt;提供优化建议。&lt;/li&gt;
+&lt;li&gt;提供基础优化建议。&lt;/li&gt;
 &lt;li&gt;评估集群和应用的健康性。&lt;/li&gt;
 &lt;/ul&gt;
 

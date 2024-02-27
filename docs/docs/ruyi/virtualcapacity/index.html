@@ -20,16 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Wiseinf</title>
-<meta name="description" content="Cloud Native Application Cost Management And Optimization Platform">
-<meta property="og:title" content="" />
-<meta property="og:description" content="Cloud Native Application Cost Management And Optimization Platform" />
+<title>Virtual Capacity | Wiseinf</title>
+<meta name="description" content="Describes Ruyi: The principle and application process of expanding and shrinking virtual capacity of cloud native clusters.
+">
+<meta property="og:title" content="Virtual Capacity" />
+<meta property="og:description" content="Describes Ruyi: The principle and application process of expanding and shrinking virtual capacity of cloud native clusters.
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/ruyi/virtualcapacity/" /><meta property="og:site_name" content="Wiseinf" />
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Cloud Native Application Cost Management And Optimization Platform"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Cloud Native Application Cost Management And Optimization Platform"/>
+<meta itemprop="name" content="Virtual Capacity">
+<meta itemprop="description" content="Describes Ruyi: The principle and application process of expanding and shrinking virtual capacity of cloud native clusters.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Virtual Capacity"/>
+<meta name="twitter:description" content="Describes Ruyi: The principle and application process of expanding and shrinking virtual capacity of cloud native clusters.
+"/>
 
 
 
@@ -126,16 +130,18 @@ if (!doNotTrack) {
   <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizer-li">
-  <a href="/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizer"><span class="">Cluster Optimizer: Cloud native cluster optimization platform</span></a>
+  <a href="/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizer"><span class="">Cluster Optimizer</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizersetup-li">
-  <a href="/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizersetup"><span class="">Installation and Deployment</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aliyun-li">
-  <a href="/docs/cluster-optimizer/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aliyun"><span class="">Import Alibaba Cloud Cluster</span></a>
+  <a href="/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizersetup"><span class="">Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aws-li">
+  <a href="/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aws"><span class="">Import Cluster from AWS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-alibaba-li">
+  <a href="/docs/cluster-optimizer/import-alibaba/" title="Import Cluster from Alibaba Cloud" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-alibaba"><span class="">Import Cluster from Alibaba Cloud </span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroverview-li">
   <a href="/docs/cluster-optimizer/overview/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroverview"><span class="">Cluster Overview</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizernodegroup-li">
-  <a href="/docs/cluster-optimizer/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernodegroup"><span class="">Node Pool Optimization</span></a>
+  <a href="/docs/cluster-optimizer/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernodegroup"><span class="">Node Group Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizernode-li">
   <a href="/docs/cluster-optimizer/node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernode"><span class="">Node Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerdisk-li">
@@ -144,71 +150,69 @@ if (!doNotTrack) {
   <a href="/docs/cluster-optimizer/pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerpv"><span class="">Persistent Volume Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerapp-li">
   <a href="/docs/cluster-optimizer/app/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerapp"><span class="">Application Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizeroperations-li">
-  <a href="/docs/cluster-optimizer/operations/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperations"><span class="">Cluster Optimization Operations</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizeractions-li">
+  <a href="/docs/cluster-optimizer/actions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractions"><span class="">Actions</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-nodegroup-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-nodegroup"><span class="">Adjust Node Pool</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-node-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-node"><span class="">Adjust Nodes</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-disk-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-disk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-disk"><span class="">Adjusting disks</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsdelete-pv-li">
-  <a href="/docs/cluster-optimizer/operations/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsdelete-pv"><span class="">Deleting Persistent Volume</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-nodegroup-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-nodegroup/" title="Adjusting Node Group" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-nodegroup"><span class="">Adjust Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-node-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-node"><span class="">Adjustment Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-disk-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-disk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-disk"><span class="">Adjust Disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsdelete-pv-li">
+  <a href="/docs/cluster-optimizer/actions/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsdelete-pv"><span class="">Delete Persistent Volume</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aws-li">
-  <a href="/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aws"><span class=""></span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecost-li">
-  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost: A Cloud-native Cost Management and Optimization Platform</span></a>
+  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostsetup-li">
   <a href="/docs/wisecost/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostsetup"><span class="">Installation and Deployment</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostimport-aliyun-li">
   <a href="/docs/wisecost/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostimport-aliyun"><span class="">Import Alibaba Cloud Cluster</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
-  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">View Node Cost</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcluster-cost-li">
-  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">Viewing Cluster Costs</span></a>
+  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">View cluster costs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
+  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">View node costs</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcost-li">
-  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">View Application Costs</span></a>
+  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">View application costs</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostoptimize-li">
   <a href="/docs/wisecost/optimize/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostoptimize"><span class="">Cost Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecostdevelopment-li">
   <a href="/docs/wisecost/development/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopment"><span class="">Development Manual</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
-  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API Reference</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
-  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class=""></span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
+  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class="">API Documentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
+  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API interface reference</span></a>
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsruyi-li">
-  <a href="/docs/ruyi/" title="Ruyi: Cloud native cluster autoscaling engine" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi: Cloud native cluster expansion and contraction engine</span></a>
+  <a href="/docs/ruyi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyisetup-li">
   <a href="/docs/ruyi/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyisetup"><span class="">Installation and Deployment</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiautoscaling-li">
-  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">Automatic Scaling</span></a>
+  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">Autoscaling</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsruyivirtualcapacity-li">
+  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class="td-sidebar-nav-active-item">Virtual Capacity</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsruyiconfiguration-li">
   <a href="/docs/ruyi/configuration/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfiguration"><span class="">Configuration</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiconfigurationcommand-line-li">
-  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">Command Line Arguments</span></a>
+  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">Command line parameters</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiconfigurationnodegroup-li">
-  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class=""></span></a>
+  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class="">Node group configurations</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyimonitoring-li">
   <a href="/docs/ruyi/monitoring/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyimonitoring"><span class="">Monitoring</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyitroubleshooting-li">
   <a href="/docs/ruyi/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyitroubleshooting"><span class="">FAQ</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsruyivirtualcapacity-li">
-  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class="td-sidebar-nav-active-item"></span></a>
 </li>
   </ul>
 </li>
@@ -226,7 +230,16 @@ if (!doNotTrack) {
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#virtual-capacity-overview">Virtual Capacity Overview</a></li>
+    <li><a href="#virtual-capacity-principle">Virtual capacity principle</a></li>
+    <li><a href="#case">Case</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -248,29 +261,27 @@ if (!doNotTrack) {
         
           <li><a class="taxonomy-term" href="/tags/alibaba-cloud/" data-taxonomy-term="alibaba-cloud"><span class="taxonomy-label">Alibaba Cloud</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">2</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/application-optimization/" data-taxonomy-term="application-optimization"><span class="taxonomy-label">Application Optimization</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">13</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">15</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">14</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/cluster-overview/" data-taxonomy-term="cluster-overview"><span class="taxonomy-label">Cluster Overview</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/disk-optimization/" data-taxonomy-term="disk-optimization"><span class="taxonomy-label">Disk Optimization</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/node-pool-optimization/" data-taxonomy-term="node-pool-optimization"><span class="taxonomy-label">Node Pool Optimization</span><span class="taxonomy-count">3</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/node-optimization/" data-taxonomy-term="node-optimization"><span class="taxonomy-label">Node Optimization</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">7</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">9</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/ruyi-engine/" data-taxonomy-term="ruyi-engine"><span class="taxonomy-label">Ruyi Engine</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">9</span></a></li>
-        
-          <li><a class="taxonomy-term" href="/tags/wiseinf/" data-taxonomy-term="wiseinf"><span class="taxonomy-label">Wiseinf</span><span class="taxonomy-count">3</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">10</span></a></li>
         
       </ul>
     </div>
@@ -292,17 +303,17 @@ if (!doNotTrack) {
       
       <ul class="taxonomy-terms">
         
-          <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span><span class="taxonomy-count">2</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster Autoscaling</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">14</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">15</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">9</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">10</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span><span class="taxonomy-count">6</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span><span class="taxonomy-count">8</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/scaling/" data-taxonomy-term="scaling"><span class="taxonomy-label">Scaling</span><span class="taxonomy-count">5</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/expansion-and-contraction/" data-taxonomy-term="expansion-and-contraction"><span class="taxonomy-label">Expansion and Contraction</span><span class="taxonomy-count">6</span></a></li>
         
       </ul>
     </div>
@@ -322,17 +333,17 @@ if (!doNotTrack) {
     <a href="/docs/">Documentation</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="/docs/ruyi/">Ruyi: Cloud native cluster expansion and contraction engine</a>
+    <a href="/docs/ruyi/">Ruyi</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="/docs/ruyi/virtualcapacity/" aria-disabled="true" class="btn-link disabled"></a>
+    <a href="/docs/ruyi/virtualcapacity/" aria-disabled="true" class="btn-link disabled">Virtual Capacity</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1></h1>
-  
+	<h1>Virtual Capacity</h1>
+  <div class="lead">Describes Ruyi: The principle and application process of expanding and shrinking virtual capacity of cloud native clusters.</div>
 	<header class="article-meta">
 		
 
@@ -341,21 +352,232 @@ if (!doNotTrack) {
       
 
 
+<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span></a></li>
+    
+  </ul>
+</div>
+
     
       
 
+
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span></a></li>
+    
+      <li><a class="taxonomy-term" href="/categories/expansion-and-contraction/" data-taxonomy-term="expansion-and-contraction"><span class="taxonomy-label">Expansion and Contraction</span></a></li>
+    
+  </ul>
+</div>
 
     
   
 
 		
 	</header>
-	<p>Virtual capacity is a technology that increases the node capacity by three times (or even more) of its original capacity under certain conditions, thereby supporting the scheduling of more Pods (applications) on the node. With virtual capacity, users can significantly save on their IT costs.</p>
-<p>To understand virtual capacity, you must first understand the scheduling mechanism of Kubernetes. In Kubernetes, scheduling is the process of assigning an application&rsquo;s Pods to the nodes on which they will run. When a Pod is scheduled, its resource requirements are usually specified. For CPU resources, its Request and Limit attributes (referred to as CPU Request and CPU Limit respectively) are specified. For nodes in Kubernetes, they generally have capacity attributes and allocable capacity upper limit attributes. The capacity attributes include: 1. Capacity: the upper limit of the node’s capacity; 2. Allocatable: the upper limit of the node’s allocable capacity, which will be removed based on the upper limit of the node capacity. It is obtained from some resources used by the system and some reserved resources. When Kubernetes schedules, in terms of capacity, it mainly considers whether the Pod&rsquo;s CPU Request and the node&rsquo;s Allocatable match. The meaning of matching means: the remaining capacity of the current node Allocatable should be greater than or equal to the CPU Request of the current Pod.</p>
-<p>When the remaining capacity of the node Allocatable is less than the current Pod&rsquo;s CPU Request, the Pod cannot be scheduled to this node. At this time, scheduling will consider other nodes. When all nodes do not meet the requirements, the Pod will be suspended directly and wait for suitable resources to be scheduled again. When a Pod is suspended, some Kubernetes providers provide a cluster expansion and contraction mechanism. When users enable this mechanism, new nodes will be expanded in the cluster and the Pod will be scheduled to the new node.</p>
-<p>In fact, when the remaining capacity of the node Allocatable is less than the current Pod&rsquo;s CPU Request, the usage on the current node may be low, and the actual remaining resources on the node are greater than the current Pod&rsquo;s CPU Request. Theoretically, the Pod can be scheduled to this node. Virtual capacity provides a mechanism to expand the Allocatable value of a node under certain conditions, allowing the scheduler to consider that the remaining capacity of the Allocatable of the current node is still greater than or equal to the CPU Request of the current Pod, thereby scheduling the Pod to the node.</p>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Ruyi: The virtual capacity of the cloud native cluster expansion and contraction engine is based on the analysis of node requests, usage, etc., and dynamically expands node capacity to support users to schedule more applications while ensuring stability as much as possible.</p>
+
+</div>
+
+<h2 id="virtual-capacity-overview">Virtual Capacity Overview</h2>
+<p>Virtual capacity can increase the node capacity by three times (or even more) of its original capacity under certain conditions, thereby supporting the scheduling of more Pods (applications) on the node.</p>
+<p>With virtual capacity, users can significantly save on their IT costs.</p>
+<h2 id="virtual-capacity-principle">Virtual capacity principle</h2>
+<p>To understand virtual capacity, you must first understand Kuberente&rsquo;s scheduling mechanism. In Kubernetes, scheduling is the process of assigning an application&rsquo;s Pods to the nodes on which they will run. Pods generally specify their resource requirements when being scheduled. For CPU resources, their Request and Limit attributes are specified (hereinafter referred to as <code>CPU Request</code> and <code>CPU Limit</code>). For nodes in Kubernetes, they generally have capacity attributes. The capacity attributes are divided into two types: 1. <code>Capacity</code>: the upper limit of the node&rsquo;s capacity; 2. <code>Allocatable</code>: the upper limit of the node&rsquo;s allocable capacity, which will be based on the upper limit of the node&rsquo;s capacity. Obtained by removing the resources used by the system and some reserved resources. When Kubernetes schedules, in terms of capacity, whether the Pod&rsquo;s <code>CPU Request</code> and the node&rsquo;s <code>Allocatable</code> match. The meaning of matching means: the remaining capacity of the current node <code>Allocatable</code> should be greater than or equal to the <code>CPU Request</code> of the current Pod.</p>
+<p>When the remaining capacity of the node <code>Allocatable</code> is less than the <code>CPU Request</code> of the current Pod, the Pod cannot be scheduled to this node. At this time, scheduling will consider other nodes. When all nodes do not meet the requirements, the Pod will be suspended directly and wait for suitable resources to be scheduled again. When a Pod is suspended, some Kubernetes providers provide a cluster expansion and contraction mechanism. When users enable this mechanism, new nodes will be expanded in the cluster and the Pod will be scheduled to the new node.</p>
+<p>In fact, when the remaining capacity of the node <code>Allocatable</code> is less than the <code>CPU Request</code> of the current Pod, the usage on the current node may be low, and the actual remaining resources on the node are greater than the <code>CPU Request</code> of the current Pod. Theoretically, the Pod can be scheduled to this node. Virtual capacity provides a mechanism that can expand the <code>Allocatable</code> value of a node under certain conditions, allowing the scheduler to consider that the remaining capacity of the current node <code>Allocatable</code> is still greater than or equal to the <code>CPU Request</code> of the current Pod, thereby scheduling the Pod to the node.</p>
 <p>By expanding the virtual capacity of nodes, IT costs can be significantly saved, especially in situations such as development and testing where resource utilization is low.</p>
-<p>It should be noted that scheduling too many Pods on a node may have a certain impact on the stability of the node and application. Therefore, it is necessary to set appropriate values according to actual conditions and use some balanced scheduling algorithms.</p>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    Scheduling too many Pods on a node may have a certain impact on the stability of the node and application. Therefore, it is necessary to set appropriate values ​​according to actual conditions and use some balanced scheduling algorithms.
+
+</div>
+
+<h2 id="case">Case</h2>
+<p>Below we use a case to illustrate how to virtualize capacity.</p>
+<p>In the case, the node resource is 4 cores and 8G. We will schedule 4 Nginx Pods on it through <code>kubectl apply -f nginx.yaml</code> (the <code>CPU Request</code> of the Pod is 2 cores), as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">Kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:1.14.2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">requests</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">500Mi</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">limits</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">1024Mi</span>
+</span></span></code></pre></div><p>Check the status through <code>kubectl get po</code> and you can see that a Pod is in the Pending state, indicating that the <code>Allocatable</code> of the current node cannot meet the resource requirements of <code>nginx-deployment</code>.</p>
+<pre tabindex="0"><code>********:~/src/nginx$ kubectl get po
+NAME READY STATUS RESTARTS AGE
+nginx-deployment-7dc45fbc49-5k9gd 1/1 Running 0 6s
+nginx-deployment-7dc45fbc49-gpq77 1/1 Running 0 2d14h
+nginx-deployment-7dc45fbc49-snj6k 0/1 Pending 0 6s
+nginx-deployment-7dc45fbc49-v4xsq 1/1 Running 0 41h
+</code></pre><p>After waiting for a period of time, execute <code>kubectl get po</code> to view the status. You can see that all Pods are running on the node.</p>
+<pre tabindex="0"><code>********:~/src/nginx$ kubectl get po
+NAME READY STATUS RESTARTS AGE
+nginx-deployment-7dc45fbc49-5k9gd 1/1 Running 0 23m
+nginx-deployment-7dc45fbc49-gpq77 1/1 Running 0 2d14h
+nginx-deployment-7dc45fbc49-snj6k 1/1 Running 0 23m
+nginx-deployment-7dc45fbc49-v4xsq 1/1 Running 0 41h
+
+WUYING\wiseinf_131347202297@6w49f6pbp2eeds8:~/src/nginx$ kubectl describe node 6w49f6pbp2eeds8
+Name: 6w49f6pbp2eeds8
+Roles: control-plane,master
+Labels: beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64kubernetes.io/hostname=6w49f6pbp2eeds8
+                    ...
+Annotations: virtualcapacity.wiseinf.com/allocatable: 10200
+                    virtualcapacity.wiseinf.com/last-decrease-timestamp: 2023-08-31T10:34:57+08:00
+                    virtualcapacity.wiseinf.com/last-increase-timestamp: 2023-08-31T10:37:57+08:00
+                    virtualcapacity.wiseinf.com/ratio: 3.000
+                    ...
+CreationTimestamp: Fri, 25 Aug 2023 16:23:13 +0800
+Taints: &lt;none&gt;
+Unschedulable: false
+Lease:
+  HolderIdentity: 6w49f6pbp2eeds8
+  AcquireTime: &lt;unset&gt;
+  RenewTime: Thu, 31 Aug 2023 10:52:51 +0800
+Conditions:
+  Type Status LastHeartbeatTime LastTransitionTime Reason Message
+  ---- ------ ----------------- ------------------ ----- - -------
+  ...
+Addresses:
+  InternalIP: 198.19.3.220
+  Hostname: 6w49f6pbp2eeds8
+Capacity:
+  CPU: 4
+  ephemeral-storage: 82437788Ki
+  hugepages-1Gi: 0
+  hugepages-2Mi: 0
+  memory: 7784472Ki
+  pods: 110
+Allocable:
+  cpu: 10200m
+  ephemeral-storage: 75974665296
+  hugepages-1Gi: 0
+  hugepages-2Mi: 0
+  memory: 7682072Ki
+  pods: 110
+System Info:
+  Machine ID: 20220524174107033216151293301385
+  System UUID: eddd0796-49a7-4094-afd0-961b8a826663
+  Boot ID: 1b9bde42-fadf-4e83-8af8-3f6cc44a0b99
+  Kernel Version: 5.4.0-113-generic
+  OS Image: Ubuntu 20.04.4 LTS
+  Operating System: linux
+  Architecture: amd64
+  Container Runtime Version: docker://24.0.5
+  Kubelet Version: v1.22.17
+  Kube-Proxy Version: v1.22.17
+PodCIDR: 10.244.0.0/24
+PodCIDRs: 10.244.0.0/24
+Non-terminated Pods: (16 in total)
+  Namespace Name CPU Requests CPU Limits Memory Requests Memory Limits Age
+  --------- ---- ------------ ---------- --------------- ------------- ---
+  default nginx-deployment-7dc45fbc49-5k9gd 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 39m
+  default nginx-deployment-7dc45fbc49-gpq77 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 2d15h
+  default nginx-deployment-7dc45fbc49-snj6k 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 39m
+  default nginx-deployment-7dc45fbc49-v4xsq 2 (19%) 2 (19%) 500Mi (6%) 1Gi (13%) 41h
+  ...
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource Requests Limits
+  -------- -------- ------
+  cpu 9650m (94%) 11100m (108%)
+  memory 3901239040 (49%) 7595365Ki (98%)
+  ephemeral-storage 0 (0%) 0 (0%)
+  hugepages-1Gi 0 (0%) 0 (0%)
+  hugepages-2Mi 0 (0%) 0 (0%)
+Events: &lt;none&gt;
+</code></pre><p>From the monitoring indicator <code>kube_node_status_allocatable</code>, you can see that the number of allocable CPU cores <code>Allocatable</code> of node <code>6w49f6pbp2eeds8</code> has been growing until <strong>10.2</strong> cores. At the same time, it can be seen from the monitoring indicator <code>kube_node_status_capacity</code> that the node&rsquo;s capacity has always been <strong>4</strong> cores. It can be seen that the CPU capacity of node <code>6w49f6pbp2eeds8</code> has been expanded by approximately 2.55 times.</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/ruyi/virtualcapacity/node-allocatable_hu31e328ed3036e9882644702f546ce89e_132311_900x0_resize_catmullrom_3.png" width="900" height="433">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Node’s CPU Allocatable
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/ruyi/virtualcapacity/node-capacity_hub4e37652f76e254a84e610246b6d8089_55563_900x0_resize_catmullrom_3.png" width="900" height="434">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+The CPU Capacity of the node
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>From the monitoring indicator <code>ruyi_node_request_sum</code>, you can see that the sum of CPU requests of the Pod on node <code>6w49f6pbp2eeds8</code> has been growing until 4 copies of <code>nginx-deployment</code> are scheduled to the node and run.</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/ruyi/virtualcapacity/node-cpu-request-sum_huf30fc5671e2b9ef5baf3f476ab942257_107595_900x0_resize_catmullrom_3.png" width="900" height="457">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+The total CPU requests of the node
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>Through this case, we can see that if virtual capacity can be used rationally, a lot of CPU costs can be saved.</p>
+<p>To learn how to configure virtual capacity for a node pool, please refer to [Virtual Capacity Configuration](/docs/ruyi/configuration/nodegroup/#Virtual Capacity Configuration)</p>
 
         <div class="section-index">
     

@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – API Reference</title>
+    <title>Wiseinf – API interface reference</title>
     <link>/docs/wisecost/development/reference/</link>
-    <description>Recent content in API Reference on Wiseinf</description>
+    <description>Recent content in API interface reference on Wiseinf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     

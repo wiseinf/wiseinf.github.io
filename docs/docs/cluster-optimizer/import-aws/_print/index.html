@@ -20,16 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Wiseinf</title>
-<meta name="description" content="Cloud Native Application Cost Management And Optimization Platform">
-<meta property="og:title" content="" />
-<meta property="og:description" content="Cloud Native Application Cost Management And Optimization Platform" />
+<title>Import Cluster from AWS | Wiseinf</title>
+<meta name="description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+">
+<meta property="og:title" content="Import Cluster from AWS" />
+<meta property="og:description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/import-aws/" /><meta property="og:site_name" content="Wiseinf" />
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Cloud Native Application Cost Management And Optimization Platform"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Cloud Native Application Cost Management And Optimization Platform"/>
+<meta itemprop="name" content="Import Cluster from AWS">
+<meta itemprop="description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Import Cluster from AWS"/>
+<meta name="twitter:description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+"/>
 
 
 
@@ -118,8 +122,8 @@ This is the multi-page printable view of this section.
 
 
 
-<h1 class="title"></h1>
-
+<h1 class="title">Import Cluster from AWS</h1>
+<div class="lead">Instructions for importing an AWS EKS cluster into <strong>Cluster Optimizer</strong>.</div>
 
 
 
@@ -137,105 +141,368 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <ol>
-<li>An Access Key &amp; Secret needs to be provided, and its permission policy is as follows:</li>
-</ol>
-<p>{
-&ldquo;Version&rdquo;: &ldquo;2012-10-17&rdquo;,
-&ldquo;Statement&rdquo;: [
-{
-&ldquo;Sid&rdquo;: &ldquo;Optimizer&rdquo;,
-&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,
-&ldquo;Action&rdquo;: [
-&ldquo;ec2:DescribeInstances&rdquo;,
-&ldquo;ec2:DescribeLaunchTemplates&rdquo;,
-&ldquo;ec2:DescribeRegions&rdquo;,
-&ldquo;ec2:DescribeVolumes&rdquo;,
-&ldquo;ec2:DescribeLaunchTemplateVersions&rdquo;,
-&ldquo;eks:DescribeNodegroup&rdquo;,
-&ldquo;eks:ListNodegroups&rdquo;,
-&ldquo;eks:DescribeCluster&rdquo;,
-&ldquo;eks:ListClusters&rdquo;
-&ldquo;autoscaling:DescribeAutoScalingInstances&rdquo;,
-&ldquo;autoscaling:DescribeAutoScalingGroups&rdquo;,
-],
-&ldquo;Resource&rdquo;: &ldquo;*&rdquo;
-}
-]
-}</p>
-<ol start="2">
-<li>A Kubeconfig needs to be provided to access cluster-related information. The permission requirements are as follows (if it is only a development and test cluster without sensitive information, for the sake of simplicity, you can also grant all read-only permissions to the cluster):</li>
-</ol>
-<p>apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-name: optimizer
-rules:</p>
-<ul>
-<li>apiGroups:
-<ul>
-<li>&quot;&quot;
-resources:
--nodes
--pods
--pods/status</li>
-<li>persistentvolumes</li>
-<li>persistentvolumeclaims</li>
-<li>services</li>
-<li>namespaces
-verbs:</li>
-<li>get</li>
-<li>list</li>
-<li>watch</li>
-</ul>
-</li>
-<li>apiGroups:
-<ul>
-<li>&ldquo;apps/v1&rdquo;
-resources:
--deployments
--replicasets
--replicationcontollers</li>
-<li>statefulsets
--daemonsets
-verbs:</li>
-<li>get</li>
-<li>list</li>
-<li>watch</li>
-</ul>
-</li>
-<li>apiGroups:
-<ul>
-<li>&ldquo;batch/v1&rdquo;
-resources:</li>
-<li>jobs</li>
-<li>cronjobs
-verbs:</li>
-<li>get</li>
-<li>list</li>
-<li>watch</li>
-</ul>
-</li>
-<li>apiGroups:
-<ul>
-<li>&ldquo;storage/v1&rdquo;
-resources:
--storageclasses
-verbs:</li>
-<li>get</li>
-<li>list</li>
-<li>watch</li>
-</ul>
-</li>
-</ul>
-<ol start="3">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>Instructions for importing an kubernetes cluster from AWS into <strong>Cluster Optimizer</strong>.</p>
+
+</div>
+
+<h2 id="preconditions">Preconditions</h2>
+<ol>
 <li>
-<p>The Prometheus/Thanos address corresponding to the cluster is calculated by the platform using monitoring data and provides operation suggestions.</p>
+<p>An IAM user and its associated AWS access key are needed. The IAM user should have following permissions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;Optimizer&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;ec2:DescribeInstances&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;ec2:DescribeRegions&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;ec2:DescribeVolumes&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplates&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;eks:ListClusters&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;eks:DescribeCluster&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;eks:ListNodegroups&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;eks:DescribeNodegroup&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span>,
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>NOTE: more information about access keys and permissions, you can refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html">Managing access keys for IAM users</a>
+and <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_permissions.html">Managing permissions for IAM users</a>.</p>
+</blockquote>
 </li>
 <li>
-<p>A VPN may be required to give access to the EKS cluster and Prometheus/Thanos.</p>
+<p>An kubernetes cluster, version 1.22 or above. ACK cluster is recommended.</p>
+</li>
+<li>
+<p>You need to provide a kubeconfig file associate with the IAM user to access kubernetes cluster. Meanwhile, you need to grant following cluster roles to the IAM user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">nodes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods/status</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">persistentvolumes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">persistentvolumeclaims</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">services</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">namespaces</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;apps/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      -<span style="color:#ae81ff">deployments</span>
+</span></span><span style="display:flex;"><span>      -<span style="color:#ae81ff">replicasets</span>
+</span></span><span style="display:flex;"><span>      -<span style="color:#ae81ff">replicationcontollers</span>
+</span></span><span style="display:flex;"><span>      -<span style="color:#ae81ff">statefulsets</span>
+</span></span><span style="display:flex;"><span>      -<span style="color:#ae81ff">daemonsets</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;batch/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">jobs</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">cronjobs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;storage/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">storageclasses</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Prometheus/Thanos address related to the kubernetes cluster.</p>
+</li>
+<li>
+<p>The <strong>Cluster Optimizer</strong> application can access to the EKS cluster and Prometheus/Thanos.</p>
 </li>
 </ol>
+<h2 id="import-kuberentes-cluster">Import Kuberentes Cluster</h2>
+<h3 id="add-cloud-account">Add Cloud Account</h3>
+<ol>
+<li>
+<p>Go to cloud account management page from <code>Settings --&gt; Cloud Accounts</code>, as shown below.
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png" width="900" height="249">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+  Cloud account management
+  <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+<li>
+<p>Click the <code>New</code> button to add a cloud account. You can input <code>Name</code>, select <code>Amazon AWS</code> as <code>Cloud Provider</code>, then input <code>Access Key</code> and <code>Access Key Secret</code>, and finally click <code>Confirm</code>. You can also test connectivity by click <code>Test Connectivity</code> after input the <code>Access Key</code> and <code>Access Key Secret</code>.
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png" width="500" height="349">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+  Add cloud account
+  <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+</ol>
+<h3 id="import-cluster">Import Cluster</h3>
+<ol>
+<li>
+<p>Go to cluster management page from <code>Settings --&gt; Clusters</code>, as shown below.</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png" width="900" height="255">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    Cluster Management
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+</li>
+<li>
+<p>Click <code>Import Cluster</code> button, then click <code>AWS</code> cloud provider logo to start importing a cluster from AWS. It contains five steps:</p>
+<ol>
+<li>Connect to AWS</li>
+<li>Connect to kubernetes</li>
+<li>Connect to metrics server</li>
+<li>View configurations</li>
+<li>Finish</li>
+</ol>
+</li>
+<li>
+<p>In the <code>Connect to AWS</code> step, choose <code>Using Existing Access Token</code>, select cloud account created in section <code>Add Cloud Account</code>, as shown below.
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_600x0_resize_catmullrom_3.png" width="600" height="144">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Import Cluster: Connect to AWS
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+Then click &lsquo;Next&rsquo; button to go to step <code>Connect to kubernetes</code>.</p>
+</li>
+<li>
+<p>In the <code>Connect to kubernetes</code> step, choose <code>Managed cluster</code>, select <code>Region</code> first, select <code>Cluster</code>, and fill following fields, as shown below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Description</code></td>
+<td style="text-align:left">Details about the cluster</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Using Private API Server Address</code></td>
+<td style="text-align:left">Whether to use private API Server address which is more secure.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Kubeconfig</code></td>
+<td style="text-align:left">The kubeconfig content to connect to the cluster.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Auto Refresh Kubeconfig</code></td>
+<td style="text-align:left">Indicate whether to automatically refresh the kubeconfig content.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Node Group Label</code></td>
+<td style="text-align:left">Used to identify the node group of a node. For EKS, the default value is <code>eks.amazonaws.com/nodegroup</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_600x0_resize_catmullrom_3.png" width="600" height="401">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    Import Cluster: Connect to kubernetes cluster
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics server</code> step.</p>
+</li>
+<li>
+<p>In the <code>Connect to metrics server</code> step, fill following fields, as shown below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Is Thanos</code></td>
+<td style="text-align:left">If the metric server is Thanos, this should be checked.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Prometheus address</code></td>
+<td style="text-align:left">Prometheus address, must be accessible.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Enable Rate Limit</code></td>
+<td style="text-align:left">You shoud enable it when you want to control rate limit to metrics server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Max Burst</code></td>
+<td style="text-align:left">Specify the maximum number of concurrencies to metrics server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Cluster Label</code></td>
+<td style="text-align:left">Used as label name to filter metrics of the cluster from metrics server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Cluster Label Value</code></td>
+<td style="text-align:left">Used as label value to filter metrics of the cluster from metrics server.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_600x0_resize_catmullrom_3.png" width="600" height="293">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    Import Cluster: Connect to metrics server
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>Then click &lsquo;Next&rsquo; button to go to <code>View configurations</code> step.</p>
+</li>
+<li>
+<p>In the <code>View configurations</code> step, it displays configurations on connecting to AWS cloud, connecting to kubernetes cluster, connecting to metrics server. You can check if the configuration is as expected.
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_600x0_resize_catmullrom_3.png" width="600" height="352">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    Import Cluster: View configurations
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+When you confirm these configurations, you can click <code>Import</code> button to go to <code>Finish</code> step.</p>
+</li>
+<li>
+<p>In the <code>Finish</code> step, it will disply the submission status, as shown below. You can click <code>Finish</code> button when the submission status showns the cluster is imported.</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_600x0_resize_catmullrom_3.png" width="600" height="181">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    Import Cluster: Finish
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+</li>
+</ol>
+<h2 id="next">Next</h2>
+<p>After imported the cluster, you can view optimization recommendations of the cluster in many aspect.</p>
+<ul>
+<li><a href="/docs/clusteroptimizer/nodegroup">Node group</a></li>
+<li><a href="/docs/clusteroptimizer/node">Node</a></li>
+<li><a href="/docs/clusteroptimizer/disk">Disk</a></li>
+<li><a href="/docs/clusteroptimizer/pv">Persistent volume</a></li>
+<li><a href="/docs/clusteroptimizer/application">Application</a></li>
+</ul>
 
 </div>
 </div>

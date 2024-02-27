@@ -20,16 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Wiseinf</title>
-<meta name="description" content="Cloud Native Application Cost Management And Optimization Platform">
-<meta property="og:title" content="" />
-<meta property="og:description" content="Cloud Native Application Cost Management And Optimization Platform" />
+<title>Node group configurations | Wiseinf</title>
+<meta name="description" content="Describes node group configurations of **Ruyi**.
+">
+<meta property="og:title" content="Node group configurations" />
+<meta property="og:description" content="Describes node group configurations of **Ruyi**.
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/ruyi/configuration/nodegroup/" /><meta property="og:site_name" content="Wiseinf" />
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Cloud Native Application Cost Management And Optimization Platform"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Cloud Native Application Cost Management And Optimization Platform"/>
+<meta itemprop="name" content="Node group configurations">
+<meta itemprop="description" content="Describes node group configurations of **Ruyi**.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node group configurations"/>
+<meta name="twitter:description" content="Describes node group configurations of **Ruyi**.
+"/>
 
 
 
@@ -126,16 +130,18 @@ if (!doNotTrack) {
   <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizer-li">
-  <a href="/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizer"><span class="">Cluster Optimizer: Cloud native cluster optimization platform</span></a>
+  <a href="/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizer"><span class="">Cluster Optimizer</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizersetup-li">
-  <a href="/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizersetup"><span class="">Installation and Deployment</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aliyun-li">
-  <a href="/docs/cluster-optimizer/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aliyun"><span class="">Import Alibaba Cloud Cluster</span></a>
+  <a href="/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizersetup"><span class="">Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aws-li">
+  <a href="/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aws"><span class="">Import Cluster from AWS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-alibaba-li">
+  <a href="/docs/cluster-optimizer/import-alibaba/" title="Import Cluster from Alibaba Cloud" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-alibaba"><span class="">Import Cluster from Alibaba Cloud </span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroverview-li">
   <a href="/docs/cluster-optimizer/overview/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroverview"><span class="">Cluster Overview</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizernodegroup-li">
-  <a href="/docs/cluster-optimizer/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernodegroup"><span class="">Node Pool Optimization</span></a>
+  <a href="/docs/cluster-optimizer/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernodegroup"><span class="">Node Group Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizernode-li">
   <a href="/docs/cluster-optimizer/node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernode"><span class="">Node Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerdisk-li">
@@ -144,71 +150,69 @@ if (!doNotTrack) {
   <a href="/docs/cluster-optimizer/pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerpv"><span class="">Persistent Volume Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerapp-li">
   <a href="/docs/cluster-optimizer/app/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerapp"><span class="">Application Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizeroperations-li">
-  <a href="/docs/cluster-optimizer/operations/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperations"><span class="">Cluster Optimization Operations</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizeractions-li">
+  <a href="/docs/cluster-optimizer/actions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractions"><span class="">Actions</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-nodegroup-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-nodegroup"><span class="">Adjust Node Pool</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-node-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-node"><span class="">Adjust Nodes</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-disk-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-disk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-disk"><span class="">Adjusting disks</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsdelete-pv-li">
-  <a href="/docs/cluster-optimizer/operations/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsdelete-pv"><span class="">Deleting Persistent Volume</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-nodegroup-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-nodegroup/" title="Adjusting Node Group" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-nodegroup"><span class="">Adjust Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-node-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-node"><span class="">Adjustment Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-disk-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-disk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-disk"><span class="">Adjust Disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsdelete-pv-li">
+  <a href="/docs/cluster-optimizer/actions/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsdelete-pv"><span class="">Delete Persistent Volume</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aws-li">
-  <a href="/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aws"><span class=""></span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecost-li">
-  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost: A Cloud-native Cost Management and Optimization Platform</span></a>
+  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostsetup-li">
   <a href="/docs/wisecost/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostsetup"><span class="">Installation and Deployment</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostimport-aliyun-li">
   <a href="/docs/wisecost/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostimport-aliyun"><span class="">Import Alibaba Cloud Cluster</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
-  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">View Node Cost</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcluster-cost-li">
-  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">Viewing Cluster Costs</span></a>
+  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">View cluster costs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
+  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">View node costs</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcost-li">
-  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">View Application Costs</span></a>
+  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">View application costs</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostoptimize-li">
   <a href="/docs/wisecost/optimize/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostoptimize"><span class="">Cost Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecostdevelopment-li">
   <a href="/docs/wisecost/development/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopment"><span class="">Development Manual</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
-  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API Reference</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
-  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class=""></span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
+  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class="">API Documentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
+  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API interface reference</span></a>
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsruyi-li">
-  <a href="/docs/ruyi/" title="Ruyi: Cloud native cluster autoscaling engine" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi: Cloud native cluster expansion and contraction engine</span></a>
+  <a href="/docs/ruyi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyisetup-li">
   <a href="/docs/ruyi/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyisetup"><span class="">Installation and Deployment</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiautoscaling-li">
-  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">Automatic Scaling</span></a>
+  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">Autoscaling</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyivirtualcapacity-li">
+  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class="">Virtual Capacity</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsruyiconfiguration-li">
   <a href="/docs/ruyi/configuration/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfiguration"><span class="">Configuration</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiconfigurationcommand-line-li">
-  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">Command Line Arguments</span></a>
+  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">Command line parameters</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsruyiconfigurationnodegroup-li">
-  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class="td-sidebar-nav-active-item"></span></a>
+  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class="td-sidebar-nav-active-item">Node group configurations</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyimonitoring-li">
   <a href="/docs/ruyi/monitoring/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyimonitoring"><span class="">Monitoring</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyitroubleshooting-li">
   <a href="/docs/ruyi/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyitroubleshooting"><span class="">FAQ</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyivirtualcapacity-li">
-  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class=""></span></a>
 </li>
   </ul>
 </li>
@@ -229,10 +233,66 @@ if (!doNotTrack) {
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#节点组配置参数">节点组配置参数</a>
+    <li><a href="#overview-of-node-group-configuration-parameters">Overview of node group configuration parameters</a></li>
+    <li><a href="#configuration-parameters">Configuration parameters</a>
       <ul>
-        <li><a href="#配置示例">配置示例</a></li>
-        <li><a href="#配置参数说明">配置参数说明</a></li>
+        <li><a href="#name"><code>name</code></a></li>
+        <li><a href="#labels-labelkey-and-labelvalue"><code>labels</code>, <code>label.Key</code> and <code>label.Value</code></a></li>
+        <li><a href="#dryrun"><code>dryRun</code></a></li>
+        <li><a href="#nodegroupid"><code>nodeGroupId</code></a></li>
+        <li><a href="#enableautoscaling"><code>enableAutoscaling</code></a></li>
+        <li><a href="#autoscaling"><code>autoscaling</code></a></li>
+        <li><a href="#enablevirtualcapacity"><code>enableVirtualCapacity</code></a></li>
+        <li><a href="#virtualcapacity"><code>virtualCapacity</code></a></li>
+        <li><a href="#alicloud"><code>alicloud</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#automatic-expansion-and-contraction-configuration">Automatic expansion and contraction configuration</a>
+      <ul>
+        <li><a href="#minnodes-and-maxnodes"><code>minNodes</code> and <code>maxNodes</code></a></li>
+        <li><a href="#enablescaleup"><code>enableScaleUp</code></a></li>
+        <li><a href="#enablescaledown"><code>enableScaleDown</code></a></li>
+        <li><a href="#scaleup"><code>scaleUp</code></a></li>
+        <li><a href="#scaleupthreshold"><code>scaleUp.threshold</code></a></li>
+        <li><a href="#scaleupscaleonpodpending"><code>scaleUp.scaleOnPodPending</code></a></li>
+        <li><a href="#scaleupsilenceperiod"><code>scaleUp.silencePeriod</code></a></li>
+        <li><a href="#scaledown"><code>scaleDown</code></a></li>
+        <li><a href="#scaledownthreshold"><code>scaleDown.threshold</code></a></li>
+        <li><a href="#scaledownsoftdeletegraceperiod"><code>scaleDown.softDeleteGracePeriod</code></a></li>
+        <li><a href="#scaledownharddeletegraceperiod"><code>scaleDown.hardDeleteGracePeriod</code></a></li>
+        <li><a href="#scaledownmaxnoderemovalrate"><code>scaleDown.maxNodeRemovalRate</code></a></li>
+        <li><a href="#scaledowntainteffect"><code>scaleDown.taintEffect</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-capacity-configuration">Virtual capacity configuration</a>
+      <ul>
+        <li><a href="#prometheusaddress"><code>prometheusAddress</code></a></li>
+        <li><a href="#prometheuswindow"><code>prometheusWindow</code></a></li>
+        <li><a href="#isthanos"><code>isThanos</code></a></li>
+        <li><a href="#thanosclusterkey-and-thanosclustervalue"><code>thanosClusterKey</code> and <code>thanosClusterValue</code></a></li>
+        <li><a href="#increasesilenceperiod"><code>increaseSilencePeriod</code></a></li>
+        <li><a href="#decreasesilenceperiod"><code>decreaseSilencePeriod</code></a></li>
+        <li><a href="#stabilitywindow"><code>stabilityWindow</code></a></li>
+        <li><a href="#tolerance"><code>tolerance</code></a></li>
+        <li><a href="#cpumaxusage"><code>cpuMaxUsage</code></a></li>
+        <li><a href="#maxvalue-and-minvalue"><code>maxValue</code> and <code>minValue</code></a></li>
+        <li><a href="#resourcereservation"><code>resourceReservation</code></a></li>
+        <li><a href="#resourcereservationkubereserved-and-resourcereservationsystemreserved"><code>resourceReservation.kubeReserved</code> and <code>resourceReservation.systemReserved</code></a></li>
+        <li><a href="#resourcereservationreservedpercentage"><code>resourceReservation.reservedPercentage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#alibaba-cloud-service-provider-configuration">Alibaba Cloud Service Provider Configuration</a>
+      <ul>
+        <li><a href="#alicloudclusterid"><code>alicloud.clusterId</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#aws-cloud-service-provider-configuration">AWS cloud service provider configuration</a>
+      <ul>
+        <li><a href="#awslaunchtemplateid-and-awslaunchtemplateversion"><code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code></a></li>
+        <li><a href="#awsinstancereadytimeout"><code>aws.instanceReadyTimeout</code></a></li>
+        <li><a href="#awslifecyle"><code>aws.lifecyle</code></a></li>
+        <li><a href="#awsinstancetypeoverrides"><code>aws.instanceTypeOverrides</code></a></li>
+        <li><a href="#awsresourcetagging"><code>aws.resourceTagging</code></a></li>
       </ul>
     </li>
   </ul>
@@ -260,29 +320,27 @@ if (!doNotTrack) {
         
           <li><a class="taxonomy-term" href="/tags/alibaba-cloud/" data-taxonomy-term="alibaba-cloud"><span class="taxonomy-label">Alibaba Cloud</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">2</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/application-optimization/" data-taxonomy-term="application-optimization"><span class="taxonomy-label">Application Optimization</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">13</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">15</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">14</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/cluster-overview/" data-taxonomy-term="cluster-overview"><span class="taxonomy-label">Cluster Overview</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/disk-optimization/" data-taxonomy-term="disk-optimization"><span class="taxonomy-label">Disk Optimization</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/node-pool-optimization/" data-taxonomy-term="node-pool-optimization"><span class="taxonomy-label">Node Pool Optimization</span><span class="taxonomy-count">3</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/node-optimization/" data-taxonomy-term="node-optimization"><span class="taxonomy-label">Node Optimization</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">7</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">9</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/ruyi-engine/" data-taxonomy-term="ruyi-engine"><span class="taxonomy-label">Ruyi Engine</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">9</span></a></li>
-        
-          <li><a class="taxonomy-term" href="/tags/wiseinf/" data-taxonomy-term="wiseinf"><span class="taxonomy-label">Wiseinf</span><span class="taxonomy-count">3</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">10</span></a></li>
         
       </ul>
     </div>
@@ -304,17 +362,17 @@ if (!doNotTrack) {
       
       <ul class="taxonomy-terms">
         
-          <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span><span class="taxonomy-count">2</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster Autoscaling</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">14</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">15</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">9</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">10</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span><span class="taxonomy-count">6</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span><span class="taxonomy-count">8</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/scaling/" data-taxonomy-term="scaling"><span class="taxonomy-label">Scaling</span><span class="taxonomy-count">5</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/expansion-and-contraction/" data-taxonomy-term="expansion-and-contraction"><span class="taxonomy-label">Expansion and Contraction</span><span class="taxonomy-count">6</span></a></li>
         
       </ul>
     </div>
@@ -334,20 +392,20 @@ if (!doNotTrack) {
     <a href="/docs/">Documentation</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="/docs/ruyi/">Ruyi: Cloud native cluster expansion and contraction engine</a>
+    <a href="/docs/ruyi/">Ruyi</a>
   </li>
   <li class="breadcrumb-item">
     <a href="/docs/ruyi/configuration/">Configuration</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="/docs/ruyi/configuration/nodegroup/" aria-disabled="true" class="btn-link disabled"></a>
+    <a href="/docs/ruyi/configuration/nodegroup/" aria-disabled="true" class="btn-link disabled">Node group configurations</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1></h1>
-  
+	<h1>Node group configurations</h1>
+  <div class="lead">Describes node group configurations of <strong>Ruyi</strong>.</div>
 	<header class="article-meta">
 		
 
@@ -356,18 +414,45 @@ if (!doNotTrack) {
       
 
 
+<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span></a></li>
+    
+  </ul>
+</div>
+
     
       
 
+
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span></a></li>
+    
+      <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span></a></li>
+    
+  </ul>
+</div>
 
     
   
 
 		
 	</header>
-	<h2 id="节点组配置参数">节点组配置参数</h2>
-<p>Ruyi：云原生集群扩缩容引擎的节点组配置参数。</p>
-<h3 id="配置示例">配置示例</h3>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Ruyi: Cloud native cluster expansion and contraction engine configuration.</p>
+
+</div>
+
+<h2 id="overview-of-node-group-configuration-parameters">Overview of node group configuration parameters</h2>
+<p>The engine must depend on the node group configuration parameters in order to run. The node group configuration parameters use the command line parameter <code>--config</code> to specify the configuration file location. For example: <code>--config=/etc/ruyi/config.yaml</code></p>
+<p>The configuration file format is YAML format, the example is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">nodeGroups</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;default-pool&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">nodeGroupId</span>: <span style="color:#e6db74">&#34;np1234567890&#34;</span>
@@ -405,33 +490,181 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>: 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">SystemReservedPercentage</span>: <span style="color:#ae81ff">0.1</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">lifecycle</span>: <span style="color:#ae81ff">spot</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><h3 id="配置参数说明">配置参数说明</h3>
-<h4 id="name"><code>name</code></h4>
-<p>节点组名称，用于输出日志等。不同的节点组名称必须唯一。</p>
-<h4 id="labels和labelkey以及labelvalue"><code>labels</code>和<code>label.Key</code>以及<code>label.Value</code></h4>
-<p>标签键值对数组，引擎通过此标签键值对数组来选择节点组。其中，<code>label.Key</code>和<code>label.Value</code>分别是键值对中的键和值。</p>
-<h4 id="dryrun"><code>dryRun</code></h4>
-<p>是否仅运行，不对实际环境做任何修改。该值为<code>false</code>时，可被子命令行参数的<code>dryRun</code>覆盖。</p>
-<h4 id="nodegroupid"><code>nodeGroupId</code></h4>
-<p>节点组ID，在云服务商的节点组ID，云服务商通过此参数来从对应云服务商获取改节点组信息。</p>
-<h4 id="enableautoscaling"><code>enableAutoscaling</code></h4>
-<p>指示是否启用自动扩缩容特性，默认为<code>true</code>。</p>
-<h4 id="autoscaling"><code>autoscaling</code></h4>
-<p>自动扩缩容配置，具体请参见<a href="#%E8%87%AA%E5%8A%A8%E6%89%A9%E7%BC%A9%E5%AE%B9%E9%85%8D%E7%BD%AE">自动扩缩容配置</a>。</p>
-<h4 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h4>
-<p>指示是否启用虚拟容量特性，默认为<code>true</code>。</p>
-<h4 id="virtualcapacity"><code>virtualCapacity</code></h4>
-<p>虚拟容量配置，具体请参见<a href="#%E8%99%9A%E6%8B%9F%E5%AE%B9%E9%87%8F%E9%85%8D%E7%BD%AE">虚拟容量配置</a>。</p>
-<h4 id="alicloud"><code>alicloud</code></h4>
-<p>阿里云服务商配置，具体请参见<a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%95%86%E9%85%8D%E7%BD%AE">阿里云服务商配置</a>。</p>
+</span></span></code></pre></div><h2 id="configuration-parameters">Configuration parameters</h2>
+<h3 id="name"><code>name</code></h3>
+<p>The parameter <code>name</code> is the name used during engine running and can be used to output friendly log information, etc. Different node group names must be unique.</p>
+<h3 id="labels-labelkey-and-labelvalue"><code>labels</code>, <code>label.Key</code> and <code>label.Value</code></h3>
+<p>The parameter <code>labels</code> is an array of key-value pairs through which the engine selects node groups.
+Among them, <code>label.Key</code> and <code>label.Value</code> are the key and value in the key-value pair,</p>
+<h3 id="dryrun"><code>dryRun</code></h3>
+<p>The parameter <code>dryRun</code> means only running without any modification to the actual environment. When this value is <code>false</code>, it can be overridden by the <code>dryRun</code> command line parameter.</p>
+<h3 id="nodegroupid"><code>nodeGroupId</code></h3>
+<p>The parameter <code>nodeGroupId</code> is the node group ID of the node group in the cloud service provider. The cloud service provider uses this parameter to obtain the node group information from the corresponding cloud service provider.</p>
+<h3 id="enableautoscaling"><code>enableAutoscaling</code></h3>
+<p>The parameter <code>enableAutoscaling</code> indicates whether to enable the automatic scaling feature, and the default is <code>true</code>.</p>
+<h3 id="autoscaling"><code>autoscaling</code></h3>
+<p>The parameter <code>autoscaling</code> provides corresponding parameters for automatic expansion and contraction. For details, please refer to [Automatic expansion and contraction configuration] (#automatic expansion and contraction configuration)</p>
+<h3 id="enablevirtualcapacity"><code>enableVirtualCapacity</code></h3>
+<p>The parameter <code>enableVirtualCapacity</code> indicates whether to enable the virtual capacity feature, and the default is <code>true</code>.</p>
+<h3 id="virtualcapacity"><code>virtualCapacity</code></h3>
+<p>The parameter <code>virtualCapacity</code> provides corresponding parameters for virtual capacity. For details, please see [Virtual Capacity](#Virtual Capacity Configuration)</p>
+<h3 id="alicloud"><code>alicloud</code></h3>
+<p>The parameter <code>alicloud</code> provides corresponding parameters for the cloud service provider Alibaba Cloud. For details, please refer to [Alibaba Cloud Service Provider Configuration](#Alibaba Cloud Service Provider Configuration)</p>
+<h2 id="automatic-expansion-and-contraction-configuration">Automatic expansion and contraction configuration</h2>
+<p>The automatic expansion and contraction configuration provides corresponding parameters for the automatic expansion and contraction of the node group. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">autoscaling</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minNodes</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxNodes</span>: <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleUp</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">enableScaleDown</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleUp</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.70</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">scaleOnPodPending</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">silencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">scaleDown</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">threshold</span>: <span style="color:#ae81ff">0.40</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">softDeleteGracePeriod</span>: <span style="color:#ae81ff">1m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hardDeleteGracePeriod</span>: <span style="color:#ae81ff">10m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">maxNodeRemovalRate</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">taintEffect</span>: <span style="color:#ae81ff">NoExecute</span>
+</span></span></code></pre></div><h3 id="minnodes-and-maxnodes"><code>minNodes</code> and <code>maxNodes</code></h3>
+<p>The parameters <code>minNodes</code> and <code>maxNodes</code> are the maximum and minimum values ​​for the node pool size. When performing node expansion and contraction, it will be ensured that the node pool size meets the maximum and minimum constraints.</p>
+<h3 id="enablescaleup"><code>enableScaleUp</code></h3>
+<p>The parameter <code>enableScaleUp</code> indicates whether to enable scaling, and the default is <code>true</code>.</p>
+<h3 id="enablescaledown"><code>enableScaleDown</code></h3>
+<p>The parameter <code>enableScaleUp</code> indicates whether to enable scaling, and the default is <code>true</code>.</p>
+<h3 id="scaleup"><code>scaleUp</code></h3>
+<p>The parameter <code>scaleUp</code> provides parameters related to expansion.</p>
+<h3 id="scaleupthreshold"><code>scaleUp.threshold</code></h3>
+<p>The parameter <code>scaleUp.threshold</code> is the threshold for expansion. When the ratio of the total Requests of all running Pods on the node group to the total Allocatable of the node group is greater than this value, the expansion operation will be performed.</p>
+<h3 id="scaleupscaleonpodpending"><code>scaleUp.scaleOnPodPending</code></h3>
+<p>The parameter <code>scaleUp.scaleOnPodPending</code> indicates whether to perform expansion when the Pod is Pending. The default value is <code>false</code>. When all nodes in the node group cannot meet the resource requirements of the node, the expansion operation is performed.</p>
+<h3 id="scaleupsilenceperiod"><code>scaleUp.silencePeriod</code></h3>
+<p>The parameter <code>silencePeriod</code> is the silence time. When an expansion event occurs, no expansion operations will be performed within the <code>silencePeriod</code> time.</p>
+<h3 id="scaledown"><code>scaleDown</code></h3>
+<p>The parameter <code>scaleDown</code> provides scaling-related parameters.</p>
+<h3 id="scaledownthreshold"><code>scaleDown.threshold</code></h3>
+<p>The parameter <code>scaleDown.threshold</code> is the threshold for expansion. When the ratio of the sum of Requests of all running Pods on the node group to the sum of Allocatables of the node group is less than this value, the scaling operation is performed.</p>
+<h3 id="scaledownsoftdeletegraceperiod"><code>scaleDown.softDeleteGracePeriod</code></h3>
+<p>The parameter <code>scaleDown.softDeleteGracePeriod</code> is the node soft deletion waiting time. During the soft deletion waiting time, the engine does not perform the reduction operation.</p>
+<h3 id="scaledownharddeletegraceperiod"><code>scaleDown.hardDeleteGracePeriod</code></h3>
+<p>The parameter <code>scaleDown.hardDeleteGracePeriod</code> is the node hard deletion waiting time. When the soft deletion waiting time reaches the hard deletion waiting time, the node will be deleted only when the Pod on the node is empty. After the hard deletion waiting time, the engine will forcefully delete the node.</p>
+<!--
+For the logic of whether the node is empty, please refer to `pkg/k8s` `NodeEmpty()` -->
+<h3 id="scaledownmaxnoderemovalrate"><code>scaleDown.maxNodeRemovalRate</code></h3>
+<p>The parameter <code>scaleDown.maxNodeRemovalRate</code> is the maximum value of nodes that can be reduced at the same time.</p>
+<h3 id="scaledowntainteffect"><code>scaleDown.taintEffect</code></h3>
+<p>The parameter <code>scaleDown.taintEffect</code> refers to the operation when scaling down. When scaling down, the node will first be labeled with <code>taint</code>, and its value range is as follows:</p>
+<p>-NoSchedule
+-NoExecute</p>
+<ul>
+<li>PreferNoSchedule</li>
+</ul>
+<p>For the specific meaning, please see <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration">taint and tolerance</a></p>
+<h2 id="virtual-capacity-configuration">Virtual capacity configuration</h2>
+<p>Virtual capacity configuration provides corresponding parameters for virtual capacity. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">virtualCapacity</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusAddress</span>: <span style="color:#e6db74">&#34;http://prometheus:9090&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">prometheusWindow</span>: <span style="color:#e6db74">&#34;2m&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">isThanos</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterKey</span>: <span style="color:#ae81ff">cluster</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">thanosClusterValue</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">reservationRatio</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">increaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">decreaseSilencePeriod</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">stabilityWindow</span>: <span style="color:#ae81ff">5m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tolerance</span>: <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">cpuMaxUsage</span>: <span style="color:#ae81ff">0.7</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">maxValue</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">minValue</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceReservation</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">kubeReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">systemReserved</span>: <span style="color:#ae81ff">200m</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">reservedPercentage</span>: <span style="color:#ae81ff">0.1</span>
+</span></span></code></pre></div><h3 id="prometheusaddress"><code>prometheusAddress</code></h3>
+<p>The parameter <code>prometheusAddress</code> is the Prometheus address monitored by Metrics of the current cluster node.</p>
+<h3 id="prometheuswindow"><code>prometheusWindow</code></h3>
+<p>The parameter <code>prometheusWindow</code> is the time window when the engine queries prometheus.</p>
+<h3 id="isthanos"><code>isThanos</code></h3>
+<p>The parameter <code>isThanos</code> refers to whether the Prometheus address corresponding to the parameter <code>prometheusAddress</code> is Thanos. The default is false. When the prometheus address is Thanos, Thanos related parameters will be appended when the engine queries.</p>
+<h3 id="thanosclusterkey-and-thanosclustervalue"><code>thanosClusterKey</code> and <code>thanosClusterValue</code></h3>
+<p>The parameters <code>thanosClusterKey</code> and <code>thanosClusterValue</code> are the parameter names and values ​​​​that are appended to the engine query (when the parameter <code>isThanos</code> is <code>true</code>). Additional parameters <code>thanosClusterKey</code> and <code>thanosClusterValue</code> can improve query performance.</p>
+<h3 id="increasesilenceperiod"><code>increaseSilencePeriod</code></h3>
+<p>The parameter <code>increaseSilencePeriod</code> is the silent time when the node virtual capacity rate increases. When the node virtual capacity rate increases, this value will be maintained within the silent time window <code>increaseSilencePeriod</code>.</p>
+<h3 id="decreasesilenceperiod"><code>decreaseSilencePeriod</code></h3>
+<p>The parameter <code>decreaseSilencePeriod</code> is the silent time when the node virtual capacity rate is reduced. When the node virtual capacity rate is reduced, this value will be maintained within the silent time window <code>decreaseSilencePeriod</code>.</p>
+<h3 id="stabilitywindow"><code>stabilityWindow</code></h3>
+<p>The parameter <code>stabilityWindow</code> is the stability window. The engine will calculate the virtual capacity rate at regular intervals. The lowest value within the stability window will be selected for the final decision to avoid excessive changes in the virtual capacity rate, which may cause the virtual capacity to change too quickly. .</p>
+<h3 id="tolerance"><code>tolerance</code></h3>
+<p>The parameter <code>tolerance</code> is the maximum difference between each time the virtual capacity rate is applied and the last time. This value can prevent the node&rsquo;s Allocatable from rising too quickly.</p>
+<h3 id="cpumaxusage"><code>cpuMaxUsage</code></h3>
+<p>The parameter <code>cpuMaxUsage</code> refers to the maximum CPU utilization. When the CPU utilization of a node is greater than this value, new Pods will no longer be scheduled.</p>
+<h3 id="maxvalue-and-minvalue"><code>maxValue</code> and <code>minValue</code></h3>
+<p>The parameters <code>maxValue</code> and <code>minValue</code> are the maximum and minimum values ​​of the virtual capacity rate. The default value of <code>minValue</code> is 1.</p>
+<p>The virtual capacity rate is the ratio of the node&rsquo;s <code>Allocatable</code> to the node&rsquo;s original <code>Allocatable</code>.</p>
+<h3 id="resourcereservation"><code>resourceReservation</code></h3>
+<p>The parameter <code>resourceReservation</code> is the resource reserved when calculating the virtual capacity rate. The default value of the parameter is empty.</p>
+<p>When the parameter default value is empty, the engine will obtain the KubeletConfiguration of the node from the node in the node pool and obtain the corresponding value from the KubeletConfiguration.</p>
+<h3 id="resourcereservationkubereserved-and-resourcereservationsystemreserved"><code>resourceReservation.kubeReserved</code> and <code>resourceReservation.systemReserved</code></h3>
+<p>The parameters <code>resourceReservation.kubeReserved</code> and <code>resourceReservation.systemReserved</code> are the CPU resources reserved for kubelet and system respectively.</p>
+<h3 id="resourcereservationreservedpercentage"><code>resourceReservation.reservedPercentage</code></h3>
+<p>The parameter <code>resourceReservation.reservedPercentage</code> is the additional resource reserved by the engine for Pod running on the node.</p>
+<h2 id="alibaba-cloud-service-provider-configuration">Alibaba Cloud Service Provider Configuration</h2>
+<p>Alibaba Cloud service provider configuration provides corresponding parameters to the cloud service provider Alibaba Cloud. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">alicloud</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">clusterId</span>: <span style="color:#ae81ff">c1234567890</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">life cycle</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="alicloudclusterid"><code>alicloud.clusterId</code></h3>
+<p>The parameter <code>alicloud.clusterId</code> is the cluster ID of the Alibaba Cloud ACK cluster, which is generally identified by the label <code>ack.aliyun.com</code> on the node. For example:</p>
+<pre tabindex="0"><code>ack.aliyun.com=c1234567890
+</code></pre><p>Among them, <code>c1234567890</code> is the cluster ID.</p>
+<h2 id="aws-cloud-service-provider-configuration">AWS cloud service provider configuration</h2>
+<p>The AWS cloud service provider configuration provides corresponding parameters for the cloud service provider AWS. Examples are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">aws</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateId</span>: <span style="color:#ae81ff">lt-</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">launchTemplateVersion</span>: <span style="color:#ae81ff">spot</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">instanceReadyTimeout</span>: <span style="color:#ae81ff">2m</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resourceTagging</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="awslaunchtemplateid-and-awslaunchtemplateversion"><code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code></h3>
+<p>The parameters <code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code> are the AWS launch template ID and template version values ​​respectively, which are used to configure startup during the expansion process.template.</p>
+<p>With this parameter, the engine can use the AWS Fleet API to expand the node pool to the desired capacity in one go.</p>
+<p>The values ​​of parameters <code>aws.launchTemplateId</code> and <code>aws.launchTemplateVersion</code> can be obtained in two ways:</p>
+<ul>
+<li>Obtained through the Launch Templates page in the AWS EC2 console.</li>
+<li>Via CLI command in <a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/create-launch-template.html">Create Launch Template</a>
+Or get it from the <code>LatestVersionNumber</code> or <code>DefaultVersionNumber</code> returned in the AWS API.</li>
+</ul>
+<h3 id="awsinstancereadytimeout"><code>aws.instanceReadyTimeout</code></h3>
+<p>The parameter <code>aws.instanceReadyTimeout</code> is the timeout period to wait for the EC2 instance to be ready when using the AWS Fleet API to expand the node pool at one time.</p>
+<p>This parameter is optional and the default value is 1 minute.</p>
+<!-- This is an optional field. The default value is 1 minute.
+
+When using the one-shot capacity acquisition for AWS (see `aws.launch_template_id`), this is the maximum amount of time
+that Escalator will block waiting for new EC2 instances to become ready so that they can be added to the node group.
+This roughly corresponds to the amount of time it takes an instance to boot to multi-user mode and for the EC2 control
+plane to notice that it is healthy. This generally takes much less than a minute.
+
+**Note:** Escalator will block other scaling operations for, at most, this amount of time while new capacity comes
+online. -->
+<h3 id="awslifecyle"><code>aws.lifecyle</code></h3>
+<p>The parameter <code>aws.lifecyle</code> specifies the life cycle of the instance, and its value is <code>on-demand</code> or <code>spot</code> or <code>on-demand,spot</code>.</p>
+<p>This parameter is optional and the default value is <code>on-demand</code>.</p>
+<p><code>on-demand</code> instructs the engine to use on-demand instances when scaling up, and <code>spot</code> instructs the engine to use spot instances when scaling up.</p>
+<h3 id="awsinstancetypeoverrides"><code>aws.instanceTypeOverrides</code></h3>
+<p>The parameter <code>aws.lifecyle</code> specifies the type of instance. This parameter is optional and has no default value.</p>
+<p>When the engine creates an expansion request, it can use multiple instance types specified by the parameter <code>aws.lifecyle</code> to increase the probability of successful expansion.</p>
+<h3 id="awsresourcetagging"><code>aws.resourceTagging</code></h3>
+<p>The parameter <code>aws.resourceTagging</code> indicates whether to add resource tags to the nodes managed by the engine <code>autoscaling.wiseinf.com\enabled</code>:<code>true</code>.</p>
+<p>This label does not affect any functions of the engine. It is mainly used to facilitate the management of EC2 instances using labels. For details, please refer to <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Using Tags</a>.</p>
 
         <div class="section-index">
     

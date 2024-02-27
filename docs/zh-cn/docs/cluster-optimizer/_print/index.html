@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Cluster Optimizer：一站式云原生集群优化平台 | Wiseinf</title>
-<meta name="description" content="一站式云原生集群优化平台.
+<title>Cluster Optimizer | Wiseinf</title>
+<meta name="description" content="云原生集群优化平台.
 ">
-<meta property="og:title" content="Cluster Optimizer：一站式云原生集群优化平台" />
-<meta property="og:description" content="一站式云原生集群优化平台.
+<meta property="og:title" content="Cluster Optimizer" />
+<meta property="og:description" content="云原生集群优化平台.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/zh-cn/docs/cluster-optimizer/" /><meta property="og:site_name" content="云智优本" />
 
-<meta itemprop="name" content="Cluster Optimizer：一站式云原生集群优化平台">
-<meta itemprop="description" content="一站式云原生集群优化平台.
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cluster Optimizer：一站式云原生集群优化平台"/>
-<meta name="twitter:description" content="一站式云原生集群优化平台.
+<meta itemprop="name" content="Cluster Optimizer">
+<meta itemprop="description" content="云原生集群优化平台.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cluster Optimizer"/>
+<meta name="twitter:description" content="云原生集群优化平台.
 "/>
 
 
@@ -122,8 +122,8 @@ if (!doNotTrack) {
 
 
 
-<h1 class="title">Cluster Optimizer：一站式云原生集群优化平台</h1>
-<div class="lead">一站式云原生集群优化平台.</div>
+<h1 class="title">Cluster Optimizer</h1>
+<div class="lead">云原生集群优化平台.</div>
 
 
 
@@ -139,7 +139,7 @@ if (!doNotTrack) {
     
     
 	
-<li>1: <a href="#pg-319d547359ece75bc8828c67e98da1cf">安装部署</a></li>
+<li>1: <a href="#pg-319d547359ece75bc8828c67e98da1cf">安装</a></li>
 
 
     
@@ -177,7 +177,7 @@ if (!doNotTrack) {
     
     
 	
-<li>3: <a href="#pg-b2333a43b3e24210bc2c1c8357409f74">导入阿里云集群</a></li>
+<li>3: <a href="#pg-ab611226a338ba3cf65a94042e8aa36a">导入阿里云集群</a></li>
 
 
     
@@ -410,7 +410,7 @@ if (!doNotTrack) {
       
 
 <div class="pageinfo pageinfo-primary">
-<p>一站式云原生集群优化平台（Cluster Optimizer）提供了云原生云原生集群优化能力。</p>
+<p>云原生集群优化平台（Cluster Optimizer）提供了云原生云原生集群优化能力。</p>
 
 </div>
 
@@ -441,8 +441,8 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-319d547359ece75bc8828c67e98da1cf">1 - 安装部署</h1>
-    <div class="lead">描述了安装一站式云原生集群优化平台（Cluster Optimizer）的详细步骤.</div>
+	<h1 id="pg-319d547359ece75bc8828c67e98da1cf">1 - 安装</h1>
+    <div class="lead">描述安装云原生集群优化平台（Cluster Optimizer）的详细步骤.</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -453,371 +453,87 @@ if (!doNotTrack) {
 <h2 id="前置条件">前置条件</h2>
 <ul>
 <li>Mysql数据库，版本5.7及以上</li>
-<li>kubernetes集群，版本1.20及以上</li>
+<li>Kubernetes集群，版本1.22及以上</li>
+<li>Kubernetes集群的证书，能够创建<code>wiseinf-system</code>名称空间以及在此名称空间下创建Deployment、ConfigMap、Service等资源</li>
 </ul>
 <h2 id="克隆安装脚本">克隆安装脚本</h2>
 <ol>
-<li>打开控制台，输入<code>git clone https://github.com/wiseinf/setup.git</code>,将安装脚本克隆到本地。
-我们提供了2个仓库地址，方便大家根据需求来克隆到本地。</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>仓库</th>
-<th style="text-align:left">仓库地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Github</td>
-<td style="text-align:left"><a href="https://github.com/wiseinf/setup.git">https://github.com/wiseinf/setup.git</a></td>
-</tr>
-<tr>
-<td>Gitee</td>
-<td style="text-align:left"><a href="https://gitee.com/wiseinf/setup.git">https://gitee.com/wiseinf/setup.git</a></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>后续步骤都假设已将<code>setup</code>库克隆到用户主目录，若未克隆到用户主目录，则需要根据实际情况调整命令中的文件路径。</p>
+<li>
+<p>打开命令行控制台，通过下述命令将安装脚本克隆到本地。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
+</span></span></code></pre></div><blockquote>
+<p>1，若使用Gitee仓库地址，则需将上述命令中的<code>https://github.com/wiseinf/setup.git</code>替换为<code>https://gitee.com/wiseinf/setup.git</code>。</p>
+<p>2，后续步骤假设已将<code>setup</code>库克隆到用户主目录，若未克隆到用户主目录，则需要根据实际情况调整命令中的文件路径。</p>
 </blockquote>
+</li>
+</ol>
 <h2 id="初始化数据库">初始化数据库</h2>
 <blockquote>
 <p>假设Mysql数据库主机地址为：<code>127.0.0.1</code>.</p>
 </blockquote>
 <ol>
 <li>
-<p>在控制台执行命令<code>mysql -h127.0.0.1 -uroot</code>，输入密码，登录mysql数据库。其中<code>127.0.0.1</code>为Mysql主机地址。</p>
-</li>
+<p>在命令行控制台执行如下命令登录到Mysql数据库</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
+</span></span></code></pre></div></li>
 <li>
-<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>optimizer</code>库，相应表后续由应用程序自动创建。</p>
+<p>通过如下命令创建<code>optimizer</code>库，同时，也创建用户<code>optimizer</code>（密码为<code>Optimizer~</code>）</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_database.sql
+</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
 </span></span></code></pre></div><blockquote>
 <p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>optimizer</code>库，则上述脚本会先删除<code>optimizer</code>库，然后创建新的<code>optimizer</code>库。</p>
 </blockquote>
 </li>
 <li>
-<p>在<code>mysql&gt;</code>提示符下执行如下命令，创建<code>optimizer</code>用户（默认密码为<code>Optimizer~</code>）并为其赋予<code>optimizer</code>库的完全访问权限。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+<p>通过如下命令检查<code>optimizer</code>库是否创建成功（当提示输入密码时，请输入<code>Optimizer~</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uoptimizer 
+</span></span><span style="display:flex;"><span>    mysql&gt; show databases;
 </span></span></code></pre></div></li>
 <li>
-<p>在控制台执行命令<code>mysql -h127.0.0.1 -uoptimizer</code>，输入密码（默认密码为<code>Optimizer~</code>），登录mysql数据库。</p>
-</li>
+<p>可通过创建表格<code>test</code>来确认用户<code>optimizer</code>权限是否正常，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; USE optimizer;
+</span></span><span style="display:flex;"><span>    mysql&gt; CREATE TABLE test <span style="color:#f92672">(</span>id int<span style="color:#f92672">)</span>;
+</span></span></code></pre></div></li>
 <li>
-<p>在<code>mysql&gt;</code>提示符下执行<code>show database</code>，确认<code>optimizer</code>库已经创建。可以通过<code>select</code>语句（例如<code>select * from storage.pv</code>）查询库中相应的数据表确认用户的权限是否正常。</p>
-</li>
-<li>
-<p>至此，数据库初始化完毕。</p>
+<p>至此，数据库<code>optimizer</code>成功初始化完毕。</p>
 </li>
 </ol>
 <h2 id="部署应用">部署应用</h2>
 <ol>
-<li>通过 <code>kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml</code>将如下文件应用到集群，创建名称空间<code>wiseinf-system</code>。
-
-    
-      
-    
-    
-    
-    
-    	
-    
-    
-    
-    
-    
-    
-      
-      
-      
-    
-    
-    
-    
-    
-    
-      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Namespace</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>: 
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span></code></pre></div>
-    
-</li>
-<li>根据Mysql的配置调整文件<code>~/setup/clusteroptimizer/optimizer.yaml</code>中的<strong>ConfigMap</strong><code>optimizer-conf</code>，将其配置项<code>optimize</code>和<code>kubestore</code>下的<code>dataSourceName: &quot;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;parseTime=true&amp;&amp;loc=Local</code>中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</li>
-<li>通过 <code>kubectl apply -f ~/setup/clusteroptimizer/optimizer.yaml</code>将如下文件应用到集群，部署应用<strong>Cluster Optimizer</strong>。
-
-    
-      
-    
-    
-    
-    
-    	
-    
-    
-    
-    
-    
-    
-      
-      
-      
-    
-    
-    
-    
-    
-    
-      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">default.conf</span>: |-<span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      server {
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        listen 80;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        location / {
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          root /usr/share/nginx/html/;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          include /etc/nginx/mime.types;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          try_files $uri $uri/ /index.html;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          location /api/ {
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            rewrite ^/api/(.*) /$1 break;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header Host $host;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-Real-IP $remote_addr;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_set_header X-NginX-Proxy true;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            proxy_pass http://localhost:7070;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          }
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      }</span>      
-    </span></span><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ConfigMap</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">cluster-optimizer.yaml</span>: |-<span style="color:#e6db74">
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    server:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      port: 7070
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    engine:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      maxQueryDuration: 1h
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    storage:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      type: mysql
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      parameters:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        dataSourceName: &#34;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;parseTime=true&amp;loc=Local&#34;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        maxOpenConns: 10
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    optimize:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      dataSource:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        name: &#34;optimizer:Optimizer~@tcp(mysql:3306)/optimizer?charset=utf8mb4&amp;parseTime=true&amp;loc=Local&#34;
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        maxOpenConns: 10
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      strategyConfigs:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;OOM&#34;: 
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          enabled: true
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;Resource Recommendation&#34;:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          enabled: true
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;No Quota&#34;:
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          enabled: true
-    </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      enabled: true</span>    
-    </span></span><span style="display:flex;"><span>
-    </span></span><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">revisionHistoryLimit</span>: <span style="color:#ae81ff">10</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">group</span>: <span style="color:#ae81ff">wiseinf</span>
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">dnsPolicy</span>: <span style="color:#ae81ff">ClusterFirstWithHostNet</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">securityContext</span>:
-    </span></span><span style="display:flex;"><span>        <span style="color:#f92672">runAsUser</span>: <span style="color:#ae81ff">0</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-ui</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wiseinf/cluster-optimizer-ui:1.0.0-preview</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">volumeMounts</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/etc/nginx/conf.d</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">requests</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">100m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">200M</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">limits</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">1000m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">1G</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wiseinf/optimizer:1.0.0-preview</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">command</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;/wiseinf/optimizer&#34;</span>
-    </span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;--features=APIServer&#34;</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">volumeMounts</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-data-volume</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/data</span>
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-logs-volume</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/logs</span>
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf-volume</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/wiseinf/conf</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
-    </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">7070</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">requests</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">100m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">200M</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">limits</span>:
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">cpu</span>: <span style="color:#ae81ff">1000m</span>
-    </span></span><span style="display:flex;"><span>              <span style="color:#f92672">memory</span>: <span style="color:#ae81ff">1G</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">volumes</span>:
-    </span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Config for optimizer-ui</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMap</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-nginx-config</span>
-    </span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Configs for optimizer</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-data-volume</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">hostPath</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/optimizer/data</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">DirectoryOrCreate</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-logs-volume</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">hostPath</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/optimizer/logs</span>
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">DirectoryOrCreate</span>
-    </span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf-volume</span>
-    </span></span><span style="display:flex;"><span>          <span style="color:#f92672">configMap</span>:
-    </span></span><span style="display:flex;"><span>            <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer-conf</span>
-    </span></span><span style="display:flex;"><span>---
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>:  <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">wiseinf-system</span>
-    </span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
-    </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">nodePort</span>: <span style="color:#ae81ff">30000</span>
-    </span></span><span style="display:flex;"><span>      <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">80</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
-    </span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">optimizer</span>
-    </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">NodePort</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># ---</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># apiVersion: networking.k8s.io/v1</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># kind: Ingress</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># metadata:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#   name: optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#   namespace: wiseinf-system</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e"># spec:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#   rules:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#     - host: optimizer.{your domain name}</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#       http:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#         paths:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#           - backend:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#               service:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#                 name: optimizer</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#                 port:</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#                   number: 80</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#             path: /</span>
-    </span></span><span style="display:flex;"><span><span style="color:#75715e">#             pathType: ImplementationSpecific</span></span></span></code></pre></div>
-    
-
-<blockquote>
-<p>注意：</p>
+<li>
+<p>通过如下命令创建名称空间<code>wiseinf-system</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+</span></span></code></pre></div></li>
+<li>
+<p>通过如下命令创建<code>Deployment</code> <code>optimizer</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/optimizer.yaml
+</span></span></code></pre></div><blockquote>
+<p>注意：若数据库信息与[初始化数据库]中提供的不一致，则需要调整文件<code>~/setup/clusteroptimizer/optimizer.yaml</code>中的<strong>ConfigMap</strong><code>optimizer-conf</code>，将其配置项<code>optimize</code>和<code>storage</code>下的<code>dataSource.name</code>值中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</p>
 </blockquote>
 </li>
-<li>通过<code>kubectl port-forward svc/optimizer 80:80</code></li>
-<li>访问URL<code>http://localhost</code>，即可看到Cluster Optimizer首页。</li>
-<li>至此，应用<strong>Cluster Optimizer</strong>部署完毕。</li>
+<li>
+<p>通过如下命令检查<code>optimizer</code>是否正常运行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
+</span></span></code></pre></div><p>若正常运行，则可以获取到如下输出：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    NAME                         READY   STATUS    RESTARTS   AGE
+</span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6   2/2     Running   <span style="color:#ae81ff">0</span>          1m
+</span></span></code></pre></div></li>
+<li>
+<p>通过如下命令创建 <strong>port-forward</strong> 来访问 <code>optimizer</code> 服务：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 80:80
+</span></span></code></pre></div></li>
+<li>
+<p>打开浏览器，访问地址<code>http://localhost/</code>.</p>
+</li>
+<li>
+<p>若能够看到  <strong>Cluster Optimizer</strong>首页，则应用<strong>Cluster Optimizer</strong>成功部署.</p>
+</li>
 </ol>
 <h2 id="下一步导入集群">下一步：导入集群</h2>
-<p>下一步，您可以添加一个集群，查看其各项成本。详见导入集群<a href="/docs/clusteroptimizer/import-aliyun">导入阿里云集群</a></p>
-<h2 id="附录">附录</h2>
+<p>下一步，您可以添加一个集群，查看其相关优化建议。详见：</p>
 <ul>
-<li>脚本<code>create_user.sql</code>
-
-    
-      
-    
-    
-    
-    
-    	
-    
-    
-    
-    
-    
-    
-      
-      
-      
-    
-    
-    
-    
-    
-    
-      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> optimizer<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;Optimizer~&#39;</span>;
-    </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">ON</span> optimizer.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> optimizer<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span>;</span></span></code></pre></div>
-    
-</li>
-<li>脚本<code>create_database.sql</code>
-
-    
-      
-    
-    
-    
-    
-    	
-    
-    
-    
-    
-    
-    
-      
-      
-      
-    
-    
-    
-    
-    
-    
-      <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- ----------------------------------------------------------------------------
-    </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Schema optimizer
-    </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- ----------------------------------------------------------------------------
-    </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>optimizer<span style="color:#f92672">`</span> ;
-    </span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>optimizer<span style="color:#f92672">`</span> <span style="color:#66d9ef">DEFAULT</span> CHARACTER <span style="color:#66d9ef">SET</span> utf8mb4;</span></span></code></pre></div>
-    
-</li>
+<li><a href="/docs/cluster-optimizer/import-aws">导入AWS EKS集群</a></li>
+<li><a href="/docs/cluster-optimizer/import-alibaba">导入阿里云集群</a></li>
 </ul>
 
 </div>
@@ -847,7 +563,7 @@ if (!doNotTrack) {
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-da59e19291384c4c46aa84925c92b66c">2 - 导入AWS EKS集群</h1>
-    <div class="lead">本节描述导入AWS EKS集群的详细步骤.</div>
+    <div class="lead">描述导入AWS EKS集群的详细步骤.</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -883,7 +599,12 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>	]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ol start="2">
-<li>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</li>
+<li>
+<p>一个Kubernetes集群，版本1.22及以上，推荐使用EKS集群.</p>
+</li>
+<li>
+<p>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</p>
+</li>
 </ol>
 <pre tabindex="0"><code>apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -933,14 +654,280 @@ rules:
       - get
       - list
       - watch
-</code></pre><ol start="3">
+</code></pre><ol start="4">
 <li>
-<p>集群所对应的Prometheus/Thanos 地址，平台使用监控数据计算并提供操作建议。</p>
+<p>集群所对应的Prometheus/Thanos地址。</p>
 </li>
 <li>
-<p>应用需要有EKS集群和Prometheus/Thanos的访问权限。</p>
+<p>应用需要能够访问EKS集群和Prometheus/Thanos。</p>
 </li>
 </ol>
+<h2 id="导入-kuberentes-集群">导入 Kuberentes 集群</h2>
+<h3 id="添加云账号">添加云账号</h3>
+<ol>
+<li>
+<p>从<code>设置 --&gt; 云账号</code>进入云账号管理页面，如下图。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png" width="900" height="346">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+   云账户管理
+   <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+<li>
+<p>单击<code>新增</code>按钮添加云帐户。 可以输入<code>名称</code>，选择<code>Amazon AWS</code>作为<code>云提供商</code>，然后输入<code>Access Key</code>和<code>Access Key Secret</code>，最后单击<code>确认</code>。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png" width="500" height="350">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+   添加云账号
+   <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+</p>
+</li>
+</ol>
+<blockquote>
+<p>输入<code>Access Key</code>和<code>Access Key Secret</code>后，您还可以通过单击底部<code>测试连通性</code>按钮来测试访问凭据是否能够正常连接到云提供商。</p>
+</blockquote>
+<h3 id="导入集群">导入集群</h3>
+<ol>
+<li>
+<p>从<code>Settings --&gt; Clusters</code>进入集群管理页面，如下图。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png" width="900" height="345">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     集群管理
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+</li>
+<li>
+<p>单击<code>导入集群</code>按钮，然后单击<code>AWS</code>云提供商徽标以开始从AWS导入集群。 它包含五个步骤：</p>
+<ol>
+<li>连接AWS</li>
+<li>连接kubernetes</li>
+<li>连接Metrics Server</li>
+<li>查看配置</li>
+<li>完成</li>
+</ol>
+</li>
+<li>
+<p>在<code>连接AWS</code>步骤中，选择<code>使用已有凭据</code>，选择<code>添加云帐户</code>部分中创建的云帐户，如下图。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_600x0_resize_catmullrom_3.png" width="600" height="184">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    导入集群：连接到 AWS
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>然后单击<code>下一步</code>按钮转到<code>连接kubernetes</code>步骤。</p>
+</li>
+<li>
+<p>在<code>连接kubernetes</code>步骤中，选择<code>Managed cluster</code>，如下图。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_600x0_resize_catmullrom_3.png" width="600" height="402">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：连接kubernetes集群
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+先选择<code>地域</code>，然后选择<code>集群</code>，然后输入以下字段：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>描述</code></td>
+<td style="text-align:left">集群描述</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>使用私有API Server私有地址</code></td>
+<td style="text-align:left">是否使用私有API Server地址。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Kubeconfig</code></td>
+<td style="text-align:left">连接到集群的Kubeconfig。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>自动刷新Kubeconfig</code></td>
+<td style="text-align:left">是否自动刷新kubeconfig。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>节点组标签</code></td>
+<td style="text-align:left">用于标识节点所属的节点组。 对于EKS，默认值为<code>eks.amazonaws.com/nodegroup</code>。</td>
+</tr>
+</tbody>
+</table>
+<p>然后单击<code>下一步</code>按钮转到<code>连接Metrics服务</code>步骤。</p>
+</li>
+<li>
+<p>在<code>连接Metrics服务</code>步骤中，输入以下字段，如下所示。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>是否Thanos</code></td>
+<td style="text-align:left">若Metrics Server是 Thanos，则应选中此项。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Metrics服务地址</code></td>
+<td style="text-align:left">Metrics服务器地址，目前支持Prometheus和Thanos。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>限制访问速率</code></td>
+<td style="text-align:left">是否取用到Metrics服务地址的访问速率限制。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>最大并发数</code></td>
+<td style="text-align:left">指定访问Metrics服务地址的最大并发数。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>集群标签</code></td>
+<td style="text-align:left">用作标签名称，用于从Metrics服务过滤集群的指标。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>集群标签值</code></td>
+<td style="text-align:left">用作标签值，用于从Metrics服务过滤集群的指标。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_600x0_resize_catmullrom_3.png" width="600" height="298">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：连接Metrics服务
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<p>然后单击<code>下一步</code>按钮转到<code>查看配置</code>步骤。</p>
+</li>
+<li>
+<p>在<code>查看配置</code>步骤中，显示连接AWS、连接Kubernetes、连接Metrics服务的配置。您可以检查配置是否符合预期。
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_600x0_resize_catmullrom_3.png" width="600" height="400">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：查看配置
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+确认这些配置后，您可以单击<code>导入</code>按钮转到<code>完成</code>步骤。</p>
+</li>
+<li>
+<p>在<code>完成</code>步骤中，会显示提交状态，如下图。 当提交状态显示集群已导入时，您可以点击<code>完成</code>按钮。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_600x0_resize_catmullrom_3.png" width="600" height="399">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+     导入集群：完成
+     <small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+</li>
+</ol>
+<h2 id="下一步">下一步</h2>
+<p>导入集群后，您可以查看集群多个方面的优化建议，包括：</p>
+<ul>
+<li><a href="/docs/clusteroptimizer/nodegroup">节点组</a></li>
+<li><a href="/docs/clusteroptimizer/node">节点</a></li>
+<li><a href="/docs/clusteroptimizer/disk">磁盘</a></li>
+<li><a href="/docs/clusteroptimizer/pv">持久卷</a></li>
+<li><a href="/docs/clusteroptimizer/application">应用程序</a></li>
+</ul>
 
 </div>
 
@@ -968,8 +955,8 @@ rules:
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b2333a43b3e24210bc2c1c8357409f74">3 - 导入阿里云集群</h1>
-    <div class="lead">本节描述导入阿里云集群的详细步骤.</div>
+	<h1 id="pg-ab611226a338ba3cf65a94042e8aa36a">3 - 导入阿里云集群</h1>
+    <div class="lead">描述导入阿里云集群的详细步骤.</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -979,7 +966,8 @@ rules:
 
 <h2 id="前置条件">前置条件</h2>
 <ol>
-<li>获取阿里云Access Key和Access Key Secret，具备如下权限。具体申请过程请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。
+<li>
+<p>获取阿里云Access Key和Access Key Secret，具备如下权限。具体申请过程请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。</p>
 <table>
 <thead>
 <tr>
@@ -1001,8 +989,6 @@ rules:
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
 <p>其权限策略文件描述如下，您可以直接在阿里云控制台中导入该策略，具体请参考<a href="https://help.aliyun.com/zh/ram/user-guide/create-a-custom-policy#section-kwn-gu8-48m">通过脚本编辑模式创建自定义权限策略</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
@@ -1035,8 +1021,12 @@ rules:
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="2">
-<li>阿里云Kubernetes集群Kubeconfig。集群版本1.20及以上，建议使用ACK集群。具体请参见<a href="https://help.aliyun.com/zh/ack/">容器服务Kubernetes版</a>。Kubeconfig需具备如下权限。
+</span></span></code></pre></div></li>
+<li>
+<p>阿里云Kubernetes集群Kubeconfig。集群版本1.22及以上，建议使用ACK集群。具体请参见<a href="https://help.aliyun.com/zh/ack/">容器服务Kubernetes版</a>。</p>
+</li>
+<li>
+<p>Kubeconfig需具备如下权限。</p>
 <table>
 <thead>
 <tr>
@@ -1150,7 +1140,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cp01_hua616eacb3aebae2f5f78241e609ab820_2687161_900x0_resize_catmullrom_3.png" width="900" height="346">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png" width="900" height="346">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1171,7 +1161,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cp02_hu69f6a5ed4ee83792d28a08169d2eee0f_35990_500x0_resize_catmullrom_3.png" width="500" height="349">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cp02_hued1b873e3939167d1f90bbc9956d703f_88202_500x0_resize_catmullrom_3.png" width="500" height="349">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1184,7 +1174,7 @@ rules:
 <h3 id="添加阿里云集群">添加阿里云集群</h3>
 <ol>
 <li>
-<p>选择<code>设置</code>菜单，选择集群标签进入集群管理页面。默认情况下，该页面将分页展示平台管理的所有集群，包括名称、集群ID集群地域、Access Token名称，对应的云服务商以及Prometheus地址，同时也提供了操作栏，方便用户进行相应的操作，如图 24所示。
+<p>选择<code>设置</code>菜单，选择集群标签进入集群管理页面。默认情况下，该页面将分页展示平台管理的所有集群，包括名称、集群ID集群地域、Access Token名称，对应的云服务商以及Prometheus地址，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。
 
 
 
@@ -1193,7 +1183,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cluster01_hu66289fd8e1bc98ec62da06f0c786c304_2419115_900x0_resize_catmullrom_3.png" width="900" height="382">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png" width="900" height="345">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1224,7 +1214,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cluster02_hu47cab88b789ca4733b076b8b85bee2ef_32066_600x0_resize_catmullrom_3.png" width="600" height="175">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_600x0_resize_catmullrom_3.png" width="600" height="180">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1245,7 +1235,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png" width="600" height="359">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_600x0_resize_catmullrom_3.png" width="600" height="402">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1266,7 +1256,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png" width="600" height="359">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_600x0_resize_catmullrom_3.png" width="600" height="291">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1322,7 +1312,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png" width="600" height="359">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_600x0_resize_catmullrom_3.png" width="600" height="399">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1343,7 +1333,7 @@ rules:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aliyun/cluster04_hu4cbd76721179e5ab92dd2e7d6890ad68_61167_600x0_resize_catmullrom_3.png" width="600" height="359">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_600x0_resize_catmullrom_3.png" width="600" height="199">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1356,7 +1346,14 @@ rules:
 </li>
 </ol>
 <h2 id="下一步操作">下一步操作</h2>
-<p>导入集群完成后，等待一段时间，即可查看该集群多个维度的优化建议。</p>
+<p>导入集群完成后，等待一段时间（等待优化策略完成调度和执行），即可查看该集群多个维度的优化建议，包括：</p>
+<ul>
+<li><a href="/docs/clusteroptimizer/nodegroup">节点组</a></li>
+<li><a href="/docs/clusteroptimizer/node">节点</a></li>
+<li><a href="/docs/clusteroptimizer/disk">磁盘</a></li>
+<li><a href="/docs/clusteroptimizer/pv">Persistent volume</a></li>
+<li><a href="/docs/clusteroptimizer/application">应用</a></li>
+</ul>
 
 </div>
 
@@ -1440,7 +1437,7 @@ rules:
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-a8e419965395a39fb951fa1137e17781">5 - 节点池优化</h1>
-    <div class="lead">描述了节点池优化提供了信息及操作建议。</div>
+    <div class="lead">描述节点池相关信息及优化建议。</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -1448,6 +1445,7 @@ rules:
 
 </div>
 
+<h2 id="查看节点池">查看节点池</h2>
 <p>点击平台左侧菜单栏的<code>节点组</code>菜单，则显示节点组页，如图 39所示。节点组页分为3个区：</p>
 <ol>
 <li>集群选择区：选择相应的集群。</li>
@@ -1497,6 +1495,7 @@ rules:
 	
 </figure>
 
+<h2 id="调整节点池">调整节点池</h2>
 <p>点击上图中的<code>调整</code>链接，可打开调整节点组对话框，如下图所示。</p>
 
 
@@ -1544,7 +1543,7 @@ rules:
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-60fb2e0d684559cca943f114bbb23b17">6 - 节点优化</h1>
-    <div class="lead">描述了节点相关信息及优化建议。</div>
+    <div class="lead">描述节点相关信息及优化建议。</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -1552,6 +1551,7 @@ rules:
 
 </div>
 
+<h2 id="查看节点">查看节点</h2>
 <p>点击平台左侧菜单栏的<code>节点</code>菜单，则显示节点页，如下图所示。</p>
 
 
@@ -1604,7 +1604,8 @@ rules:
 <li>详情栏：展示策略所提供的信息。例如，对于低利用率节点策略来说，会观测CPU和内存的平均利用率，并同平台设置的阈值进行比较，帮助用户调整节点实例类型。</li>
 <li>操作栏：展示对节点相应的操作</li>
 </ol>
-<p>点击的<code>调整</code>链接可打开调整节点对话框，对话框中展示了详细的调整信息和推荐的调整方案，如下图所示。</p>
+<h2 id="调整节点">调整节点</h2>
+<p>点击<code>调整</code>链接可打开调整节点对话框，对话框中展示了详细的调整信息和推荐的调整方案，如下图。</p>
 
 
 
@@ -1651,7 +1652,7 @@ rules:
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-41a35fffa4c7fd6466728b424aab2998">7 - 磁盘优化</h1>
-    <div class="lead">描述了磁盘相关信息及优化建议。</div>
+    <div class="lead">描述磁盘相关信息及优化建议。</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -1659,6 +1660,7 @@ rules:
 
 </div>
 
+<h2 id="查看磁盘">查看磁盘</h2>
 <p>点击平台左侧菜单栏的<code>磁盘</code>菜单，则显示磁盘页，如下图所示。</p>
 
 
@@ -1710,7 +1712,8 @@ rules:
 <li>用量栏：展示磁盘容量、最大利用率、平均利用率和最后更新时间。</li>
 <li>操作栏：展示对磁盘相应的操作。</li>
 </ol>
-<p>用户点击<code>调整</code>链接可打开调整磁盘大小对话框，其中展示了磁盘详细的调整信息和推荐的调整方案，如下图所示。</p>
+<h2 id="调整磁盘">调整磁盘</h2>
+<p>点击<code>调整</code>链接可打开调整磁盘大小对话框，其中展示了磁盘详细的调整信息和推荐的调整方案，如下图。</p>
 
 
 
@@ -1757,14 +1760,15 @@ rules:
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-ec4c2c1254809868f664e7266e289938">8 - Persistent Volume优化</h1>
-    <div class="lead">描述了节点池优化提供了信息及操作建议。</div>
+    <div class="lead">描述Persistent Volume相关信息及优化建议。</div>
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>描述了一站式云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</p>
+<p>描述了Persistent Volume相关信息及优化建议。</p>
 
 </div>
 
+<h2 id="查看persistent-volume">查看Persistent Volume</h2>
 <p>点击平台左侧菜单栏的<code>Persistent Volume</code>菜单，则显示Persistent Volume页，如下图所示。</p>
 
 
@@ -1818,7 +1822,8 @@ Persistent Volume页-选择集群
 <li>最近更新时间栏：展示最后更新时间。</li>
 <li>操作栏：展示对磁盘相应的操作。</li>
 </ol>
-<p>用户点击<code>删除</code>链接可打开删除Persistent Volume对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，如下图所示。</p>
+<h2 id="删除persistent-volume">删除Persistent Volume</h2>
+<p>选择策略名称栏是<code>未使用PV</code>的行，点击该行操作栏中的<code>删除</code>链接可打开<code>删除Persistent Volume</code>对话框，其中展示了Persistent Volume详细信息和推荐方案，如下图。</p>
 
 
 
@@ -1832,6 +1837,26 @@ Persistent Volume页-选择集群
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
 删除Persistent Volume对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+	</figcaption>
+	
+</figure>
+
+<h2 id="调整persistent-volume大小">调整Persistent Volume大小</h2>
+<p>选择策略名称栏是<code>低利用率PV</code>的行，点击该行操作栏中的<code>调整</code>链接可打开<code>调整Persistent Volume大小</code>对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，如下图。</p>
+
+
+
+
+
+
+
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv4_huf3cacc24f0cdb0b5330e8b22584ca8bc_89249_600x0_resize_catmullrom_3.png" width="600" height="267">
+	
+	<figcaption class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+调整Persistent Volume大小
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -1865,7 +1890,7 @@ Persistent Volume页-选择集群
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-077e156274fb7d892f55e54292de72da">9 - 应用优化</h1>
-    <div class="lead">描述了应用详情以及优化建议。</div>
+    <div class="lead">描述应用详情以及优化建议。</div>
 	
 
 <div class="pageinfo pageinfo-primary">
@@ -1873,6 +1898,7 @@ Persistent Volume页-选择集群
 
 </div>
 
+<h2 id="查看应用">查看应用</h2>
 <p>点击平台左侧菜单栏的<code>应用</code>菜单，则显示应用页，如下图所示。</p>
 
 
@@ -1886,7 +1912,7 @@ Persistent Volume页-选择集群
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-应用页
+应用
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -1911,12 +1937,14 @@ Persistent Volume页-选择集群
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-应用页-选择集群
+应用：选择集群
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<h2 id="资源推荐">资源推荐</h2>
+<h3 id="查看资源推荐相关应用">查看资源推荐相关应用</h3>
 <p>若策略名称为资源推荐，则列表区如上图所示。列表区显示分为6栏，分别是：</p>
 <ol>
 <li>名称栏：展示负载名称、名称空间和负载类型。</li>
@@ -1926,7 +1954,8 @@ Persistent Volume页-选择集群
 <li>详情：展示CPU平均使用量、CPU最大使用量、内存平均使用量、内存最大使用量、CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值和最近更新时间。</li>
 <li>操作栏：展示对应用相应的操作</li>
 </ol>
-<p>用户点击<code>调整</code>链接可打开调整资源额度对话框，其中展示应用详情、推荐值及相应调整语句，如下图所示。</p>
+<h3 id="调整资源额度">调整资源额度</h3>
+<p>点击<code>调整</code>链接可打开调整资源额度对话框，其中展示应用详情、推荐值及相应调整语句，如下图所示。</p>
 
 
 
@@ -1939,12 +1968,14 @@ Persistent Volume页-选择集群
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-调整资源额度对话框
+应用：调整资源额度对话框
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<h2 id="未设置资源配额">未设置资源配额</h2>
+<h3 id="查看未设置资源配额应用">查看未设置资源配额应用</h3>
 <p>若策略名称为未设置资源配额，则列表区展示如下图所示：</p>
 
 
@@ -1954,11 +1985,11 @@ Persistent Volume页-选择集群
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png" width="600" height="355">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app4_hu0b892833f020343598f6e01ff192f5b1_108403_600x0_resize_catmullrom_3.png" width="600" height="373">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-应用页-选择未设置资源配额策略
+应用：选择未设置资源配额策略
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -1973,7 +2004,8 @@ Persistent Volume页-选择集群
 <li>详情：展示CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值和最近更新时间。</li>
 <li>操作栏：展示对应用相应的操作，</li>
 </ol>
-<p>用户点击上图中的<code>调整</code>链接可打开设置应用资源额度对话框，其中展示应用详情、推荐值及相应调整语句，如下图所示。</p>
+<h3 id="设置应用资源额度">设置应用资源额度</h3>
+<p>点击上图中的<code>调整</code>链接可打开设置应用资源额度对话框，其中展示应用详情、推荐值及相应调整语句，如下图所示。</p>
 
 
 
@@ -1982,16 +2014,18 @@ Persistent Volume页-选择集群
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png" width="600" height="355">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app5_hu8eee30d7aabf93c614c152e877d8928c_104423_600x0_resize_catmullrom_3.png" width="600" height="333">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-设置应用资源额度对话框
+应用：设置应用资源额度对话框
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<h2 id="内存溢出">内存溢出</h2>
+<h3 id="查看内存溢出应用">查看内存溢出应用</h3>
 <p>若策略名称为内存溢出，则列表区展示如下图所示：</p>
 
 
@@ -2001,11 +2035,11 @@ Persistent Volume页-选择集群
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png" width="600" height="355">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app6_hu87adbcc83246ec23d19ea6547103f818_100585_600x0_resize_catmullrom_3.png" width="600" height="255">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-应用页-选择内存溢出策略
+应用：选择内存溢出策略
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -2020,7 +2054,8 @@ Persistent Volume页-选择集群
 <li>详情：展示最近OOM时间、最近OOM Pod、OOM次数和和最近更新时间。</li>
 <li>操作栏：展示对应用相应的操作。</li>
 </ol>
-<p>用户点击调整链接可打开调整应用内存大小对话框，其中展示应用详情、推荐内存限制值及相应调整语句，如下图所示。</p>
+<h3 id="调整应用内存大小">调整应用内存大小</h3>
+<p>点击调整链接可打开调整应用内存大小对话框，其中展示应用详情、推荐内存限制值及相应调整语句，如下图所示。</p>
 
 
 
@@ -2029,11 +2064,11 @@ Persistent Volume页-选择集群
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png" width="600" height="355">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app7_hu817d781025a27b6e9bcd825a497738ca_96820_600x0_resize_catmullrom_3.png" width="600" height="308">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-调整应用内存大小对话框
+应用：调整应用内存大小对话框
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
@@ -2067,11 +2102,11 @@ Persistent Volume页-选择集群
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-ec768fe1731869c4e5952255d641c790">10 - 集群优化操作</h1>
-    <div class="lead">一站式云原生集群优化平台相关操作.</div>
+    <div class="lead">描述云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</div>
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>描述了一站式云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</p>
+<p>描述了云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</p>
 
 </div>
 

@@ -26,11 +26,12 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes the application details and optimization suggestions.&lt;/p&gt;
+&lt;p&gt;Describes application details and recommendations.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;Click on the &lt;code&gt;Application&lt;/code&gt; menu in the left menu bar of the platform to display the application page, as shown below.&lt;/p&gt;
+&lt;h2 id=&#34;view-applications&#34;&gt;View Applications&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Applications&lt;/code&gt; menu on the left menu bar to display the application page, as shown below.&lt;/p&gt;
 
 
 
@@ -39,23 +40,23 @@
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app1_hu0e8572a06a553eaf35c04e55defb382f_42248_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;368&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app1_hudb92ed43c43b41b5faaee833823d9815_83959_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;288&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Application Page
+Application
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
-&lt;p&gt;The application page is divided into 3 sections:&lt;/p&gt;
+&lt;p&gt;The application page is divided into three areas:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Cluster Selection Area: Select the corresponding cluster.&lt;/li&gt;
-&lt;li&gt;Query Area: You can query by namespace, load name, load type, container, and policy name. Currently, the platform supports resource recommendation, not set resource quota, and memory overflow policy.&lt;/li&gt;
-&lt;li&gt;List Area: Displays name, container, current settings, policy name, details, and action columns. The displayed information varies with different policy names.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cluster selection area&lt;/strong&gt;: Used for select a cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Query area&lt;/strong&gt;: Used for filtering applications by namespace, workload name, workload type, container and strategy name. The platform currently supports three startegies: &lt;code&gt;resource recommendation&lt;/code&gt;, &lt;code&gt;resource quota unset&lt;/code&gt; and &lt;code&gt;out of memory&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays name, container, current settings, strategy name, details and related actions. Different strategy will have differences details information.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;After selecting a cluster in the cluster selection area, the platform defaults to aggregating the results of all policies and displays them in a list, as shown below.&lt;/p&gt;
+&lt;p&gt;After select a cluster, the list area will display applications of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategies, as shown below.&lt;/p&gt;
 
 
 
@@ -64,26 +65,48 @@ Application Page
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;387&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Application Page - Select Cluster
+Application: cluster selected
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
-&lt;p&gt;If the policy name is resource recommendation, the list area will appear as shown above. The list area is divided into 6 columns:&lt;/p&gt;
+&lt;p&gt;For different strategies, the list area and action are different.&lt;/p&gt;
+&lt;h2 id=&#34;resource-recommendation&#34;&gt;&lt;code&gt;Resource Recommendation&lt;/code&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;list-area-for-resource-recommendation&#34;&gt;List area for &lt;code&gt;Resource Recommendation&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;For &lt;code&gt;Resource Recommendation&lt;/code&gt; strategy, the list area display is divided into six columns, as shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;387&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Application: `Resource Recommendation` strategy
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
 &lt;ol&gt;
-&lt;li&gt;Name Column: Displays load name, namespace, and load type.&lt;/li&gt;
-&lt;li&gt;Container Column: Displays the container name.&lt;/li&gt;
-&lt;li&gt;Current Settings: Displays the CPU Request, CPU Limit, memory Request, and memory Limit for that container.&lt;/li&gt;
-&lt;li&gt;Policy Name: Displays the policy name.&lt;/li&gt;
-&lt;li&gt;Details: Displays the average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, recommended CPU Request value, recommended CPU Limit value, recommended memory Request value, recommended memory Limit value, and the latest update time.&lt;/li&gt;
-&lt;li&gt;Action Column: Displays the corresponding actions for the application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name column&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container column&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: displays the CPU request, CPU limit, memory request and memory limit of the container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strategy name&lt;/strong&gt;: displays the strategy name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, recommended CPU request, recommended CPU Limit, recommended memory request, recommended memory limit and the latest update time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Users can click the &lt;code&gt;Adjust&lt;/code&gt; link to open the dialog box for adjusting resource quotas, which displays application details, recommended values, and corresponding adjustment statements, as shown below.&lt;/p&gt;
+&lt;h2 id=&#34;adjust-resource-quota&#34;&gt;Adjust resource quota&lt;/h2&gt;
+&lt;p&gt;Clicks &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Resource Quota&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
 
 
 
@@ -92,17 +115,19 @@ Application Page - Select Cluster
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app3_hu880b20b69e27095c3257d5800759b1ca_101268_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;354&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app3_hu06395c21d7ea7f52ffc8996b839f5d11_100892_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;371&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Adjust Resource Quotas Dialog Box
+Application: adjust resource quota dialog
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
-&lt;p&gt;If the policy name is not set resource quota, the list area will display as follows:&lt;/p&gt;
+&lt;h2 id=&#34;resource-quota-unset&#34;&gt;&lt;code&gt;Resource Quota Unset&lt;/code&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;list-area-for-resource-quota-unset&#34;&gt;List area for &lt;code&gt;Resource Quota Unset&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Select &lt;code&gt;Resource quota unset&lt;/code&gt; in the strategy name in &lt;strong&gt;query area&lt;/strong&gt;, it will display the list area as shown below.&lt;/p&gt;
 
 
 
@@ -111,26 +136,29 @@ Adjust Resource Quotas Dialog Box
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;387&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Application Page - Select Not Set Resource Quota Policy
+Application: filted by strategy  `Resource Quota Unset`
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
-&lt;p&gt;The list area is divided into 6 columns:&lt;/p&gt;
+&lt;p&gt;The list area display is divided into six columns, as shown below.&lt;/p&gt;
+&lt;p&gt;If the policy name is No resource quota set, the list area is displayed as shown below:&lt;/p&gt;
+&lt;p&gt;The list area display is divided into six columns:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Name Column: Displays load name, namespace, and load type.&lt;/li&gt;
-&lt;li&gt;Container Column: Displays the container name.&lt;/li&gt;
-&lt;li&gt;Current Settings: Displays whether the CPU Request, CPU Limit, memory Request, and memory Limit for that container have been set.&lt;/li&gt;
-&lt;li&gt;Policy Name: Displays the policy name.&lt;/li&gt;
-&lt;li&gt;Details: Displays the recommended CPU Request value, recommended CPU Limit value, recommended memory Request value, recommended memory Limit value, and the latest update time.&lt;/li&gt;
-&lt;li&gt;Action Column: Displays the corresponding actions for the application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name column&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container column&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: displays whether the CPU request, CPU limit, memory request and memory limit of the container is set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strategy name&lt;/strong&gt;: displays the strategy name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays recommended CPU request, recommended CPU Limit, recommended memory request, recommended memory limit and the latest update time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Users can click the &lt;code&gt;Adjust&lt;/code&gt; link in the above image to open the dialog box for setting application resource quotas, which displays application details, recommended values, and corresponding adjustment statements, as shown below.&lt;/p&gt;
+&lt;h3 id=&#34;setting-application-resource-quota&#34;&gt;Setting application resource quota&lt;/h3&gt;
+&lt;p&gt;Clicks &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Setting application resource quota&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
 
 
 
@@ -139,17 +167,20 @@ Application Page - Select Not Set Resource Quota Policy
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;387&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Set Application Resource Quotas Dialog Box
+Application: Setting application resource quota dialog
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
-&lt;p&gt;If the policy name is memory overflow, the list area will display as follows:&lt;/p&gt;
+&lt;p&gt;It displays application details, recommended values ​​and corresponding adjustment statements. You can take the recommended values ​​as the basis for adjustment.&lt;/p&gt;
+&lt;h2 id=&#34;out-of-memory-oom&#34;&gt;Out of Memory (OOM)&lt;/h2&gt;
+&lt;h3 id=&#34;list-area-for-out-of-memory&#34;&gt;List area for Out of Memory&lt;/h3&gt;
+&lt;p&gt;Select &lt;code&gt;OOM&lt;/code&gt; in the strategy name in &lt;strong&gt;query area&lt;/strong&gt;, it will display the list area as shown below.&lt;/p&gt;
 
 
 
@@ -158,26 +189,27 @@ Set Application Resource Quotas Dialog Box
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;387&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Application Page - Select Memory Overflow Policy
+Application: filted by strategy `Out of Memory`
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
-&lt;p&gt;The list area is divided into 6 columns:&lt;/p&gt;
+&lt;p&gt;The list area display is divided into 6 columns, which are:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Name Column: Displays load name, namespace, and load type.&lt;/li&gt;
-&lt;li&gt;Container Column: Displays the container name.&lt;/li&gt;
-&lt;li&gt;Current Settings: Displays the memory Request and memory Limit for that container.&lt;/li&gt;
-&lt;li&gt;Policy Name: Displays the policy name.&lt;/li&gt;
-&lt;li&gt;Details: Displays the recent OOM time, recent OOM Pod, number of OOMs, and the latest update time.&lt;/li&gt;
-&lt;li&gt;Action Column: Displays the corresponding actions for the application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name column&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container column&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: displays memory request and memory limit of the container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strategy name&lt;/strong&gt;: displays the strategy name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays the latest OOM time, recent OOM Pod, OOM times and latest update time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Users can click the adjust link to open the dialog box for adjusting application memory size, which displays application details, recommended memory limit values, and corresponding adjustment statements, as shown below.&lt;/p&gt;
+&lt;h3 id=&#34;adjust-application-memory-size&#34;&gt;Adjust application memory size&lt;/h3&gt;
+&lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Application Memory Size&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
 
 
 
@@ -186,16 +218,17 @@ Application Page - Select Memory Overflow Policy
 
 
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;355&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;387&#34;&gt;
 	
 	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 		&lt;p class=&#34;card-text&#34;&gt;
-Adjust Application Memory Size Dialog Box
+Application: Adjust application memory size dialog
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
 	&lt;/figcaption&gt;
 	
 &lt;/figure&gt;
 
+&lt;p&gt;which displays application details, recommended memory limit values, and corresponding adjustment statements&lt;/p&gt;
 
       </description>
     </item>

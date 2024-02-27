@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: Ruyi: Cloud native cluster autoscaling engine</title>
+      <title>Docs: Ruyi</title>
       <link>/docs/ruyi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -26,16 +26,16 @@
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Ruyi provides an automated and intelligent cloud-native cluster expansion and contraction engine.&lt;/p&gt;
+&lt;p&gt;Ruyi is a cloud native cluster autoscaling engine.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;Ruyi provides an automated and intelligent cloud-native cluster expansion and contraction engine. Its main functions include:&lt;/p&gt;
+&lt;p&gt;Its main functions include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Autoscaling: Provides automatic expansion and contraction based on Pod Request.&lt;/li&gt;
-&lt;li&gt;Virtual capacity: Use automated and intelligent technology to elastically scale node capacity to support scheduling as many Pods as possible.&lt;/li&gt;
+&lt;li&gt;Cluster autoscaling: Provides autoscaling based on pod request.&lt;/li&gt;
+&lt;li&gt;Virtual capacity: Automatic scale node capacity based on intelligent model to support scheduling as many pods as possible.&lt;/li&gt;
 &lt;li&gt;Multi-cloud support: Supports AWS, Alibaba Cloud, and more cloud service providers are being integrated.&lt;/li&gt;
-&lt;li&gt;Monitoring management: Provide multi-dimensional monitoring its metrics.&lt;/li&gt;
+&lt;li&gt;Monitoring management: Provide multi-dimensional monitoring indicator data.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

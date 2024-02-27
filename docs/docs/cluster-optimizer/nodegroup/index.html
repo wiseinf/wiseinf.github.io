@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Node Pool Optimization | Wiseinf</title>
-<meta name="description" content="Provides information and operational recommendations for node pool optimization.
+<title>Node Group Optimization | Wiseinf</title>
+<meta name="description" content="Provides recommended settings and actions for node group.
 ">
-<meta property="og:title" content="Node Pool Optimization" />
-<meta property="og:description" content="Provides information and operational recommendations for node pool optimization.
+<meta property="og:title" content="Node Group Optimization" />
+<meta property="og:description" content="Provides recommended settings and actions for node group.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/cluster-optimizer/nodegroup/" /><meta property="og:site_name" content="Wiseinf" />
 
-<meta itemprop="name" content="Node Pool Optimization">
-<meta itemprop="description" content="Provides information and operational recommendations for node pool optimization.
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node Pool Optimization"/>
-<meta name="twitter:description" content="Provides information and operational recommendations for node pool optimization.
+<meta itemprop="name" content="Node Group Optimization">
+<meta itemprop="description" content="Provides recommended settings and actions for node group.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node Group Optimization"/>
+<meta name="twitter:description" content="Provides recommended settings and actions for node group.
 "/>
 
 
@@ -130,16 +130,18 @@ if (!doNotTrack) {
   <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscluster-optimizer-li">
-  <a href="/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizer"><span class="">Cluster Optimizer: Cloud native cluster optimization platform</span></a>
+  <a href="/docs/cluster-optimizer/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizer"><span class="">Cluster Optimizer</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizersetup-li">
-  <a href="/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizersetup"><span class="">Installation and Deployment</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aliyun-li">
-  <a href="/docs/cluster-optimizer/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aliyun"><span class="">Import Alibaba Cloud Cluster</span></a>
+  <a href="/docs/cluster-optimizer/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizersetup"><span class="">Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aws-li">
+  <a href="/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aws"><span class="">Import Cluster from AWS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-alibaba-li">
+  <a href="/docs/cluster-optimizer/import-alibaba/" title="Import Cluster from Alibaba Cloud" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-alibaba"><span class="">Import Cluster from Alibaba Cloud </span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroverview-li">
   <a href="/docs/cluster-optimizer/overview/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroverview"><span class="">Cluster Overview</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscluster-optimizernodegroup-li">
-  <a href="/docs/cluster-optimizer/nodegroup/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernodegroup"><span class="td-sidebar-nav-active-item">Node Pool Optimization</span></a>
+  <a href="/docs/cluster-optimizer/nodegroup/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernodegroup"><span class="td-sidebar-nav-active-item">Node Group Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizernode-li">
   <a href="/docs/cluster-optimizer/node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizernode"><span class="">Node Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerdisk-li">
@@ -148,71 +150,69 @@ if (!doNotTrack) {
   <a href="/docs/cluster-optimizer/pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerpv"><span class="">Persistent Volume Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerapp-li">
   <a href="/docs/cluster-optimizer/app/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerapp"><span class="">Application Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizeroperations-li">
-  <a href="/docs/cluster-optimizer/operations/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperations"><span class="">Cluster Optimization Operations</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscluster-optimizeractions-li">
+  <a href="/docs/cluster-optimizer/actions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractions"><span class="">Actions</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-nodegroup-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-nodegroup"><span class="">Adjust Node Pool</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-node-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-node"><span class="">Adjust Nodes</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsadjust-disk-li">
-  <a href="/docs/cluster-optimizer/operations/adjust-disk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsadjust-disk"><span class="">Adjusting disks</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeroperationsdelete-pv-li">
-  <a href="/docs/cluster-optimizer/operations/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeroperationsdelete-pv"><span class="">Deleting Persistent Volume</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-nodegroup-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-nodegroup/" title="Adjusting Node Group" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-nodegroup"><span class="">Adjust Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-node-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-node/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-node"><span class="">Adjustment Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsadjust-disk-li">
+  <a href="/docs/cluster-optimizer/actions/adjust-disk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsadjust-disk"><span class="">Adjust Disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizeractionsdelete-pv-li">
+  <a href="/docs/cluster-optimizer/actions/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsdelete-pv"><span class="">Delete Persistent Volume</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizerimport-aws-li">
-  <a href="/docs/cluster-optimizer/import-aws/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizerimport-aws"><span class=""></span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecost-li">
-  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost: A Cloud-native Cost Management and Optimization Platform</span></a>
+  <a href="/docs/wisecost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecost"><span class="">Wisecost</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostsetup-li">
   <a href="/docs/wisecost/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostsetup"><span class="">Installation and Deployment</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostimport-aliyun-li">
   <a href="/docs/wisecost/import-aliyun/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostimport-aliyun"><span class="">Import Alibaba Cloud Cluster</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
-  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">View Node Cost</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcluster-cost-li">
-  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">Viewing Cluster Costs</span></a>
+  <a href="/docs/wisecost/cluster-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcluster-cost"><span class="">View cluster costs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostnode-cost-li">
+  <a href="/docs/wisecost/node-cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostnode-cost"><span class="">View node costs</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostcost-li">
-  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">View Application Costs</span></a>
+  <a href="/docs/wisecost/cost/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostcost"><span class="">View application costs</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostoptimize-li">
   <a href="/docs/wisecost/optimize/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostoptimize"><span class="">Cost Optimization</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecostdevelopment-li">
   <a href="/docs/wisecost/development/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopment"><span class="">Development Manual</span></a>
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
-  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API Reference</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
-  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class=""></span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentapi-li">
+  <a href="/docs/wisecost/development/api/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentapi"><span class="">API Documentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswisecostdevelopmentreference-li">
+  <a href="/docs/wisecost/development/reference/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswisecostdevelopmentreference"><span class="">API interface reference</span></a>
 </li>
   </ul>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsruyi-li">
-  <a href="/docs/ruyi/" title="Ruyi: Cloud native cluster autoscaling engine" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi: Cloud native cluster expansion and contraction engine</span></a>
+  <a href="/docs/ruyi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyi"><span class="">Ruyi</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyisetup-li">
   <a href="/docs/ruyi/setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyisetup"><span class="">Installation and Deployment</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiautoscaling-li">
-  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">Automatic Scaling</span></a>
+  <a href="/docs/ruyi/autoscaling/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiautoscaling"><span class="">Autoscaling</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyivirtualcapacity-li">
+  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class="">Virtual Capacity</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsruyiconfiguration-li">
   <a href="/docs/ruyi/configuration/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfiguration"><span class="">Configuration</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiconfigurationcommand-line-li">
-  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">Command Line Arguments</span></a>
+  <a href="/docs/ruyi/configuration/command-line/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationcommand-line"><span class="">Command line parameters</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyiconfigurationnodegroup-li">
-  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class=""></span></a>
+  <a href="/docs/ruyi/configuration/nodegroup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyiconfigurationnodegroup"><span class="">Node group configurations</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyimonitoring-li">
   <a href="/docs/ruyi/monitoring/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyimonitoring"><span class="">Monitoring</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyitroubleshooting-li">
   <a href="/docs/ruyi/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyitroubleshooting"><span class="">FAQ</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsruyivirtualcapacity-li">
-  <a href="/docs/ruyi/virtualcapacity/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsruyivirtualcapacity"><span class=""></span></a>
 </li>
   </ul>
 </li>
@@ -230,7 +230,15 @@ if (!doNotTrack) {
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#view-node-group-recommended-settings">View node group recommended settings</a></li>
+    <li><a href="#adjust-node-group">Adjust node group</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -252,29 +260,27 @@ if (!doNotTrack) {
         
           <li><a class="taxonomy-term" href="/tags/alibaba-cloud/" data-taxonomy-term="alibaba-cloud"><span class="taxonomy-label">Alibaba Cloud</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">2</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/application-optimization/" data-taxonomy-term="application-optimization"><span class="taxonomy-label">Application Optimization</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">13</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">15</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">14</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/cluster-overview/" data-taxonomy-term="cluster-overview"><span class="taxonomy-label">Cluster Overview</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/disk-optimization/" data-taxonomy-term="disk-optimization"><span class="taxonomy-label">Disk Optimization</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/node-pool-optimization/" data-taxonomy-term="node-pool-optimization"><span class="taxonomy-label">Node Pool Optimization</span><span class="taxonomy-count">3</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/node-optimization/" data-taxonomy-term="node-optimization"><span class="taxonomy-label">Node Optimization</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">7</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/ruyi/" data-taxonomy-term="ruyi"><span class="taxonomy-label">Ruyi</span><span class="taxonomy-count">9</span></a></li>
         
-          <li><a class="taxonomy-term" href="/tags/ruyi-engine/" data-taxonomy-term="ruyi-engine"><span class="taxonomy-label">Ruyi Engine</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">9</span></a></li>
-        
-          <li><a class="taxonomy-term" href="/tags/wiseinf/" data-taxonomy-term="wiseinf"><span class="taxonomy-label">Wiseinf</span><span class="taxonomy-count">3</span></a></li>
+          <li><a class="taxonomy-term" href="/tags/wisecost/" data-taxonomy-term="wisecost"><span class="taxonomy-label">Wisecost</span><span class="taxonomy-count">10</span></a></li>
         
       </ul>
     </div>
@@ -296,17 +302,17 @@ if (!doNotTrack) {
       
       <ul class="taxonomy-terms">
         
-          <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/autoscaling/" data-taxonomy-term="autoscaling"><span class="taxonomy-label">Autoscaling</span><span class="taxonomy-count">2</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster Autoscaling</span><span class="taxonomy-count">1</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">14</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">15</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">9</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">10</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span><span class="taxonomy-count">6</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/elastic-computing/" data-taxonomy-term="elastic-computing"><span class="taxonomy-label">Elastic Computing</span><span class="taxonomy-count">8</span></a></li>
         
-          <li><a class="taxonomy-term" href="/categories/scaling/" data-taxonomy-term="scaling"><span class="taxonomy-label">Scaling</span><span class="taxonomy-count">5</span></a></li>
+          <li><a class="taxonomy-term" href="/categories/expansion-and-contraction/" data-taxonomy-term="expansion-and-contraction"><span class="taxonomy-label">Expansion and Contraction</span><span class="taxonomy-count">6</span></a></li>
         
       </ul>
     </div>
@@ -326,17 +332,17 @@ if (!doNotTrack) {
     <a href="/docs/">Documentation</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="/docs/cluster-optimizer/">Cluster Optimizer: Cloud native cluster optimization platform</a>
+    <a href="/docs/cluster-optimizer/">Cluster Optimizer</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="/docs/cluster-optimizer/nodegroup/" aria-disabled="true" class="btn-link disabled">Node Pool Optimization</a>
+    <a href="/docs/cluster-optimizer/nodegroup/" aria-disabled="true" class="btn-link disabled">Node Group Optimization</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Node Pool Optimization</h1>
-  <div class="lead">Provides information and operational recommendations for node pool optimization.</div>
+	<h1>Node Group Optimization</h1>
+  <div class="lead">Provides recommended settings and actions for node group.</div>
 	<header class="article-meta">
 		
 
@@ -351,9 +357,7 @@ if (!doNotTrack) {
     
       <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
     
-      <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
-    
-      <li><a class="taxonomy-term" href="/tags/node-pool-optimization/" data-taxonomy-term="node-pool-optimization"><span class="taxonomy-label">Node Pool Optimization</span></a></li>
+      <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span></a></li>
     
   </ul>
 </div>
@@ -379,16 +383,12 @@ if (!doNotTrack) {
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes the cluster optimization operations provided by the one-stop cloud-native Cluster Optimizer platform.</p>
+<p>Provides recommended settings and actions for node group.</p>
 
 </div>
 
-<p>Click on the <code>Node Group</code> menu in the left menu bar of the platform to display the Node Group page, as shown in Figure 39. The Node Group page is divided into three areas:</p>
-<ol>
-<li>Cluster Selection Area: Select the corresponding cluster.</li>
-<li>Query Area: Filter list items based on node group name and node group ID.</li>
-<li>List Area: Displays information about the node groups, their current settings, and optimized settings.</li>
-</ol>
+<h2 id="view-node-group-recommended-settings">View node group recommended settings</h2>
+<p>Click the <code>Node Groups</code> menu on the left menu bar to display the node group page, as shown below.</p>
 
 
 
@@ -397,23 +397,23 @@ if (!doNotTrack) {
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_600x0_resize_catmullrom_3.png" width="600" height="324">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng1_hu57170a98ebe6ce10f665738af21b1dfa_69789_600x0_resize_catmullrom_3.png" width="600" height="260">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Node Group Page
+Node group
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>After the user selects a cluster, the list area is displayed in four columns:</p>
+<p>The node group page is divided into 3 areas:</p>
 <ol>
-<li>Node Group Column: Displays the node group name and node group ID.</li>
-<li>Current Settings Column: Displays the current instance type of the node group, whether it is automatically scaled, and the minimum and maximum number of nodes.</li>
-<li>Optimized Settings Column: Displays the instance type of the node group intelligently recommended by the platform, whether to start scaling is recommended, and the recommended minimum and maximum number of nodes.</li>
-<li>Operations Column: Displays the corresponding operations for the node group.</li>
+<li><strong>Cluster selection area</strong>: Used for select a cluster.</li>
+<li><strong>Query area</strong>: Used for filtering node group by node group name and node group ID.</li>
+<li><strong>List area</strong>: Displays node group information, its current settings and optimization settings.</li>
 </ol>
+<p>After select a cluster, the list area will display node groups of the selected cluster scaned by <strong>Cluster Optimizer</strong>&rsquo;s optimization strategy, as shown below.</p>
 
 
 
@@ -422,17 +422,25 @@ Node Group Page
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_600x0_resize_catmullrom_3.png" width="600" height="320">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng2_hud5e03c5a36581ec1547108675dd87a38_101790_600x0_resize_catmullrom_3.png" width="600" height="268">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Node Group Page - Cluster Selected
+Node group: cluster selected
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<p>Clicking the <code>Adjust</code> link in the figure above opens the Adjust Node Group dialog box, as shown below.</p>
+<p>The list area is divided into four columns:</p>
+<ol>
+<li><strong>Node group column</strong>: Displays the node group name and node group ID.</li>
+<li><strong>Current settings column</strong>: Displays node group&rsquo;s current settings, includes current instance type of the node group, whether autoscaling is enabled, the minimum number of nodes, and the maximum number of nodes.</li>
+<li><strong>Optimization settings column</strong>: Displays recommended settings for node group, includess the recommended node group instance types, whether autoscaling is enabled,, and the recommended minimum and maximum number of nodes.</li>
+<li><strong>Action column</strong>: Displays the corresponding operations on the node group.</li>
+</ol>
+<h2 id="adjust-node-group">Adjust node group</h2>
+<p>Click <code>Adjust</code> in action colum above, it will open the <code>Adjust Node Group</code> dialog, as shown below.</p>
 
 
 
@@ -441,16 +449,19 @@ Node Group Page - Cluster Selected
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_800x0_resize_catmullrom_3.png" width="800" height="410">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_800x0_resize_catmullrom_3.png" width="800" height="419">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-Adjust Node Group Dialog Box
+Adjust Node Group Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+<blockquote>
+<p>NOTE: Currently, it only shows tips on adjusting node group. In the future, we will provide automatic action on it which can adjust node group&rsquo;s settings automatically according to settting provided.</p>
+</blockquote>
 
         <div class="section-index">
     
