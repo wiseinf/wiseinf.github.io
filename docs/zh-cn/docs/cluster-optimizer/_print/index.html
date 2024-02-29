@@ -478,8 +478,8 @@ if (!doNotTrack) {
 </span></span></code></pre></div></li>
 <li>
 <p>通过如下命令创建<code>optimizer</code>库，同时，也创建用户<code>optimizer</code>（密码为<code>Optimizer~</code>）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_database.sql
-</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/cluster-optimizer/sql/create_database.sql
+</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/cluster-optimizer/sql/create_user.sql
 </span></span></code></pre></div><blockquote>
 <p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>optimizer</code>库，则上述脚本会先删除<code>optimizer</code>库，然后创建新的<code>optimizer</code>库。</p>
 </blockquote>
@@ -502,13 +502,13 @@ if (!doNotTrack) {
 <ol>
 <li>
 <p>通过如下命令创建名称空间<code>wiseinf-system</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
 </span></span></code></pre></div></li>
 <li>
 <p>通过如下命令创建<code>Deployment</code> <code>optimizer</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/optimizer.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 </span></span></code></pre></div><blockquote>
-<p>注意：若数据库信息与[初始化数据库]中提供的不一致，则需要调整文件<code>~/setup/clusteroptimizer/optimizer.yaml</code>中的<strong>ConfigMap</strong><code>optimizer-conf</code>，将其配置项<code>optimize</code>和<code>storage</code>下的<code>dataSource.name</code>值中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</p>
+<p>注意：若数据库信息与[初始化数据库]中提供的不一致，则需要调整文件<code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>中的<strong>ConfigMap</strong><code>optimizer-conf</code>，将其配置项<code>optimize</code>和<code>storage</code>下的<code>dataSource.name</code>值中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</p>
 </blockquote>
 </li>
 <li>
@@ -520,10 +520,10 @@ if (!doNotTrack) {
 </span></span></code></pre></div></li>
 <li>
 <p>通过如下命令创建 <strong>port-forward</strong> 来访问 <code>optimizer</code> 服务：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 80:80
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80  -n wiseinf-system
 </span></span></code></pre></div></li>
 <li>
-<p>打开浏览器，访问地址<code>http://localhost/</code>.</p>
+<p>打开浏览器，访问地址<code>http://localhost:8000/</code>.</p>
 </li>
 <li>
 <p>若能够看到  <strong>Cluster Optimizer</strong>首页，则应用<strong>Cluster Optimizer</strong>成功部署.</p>
@@ -573,88 +573,86 @@ if (!doNotTrack) {
 
 <h2 id="前置条件">前置条件</h2>
 <ol>
-<li>需要提供一个Access Key &amp; Secret，其权限策略如下：</li>
-</ol>
+<li>
+<p>需要提供一个Access Key &amp; Secret，其权限策略如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;Statement&#34;</span>: [
-</span></span><span style="display:flex;"><span>		{
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;Optimizer&#34;</span>,
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Action&#34;</span>: [
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeInstances&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplates&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeRegions&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeVolumes&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:DescribeNodegroup&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:ListNodegroups&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:DescribeCluster&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:ListClusters&#34;</span>
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span>,
-</span></span><span style="display:flex;"><span>			],
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;Optimizer&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeInstances&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplates&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeRegions&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeVolumes&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:DescribeNodegroup&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:ListNodegroups&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:DescribeCluster&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:ListClusters&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span>,
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="2">
+</span></span></code></pre></div></li>
 <li>
 <p>一个Kubernetes集群，版本1.22及以上，推荐使用EKS集群.</p>
 </li>
 <li>
 <p>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</p>
-</li>
-</ol>
-<pre tabindex="0"><code>apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: optimizer
-rules:
-  - apiGroups:
-      - &#34;&#34;
-    resources:
-      - nodes
-      - pods
-      - pods/status
-      - persistentvolumes
-      - persistentvolumeclaims
-      - services
-      - namespaces
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - &#34;apps/v1&#34;
-    resources:
-      - deployments
-      - replicasets
-      - replicationcontollers
-      - statefulsets
-      - daemonsets
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - &#34;batch/v1&#34;
-    resources:
-      - jobs
-      - cronjobs
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - &#34;storage/v1&#34;
-    resources:
-      - storageclasses
-    verbs:
-      - get
-      - list
-      - watch
-</code></pre><ol start="4">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">nodes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods/status</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">persistentvolumes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">persistentvolumeclaims</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">services</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">namespaces</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;apps/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">deployments</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">replicasets</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">replicationcontollers</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">statefulsets</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">daemonsets</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;batch/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">jobs</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">cronjobs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;storage/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">storageclasses</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span></code></pre></div></li>
 <li>
 <p>集群所对应的Prometheus/Thanos地址。</p>
 </li>
@@ -714,7 +712,7 @@ rules:
 <h3 id="导入集群">导入集群</h3>
 <ol>
 <li>
-<p>从<code>Settings --&gt; Clusters</code>进入集群管理页面，如下图。</p>
+<p>从<code>设置 --&gt; 集群</code>进入集群管理页面，如下图。</p>
 
 
 
@@ -753,8 +751,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_600x0_resize_catmullrom_3.png" width="600" height="184">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png" width="900" height="276">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -775,8 +773,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_600x0_resize_catmullrom_3.png" width="600" height="402">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png" width="900" height="602">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -862,8 +860,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_600x0_resize_catmullrom_3.png" width="600" height="298">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png" width="900" height="447">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -884,8 +882,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_600x0_resize_catmullrom_3.png" width="600" height="400">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png" width="900" height="600">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -906,8 +904,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_600x0_resize_catmullrom_3.png" width="600" height="399">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png" width="900" height="599">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1073,8 +1071,6 @@ rules:
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
 <p>权限文件如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
@@ -1124,14 +1120,16 @@ rules:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
-</span></span></code></pre></div><ol start="4">
-<li>Prometheus监控或者Thanos监控。该监控用于给集群中的节点、容器等提供监控数据。</li>
+</span></span></code></pre></div></li>
+<li>
+<p>Prometheus监控或者Thanos监控。该监控用于给集群中的节点、容器等提供监控数据。</p>
+</li>
 </ol>
 <h2 id="导入步骤">导入步骤</h2>
 <h3 id="添加阿里云账号">添加阿里云账号</h3>
 <ol>
-<li>选择<code>设置</code>菜单，选择<code>云账户</code>标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。</li>
-</ol>
+<li>
+<p>选择<code>设置</code>菜单，选择<code>云账户</code>标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。</p>
 
 
 
@@ -1144,15 +1142,15 @@ rules:
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-云账户管理主页面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    云账户管理主页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<ol start="2">
-<li>在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。</li>
-</ol>
+</li>
+<li>
+<p>在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。</p>
 
 
 
@@ -1165,12 +1163,14 @@ rules:
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-添加云账户界面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    添加云账户界面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+</li>
+</ol>
 <h3 id="添加阿里云集群">添加阿里云集群</h3>
 <ol>
 <li>
@@ -1213,8 +1213,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_600x0_resize_catmullrom_3.png" width="600" height="180">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png" width="900" height="270">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1234,13 +1234,13 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_600x0_resize_catmullrom_3.png" width="600" height="402">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png" width="900" height="602">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-连接Kubernetes集群页面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    连接Kubernetes集群页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
@@ -1255,13 +1255,13 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_600x0_resize_catmullrom_3.png" width="600" height="291">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png" width="900" height="437">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-连接Prometheus页面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    连接Prometheus页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
@@ -1311,8 +1311,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_600x0_resize_catmullrom_3.png" width="600" height="399">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png" width="900" height="598">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1332,8 +1332,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_600x0_resize_catmullrom_3.png" width="600" height="199">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png" width="900" height="299">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1398,8 +1398,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/overview/overview_huc51d5935651b648a35188d358af3790b_63590_600x0_resize_catmullrom_3.png" width="600" height="264">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/overview/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png" width="900" height="397">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1459,8 +1459,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_600x0_resize_catmullrom_3.png" width="600" height="324">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/nodegroup/ng1_hu5eadd621fabeabe5401645eb35929a15_31462_900x0_resize_catmullrom_3.png" width="900" height="487">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1484,8 +1484,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_600x0_resize_catmullrom_3.png" width="600" height="320">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/nodegroup/ng2_hufb6d4ad30dc137d423e10af768d0301e_59958_900x0_resize_catmullrom_3.png" width="900" height="480">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1504,8 +1504,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_800x0_resize_catmullrom_3.png" width="800" height="410">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/nodegroup/ng3_hu511fdf49d71d51d20b7534d23c9a8b4b_71557_900x0_resize_catmullrom_3.png" width="900" height="462">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1560,8 +1560,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/node/node1_hucbd1b26c7c372bc6a3c143a2da6ffa06_32634_600x0_resize_catmullrom_3.png" width="600" height="333">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/node/node1_hucbd1b26c7c372bc6a3c143a2da6ffa06_32634_900x0_resize_catmullrom_3.png" width="900" height="499">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1585,8 +1585,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/node/node2_hu17fda8b599b1f8ac4ecabc25c3b623cd_82280_600x0_resize_catmullrom_3.png" width="600" height="418">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/node/node2_hu1c09c87809c79bac2801e8022dc247c2_151122_900x0_resize_catmullrom_3.png" width="900" height="422">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1613,8 +1613,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/node/node3_huf100fcca64e7c4f80e6e88bb3833e1ea_91312_600x0_resize_catmullrom_3.png" width="600" height="296">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/node/node3_huf100fcca64e7c4f80e6e88bb3833e1ea_91312_900x0_resize_catmullrom_3.png" width="900" height="444">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1669,8 +1669,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/disk/disk1_hu8eff269808ad90ec2980f382e0103d36_32479_600x0_resize_catmullrom_3.png" width="600" height="334">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/disk/disk1_hu8eff269808ad90ec2980f382e0103d36_32479_900x0_resize_catmullrom_3.png" width="900" height="500">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1694,8 +1694,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/disk/disk2_hu5d129aa695fec5b501fbe2af2fc02371_92321_600x0_resize_catmullrom_3.png" width="600" height="406">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/disk/disk2_hu5d129aa695fec5b501fbe2af2fc02371_92321_900x0_resize_catmullrom_3.png" width="900" height="609">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1721,8 +1721,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/disk/disk3_hu8aac8a7a4525283cb7f898defaa8e7e4_130288_600x0_resize_catmullrom_3.png" width="600" height="332">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/disk/disk3_hu8aac8a7a4525283cb7f898defaa8e7e4_130288_900x0_resize_catmullrom_3.png" width="900" height="499">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1777,8 +1777,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv1_hue512a9c09cea6c77b3077e30f8fff04e_41899_600x0_resize_catmullrom_3.png" width="600" height="365">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv1_hue512a9c09cea6c77b3077e30f8fff04e_41899_900x0_resize_catmullrom_3.png" width="900" height="547">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1802,8 +1802,8 @@ Persistent Volume页
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv2_hu4f738f43cdbc3a30690ded55f2dfade5_68487_600x0_resize_catmullrom_3.png" width="600" height="395">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv2_hu4f738f43cdbc3a30690ded55f2dfade5_68487_900x0_resize_catmullrom_3.png" width="900" height="592">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1831,8 +1831,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv3_huee2a4ef5fd2b1fcd4d17f5564833ef4e_81179_600x0_resize_catmullrom_3.png" width="600" height="263">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv3_huee2a4ef5fd2b1fcd4d17f5564833ef4e_81179_900x0_resize_catmullrom_3.png" width="900" height="394">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1851,8 +1851,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv4_huf3cacc24f0cdb0b5330e8b22584ca8bc_89249_600x0_resize_catmullrom_3.png" width="600" height="267">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/pv/pv4_huf3cacc24f0cdb0b5330e8b22584ca8bc_89249_900x0_resize_catmullrom_3.png" width="900" height="401">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1907,8 +1907,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app1_hu0e8572a06a553eaf35c04e55defb382f_42248_600x0_resize_catmullrom_3.png" width="600" height="368">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app1_hu0e8572a06a553eaf35c04e55defb382f_42248_900x0_resize_catmullrom_3.png" width="900" height="552">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1932,8 +1932,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_600x0_resize_catmullrom_3.png" width="600" height="355">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_900x0_resize_catmullrom_3.png" width="900" height="533">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1963,8 +1963,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app3_hu880b20b69e27095c3257d5800759b1ca_101268_600x0_resize_catmullrom_3.png" width="600" height="354">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app3_hu880b20b69e27095c3257d5800759b1ca_101268_900x0_resize_catmullrom_3.png" width="900" height="531">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1984,8 +1984,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app4_hu0b892833f020343598f6e01ff192f5b1_108403_600x0_resize_catmullrom_3.png" width="600" height="373">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app4_hu0b892833f020343598f6e01ff192f5b1_108403_900x0_resize_catmullrom_3.png" width="900" height="559">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2013,8 +2013,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app5_hu8eee30d7aabf93c614c152e877d8928c_104423_600x0_resize_catmullrom_3.png" width="600" height="333">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app5_hu8eee30d7aabf93c614c152e877d8928c_104423_900x0_resize_catmullrom_3.png" width="900" height="499">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2034,8 +2034,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app6_hu87adbcc83246ec23d19ea6547103f818_100585_600x0_resize_catmullrom_3.png" width="600" height="255">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app6_hu87adbcc83246ec23d19ea6547103f818_100585_900x0_resize_catmullrom_3.png" width="900" height="382">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2063,8 +2063,8 @@ Persistent Volume页-选择集群
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app7_hu817d781025a27b6e9bcd825a497738ca_96820_600x0_resize_catmullrom_3.png" width="600" height="308">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/app/app7_hu817d781025a27b6e9bcd825a497738ca_96820_900x0_resize_catmullrom_3.png" width="900" height="463">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2347,8 +2347,8 @@ Persistent Volume页-选择集群
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Github" aria-label="Github">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
       <i class="fab fa-github"></i>
     </a>
   </li>

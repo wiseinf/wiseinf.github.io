@@ -163,6 +163,8 @@ if (!doNotTrack) {
   <a href="/docs/cluster-optimizer/actions/delete-pv/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizeractionsdelete-pv"><span class="">Delete Persistent Volume</span></a>
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscluster-optimizercontact-us-li">
+  <a href="/docs/cluster-optimizer/contact-us/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscluster-optimizercontact-us"><span class="">Contact Us</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswisecost-li">
@@ -273,6 +275,8 @@ if (!doNotTrack) {
         
           <li><a class="taxonomy-term" href="/tags/cluster-overview/" data-taxonomy-term="cluster-overview"><span class="taxonomy-label">Cluster Overview</span><span class="taxonomy-count">1</span></a></li>
         
+          <li><a class="taxonomy-term" href="/tags/contact-us/" data-taxonomy-term="contact-us"><span class="taxonomy-label">Contact Us</span><span class="taxonomy-count">1</span></a></li>
+        
           <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
@@ -310,6 +314,8 @@ if (!doNotTrack) {
           <li><a class="taxonomy-term" href="/categories/cluster-autoscaling/" data-taxonomy-term="cluster-autoscaling"><span class="taxonomy-label">Cluster autoscaling</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">15</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/categories/contact-us/" data-taxonomy-term="contact-us"><span class="taxonomy-label">Contact Us</span><span class="taxonomy-count">1</span></a></li>
         
           <li><a class="taxonomy-term" href="/categories/cost-management/" data-taxonomy-term="cost-management"><span class="taxonomy-label">Cost Management</span><span class="taxonomy-count">10</span></a></li>
         
@@ -407,22 +413,22 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>   cd setup
 </span></span></code></pre></div>The installation directory contains:
 <ul>
-<li>SQL script in <code>clusteroptimizer/sql/</code></li>
-<li>Kubernetes YAML files in <code>clusteroptimizer/</code></li>
+<li>SQL script in <code>cluster-optimizer/sql/</code></li>
+<li>Kubernetes YAML files in <code>cluster-optimizer/yaml</code></li>
 </ul>
 </li>
 </ol>
 <h2 id="setup-optimizer-database">Setup <code>optimizer</code> database</h2>
 <blockquote>
-<p>Assume the Mysql database host address is: <code>127.0.0.1</code>.</p>
+<p>Assume the Mysql database host address is: <code>127.0.0.1</code>. If you do not have an installed mysql, you can follow the instructions to <a href="https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing">Installing and Starting MySQL</a>.</p>
 </blockquote>
 <ol>
 <li>Login into mysql database using:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
 </span></span></code></pre></div></li>
 <li>Create <code>optimizer</code> database and its user <code>optimizer</code> with default password <code>Optimizer~</code> :
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_database.sql
-</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/cluster-optimizer/sql/create_database.sql
+</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/cluster-optimizer/sql/create_user.sql
 </span></span></code></pre></div><blockquote>
 <p>Note: Please be aware of the risk of data loss. The script will drop <code>optimizer</code> database/schema first and then create a new <code>optimizer</code>. If you already have an <code>optimizer</code> database, your data in this database will be lost.</p>
 </blockquote>
@@ -440,12 +446,12 @@ if (!doNotTrack) {
 <h2 id="setup-deployment-cluster-optimizer">Setup deployment <strong>Cluster Optimizer</strong></h2>
 <ol>
 <li>Create namespace <code>wiseinf-system</code> using:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
 </span></span></code></pre></div></li>
 <li>Create deployment <code>optimizer</code> using:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 </span></span></code></pre></div><blockquote>
-<p>NOTE: you should adjust the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/clusteroptimizer/optimizer.yaml</code>, change the value of <code>storage.dataSource.name</code> and <code>optimize.dataSource.name</code> according to your <code>optimizer</code> database&rsquo;s information.</p>
+<p>NOTE: you should adjust the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>, change the value of <code>storage.dataSource.name</code> and <code>optimize.dataSource.name</code> according to your <code>optimizer</code> database&rsquo;s information.</p>
 </blockquote>
 </li>
 <li>Check if <code>optimizer</code> is running:
@@ -455,9 +461,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6   2/2     Running   <span style="color:#ae81ff">0</span>          1m
 </span></span></code></pre></div></li>
 <li>Create a <strong>port-forward</strong> to access <code>optimizer</code> service:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 80:80
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
 </span></span></code></pre></div></li>
-<li>Open your browser and visit url <code>http://localhost/</code>.</li>
+<li>Open your browser and visit url <code>http://localhost:8000/</code>.</li>
 <li>If you can see the home page of <strong>Cluster Optimizer</strong>, you have successfully setup <code>optimizer</code>.</li>
 </ol>
 <h2 id="next-import-a-cluster">Next: Import a cluster</h2>
@@ -497,8 +503,8 @@ if (!doNotTrack) {
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="帮助和支持" aria-label="帮助和支持">
-    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
       <i class="fa fa-envelope"></i>
     </a>
   </li>
@@ -514,14 +520,14 @@ if (!doNotTrack) {
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="商务合作" aria-label="商务合作">
-    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Business Cooperation" aria-label="Business Cooperation">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
       <i class="fa fa-envelope"></i>
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Github" aria-label="Github">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
       <i class="fab fa-github"></i>
     </a>
   </li>

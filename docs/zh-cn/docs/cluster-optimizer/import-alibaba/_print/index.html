@@ -257,8 +257,6 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
 <p>权限文件如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
@@ -308,14 +306,16 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
-</span></span></code></pre></div><ol start="4">
-<li>Prometheus监控或者Thanos监控。该监控用于给集群中的节点、容器等提供监控数据。</li>
+</span></span></code></pre></div></li>
+<li>
+<p>Prometheus监控或者Thanos监控。该监控用于给集群中的节点、容器等提供监控数据。</p>
+</li>
 </ol>
 <h2 id="导入步骤">导入步骤</h2>
 <h3 id="添加阿里云账号">添加阿里云账号</h3>
 <ol>
-<li>选择<code>设置</code>菜单，选择<code>云账户</code>标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。</li>
-</ol>
+<li>
+<p>选择<code>设置</code>菜单，选择<code>云账户</code>标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。</p>
 
 
 
@@ -328,15 +328,15 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-云账户管理主页面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    云账户管理主页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
-<ol start="2">
-<li>在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。</li>
-</ol>
+</li>
+<li>
+<p>在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。</p>
 
 
 
@@ -349,12 +349,14 @@ if (!doNotTrack) {
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-添加云账户界面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    添加云账户界面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
 
+</li>
+</ol>
 <h3 id="添加阿里云集群">添加阿里云集群</h3>
 <ol>
 <li>
@@ -397,8 +399,8 @@ if (!doNotTrack) {
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_600x0_resize_catmullrom_3.png" width="600" height="180">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png" width="900" height="270">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -418,13 +420,13 @@ if (!doNotTrack) {
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_600x0_resize_catmullrom_3.png" width="600" height="402">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png" width="900" height="602">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-连接Kubernetes集群页面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    连接Kubernetes集群页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
@@ -439,13 +441,13 @@ if (!doNotTrack) {
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_600x0_resize_catmullrom_3.png" width="600" height="291">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png" width="900" height="437">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
-连接Prometheus页面
-<small class="text-muted"><br/>Wiseinf Inc.</small></p>
+    连接Prometheus页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small></p>
 	</figcaption>
 	
 </figure>
@@ -495,8 +497,8 @@ if (!doNotTrack) {
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_600x0_resize_catmullrom_3.png" width="600" height="399">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png" width="900" height="598">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -516,8 +518,8 @@ if (!doNotTrack) {
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_600x0_resize_catmullrom_3.png" width="600" height="199">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png" width="900" height="299">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -591,8 +593,8 @@ if (!doNotTrack) {
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Github" aria-label="Github">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
       <i class="fab fa-github"></i>
     </a>
   </li>

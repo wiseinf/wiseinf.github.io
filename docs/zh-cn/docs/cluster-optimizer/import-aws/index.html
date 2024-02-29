@@ -393,88 +393,86 @@ if (!doNotTrack) {
 
 <h2 id="前置条件">前置条件</h2>
 <ol>
-<li>需要提供一个Access Key &amp; Secret，其权限策略如下：</li>
-</ol>
+<li>
+<p>需要提供一个Access Key &amp; Secret，其权限策略如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;Statement&#34;</span>: [
-</span></span><span style="display:flex;"><span>		{
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;Optimizer&#34;</span>,
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Action&#34;</span>: [
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeInstances&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplates&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeRegions&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeVolumes&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:DescribeNodegroup&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:ListNodegroups&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:DescribeCluster&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;eks:ListClusters&#34;</span>
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span>,
-</span></span><span style="display:flex;"><span>				<span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span>,
-</span></span><span style="display:flex;"><span>			],
-</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;Optimizer&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeInstances&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplates&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeRegions&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeVolumes&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:DescribeNodegroup&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:ListNodegroups&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:DescribeCluster&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;eks:ListClusters&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span>,
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="2">
+</span></span></code></pre></div></li>
 <li>
 <p>一个Kubernetes集群，版本1.22及以上，推荐使用EKS集群.</p>
 </li>
 <li>
 <p>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</p>
-</li>
-</ol>
-<pre tabindex="0"><code>apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: optimizer
-rules:
-  - apiGroups:
-      - &#34;&#34;
-    resources:
-      - nodes
-      - pods
-      - pods/status
-      - persistentvolumes
-      - persistentvolumeclaims
-      - services
-      - namespaces
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - &#34;apps/v1&#34;
-    resources:
-      - deployments
-      - replicasets
-      - replicationcontollers
-      - statefulsets
-      - daemonsets
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - &#34;batch/v1&#34;
-    resources:
-      - jobs
-      - cronjobs
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - &#34;storage/v1&#34;
-    resources:
-      - storageclasses
-    verbs:
-      - get
-      - list
-      - watch
-</code></pre><ol start="4">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">optimizer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">nodes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pods/status</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">persistentvolumes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">persistentvolumeclaims</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">services</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">namespaces</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;apps/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">deployments</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">replicasets</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">replicationcontollers</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">statefulsets</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">daemonsets</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;batch/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">jobs</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">cronjobs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiGroups</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;storage/v1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">storageclasses</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">verbs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
+</span></span></code></pre></div></li>
 <li>
 <p>集群所对应的Prometheus/Thanos地址。</p>
 </li>
@@ -534,7 +532,7 @@ rules:
 <h3 id="导入集群">导入集群</h3>
 <ol>
 <li>
-<p>从<code>Settings --&gt; Clusters</code>进入集群管理页面，如下图。</p>
+<p>从<code>设置 --&gt; 集群</code>进入集群管理页面，如下图。</p>
 
 
 
@@ -573,8 +571,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_600x0_resize_catmullrom_3.png" width="600" height="184">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png" width="900" height="276">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -595,8 +593,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_600x0_resize_catmullrom_3.png" width="600" height="402">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png" width="900" height="602">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -682,8 +680,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_600x0_resize_catmullrom_3.png" width="600" height="298">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png" width="900" height="447">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -704,8 +702,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_600x0_resize_catmullrom_3.png" width="600" height="400">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png" width="900" height="600">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -726,8 +724,8 @@ rules:
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_600x0_resize_catmullrom_3.png" width="600" height="399">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/zh-cn/docs/cluster-optimizer/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png" width="900" height="599">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -802,8 +800,8 @@ rules:
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Github" aria-label="Github">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
       <i class="fab fa-github"></i>
     </a>
   </li>

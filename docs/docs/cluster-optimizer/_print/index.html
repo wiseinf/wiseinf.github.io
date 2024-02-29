@@ -402,6 +402,25 @@ This is the multi-page printable view of this section.
     </ul>
     
   
+    
+    
+	
+<li>11: <a href="#pg-db728b03bc55b3b417956e88e9e2d6b2">Contact Us</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -477,22 +496,22 @@ This is the multi-page printable view of this section.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>   cd setup
 </span></span></code></pre></div>The installation directory contains:
 <ul>
-<li>SQL script in <code>clusteroptimizer/sql/</code></li>
-<li>Kubernetes YAML files in <code>clusteroptimizer/</code></li>
+<li>SQL script in <code>cluster-optimizer/sql/</code></li>
+<li>Kubernetes YAML files in <code>cluster-optimizer/yaml</code></li>
 </ul>
 </li>
 </ol>
 <h2 id="setup-optimizer-database">Setup <code>optimizer</code> database</h2>
 <blockquote>
-<p>Assume the Mysql database host address is: <code>127.0.0.1</code>.</p>
+<p>Assume the Mysql database host address is: <code>127.0.0.1</code>. If you do not have an installed mysql, you can follow the instructions to <a href="https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing">Installing and Starting MySQL</a>.</p>
 </blockquote>
 <ol>
 <li>Login into mysql database using:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
 </span></span></code></pre></div></li>
 <li>Create <code>optimizer</code> database and its user <code>optimizer</code> with default password <code>Optimizer~</code> :
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_database.sql
-</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/clusteroptimizer/sql/create_user.sql
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; source ~/setup/cluster-optimizer/sql/create_database.sql
+</span></span><span style="display:flex;"><span>    mysql&gt; source ~/setup/cluster-optimizer/sql/create_user.sql
 </span></span></code></pre></div><blockquote>
 <p>Note: Please be aware of the risk of data loss. The script will drop <code>optimizer</code> database/schema first and then create a new <code>optimizer</code>. If you already have an <code>optimizer</code> database, your data in this database will be lost.</p>
 </blockquote>
@@ -510,12 +529,12 @@ This is the multi-page printable view of this section.
 <h2 id="setup-deployment-cluster-optimizer">Setup deployment <strong>Cluster Optimizer</strong></h2>
 <ol>
 <li>Create namespace <code>wiseinf-system</code> using:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
 </span></span></code></pre></div></li>
 <li>Create deployment <code>optimizer</code> using:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/clusteroptimizer/namespace.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 </span></span></code></pre></div><blockquote>
-<p>NOTE: you should adjust the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/clusteroptimizer/optimizer.yaml</code>, change the value of <code>storage.dataSource.name</code> and <code>optimize.dataSource.name</code> according to your <code>optimizer</code> database&rsquo;s information.</p>
+<p>NOTE: you should adjust the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>, change the value of <code>storage.dataSource.name</code> and <code>optimize.dataSource.name</code> according to your <code>optimizer</code> database&rsquo;s information.</p>
 </blockquote>
 </li>
 <li>Check if <code>optimizer</code> is running:
@@ -525,9 +544,9 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6   2/2     Running   <span style="color:#ae81ff">0</span>          1m
 </span></span></code></pre></div></li>
 <li>Create a <strong>port-forward</strong> to access <code>optimizer</code> service:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 80:80
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
 </span></span></code></pre></div></li>
-<li>Open your browser and visit url <code>http://localhost/</code>.</li>
+<li>Open your browser and visit url <code>http://localhost:8000/</code>.</li>
 <li>If you can see the home page of <strong>Cluster Optimizer</strong>, you have successfully setup <code>optimizer</code>.</li>
 </ol>
 <h2 id="next-import-a-cluster">Next: Import a cluster</h2>
@@ -572,7 +591,7 @@ This is the multi-page printable view of this section.
 
 </div>
 
-<h2 id="preconditions">Preconditions</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>
 <p>An IAM user and its associated AWS access key are needed. The IAM user should have following permissions:</p>
@@ -753,8 +772,8 @@ and <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_permissions
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_600x0_resize_catmullrom_3.png" width="600" height="144">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png" width="900" height="215">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -805,8 +824,8 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to kubernetes</
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_600x0_resize_catmullrom_3.png" width="600" height="401">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png" width="900" height="602">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -861,8 +880,8 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics serv
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_600x0_resize_catmullrom_3.png" width="600" height="293">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png" width="900" height="439">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -883,8 +902,8 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics serv
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_600x0_resize_catmullrom_3.png" width="600" height="352">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png" width="900" height="528">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -905,8 +924,8 @@ When you confirm these configurations, you can click <code>Import</code> button 
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_600x0_resize_catmullrom_3.png" width="600" height="181">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png" width="900" height="271">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -963,9 +982,10 @@ When you confirm these configurations, you can click <code>Import</code> button 
 
 </div>
 
-<h2 id="preconditions">Preconditions</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ol>
-<li>Obtain the Alibaba Cloud Access Key and Access Key Secret with following permissions. For the specific application process, please refer to <a href="https://help.aliyun.com/document_detail/116401.htm">Create Access Key</a>.
+<li>
+<p>Obtain the Alibaba Cloud Access Key and Access Key Secret with following permissions. For the specific application process, please refer to <a href="https://help.aliyun.com/document_detail/116401.htm">Create Access Key</a>.</p>
 <table>
 <thead>
 <tr>
@@ -987,8 +1007,6 @@ When you confirm these configurations, you can click <code>Import</code> button 
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
 <p>The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to [Creating a custom permission policy through script editing mode](<a href="https://help.aliyun.com/zh/ram/user-">https://help.aliyun.com/zh/ram/user-</a> guide/create-a-custom-policy#section-kwn-gu8-48m)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
@@ -1021,7 +1039,7 @@ When you confirm these configurations, you can click <code>Import</code> button 
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="2">
+</span></span></code></pre></div></li>
 <li>
 <p>An kubernetes cluster, version 1.22 or above. ACK cluster is recommended. For details, please see <a href="https://help.aliyun.com/zh/ack/">Container Service Kubernetes version</a></p>
 </li>
@@ -1073,8 +1091,6 @@ When you confirm these configurations, you can click <code>Import</code> button 
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
 <p>The permissions file is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">rbac.authorization.k8s.io/v1</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterRole</span>
@@ -1124,7 +1140,7 @@ When you confirm these configurations, you can click <code>Import</code> button 
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">get</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">list</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">watch</span>
-</span></span></code></pre></div><ol start="4">
+</span></span></code></pre></div></li>
 <li>
 <p>Prometheus/Thanos address related to the kubernetes cluster.</p>
 </li>
@@ -1220,8 +1236,8 @@ When you confirm these configurations, you can click <code>Import</code> button 
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_600x0_resize_catmullrom_3.png" width="600" height="180">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png" width="900" height="270">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1276,8 +1292,8 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to kubernetes</
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_600x0_resize_catmullrom_3.png" width="600" height="402">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png" width="900" height="603">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1332,8 +1348,8 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics serv
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_600x0_resize_catmullrom_3.png" width="600" height="292">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png" width="900" height="437">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1354,8 +1370,8 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics serv
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_600x0_resize_catmullrom_3.png" width="600" height="421">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png" width="900" height="631">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1376,8 +1392,8 @@ When you confirm these configurations, you can click <code>Import</code> button 
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_600x0_resize_catmullrom_3.png" width="600" height="199">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png" width="900" height="299">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1442,8 +1458,8 @@ When you confirm these configurations, you can click <code>Import</code> button 
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/overview/overview_hu1965570f547c74b43dc179305c719b04_123493_600x0_resize_catmullrom_3.png" width="600" height="218">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/overview/overview_hu1965570f547c74b43dc179305c719b04_123493_900x0_resize_catmullrom_3.png" width="900" height="327">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1499,8 +1515,8 @@ Cluster Overview
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng1_hu57170a98ebe6ce10f665738af21b1dfa_69789_600x0_resize_catmullrom_3.png" width="600" height="260">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng1_hu57170a98ebe6ce10f665738af21b1dfa_69789_900x0_resize_catmullrom_3.png" width="900" height="390">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1524,8 +1540,8 @@ Node group
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng2_hud5e03c5a36581ec1547108675dd87a38_101790_600x0_resize_catmullrom_3.png" width="600" height="268">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng2_hud5e03c5a36581ec1547108675dd87a38_101790_900x0_resize_catmullrom_3.png" width="900" height="402">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1551,8 +1567,8 @@ Node group: cluster selected
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_800x0_resize_catmullrom_3.png" width="800" height="419">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png" width="900" height="471">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1610,8 +1626,8 @@ Adjust Node Group Dialog
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/node/node1_hu2c53deb4231ea2a8699f95c38ba1f137_72885_600x0_resize_catmullrom_3.png" width="600" height="280">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/node/node1_hu2c53deb4231ea2a8699f95c38ba1f137_72885_900x0_resize_catmullrom_3.png" width="900" height="420">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1635,8 +1651,8 @@ Node
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/node/node2_hu51efa93672742c92b05ae62a4461ee92_120186_600x0_resize_catmullrom_3.png" width="600" height="305">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/node/node2_hu115dd343cd413953edb649e65f7b0b70_148325_900x0_resize_catmullrom_3.png" width="900" height="417">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1663,8 +1679,8 @@ Node: cluster selected
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_600x0_resize_catmullrom_3.png" width="600" height="283">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png" width="900" height="424">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1722,8 +1738,8 @@ Node: Adjust node
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk1_hua57c8dbd7330694b4f5ae3925cf4f78b_69060_600x0_resize_catmullrom_3.png" width="600" height="280">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk1_hua57c8dbd7330694b4f5ae3925cf4f78b_69060_900x0_resize_catmullrom_3.png" width="900" height="420">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1747,8 +1763,8 @@ Disk
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk2_hud98cc24762463067dbef8b620b8c9443_123173_600x0_resize_catmullrom_3.png" width="600" height="308">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk2_hud98cc24762463067dbef8b620b8c9443_123173_900x0_resize_catmullrom_3.png" width="900" height="462">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1774,8 +1790,8 @@ Disk: cluster selected
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_600x0_resize_catmullrom_3.png" width="600" height="258">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png" width="900" height="387">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1830,8 +1846,8 @@ Disk: adjust disk size
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv1_hucc5c08c08f6d52121947a6be0784ee01_87268_600x0_resize_catmullrom_3.png" width="600" height="285">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv1_hucc5c08c08f6d52121947a6be0784ee01_87268_900x0_resize_catmullrom_3.png" width="900" height="427">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1855,8 +1871,8 @@ Persistent Volume
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv2_hu9e44c682a240125c901463ce98c3b340_95509_600x0_resize_catmullrom_3.png" width="600" height="265">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv2_hu9e44c682a240125c901463ce98c3b340_95509_900x0_resize_catmullrom_3.png" width="900" height="398">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1884,8 +1900,8 @@ Persistent Volume: cluster selected
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_600x0_resize_catmullrom_3.png" width="600" height="215">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png" width="900" height="323">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1905,8 +1921,8 @@ Persistent Volume: delete persistent volume dialog
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv4_hu40af59ab1d1b093aa299d9f21b874d7b_92240_600x0_resize_catmullrom_3.png" width="600" height="267">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/pv/pv4_hu40af59ab1d1b093aa299d9f21b874d7b_92240_900x0_resize_catmullrom_3.png" width="900" height="401">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1962,8 +1978,8 @@ Persistent Volume: adjust persistent volume size
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app1_hudb92ed43c43b41b5faaee833823d9815_83959_600x0_resize_catmullrom_3.png" width="600" height="288">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app1_hudb92ed43c43b41b5faaee833823d9815_83959_900x0_resize_catmullrom_3.png" width="900" height="432">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -1987,8 +2003,8 @@ Application
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png" width="600" height="387">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png" width="900" height="580">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2009,8 +2025,8 @@ Application: cluster selected
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png" width="600" height="387">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png" width="900" height="580">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2037,8 +2053,8 @@ Application: `Resource Recommendation` strategy
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app3_hu06395c21d7ea7f52ffc8996b839f5d11_100892_600x0_resize_catmullrom_3.png" width="600" height="371">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app3_hu06395c21d7ea7f52ffc8996b839f5d11_100892_900x0_resize_catmullrom_3.png" width="900" height="557">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2058,8 +2074,8 @@ Application: adjust resource quota dialog
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png" width="600" height="387">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png" width="900" height="580">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2089,8 +2105,8 @@ Application: filted by strategy  `Resource Quota Unset`
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png" width="600" height="387">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png" width="900" height="580">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2111,8 +2127,8 @@ Application: Setting application resource quota dialog
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png" width="600" height="387">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png" width="900" height="580">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2140,8 +2156,8 @@ Application: filted by strategy `Out of Memory`
 
 
 
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_600x0_resize_catmullrom_3.png" width="600" height="387">
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png" width="900" height="580">
 	
 	<figcaption class="card-body px-0 pt-2 pb-0">
 		<p class="card-text">
@@ -2396,6 +2412,43 @@ Application: Adjust application memory size dialog
     
 	
   
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-db728b03bc55b3b417956e88e9e2d6b2">11 - Contact Us</h1>
+    <div class="lead">Contact Us.</div>
+	<p>Got a question? We&rsquo;re here to help.</p>
+<p>For technical problems or troubleshooting, reach out to our <code>Support Team</code> at <a href="mailto:support@wiseinf.com"><a href="mailto:support@wiseinf.com">support@wiseinf.com</a></a>.</p>
+<p>Interested in commercial version? Contact our <code>Sales</code> at <a href="mailto:business@wiseinf.com"> <a href="mailto:business@wiseinf.com">business@wiseinf.com</a></a>..</p>
+<p>You can also find us on the following platforms:</p>
+<p>​​* <a href="">Slack</a></p>
+<ul>
+<li><a href="">Github</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
 
 
 
@@ -2412,8 +2465,8 @@ Application: Adjust application memory size dialog
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="帮助和支持" aria-label="帮助和支持">
-    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
       <i class="fa fa-envelope"></i>
     </a>
   </li>
@@ -2429,14 +2482,14 @@ Application: Adjust application memory size dialog
         
 <ul class="list-inline mb-0">
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="商务合作" aria-label="商务合作">
-    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Business Cooperation" aria-label="Business Cooperation">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
       <i class="fa fa-envelope"></i>
     </a>
   </li>
   
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="网站源码" aria-label="网站源码">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="网站源码">
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Github" aria-label="Github">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
       <i class="fab fa-github"></i>
     </a>
   </li>
