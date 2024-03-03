@@ -73,7 +73,7 @@ if (!doNotTrack) {
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
-      <a class="nav-link active" href="/docs/"><span class="active">Documentation</span></a>
+      <a class="nav-link active" href="/docs/"><span class="active">Docs</span></a>
       </li>
       
       <li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -393,6 +393,9 @@ Then click &lsquo;Next&rsquo; button to go to step <code>Connect to kubernetes</
 </figure>
 
 Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics server</code> step.</p>
+<blockquote>
+<p>NOTICE: Given that the platform doesn&rsquo;t utilize an installed AWS client for retrieving user authentication information, if your Kubeconfig relies on the aws get token command for this purpose, you MUST enable Auto Refresh Kubeconfig. This ensures that the platform dynamically retrieves user authentication details.</p>
+</blockquote>
 </li>
 <li>
 <p>In the <code>Connect to metrics server</code> step, fill following fields, as shown below.</p>

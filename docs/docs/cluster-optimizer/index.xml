@@ -373,6 +373,9 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/figure&gt;
 
 Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect to metrics server&lt;/code&gt; step.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTICE: Given that the platform doesn&amp;rsquo;t utilize an installed AWS client for retrieving user authentication information, if your Kubeconfig relies on the aws get token command for this purpose, you MUST enable Auto Refresh Kubeconfig. This ensures that the platform dynamically retrieves user authentication details.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect to metrics server&lt;/code&gt; step, fill following fields, as shown below.&lt;/p&gt;
@@ -1620,27 +1623,6 @@ Application: Adjust application memory size dialog
 &lt;li&gt;&lt;a href=&#34;/docs/cluster-optimizer/actions/adjust-disk/&#34;&gt;Adjust disk&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/docs/cluster-optimizer/actions/adjust-pv/&#34;&gt;Adjust pv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Contact Us</title>
-      <link>/docs/cluster-optimizer/contact-us/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/cluster-optimizer/contact-us/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Got a question? We&amp;rsquo;re here to help.&lt;/p&gt;
-&lt;p&gt;For technical problems or troubleshooting, reach out to our &lt;code&gt;Support Team&lt;/code&gt; at &lt;a href=&#34;mailto:support@wiseinf.com&#34;&gt;&lt;a href=&#34;mailto:support@wiseinf.com&#34;&gt;support@wiseinf.com&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Interested in commercial version? Contact our &lt;code&gt;Sales&lt;/code&gt; at &lt;a href=&#34;mailto:business@wiseinf.com&#34;&gt; &lt;a href=&#34;mailto:business@wiseinf.com&#34;&gt;business@wiseinf.com&lt;/a&gt;&lt;/a&gt;..&lt;/p&gt;
-&lt;p&gt;You can also find us on the following platforms:&lt;/p&gt;
-&lt;p&gt;​​* &lt;a href=&#34;&#34;&gt;Slack&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

@@ -360,8 +360,6 @@
                 href="/products/cluster-optimizer/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/contact-us/</loc>
-  </url><url>
     <loc>/products/</loc>
     <xhtml:link
                 rel="alternate"
@@ -507,10 +505,6 @@
                 />
   </url><url>
     <loc>/tags/cluster-overview/</loc>
-  </url><url>
-    <loc>/tags/contact-us/</loc>
-  </url><url>
-    <loc>/categories/contact-us/</loc>
   </url><url>
     <loc>/contactus/</loc>
     <xhtml:link

@@ -477,6 +477,9 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/figure&gt;
 
 Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect to metrics server&lt;/code&gt; step.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTICE: Given that the platform doesn&amp;rsquo;t utilize an installed AWS client for retrieving user authentication information, if your Kubeconfig relies on the aws get token command for this purpose, you MUST enable Auto Refresh Kubeconfig. This ensures that the platform dynamically retrieves user authentication details.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect to metrics server&lt;/code&gt; step, fill following fields, as shown below.&lt;/p&gt;

@@ -332,11 +332,11 @@
 	
 &lt;/figure&gt;
 &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;输入&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;后，您还可以通过单击底部&lt;code&gt;测试连通性&lt;/code&gt;按钮来测试访问凭据是否能够正常连接到云提供商。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3 id=&#34;导入集群&#34;&gt;导入集群&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -412,11 +412,11 @@
 	
 &lt;/figure&gt;
 
-先选择&lt;code&gt;地域&lt;/code&gt;，然后选择&lt;code&gt;集群&lt;/code&gt;，然后输入以下字段：&lt;/p&gt;
+先选择&lt;code&gt;地域&lt;/code&gt;，然后选择&lt;code&gt;集群&lt;/code&gt;，然后输入以下配置项：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;参数&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;配置项&lt;/th&gt;
 &lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -443,14 +443,17 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：鉴于平台不使用AWS客户端来获取用户身份验证信息，如果您的 &lt;code&gt;Kubeconfig&lt;/code&gt;配置项中获取用户身份信息依赖于&lt;code&gt;aws get token&lt;/code&gt;命令，则必须启用 &lt;code&gt;自动刷新 Kubeconfig&lt;/code&gt;。这确保了平台动态获取用户身份验证详细信息。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;然后单击&lt;code&gt;下一步&lt;/code&gt;按钮转到&lt;code&gt;连接Metrics服务&lt;/code&gt;步骤。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;在&lt;code&gt;连接Metrics服务&lt;/code&gt;步骤中，输入以下字段，如下所示。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;连接Metrics服务&lt;/code&gt;步骤中，输入以下配置项，如下所示。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;参数&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;配置项&lt;/th&gt;
 &lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;

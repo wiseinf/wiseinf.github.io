@@ -704,11 +704,11 @@ if (!doNotTrack) {
 	
 </figure>
 </p>
-</li>
-</ol>
 <blockquote>
 <p>输入<code>Access Key</code>和<code>Access Key Secret</code>后，您还可以通过单击底部<code>测试连通性</code>按钮来测试访问凭据是否能够正常连接到云提供商。</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="导入集群">导入集群</h3>
 <ol>
 <li>
@@ -784,11 +784,11 @@ if (!doNotTrack) {
 	
 </figure>
 
-先选择<code>地域</code>，然后选择<code>集群</code>，然后输入以下字段：</p>
+先选择<code>地域</code>，然后选择<code>集群</code>，然后输入以下配置项：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
+<th style="text-align:left">配置项</th>
 <th style="text-align:left">描述</th>
 </tr>
 </thead>
@@ -815,14 +815,17 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>注意：鉴于平台不使用AWS客户端来获取用户身份验证信息，如果您的 <code>Kubeconfig</code>配置项中获取用户身份信息依赖于<code>aws get token</code>命令，则必须启用 <code>自动刷新 Kubeconfig</code>。这确保了平台动态获取用户身份验证详细信息。</p>
+</blockquote>
 <p>然后单击<code>下一步</code>按钮转到<code>连接Metrics服务</code>步骤。</p>
 </li>
 <li>
-<p>在<code>连接Metrics服务</code>步骤中，输入以下字段，如下所示。</p>
+<p>在<code>连接Metrics服务</code>步骤中，输入以下配置项，如下所示。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
+<th style="text-align:left">配置项</th>
 <th style="text-align:left">描述</th>
 </tr>
 </thead>
