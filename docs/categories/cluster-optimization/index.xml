@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – Cluster Optimization</title>
+    <title>Cluster Optimizer – Cluster Optimization</title>
     <link>/categories/cluster-optimization/</link>
-    <description>Recent content in Cluster Optimization on Wiseinf</description>
+    <description>Recent content in Cluster Optimization on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Adjusting Node Group</title>
-      <link>/docs/cluster-optimizer/actions/adjust-nodegroup/</link>
+      <link>/docs/actions/adjust-nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/actions/adjust-nodegroup/</guid>
+      <guid>/docs/actions/adjust-nodegroup/</guid>
       <description>
         
         
@@ -30,19 +30,19 @@
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;amazon-aws&#34;&gt;Amazon AWS&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;h2 id=&#34;amazon-aws&#34;&gt;Amazon AWS&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#amazon-aws&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Permission on modifying corresponding cluster&amp;rsquo;s node group.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;/h3&gt;
+&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#instructions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites-1&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites-1&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites-1&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Permission on modifying corresponding cluster&amp;rsquo;s node pool.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;instructions-1&#34;&gt;Instructions&lt;/h3&gt;
+&lt;h3 id=&#34;instructions-1&#34;&gt;Instructions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#instructions-1&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Log in to the &lt;code&gt;Container Service Management Console&lt;/code&gt; and select the cluster in the left navigation bar.&lt;/li&gt;
 &lt;li&gt;On the cluster list page, click the target cluster name, and then select &lt;code&gt;Node Management &amp;gt; Node Pool &lt;/code&gt;in the left navigation bar.&lt;/li&gt;
@@ -62,45 +62,11 @@
     </item>
     
     <item>
-      <title>Docs: Cluster Optimizer</title>
-      <link>/docs/cluster-optimizer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/cluster-optimizer/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Cluster Optimizer&lt;/strong&gt; is a cloud native cluster optimization platform, provides cluster optimization capabilities to help users better optimize clusters and applications, ensure stability, and avoid waste.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Cluster optimizer can assist users in optimizing their kubernetes clustersand its workloads, with key features including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Providing a variety of optimization strategies, including recommendations for node groups, nodes, disks, Persistent volumes, and applications.&lt;/li&gt;
-&lt;li&gt;Cloud account (credential) management and cluster management.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We provides more features in business version:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;High availibility.&lt;/li&gt;
-&lt;li&gt;Authentication and authorization.&lt;/li&gt;
-&lt;li&gt;Alert.&lt;/li&gt;
-&lt;li&gt;Advanced optimization strategies with more intelligent models.&lt;/li&gt;
-&lt;li&gt;Automated actions on adjust nodes, reduce persistet volumes, and reduce application resource and so on.&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Setup</title>
-      <link>/docs/cluster-optimizer/setup/</link>
+      <link>/docs/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/setup/</guid>
+      <guid>/docs/setup/</guid>
       <description>
         
         
@@ -111,23 +77,23 @@
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;/h2&gt;
+&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#preconditions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Mysql database, version 5.7 and above&lt;/li&gt;
 &lt;li&gt;kubernetes cluster, version 1.22 and above&lt;/li&gt;
 &lt;li&gt;Git&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;clone-installation-script&#34;&gt;Clone installation script&lt;/h2&gt;
+&lt;h2 id=&#34;clone-installation-script&#34;&gt;Clone installation script&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#clone-installation-script&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;We assume the installation script library has been cloned into &lt;code&gt;setup&lt;/code&gt; subdirectory of user&amp;rsquo;s home directory.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;Clone installation script into local using git:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cd ~
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ~
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    git clone https://github.com/wiseinf/setup.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Navigate to the &lt;code&gt;setup&lt;/code&gt; directory.
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   cd setup
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; setup
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;The installation directory contains:
 &lt;ul&gt;
 &lt;li&gt;SQL script in &lt;code&gt;cluster-optimizer/sql/&lt;/code&gt;&lt;/li&gt;
@@ -135,55 +101,55 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;setup-optimizer-database&#34;&gt;Setup &lt;code&gt;optimizer&lt;/code&gt; database&lt;/h2&gt;
+&lt;h2 id=&#34;setup-optimizer-database&#34;&gt;Setup &lt;code&gt;optimizer&lt;/code&gt; database&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#setup-optimizer-database&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Assume the Mysql database host address is: &lt;code&gt;127.0.0.1&lt;/code&gt;. If you do not have an installed mysql, you can follow the instructions to &lt;a href=&#34;https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing&#34;&gt;Installing and Starting MySQL&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;Login into mysql database using:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql -h127.0.0.1 -uroot
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql -h127.0.0.1 -uroot
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Create &lt;code&gt;optimizer&lt;/code&gt; database and its user &lt;code&gt;optimizer&lt;/code&gt; with default password &lt;code&gt;Optimizer~&lt;/code&gt; :
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; source ~/setup/cluster-optimizer/sql/create_database.sql
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; source ~/setup/cluster-optimizer/sql/create_user.sql
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt; ~/setup/cluster-optimizer/sql/create_database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt; ~/setup/cluster-optimizer/sql/create_user.sql
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Note: Please be aware of the risk of data loss. The script will drop &lt;code&gt;optimizer&lt;/code&gt; database/schema first and then create a new &lt;code&gt;optimizer&lt;/code&gt;. If you already have an &lt;code&gt;optimizer&lt;/code&gt; database, your data in this database will be lost.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;Check if &lt;code&gt;optimizer&lt;/code&gt; database is created using:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql -h127.0.0.1 -uoptimizer 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; show databases;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql -h127.0.0.1 -uoptimizer 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; show databases&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;When propmted to input password, you can use the default password &lt;code&gt;Optimizer~&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Check permission by create a &lt;code&gt;test&lt;/code&gt; table:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; USE optimizer;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; CREATE TABLE test &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id int&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; USE optimizer&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; CREATE TABLE &lt;span style=&#34;color:#204a87&#34;&gt;test&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;id int&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;If the table is created successfully, the permission is granted.&lt;/li&gt;
 &lt;li&gt;Congratulations! You have successfully setup &lt;code&gt;optimizer&lt;/code&gt; database.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;setup-deployment-cluster-optimizer&#34;&gt;Setup deployment &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;setup-deployment-cluster-optimizer&#34;&gt;Setup deployment &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#setup-deployment-cluster-optimizer&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Create namespace &lt;code&gt;wiseinf-system&lt;/code&gt; using:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Create deployment &lt;code&gt;optimizer&lt;/code&gt; using:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;NOTE: you should adjust the &lt;strong&gt;ConfigMap&lt;/strong&gt; &lt;code&gt;optimizer-conf&lt;/code&gt; in the file &lt;code&gt;~/setup/cluster-optimizer/yaml/optimizer.yaml&lt;/code&gt;, change the value of &lt;code&gt;storage.dataSource.name&lt;/code&gt; and &lt;code&gt;optimize.dataSource.name&lt;/code&gt; according to your &lt;code&gt;optimizer&lt;/code&gt; database&amp;rsquo;s information.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;Check if &lt;code&gt;optimizer&lt;/code&gt; is running:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl get pods -n wiseinf-system
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl get pods -n wiseinf-system
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;You can get:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NAME                         READY   STATUS    RESTARTS   AGE
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    optimizer-5b956655df-gspq6   2/2     Running   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;          1m
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NAME                         READY   STATUS    RESTARTS   AGE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    optimizer-5b956655df-gspq6   2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          1m
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Create a &lt;strong&gt;port-forward&lt;/strong&gt; to access &lt;code&gt;optimizer&lt;/code&gt; service:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Open your browser and visit url &lt;code&gt;http://localhost:8000/&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;If you can see the home page of &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, you have successfully setup &lt;code&gt;optimizer&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;next-import-a-cluster&#34;&gt;Next: Import a cluster&lt;/h2&gt;
+&lt;h2 id=&#34;next-import-a-cluster&#34;&gt;Next: Import a cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-import-a-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Next, you can import a cluster and view its optimization recommendations. For details, please visit following links:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/docs/cluster-optimizer/import-aws&#34;&gt;Import Cluster from AWS&lt;/a&gt;&lt;/li&gt;
@@ -195,10 +161,10 @@
     
     <item>
       <title>Docs: Adjustment Node</title>
-      <link>/docs/cluster-optimizer/actions/adjust-node/</link>
+      <link>/docs/actions/adjust-node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/actions/adjust-node/</guid>
+      <guid>/docs/actions/adjust-node/</guid>
       <description>
         
         
@@ -209,8 +175,8 @@
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
 
       </description>
@@ -218,10 +184,10 @@
     
     <item>
       <title>Docs: Import Cluster from AWS</title>
-      <link>/docs/cluster-optimizer/import-aws/</link>
+      <link>/docs/import-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/import-aws/</guid>
+      <guid>/docs/import-aws/</guid>
       <description>
         
         
@@ -232,33 +198,33 @@
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;An IAM user and its associated AWS access key are needed. The IAM user should have following permissions:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Sid&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Optimizer&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ec2:DescribeInstances&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ec2:DescribeRegions&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ec2:DescribeVolumes&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ec2:DescribeLaunchTemplates&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ec2:DescribeLaunchTemplateVersions&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eks:ListClusters&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eks:DescribeCluster&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eks:ListNodegroups&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eks:DescribeNodegroup&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;autoscaling:DescribeAutoScalingInstances&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;autoscaling:DescribeAutoScalingGroups&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Sid&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Optimizer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec2:DescribeInstances&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec2:DescribeRegions&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec2:DescribeVolumes&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec2:DescribeLaunchTemplates&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec2:DescribeLaunchTemplateVersions&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks:ListClusters&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks:DescribeCluster&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks:ListNodegroups&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks:DescribeNodegroup&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;autoscaling:DescribeAutoScalingInstances&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;autoscaling:DescribeAutoScalingGroups&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;NOTE: more information about access keys and permissions, you can refer to &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html&#34;&gt;Managing access keys for IAM users&lt;/a&gt;
 and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_permissions.html&#34;&gt;Managing permissions for IAM users&lt;/a&gt;.&lt;/p&gt;
@@ -269,55 +235,55 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;You need to provide a kubeconfig file associate with the IAM user to access kubernetes cluster. Meanwhile, you need to grant following cluster roles to the IAM user.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;rbac.authorization.k8s.io/v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ClusterRole&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;rules&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;nodes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;pods&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;pods/status&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;persistentvolumes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;persistentvolumeclaims&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;services&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;namespaces&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;apps/v1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;deployments&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;replicasets&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;replicationcontollers&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;statefulsets&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;daemonsets&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;batch/v1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;jobs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;cronjobs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;storage/v1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;storageclasses&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;rbac.authorization.k8s.io/v1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ClusterRole&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;optimizer&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;rules&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;nodes&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;pods&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;pods/status&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;persistentvolumes&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;persistentvolumeclaims&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;services&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;namespaces&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;apps/v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;deployments&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;replicasets&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;replicationcontollers&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;statefulsets&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;daemonsets&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;batch/v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;jobs&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;cronjobs&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storage/v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;storageclasses&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Prometheus/Thanos address related to the kubernetes cluster.&lt;/p&gt;
 &lt;/li&gt;
@@ -325,72 +291,54 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;p&gt;The &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; application can access to the EKS cluster and Prometheus/Thanos.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;import-kuberentes-cluster&#34;&gt;Import Kuberentes Cluster&lt;/h2&gt;
-&lt;h3 id=&#34;add-cloud-account&#34;&gt;Add Cloud Account&lt;/h3&gt;
+&lt;h2 id=&#34;import-kuberentes-cluster&#34;&gt;Import Kuberentes Cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#import-kuberentes-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;add-cloud-account&#34;&gt;Add Cloud Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#add-cloud-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Go to cloud account management page from &lt;code&gt;Settings --&amp;gt; Cloud Accounts&lt;/code&gt;, as shown below.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
   Cloud account management
-  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Click the &lt;code&gt;New&lt;/code&gt; button to add a cloud account. You can input &lt;code&gt;Name&lt;/code&gt;, select &lt;code&gt;Amazon AWS&lt;/code&gt; as &lt;code&gt;Cloud Provider&lt;/code&gt;, then input &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and finally click &lt;code&gt;Confirm&lt;/code&gt;. You can also test connectivity by click &lt;code&gt;Test Connectivity&lt;/code&gt; after input the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
   Add cloud account
-  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;import-cluster&#34;&gt;Import Cluster&lt;/h3&gt;
+&lt;h3 id=&#34;import-cluster&#34;&gt;Import Cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#import-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Go to cluster management page from &lt;code&gt;Settings --&amp;gt; Clusters&lt;/code&gt;, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Cluster Management
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;/li&gt;
@@ -406,22 +354,16 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect to AWS&lt;/code&gt; step, choose &lt;code&gt;Using Existing Access Token&lt;/code&gt;, select cloud account created in section &lt;code&gt;Add Cloud Account&lt;/code&gt;, as shown below.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Import Cluster: Connect to AWS
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect to kubernetes&lt;/code&gt;.&lt;/p&gt;
@@ -458,22 +400,16 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;
+&lt;p&gt;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
 
 
-
-
-
-
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
     Import Cluster: Connect to kubernetes cluster
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect to metrics server&lt;/code&gt; step.&lt;/p&gt;
@@ -517,71 +453,53 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Import Cluster: Connect to metrics server
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Then click &amp;lsquo;Next&amp;rsquo; button to go to &lt;code&gt;View configurations&lt;/code&gt; step.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;View configurations&lt;/code&gt; step, it displays configurations on connecting to AWS cloud, connecting to kubernetes cluster, connecting to metrics server. You can check if the configuration is as expected.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Import Cluster: View configurations
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code&gt; button to go to &lt;code&gt;Finish&lt;/code&gt; step.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Finish&lt;/code&gt; step, it will disply the submission status, as shown below. You can click &lt;code&gt;Finish&lt;/code&gt; button when the submission status showns the cluster is imported.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Import Cluster: Finish
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;next&#34;&gt;Next&lt;/h2&gt;
+&lt;h2 id=&#34;next&#34;&gt;Next&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After imported the cluster, you can view optimization recommendations of the cluster in many aspect.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/docs/clusteroptimizer/nodegroup&#34;&gt;Node group&lt;/a&gt;&lt;/li&gt;
@@ -596,10 +514,10 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
     
     <item>
       <title>Docs: Adjust Disk</title>
-      <link>/docs/cluster-optimizer/actions/adjust-disk/</link>
+      <link>/docs/actions/adjust-disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/actions/adjust-disk/</guid>
+      <guid>/docs/actions/adjust-disk/</guid>
       <description>
         
         
@@ -610,8 +528,8 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
 
       </description>
@@ -619,10 +537,10 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
     
     <item>
       <title>Docs: Import Cluster from Alibaba Cloud</title>
-      <link>/docs/cluster-optimizer/import-alibaba/</link>
+      <link>/docs/import-alibaba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/import-alibaba/</guid>
+      <guid>/docs/import-alibaba/</guid>
       <description>
         
         
@@ -633,7 +551,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Obtain the Alibaba Cloud Access Key and Access Key Secret with following permissions. For the specific application process, please refer to &lt;a href=&#34;https://help.aliyun.com/document_detail/116401.htm&#34;&gt;Create Access Key&lt;/a&gt;.&lt;/p&gt;
@@ -659,37 +577,37 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to [Creating a custom permission policy through script editing mode](&lt;a href=&#34;https://help.aliyun.com/zh/ram/user-&#34;&gt;https://help.aliyun.com/zh/ram/user-&lt;/a&gt; guide/create-a-custom-policy#section-kwn-gu8-48m)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ecs:DescribeDisks&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ecs:DescribeInstances&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ecs:DescribeRegions&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;: {}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterNodePools&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterNodePoolDetail&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusters&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterUserKubeconfig&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cs:DescribeClusterNodes&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;: {}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ecs:DescribeDisks&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ecs:DescribeInstances&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ecs:DescribeRegions&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cs:DescribeClusterNodePools&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cs:DescribeClusterNodePoolDetail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cs:DescribeClusters&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cs:DescribeClusterUserKubeconfig&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cs:DescribeClusterNodes&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;An kubernetes cluster, version 1.22 or above. ACK cluster is recommended. For details, please see &lt;a href=&#34;https://help.aliyun.com/zh/ack/&#34;&gt;Container Service Kubernetes version&lt;/a&gt;&lt;/p&gt;
@@ -743,55 +661,55 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The permissions file is as follows:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;rbac.authorization.k8s.io/v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ClusterRole&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;optimizer&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;rules&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;nodes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;pods&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;pods/status&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;persistentvolumes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;persistentvolumeclaims&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;services&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;namespaces&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;apps/v1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;deployments&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;replicasets&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;replicationcontollers&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;statefulsets&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;daemonsets&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;batch/v1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;jobs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;cronjobs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;apiGroups&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;storage/v1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;resources&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      -&lt;span style=&#34;color:#ae81ff&#34;&gt;storageclasses&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;verbs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;get&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;list&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;watch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;rbac.authorization.k8s.io/v1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ClusterRole&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;optimizer&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;rules&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;nodes&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;pods&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;pods/status&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;persistentvolumes&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;persistentvolumeclaims&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;services&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;namespaces&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;apps/v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;deployments&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;replicasets&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;replicationcontollers&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;statefulsets&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;daemonsets&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;batch/v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;jobs&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;cronjobs&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiGroups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storage/v1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;resources&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;-&lt;span style=&#34;color:#000&#34;&gt;storageclasses&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;verbs&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;watch&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Prometheus/Thanos address related to the kubernetes cluster.&lt;/p&gt;
 &lt;/li&gt;
@@ -799,72 +717,54 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;p&gt;The &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; application can access to the EKS cluster and Prometheus/Thanos.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;import-steps&#34;&gt;Import steps&lt;/h2&gt;
-&lt;h3 id=&#34;add-cloud-account&#34;&gt;Add Cloud Account&lt;/h3&gt;
+&lt;h2 id=&#34;import-steps&#34;&gt;Import steps&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#import-steps&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;add-cloud-account&#34;&gt;Add Cloud Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#add-cloud-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Go to cloud account management page from &lt;code&gt;Settings --&amp;gt; Cloud Accounts&lt;/code&gt;, as shown below.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
   Cloud account management
-  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Click the &lt;code&gt;New&lt;/code&gt; button to add a cloud account. You can input &lt;code&gt;Name&lt;/code&gt;, select &lt;code&gt;Amazon AWS&lt;/code&gt; as &lt;code&gt;Cloud Provider&lt;/code&gt;, then input &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and finally click &lt;code&gt;Confirm&lt;/code&gt;. You can also test connectivity by click &lt;code&gt;Test Connectivity&lt;/code&gt; after input the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
   Add cloud account
-  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;import-cluster&#34;&gt;Import Cluster&lt;/h3&gt;
+&lt;h3 id=&#34;import-cluster&#34;&gt;Import Cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#import-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Go to cluster management page from &lt;code&gt;Settings --&amp;gt; Clusters&lt;/code&gt;, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Cluster Management
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;/li&gt;
@@ -880,22 +780,16 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect to alibaba cloud&lt;/code&gt; step, choose &lt;code&gt;Using Existing Access Token&lt;/code&gt;, select cloud account created in section &lt;code&gt;Add Cloud Account&lt;/code&gt;, as shown below.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Import Cluster: Connect to alibaba cloud
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect to kubernetes&lt;/code&gt;.&lt;/p&gt;
@@ -936,22 +830,16 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;
+&lt;p&gt;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
 
 
-
-
-
-
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
     Import Cluster: Connect to kubernetes cluster
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect to metrics server&lt;/code&gt; step.&lt;/p&gt;
@@ -992,71 +880,53 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Import Cluster: Connect to metrics server
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Then click &amp;lsquo;Next&amp;rsquo; button to go to &lt;code&gt;View configurations&lt;/code&gt; step.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;View configurations&lt;/code&gt; step, it displays configurations on connecting to AWS cloud, connecting to kubernetes cluster, connecting to metrics server. You can check if the configuration is as expected.
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Import Cluster: View configurations
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code&gt; button to go to &lt;code&gt;Finish&lt;/code&gt; step.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Finish&lt;/code&gt; step, it will disply the submission status, as shown below. You can click &lt;code&gt;Finish&lt;/code&gt; button when the submission status showns the cluster is imported.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
     Import Cluster: Finish
-    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;next&#34;&gt;Next&lt;/h2&gt;
+&lt;h2 id=&#34;next&#34;&gt;Next&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After imported the cluster, you can view optimization recommendations of the cluster in many aspect.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/docs/clusteroptimizer/nodegroup&#34;&gt;Node group&lt;/a&gt;&lt;/li&gt;
@@ -1071,10 +941,10 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
     
     <item>
       <title>Docs: Cluster Overview</title>
-      <link>/docs/cluster-optimizer/overview/</link>
+      <link>/docs/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/overview/</guid>
+      <guid>/docs/overview/</guid>
       <description>
         
         
@@ -1086,22 +956,16 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;/div&gt;
 
 &lt;p&gt;Click &lt;code&gt;Cluster&lt;/code&gt; on the left menu bar of the platform to display the cluster overview page, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/overview/overview_hu1965570f547c74b43dc179305c719b04_123493_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/overview/overview_hu1965570f547c74b43dc179305c719b04_123493_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Cluster Overview
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The main display area will display the list of clusters managed by the platform. Including information such as cluster (cluster name and cluster ID), cluster region, access token name, cloud provider and metrics server address.&lt;/p&gt;
@@ -1111,10 +975,10 @@ Cluster Overview
     
     <item>
       <title>Docs: Delete Persistent Volume</title>
-      <link>/docs/cluster-optimizer/actions/delete-pv/</link>
+      <link>/docs/actions/delete-pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/actions/delete-pv/</guid>
+      <guid>/docs/actions/delete-pv/</guid>
       <description>
         
         
@@ -1125,8 +989,8 @@ Cluster Overview
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
 
       </description>
@@ -1134,10 +998,10 @@ Cluster Overview
     
     <item>
       <title>Docs: Node Group Optimization</title>
-      <link>/docs/cluster-optimizer/nodegroup/</link>
+      <link>/docs/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/nodegroup/</guid>
+      <guid>/docs/nodegroup/</guid>
       <description>
         
         
@@ -1148,24 +1012,18 @@ Cluster Overview
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;view-node-group-recommended-settings&#34;&gt;View node group recommended settings&lt;/h2&gt;
+&lt;h2 id=&#34;view-node-group-recommended-settings&#34;&gt;View node group recommended settings&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-node-group-recommended-settings&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Node Groups&lt;/code&gt; menu on the left menu bar to display the node group page, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng1_hu57170a98ebe6ce10f665738af21b1dfa_69789_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;390&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Node group
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The node group page is divided into 3 areas:&lt;/p&gt;
@@ -1175,49 +1033,38 @@ Node group
 &lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays node group information, its current settings and optimization settings.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;After select a cluster, the list area will display node groups of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategy, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng2_hud5e03c5a36581ec1547108675dd87a38_101790_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;402&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Node group: cluster selected
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The list area is divided into four columns:&lt;/p&gt;
+&lt;p&gt;The list area is divided into five columns:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Node group column&lt;/strong&gt;: Displays the node group name and node group ID.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Current settings column&lt;/strong&gt;: Displays node group&amp;rsquo;s current settings, includes current instance type of the node group, whether autoscaling is enabled, the minimum number of nodes, and the maximum number of nodes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Optimization settings column&lt;/strong&gt;: Displays recommended settings for node group, includess the recommended node group instance types, whether autoscaling is enabled,, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: Displays the corresponding operations on the node group.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node Group&lt;/strong&gt;: Displays the node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: Displays node group&amp;rsquo;s current settings, includes current instance type of the node group, whether autoscaling is enabled, the minimum number of nodes, and the maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization settings&lt;/strong&gt;: Displays recommended settings for node group, includess the recommended node group instance types, whether autoscaling is enabled,, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: Displays the corresponding operations on the node group.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust node group&lt;/h2&gt;
+&lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust node group&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node-group&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; in action colum above, it will open the &lt;code&gt;Adjust Node Group&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Adjust Node Group Dialog
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;blockquote&gt;
@@ -1228,11 +1075,89 @@ Adjust Node Group Dialog
     </item>
     
     <item>
-      <title>Docs: Node Optimization</title>
-      <link>/docs/cluster-optimizer/node/</link>
+      <title>Docs: GPU Node Optimization</title>
+      <link>/docs/gpunode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/node/</guid>
+      <guid>/docs/gpunode/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes gpu node information and details provided by optimization strategy.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-node-information&#34;&gt;View node information&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-node-information&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;GPU Nodes&lt;/code&gt; menu on the left menu bar to display the node page, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The node page is divided into three areas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Cluster selection area&lt;/strong&gt;: Used for select a cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Query area&lt;/strong&gt;: Used for filtering node by instance Id, instance type and node name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays node information, its current settings and recommendations.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After select a cluster, the list area will display node of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategy, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Node: cluster selected
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The list area is divided into five columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Node&lt;/strong&gt;: displays node name, instance ID and region.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;settings&lt;/strong&gt;: displays node’s instance type, number of CPU cores, and memory size.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays the information provided by the strategy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: displays the corresponding operations on the node&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;adjust-node&#34;&gt;Adjust node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; in action colum above, it will open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Node: Adjust node
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Currently, it only shows tips on adjusting GPU node. In the future, we will provide automatic action on it which can adjust GPU node&amp;rsquo;s settings automatically according to settting provided.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Node Optimization</title>
+      <link>/docs/node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/node/</guid>
       <description>
         
         
@@ -1243,24 +1168,18 @@ Adjust Node Group Dialog
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;view-node-information&#34;&gt;View node information&lt;/h2&gt;
+&lt;h2 id=&#34;view-node-information&#34;&gt;View node information&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-node-information&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Nodes&lt;/code&gt; menu on the left menu bar to display the node page, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node1_hu2c53deb4231ea2a8699f95c38ba1f137_72885_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;420&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/node/node1_hu9395c92acd4261258a440a868d64dab7_71908_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;292&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Node
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The node page is divided into three areas:&lt;/p&gt;
@@ -1270,50 +1189,38 @@ Node
 &lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays node information, its current settings and recommendations.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;After select a cluster, the list area will display node of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategy, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node2_hu115dd343cd413953edb649e65f7b0b70_148325_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/node/node2_hu79d0c36850ca2a10e2eb2df8c0f6e0d3_153658_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Node: cluster selected
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The list area is divided into five columns:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Node column&lt;/strong&gt;: displays node name, instance ID and region.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Current settings column&lt;/strong&gt;: displays node’s instance type, number of CPU cores, and memory size.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strategy name column&lt;/strong&gt;: displays the strategy used for node optimization.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Details column&lt;/strong&gt;: displays the information provided by the strategy in &lt;strong&gt;strategy name column&lt;/strong&gt;. For example, for low utilization node strategy, the average utilization of CPU and memory will be listed and compared with the thresholds set by the platform to help users adjust node instance types.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Action bar&lt;/strong&gt;: displays the corresponding operations on the node&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node&lt;/strong&gt;: displays node name, instance ID and region.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Settings&lt;/strong&gt;: displays node’s instance type, number of CPU cores, and memory size.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays the information provided by the strategies. For example, for &lt;code&gt;Underutilization Node&lt;/code&gt; strategy, the average utilization of CPU and memory will be listed and compared with the thresholds set by the platform to help users adjust node instance types.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: displays the corresponding operations on the node.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;adjust-node&#34;&gt;Adjust node&lt;/h2&gt;
+&lt;h2 id=&#34;adjust-node&#34;&gt;Adjust node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; in action colum above, it will open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;424&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;424&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Node: Adjust node
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;blockquote&gt;
@@ -1325,10 +1232,10 @@ Node: Adjust node
     
     <item>
       <title>Docs: Disk Optimization</title>
-      <link>/docs/cluster-optimizer/disk/</link>
+      <link>/docs/disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/disk/</guid>
+      <guid>/docs/disk/</guid>
       <description>
         
         
@@ -1339,24 +1246,18 @@ Node: Adjust node
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;view-disk-information&#34;&gt;View disk information&lt;/h2&gt;
+&lt;h2 id=&#34;view-disk-information&#34;&gt;View disk information&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-disk-information&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Disks&lt;/code&gt; menu on the left menu bar to display the disk page, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/disk/disk1_hua57c8dbd7330694b4f5ae3925cf4f78b_69060_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;420&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/disk/disk1_hu586b962710831052bb190f8f2f84d234_70715_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Disk
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Disk page are divided into tree areas:&lt;/p&gt;
@@ -1366,49 +1267,38 @@ Disk
 &lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays disk information, such as instances, usages and actions.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;After select a cluster, the list area will display node of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategy, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/disk/disk2_hud98cc24762463067dbef8b620b8c9443_123173_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;462&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/disk/disk2_huc4f6d93e34b39afdead8fc69986df97a_186869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;443&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Disk: cluster selected
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The list area is divided into four columns:&lt;/p&gt;
+&lt;p&gt;The list area is divided into five columns:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Disk column&lt;/strong&gt;: displays disk ID, device name, storage size and creation time.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Instance column&lt;/strong&gt;: displays the node ID, node name and region associate with the disk.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usage column&lt;/strong&gt;: displays disk capacity, maximum utilization, average utilization and last update time.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Action bar&lt;/strong&gt;: displays actions on the disk.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Disk&lt;/strong&gt;: displays disk ID, device name, storage size and creation time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Instance&lt;/strong&gt;: displays the node ID, node name and region associate with the instance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usage&lt;/strong&gt;: displays disk capacity, maximum utilization, average utilization and last update time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: displays actions on the disk.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;adjust-disk&#34;&gt;Adjust disk&lt;/h2&gt;
+&lt;h2 id=&#34;adjust-disk&#34;&gt;Adjust disk&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-disk&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; link to in action colum above, it will open the &lt;code&gt;Adjust Disk Size&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Disk: adjust disk size
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
@@ -1417,10 +1307,10 @@ Disk: adjust disk size
     
     <item>
       <title>Docs: Persistent Volume Optimization</title>
-      <link>/docs/cluster-optimizer/pv/</link>
+      <link>/docs/pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/pv/</guid>
+      <guid>/docs/pv/</guid>
       <description>
         
         
@@ -1431,24 +1321,18 @@ Disk: adjust disk size
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;view-persistent-volume&#34;&gt;View &lt;code&gt;Persistent Volume&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;view-persistent-volume&#34;&gt;View &lt;code&gt;Persistent Volume&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-persistent-volume&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Persistent Volume&lt;/code&gt; menu on the left menu bar to display the persistent volume page, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv1_hucc5c08c08f6d52121947a6be0784ee01_87268_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;427&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/pv/pv1_hu69d02f4bcdead23c6ad90ea3ae35308d_70820_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Persistent Volume
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The persistent volume page is divided into thress areas:&lt;/p&gt;
@@ -1458,72 +1342,66 @@ Persistent Volume
 &lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays persistent volume, persistent volume claim, strategy name, usage, latest update time and realted actions.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;After select a cluster, the list area will display persistent volumes of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategies, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv2_hu9e44c682a240125c901463ce98c3b340_95509_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;398&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/pv/pv2_hu414cce39b47732d4873579d4d1e5c8b7_141167_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;370&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Persistent Volume: cluster selected
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The list area is divided into six columns:&lt;/p&gt;
+&lt;p&gt;The list area is divided into five columns:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;PV column&lt;/strong&gt;: displays the PV name, region, capacity and creation time.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;PVC column&lt;/strong&gt;: displays the PVC namespace and name.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strategy name column&lt;/strong&gt;: displays the name of the optimization strategy. it includes two optimization strategies: &lt;code&gt;unused PV&lt;/code&gt; and &lt;code&gt;low utilization PV&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usage column&lt;/strong&gt;: displays the usage of PV, which is only valid for the low utilization PV optimization strategy.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Last updated time column&lt;/strong&gt;: displays the last updated time scaned by the optimization strategies.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the actions on the persistent volume.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PV&lt;/strong&gt;: displays the PV name, region, capacity and creation time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PVC&lt;/strong&gt;: displays the PVC namespace and name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usage&lt;/strong&gt;: displays the usage of PV. For &lt;code&gt;Unused PV&lt;/code&gt; strategy, the usage information is empty.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: displays the actions on the persistent volume.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;delete-persistent-volume&#34;&gt;Delete persistent volume&lt;/h2&gt;
+&lt;h2 id=&#34;delete-persistent-volume&#34;&gt;Delete persistent volume&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#delete-persistent-volume&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Delete&lt;/code&gt; in action column in the row with &lt;code&gt;Unused PV&lt;/code&gt; strategy name above, it will open the &lt;code&gt;Delete Persistent Volume&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Persistent Volume: delete persistent volume dialog
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;It shows instructions on deleting persistent volume carefully.&lt;/p&gt;
-&lt;h2 id=&#34;adjust-persistent-volume-size&#34;&gt;Adjust persistent volume size&lt;/h2&gt;
-&lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; in action column in the row with &lt;code&gt;Low Utilization PV&lt;/code&gt; strategy name above, it will open the &lt;code&gt;Adjust Persistent Volume Size&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
+&lt;h2 id=&#34;adjust-persistent-volume-size&#34;&gt;Adjust persistent volume size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-persistent-volume-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Select  &lt;code&gt;Low Utilization PV&lt;/code&gt; strategy in &lt;code&gt;Strategy Name&lt;/code&gt; select box of &lt;strong&gt;Query area&lt;/strong&gt;, then click &lt;code&gt;Query&lt;/code&gt; button, it will display the persistent volume list, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/pv/pv4_hu40af59ab1d1b093aa299d9f21b874d7b_92240_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;401&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;500&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Persistent Volume: after select `Low Utilization PV` strategy
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; in &lt;strong&gt;action&lt;/strong&gt; column, it will open the &lt;code&gt;Adjust Persistent Volume Size&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Persistent Volume: adjust persistent volume size
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;It shows steps on resizing a persistent volume carefully.&lt;/p&gt;
@@ -1533,10 +1411,10 @@ Persistent Volume: adjust persistent volume size
     
     <item>
       <title>Docs: Application Optimization</title>
-      <link>/docs/cluster-optimizer/app/</link>
+      <link>/docs/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/app/</guid>
+      <guid>/docs/app/</guid>
       <description>
         
         
@@ -1547,24 +1425,18 @@ Persistent Volume: adjust persistent volume size
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;view-applications&#34;&gt;View Applications&lt;/h2&gt;
+&lt;h2 id=&#34;view-applications&#34;&gt;View Applications&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-applications&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Applications&lt;/code&gt; menu on the left menu bar to display the application page, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app1_hudb92ed43c43b41b5faaee833823d9815_83959_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;352&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The application page is divided into three areas:&lt;/p&gt;
@@ -1574,93 +1446,69 @@ Application
 &lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays name, container, current settings, strategy name, details and related actions. Different strategy will have differences details information.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;After select a cluster, the list area will display applications of the selected cluster scaned by &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s optimization strategies, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;580&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: cluster selected
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;For different strategies, the list area and action are different.&lt;/p&gt;
-&lt;h2 id=&#34;resource-recommendation&#34;&gt;&lt;code&gt;Resource Recommendation&lt;/code&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;list-area-for-resource-recommendation&#34;&gt;List area for &lt;code&gt;Resource Recommendation&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;resource-recommendation&#34;&gt;&lt;code&gt;Resource Recommendation&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#resource-recommendation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;list-area-for-resource-recommendation&#34;&gt;List area for &lt;code&gt;Resource Recommendation&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#list-area-for-resource-recommendation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;For &lt;code&gt;Resource Recommendation&lt;/code&gt; strategy, the list area display is divided into six columns, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;580&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: `Resource Recommendation` strategy
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Name column&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Container column&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: displays the CPU request, CPU limit, memory request and memory limit of the container.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strategy name&lt;/strong&gt;: displays the strategy name.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, recommended CPU request, recommended CPU Limit, recommended memory request, recommended memory limit and the latest update time.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;adjust-resource-quota&#34;&gt;Adjust resource quota&lt;/h2&gt;
+&lt;h2 id=&#34;adjust-resource-quota&#34;&gt;Adjust resource quota&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-resource-quota&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Clicks &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Resource Quota&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app3_hu06395c21d7ea7f52ffc8996b839f5d11_100892_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;557&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;560&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: adjust resource quota dialog
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;resource-quota-unset&#34;&gt;&lt;code&gt;Resource Quota Unset&lt;/code&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;list-area-for-resource-quota-unset&#34;&gt;List area for &lt;code&gt;Resource Quota Unset&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;resource-quota-unset&#34;&gt;&lt;code&gt;Resource Quota Unset&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#resource-quota-unset&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;list-area-for-resource-quota-unset&#34;&gt;List area for &lt;code&gt;Resource Quota Unset&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#list-area-for-resource-quota-unset&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Select &lt;code&gt;Resource quota unset&lt;/code&gt; in the strategy name in &lt;strong&gt;query area&lt;/strong&gt;, it will display the list area as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;580&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: filted by strategy  `Resource Quota Unset`
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;The list area display is divided into six columns, as shown below.&lt;/p&gt;
@@ -1669,80 +1517,62 @@ Application: filted by strategy  `Resource Quota Unset`
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Name column&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Container column&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: displays whether the CPU request, CPU limit, memory request and memory limit of the container is set.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strategy name&lt;/strong&gt;: displays the strategy name.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays recommended CPU request, recommended CPU Limit, recommended memory request, recommended memory limit and the latest update time.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;setting-application-resource-quota&#34;&gt;Setting application resource quota&lt;/h3&gt;
+&lt;h3 id=&#34;setting-application-resource-quota&#34;&gt;Setting application resource quota&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#setting-application-resource-quota&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Clicks &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Setting application resource quota&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;580&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: Setting application resource quota dialog
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;It displays application details, recommended values ​​and corresponding adjustment statements. You can take the recommended values ​​as the basis for adjustment.&lt;/p&gt;
-&lt;h2 id=&#34;out-of-memory-oom&#34;&gt;Out of Memory (OOM)&lt;/h2&gt;
-&lt;h3 id=&#34;list-area-for-out-of-memory&#34;&gt;List area for Out of Memory&lt;/h3&gt;
+&lt;h2 id=&#34;out-of-memory-oom&#34;&gt;Out of Memory (OOM)&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#out-of-memory-oom&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;list-area-for-out-of-memory&#34;&gt;List area for Out of Memory&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#list-area-for-out-of-memory&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Select &lt;code&gt;OOM&lt;/code&gt; in the strategy name in &lt;strong&gt;query area&lt;/strong&gt;, it will display the list area as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;580&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: filted by strategy `Out of Memory`
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The list area display is divided into 6 columns, which are:&lt;/p&gt;
+&lt;p&gt;The list area display is divided into six columns, which are:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Name column&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Container column&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workload&lt;/strong&gt;: displays the workload name, type and namespace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;: displays the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: displays information about resource&amp;rsquo;s owner, such as department, group and user.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Current settings&lt;/strong&gt;: displays memory request and memory limit of the container.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strategy name&lt;/strong&gt;: displays the strategy name.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: displays the latest OOM time, recent OOM Pod, OOM times and latest update time.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Action column&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: displays the related actions on the application.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;adjust-application-memory-size&#34;&gt;Adjust application memory size&lt;/h3&gt;
+&lt;h3 id=&#34;adjust-application-memory-size&#34;&gt;Adjust application memory size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-application-memory-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Click &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Application Memory Size&lt;/code&gt; dialog, as shown below.&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/cluster-optimizer/app/app2_hueb8c299751b5b2ca133e2a8c742eefbe_171932_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;580&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 Application: Adjust application memory size dialog
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;which displays application details, recommended memory limit values, and corresponding adjustment statements&lt;/p&gt;
@@ -1752,10 +1582,10 @@ Application: Adjust application memory size dialog
     
     <item>
       <title>Docs: Actions</title>
-      <link>/docs/cluster-optimizer/actions/</link>
+      <link>/docs/actions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/cluster-optimizer/actions/</guid>
+      <guid>/docs/actions/</guid>
       <description>
         
         

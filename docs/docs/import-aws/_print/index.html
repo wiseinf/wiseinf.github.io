@@ -1,0 +1,517 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="/docs/import-aws/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/import-aws/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Import Cluster from AWS | Cluster Optimizer</title>
+<meta name="description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+">
+<meta property="og:title" content="Import Cluster from AWS" />
+<meta property="og:description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/import-aws/" /><meta property="og:site_name" content="Cluster Optimizer" />
+
+<meta itemprop="name" content="Import Cluster from AWS">
+<meta itemprop="description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Import Cluster from AWS"/>
+<meta name="twitter:description" content="Instructions for importing an AWS EKS cluster into **Cluster Optimizer**.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.9d0cbaa1b344b1333f0397e66235629be3ef760469c16413abd609b3ba3dc13f.css" as="style">
+<link href="/scss/main.min.9d0cbaa1b344b1333f0397e66235629be3ef760469c16413abd609b3ba3dc13f.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+
+<link href="/css/pricing.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/price/"><span>Pricing</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/docs/import-aws/">中文</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/import-aws/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Import Cluster from AWS</h1>
+<div class="lead">Instructions for importing an AWS EKS cluster into <strong>Cluster Optimizer</strong>.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>Instructions for importing an kubernetes cluster from AWS into <strong>Cluster Optimizer</strong>.</p>
+
+</div>
+
+<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>An IAM user and its associated AWS access key are needed. The IAM user should have following permissions:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2012-10-17&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Statement&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Sid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Optimizer&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Effect&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Allow&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;ec2:DescribeInstances&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;ec2:DescribeRegions&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;ec2:DescribeVolumes&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;ec2:DescribeLaunchTemplates&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;eks:ListClusters&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;eks:DescribeCluster&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;eks:ListNodegroups&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;eks:DescribeNodegroup&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Resource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><blockquote>
+<p>NOTE: more information about access keys and permissions, you can refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html">Managing access keys for IAM users</a>
+and <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_permissions.html">Managing permissions for IAM users</a>.</p>
+</blockquote>
+</li>
+<li>
+<p>An kubernetes cluster, version 1.22 or above. ACK cluster is recommended.</p>
+</li>
+<li>
+<p>You need to provide a kubeconfig file associate with the IAM user to access kubernetes cluster. Meanwhile, you need to grant following cluster roles to the IAM user.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">rbac.authorization.k8s.io/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ClusterRole</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">rules</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">nodes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">pods</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">pods/status</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumeclaims</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">namespaces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;apps/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">deployments</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">replicasets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">replicationcontollers</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">statefulsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">daemonsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;batch/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">jobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">cronjobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;storage/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">storageclasses</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>Prometheus/Thanos address related to the kubernetes cluster.</p>
+</li>
+<li>
+<p>The <strong>Cluster Optimizer</strong> application can access to the EKS cluster and Prometheus/Thanos.</p>
+</li>
+</ol>
+<h2 id="import-kuberentes-cluster">Import Kuberentes Cluster<a class="td-heading-self-link" href="#import-kuberentes-cluster" aria-label="Heading self-link"></a></h2>
+<h3 id="add-cloud-account">Add Cloud Account<a class="td-heading-self-link" href="#add-cloud-account" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>Go to cloud account management page from <code>Settings --&gt; Cloud Accounts</code>, as shown below.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png" width="900" height="249">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+  Cloud account management
+  <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>Click the <code>New</code> button to add a cloud account. You can input <code>Name</code>, select <code>Amazon AWS</code> as <code>Cloud Provider</code>, then input <code>Access Key</code> and <code>Access Key Secret</code>, and finally click <code>Confirm</code>. You can also test connectivity by click <code>Test Connectivity</code> after input the <code>Access Key</code> and <code>Access Key Secret</code>.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+<img class="card-img-top" src="/docs/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png" width="500" height="349">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+  Add cloud account
+  <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+</ol>
+<h3 id="import-cluster">Import Cluster<a class="td-heading-self-link" href="#import-cluster" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>Go to cluster management page from <code>Settings --&gt; Clusters</code>, as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png" width="900" height="255">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Cluster Management
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+<li>
+<p>Click <code>Import Cluster</code> button, then click <code>AWS</code> cloud provider logo to start importing a cluster from AWS. It contains five steps:</p>
+<ol>
+<li>Connect to AWS</li>
+<li>Connect to kubernetes</li>
+<li>Connect to metrics server</li>
+<li>View configurations</li>
+<li>Finish</li>
+</ol>
+</li>
+<li>
+<p>In the <code>Connect to AWS</code> step, choose <code>Using Existing Access Token</code>, select cloud account created in section <code>Add Cloud Account</code>, as shown below.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png" width="900" height="215">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Import Cluster: Connect to AWS
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+Then click &lsquo;Next&rsquo; button to go to step <code>Connect to kubernetes</code>.</p>
+</li>
+<li>
+<p>In the <code>Connect to kubernetes</code> step, choose <code>Managed cluster</code>, select <code>Region</code> first, select <code>Cluster</code>, and fill following fields, as shown below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Description</code></td>
+<td style="text-align:left">Details about the cluster</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Using Private API Server Address</code></td>
+<td style="text-align:left">Whether to use private API Server address which is more secure.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Kubeconfig</code></td>
+<td style="text-align:left">The kubeconfig content to connect to the cluster.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Auto Refresh Kubeconfig</code></td>
+<td style="text-align:left">Indicate whether to automatically refresh the kubeconfig content.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Node Group Label</code></td>
+<td style="text-align:left">Used to identify the node group of a node. For EKS, the default value is <code>eks.amazonaws.com/nodegroup</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png" width="900" height="602">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Import Cluster: Connect to kubernetes cluster
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+Then click &lsquo;Next&rsquo; button to go to step <code>Connect to metrics server</code> step.</p>
+<blockquote>
+<p>NOTICE: Given that the platform doesn&rsquo;t utilize an installed AWS client for retrieving user authentication information, if your Kubeconfig relies on the aws get token command for this purpose, you MUST enable Auto Refresh Kubeconfig. This ensures that the platform dynamically retrieves user authentication details.</p>
+</blockquote>
+</li>
+<li>
+<p>In the <code>Connect to metrics server</code> step, fill following fields, as shown below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Is Thanos</code></td>
+<td style="text-align:left">If the metric server is Thanos, this should be checked.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Prometheus address</code></td>
+<td style="text-align:left">Prometheus address, must be accessible.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Enable Rate Limit</code></td>
+<td style="text-align:left">You shoud enable it when you want to control rate limit to metrics server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Max Burst</code></td>
+<td style="text-align:left">Specify the maximum number of concurrencies to metrics server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Cluster Label</code></td>
+<td style="text-align:left">Used as label name to filter metrics of the cluster from metrics server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Cluster Label Value</code></td>
+<td style="text-align:left">Used as label value to filter metrics of the cluster from metrics server.</td>
+</tr>
+</tbody>
+</table>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png" width="900" height="439">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Import Cluster: Connect to metrics server
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>Then click &lsquo;Next&rsquo; button to go to <code>View configurations</code> step.</p>
+</li>
+<li>
+<p>In the <code>View configurations</code> step, it displays configurations on connecting to AWS cloud, connecting to kubernetes cluster, connecting to metrics server. You can check if the configuration is as expected.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png" width="900" height="528">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Import Cluster: View configurations
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+When you confirm these configurations, you can click <code>Import</code> button to go to <code>Finish</code> step.</p>
+</li>
+<li>
+<p>In the <code>Finish</code> step, it will disply the submission status, as shown below. You can click <code>Finish</code> button when the submission status showns the cluster is imported.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png" width="900" height="271">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Import Cluster: Finish
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+</ol>
+<h2 id="next">Next<a class="td-heading-self-link" href="#next" aria-label="Heading self-link"></a></h2>
+<p>After imported the cluster, you can view optimization recommendations of the cluster in many aspect.</p>
+<ul>
+<li><a href="/docs/clusteroptimizer/nodegroup">Node group</a></li>
+<li><a href="/docs/clusteroptimizer/node">Node</a></li>
+<li><a href="/docs/clusteroptimizer/disk">Disk</a></li>
+<li><a href="/docs/clusteroptimizer/pv">Persistent volume</a></li>
+<li><a href="/docs/clusteroptimizer/application">Application</a></li>
+</ul>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Business Cooperation" aria-label="Business Cooperation">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Wiseinf Inc.</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.1f48fc7981e4db829114650dc98d270b6642a46c1e4ebddb8389ff0a463a6328.js" integrity="sha256-H0j8eYHk24KRFGUNyY0nC2ZCpGweTr3bg4n/CkY6Yyg=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

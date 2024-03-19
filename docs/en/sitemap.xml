@@ -2,399 +2,141 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/docs/cluster-optimizer/actions/adjust-nodegroup/</loc>
+    <loc>/docs/actions/adjust-nodegroup/</loc>
   </url><url>
-    <loc>/docs/cluster-optimizer/</loc>
+    <loc>/docs/setup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/"
+                href="/zh-cn/docs/setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/cluster-optimizer/"
+                href="/docs/setup/"
                 />
   </url><url>
-    <loc>/docs/ruyi/configuration/command-line/</loc>
+    <loc>/docs/actions/adjust-node/</loc>
+  </url><url>
+    <loc>/docs/import-aws/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/configuration/command-line/"
+                href="/zh-cn/docs/import-aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/ruyi/configuration/command-line/"
+                href="/docs/import-aws/"
                 />
   </url><url>
-    <loc>/docs/ruyi/setup/</loc>
+    <loc>/docs/actions/adjust-disk/</loc>
+  </url><url>
+    <loc>/docs/import-alibaba/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/setup/"
+                href="/zh-cn/docs/import-alibaba/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/ruyi/setup/"
+                href="/docs/import-alibaba/"
                 />
   </url><url>
-    <loc>/docs/wisecost/setup/</loc>
+    <loc>/docs/overview/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/setup/"
+                href="/zh-cn/docs/overview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/wisecost/setup/"
+                href="/docs/overview/"
                 />
   </url><url>
-    <loc>/docs/ruyi/configuration/nodegroup/</loc>
+    <loc>/docs/actions/delete-pv/</loc>
+  </url><url>
+    <loc>/docs/nodegroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/configuration/nodegroup/"
+                href="/zh-cn/docs/nodegroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/ruyi/configuration/nodegroup/"
+                href="/docs/nodegroup/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/setup/</loc>
+    <loc>/docs/gpunode/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/setup/"
+                href="/zh-cn/docs/gpunode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/cluster-optimizer/setup/"
+                href="/docs/gpunode/"
                 />
   </url><url>
-    <loc>/docs/wisecost/</loc>
+    <loc>/docs/node/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/"
+                href="/zh-cn/docs/node/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/wisecost/"
+                href="/docs/node/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/actions/adjust-node/</loc>
-  </url><url>
-    <loc>/docs/ruyi/autoscaling/</loc>
+    <loc>/docs/disk/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/autoscaling/"
+                href="/zh-cn/docs/disk/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/ruyi/autoscaling/"
+                href="/docs/disk/"
                 />
   </url><url>
-    <loc>/docs/wisecost/import-aliyun/</loc>
+    <loc>/docs/pv/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/import-aliyun/"
+                href="/zh-cn/docs/pv/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/wisecost/import-aliyun/"
+                href="/docs/pv/"
                 />
   </url><url>
-    <loc>/docs/cluster-optimizer/import-aws/</loc>
+    <loc>/docs/app/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/import-aws/"
+                href="/zh-cn/docs/app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/cluster-optimizer/import-aws/"
+                href="/docs/app/"
                 />
   </url><url>
-    <loc>/docs/ruyi/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/"
-                />
+    <loc>/docs/actions/</loc>
   </url><url>
-    <loc>/docs/cluster-optimizer/actions/adjust-disk/</loc>
+    <loc>/blog/news/</loc>
+    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/cluster-optimizer/import-alibaba/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/import-alibaba/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/import-alibaba/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/cluster-cost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/cluster-cost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/cluster-cost/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/node-cost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/node-cost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/node-cost/"
-                />
-  </url><url>
-    <loc>/docs/ruyi/virtualcapacity/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/virtualcapacity/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/virtualcapacity/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/overview/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/overview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/overview/"
-                />
-  </url><url>
-    <loc>/docs/ruyi/configuration/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/configuration/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/configuration/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/actions/delete-pv/</loc>
-  </url><url>
-    <loc>/docs/wisecost/cost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/cost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/cost/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/optimize/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/optimize/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/optimize/"
-                />
-  </url><url>
-    <loc>/docs/ruyi/monitoring/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/monitoring/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/monitoring/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/nodegroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/nodegroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/nodegroup/"
-                />
-  </url><url>
-    <loc>/docs/ruyi/troubleshooting/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/ruyi/troubleshooting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/ruyi/troubleshooting/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/node/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/node/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/node/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/development/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/development/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/development/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/disk/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/disk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/disk/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/pv/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/pv/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/pv/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/app/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/cluster-optimizer/app/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/cluster-optimizer/app/"
-                />
-  </url><url>
-    <loc>/docs/cluster-optimizer/actions/</loc>
-  </url><url>
-    <loc>/docs/wisecost/development/api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/development/api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/development/api/"
-                />
-  </url><url>
-    <loc>/products/cluster-optimizer/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/products/cluster-optimizer/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/products/cluster-optimizer/"
-                />
-  </url><url>
-    <loc>/products/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/products/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/products/"
-                />
-  </url><url>
-    <loc>/products/wisecost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/products/wisecost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/products/wisecost/"
-                />
-  </url><url>
-    <loc>/docs/wisecost/development/reference/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/docs/wisecost/development/reference/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/wisecost/development/reference/"
-                />
+    <loc>/blog/releases/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/docs/</loc>
     <xhtml:link
@@ -408,41 +150,44 @@
                 href="/docs/"
                 />
   </url><url>
-    <loc>/products/ruyi/</loc>
+    <loc>/price/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/products/ruyi/"
+                href="/zh-cn/price/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/products/ruyi/"
+                href="/price/"
                 />
   </url><url>
-    <loc>/pricing/</loc>
+    <loc>/blog/</loc>
+    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2018/10/06/easy-documentation-with-docsy/</loc>
+    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/pricing/"
+                href="/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/pricing/"
+                href="/"
                 />
   </url><url>
-    <loc>/services/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/services/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/services/"
-                />
+    <loc>/blog/2018/10/06/second-blog-post/</loc>
+    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2018/01/04/another-great-release/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/community/</loc>
   </url><url>
     <loc>/about/</loc>
     <xhtml:link
@@ -456,23 +201,7 @@
                 href="/about/"
                 />
   </url><url>
-    <loc>/tags/alibaba-cloud/</loc>
-  </url><url>
-    <loc>/tags/api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/api/"
-                />
-  </url><url>
     <loc>/tags/application-optimization/</loc>
-  </url><url>
-    <loc>/categories/autoscaling/</loc>
   </url><url>
     <loc>/categories/</loc>
     <xhtml:link
@@ -485,10 +214,6 @@
                 hreflang="en"
                 href="/categories/"
                 />
-  </url><url>
-    <loc>/tags/cluster-autoscaling/</loc>
-  </url><url>
-    <loc>/categories/cluster-autoscaling/</loc>
   </url><url>
     <loc>/categories/cluster-optimization/</loc>
   </url><url>
@@ -506,43 +231,17 @@
   </url><url>
     <loc>/tags/cluster-overview/</loc>
   </url><url>
-    <loc>/contactus/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/contactus/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/contactus/"
-                />
-  </url><url>
-    <loc>/categories/cost-management/</loc>
-  </url><url>
     <loc>/tags/disk-optimizer/</loc>
   </url><url>
-    <loc>/categories/elastic-computing/</loc>
+    <loc>/bak/</loc>
   </url><url>
-    <loc>/categories/expansion-and-contraction/</loc>
+    <loc>/tags/gpu-node-optimization/</loc>
   </url><url>
     <loc>/tags/node-group-optimization/</loc>
   </url><url>
     <loc>/tags/node-optimization/</loc>
   </url><url>
     <loc>/tags/persistent-volume-optimization/</loc>
-  </url><url>
-    <loc>/tags/ruyi/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/ruyi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/ruyi/"
-                />
   </url><url>
     <loc>/search/</loc>
     <xhtml:link
@@ -566,30 +265,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/tags/"
-                />
-  </url><url>
-    <loc>/tags/wisecost/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/wisecost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/wisecost/"
-                />
-  </url><url>
-    <loc>/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
                 />
   </url>
 </urlset>

@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wiseinf – 应用优化</title>
+    <title>Cluster Optimizer – 应用优化</title>
     <link>/zh-cn/tags/%E5%BA%94%E7%94%A8%E4%BC%98%E5%8C%96/</link>
-    <description>Recent content in 应用优化 on Wiseinf</description>
+    <description>Recent content in 应用优化 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 应用优化</title>
-      <link>/zh-cn/docs/cluster-optimizer/app/</link>
+      <link>/zh-cn/docs/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/cluster-optimizer/app/</guid>
+      <guid>/zh-cn/docs/app/</guid>
       <description>
         
         
@@ -30,180 +30,138 @@
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;查看应用&#34;&gt;查看应用&lt;/h2&gt;
+&lt;h2 id=&#34;查看应用&#34;&gt;查看应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;应用&lt;/code&gt;菜单，则显示应用页，如下图所示。&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app1_hu0e8572a06a553eaf35c04e55defb382f_42248_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;552&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app1_huff47eda272bf1f12bd55b42f7210d79f_61195_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;332&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;应用页分为3个区：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;集群选择区：选择相应的集群。&lt;/li&gt;
-&lt;li&gt;查询区：可通过名称空间、负载名称、负载类型、容器和策略名称进行查询。目前，平台支持资源推荐、未设置资源额度、内存溢出策略。&lt;/li&gt;
-&lt;li&gt;列表区：展示名称、容器、当前设置、策略名称、详情和操作栏，不同的策略名称，其展示信息会有一些差异。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集群选择区&lt;/strong&gt;：选择相应的集群。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查询区&lt;/strong&gt;：可通过名称空间、负载名称、负载类型、容器和策略名称进行查询。目前，平台支持资源推荐、未设置资源额度、内存溢出策略。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;列表区&lt;/strong&gt;：展示名称、容器、当前设置、策略名称、详情和操作栏，不同的策略名称，其展示信息会有一些差异。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;集群选择区选择集群后，平台默认聚合所有策略的结果，以列表方式展示，如下图所示。&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app2_hu187479d7b507b5da0307817a4d09e4e5_88689_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;533&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app2_hu8d411a6d137d5c100b23f7e12662fd72_122300_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;444&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用：选择集群
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;资源推荐&#34;&gt;资源推荐&lt;/h2&gt;
-&lt;h3 id=&#34;查看资源推荐相关应用&#34;&gt;查看资源推荐相关应用&lt;/h3&gt;
+&lt;h2 id=&#34;资源推荐&#34;&gt;资源推荐&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b5%84%e6%ba%90%e6%8e%a8%e8%8d%90&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;查看资源推荐相关应用&#34;&gt;查看资源推荐相关应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e8%b5%84%e6%ba%90%e6%8e%a8%e8%8d%90%e7%9b%b8%e5%85%b3%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;若策略名称为资源推荐，则列表区如上图所示。列表区显示分为6栏，分别是：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;名称栏：展示负载名称、名称空间和负载类型。&lt;/li&gt;
-&lt;li&gt;容器栏：展示容器名称。&lt;/li&gt;
-&lt;li&gt;当前设置：展示该容器的CPU Request、CPU Limit、内存Request和内存Limit。&lt;/li&gt;
-&lt;li&gt;策略名称：展示策略名称。&lt;/li&gt;
-&lt;li&gt;详情：展示CPU平均使用量、CPU最大使用量、内存平均使用量、内存最大使用量、CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值和最近更新时间。&lt;/li&gt;
-&lt;li&gt;操作栏：展示对应用相应的操作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;名称栏&lt;/strong&gt;：展示负载名称、名称空间和负载类型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器栏&lt;/strong&gt;：展示容器名称。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;所有者栏&lt;/strong&gt;：展示节点所有者的部门、组及具体的人员。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;当前设置&lt;/strong&gt;：展示该容器的CPU Request、CPU Limit、内存Request和内存Limit。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;详情&lt;/strong&gt;：展示CPU平均使用量、CPU最大使用量、内存平均使用量、内存最大使用量、CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值、策略名称和最近更新时间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作栏&lt;/strong&gt;：展示对应用相应的操作。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;调整资源额度&#34;&gt;调整资源额度&lt;/h3&gt;
+&lt;h3 id=&#34;调整资源额度&#34;&gt;调整资源额度&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e8%b5%84%e6%ba%90%e9%a2%9d%e5%ba%a6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;点击&lt;code&gt;调整&lt;/code&gt;链接可打开调整资源额度对话框，其中展示应用详情、推荐值及相应调整语句，如下图所示。&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app3_hu880b20b69e27095c3257d5800759b1ca_101268_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;531&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app3_hu8e22f419bc713d94c455afae1479e8cf_100107_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;561&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用：调整资源额度对话框
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;未设置资源配额&#34;&gt;未设置资源配额&lt;/h2&gt;
-&lt;h3 id=&#34;查看未设置资源配额应用&#34;&gt;查看未设置资源配额应用&lt;/h3&gt;
+&lt;h2 id=&#34;未设置资源配额&#34;&gt;未设置资源配额&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9c%aa%e8%ae%be%e7%bd%ae%e8%b5%84%e6%ba%90%e9%85%8d%e9%a2%9d&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;查看未设置资源配额应用&#34;&gt;查看未设置资源配额应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e6%9c%aa%e8%ae%be%e7%bd%ae%e8%b5%84%e6%ba%90%e9%85%8d%e9%a2%9d%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;若策略名称为未设置资源配额，则列表区展示如下图所示：&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app4_hu0b892833f020343598f6e01ff192f5b1_108403_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;559&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app4_huedd6c5fcc600368086f3b49817824d60_125502_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;434&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用：选择未设置资源配额策略
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;列表区显示分为6栏，分别是：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;名称栏：展示负载名称、名称空间和负载类型。&lt;/li&gt;
-&lt;li&gt;容器栏：展示容器名称。&lt;/li&gt;
-&lt;li&gt;当前设置：展示该容器的CPU Request、CPU Limit、内存Request和内存Limit是否已设置。&lt;/li&gt;
-&lt;li&gt;策略名称：展示策略名称。&lt;/li&gt;
-&lt;li&gt;详情：展示CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值和最近更新时间。&lt;/li&gt;
-&lt;li&gt;操作栏：展示对应用相应的操作，&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;名称栏&lt;/strong&gt;：展示负载名称、名称空间和负载类型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器栏&lt;/strong&gt;：展示容器名称。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;所有者栏&lt;/strong&gt;：展示节点所有者的部门、组及具体的人员。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;当前设置&lt;/strong&gt;：展示该容器的CPU Request、CPU Limit、内存Request和内存Limit是否已设置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;详情&lt;/strong&gt;：展示CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值、策略名称和和最近更新时间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作栏&lt;/strong&gt;：展示对应用相应的操作，&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;设置应用资源额度&#34;&gt;设置应用资源额度&lt;/h3&gt;
+&lt;h3 id=&#34;设置应用资源额度&#34;&gt;设置应用资源额度&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%ae%be%e7%bd%ae%e5%ba%94%e7%94%a8%e8%b5%84%e6%ba%90%e9%a2%9d%e5%ba%a6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;点击上图中的&lt;code&gt;调整&lt;/code&gt;链接可打开设置应用资源额度对话框，其中展示应用详情、推荐值及相应调整语句，如下图所示。&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app5_hu8eee30d7aabf93c614c152e877d8928c_104423_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;499&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app5_hu80dac9989b662a587149accbe5ad5ecb_86221_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;500&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用：设置应用资源额度对话框
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;内存溢出&#34;&gt;内存溢出&lt;/h2&gt;
-&lt;h3 id=&#34;查看内存溢出应用&#34;&gt;查看内存溢出应用&lt;/h3&gt;
+&lt;h2 id=&#34;内存溢出&#34;&gt;内存溢出&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%86%85%e5%ad%98%e6%ba%a2%e5%87%ba&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;查看内存溢出应用&#34;&gt;查看内存溢出应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e5%86%85%e5%ad%98%e6%ba%a2%e5%87%ba%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;若策略名称为内存溢出，则列表区展示如下图所示：&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app6_hu87adbcc83246ec23d19ea6547103f818_100585_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;382&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app6_hucd9ceeb6b97cdd53da819d43576d8806_113328_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用：选择内存溢出策略
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;列表区显示分为6栏，分别是：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;名称栏：展示负载名称、名称空间和负载类型。&lt;/li&gt;
-&lt;li&gt;容器栏：展示容器名称。&lt;/li&gt;
-&lt;li&gt;当前设置：展示该容器的内存Request和内存Limit。&lt;/li&gt;
-&lt;li&gt;策略名称：展示策略名称。&lt;/li&gt;
-&lt;li&gt;详情：展示最近OOM时间、最近OOM Pod、OOM次数和和最近更新时间。&lt;/li&gt;
-&lt;li&gt;操作栏：展示对应用相应的操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;名称栏&lt;/strong&gt;：展示负载名称、名称空间和负载类型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器栏&lt;/strong&gt;：展示容器名称。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;所有者栏&lt;/strong&gt;：展示节点所有者的部门、组及具体的人员。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;当前设置&lt;/strong&gt;：展示该容器的内存Request和内存Limit。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;详情&lt;/strong&gt;：展示最近OOM时间、最近OOM Pod、OOM次数和和最近更新时间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作栏&lt;/strong&gt;：展示对应用相应的操作。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;调整应用内存大小&#34;&gt;调整应用内存大小&lt;/h3&gt;
+&lt;h3 id=&#34;调整应用内存大小&#34;&gt;调整应用内存大小&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e5%ba%94%e7%94%a8%e5%86%85%e5%ad%98%e5%a4%a7%e5%b0%8f&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;点击调整链接可打开调整应用内存大小对话框，其中展示应用详情、推荐内存限制值及相应调整语句，如下图所示。&lt;/p&gt;
-
-
-
-
-
-
-
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/cluster-optimizer/app/app7_hu817d781025a27b6e9bcd825a497738ca_96820_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;463&#34;&gt;
-	
-	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/app/app7_huca0a015bb90ca6b297b980ac01942dba_72676_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;404&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
 应用：调整应用内存大小对话框
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;&lt;/p&gt;
-	&lt;/figcaption&gt;
-	
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
