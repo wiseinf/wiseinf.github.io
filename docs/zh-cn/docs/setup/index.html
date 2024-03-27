@@ -173,8 +173,8 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#前置条件">前置条件</a></li>
     <li><a href="#克隆安装脚本">克隆安装脚本</a></li>
-    <li><a href="#初始化数据库">初始化数据库</a></li>
     <li><a href="#部署应用">部署应用</a></li>
+    <li><a href="#使用已部署数据库">使用已部署数据库</a></li>
     <li><a href="#下一步导入集群">下一步：导入集群</a></li>
   </ul>
 </nav>
@@ -259,37 +259,6 @@ if (!doNotTrack) {
 </blockquote>
 </li>
 </ol>
-<h2 id="初始化数据库">初始化数据库<a class="td-heading-self-link" href="#%e5%88%9d%e5%a7%8b%e5%8c%96%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h2>
-<blockquote>
-<p>假设Mysql数据库主机地址为：<code>127.0.0.1</code>.</p>
-</blockquote>
-<ol>
-<li>
-<p>在命令行控制台执行如下命令登录到Mysql数据库</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
-</span></span></code></pre></div></li>
-<li>
-<p>通过如下命令创建<code>optimizer</code>库，同时，也创建用户<code>optimizer</code>（密码为<code>Optimizer~</code>）</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
-</span></span><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
-</span></span></code></pre></div><blockquote>
-<p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>optimizer</code>库，则上述脚本会先删除<code>optimizer</code>库，然后创建新的<code>optimizer</code>库。</p>
-</blockquote>
-</li>
-<li>
-<p>通过如下命令检查<code>optimizer</code>库是否创建成功（当提示输入密码时，请输入<code>Optimizer~</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uoptimizer 
-</span></span><span style="display:flex;"><span>    mysql&gt; show databases<span style="color:#000;font-weight:bold">;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>可通过创建表格<code>test</code>来确认用户<code>optimizer</code>权限是否正常，例如：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; USE optimizer<span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>    mysql&gt; CREATE TABLE <span style="color:#204a87">test</span> <span style="color:#ce5c00;font-weight:bold">(</span>id int<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>至此，数据库<code>optimizer</code>成功初始化完毕。</p>
-</li>
-</ol>
 <h2 id="部署应用">部署应用<a class="td-heading-self-link" href="#%e9%83%a8%e7%bd%b2%e5%ba%94%e7%94%a8" aria-label="Heading self-link"></a></h2>
 <ol>
 <li>
@@ -297,16 +266,32 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
 </span></span></code></pre></div></li>
 <li>
+<p>通过如下命令创建数据库<code>optimizer-mysql</code>，其服务名为<code>optimizer-mysql</code>, 并可通过用户<code>root</code>，密码<code>Optimizer~</code>来访问：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/mysql.yaml
+</span></span></code></pre></div><p>若需将数据库绑定到指定的节点上，请编辑<code>~/setup/cluster-optimizer/yaml/mysql.yaml</code>文件，将<code>affinity</code>字段中的注释去掉，并修改<code>value</code>字段的值为指定节点名称，如下所示。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">affinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">nodeAffinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">requiredDuringSchedulingIgnoredDuringExecution</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nodeSelectorTerms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">matchExpressions</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">          </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">kubernetes.io/hostname</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">In</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">values</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#000">ip-10-16-121-100.us-west-1.compute.internal</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
 <p>通过如下命令创建<code>Deployment</code> <code>optimizer</code>：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 </span></span></code></pre></div><blockquote>
-<p>注意：若数据库信息与[初始化数据库]中提供的不一致，则需要调整文件<code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>中的<strong>ConfigMap</strong><code>optimizer-conf</code>，将其配置项<code>optimize</code>和<code>storage</code>下的<code>dataSource.name</code>值中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</p>
+<p>注意：若期望采用已部署的数据库，请参见<a href="#%E4%BD%BF%E7%94%A8%E5%B7%B2%E9%83%A8%E7%BD%B2%E6%95%B0%E6%8D%AE%E5%BA%93">使用已部署数据库</a>。</p>
 </blockquote>
 </li>
 <li>
 <p>通过如下命令检查<code>optimizer</code>是否正常运行：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
-</span></span></code></pre></div><p>若正常运行，则可以获取到如下输出：</p>
+</span></span></code></pre></div><p>若正常运行，则可以获取到类似如下输出，其中当前运行的Pod Name是<code>optimizer-5b956655df-gspq6</code>：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    NAME                         READY   STATUS    RESTARTS   AGE
 </span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6   2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
 </span></span></code></pre></div></li>
@@ -319,6 +304,51 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>若能够看到  <strong>Cluster Optimizer</strong>首页，则应用<strong>Cluster Optimizer</strong>成功部署.</p>
+</li>
+</ol>
+<h2 id="使用已部署数据库">使用已部署数据库<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8%e5%b7%b2%e9%83%a8%e7%bd%b2%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h2>
+<p>若您希望使用已部署数据库，使用新的用户名和密码来访问<strong>Cluster Optimizer</strong>，请参考如下步骤：</p>
+<ol>
+<li>
+<p>在命令行控制台执行<code>mysql</code>命令登录到Mysql数据库，其中<code>127.0.0.1</code>为Mysql数据库主机地址，您需要替换成您使用的实际地址。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
+</span></span></code></pre></div><blockquote>
+<p>注意: 如果您使用远程数据库，请确保可以从 Kubernetes 集群访问该数据库。</p>
+</blockquote>
+</li>
+<li>
+<p>创建数据库schema <code>optconf</code>（优化配置库） 和 <code>optdata</code>（优化数据库）。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
+</span></span></code></pre></div><blockquote>
+<p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>optconf</code>库和<code>optdata</code>库，则上述脚本会先删除库，然后创建新库。</p>
+</blockquote>
+</li>
+<li>
+<p>创建新的用户名和密码，并为其设置相应权限。脚本中用户名是<code>optimizer</code>，密码是<code>Optimizer~</code>，您可以按照您的需求调整。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
+</span></span></code></pre></div></li>
+<li>
+<p>调整<strong>Cluster Optimizer</strong>配置文件中的数据库信息。编辑文件<code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>中的<strong>ConfigMap</strong><code>optimizer-conf</code>，将配置项<code>optdata</code>和<code>optconf</code>下的<code>dataSource.name</code>值中的用户名、用户密码、数据库地址和端口调整为Mysql数据库的相应信息。</p>
+</li>
+<li>
+<p>重启应用，检查<strong>Cluster Optimizer</strong>的日志输出（如下所示），查看数据库配置信息是否与您的预期一致。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optconf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;dataSource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;maxOpenConns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optdata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;dataSource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optdata?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;maxOpenConns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>同时，也检查是否有数据库相关报错。若没有相关报错，则证明已使用新的数据库。</p>
 </li>
 </ol>
 <h2 id="下一步导入集群">下一步：导入集群<a class="td-heading-self-link" href="#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h2>

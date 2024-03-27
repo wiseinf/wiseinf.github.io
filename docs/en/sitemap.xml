@@ -3,8 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/docs/actions/adjust-nodegroup/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/docs/setup/</loc>
+    <lastmod>2024-03-27T16:08:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -17,8 +19,10 @@
                 />
   </url><url>
     <loc>/docs/actions/adjust-node/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/docs/import-aws/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -31,8 +35,10 @@
                 />
   </url><url>
     <loc>/docs/actions/adjust-disk/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/docs/import-alibaba/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -45,6 +51,7 @@
                 />
   </url><url>
     <loc>/docs/overview/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -57,8 +64,10 @@
                 />
   </url><url>
     <loc>/docs/actions/delete-pv/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/docs/nodegroup/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -71,6 +80,7 @@
                 />
   </url><url>
     <loc>/docs/gpunode/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -83,6 +93,7 @@
                 />
   </url><url>
     <loc>/docs/node/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -95,6 +106,7 @@
                 />
   </url><url>
     <loc>/docs/disk/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -107,6 +119,7 @@
                 />
   </url><url>
     <loc>/docs/pv/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -119,6 +132,7 @@
                 />
   </url><url>
     <loc>/docs/app/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -131,14 +145,10 @@
                 />
   </url><url>
     <loc>/docs/actions/</loc>
-  </url><url>
-    <loc>/blog/news/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/releases/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/docs/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -150,7 +160,14 @@
                 href="/docs/"
                 />
   </url><url>
+    <loc>/blog/news/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
+  </url><url>
+    <loc>/blog/releases/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
+  </url><url>
     <loc>/price/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -162,34 +179,23 @@
                 href="/price/"
                 />
   </url><url>
-    <loc>/blog/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/blog/2018/10/06/easy-documentation-with-docsy/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/blog/2018/10/06/second-blog-post/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/blog/2018/01/04/another-great-release/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/community/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/about/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -202,8 +208,10 @@
                 />
   </url><url>
     <loc>/tags/application-optimization/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
+    <lastmod>2024-03-27T16:08:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -216,8 +224,10 @@
                 />
   </url><url>
     <loc>/categories/cluster-optimization/</loc>
+    <lastmod>2024-03-27T16:08:19+08:00</lastmod>
   </url><url>
     <loc>/tags/cluster-optimizer/</loc>
+    <lastmod>2024-03-27T16:08:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -229,21 +239,42 @@
                 href="/tags/cluster-optimizer/"
                 />
   </url><url>
+    <loc>/</loc>
+    <lastmod>2024-03-19T12:09:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url><url>
     <loc>/tags/cluster-overview/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/tags/disk-optimizer/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/bak/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/tags/gpu-node-optimization/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/tags/node-group-optimization/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/tags/node-optimization/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/tags/persistent-volume-optimization/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/search/</loc>
+    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -256,6 +287,7 @@
                 />
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2024-03-27T16:08:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
