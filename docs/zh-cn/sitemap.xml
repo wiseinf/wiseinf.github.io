@@ -14,33 +14,69 @@
                 href="/zh-cn/docs/setup/"
                 />
   </url><url>
+    <loc>/zh-cn/docs/import-cluster/import-alibaba/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/import-cluster/import-alibaba/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/import-cluster/import-alibaba/"
+                />
+  </url><url>
     <loc>/zh-cn/docs/operations/adjust-nodegroup/</loc>
   </url><url>
-    <loc>/zh-cn/docs/import-aws/</loc>
+    <loc>/zh-cn/docs/setup/setup-using-kubectl/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/import-aws/"
+                href="/docs/setup/setup-using-kubectl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/import-aws/"
+                href="/zh-cn/docs/setup/setup-using-kubectl/"
                 />
   </url><url>
-    <loc>/zh-cn/docs/import-alibaba/</loc>
+    <loc>/zh-cn/docs/import-cluster/import-aws/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/import-alibaba/"
+                href="/docs/import-cluster/import-aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/import-alibaba/"
+                href="/zh-cn/docs/import-cluster/import-aws/"
+                />
+  </url><url>
+    <loc>/zh-cn/docs/import-cluster/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/import-cluster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/import-cluster/"
                 />
   </url><url>
     <loc>/zh-cn/docs/operations/adjust-node/</loc>
+  </url><url>
+    <loc>/zh-cn/docs/setup/setup-using-helm/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/setup/setup-using-helm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/setup/setup-using-helm/"
+                />
   </url><url>
     <loc>/zh-cn/docs/operations/adjust-disk/</loc>
   </url><url>
@@ -235,8 +271,28 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/"
+                />
   </url><url>
     <loc>/zh-cn/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/"
+                />
   </url><url>
     <loc>/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/</loc>
   </url><url>

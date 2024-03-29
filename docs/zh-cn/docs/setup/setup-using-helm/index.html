@@ -1,0 +1,456 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="text/html" href="/zh-cn/docs/setup/setup-using-helm/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/zh-cn/docs/setup/setup-using-helm/index.xml">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>通过Helm安装 | Cluster Optimizer</title>
+<meta name="description" content="描述通过Helm安装云原生集群优化平台（Cluster Optimizer）的详细步骤.
+">
+<meta property="og:title" content="通过Helm安装" />
+<meta property="og:description" content="描述通过Helm安装云原生集群优化平台（Cluster Optimizer）的详细步骤.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/zh-cn/docs/setup/setup-using-helm/" /><meta property="og:site_name" content="Cluster Optimizer" />
+
+<meta itemprop="name" content="通过Helm安装">
+<meta itemprop="description" content="描述通过Helm安装云原生集群优化平台（Cluster Optimizer）的详细步骤.
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="通过Helm安装"/>
+<meta name="twitter:description" content="描述通过Helm安装云原生集群优化平台（Cluster Optimizer）的详细步骤.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.53e92f67aaf3e1a55dd8d6ec35a821d7ce9abe0cf359830a9ca5b09925e96f39.css" as="style">
+<link href="/scss/main.min.53e92f67aaf3e1a55dd8d6ec35a821d7ce9abe0cf359830a9ca5b09925e96f39.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+
+<link href="/css/pricing.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/setup/setup-using-helm/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/setup/setup-using-helm/">English</a></li>
+    </ul>
+</div>
+    </div>
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-zh-cndocs-li">
+  <a href="/zh-cn/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-zh-cndocs"><span class="">文档</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-zh-cndocssetup-li">
+  <a href="/zh-cn/docs/setup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocssetup"><span class="">安装</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocssetupsetup-using-kubectl-li">
+  <a href="/zh-cn/docs/setup/setup-using-kubectl/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocssetupsetup-using-kubectl"><span class="">通过kubectl安装</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-zh-cndocssetupsetup-using-helm-li">
+  <a href="/zh-cn/docs/setup/setup-using-helm/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-zh-cndocssetupsetup-using-helm"><span class="td-sidebar-nav-active-item">通过Helm安装</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-zh-cndocsimport-cluster-li">
+  <a href="/zh-cn/docs/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsimport-cluster"><span class="">导入集群</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-zh-cndocsimport-clusterimport-alibaba-li">
+  <a href="/zh-cn/docs/import-cluster/import-alibaba/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsimport-clusterimport-alibaba"><span class="">导入阿里云集群</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-zh-cndocsimport-clusterimport-aws-li">
+  <a href="/zh-cn/docs/import-cluster/import-aws/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsimport-clusterimport-aws"><span class="">导入AWS EKS集群</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocsoverview-li">
+  <a href="/zh-cn/docs/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsoverview"><span class="">集群概览</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocsnodegroup-li">
+  <a href="/zh-cn/docs/nodegroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsnodegroup"><span class="">节点组优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocsnode-li">
+  <a href="/zh-cn/docs/node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsnode"><span class="">节点优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocsgpunode-li">
+  <a href="/zh-cn/docs/gpunode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsgpunode"><span class="">GPU节点优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocsdisk-li">
+  <a href="/zh-cn/docs/disk/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsdisk"><span class="">磁盘优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocspv-li">
+  <a href="/zh-cn/docs/pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocspv"><span class="">Persistent Volume优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-zh-cndocsapp-li">
+  <a href="/zh-cn/docs/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsapp"><span class="">应用优化</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-zh-cndocsoperations-li">
+  <a href="/zh-cn/docs/operations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsoperations"><span class="">集群优化操作</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-zh-cndocsoperationsadjust-nodegroup-li">
+  <a href="/zh-cn/docs/operations/adjust-nodegroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsoperationsadjust-nodegroup"><span class="">调整节点池</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-zh-cndocsoperationsadjust-node-li">
+  <a href="/zh-cn/docs/operations/adjust-node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsoperationsadjust-node"><span class="">调整节点</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-zh-cndocsoperationsadjust-disk-li">
+  <a href="/zh-cn/docs/operations/adjust-disk/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsoperationsadjust-disk"><span class="">调整磁盘</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-zh-cndocsoperationsdelete-pv-li">
+  <a href="/zh-cn/docs/operations/delete-pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-zh-cndocsoperationsdelete-pv"><span class="">删除Persistent Volume</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/zh-cn/docs/setup/setup-using-helm/_print/"><i class="fa-solid fa-print fa-fw"></i> 整节打印</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前置条件">前置条件</a></li>
+    <li><a href="#部署应用">部署应用</a></li>
+    <li><a href="#使用已部署数据库">使用已部署数据库</a></li>
+    <li><a href="#下一步导入集群">下一步：导入集群</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tag Cloud</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="/zh-cn/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">18</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/" data-taxonomy-term="gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96"><span class="taxonomy-label">GPU节点优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/persistent-volume%E4%BC%98%E5%8C%96/" data-taxonomy-term="persistent-volume%E4%BC%98%E5%8C%96"><span class="taxonomy-label">Persistent Volume优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/%E5%BA%94%E7%94%A8%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E5%BA%94%E7%94%A8%E4%BC%98%E5%8C%96"><span class="taxonomy-label">应用优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/%E7%A3%81%E7%9B%98%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E7%A3%81%E7%9B%98%E4%BC%98%E5%8C%96"><span class="taxonomy-label">磁盘优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96"><span class="taxonomy-label">节点优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96"><span class="taxonomy-label">节点池优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/%E8%8A%82%E7%82%B9%E7%BB%84%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E8%8A%82%E7%82%B9%E7%BB%84%E4%BC%98%E5%8C%96"><span class="taxonomy-label">节点组优化</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/zh-cn/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span><span class="taxonomy-count">18</span></a></li>
+        </ul>
+    </div>
+  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="/zh-cn/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span><span class="taxonomy-count">18</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/zh-cn/docs/">文档</a></li>
+  <li class="breadcrumb-item">
+    <a href="/zh-cn/docs/setup/">安装</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    通过Helm安装</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>通过Helm安装</h1>
+  <div class="lead">描述通过Helm安装云原生集群优化平台（Cluster Optimizer）的详细步骤.</div>
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="/zh-cn/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
+    <li><a class="taxonomy-term" href="/zh-cn/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span></a></li>
+    </ul>
+</div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="/zh-cn/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本页描述了通过Helm安装<strong>Cluster Optimizer</strong>的详细步骤.</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>Mysql数据库，版本5.7及以上</li>
+<li>Kubernetes集群，版本1.22及以上</li>
+<li>Kubernetes集群的证书，能够创建<code>wiseinf-system</code>名称空间以及在此名称空间下创建Deployment、ConfigMap、Service等资源</li>
+<li>Helm，建议3.0.0及以上</li>
+</ul>
+<h2 id="部署应用">部署应用<a class="td-heading-self-link" href="#%e9%83%a8%e7%bd%b2%e5%ba%94%e7%94%a8" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>通过如下命令添加Helm仓库<code>cluster-optimizer</code>：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm repo add cluster-optimizer https://wiseinf.github.io/cluster-optimizer/
+</span></span></code></pre></div></li>
+<li>
+<p>通过如下命令更新仓库：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm repo update
+</span></span></code></pre></div></li>
+<li>
+<p>通过如下命令查看仓库<code>cluster-optimizer</code>包含的Charts：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm search repo cluster-optimizer
+</span></span></code></pre></div><p>输出如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME                                    CHART VERSION   APP VERSION     DESCRIPTION                       
+</span></span><span style="display:flex;"><span>cluster-optimizer/cluster-optimizer     0.1.0           1.1.0           A Helm chart <span style="color:#204a87;font-weight:bold">for</span> cluster optimizer
+</span></span></code></pre></div><p>可知，仓库中包括一个名为<code>cluster-optimizer/cluster-optimizer</code>的Chart。</p>
+</li>
+<li>
+<p>通过如下命令安装<code>demo</code> Chart：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -n wiseinf-system --create-namespace
+</span></span></code></pre></div><p>其中，<code>-n wiseinf-system</code>表示在名称空间<code>wiseinf-system</code>下安装<code>demo</code>， 参数<code>--create-namespace</code>表示创建此名称空间，输出如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME: demo
+</span></span><span style="display:flex;"><span>LAST DEPLOYED: Thu Mar <span style="color:#0000cf;font-weight:bold">28</span> 15:54:42 <span style="color:#0000cf;font-weight:bold">2024</span>
+</span></span><span style="display:flex;"><span>NAMESPACE: default
+</span></span><span style="display:flex;"><span>STATUS: deployed
+</span></span><span style="display:flex;"><span>REVISION: <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>说明Helm已经成功部署<code>demo</code> Chart。</p>
+</li>
+<li>
+<p>通过如下命令检查<code>optimizer</code>是否正常运行：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
+</span></span></code></pre></div><p>输出如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME                                                  READY   STATUS    RESTARTS   AGE
+</span></span><span style="display:flex;"><span>cluster-optimizer-demo-7bfdfdf954-2cgqb               2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          108s
+</span></span><span style="display:flex;"><span>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7   1/1     Running   <span style="color:#0000cf;font-weight:bold">0</span>          108s
+</span></span></code></pre></div><p>从输出可以看到，Helm部署了两个Pod，其中<code>cluster-optimizer-demo-7bfdfdf954-2cgqb</code>是 Cluster Optimizer的Pod， <code>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7</code>是其依赖的Mysql数据库。</p>
+<blockquote>
+<p>注意：若期望采用已部署的数据库，请参见<a href="#%E4%BD%BF%E7%94%A8%E5%B7%B2%E9%83%A8%E7%BD%B2%E6%95%B0%E6%8D%AE%E5%BA%93">使用已部署数据库</a>。</p>
+</blockquote>
+</li>
+<li>
+<p>通过如下命令创建 <strong>port-forward</strong> 来访问 <code>optimizer</code> 服务：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80  -n wiseinf-system
+</span></span></code></pre></div></li>
+<li>
+<p>打开浏览器，访问地址<code>http://localhost:8000/</code>.</p>
+</li>
+<li>
+<p>若能够看到  <strong>Cluster Optimizer</strong>首页，则应用<strong>Cluster Optimizer</strong>成功部署.</p>
+</li>
+<li>
+<p>通过命令可以删除<code>demo</code> Chart：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>helm uninstall demo
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="使用已部署数据库">使用已部署数据库<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8%e5%b7%b2%e9%83%a8%e7%bd%b2%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h2>
+<p>若您希望使用已部署数据库，使用新的用户名和密码来访问<strong>Cluster Optimizer</strong>，请参考如下步骤：</p>
+<ol>
+<li>
+<p>打开命令行控制台，通过下述命令将安装脚本克隆到本地。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
+</span></span></code></pre></div><blockquote>
+<p>1，若使用Gitee仓库地址，则需将上述命令中的<code>https://github.com/wiseinf/setup.git</code>替换为<code>https://gitee.com/wiseinf/setup.git</code>。</p>
+<p>2，后续步骤假设已将<code>setup</code>库克隆到用户主目录，若未克隆到用户主目录，则需要根据实际情况调整命令中的文件路径。</p>
+</blockquote>
+</li>
+<li>
+<p>在命令行控制台执行<code>mysql</code>命令登录到Mysql数据库，其中<code>127.0.0.1</code>为Mysql数据库主机地址，您需要替换成您使用的实际地址。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
+</span></span></code></pre></div><blockquote>
+<p>注意: 如果您使用远程数据库，请确保可以从 Kubernetes 集群访问该数据库。</p>
+</blockquote>
+</li>
+<li>
+<p>创建数据库schema <code>optconf</code>（优化配置库） 和 <code>optdata</code>（优化数据库）。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
+</span></span></code></pre></div><blockquote>
+<p>注意：请关注数据丢失风险。若mysql数据库中已经存在<code>optconf</code>库和<code>optdata</code>库，则上述脚本会先删除库，然后创建新库。</p>
+</blockquote>
+</li>
+<li>
+<p>创建新的用户名和密码，并为其设置相应权限。脚本中用户名是<code>optimizer</code>，密码是<code>Optimizer~</code>，您可以按照您的需求调整。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
+</span></span></code></pre></div></li>
+<li>
+<p>创建文件<code>values.yaml</code>，编辑其内容，如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">optimizedb</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">conf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optconf</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">data</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optdata</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>其中，<code>dbHost</code>是数据库地址，<code>schema</code>是数据库Schema，<code>port</code>是端口，<code>user</code>和<code>password</code>分别是用户名和密码。</p>
+</li>
+<li>
+<p>通过如下命令安装<code>demo</code> Chart：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
+</span></span></code></pre></div><p>也可以通过升级原部署的方式来调整数据库的设置：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm upgrade demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
+</span></span></code></pre></div></li>
+<li>
+<p>重启应用，检查<strong>Cluster Optimizer</strong> Pod的日志输出（如下所示），查看数据库配置信息是否与您的预期一致。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optconf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;dataSource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;maxOpenConns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optdata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;dataSource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optdata?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;maxOpenConns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>同时，也检查是否有数据库相关报错。若没有相关报错，则证明已使用新的数据库。</p>
+</li>
+</ol>
+<h2 id="下一步导入集群">下一步：导入集群<a class="td-heading-self-link" href="#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h2>
+<p>下一步，您可以添加一个集群，查看其相关优化建议。详见：</p>
+<ul>
+<li><a href="/zh-cn/docs/import-cluster/import-aws/">导入AWS EKS集群</a></li>
+<li><a href="/zh-cn/docs/import-cluster/import-alibaba/">导入阿里云集群</a></li>
+</ul>
+
+  <div class="section-index">
+    
+    
+    </div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="Page%28/docs/setup/setup-using-helm/_index.md%29" target="_blank" rel="noopener">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="Page%28/docs/setup/setup-using-helm/_index.md%29" target="_blank" rel="noopener">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.1f48fc7981e4db829114650dc98d270b6642a46c1e4ebddb8389ff0a463a6328.js" integrity="sha256-H0j8eYHk24KRFGUNyY0nC2ZCpGweTr3bg4n/CkY6Yyg=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

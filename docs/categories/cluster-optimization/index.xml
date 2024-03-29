@@ -62,178 +62,11 @@
     </item>
     
     <item>
-      <title>Docs: Setup</title>
-      <link>/docs/setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/setup/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Instructions for installing the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;  on Kubernetes.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#preconditions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Mysql database, version 5.7 and above&lt;/li&gt;
-&lt;li&gt;kubernetes cluster, version 1.22 and above&lt;/li&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;clone-installation-script&#34;&gt;Clone installation script&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#clone-installation-script&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We assume the installation script library has been cloned into &lt;code&gt;setup&lt;/code&gt; subdirectory of user&amp;rsquo;s home directory.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Clone installation script into local using git:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ~
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    git clone https://github.com/wiseinf/setup.git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;Navigate to the &lt;code&gt;setup&lt;/code&gt; directory.
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; setup
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;The installation directory contains:
-&lt;ul&gt;
-&lt;li&gt;Kubernetes YAML files in &lt;code&gt;cluster-optimizer/yaml&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;SQL script in &lt;code&gt;cluster-optimizer/sql/&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;setup-deployment-cluster-optimizer&#34;&gt;Setup deployment &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#setup-deployment-cluster-optimizer&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Create namespace &lt;code&gt;wiseinf-system&lt;/code&gt; using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create database &lt;code&gt;optimizer-mysql&lt;/code&gt; using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/mysql.yaml
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Its service name is &lt;code&gt;optimizer-mysql&lt;/code&gt;, and can be accessed by user &lt;code&gt;root&lt;/code&gt; with password &lt;code&gt;Optimizer~&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;To bind the database to a specific node, please edit the ~/setup/cluster-optimizer/yaml/mysql.yaml file, uncomment the affinity field, and modify the value field to the desired node name, as shown below.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;affinity&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nodeAffinity&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;requiredDuringSchedulingIgnoredDuringExecution&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nodeSelectorTerms&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;matchExpressions&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;kubernetes.io/hostname&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;In&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;values&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;ip-10-16-121-100.us-west-1.compute.internal&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create deployment &lt;code&gt;optimizer&lt;/code&gt; using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Note: If you intend to use a deployed database, please refer to &lt;a href=&#34;#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Check if &lt;code&gt;optimizer&lt;/code&gt; is running:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl get pods -n wiseinf-system
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can get:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NAME                         READY   STATUS    RESTARTS   AGE
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    optimizer-5b956655df-gspq6   2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          1m
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create a &lt;strong&gt;port-forward&lt;/strong&gt; to access &lt;code&gt;optimizer&lt;/code&gt; service:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open your browser and visit url &lt;code&gt;http://localhost:8000/&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you can see the home page of &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, you have successfully setup &lt;code&gt;optimizer&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#using-a-deployed-database&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;If you want to use a deployed database or want to deploy the database by yourself, please follow the instructions below:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Login into mysql database using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql -h127.0.0.1 -uroot
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The 127.0.0.1 is the host address of the MySQL database, which you need to replace with the actual address you are using.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note: If you are using a remote database, please make sure the database is accessible from the kubernetes cluster.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create database schema &lt;code&gt;optconf&lt;/code&gt;(used to store configurations) and &lt;code&gt;optdata&lt;/code&gt;(used to store data)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt; ~/setup/cluster-optimizer/sql/create_database.sql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Note: Please be aware of the risk of data loss. The script will drop schema &lt;code&gt;optconf&lt;/code&gt; and &lt;code&gt;optdata&lt;/code&gt; first and then create new schemas. If you already have an &lt;code&gt;optconf&lt;/code&gt; or an &lt;code&gt;optdata&lt;/code&gt; schema, your data in this schema will be lost.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create a new user and grant permission to the new user. The user name is &lt;code&gt;optimizer&lt;/code&gt;, password is &lt;code&gt;Optimizer~&lt;/code&gt;, you can change it to your own.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt; ~/setup/cluster-optimizer/sql/create_user.sql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Adjust the database information in the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; configuration file. Edit the ConfigMap optimizer-conf in the file ~/setup/cluster-optimizer/yaml/optimizer.yaml, and adjust the values of dataSource.name under the configuration items optdata and optconf to match the corresponding information of the MySQL database, including the username, password, database address, and port.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Restart the application and check the log output of the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; to verify if the database configuration information matches your expectations.. For example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;optconf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataSource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;maxOpenConns&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;optdata&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataSource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optdata?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;maxOpenConns&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At the same time, also check for any database-related errors. If there are no relevant errors, it indicates that the new database has been successfully used.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;next-import-a-cluster&#34;&gt;Next: Import a cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-import-a-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Next, you can import a cluster and view its optimization recommendations. For details, please visit following links:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/cluster-optimizer/import-aws&#34;&gt;Import Cluster from AWS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/cluster-optimizer/import-aliyun&#34;&gt;Import Cluster from Alibaba Cloud&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Adjustment Node</title>
-      <link>/docs/actions/adjust-node/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/actions/adjust-node/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes the operation of adjusting nodes.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Import Cluster from AWS</title>
-      <link>/docs/import-aws/</link>
+      <link>/docs/import-cluster/import-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/import-aws/</guid>
+      <guid>/docs/import-cluster/import-aws/</guid>
       <description>
         
         
@@ -343,7 +176,7 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;li&gt;
 &lt;p&gt;Go to cloud account management page from &lt;code&gt;Settings --&amp;gt; Cloud Accounts&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -358,7 +191,7 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;li&gt;
 &lt;p&gt;Click the &lt;code&gt;New&lt;/code&gt; button to add a cloud account. You can input &lt;code&gt;Name&lt;/code&gt;, select &lt;code&gt;Amazon AWS&lt;/code&gt; as &lt;code&gt;Cloud Provider&lt;/code&gt;, then input &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and finally click &lt;code&gt;Confirm&lt;/code&gt;. You can also test connectivity by click &lt;code&gt;Test Connectivity&lt;/code&gt; after input the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -376,7 +209,7 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;li&gt;
 &lt;p&gt;Go to cluster management page from &lt;code&gt;Settings --&amp;gt; Clusters&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -401,7 +234,7 @@ and &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_perm
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect to AWS&lt;/code&gt; step, choose &lt;code&gt;Using Existing Access Token&lt;/code&gt;, select cloud account created in section &lt;code&gt;Add Cloud Account&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -447,7 +280,7 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -500,7 +333,7 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -516,7 +349,7 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;View configurations&lt;/code&gt; step, it displays configurations on connecting to AWS cloud, connecting to kubernetes cluster, connecting to metrics server. You can check if the configuration is as expected.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -532,7 +365,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Finish&lt;/code&gt; step, it will disply the submission status, as shown below. You can click &lt;code&gt;Finish&lt;/code&gt; button when the submission status showns the cluster is imported.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -559,18 +392,162 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
     </item>
     
     <item>
-      <title>Docs: Adjust Disk</title>
-      <link>/docs/actions/adjust-disk/</link>
+      <title>Docs: Setup using kubectl</title>
+      <link>/docs/setup/setup-using-kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/actions/adjust-disk/</guid>
+      <guid>/docs/setup/setup-using-kubectl/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes the operation of resizing a disk.&lt;/p&gt;
+&lt;p&gt;Instructions for installing the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;  on Kubernetes.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#preconditions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mysql database, version 5.7 and above&lt;/li&gt;
+&lt;li&gt;kubernetes cluster, version 1.22 and above&lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;clone-installation-script&#34;&gt;Clone installation script&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#clone-installation-script&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We assume the installation script library has been cloned into &lt;code&gt;setup&lt;/code&gt; subdirectory of user&amp;rsquo;s home directory.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone installation script into local using git:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ~
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    git clone https://github.com/wiseinf/setup.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Navigate to the &lt;code&gt;setup&lt;/code&gt; directory.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;The installation directory contains:
+&lt;ul&gt;
+&lt;li&gt;Kubernetes YAML files in &lt;code&gt;cluster-optimizer/yaml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SQL script in &lt;code&gt;cluster-optimizer/sql/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;setup-deployment-cluster-optimizer&#34;&gt;Setup deployment &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#setup-deployment-cluster-optimizer&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create namespace &lt;code&gt;wiseinf-system&lt;/code&gt; using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create database &lt;code&gt;optimizer-mysql&lt;/code&gt; using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/mysql.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Its service name is &lt;code&gt;optimizer-mysql&lt;/code&gt;, and can be accessed by user &lt;code&gt;root&lt;/code&gt; with password &lt;code&gt;Optimizer~&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To bind the database to a specific node, please edit the ~/setup/cluster-optimizer/yaml/mysql.yaml file, uncomment the affinity field, and modify the value field to the desired node name, as shown below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;affinity&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nodeAffinity&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;requiredDuringSchedulingIgnoredDuringExecution&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nodeSelectorTerms&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;matchExpressions&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;kubernetes.io/hostname&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;In&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;values&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;ip-10-16-121-100.us-west-1.compute.internal&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create deployment &lt;code&gt;optimizer&lt;/code&gt; using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: If you intend to use a deployed database, please refer to &lt;a href=&#34;#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check if &lt;code&gt;optimizer&lt;/code&gt; is running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl get pods -n wiseinf-system
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can get:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NAME                         READY   STATUS    RESTARTS   AGE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    optimizer-5b956655df-gspq6   2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          1m
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a &lt;strong&gt;port-forward&lt;/strong&gt; to access &lt;code&gt;optimizer&lt;/code&gt; service:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open your browser and visit url &lt;code&gt;http://localhost:8000/&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you can see the home page of &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, you have successfully setup &lt;code&gt;optimizer&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#using-a-deployed-database&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you want to use a deployed database or want to deploy the database by yourself, please follow the instructions below:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Login into mysql database using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql -h127.0.0.1 -uroot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The 127.0.0.1 is the host address of the MySQL database, which you need to replace with the actual address you are using.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: If you are using a remote database, please make sure the database is accessible from the kubernetes cluster.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create database schema &lt;code&gt;optconf&lt;/code&gt;(used to store configurations) and &lt;code&gt;optdata&lt;/code&gt;(used to store data)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt; ~/setup/cluster-optimizer/sql/create_database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: Please be aware of the risk of data loss. The script will drop schema &lt;code&gt;optconf&lt;/code&gt; and &lt;code&gt;optdata&lt;/code&gt; first and then create new schemas. If you already have an &lt;code&gt;optconf&lt;/code&gt; or an &lt;code&gt;optdata&lt;/code&gt; schema, your data in this schema will be lost.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a new user and grant permission to the new user. The user name is &lt;code&gt;optimizer&lt;/code&gt;, password is &lt;code&gt;Optimizer~&lt;/code&gt;, you can change it to your own.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mysql&amp;gt; &lt;span style=&#34;color:#204a87&#34;&gt;source&lt;/span&gt; ~/setup/cluster-optimizer/sql/create_user.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adjust the database information in the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; configuration file. Edit the ConfigMap optimizer-conf in the file ~/setup/cluster-optimizer/yaml/optimizer.yaml, and adjust the values of dataSource.name under the configuration items optdata and optconf to match the corresponding information of the MySQL database, including the username, password, database address, and port.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart the application and check the log output of the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; to verify if the database configuration information matches your expectations. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;optconf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataSource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;maxOpenConns&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;optdata&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;dataSource&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;optimizer:Optimizer~@tcp(127.0.0.1:3306)/optdata?createDatabaseIfNotExist=true\u0026charset=utf8mb4\u0026parseTime=true\u0026loc=Local&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;maxOpenConns&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a40000&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At the same time, also check for any database-related errors. If there are no relevant errors, it indicates that the new database has been successfully used.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;next-import-a-cluster&#34;&gt;Next: Import a cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-import-a-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Next, you can import a cluster and view its optimization recommendations. For details, please visit following links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/import-aws&#34;&gt;Import Cluster from AWS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/import-aliyun&#34;&gt;Import Cluster from Alibaba Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Adjustment Node</title>
+      <link>/docs/actions/adjust-node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/actions/adjust-node/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the operation of adjusting nodes.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -583,10 +560,10 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
     
     <item>
       <title>Docs: Import Cluster from Alibaba Cloud</title>
-      <link>/docs/import-alibaba/</link>
+      <link>/docs/import-cluster/import-alibaba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/import-alibaba/</guid>
+      <guid>/docs/import-cluster/import-alibaba/</guid>
       <description>
         
         
@@ -769,7 +746,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;
 &lt;p&gt;Go to cloud account management page from &lt;code&gt;Settings --&amp;gt; Cloud Accounts&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cp01_hu5c4c06a7df7a988825c412e165e21447_52180_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;249&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -784,7 +761,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;
 &lt;p&gt;Click the &lt;code&gt;New&lt;/code&gt; button to add a cloud account. You can input &lt;code&gt;Name&lt;/code&gt;, select &lt;code&gt;Amazon AWS&lt;/code&gt; as &lt;code&gt;Cloud Provider&lt;/code&gt;, then input &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and finally click &lt;code&gt;Confirm&lt;/code&gt;. You can also test connectivity by click &lt;code&gt;Test Connectivity&lt;/code&gt; after input the &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -802,7 +779,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;
 &lt;p&gt;Go to cluster management page from &lt;code&gt;Settings --&amp;gt; Clusters&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cluster01_huc5910487c86921173b505abee2b88bd6_56131_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;255&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -827,7 +804,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect to alibaba cloud&lt;/code&gt; step, choose &lt;code&gt;Using Existing Access Token&lt;/code&gt;, select cloud account created in section &lt;code&gt;Add Cloud Account&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -877,7 +854,7 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -927,7 +904,7 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -943,7 +920,7 @@ Then click &amp;lsquo;Next&amp;rsquo; button to go to step &lt;code&gt;Connect t
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;View configurations&lt;/code&gt; step, it displays configurations on connecting to AWS cloud, connecting to kubernetes cluster, connecting to metrics server. You can check if the configuration is as expected.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -959,7 +936,7 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Finish&lt;/code&gt; step, it will disply the submission status, as shown below. You can click &lt;code&gt;Finish&lt;/code&gt; button when the submission status showns the cluster is imported.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/import-cluster/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -981,6 +958,42 @@ When you confirm these configurations, you can click &lt;code&gt;Import&lt;/code
 &lt;li&gt;&lt;a href=&#34;/docs/clusteroptimizer/pv&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/docs/clusteroptimizer/application&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Import Clusters</title>
+      <link>/docs/import-cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/import-cluster/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Adjust Disk</title>
+      <link>/docs/actions/adjust-disk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/actions/adjust-disk/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the operation of resizing a disk.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;TBD&amp;hellip;&lt;/p&gt;
 
       </description>
     </item>
