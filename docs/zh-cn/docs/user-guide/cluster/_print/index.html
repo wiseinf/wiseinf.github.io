@@ -1,0 +1,287 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/zh-cn/docs/user-guide/cluster/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/zh-cn/docs/user-guide/cluster/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>集群概览 | Cluster Optimizer</title>
+<meta name="description" content="查看平台中连接的集群。
+">
+<meta property="og:url" content="//localhost:1313/zh-cn/docs/user-guide/cluster/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="集群概览">
+  <meta property="og:description" content="查看平台中连接的集群。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="集群概览">
+  <meta itemprop="description" content="查看平台中连接的集群。">
+  <meta itemprop="wordCount" content="38">
+  <meta itemprop="keywords" content="Cluster Optimizer,集群优化,节点池优化">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="集群概览">
+  <meta name="twitter:description" content="查看平台中连接的集群。">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/user-guide/cluster/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/user-guide/cluster/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">集群概览</h1>
+<div class="lead">查看平台中连接的集群。</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>查看平台中连接的集群。</p>
+
+</div>
+
+<h2 id="查看集群">查看集群<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>集群</code>，显示集群概览页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/cluster/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png" width="900" height="397">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+集群概览页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>主展示区将展示平台管理的集群列表。包括集群（集群名称和集群ID）、集群地域、Access Token名称、云服务商、Prometheus地址、健康状态等信息。</p>
+<p>在商业版本中，额外提供了集群状态和操作栏，如下图所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/cluster/cluster-biz_huec32945de9624f20315c8796979aa7bc_89466_900x0_resize_catmullrom_3.png" width="900" height="263">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+集群概览页：商业版
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>集群状态用户展示集群相应状态，便于用户了解集群状态。主要包括：</p>
+<ol>
+<li>运行中：集群正常运行。</li>
+<li>休眠中：集群正在转入休眠状态。</li>
+<li>休眠：集群已休眠。休眠状态中，集群已释放了相应的节点资源，此时集群使用受限。</li>
+<li>唤醒中：集群正在转入运行中状态。</li>
+</ol>
+<p>集群操作栏用户对集群进行操作，包括：</p>
+<ul>
+<li>设置集群休眠</li>
+<li>立即休眠</li>
+<li>立即唤醒</li>
+<li>日志</li>
+</ul>
+<h2 id="设置集群休眠">设置集群休眠<a class="td-heading-self-link" href="#%e8%ae%be%e7%bd%ae%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0" aria-label="Heading self-link"></a></h2>
+<p>集群休眠通过合理的管理集群中的节点，来降低集群的资源占用，节约成本，假设集群在周一至周五晚上9点开始休眠，周一至周五早上8点开始唤醒（也就是结束休眠），则机器成本节约可高达54.8%。设置集群休眠可以设置集群的<strong>休眠时间</strong>和<strong>唤醒时间</strong>。在休眠时间，将集群中的负载的状态进行存储，同时逐步释放集群中的节点资源。在唤醒时间，系统逐步恢复集群中的节点资源，同时恢复负载的原有状态。集群休眠特别适用于开发、测试等线下环境。</p>
+<p>点击操作栏中的设置集群休眠，弹出对话框如下所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/cluster/set-hibernate-schedule_hubc10ee5423eddc71b603216431c056c2_48356_900x0_resize_catmullrom_3.png" width="900" height="299">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+设置集群休眠
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在<code>是否启用休眠</code>选项中选择<code>启用</code>，然后设置具体的<code>休眠时间</code>和<code>唤醒时间</code>，点击<code>确定</code>按钮即可。默认休眠时间是周一至周五晚上9点，默认唤醒时间是周一至周五早上8点。</p>
+<p>若想取消集群休眠，在<code>是否启用休眠</code>选项中选择<code>不启用</code>，点击<code>确定</code>按钮即可。</p>
+<p>集群休眠时将使用用户提供的集群访问账号来操作集群。您需要设置集群访问账号，具体请参见<a href="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/">设置集群访问账号</a>。</p>
+<blockquote>
+<p>注意：<code>休眠时间</code>和<code>唤醒时间</code>间隔必须大于2小时。</p>
+</blockquote>
+<h2 id="立即休眠">立即休眠<a class="td-heading-self-link" href="#%e7%ab%8b%e5%8d%b3%e4%bc%91%e7%9c%a0" aria-label="Heading self-link"></a></h2>
+<p>鼠标移至<code>...</code>，点击<code>立即休眠</code>按钮，即可立即将集群休眠。</p>
+<h2 id="立即唤醒">立即唤醒<a class="td-heading-self-link" href="#%e7%ab%8b%e5%8d%b3%e5%94%a4%e9%86%92" aria-label="Heading self-link"></a></h2>
+<p>鼠标移至<code>...</code>，点击<code>立即唤醒</code>按钮，即可立即将集群唤醒。</p>
+<h2 id="日志">日志<a class="td-heading-self-link" href="#%e6%97%a5%e5%bf%97" aria-label="Heading self-link"></a></h2>
+<p>鼠标移至<code>...</code>，点击<code>日志</code>按钮，即可查看集群休眠或唤醒相关日志。</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

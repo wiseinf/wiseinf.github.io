@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 节点池优化</title>
-    <link>/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/</link>
+    <link>//localhost:1313/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/</link>
     <description>Recent content in 节点池优化 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E8%8A%82%E7%82%B9%E6%B1%A0%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 集群概览</title>
-      <link>/zh-cn/docs/overview/</link>
+      <link>//localhost:1313/zh-cn/docs/user-guide/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/overview/</guid>
+      <guid>//localhost:1313/zh-cn/docs/user-guide/cluster/</guid>
       <description>
         
         
@@ -30,9 +30,10 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;集群&lt;/code&gt;，显示集群概览页，如下图所示。主展示区将展示平台管理的集群列表。包括集群（集群名称和集群ID）、集群地域、Access Token名称、云服务商和Prometheus地址等信息。&lt;/p&gt;
+&lt;h2 id=&#34;查看集群&#34;&gt;查看集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;集群&lt;/code&gt;，显示集群概览页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/overview/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;397&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/cluster/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;397&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -43,6 +44,61 @@
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
+&lt;p&gt;主展示区将展示平台管理的集群列表。包括集群（集群名称和集群ID）、集群地域、Access Token名称、云服务商、Prometheus地址、健康状态等信息。&lt;/p&gt;
+&lt;p&gt;在商业版本中，额外提供了集群状态和操作栏，如下图所示：&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/cluster/cluster-biz_huec32945de9624f20315c8796979aa7bc_89466_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;263&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+集群概览页：商业版
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;集群状态用户展示集群相应状态，便于用户了解集群状态。主要包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;运行中：集群正常运行。&lt;/li&gt;
+&lt;li&gt;休眠中：集群正在转入休眠状态。&lt;/li&gt;
+&lt;li&gt;休眠：集群已休眠。休眠状态中，集群已释放了相应的节点资源，此时集群使用受限。&lt;/li&gt;
+&lt;li&gt;唤醒中：集群正在转入运行中状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;集群操作栏用户对集群进行操作，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置集群休眠&lt;/li&gt;
+&lt;li&gt;立即休眠&lt;/li&gt;
+&lt;li&gt;立即唤醒&lt;/li&gt;
+&lt;li&gt;日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;设置集群休眠&#34;&gt;设置集群休眠&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%ae%be%e7%bd%ae%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;集群休眠通过合理的管理集群中的节点，来降低集群的资源占用，节约成本，假设集群在周一至周五晚上9点开始休眠，周一至周五早上8点开始唤醒（也就是结束休眠），则机器成本节约可高达54.8%。设置集群休眠可以设置集群的&lt;strong&gt;休眠时间&lt;/strong&gt;和&lt;strong&gt;唤醒时间&lt;/strong&gt;。在休眠时间，将集群中的负载的状态进行存储，同时逐步释放集群中的节点资源。在唤醒时间，系统逐步恢复集群中的节点资源，同时恢复负载的原有状态。集群休眠特别适用于开发、测试等线下环境。&lt;/p&gt;
+&lt;p&gt;点击操作栏中的设置集群休眠，弹出对话框如下所示：&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/cluster/set-hibernate-schedule_hubc10ee5423eddc71b603216431c056c2_48356_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+设置集群休眠
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;在&lt;code&gt;是否启用休眠&lt;/code&gt;选项中选择&lt;code&gt;启用&lt;/code&gt;，然后设置具体的&lt;code&gt;休眠时间&lt;/code&gt;和&lt;code&gt;唤醒时间&lt;/code&gt;，点击&lt;code&gt;确定&lt;/code&gt;按钮即可。默认休眠时间是周一至周五晚上9点，默认唤醒时间是周一至周五早上8点。&lt;/p&gt;
+&lt;p&gt;若想取消集群休眠，在&lt;code&gt;是否启用休眠&lt;/code&gt;选项中选择&lt;code&gt;不启用&lt;/code&gt;，点击&lt;code&gt;确定&lt;/code&gt;按钮即可。&lt;/p&gt;
+&lt;p&gt;集群休眠时将使用用户提供的集群访问账号来操作集群。您需要设置集群访问账号，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：&lt;code&gt;休眠时间&lt;/code&gt;和&lt;code&gt;唤醒时间&lt;/code&gt;间隔必须大于2小时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;立即休眠&#34;&gt;立即休眠&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%ab%8b%e5%8d%b3%e4%bc%91%e7%9c%a0&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;鼠标移至&lt;code&gt;...&lt;/code&gt;，点击&lt;code&gt;立即休眠&lt;/code&gt;按钮，即可立即将集群休眠。&lt;/p&gt;
+&lt;h2 id=&#34;立即唤醒&#34;&gt;立即唤醒&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%ab%8b%e5%8d%b3%e5%94%a4%e9%86%92&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;鼠标移至&lt;code&gt;...&lt;/code&gt;，点击&lt;code&gt;立即唤醒&lt;/code&gt;按钮，即可立即将集群唤醒。&lt;/p&gt;
+&lt;h2 id=&#34;日志&#34;&gt;日志&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%97%a5%e5%bf%97&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;鼠标移至&lt;code&gt;...&lt;/code&gt;，点击&lt;code&gt;日志&lt;/code&gt;按钮，即可查看集群休眠或唤醒相关日志。&lt;/p&gt;
 
       </description>
     </item>

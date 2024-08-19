@@ -1,0 +1,107 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Node Pool Optimization</title>
+    <link>//localhost:1313/tags/node-pool-optimization/</link>
+    <description>Recent content in Node Pool Optimization on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/tags/node-pool-optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Cluster Overview</title>
+      <link>//localhost:1313/docs/user-guide/cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/user-guide/cluster/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;View connected clusters in the platform.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-cluster&#34;&gt;View cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click &lt;code&gt;Cluster&lt;/code&gt; on the left menu bar of the platform to display the cluster overview page, as shown in the figure below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/overview_hu412a39f91c157a1ac904bdf2cb862fb5_121350_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;440&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Cluster overview page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The main display area will display the list of clusters managed by the platform. Including cluster (cluster name and cluster ID), cluster region, Access Token name, cloud service provider, Prometheus address, health status and other information.&lt;/p&gt;
+&lt;p&gt;In the commercial version, additional cluster status and operation bars are provided, as shown in the following figure:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/cluster-biz_huec32945de9624f20315c8796979aa7bc_89466_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;263&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Cluster Overview Page: Commercial Edition
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Cluster status displays the corresponding status of the cluster to users, making it easier for users to understand the cluster status. Mainly include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Running: The cluster is running normally.&lt;/li&gt;
+&lt;li&gt;Sleeping: The cluster is entering sleep state.&lt;/li&gt;
+&lt;li&gt;Hibernate: The cluster has hibernated. In the dormant state, the cluster has released corresponding node resources, and the cluster usage is limited at this time.&lt;/li&gt;
+&lt;li&gt;Waking up: The cluster is transitioning to the running state.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the cluster operation column, users can operate the cluster, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set cluster hibernation
+*Hibernate immediately&lt;/li&gt;
+&lt;li&gt;Wake up immediately&lt;/li&gt;
+&lt;li&gt;log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;set-cluster-hibernation&#34;&gt;Set cluster hibernation&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#set-cluster-hibernation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Cluster hibernation reduces cluster resource usage and saves costs by properly managing the nodes in the cluster. Assume that the cluster starts sleeping at 9 pm from Monday to Friday and wakes up at 8 am from Monday to Friday (that is, ending hibernation). The machine cost savings can be as high as 54.8%. Setting cluster hibernation allows you to set the &lt;strong&gt;sleep time&lt;/strong&gt; and &lt;strong&gt;wakeup time&lt;/strong&gt; of the cluster. During the sleep time, the status of the load in the cluster is stored, and the node resources in the cluster are gradually released. During the wake-up time, the system gradually restores the node resources in the cluster and restores the original state of the load. Cluster hibernation is especially suitable for offline environments such as development and testing.&lt;/p&gt;
+&lt;p&gt;Click Set Cluster Hibernation in the operation bar, and the dialog box will pop up as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/set-hibernate-schedule_hubc10ee5423eddc71b603216431c056c2_48356_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Set cluster hibernation
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Select &lt;code&gt;Enable&lt;/code&gt; in the &lt;code&gt;Whether to enable sleep&lt;/code&gt; option, then set the specific &lt;code&gt;sleep time&lt;/code&gt; and &lt;code&gt;wake up time&lt;/code&gt;, and click the &lt;code&gt;OK&lt;/code&gt; button. The default sleep time is 9pm from Monday to Friday, and the default wake-up time is 8am from Monday to Friday.&lt;/p&gt;
+&lt;p&gt;If you want to cancel cluster hibernation, select &lt;code&gt;Disable&lt;/code&gt; in the &lt;code&gt;Whether to enable hibernation&lt;/code&gt; option and click the &lt;code&gt;OK&lt;/code&gt; button.&lt;/p&gt;
+&lt;p&gt;When the cluster is dormant, the cluster access account provided by the user will be used to operate the cluster. You need to set up a cluster access account. For details, please see &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: The interval between &lt;code&gt;sleep time&lt;/code&gt; and &lt;code&gt;wake up time&lt;/code&gt; must be greater than 2 hours.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;hibernate-now&#34;&gt;Hibernate now&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#hibernate-now&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Move the mouse to &lt;code&gt;...&lt;/code&gt; and click the &lt;code&gt;Hibernate Now&lt;/code&gt; button to hibernate the cluster immediately.&lt;/p&gt;
+&lt;h2 id=&#34;wake-up-immediately&#34;&gt;Wake up immediately&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#wake-up-immediately&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Move the mouse to &lt;code&gt;...&lt;/code&gt; and click the &lt;code&gt;Wake Up Now&lt;/code&gt; button to wake up the cluster immediately.&lt;/p&gt;
+&lt;h2 id=&#34;log&#34;&gt;log&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#log&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Move the mouse to &lt;code&gt;...&lt;/code&gt; and click the &lt;code&gt;Log&lt;/code&gt; button to view logs related to cluster sleep or wake-up.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

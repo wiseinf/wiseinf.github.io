@@ -1,0 +1,71 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Command Line Parameters</title>
+    <link>//localhost:1313/categories/command-line-parameters/</link>
+    <description>Recent content in Command Line Parameters on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/categories/command-line-parameters/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Command line parameters</title>
+      <link>//localhost:1313/docs/configuration/command-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/configuration/command-line/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the command line parameters of the cloud native cluster optimization platform.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;command-line-parameters&#34;&gt;Command line parameters&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#command-line-parameters&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You can get the usage of &lt;code&gt;Cluster Optimizer&lt;/code&gt; through &lt;code&gt;--help&lt;/code&gt;, as follows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$optimizer --help
+Usage:
+  optimizer optimizer [flags]
+
+Flags:
+      --features stringArray Enable features, available features are [APIServer, Optimizer]
+  -h, --help help for optimizer
+
+Global Flags:
+      --config string config file (default is $OPTIMIZER_HOME/conf/cluster-optimizer.yaml)
+      --log-enable-color Enable color in log
+      --log-enable-console Enable log to console
+      --log-format string Set the log format (json or text) (default &amp;#34;json&amp;#34;)
+      --log-level string Set the log level (debug, info, warn, error, fatal) (default &amp;#34;info&amp;#34;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The parameters are described in detail below.&lt;/p&gt;
+&lt;h2 id=&#34;parameter-description&#34;&gt;Parameter description&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#parameter-description&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;--help&#34;&gt;&lt;code&gt;--help&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--help&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;--help&lt;/code&gt; provides command line usage help.&lt;/p&gt;
+&lt;h3 id=&#34;-f---features&#34;&gt;&lt;code&gt;-f, --features&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#-f---features&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameters &lt;code&gt;-f, --features&lt;/code&gt; indicate the features started by the cluster optimization platform, where &lt;code&gt;APIServer&lt;/code&gt; means only providing API services, and &lt;code&gt;Optimizer&lt;/code&gt; means starting the optimizer features.&lt;/p&gt;
+&lt;p&gt;The default value is &lt;code&gt;APIServer,Optimizer&lt;/code&gt;, which means that the automatic expansion and contraction features and the virtual capacity feature are enabled at the same time.&lt;/p&gt;
+&lt;h3 id=&#34;--config&#34;&gt;&lt;code&gt;--config&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--config&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;--config&lt;/code&gt; indicates the configuration file path used by the cluster optimization platform. For its configuration, please refer to &lt;a href=&#34;//localhost:1313/docs/configuration/conf/&#34;&gt;Configuration File&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;--log-enable-color&#34;&gt;&lt;code&gt;--log-enable-color&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-color&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;--log-enable-color&lt;/code&gt; indicates whether to enable the color attribute in the log. In the console interface, enabling this feature can improve readability. The default value is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;--log-enable-console&#34;&gt;&lt;code&gt;--log-enable-console&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-console&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;--log-enable-console&lt;/code&gt; indicates whether to enable the console log. The console log can be easily accessed through the &lt;code&gt;kubectl log&lt;/code&gt; command. The default value is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;--log-format&#34;&gt;&lt;code&gt;--log-format&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-format&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;--log-format&lt;/code&gt; is used to set the log format. The available log format is &lt;code&gt;json&lt;/code&gt; or &lt;code&gt;text&lt;/code&gt;. The default value is &lt;code&gt;json&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;--log-level&#34;&gt;&lt;code&gt;--log-level&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-level&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The parameter &lt;code&gt;--log-level&lt;/code&gt; is used to set the log level. Optional values ​​include &lt;code&gt;debug&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;warn&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;, &lt;code&gt;fatal&lt;/code&gt;. The default value is &lt;code&gt;info&lt;/code&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 优化操作</title>
+    <link>//localhost:1313/zh-cn/tags/%E4%BC%98%E5%8C%96%E6%93%8D%E4%BD%9C/</link>
+    <description>Recent content in 优化操作 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E4%BC%98%E5%8C%96%E6%93%8D%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 优化操作</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述了云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;集群优化操作主要包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调整节点池&lt;/li&gt;
+&lt;li&gt;调整节点&lt;/li&gt;
+&lt;li&gt;调整磁盘&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

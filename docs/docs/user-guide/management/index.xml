@@ -1,0 +1,438 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Management Settings</title>
+    <link>//localhost:1313/docs/user-guide/management/</link>
+    <description>Recent content in Management Settings on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/docs/user-guide/management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: User Management</title>
+      <link>//localhost:1313/docs/user-guide/management/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/user-guide/management/user/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describe related operations of user management.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#preconditions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;*Managing users requires administrator rights.
+*Available only in commercial version.&lt;/p&gt;
+&lt;h2 id=&#34;view-user-list&#34;&gt;View user list&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-user-list&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Enter the user management page from &lt;code&gt;Settings --&amp;gt; Users&lt;/code&gt;, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/overview_huf7b1efda546e235b6c6a83c9c47de67e_72649_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;283&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+User management page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The user management page will display notification channels in the form of a list. It mainly includes 5 columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Username: Display user name.&lt;/li&gt;
+&lt;li&gt;Full name: Display user name.&lt;/li&gt;
+&lt;li&gt;Email address: Displays the user&amp;rsquo;s email address.&lt;/li&gt;
+&lt;li&gt;Phone number: Displays the user&amp;rsquo;s phone number.&lt;/li&gt;
+&lt;li&gt;Role: Display user role.&lt;/li&gt;
+&lt;li&gt;Operation: Operation bar, including editing, deletion and other operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;add-user&#34;&gt;Add user&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#add-user&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the user management page, and the Add User dialog box will pop up, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/add_hu5e62e77b25d54fd7f57cd45a1e70c687_29854_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;558&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Add user dialog
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Please see the table below for specific field names and descriptions.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Name&lt;/td&gt;
+&lt;td&gt;User name, required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Last name&lt;/td&gt;
+&lt;td&gt;User last name, optional&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;First Name&lt;/td&gt;
+&lt;td&gt;Username, optional&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Email&lt;/td&gt;
+&lt;td&gt;User email, required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Password&lt;/td&gt;
+&lt;td&gt;User login password, required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Confirm password&lt;/td&gt;
+&lt;td&gt;Confirm user login password, required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Mobile phone number&lt;/td&gt;
+&lt;td&gt;User mobile phone number, required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;User role&lt;/td&gt;
+&lt;td&gt;Currently, the system provides two roles: administrator and user. The default is user, which is required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Enter the corresponding information according to the field name and click the &lt;code&gt;OK&lt;/code&gt; button to add the user.&lt;/p&gt;
+&lt;h2 id=&#34;update-user&#34;&gt;Update user&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#update-user&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Edit&lt;/code&gt; button in the list of user management pages, and the edit user dialog box will pop up, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/edit_hub3cf6f281efc5e753f1663d9dc0304ae_34392_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;559&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Edit user dialog
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The specific field names and descriptions are the same as [Add User] (#Add User) and will not be repeated.&lt;/p&gt;
+&lt;h2 id=&#34;delete-user&#34;&gt;Delete user&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#delete-user&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button on the user management page to delete the user.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/delete_hu044c8dc38155b92e0cd38eac7d980f93_32400_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Delete user
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Before deleting the user, a deletion confirmation dialog box will pop up. After confirmation, the deletion operation will be performed.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Notification Channel</title>
+      <link>//localhost:1313/docs/user-guide/management/channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/user-guide/management/channel/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes how to manage notification channels, including viewing, adding, updating, or deleting notification channels.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-channels&#34;&gt;View channels&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-channels&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Enter the notification channel management page from &lt;code&gt;Settings --&amp;gt; Notification Channels&lt;/code&gt;, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/overview_hu824b275e1628a53c9cee5473e61eb3d8_65173_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;273&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Notification channel management page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The notification channel management page will display notification channels in the form of a list. It mainly includes 5 columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name: Notification channel name.&lt;/li&gt;
+&lt;li&gt;Channel type: Notification channel type.&lt;/li&gt;
+&lt;li&gt;Connection parameters: Displays the connection parameters of this channel type.&lt;/li&gt;
+&lt;li&gt;Other parameters: display other parameters&lt;/li&gt;
+&lt;li&gt;Operation: Operation bar, including editing, deletion and other operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;add-channel&#34;&gt;Add channel&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#add-channel&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the notification channel management page, select the notification channel type, and fill in the notification channel information, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/addchannel_hua77b47c0ce1f13b8995bfd0486a81898_41893_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;961&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Add notification channel dialog
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Please see the table below for specific field names and descriptions.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Name&lt;/td&gt;
+&lt;td&gt;Notification channel name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Channel type&lt;/td&gt;
+&lt;td&gt;Notification channel type, currently only supports Email&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Host&lt;/td&gt;
+&lt;td&gt;Email SMTP hostname, for example &lt;code&gt;smtp.wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Port&lt;/td&gt;
+&lt;td&gt;Email SMTP port, such as &lt;code&gt;25&lt;/code&gt;, &lt;code&gt;465&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enable SSL&lt;/td&gt;
+&lt;td&gt;Whether to enable SSL, the default is not enabled&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Email&lt;/td&gt;
+&lt;td&gt;Email address, such as &lt;code&gt;admin@wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sender name&lt;/td&gt;
+&lt;td&gt;Sender name, e.g. &lt;code&gt;Wiseinf&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Password&lt;/td&gt;
+&lt;td&gt;Email SMTP Password&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Parameter list&lt;/td&gt;
+&lt;td&gt;User-defined parameter list in the form of key-value pairs. This parameter list will be passed to the template of the notification channel and can be referenced in the template through &lt;code&gt;{{.param.parameter name}}&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Enter the corresponding information according to the field name and click the &lt;code&gt;OK&lt;/code&gt; button to add the notification channel.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For specific values ​​of the above fields, you can consult your email service provider or email system administrator.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;update-channel&#34;&gt;Update channel&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#update-channel&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To update notification channels, click the &lt;code&gt;Edit&lt;/code&gt; button in the list of notification channel management pages to update the notification channel information, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/editchannel_hu18262063cc359697a35dc12ddb73059d_45805_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;962&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Edit notification channel dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The specific field names and descriptions are the same as [Add Channel] (#Add Channel) and will not be repeated.&lt;/p&gt;
+&lt;h2 id=&#34;delete-channel&#34;&gt;Delete channel&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#delete-channel&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button in the list of notification channel management pages to delete the notification channel, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;209&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Edit notification channel dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Before deleting the notification channel, a deletion confirmation dialog box will pop up, and the deletion operation will be performed after the user confirms.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: When the notification channel is used by notification rules, it will prompt that the deletion was unsuccessful. You should first delete the notification rules that use the notification channel, and then delete the notification channel.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Notification Rules</title>
+      <link>//localhost:1313/docs/user-guide/management/rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/user-guide/management/rule/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the details of the management notification rule.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;view-notification-rules&#34;&gt;View notification rules&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-notification-rules&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Enter the notification rule management page from &lt;code&gt;Settings --&amp;gt; Notification Rules&lt;/code&gt;, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/overview_hu00c99dbacf81e012ed7731ff9b3ac40c_64922_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;265&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Notification rule management page
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The notification rule management page will display notification channels in the form of a list. It mainly includes 5 columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name: Notification channel name.&lt;/li&gt;
+&lt;li&gt;Channel type: Notification channel type.&lt;/li&gt;
+&lt;li&gt;Connection parameters: Displays the connection parameters of this channel type.&lt;/li&gt;
+&lt;li&gt;Other parameters: display other parameters&lt;/li&gt;
+&lt;li&gt;Operation: Operation bar, including editing, deletion and other operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;add-notification-rules&#34;&gt;Add notification rules&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#add-notification-rules&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the notification rule management page, and the Add Notification Rule dialog box will pop up, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/addrule_hubf452712888088648131528102c1664c_59524_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;922&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Add notification rule dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Please see the table below for specific field names and descriptions.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Name&lt;/td&gt;
+&lt;td&gt;Notification channel name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Receiver&lt;/td&gt;
+&lt;td&gt;Notification recipient address, such as &lt;code&gt;admin@wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Notification channel&lt;/td&gt;
+&lt;td&gt;You can select the specific notification channel name through the drop-down box&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scheduling time&lt;/td&gt;
+&lt;td&gt;Set the specific scheduling time of this rule.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Optimization strategy&lt;/td&gt;
+&lt;td&gt;Select a specific optimization strategy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cluster&lt;/td&gt;
+&lt;td&gt;Select the cluster to focus on&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Namespace&lt;/td&gt;
+&lt;td&gt;Enter a namespace name, an empty value will match all namespaces&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Department&lt;/td&gt;
+&lt;td&gt;Enter a department name, an empty value will match all department names&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Group&lt;/td&gt;
+&lt;td&gt;Enter a group name, an empty value will match all group names&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;td&gt;Enter a username, an empty value will match all usernames&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Template ID&lt;/td&gt;
+&lt;td&gt;Template ID name, the default value is &lt;code&gt;default&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Parameter list&lt;/td&gt;
+&lt;td&gt;User-defined parameter list in the form of key-value pairs. This parameter list will be passed to the template of the notification channel and can be referenced in the template through &lt;code&gt;{{.param.parameter name}}&lt;/code&gt;. Parameters with the same name in the notification channel parameter list will be overridden.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Enter the corresponding information according to the field name and click the &lt;code&gt;OK&lt;/code&gt; button to add notification rules.&lt;/p&gt;
+&lt;h2 id=&#34;update-notification-rules&#34;&gt;Update notification rules&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#update-notification-rules&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To update the notification channel, click the &lt;code&gt;Edit&lt;/code&gt; button in the list of notification channel management pages, and the Add Notification Rule dialog box will pop up, as shown below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/editrule_huc4d5dfb901b7502e407e372d14f1ae45_66050_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;922&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Edit notification rule dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The specific field names and descriptions are the same as [Add Notification Rules] (#Add Notification Rules) and will not be repeated.&lt;/p&gt;
+&lt;h2 id=&#34;delete-notification-rules&#34;&gt;Delete notification rules&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#delete-notification-rules&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button on the notification channel management page to delete the notification rules.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/deleterule_hu7188e0b08ec870890cc1c619293ed15b_40498_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;189&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Delete notification rule
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Before deleting the notification rule, a deletion confirmation dialog box will pop up, and the deletion operation will be performed after the user confirms.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

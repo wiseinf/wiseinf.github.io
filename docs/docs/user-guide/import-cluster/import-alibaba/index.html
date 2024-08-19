@@ -1,0 +1,739 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="text/html" href="//localhost:1313/docs/user-guide/import-cluster/import-alibaba/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/import-cluster/import-alibaba/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Import Alibaba Cloud Cluster | Cluster Optimizer</title>
+<meta name="description" content="Describes the detailed steps to import an Alibaba Cloud cluster.
+">
+<meta property="og:url" content="//localhost:1313/docs/user-guide/import-cluster/import-alibaba/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="Import Alibaba Cloud Cluster">
+  <meta property="og:description" content="Describes the detailed steps to import an Alibaba Cloud cluster.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Import Alibaba Cloud Cluster">
+  <meta itemprop="description" content="Describes the detailed steps to import an Alibaba Cloud cluster.">
+  <meta itemprop="dateModified" content="2024-08-19T11:27:11+08:00">
+  <meta itemprop="wordCount" content="1127">
+  <meta itemprop="keywords" content="Cluster Optimizer">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Import Alibaba Cloud Cluster">
+  <meta name="twitter:description" content="Describes the detailed steps to import an Alibaba Cloud cluster.">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/price/"><span>Pricing</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/docs/user-guide/import-cluster/import-alibaba/">中文</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/docs/user-guide/import-cluster/import-alibaba/">中文</a></li>
+    </ul>
+</div>
+    </div>
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docssetup-li">
+  <a href="/docs/setup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetup"><span class="">Installation</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupsetup-using-kubectl-li">
+  <a href="/docs/setup/setup-using-kubectl/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-kubectl"><span class="">Install via kubectl</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupsetup-using-helm-li">
+  <a href="/docs/setup/setup-using-helm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-helm"><span class="">Install via Helm</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupupgrade-li">
+  <a href="/docs/setup/upgrade/" title="Install the commercial version" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupupgrade"><span class="">Install commercial version</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsuser-guide-li">
+  <a href="/docs/user-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guide"><span class="">User Manual</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsuser-guideimport-cluster-li">
+  <a href="/docs/user-guide/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-cluster"><span class="">Import cluster</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsuser-guideimport-clusterimport-alibaba-li">
+  <a href="/docs/user-guide/import-cluster/import-alibaba/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-clusterimport-alibaba"><span class="td-sidebar-nav-active-item">Import Alibaba Cloud Cluster</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guideimport-clusterimport-aws-li">
+  <a href="/docs/user-guide/import-cluster/import-aws/" title="Import AWS EKS Cluster" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-clusterimport-aws"><span class="">Import AWS EKS cluster</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidecluster-li">
+  <a href="/docs/user-guide/cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidecluster"><span class="">Cluster</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidenodegroup-li">
+  <a href="/docs/user-guide/nodegroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidenodegroup"><span class="">Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidenode-li">
+  <a href="/docs/user-guide/node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidenode"><span class="">Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidedisk-li">
+  <a href="/docs/user-guide/disk/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidedisk"><span class="">Disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidegpunode-li">
+  <a href="/docs/user-guide/gpunode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidegpunode"><span class="">GPU Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidepv-li">
+  <a href="/docs/user-guide/pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepv"><span class="">Persistent Volume</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guideapp-li">
+  <a href="/docs/user-guide/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideapp"><span class="">Application / Workload</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsuser-guidetasks-li">
+  <a href="/docs/user-guide/tasks/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidetasks"><span class="">Task Management</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsuser-guidepersonal-settings-li">
+  <a href="/docs/user-guide/personal-settings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settings"><span class="">Personal Settings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingssetting-li">
+  <a href="/docs/user-guide/personal-settings/setting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingssetting"><span class="">Personal Account Settings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingsclusteraccessaccount-li">
+  <a href="/docs/user-guide/personal-settings/clusteraccessaccount/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingsclusteraccessaccount"><span class="">Cluster Access Account</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsuser-guidemanagement-li">
+  <a href="/docs/user-guide/management/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagement"><span class="">Management Settings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidemanagementuser-li">
+  <a href="/docs/user-guide/management/user/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagementuser"><span class="">User Management</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidemanagementchannel-li">
+  <a href="/docs/user-guide/management/channel/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagementchannel"><span class="">Notification Channel</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidemanagementrule-li">
+  <a href="/docs/user-guide/management/rule/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagementrule"><span class="">Notification Rules</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsuser-guideoperations-li">
+  <a href="/docs/user-guide/operations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperations"><span class="">Manual Operation</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsadjust-nodegroup-li">
+  <a href="/docs/user-guide/operations/adjust-nodegroup/" title="Adjusting Node Group" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsadjust-nodegroup"><span class="">Adjust Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsadjust-node-li">
+  <a href="/docs/user-guide/operations/adjust-node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsadjust-node"><span class="">Adjustment Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsadjust-disk-li">
+  <a href="/docs/user-guide/operations/adjust-disk/" title="Adjust Disk" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsadjust-disk"><span class="">Adjust disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsdelete-pv-li">
+  <a href="/docs/user-guide/operations/delete-pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsdelete-pv"><span class="">Delete Persistent Volume</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconfiguration-li">
+  <a href="/docs/configuration/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsconfiguration"><span class="">Configuration</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsconfigurationcommand-line-li">
+  <a href="/docs/configuration/command-line/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsconfigurationcommand-line"><span class="">Command line parameters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsconfigurationconf-li">
+  <a href="/docs/configuration/conf/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsconfigurationconf"><span class="">Configuration parameters</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbestpractice-li">
+  <a href="/docs/bestpractice/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsbestpractice"><span class="">Best Practices</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsbestpracticeperiodic_notification-li">
+  <a href="/docs/bestpractice/periodic_notification/" title="Periodic notifications of optimization suggestions" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsbestpracticeperiodic_notification"><span class="">Periodically obtain notifications of optimization suggestions</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstroubleshooting-li">
+  <a href="/docs/troubleshooting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstroubleshooting"><span class="">Troubleshooting</span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/docs/user-guide/import-cluster/import-alibaba/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preconditions">Preconditions</a></li>
+    <li><a href="#import-steps">Import steps</a>
+      <ul>
+        <li><a href="#add-alibaba-cloud-account">Add Alibaba Cloud account</a></li>
+        <li><a href="#add-alibaba-cloud-cluster">Add Alibaba Cloud cluster</a></li>
+      </ul>
+    </li>
+    <li><a href="#next-steps">Next steps</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tag Cloud</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/application-optimizer/" data-taxonomy-term="application-optimizer"><span class="taxonomy-label">Application Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">29</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">21</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/user-guide/">User Manual</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/user-guide/import-cluster/">Import cluster</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Import Alibaba Cloud Cluster</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Import Alibaba Cloud Cluster</h1>
+  <div class="lead">Describes the detailed steps to import an Alibaba Cloud cluster.</div>
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
+    </ul>
+</div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This section describes the detailed steps for importing Alibaba Cloud clusters.</p>
+
+</div>
+
+<h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>Obtain the Alibaba Cloud Access Key and Access Key Secret and have the following permissions. For the specific application process, please refer to <a href="https://help.aliyun.com/document_detail/116401.htm">Create Access Key</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Services</th>
+<th>Permissions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud Server (ECS)</td>
+<td>ecs:DescribeDisks<br/> ecs:DescribeInstances<br/> ecs:DescribeRegions</td>
+<td>This permission is required to obtain disk, instance and region information</td>
+</tr>
+<tr>
+<td>Container Service Kubernetes version (CS)</td>
+<td>cs:DescribeClusterNodePools<br/> cs:DescribeClusterNodePoolDetail<br/> cs:DescribeClusters <br/> cs:DescribeClusterUserKubeconfig<br/> cs:DescribeClusterNodes</td>
+<td>This permission is required to obtain the cluster, node group, Node, Kubeconfig and other information</td>
+</tr>
+</tbody>
+</table>
+<p>The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to [Creating a custom permission policy through script editing mode](<a href="https://help.aliyun.com/zh/ram/user-">https://help.aliyun.com/zh/ram/user-</a> guide/create-a-custom-policy#section-kwn-gu8-48m)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Statement&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Effect&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Allow&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ecs:DescribeDisks&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ecs:DescribeInstances&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ecs:DescribeRegions&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Resource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Condition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Effect&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Allow&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterNodePools&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterNodePoolDetail&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusters&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterUserKubeconfig&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterNodes&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Resource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Condition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Alibaba Cloud Kubernetes cluster Kubeconfig. For cluster versions 1.22 and above, it is recommended to use ACK cluster. For details, please see <a href="https://help.aliyun.com/zh/ack/">Container Service Kubernetes version</a>.</p>
+</li>
+<li>
+<p>Kubeconfig requires the following permissions.</p>
+<table>
+<thead>
+<tr>
+<th>Resources</th>
+<th>Permissions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get node information</td>
+</tr>
+<tr>
+<td>Pod</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Pod information</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Namespace information</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Service information</td>
+</tr>
+<tr>
+<td>Persistent Volume<br/> Persistent Volume Claim</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Persistent Volume, Persistent Volume Claim information</td>
+</tr>
+<tr>
+<td>Deployment<br/>StatefulSet<br/>DaemonSet<br/><br/>ReplicaSet<br>ReplicationControllers<br/></td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Deployment, StatefulSet, DaemonSet, ReplicaSet , ReplicationContoller information</td>
+</tr>
+<tr>
+<td>Job<br/>CronJob</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>Get Job and CronJob information</td>
+</tr>
+</tbody>
+</table>
+<p>The permissions file is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">rbac.authorization.k8s.io/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ClusterRole</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">rules</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">nodes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">pods</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">pods/status</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumeclaims</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">namespaces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;apps/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">deployments</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">replicasets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">replicationcontollers</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">statefulsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">daemonsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;batch/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">jobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">cronjobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;storage/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>-<span style="color:#000">storageclasses</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>Prometheus monitoring or Thanos monitoring. This monitoring is used to provide monitoring data for nodes, containers, etc. in the cluster.</p>
+</li>
+</ol>
+<h2 id="import-steps">Import steps<a class="td-heading-self-link" href="#import-steps" aria-label="Heading self-link"></a></h2>
+<h3 id="add-alibaba-cloud-account">Add Alibaba Cloud account<a class="td-heading-self-link" href="#add-alibaba-cloud-account" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>Select the <code>Settings</code> menu and select the <code>Cloud Account</code> tab to enter the cloud account management page. By default, this page will display all cloud accounts managed by the platform in pages, including names and corresponding cloud service providers. It also provides an operation bar to facilitate users to perform corresponding operations, as shown in the figure below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png" width="900" height="295">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Cloud account management main page
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+<li>
+<p>On the cloud account management page, click the Add button to add a cloud account. The interface is as shown below. In this interface, the user enters the cloud account name, selects the corresponding cloud service provider, enters the Access Key and Access Key Secret, and clicks the OK button to complete adding the cloud account. After adding parameters, users can also click the Test Connectivity button to test whether the cloud account is correct. The platform currently supports Alibaba Cloud, which can be selected from the cloud service provider drop-down box. Access Key and Access Key Secret is the account information for accessing the cloud service. Please obtain it from the corresponding cloud service provider.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png" width="500" height="349">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Add cloud account interface
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+</ol>
+<h3 id="add-alibaba-cloud-cluster">Add Alibaba Cloud cluster<a class="td-heading-self-link" href="#add-alibaba-cloud-cluster" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>Select the <code>Settings</code> menu and select the cluster tab to enter the cluster management page. By default, this page will display all clusters managed by the platform in pages, including name, cluster ID, cluster region, Access Token name, corresponding cloud service provider and Prometheus address. It also provides an operation bar to facilitate users to perform corresponding operations. As shown below.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png" width="900" height="285">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Cluster management main page
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>Click the <code>Import Cluster</code> button to pop up the import dialog box, where you can import the cluster. There are 5 steps to import a cluster. Currently, only Alibaba Cloud clusters are supported.</p>
+<ol>
+<li>Set Alibaba Cloud access credentials</li>
+<li>Connect to the Kubernetes cluster</li>
+<li>Connect to Prometheus</li>
+<li>View configuration</li>
+<li>Complete</li>
+</ol>
+</li>
+<li>
+<p>The interface for setting Alibaba Cloud access credentials is as shown in the figure below. In the Alibaba Cloud access credentials interface, set the Alibaba Cloud access credentials by using existing credentials. Here, select the Alibaba Cloud account added in <code>Add Alibaba Cloud Account</code>, as shown in the figure below.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png" width="900" height="270">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Import cluster interface-set Alibaba Cloud access credentials
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>After setting the Alibaba Cloud access credentials, click the Next button to enter the page for connecting to the Kubernetes cluster, as shown in the figure below. The platform supports connecting to two types of Kubernetes clusters, including managed clusters and self-built clusters. The Connect Hosting Cluster page is shown in the figure below. Here we choose the managed cluster. The platform automatically obtains the user cluster through the cloud account. The user selects the corresponding cluster through the cluster drop-down box, enters the description field, selects whether to use the API Server private network address, selects whether to automatically refresh KubeConfig and the KubeConfig life cycle. Finally enter the node group label.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png" width="900" height="603">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Connect to Kubernetes cluster page
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>The connection page to Prometheus is as shown in the figure below. After the user enters information on this page, click the Next button to enter the view configuration page. The input information details are shown in the table below.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png" width="900" height="437">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    Connect to Prometheus page
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+The parameter description for connecting to Prometheus is as shown in the table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Whether Thanos</td>
+<td style="text-align:left">If the backend cluster is Thanos, this should be checked.</td>
+</tr>
+<tr>
+<td style="text-align:left">Prometheus address</td>
+<td style="text-align:left">Prometheus address, must be accessible.</td>
+</tr>
+<tr>
+<td style="text-align:left">Limit access rate</td>
+<td style="text-align:left">If you need the current platform&rsquo;s access rate to Prometheus, you should check this option.</td>
+</tr>
+<tr>
+<td style="text-align:left">Maximum number of concurrencies</td>
+<td style="text-align:left">The maximum number of concurrencies for the platform to access Prometheus.</td>
+</tr>
+<tr>
+<td style="text-align:left">Cluster label</td>
+<td style="text-align:left">Cluster label is used to filter the monitoring indicators of the cluster from Prometheus or Thanos</td>
+</tr>
+<tr>
+<td style="text-align:left">Cluster tag value</td>
+<td style="text-align:left">Cluster tag value is used to filter the monitoring indicators of the cluster from Prometheus or Thanos</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>View the configuration page as shown in the figure below. This page displays Alibaba Cloud access credentials, detailed parameters for connecting to the Kubernetes cluster and connecting to the Prometheus cluster, which is convenient for users to confirm. When the user completes the confirmation, click the Import button to enter the completion page.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png" width="900" height="631">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+View configuration page
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>The completed page is as shown below, and the submission status will be displayed on the page. Click Finish to complete the cluster import.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/import-cluster/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png" width="900" height="299">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Complete page
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps<a class="td-heading-self-link" href="#next-steps" aria-label="Heading self-link"></a></h2>
+<p>After importing the cluster, wait for a period of time (waiting for the optimization strategy to complete scheduling and execution), and then you can view optimization suggestions for the cluster in multiple dimensions, including:</p>
+<ul>
+<li><a href="/docs/user-guide/nodegroup/">Nodegroup</a></li>
+<li><a href="/docs/user-guide/node/">Node</a></li>
+<li><a href="/docs/user-guide/gpunode/">GPU node</a></li>
+<li><a href="/docs/user-guide/disk/">Disk</a></li>
+<li><a href="/docs/user-guide/pv/">Persistent volume</a></li>
+<li><a href="/docs/user-guide/application">Application</a></li>
+</ul>
+
+  <div class="section-index">
+    
+    
+    </div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Business Cooperation" aria-label="Business Cooperation">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Wiseinf Inc.</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

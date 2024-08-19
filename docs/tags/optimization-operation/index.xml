@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Optimization Operation</title>
+    <link>//localhost:1313/tags/optimization-operation/</link>
+    <description>Recent content in Optimization Operation on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/tags/optimization-operation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Manual Operation</title>
+      <link>//localhost:1313/docs/user-guide/operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/user-guide/operations/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Describes the cluster optimization operations provided by the cloud native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Cluster optimization operations mainly include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adjust node group&lt;/li&gt;
+&lt;li&gt;Adjust nodes&lt;/li&gt;
+&lt;li&gt;Adjust disk&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

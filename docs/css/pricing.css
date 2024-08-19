@@ -265,6 +265,11 @@
     box-shadow: 0 4px 16px rgba(255, 77, 121, 0.4)
 }
 
+.button-secondary {
+    color: black !important;
+    background: #ffa630;
+}
+
 .button-commingsoon {
     color: #fff !important;
     background: gray;

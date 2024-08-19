@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="text/html" href="/docs/setup/setup-using-helm/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/setup/setup-using-helm/index.xml">
-<meta name="robots" content="index, follow">
+<link rel="alternate" type="text/html" href="//localhost:1313/docs/setup/setup-using-helm/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/setup/setup-using-helm/index.xml">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -19,26 +19,30 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Setup using Helm | Cluster Optimizer</title>
-<meta name="description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes using Helm.
+<title>Install via Helm | Cluster Optimizer</title>
+<meta name="description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.
 ">
-<meta property="og:title" content="Setup using Helm" />
-<meta property="og:description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes using Helm.
-" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/setup/setup-using-helm/" /><meta property="og:site_name" content="Cluster Optimizer" />
+<meta property="og:url" content="//localhost:1313/docs/setup/setup-using-helm/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="Install via Helm">
+  <meta property="og:description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Setup using Helm">
-<meta itemprop="description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes using Helm.
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Setup using Helm"/>
-<meta name="twitter:description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes using Helm.
-"/>
+  <meta itemprop="name" content="Install via Helm">
+  <meta itemprop="description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.">
+  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
+  <meta itemprop="wordCount" content="775">
+  <meta itemprop="keywords" content="Cluster Optimizer">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Install via Helm">
+  <meta name="twitter:description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.">
 
 
 
 
-<link rel="preload" href="/scss/main.min.53e92f67aaf3e1a55dd8d6ec35a821d7ce9abe0cf359830a9ca5b09925e96f39.css" as="style">
-<link href="/scss/main.min.53e92f67aaf3e1a55dd8d6ec35a821d7ce9abe0cf359830a9ca5b09925e96f39.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -46,16 +50,8 @@
   crossorigin="anonymous"></script>
 
 
-<link href="/css/pricing.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-STB7S5D1BR');
-}
-</script>
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
   </head>
   <body class="td-section">
     <header>
@@ -65,7 +61,10 @@ if (!doNotTrack) {
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/price/"><span>Pricing</span></a>
@@ -115,53 +114,100 @@ if (!doNotTrack) {
     </div>
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
-  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docssetup-li">
-  <a href="/docs/setup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetup"><span class="">Setup</span></a>
+  <a href="/docs/setup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetup"><span class="">Installation</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssetupsetup-using-kubectl-li">
-  <a href="/docs/setup/setup-using-kubectl/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-kubectl"><span class="">Setup using kubectl</span></a>
+  <a href="/docs/setup/setup-using-kubectl/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-kubectl"><span class="">Install via kubectl</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docssetupsetup-using-helm-li">
-  <a href="/docs/setup/setup-using-helm/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-helm"><span class="td-sidebar-nav-active-item">Setup using Helm</span></a>
+  <a href="/docs/setup/setup-using-helm/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-helm"><span class="td-sidebar-nav-active-item">Install via Helm</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssetupupgrade-li">
+  <a href="/docs/setup/upgrade/" title="Install the commercial version" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupupgrade"><span class="">Install commercial version</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsimport-cluster-li">
-  <a href="/docs/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsimport-cluster"><span class="">Import Clusters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsuser-guide-li">
+  <a href="/docs/user-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guide"><span class="">User Manual</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsimport-clusterimport-aws-li">
-  <a href="/docs/import-cluster/import-aws/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsimport-clusterimport-aws"><span class="">Import Cluster from AWS</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsimport-clusterimport-alibaba-li">
-  <a href="/docs/import-cluster/import-alibaba/" title="Import Cluster from Alibaba Cloud" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsimport-clusterimport-alibaba"><span class="">Import Cluster from Alibaba Cloud </span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsuser-guideimport-cluster-li">
+  <a href="/docs/user-guide/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-cluster"><span class="">Import cluster</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideimport-clusterimport-alibaba-li">
+  <a href="/docs/user-guide/import-cluster/import-alibaba/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-clusterimport-alibaba"><span class="">Import Alibaba Cloud Cluster</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideimport-clusterimport-aws-li">
+  <a href="/docs/user-guide/import-cluster/import-aws/" title="Import AWS EKS Cluster" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-clusterimport-aws"><span class="">Import AWS EKS cluster</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
-  <a href="/docs/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Cluster Overview</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnodegroup-li">
-  <a href="/docs/nodegroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsnodegroup"><span class="">Node Group Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgpunode-li">
-  <a href="/docs/gpunode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsgpunode"><span class="">GPU Node Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnode-li">
-  <a href="/docs/node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsnode"><span class="">Node Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdisk-li">
-  <a href="/docs/disk/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsdisk"><span class="">Disk Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docspv-li">
-  <a href="/docs/pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docspv"><span class="">Persistent Volume Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsapp-li">
-  <a href="/docs/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsapp"><span class="">Application Optimization</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsactions-li">
-  <a href="/docs/actions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsactions"><span class="">Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidecluster-li">
+  <a href="/docs/user-guide/cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidecluster"><span class="">Cluster</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidenodegroup-li">
+  <a href="/docs/user-guide/nodegroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidenodegroup"><span class="">Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidenode-li">
+  <a href="/docs/user-guide/node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidenode"><span class="">Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidedisk-li">
+  <a href="/docs/user-guide/disk/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidedisk"><span class="">Disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidegpunode-li">
+  <a href="/docs/user-guide/gpunode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidegpunode"><span class="">GPU Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepv-li">
+  <a href="/docs/user-guide/pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepv"><span class="">Persistent Volume</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideapp-li">
+  <a href="/docs/user-guide/app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideapp"><span class="">Application / Workload</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidetasks-li">
+  <a href="/docs/user-guide/tasks/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidetasks"><span class="">Task Management</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsuser-guidepersonal-settings-li">
+  <a href="/docs/user-guide/personal-settings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settings"><span class="">Personal Settings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingssetting-li">
+  <a href="/docs/user-guide/personal-settings/setting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingssetting"><span class="">Personal Account Settings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingsclusteraccessaccount-li">
+  <a href="/docs/user-guide/personal-settings/clusteraccessaccount/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingsclusteraccessaccount"><span class="">Cluster Access Account</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsuser-guidemanagement-li">
+  <a href="/docs/user-guide/management/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagement"><span class="">Management Settings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidemanagementuser-li">
+  <a href="/docs/user-guide/management/user/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagementuser"><span class="">User Management</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidemanagementchannel-li">
+  <a href="/docs/user-guide/management/channel/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagementchannel"><span class="">Notification Channel</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidemanagementrule-li">
+  <a href="/docs/user-guide/management/rule/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidemanagementrule"><span class="">Notification Rules</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsuser-guideoperations-li">
+  <a href="/docs/user-guide/operations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperations"><span class="">Manual Operation</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsadjust-nodegroup-li">
+  <a href="/docs/user-guide/operations/adjust-nodegroup/" title="Adjusting Node Group" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsadjust-nodegroup"><span class="">Adjust Node Group</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsadjust-node-li">
+  <a href="/docs/user-guide/operations/adjust-node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsadjust-node"><span class="">Adjustment Node</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsadjust-disk-li">
+  <a href="/docs/user-guide/operations/adjust-disk/" title="Adjust Disk" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsadjust-disk"><span class="">Adjust disk</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideoperationsdelete-pv-li">
+  <a href="/docs/user-guide/operations/delete-pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideoperationsdelete-pv"><span class="">Delete Persistent Volume</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconfiguration-li">
+  <a href="/docs/configuration/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsconfiguration"><span class="">Configuration</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsactionsadjust-nodegroup-li">
-  <a href="/docs/actions/adjust-nodegroup/" title="Adjusting Node Group" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsactionsadjust-nodegroup"><span class="">Adjust Node Group</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsactionsadjust-node-li">
-  <a href="/docs/actions/adjust-node/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsactionsadjust-node"><span class="">Adjustment Node</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsactionsadjust-disk-li">
-  <a href="/docs/actions/adjust-disk/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsactionsadjust-disk"><span class="">Adjust Disk</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsactionsdelete-pv-li">
-  <a href="/docs/actions/delete-pv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsactionsdelete-pv"><span class="">Delete Persistent Volume</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsconfigurationcommand-line-li">
+  <a href="/docs/configuration/command-line/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsconfigurationcommand-line"><span class="">Command line parameters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsconfigurationconf-li">
+  <a href="/docs/configuration/conf/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsconfigurationconf"><span class="">Configuration parameters</span></a>
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbestpractice-li">
+  <a href="/docs/bestpractice/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsbestpractice"><span class="">Best Practices</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsbestpracticeperiodic_notification-li">
+  <a href="/docs/bestpractice/periodic_notification/" title="Periodic notifications of optimization suggestions" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsbestpracticeperiodic_notification"><span class="">Periodically obtain notifications of optimization suggestions</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstroubleshooting-li">
+  <a href="/docs/troubleshooting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstroubleshooting"><span class="">Troubleshooting</span></a>
 </li>
   </ul>
 </li>
@@ -180,9 +226,9 @@ if (!doNotTrack) {
         <nav id="TableOfContents">
   <ul>
     <li><a href="#preconditions">Preconditions</a></li>
-    <li><a href="#deploy-cluster-optimizer">Deploy <strong>Cluster Optimizer</strong></a></li>
-    <li><a href="#using-a-deployed-database">Using a Deployed Database</a></li>
-    <li><a href="#next-import-a-cluster">Next: Import a cluster</a></li>
+    <li><a href="#deploy-application">Deploy application</a></li>
+    <li><a href="#use-deployed-database">Use deployed database</a></li>
+    <li><a href="#next-step-import-the-cluster">Next step: Import the cluster</a></li>
   </ul>
 </nav>
       </div>
@@ -190,23 +236,51 @@ if (!doNotTrack) {
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="/tags/application-optimization/" data-taxonomy-term="application-optimization"><span class="taxonomy-label">Application Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">18</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/cluster-overview/" data-taxonomy-term="cluster-overview"><span class="taxonomy-label">Cluster Overview</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/node-optimization/" data-taxonomy-term="node-optimization"><span class="taxonomy-label">Node Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/setup/" data-taxonomy-term="setup"><span class="taxonomy-label">Setup</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/application-optimizer/" data-taxonomy-term="application-optimizer"><span class="taxonomy-label">Application Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">29</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">16</span></a></li>
-        <li><a class="taxonomy-term" href="/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">21</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   
@@ -219,30 +293,28 @@ if (!doNotTrack) {
             <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="/docs/">Docs</a></li>
+    <a href="/docs/">Documentation</a></li>
   <li class="breadcrumb-item">
-    <a href="/docs/setup/">Setup</a></li>
+    <a href="/docs/setup/">Installation</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Setup using Helm</li>
+    Install via Helm</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Setup using Helm</h1>
-  <div class="lead">Instructions for installing the <strong>Cluster Optimizer</strong>  on Kubernetes using Helm.</div>
+	<h1>Install via Helm</h1>
+  <div class="lead">Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.</div>
 	<header class="article-meta">
 		<div class="taxonomy taxonomy-terms-article taxo-tags">
   <h5 class="taxonomy-title">Tags:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
-    <li><a class="taxonomy-term" href="/tags/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span></a></li>
-    <li><a class="taxonomy-term" href="/tags/setup/" data-taxonomy-term="setup"><span class="taxonomy-label">Setup</span></a></li>
+    <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
     </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
   <h5 class="taxonomy-title">Categories:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="/categories/%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96/" data-taxonomy-term="%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96"><span class="taxonomy-label">集群优化</span></a></li>
+    <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
     </ul>
 </div>
 
@@ -250,7 +322,7 @@ if (!doNotTrack) {
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Instructions for installing the <strong>Cluster Optimizer</strong>  on Kubernetes using Helm.</p>
+<p>This page describes the detailed steps for installing <strong>Cluster Optimizer</strong> via Helm.</p>
 
 </div>
 
@@ -258,104 +330,107 @@ if (!doNotTrack) {
 <ul>
 <li>Mysql database, version 5.7 and above</li>
 <li>Kubernetes cluster, version 1.22 and above</li>
-<li>The certificate of the Kubernetes cluster enables the creation of the wiseinf-system namespace and the creation of resources such as Deployment, ConfigMap, Service, etc. under this namespace.</li>
-<li>Helm, version 3.0.0 and above</li>
+<li>The certificate of the Kubernetes cluster can create the <code>wiseinf-system</code> namespace and create Deployment, ConfigMap, Service and other resources under this namespace</li>
+<li>Helm, 3.0.0 and above recommended</li>
 </ul>
-<h2 id="deploy-cluster-optimizer">Deploy <strong>Cluster Optimizer</strong><a class="td-heading-self-link" href="#deploy-cluster-optimizer" aria-label="Heading self-link"></a></h2>
+<h2 id="deploy-application">Deploy application<a class="td-heading-self-link" href="#deploy-application" aria-label="Heading self-link"></a></h2>
 <ol>
 <li>
-<p>To add the Helm repository <code>cluster-optimizer</code>, use the following command:</p>
+<p>Add the Helm warehouse <code>cluster-optimizer</code> through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm repo add cluster-optimizer https://wiseinf.github.io/cluster-optimizer/
 </span></span></code></pre></div></li>
 <li>
-<p>通过如下命令更新仓库：To update the repository, use the following command:</p>
+<p>Update the warehouse through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm repo update
 </span></span></code></pre></div></li>
 <li>
-<p>To view the charts contained in the repository <code>cluster-optimizer</code>, use the following command: 通过如下命令查看仓库<code>cluster-optimizer</code>包含的Charts：</p>
+<p>View the Charts contained in the warehouse <code>cluster-optimizer</code> through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm search repo cluster-optimizer
-</span></span></code></pre></div><p>The output is as follows: 输出如下：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME                                    CHART VERSION   APP VERSION     DESCRIPTION                       
-</span></span><span style="display:flex;"><span>cluster-optimizer/cluster-optimizer     0.1.0           1.1.0           A Helm chart <span style="color:#204a87;font-weight:bold">for</span> cluster optimizer
-</span></span></code></pre></div><p>It is known that the repository contains a chart named cluster-optimizer/cluster-optimizer. 可知，仓库中包括一个名为<code>cluster-optimizer/cluster-optimizer</code>的Chart。</p>
+</span></span></code></pre></div><p>The output is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME CHART VERSION APP VERSION DESCRIPTION
+</span></span><span style="display:flex;"><span>cluster-optimizer/cluster-optimizer 0.1.0 1.1.0 A Helm chart <span style="color:#204a87;font-weight:bold">for</span> cluster optimizer
+</span></span></code></pre></div><p>It can be seen that the warehouse includes a Chart named <code>cluster-optimizer/cluster-optimizer</code>.</p>
 </li>
 <li>
-<p>To install the demo chart, use the following command: 通过如下命令安装<code>demo</code> Chart：</p>
+<p>Install the <code>demo</code> Chart through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -n wiseinf-system --create-namespace
-</span></span></code></pre></div><p>Here, -n wiseinf-system indicates installing demo under the namespace wiseinf-system, and the &ndash;create-namespace parameter indicates creating this namespace. The output is as follows:
-其中，<code>-n wiseinf-system</code>表示在名称空间<code>wiseinf-system</code>下安装<code>demo</code>， 参数<code>--create-namespace</code>表示创建此名称空间，输出如下：</p>
+</span></span></code></pre></div><p>Among them, <code>-n wiseinf-system</code> means to install <code>demo</code> under the namespace <code>wiseinf-system</code>, and the parameter <code>--create-namespace</code> means to create this namespace. The output is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME: demo
 </span></span><span style="display:flex;"><span>LAST DEPLOYED: Thu Mar <span style="color:#0000cf;font-weight:bold">28</span> 15:54:42 <span style="color:#0000cf;font-weight:bold">2024</span>
 </span></span><span style="display:flex;"><span>NAMESPACE: default
 </span></span><span style="display:flex;"><span>STATUS: deployed
 </span></span><span style="display:flex;"><span>REVISION: <span style="color:#0000cf;font-weight:bold">1</span>
 </span></span><span style="display:flex;"><span>...
-</span></span></code></pre></div><p>Helm has successfully deployed the demo chart. 说明Helm已经成功部署<code>demo</code> Chart。</p>
+</span></span></code></pre></div><p>It means that Helm has successfully deployed the <code>demo</code> Chart.</p>
 </li>
 <li>
-<p>Check if <code>optimizer</code> is running using following command: 通过如下命令检查<code>optimizer</code>是否正常运行：</p>
+<p>Check whether <code>optimizer</code> is running normally through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
-</span></span></code></pre></div><p>The output should look like this: 输出如下：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME                                                  READY   STATUS    RESTARTS   AGE
-</span></span><span style="display:flex;"><span>cluster-optimizer-demo-7bfdfdf954-2cgqb               2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          108s
-</span></span><span style="display:flex;"><span>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7   1/1     Running   <span style="color:#0000cf;font-weight:bold">0</span>          108s
-</span></span></code></pre></div><p>From the output, it can be seen that Helm deployed two pods. Among them, cluster-optimizer-demo-7bfdfdf954-2cgqb is the pod of Cluster Optimizer, and cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7 is its dependent MySQL database.
-从输出可以看到，Helm部署了两个Pod，其中<code>cluster-optimizer-demo-7bfdfdf954-2cgqb</code>是 Cluster Optimizer的Pod， <code>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7</code>是其依赖的Mysql数据库。</p>
+</span></span></code></pre></div><p>The output is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME READY STATUS RESTARTS AGE
+</span></span><span style="display:flex;"><span>cluster-optimizer-demo-7bfdfdf954-2cgqb 2/2 Running <span style="color:#0000cf;font-weight:bold">0</span> 108s
+</span></span><span style="display:flex;"><span>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7 1/1 Running <span style="color:#0000cf;font-weight:bold">0</span> 108s
+</span></span></code></pre></div><p>As you can see from the output, Helm has deployed two Pods, of which <code>cluster-optimizer-demo-7bfdfdf954-2cgqb</code> is the Pod of Cluster Optimizer, and <code>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7</code> is the Mysql database it depends on. .</p>
 <blockquote>
-<p>Note: If you intend to use a deployed database, please refer to <a href="#using-a-deployed-database">Using a Deployed Database</a>.</p>
+<p>Note: If you want to use a deployed database, please see [Use Deployed Database](#Use Deployed Database).</p>
 </blockquote>
 </li>
 <li>
-<p>reate a <strong>port-forward</strong> to access <code>optimizer</code> service: 通过如下命令创建 <strong>port-forward</strong> 来访问 <code>optimizer</code> 服务：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80  -n wiseinf-system
+<p>Create <strong>port-forward</strong> to access the <code>optimizer</code> service through the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
 </span></span></code></pre></div></li>
 <li>
-<p>Open your browser and visit url <code>http://localhost:8000/</code>.</p>
+<p>Open the browser and visit the address <code>http://localhost:8000/</code>.</p>
 </li>
 <li>
-<p>If you can see the home page of <strong>Cluster Optimizer</strong>, you have successfully setup <code>optimizer</code>.</p>
+<p>If you can see the <strong>Cluster Optimizer</strong> homepage, the application <strong>Cluster Optimizer</strong> is deployed successfully.</p>
 </li>
 <li>
-<p>To delete the <code>demo</code> chart, using following command:通过命令可以删除<code>demo</code> Chart：</p>
+<p>You can delete the <code>demo</code> Chart through the command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>helm uninstall demo
 </span></span></code></pre></div></li>
 </ol>
-<h2 id="using-a-deployed-database">Using a Deployed Database<a class="td-heading-self-link" href="#using-a-deployed-database" aria-label="Heading self-link"></a></h2>
-<p>If you want to use a deployed database or want to deploy the database by yourself, please follow the instructions below:</p>
-<blockquote>
-<p>We assume the installation script library has been cloned into <code>setup</code> subdirectory of user&rsquo;s home directory.</p>
-</blockquote>
+<h2 id="use-deployed-database">Use deployed database<a class="td-heading-self-link" href="#use-deployed-database" aria-label="Heading self-link"></a></h2>
+<p>If you want to use the deployed database and use a new username and password to access <strong>Cluster Optimizer</strong>, please refer to the following steps:</p>
 <ol>
 <li>
-<p>Clone installation script into local using git:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    <span style="color:#204a87">cd</span> ~
-</span></span><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
-</span></span></code></pre></div></li>
+<p>Open the command line console and clone the installation script to the local computer through the following command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
+</span></span></code></pre></div><blockquote>
+<ol>
 <li>
-<p>Login into mysql database using:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
-</span></span></code></pre></div><p>The 127.0.0.1 is the host address of the MySQL database, which you need to replace with the actual address you are using.</p>
-<blockquote>
-<p>Note: Please make sure the database is accessible from the kubernetes cluster.</p>
+<p>If you use the Gitee warehouse address, you need to replace <code>https://github.com/wiseinf/setup.git</code> in the above command with <code>https://gitee.com/wiseinf/setup.git</code>.</p>
+</li>
+<li>
+<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it has not been cloned to the user&rsquo;s home directory, the file path in the command needs to be adjusted according to the actual situation.</p>
+</li>
+</ol>
 </blockquote>
 </li>
 <li>
-<p>Create database schema <code>optconf</code>(used to store configurations) and <code>optdata</code>(used to store data)</p>
+<p>Execute the <code>mysql</code> command on the command line console to log in to the Mysql database. <code>127.0.0.1</code> is the Mysql database host address. You need to replace it with the actual address you use.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
+</span></span></code></pre></div><blockquote>
+<p>Note: If you use a remote database, make sure the database is accessible from the Kubernetes cluster.</p>
+</blockquote>
+</li>
+<li>
+<p>Create database schema <code>optconf</code> (optimization configuration library) and <code>optdata</code> (optimization database).</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
 </span></span></code></pre></div><blockquote>
-<p>Note: Please be aware of the risk of data loss. The script will drop schema <code>optconf</code> and <code>optdata</code> first and then create new schemas. If you already have an <code>optconf</code> or an <code>optdata</code> schema, your data in this schema will be lost.</p>
+<p>Note: Please be aware of the risk of data loss. If the <code>optconf</code> library and <code>optdata</code> library already exist in the mysql database, the above script will first delete the library and then create a new library.</p>
 </blockquote>
 </li>
 <li>
-<p>Create a new user and grant permission to the new user. The user name is <code>optimizer</code>, password is <code>Optimizer~</code>, you can change it to your own.</p>
+<p>Create a new username and password, and set appropriate permissions for them. The username in the script is <code>optimizer</code> and the password is <code>Optimizer~</code>. You can adjust it according to your needs.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
 </span></span></code></pre></div></li>
 <li>
-<p>Create a file <code>values.yaml</code> and edit its content as follows:</p>
+<p>Create the file <code>values.yaml</code> and edit its content as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">optimizedb</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">conf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">conf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optconf</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">schema:optconf</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -365,16 +440,16 @@ if (!doNotTrack) {
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Here, <code>optimizedb.conf</code> provides configuration information for the <code>optconf</code> schema, while <code>optimizedb.data</code> provides configuration information for the <code>optdata</code> schema. In which, <code>dbHost</code> is the database address, <code>schema</code> is the database schema, <code>port</code> is the port, and <code>user</code> and <code>password</code> are the username and password respectively.</p>
+</span></span></span></code></pre></div><p>Among them, <code>dbHost</code> is the database address, <code>schema</code> is the database Schema, <code>port</code> is the port, <code>user</code> and <code>password</code> are the username and password respectively.</p>
 </li>
 <li>
-<p>Install the <code>demo</code> chart using the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -f values.yaml -n wiseinf-system
-</span></span></code></pre></div><p>You can also adjust the database settings by using <code>helm upgrade</code> command as follows:</p>
+<p>Install the <code>demo</code> Chart through the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
+</span></span></code></pre></div><p>You can also adjust the database settings by upgrading the original deployment:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm upgrade demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
 </span></span></code></pre></div></li>
 <li>
-<p>Restart the application and check the log output of the <strong>Cluster Optimizer</strong> to verify if the database configuration information matches your expectations. For example:</p>
+<p>Restart the application, check the log output of the <strong>Cluster Optimizer</strong> Pod (as shown below), and check whether the database configuration information is consistent with your expectations.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optconf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -391,14 +466,14 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>At the same time, also check for any database-related errors. If there are no relevant errors, it indicates that the new database has been successfully used.</p>
+</span></span></code></pre></div><p>At the same time, also check whether there are any database-related errors. If there are no related errors, it proves that a new database has been used.</p>
 </li>
 </ol>
-<h2 id="next-import-a-cluster">Next: Import a cluster<a class="td-heading-self-link" href="#next-import-a-cluster" aria-label="Heading self-link"></a></h2>
-<p>Next, you can import a cluster and view its optimization recommendations. For details, please visit following links:</p>
+<h2 id="next-step-import-the-cluster">Next step: Import the cluster<a class="td-heading-self-link" href="#next-step-import-the-cluster" aria-label="Heading self-link"></a></h2>
+<p>Next, you can add a cluster and view its related optimization recommendations. For details, see:</p>
 <ul>
-<li><a href="/docs/import-cluster/import-aws/">Import Cluster from AWS</a></li>
-<li><a href="/docs/import-cluster/import-alibaba/">Import Cluster from Alibaba Cloud</a></li>
+<li><a href="/docs/user-guide/import-cluster/import-aws/">Import AWS EKS cluster</a></li>
+<li><a href="/docs/user-guide/import-cluster/import-alibaba/">Import Alibaba Cloud Cluster</a></li>
 </ul>
 
   <div class="section-index">
@@ -454,8 +529,8 @@ if (!doNotTrack) {
 </footer>
 
     </div>
-    <script src="/js/main.min.1f48fc7981e4db829114650dc98d270b6642a46c1e4ebddb8389ff0a463a6328.js" integrity="sha256-H0j8eYHk24KRFGUNyY0nC2ZCpGweTr3bg4n/CkY6Yyg=" crossorigin="anonymous"></script>
-<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

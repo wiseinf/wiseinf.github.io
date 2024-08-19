@@ -1,0 +1,864 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/docs/configuration/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/configuration/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Configuration | Cluster Optimizer</title>
+<meta name="description" content="Describes the configuration parameters of Cluster Optimizer.
+">
+<meta property="og:url" content="//localhost:1313/docs/configuration/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="Configuration">
+  <meta property="og:description" content="Describes the configuration parameters of Cluster Optimizer.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Configuration">
+  <meta itemprop="description" content="Describes the configuration parameters of Cluster Optimizer.">
+  <meta itemprop="dateModified" content="2024-05-29T15:40:31+08:00">
+  <meta itemprop="wordCount" content="7">
+  <meta itemprop="keywords" content="Cluster Optimizer,Configuration">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Configuration">
+  <meta name="twitter:description" content="Describes the configuration parameters of Cluster Optimizer.">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/price/"><span>Pricing</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/docs/configuration/">中文</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/configuration/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Configuration</h1>
+<div class="lead">Describes the configuration parameters of Cluster Optimizer.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-e4bda68c43e8b03cfc2df13fb79126a5">Command line parameters</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-c439e7927d82c6927c9d44d1f30ae9b7">Configuration parameters</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>Describes the configuration parameters of Cluster Optimizer.</p>
+
+</div>
+
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-e4bda68c43e8b03cfc2df13fb79126a5">1 - Command line parameters</h1>
+    <div class="lead">Describes the command line parameters of the cloud native cluster optimization platform.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Describes the command line parameters of the cloud native cluster optimization platform.</p>
+
+</div>
+
+<h2 id="command-line-parameters">Command line parameters<a class="td-heading-self-link" href="#command-line-parameters" aria-label="Heading self-link"></a></h2>
+<p>You can get the usage of <code>Cluster Optimizer</code> through <code>--help</code>, as follows:</p>
+<pre tabindex="0"><code>$optimizer --help
+Usage:
+  optimizer optimizer [flags]
+
+Flags:
+      --features stringArray Enable features, available features are [APIServer, Optimizer]
+  -h, --help help for optimizer
+
+Global Flags:
+      --config string config file (default is $OPTIMIZER_HOME/conf/cluster-optimizer.yaml)
+      --log-enable-color Enable color in log
+      --log-enable-console Enable log to console
+      --log-format string Set the log format (json or text) (default &#34;json&#34;)
+      --log-level string Set the log level (debug, info, warn, error, fatal) (default &#34;info&#34;)
+</code></pre><p>The parameters are described in detail below.</p>
+<h2 id="parameter-description">Parameter description<a class="td-heading-self-link" href="#parameter-description" aria-label="Heading self-link"></a></h2>
+<h3 id="--help"><code>--help</code><a class="td-heading-self-link" href="#--help" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>--help</code> provides command line usage help.</p>
+<h3 id="-f---features"><code>-f, --features</code><a class="td-heading-self-link" href="#-f---features" aria-label="Heading self-link"></a></h3>
+<p>The parameters <code>-f, --features</code> indicate the features started by the cluster optimization platform, where <code>APIServer</code> means only providing API services, and <code>Optimizer</code> means starting the optimizer features.</p>
+<p>The default value is <code>APIServer,Optimizer</code>, which means that the automatic expansion and contraction features and the virtual capacity feature are enabled at the same time.</p>
+<h3 id="--config"><code>--config</code><a class="td-heading-self-link" href="#--config" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>--config</code> indicates the configuration file path used by the cluster optimization platform. For its configuration, please refer to <a href="/docs/configuration/conf/">Configuration File</a></p>
+<h3 id="--log-enable-color"><code>--log-enable-color</code><a class="td-heading-self-link" href="#--log-enable-color" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>--log-enable-color</code> indicates whether to enable the color attribute in the log. In the console interface, enabling this feature can improve readability. The default value is <code>false</code>.</p>
+<h3 id="--log-enable-console"><code>--log-enable-console</code><a class="td-heading-self-link" href="#--log-enable-console" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>--log-enable-console</code> indicates whether to enable the console log. The console log can be easily accessed through the <code>kubectl log</code> command. The default value is <code>false</code>.</p>
+<h3 id="--log-format"><code>--log-format</code><a class="td-heading-self-link" href="#--log-format" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>--log-format</code> is used to set the log format. The available log format is <code>json</code> or <code>text</code>. The default value is <code>json</code>.</p>
+<h3 id="--log-level"><code>--log-level</code><a class="td-heading-self-link" href="#--log-level" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>--log-level</code> is used to set the log level. Optional values ​​include <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>fatal</code>. The default value is <code>info</code>.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c439e7927d82c6927c9d44d1f30ae9b7">2 - Configuration parameters</h1>
+    <div class="lead">Describes the configuration parameters of the cloud native cluster optimization platform configuration file.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Describes the configuration parameters of the cloud native cluster optimization platform configuration file.</p>
+
+</div>
+
+<h2 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h2>
+<p>The cloud-native cluster optimization platform must rely on configuration files to run. The configuration file location can be specified through the command line parameter <code>--config</code>, for example: <code>--config=conf/cluster-optimizer.yaml</code>. The default path is <code>conf/cluster-optimizer.yaml</code></p>
+<p>The configuration file format is YAML format, the example is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">7070</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">engine</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">maxQueryDuration</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">4h</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">optconf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dataSource</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;root:optimizer@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">maxOpenConns</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">optdata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dataSource</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;root:optimizer@tcp(127.0.0.1:3306)/optdata?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">maxOpenConns</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">optimize</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">defaultCron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;0 0 1 * * ?&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">strategyConfigs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;OOM&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;Resource Recommendation&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;Low Utilization Node&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;No Quota&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">sms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">notification</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">templateBasePath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">templates/notification</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h2 id="configuration-parameters">Configuration parameters<a class="td-heading-self-link" href="#configuration-parameters" aria-label="Heading self-link"></a></h2>
+<h3 id="serverport"><code>server.port</code><a class="td-heading-self-link" href="#serverport" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>server.port</code> is the external service port of the cloud native cluster optimization platform. The default value is <code>7070</code>.</p>
+<h3 id="enginemaxqueryduration"><code>engine.maxQueryDuration</code><a class="td-heading-self-link" href="#enginemaxqueryduration" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>engine.maxQueryDuration</code> sets the maximum query period of the query measurement server (such as Prometheus). The default value is 1 day. When the query time range exceeds the maximum query period, it will be divided into multiple query windows for separate queries, thereby reducing the pressure on the server.</p>
+<h3 id="optconf"><code>optconf</code><a class="td-heading-self-link" href="#optconf" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>optconf</code> is used to configure the optimization configuration library.</p>
+<p>Its sub-parameters include <code>dataSource.name</code> and <code>maxOpenConns</code>, which are explained below.</p>
+<h4 id="datasourcename"><code>dataSource.name</code><a class="td-heading-self-link" href="#datasourcename" aria-label="Heading self-link"></a></h4>
+<p>The parameter <code>dataSource.name</code> is used to set the Mysql data source name, for example <code>root:optimizer@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local</code>.
+Among them, <code>createDatabaseIfNotExist</code> means that when the database does not exist, create this database first.</p>
+<h4 id="maxopenconns"><code>maxOpenConns</code><a class="td-heading-self-link" href="#maxopenconns" aria-label="Heading self-link"></a></h4>
+<p>The parameter <code>maxOpenConns</code> sets the maximum number of open connections to the database.</p>
+<h3 id="optdata"><code>optdata</code><a class="td-heading-self-link" href="#optdata" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>optdata</code> is used to configure the optimization database.</p>
+<p>Its sub-parameters include <code>dataSource.name</code> and <code>maxOpenConns</code>, whose meanings are consistent with the corresponding sub-parameters of <code>optconf</code> and will not be explained again.</p>
+<h3 id="optimize"><code>optimize</code><a class="td-heading-self-link" href="#optimize" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>optimize</code> is used to set parameters related to the optimization engine. Its sub-parameter settings will be described below.</p>
+<h4 id="defaultcron"><code>defaultCron</code><a class="td-heading-self-link" href="#defaultcron" aria-label="Heading self-link"></a></h4>
+<p>The parameter <code>defaultCron</code> is used to set the default scheduling parameters of the optimization engine. The default value is <code>0 0 1 * * ?</code> (executed at 1 am every day),</p>
+<h4 id="enabled"><code>enabled</code><a class="td-heading-self-link" href="#enabled" aria-label="Heading self-link"></a></h4>
+<p>The parameter <code>enabled</code> sets whether to enable the optimization engine. The default value is <code>true</code>.</p>
+<h4 id="strategyconfigs"><code>strategyConfigs</code><a class="td-heading-self-link" href="#strategyconfigs" aria-label="Heading self-link"></a></h4>
+<p>The parameter <code>strategyConfigs</code> is used to configure the strategy configuration of the optimization engine. It is configured as a key-value pair. The key is the name of the policy and the value is the configuration of the policy.</p>
+<p>The policy name is a string, and the content of the policy value is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;0 0 1 * * ?&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">parameters</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">key1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">value1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">key2</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">value2</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Among them, <code>enabled</code> indicates whether to enable the optimization strategy, and the default value is <code>true</code>. <code>cron</code> sets the scheduling parameters of this policy. <code>parameters</code> provides configuration for the strategy. Different strategies have different parameters, which are explained below.</p>
+<ol>
+<li>Node Group Recommendation Strategy <code>Node Group Recommendation</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.7</td>
+<td>The maximum CPU utilization of the node group, the value range is <em>(0,1]</em></td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>The maximum memory utilization of the node group, the value range is <em>(0,1]</em></td>
+</tr>
+<tr>
+<td><code>cpuMinCores</code></td>
+<td>2</td>
+<td>Recommended instance type CPU minimum value, unit core, must be greater than or equal to 1</td>
+</tr>
+<tr>
+<td><code>memoryMinGBs</code></td>
+<td>4</td>
+<td>Recommended minimum instance type memory, in GB, must be greater than or equal to 1</td>
+</tr>
+<tr>
+<td><code>recommendTopK</code></td>
+<td>5</td>
+<td>The maximum number of recommended instance types, the value range is <em>[1,10]</em></td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>Node recommendation<code>Node Recommendation</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24 hours</td>
+<td>Time range, the value is Duration.</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24 hours</td>
+<td>Time range step, the value is Duration.</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2 minutes</td>
+<td>Query the resolution, the value is Duration.</td>
+</tr>
+<tr>
+<td><code>cpuStep</code></td>
+<td>1</td>
+<td>CPU minimum step size, unit core</td>
+</tr>
+<tr>
+<td><code>memoryStep</code></td>
+<td>1</td>
+<td>Minimum memory step size, unit GB</td>
+</tr>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.6</td>
+<td>Node maximum CPU utilization</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>The maximum memory utilization of the node</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>Low utilization node <code>Underutilized Node</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24 hours</td>
+<td>Time range, the value is Duration</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24 hours</td>
+<td>The range of each batch, the value is Duration</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2 minutes</td>
+<td>Query resolution</td>
+</tr>
+<tr>
+<td><code>cpuAvgThreshold</code></td>
+<td>0.2</td>
+<td>CPU average utilization threshold</td>
+</tr>
+<tr>
+<td><code>cpuMaxThreshold</code></td>
+<td>0.6</td>
+<td>CPU maximum utilization threshold</td>
+</tr>
+<tr>
+<td><code>memoryAvgThreshold</code></td>
+<td>0.3</td>
+<td>Average memory utilization threshold</td>
+</tr>
+<tr>
+<td><code>memoryMaxThreshold</code></td>
+<td>0.6</td>
+<td>Maximum memory utilization threshold</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>Low utilization GPU node <code>Underutilized GPU Node</code>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24</td>
+<td>Time range, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>Query resolution in minutes</td>
+</tr>
+<tr>
+<td><code>gpuAvgThreshold</code></td>
+<td>0.2</td>
+<td>GPU average utilization threshold</td>
+</tr>
+<tr>
+<td><code>gpuMaxThreshold</code></td>
+<td>0.8</td>
+<td>GPU maximum utilization threshold</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>Low utilization disk <code>Underutilized Disk</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24</td>
+<td>Time range, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>Query resolution in minutes</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>0.3</td>
+<td>The disk utilization threshold, below which we consider the utilization to be low.</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>Unused persistent storage volume <code>Unused PV</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boundDuration</code></td>
+<td>1</td>
+<td>Persistent storage volume binding period, default value is 1 hour. If it is not bound during the persistent storage volume binding cycle and is not associated with a Persistent Volume Claim, the storage volume is considered unused.</td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li>Low utilization persistent storage volume <code>Underutilized PV</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24</td>
+<td>Time range, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>Query resolution in minutes</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>0.3</td>
+<td>PV utilization threshold, below which we consider the utilization to be low.</td>
+</tr>
+</tbody>
+</table>
+<ol start="8">
+<li>Application resource recommendation<code>Resource Recommendation</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24*8</td>
+<td>Time range, the value is Duration, the default value is 8 days</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>Query resolution in minutes</td>
+</tr>
+<tr>
+<td><code>cpuStep</code></td>
+<td>0.05</td>
+<td>CPU minimum step size, unit core</td>
+</tr>
+<tr>
+<td><code>memoryStep</code></td>
+<td>0.1</td>
+<td>Minimum memory step size, unit GB</td>
+</tr>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.6</td>
+<td>Node maximum CPU utilization</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>The maximum memory utilization of the node</td>
+</tr>
+</tbody>
+</table>
+<ol start="9">
+<li>The application does not set resource quota <code>Resource Quota Unset</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24*8</td>
+<td>Time range, the value is Duration, the default value is 8 days</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>Query resolution in minutes</td>
+</tr>
+<tr>
+<td><code>cpuStep</code></td>
+<td>0.05</td>
+<td>CPU minimum step size, unit core</td>
+</tr>
+<tr>
+<td><code>memoryStep</code></td>
+<td>0.1</td>
+<td>Minimum memory step size, unit GB</td>
+</tr>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.6</td>
+<td>Node maximum CPU utilization</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>The maximum memory utilization of the node</td>
+</tr>
+</tbody>
+</table>
+<ol start="10">
+<li>Memory overflow <code>OOM</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24*8</td>
+<td>Time range, the value is Duration, the default value is 8 days, only pay attention to memory overflow events within this time range.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>1 hour</td>
+<td>Expiration time cleanup cycle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sms-sending-configuration-sms">SMS sending configuration <code>sms</code><a class="td-heading-self-link" href="#sms-sending-configuration-sms" aria-label="Heading self-link"></a></h3>
+<p>The SMS sending configuration is mainly for the system to send verification codes/security codes. Its configuration parameters are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td><code>true</code></td>
+<td>Whether to enable text messages</td>
+</tr>
+<tr>
+<td><code>provider</code></td>
+<td></td>
+<td>SMS service provider, currently supports AWS, Azure, Alibaba Cloud, Tencent Cloud, Baidu Cloud, etc.</td>
+</tr>
+<tr>
+<td><code>accessKeyId</code></td>
+<td></td>
+<td>AccessKeyId corresponds to the corresponding field of the SMS service provider, and the fields corresponding to different SMS service providers are slightly different.</td>
+</tr>
+<tr>
+<td><code>accessKeySecret</code></td>
+<td></td>
+<td>AccessKeySecret has corresponding fields corresponding to SMS service providers. Different SMS service providers have slightly different fields.</td>
+</tr>
+<tr>
+<td><code>signName</code></td>
+<td></td>
+<td>Signature of SMS service provider</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td></td>
+<td>The template ID of the SMS service provider</td>
+</tr>
+<tr>
+<td><code>extras</code></td>
+<td><code>[]</code></td>
+<td>An ordered list of other parameters required by the SMS service provider</td>
+</tr>
+</tbody>
+</table>
+<p>Example: For Tencent Cloud, its configuration is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">sms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">provider</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;Tencent Cloud SMS&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">accessKeyID</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AK******</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">accessKeySecret</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NY******</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">signName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Yunzhiyouben</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">210000</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">extras</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#0000cf;font-weight:bold">1000000000</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>Among them, <code>accessKeyID</code> and <code>accessKeySecret</code> are the keys of Tencent Cloud SMS service, which respectively correspond to the identity applied on <a href="https://console.cloud.tencent.com/cam/capi">Cloud API Key</a> SecretId<code>and its corresponding</code>SecretKey<code>. </code>signName<code>is the SMS signature,</code>template<code>is the SMS template ID, and</code>extra<code>is an additional parameter. In Tencent Cloud SMS service,</code>extra<code>is the application ID, which is divided into corresponding [Send SMS Interface] (https://</code>SignName<code>, </code>TemplateId<code>and</code>SmsSdkAppId` in cloud.tencent.com/document/product/382/55981).</p>
+<h3 id="notification"><code>notification</code><a class="td-heading-self-link" href="#notification" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>notification</code> is used to configure the notification configuration of the optimization platform.</p>
+<h3 id="notificationtemplatebasepath"><code>notification.templateBasePath</code><a class="td-heading-self-link" href="#notificationtemplatebasepath" aria-label="Heading self-link"></a></h3>
+<p>The parameter <code>notification.templateBasePath</code> sets the path of the notification template. The default value is <code>templates/notification</code>.</p>
+<p>Currently, the default template name is <code>default</code>.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Business Cooperation" aria-label="Business Cooperation">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Wiseinf Inc.</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

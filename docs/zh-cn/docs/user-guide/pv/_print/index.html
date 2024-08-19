@@ -1,0 +1,346 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/zh-cn/docs/user-guide/pv/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/zh-cn/docs/user-guide/pv/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Persistent Volume优化 | Cluster Optimizer</title>
+<meta name="description" content="描述Persistent Volume相关信息及优化建议。
+">
+<meta property="og:url" content="//localhost:1313/zh-cn/docs/user-guide/pv/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="Persistent Volume优化">
+  <meta property="og:description" content="描述Persistent Volume相关信息及优化建议。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Persistent Volume优化">
+  <meta itemprop="description" content="描述Persistent Volume相关信息及优化建议。">
+  <meta itemprop="wordCount" content="74">
+  <meta itemprop="keywords" content="Cluster Optimizer,集群优化,Persistent Volume优化">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Persistent Volume优化">
+  <meta name="twitter:description" content="描述Persistent Volume相关信息及优化建议。">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/user-guide/pv/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/user-guide/pv/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Persistent Volume优化</h1>
+<div class="lead">描述Persistent Volume相关信息及优化建议。</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了Persistent Volume相关信息及优化建议。</p>
+
+</div>
+
+<h2 id="查看persistent-volume">查看Persistent Volume<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8bpersistent-volume" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>Persistent Volume</code>菜单，则显示Persistent Volume页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv1_hucb8d24ddb3f2cb76db829cd2ba9e71f7_60051_900x0_resize_catmullrom_3.png" width="900" height="329">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Persistent Volume页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>Persistent Volume页分为3个区：</p>
+<ol>
+<li><strong>集群选择区</strong>：选择相应的集群。</li>
+<li><strong>查询区</strong>：可根据名称、PVC名称空间、PVC名称和策略名称过滤列表项。</li>
+<li><strong>列表区</strong>：展示PV、PVC、策略名称、用量、最近更新时间和操作栏。</li>
+</ol>
+<p>选择集群后的Persistent Volume页如下所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv2_hu761a73dea420d55d4cdeb6bb52d12ae4_90091_900x0_resize_catmullrom_3.png" width="900" height="323">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Persistent Volume页-选择集群
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>列表区显示分为5栏：</p>
+<ol>
+<li><strong>PV栏</strong>：展示PV名称、地域、容量和创建时间。</li>
+<li><strong>所有者栏</strong>：展示PV所有者的部门、组及具体的人员。</li>
+<li><strong>PVC栏</strong>：展示PVC名称空间和名称。</li>
+<li><strong>用量栏</strong>：展示优化策略名称，优化策略所提供的用量数据，以及最后更新时间等。目前，平台包含<code>未使用PV</code>和<code>低利用率PV</code>两大优化策略，对于<code>未使用PV</code>策略来说，其PV用量为空。</li>
+<li><strong>操作栏</strong>：展示对Persistent Volume相应的操作。</li>
+</ol>
+<h2 id="删除persistent-volume">删除Persistent Volume<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4persistent-volume" aria-label="Heading self-link"></a></h2>
+<p>选择策略名称栏是<code>未使用PV</code>的行，点击该行操作栏中的<code>删除</code>链接可打开<code>删除Persistent Volume</code>对话框，其中展示了Persistent Volume详细信息和推荐方案。</p>
+<p>在社区版中对话框展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv3_hu20fe78c188fd49807126a8812c694cb4_61344_900x0_resize_catmullrom_3.png" width="900" height="323">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除Persistent Volume对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中对话框展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv-b3_huc68b717a44e2c08147b279ecfa344ba3_60650_900x0_resize_catmullrom_3.png" width="900" height="300">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除Persistent Volume对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>点击对话框中的<code>确定</code>按钮，则创建任务删除该Persistent Volume。</p>
+<h2 id="调整persistent-volume大小">调整Persistent Volume大小<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4persistent-volume%e5%a4%a7%e5%b0%8f" aria-label="Heading self-link"></a></h2>
+<p>在<strong>查询区</strong>中的策略名称选择<code>低利用率PV</code>，系统将仅展示符合<code>低利用率PV</code>策略的列表项，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv4_hu801588667bd5229fc743e3a25182bd5e_112015_900x0_resize_catmullrom_3.png" width="900" height="396">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+通过`低利用率PV`策略名称过滤列表项
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>点击列表<strong>操作栏</strong>中的<code>调整</code>链接可打开<code>调整Persistent Volume大小</code>对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv5_hufa19166f247a908b1fb34abc41a8d84b_90538_900x0_resize_catmullrom_3.png" width="900" height="401">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整Persistent Volume大小
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中，可以设置参数后由后台任务自动调整，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv-b5_huef030b39b52f917f4f18b8235f4418ea_65704_900x0_resize_catmullrom_3.png" width="900" height="454">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整Persistent Volume对话框：设置参数
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>设置<code>目标容量</code>，<code>是否保持原有PVC名称</code>，<code>是否删除原有PV</code>后，点击<code>确定</code>，即可快速调整Persistent Volume大小。</p>
+<p>再次点击<strong>操作栏</strong>中的<code>调整</code>链接，此时可查看调整Persistent Volume大小的执行日志，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv-b6_hua82026309ad0e5fcfb71ee701a46a6d6_121835_900x0_resize_catmullrom_3.png" width="900" height="464">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整Persistent Volume对话框：查看任务日志
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>调整PV将使用用户提供的集群访问账号来操作集群中的PV。您需要设置集群访问账号，具体请参见<a href="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/">设置集群访问账号</a>。</p>
+<blockquote>
+<p>注意：若选择不<code>是否删除原有PV</code>，您需要自行删除原有PV，否则您仍将承担该PV的费用。</p>
+</blockquote>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

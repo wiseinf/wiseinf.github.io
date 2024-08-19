@@ -1,0 +1,63 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 新闻</title>
+    <link>//localhost:1313/zh-cn/blog/news/</link>
+    <description>Recent content in 新闻 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/zh-cn/blog/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Cluster Optimizer: 一款云原生集群优化平台</title>
+      <link>//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;云原生成本优化亟待优化&#34;&gt;云原生成本优化亟待优化&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%ba%91%e5%8e%9f%e7%94%9f%e6%88%90%e6%9c%ac%e4%bc%98%e5%8c%96%e4%ba%9f%e5%be%85%e4%bc%98%e5%8c%96&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;云原生已成为未来技术发展的主流趋势之一。据Gartner估计，到2025年，超过95%的新数字工作负载将被部署在云原生平台。随着云原生技术的广泛应用，企业可以实现更高效的资源利用率、更快的应用交付速度以及更好的可扩展性和可靠性。然而，在实践中，受多种因素的影响，实际成本存在失控的风险。据《2021 CNCF FinOps Kubernetes Report》显示，迁移至 Kubernetes 平台后，68% 的受访者表示所在企业计算资源成本有所增加，36% 的受访者表示成本飙升超过 20%。CNCF在2023年《Cloud Native and Kubernetes Finops Microsurvey》调查报告中指出，49%的受访者表示其成本略有增加或显著增加。Flexera 2024 年云现状报告调查中指出，59%的用户更关注成本优化。FinOps产业推进方阵在2023年中国FinOps产业发展研究报告也指出，超过半数企业IT存在资源浪费的情况，超过八成企业有IT资源及成本优化的诉求。因此，对云原生应用的成本进行监控和管理，并及时采取手段进行成本优化变得越来越迫切。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/suprise.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在云原生成本优化方面主要面临三方面的问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;资源闲置：资源闲置表现为未及时释放占用资源，例如开发测试环境中未及时释放的应用实例或未及时释放的相关资源（例如弹性 IP）。&lt;/li&gt;
+&lt;li&gt;配置不当：配置不当表现为资源容量超量申请、不合理使用扩缩容机制等。例如，为保障应用峰值性能而超量申请 CPU 或内存，或者错误配置弹性扩缩容时机，以及设置的应用最小副本数过大等。&lt;/li&gt;
+&lt;li&gt;缺乏自动化的优化机制：缺乏自动化的优化机制意味着在云环境中往往需要依靠人工干预来进行优化，导致运维复杂。例如，节点上挂载的磁盘可能会在一段时间内经历使用量的波动，但由于缺乏自动化的机制，当磁盘使用量下降时，系统无法自动将磁盘容量缩减至实际需求的水平。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;云原生集群优化平台cluster-optimizer&#34;&gt;云原生集群优化平台Cluster Optimizer&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%ba%91%e5%8e%9f%e7%94%9f%e9%9b%86%e7%be%a4%e4%bc%98%e5%8c%96%e5%b9%b3%e5%8f%b0cluster-optimizer&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Cluster Optimizer的主要目标是通过自动化智能化的平台和工具帮助客户降低使用云的成本，解决云原生架构广泛实践带来的成本难以管理、难以优化的问题。Cluster Optimizer是我们通过深度学习、序列决策等先进算法，结合云计算实践经验，构建一套全新的技术平台。该平台能够全面分析云资源、应用、用户行为以及云服务商数据，精准识别优化机会（包括识别闲置资源、配置不当等），为用户提供多个维度的优化推荐并为用户后续操作提供指导和自动化能力支持，帮助用户降低成本、提高性能、提升效率。&lt;/p&gt;
+&lt;p&gt;云原生集群优化平台Cluster Optimizer提供了多个维度的优化建议，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;节点组：包括节点组推荐策略，能够为推荐实例类型，是否启动自动扩缩容，以及其最大节点数和最小节点数的配置。&lt;/li&gt;
+&lt;li&gt;节点：包括低利用率节点策略，能够评估节点的利用率，推荐合适的实例类型。&lt;/li&gt;
+&lt;li&gt;GPU节点：能够识别GPU利用率比较低的节点，并推荐合适的实例类型。&lt;/li&gt;
+&lt;li&gt;磁盘：包括低利用率磁盘识别，能够评估磁盘的利用率，帮助用户设置合适的磁盘容量。&lt;/li&gt;
+&lt;li&gt;Persistent Volume：包括未使用Persistent Volume识别和低利用率Persistent Volume识别，能够识别未使用或低利用率Persistent Volume，帮助用户删除未使用Persistent Volume和调整低利用率Persistent Volume的容量。&lt;/li&gt;
+&lt;li&gt;应用：包含资源推荐、未设置资源限额和OOM三个策略。资源推荐策略能够为负载推荐合适的Request和Limit。未设置资源限额能够为未设置资源Quota的负载推荐合适的值。OOM策略能够监控内存溢出的应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以节点组推荐为例。一般来说，集群中的节点会划分为多个节点组，每个组节点有其特定用途（例如，用于区分不同的业务）。云产商会提供节点组的自动扩缩容，然而，设置节点组的实例类型、自动扩缩容的节点最大和最小值是非常具有挑战的事情。通过节点组推荐策略，我们基于当前节点组上运行的负载的度量指标、云提供商实例价格、实际地域分布情况等，为用户推荐成本最低的实例类型、是否启动自动扩缩容、节点最大值和最小值，能随着节点组上负载的变化持续优化节点组的配置。&lt;/p&gt;
+&lt;p&gt;如下图所示，节点组us-pre-eks-cluster-node-r5a-20240229当前设置实例类型为r6a.4xlarge，已启用自动扩缩容，最大节点数和最小节点数都是2。其优化设置中我们的策略推荐了多个实例类型，包括r5a.large，r6a.large，r5a.2xlarge等；其最大节点数为7，最小节点数为1。基于这些优化设置好，可以设置节点组相应属性，从而显著降低利用率低时的节点使用成本。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/nodegroup.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如何安装和试用cluster-optimizer&#34;&gt;如何安装和试用Cluster Optimizer&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%a6%82%e4%bd%95%e5%ae%89%e8%a3%85%e5%92%8c%e8%af%95%e7%94%a8cluster-optimizer&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;我们提供了Cluster Optimizer社区版，您可以参考下述地址免费安装试用：&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;安装试用过程中有任何问题，请与我们联系，我们将会尽快回复您。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电子邮箱：help@wiseinf.com&lt;/li&gt;
+&lt;li&gt;微信：&lt;img src=&#34;//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/weixin.jpg&#34;&gt;&lt;/li&gt;
+&lt;li&gt;飞书：&lt;img src=&#34;//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/feishu.jpg&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

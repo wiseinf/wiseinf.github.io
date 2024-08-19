@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 节点组优化</title>
-    <link>/zh-cn/tags/%E8%8A%82%E7%82%B9%E7%BB%84%E4%BC%98%E5%8C%96/</link>
+    <link>//localhost:1313/zh-cn/tags/%E8%8A%82%E7%82%B9%E7%BB%84%E4%BC%98%E5%8C%96/</link>
     <description>Recent content in 节点组优化 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="/zh-cn/tags/%E8%8A%82%E7%82%B9%E7%BB%84%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E8%8A%82%E7%82%B9%E7%BB%84%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 节点组优化</title>
-      <link>/zh-cn/docs/nodegroup/</link>
+      <link>//localhost:1313/zh-cn/docs/user-guide/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/nodegroup/</guid>
+      <guid>//localhost:1313/zh-cn/docs/user-guide/nodegroup/</guid>
       <description>
         
         
@@ -38,7 +38,7 @@
 &lt;li&gt;&lt;strong&gt;列表区&lt;/strong&gt;：展示节点组的信息、其当前设置和优化设置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/nodegroup/ng1_hu77fb89e3693c9149284b097a85c9bdcc_61241_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;335&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/ng1_hu77fb89e3693c9149284b097a85c9bdcc_61241_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;335&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -58,7 +58,7 @@
 &lt;li&gt;&lt;strong&gt;操作栏&lt;/strong&gt;：展示对节点组相应的操作。，&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/nodegroup/ng2_hub16f4d365be75272fcf7425dd573ee8d_95095_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;339&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/ng2_hub16f4d365be75272fcf7425dd573ee8d_95095_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;339&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -72,7 +72,7 @@
 &lt;h2 id=&#34;调整节点组&#34;&gt;调整节点组&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9%e7%bb%84&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击上图中的&lt;code&gt;调整&lt;/code&gt;链接，可打开调整节点组对话框，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/nodegroup/ng3_hu9f9b1a936626968643677fe10b09c15b_67576_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;470&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/ng3_hu9f9b1a936626968643677fe10b09c15b_67576_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;470&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

@@ -1,0 +1,132 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 通知</title>
+    <link>//localhost:1313/zh-cn/tags/%E9%80%9A%E7%9F%A5/</link>
+    <description>Recent content in 通知 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E9%80%9A%E7%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 周期性的获取优化建议通知</title>
+      <link>//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述通过Cluster Optimizer设置周期性的优化建议通知机制，方便通过邮件获取相应的优化建议。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;概览&#34;&gt;概览&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%a6%82%e8%a7%88&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;在Kubernetes集群运营过程中，我们经常需要定期获取关键指标或信息，并将这些信息通过邮件或其他通知方式传达给相关用户。周期性的通知机制可以使得用户能够根据收到的信息进行必要的调整和优化操作。&lt;/p&gt;
+&lt;p&gt;集群优化平台能够自动监测集群中可能出现的问题和潜在优化点，如节点利用率低、应用内存溢出、未使用的Persistent Volume等，并生成包含详细信息和推荐参数的优化建议，通过邮件通知用户。例如，当检测到某个应用内存溢出时，系统会自动收集相关信息，并将这些信息发送给该应用的负责人或责任人。这不仅提高了问题响应的效率，也确保了集群资源的高效利用和应用的稳定运行。通过此方式，用户可以更加主动地管理和维护集群和集群中的应用，提升整体运营效能。&lt;/p&gt;
+&lt;h2 id=&#34;使用场景&#34;&gt;使用场景&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%bd%bf%e7%94%a8%e5%9c%ba%e6%99%af&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;用户想通过邮件获取常见的优化建议信息，例如：节点利用率低、应用内存溢出、Persistent Volume未被使用等，并针对这些优化建议信息执行相应的操作。
+本文将以配置节点组优化建议为例，概述如何配置Cluster Optimizer，使其能够提供周期性的优化建议通知。&lt;/p&gt;
+&lt;p&gt;假设我们期望将集群中的节点组优化建议在每日早上8点通过邮件通知用户Jay（邮箱地址是&lt;code&gt;jay@wiseinf.com&lt;/code&gt;），具体前置条件和配置流程如下。&lt;/p&gt;
+&lt;p&gt;假设用户有如下需求：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将节点组优化建议结果发送给用户&lt;code&gt;Jay&lt;/code&gt;（邮箱地址是&lt;code&gt;jay@wiseinf.com&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;每日上午8点通过邮件接收通知&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;集群优化平台通过如下两个组件来为用户提供通知：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通知渠道：提供发送通知的基础配置参数，例如，对于邮件通知来说，典型配置包括主机地址、端口、用户名和密码等。通知渠道可以被多个通知规则使用。&lt;/li&gt;
+&lt;li&gt;通知规则：提供构造通知内容的配置参数、接收者地址等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面将描述通过集群优化平台配置通知渠道和通知规则，使其能够满足上述用户需求。&lt;/p&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;已部署&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;安装部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;已导入集群信息，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/&#34;&gt;导入集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SMTP服务器相关信息，包括主机地址、端口、用户名、密码等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- ## 系统架构 --&gt;
+&lt;h2 id=&#34;配置步骤&#34;&gt;配置步骤&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e9%85%8d%e7%bd%ae%e6%ad%a5%e9%aa%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置通知渠道：从&lt;code&gt;设置 --&amp;gt; 通知渠道&lt;/code&gt;进入通知渠道管理页面，在通知渠道页面，点击&lt;code&gt;新增&lt;/code&gt;按钮，弹出&lt;code&gt;添加通知渠道&lt;/code&gt;对话框。在通知渠道对话框中，输入相应信息，然后点击&lt;code&gt;确定&lt;/code&gt;按钮，如下图所示。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/channel_hu5ce7dbab866c4b72b08e502087ed4a08_44296_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;961&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+    通知渠道设置
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;其中，通知渠道名称设置为&lt;code&gt;email&lt;/code&gt;，主机地址设置为&lt;code&gt;smtp.wiseinf.com&lt;/code&gt;、端口设置为&lt;code&gt;465&lt;/code&gt;、用户名设置为&lt;code&gt;optimizer@wiseinf.com&lt;/code&gt;、密码等，其中SMTP服务器主机地址、端口、用户名、密码等信息是前置条件中获取的SMTP服务器相关信息，需要根据实际情况填写。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：通知渠道对话框配置项说明请参见[添加渠道]/zh-cn/docs/user-guide/management/channel/#添加渠道&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置通知规则： 从&lt;code&gt;设置 --&amp;gt; 通知规则&lt;/code&gt;进入通知规则管理页面，在通知渠道页面，点击&lt;code&gt;新增&lt;/code&gt;按钮，弹出&lt;code&gt;添加通知规则&lt;/code&gt;对话框。在通知规则对话框中主要包括如下信息：通知接收者信息、关注的优化建议、通知渠道和匹配规则。
+请输入相应信息，然后点击&lt;code&gt;确定&lt;/code&gt;按钮，如下图所示。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/rule_hu90e42b27ad4d55dfaab4d38611ffaddc_64291_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;924&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+    通知规则设置
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;其中，接收者设置为&lt;code&gt;jay@wiseinf.com&lt;/code&gt;，通知渠道选择&lt;strong&gt;步骤1&lt;/strong&gt;中创建的&lt;code&gt;email&lt;/code&gt;通知渠道，调度时间设置为每日早上8点，优化策略选择节点组推荐，集群选择前置条件中导入的集群，即可，如下图所示。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：通知规则对话框配置项说明请参见[添加通知规则]/zh-cn/docs/user-guide/management/rule/#添加通知规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;完成上述配置后，可通过邮件定时接受相应的邮件，邮件内容如下图所示。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/email_hu4c8db2394b8c7180dce0a7cec9555708_55391_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+    节点组优化邮件内容
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;从中可知集群中节点组当前的实例类型、自动扩缩容、节点最大值和最小值，优化后的实例类型、自动扩缩容、节点最大值和最小值。用户可以根据这些设置来指导节点组的优化。例如，图中当前的实例类型为&lt;code&gt;r5a.4xlarge&lt;/code&gt;，可考虑调整为&lt;code&gt;r6a.large&lt;/code&gt;、&lt;code&gt;r5a.large&lt;/code&gt;等。集群优化平台推荐节点实例时将考虑多种因素：包括节点的价格、节点区域的可用性、节点的架构、集群节点组的CPU、内存用量等。同时，节点组推荐了节点组的节点最大值和最小值，利用推荐值可在动态负载更有效利用自动扩缩容的能力，最大限度的满足集合应用稳定性的情况下，有效降低成本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;了解更多&#34;&gt;了解更多&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%ba%86%e8%a7%a3%e6%9b%b4%e5%a4%9a&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;集群优化平台提供了一系列的能力，便于用户便捷的获取优化推荐通知。&lt;/p&gt;
+&lt;p&gt;集群优化平台提供了一些列的优化策略，包括低利用率节点、低利用率磁盘、Persistent Volume识别、应用资源推荐、内存溢出等。
+集群优化平台中通知规则提供了一系列的匹配规则，用户可以根据需要选择不同的匹配规则，包括对资源所有者包括部门、组、用户）的匹配、名称空间匹配。
+用户可使用个性化自定义模板，实现个性化的邮件通知。&lt;/p&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;集群优化平台安装部署流程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/&#34;&gt;导入集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/&#34;&gt;云智优本官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

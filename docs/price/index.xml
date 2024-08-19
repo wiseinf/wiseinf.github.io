@@ -1,18 +1,163 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Pricing</title>
-    <link>/price/</link>
+    <link>//localhost:1313/price/</link>
     <description>Recent content in Pricing on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/price/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/price/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
+    
+    <item>
+      <title>Price: </title>
+      <link>//localhost:1313/price/pricing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/price/pricing/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;pricing-inner section-inner&#34;&gt;
+    &lt;h2 class=&#34;section-title mt-0 text-center&#34;&gt;Pricing&lt;/h2&gt;
+    &lt;div class=&#34;pricing-tables-wrap&#34;&gt;
+  
+      &lt;div class=&#34;pricing-table&#34;&gt;
+        &lt;div class=&#34;pricing-table-inner&#34;&gt;
+          &lt;div class=&#34;pricing-table-main&#34;&gt;
+            &lt;div class=&#34;pricing-table-header is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+              &lt;div class=&#34;pricing-table-title mt-12 mb-8&#34;&gt;Community&lt;/div&gt;
+              &lt;div class=&#34;pricing-table-price mb-32 pb-24&#34;&gt;
+                &lt;!-- &lt;span class=&#34;pricing-table-price-currency h4&#34;&gt;$&lt;/span&gt; --&gt;
+                &lt;span class=&#34;pricing-table-price-amount h2&#34;&gt;Free&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul class=&#34;pricing-table-features list-reset text-xs mt-24 mb-56&#34;&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span&gt;Less than 50 nodes&lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Multiple optimization strategies&lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Multiple could (currently supports AWS and Alibaba Cloud) &lt;/span&gt;
+              &lt;/li&gt;
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Resource corralation &lt;/span&gt;
+              &lt;/li&gt;
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Alert &lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Community support&lt;/span&gt;
+              &lt;/li&gt;
+  
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;pricing-table-cta is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+            &lt;a class=&#34;button button-primary button-shadow button-block&#34; href=&#34;//localhost:1313/docs/setup&#34;&gt;Try it free&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  
+      &lt;div class=&#34;pricing-table&#34;&gt;
+        &lt;div class=&#34;pricing-table-inner&#34;&gt;
+          &lt;div class=&#34;pricing-table-main&#34;&gt;
+            &lt;div class=&#34;pricing-table-header is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+              &lt;div class=&#34;pricing-table-title mt-12 mb-8&#34;&gt;Business&lt;/div&gt;
+              &lt;div class=&#34;pricing-table-price mb-32 pb-24&#34;&gt;&lt;span class=&#34;pricing-table-price-currency h4&#34;&gt;$&lt;/span&gt;&lt;span
+                  class=&#34;pricing-table-price-amount h2&#34;&gt;3&lt;/span&gt;/month per node&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul class=&#34;pricing-table-features list-reset text-xs mt-24 mb-56&#34;&gt;
+  
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span&gt;Everything in Free, plus:&lt;/span&gt;
+              &lt;/li&gt;
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Unlimited nodes&lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Unlimited clusters&lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Authentication and authorization&lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Automated actions&lt;/span&gt;
+              &lt;/li&gt;
+  
+              &lt;li class=&#34;is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+                &lt;span class=&#34;list-icon&#34;&gt;
+                  &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z&#34;/&gt;&lt;/svg&gt;
+                
+                &lt;/span&gt;
+                &lt;span&gt;Enterprise support&lt;/span&gt;
+              &lt;/li&gt;
+  
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;pricing-table-cta is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
+            &lt;a class=&#34;button button-commingsoon button-block&#34; href=&#34;#&#34;&gt;Comming soon...&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  
+    &lt;/div&gt;
+  &lt;/div&gt;
+      </description>
+    </item>
     
   </channel>
 </rss>

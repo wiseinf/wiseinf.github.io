@@ -1,0 +1,39 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 故障排查</title>
+    <link>//localhost:1313/zh-cn/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
+    <description>Recent content in 故障排查 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 故障排查</title>
+      <link>//localhost:1313/zh-cn/docs/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/troubleshooting/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;云服务商相关故障&#34;&gt;云服务商相关故障&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%ba%91%e6%9c%8d%e5%8a%a1%e5%95%86%e7%9b%b8%e5%85%b3%e6%95%85%e9%9a%9c&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;amazon-aws&#34;&gt;Amazon AWS&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#amazon-aws&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取AWS凭据失败，日志显示&lt;code&gt;getting credentials: exec: executable aws failed with exit code 253&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;主要原因：AWS中访问EKS Kubernetes时使用&lt;code&gt;aws&lt;/code&gt;命令获取凭证，&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;中默认没有安装&lt;code&gt;aws&lt;/code&gt;，它通过API来获取凭证，因为涉及到自动刷新kubeconfig，需要编辑集群，选中&lt;code&gt;自动刷新Kubeconfig&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

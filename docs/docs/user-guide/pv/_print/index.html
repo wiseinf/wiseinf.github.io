@@ -1,0 +1,337 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/docs/user-guide/pv/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/pv/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Persistent Volume | Cluster Optimizer</title>
+<meta name="description" content="Describes Persistent Volume related information and optimization suggestions.
+">
+<meta property="og:url" content="//localhost:1313/docs/user-guide/pv/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="Persistent Volume">
+  <meta property="og:description" content="Describes Persistent Volume related information and optimization suggestions.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Persistent Volume">
+  <meta itemprop="description" content="Describes Persistent Volume related information and optimization suggestions.">
+  <meta itemprop="dateModified" content="2024-08-19T11:27:11+08:00">
+  <meta itemprop="wordCount" content="554">
+  <meta itemprop="keywords" content="Cluster Optimizer,Persistent Volume Optimization">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Persistent Volume">
+  <meta name="twitter:description" content="Describes Persistent Volume related information and optimization suggestions.">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/price/"><span>Pricing</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/docs/user-guide/pv/">中文</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/user-guide/pv/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Persistent Volume</h1>
+<div class="lead">Describes Persistent Volume related information and optimization suggestions.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>Describes Persistent Volume related information and optimization suggestions.</p>
+
+</div>
+
+<h2 id="view-persistent-volume">View Persistent Volume<a class="td-heading-self-link" href="#view-persistent-volume" aria-label="Heading self-link"></a></h2>
+<p>Click the <code>Persistent Volume</code> menu on the left menu bar of the platform to display the Persistent Volume page, as shown in the figure below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv1_hu24db01f2be02a5928ee5616e06248119_86898_900x0_resize_catmullrom_3.png" width="900" height="436">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Persistent Volume page
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>The Persistent Volume page is divided into 3 areas:</p>
+<ol>
+<li><strong>Cluster selection area</strong>: Select the corresponding cluster.</li>
+<li><strong>Query area</strong>: List items can be filtered based on name, PVC namespace, PVC name and policy name.</li>
+<li><strong>List area</strong>: Displays PV, PVC, policy name, usage, latest update time and operation bar.</li>
+</ol>
+<p>The Persistent Volume page after selecting the cluster is as follows:</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv2_hue425eb8ed03739d9b17157285a333f1a_136274_900x0_resize_catmullrom_3.png" width="900" height="505">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Persistent Volume page-select cluster
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>The list area display is divided into 5 columns:</p>
+<ol>
+<li><strong>PV column</strong>: Displays the PV name, region, capacity and creation time.</li>
+<li><strong>Owner Column</strong>: Displays the department, group and specific personnel of the PV owner.</li>
+<li><strong>PVC column</strong>: Displays the PVC namespace and name.</li>
+<li><strong>Usage column</strong>: Displays the name of the optimization strategy, the usage data provided by the optimization strategy, and the last update time. Currently, the platform includes two optimization strategies: <code>Unused PV</code> and <code>Low Utilization PV</code>. For the <code>Unused PV</code> strategy, its PV usage is empty.</li>
+<li><strong>Operation Bar</strong>: Displays the corresponding operations on the Persistent Volume.</li>
+</ol>
+<h2 id="delete-persistent-volume">Delete Persistent Volume<a class="td-heading-self-link" href="#delete-persistent-volume" aria-label="Heading self-link"></a></h2>
+<p>Select the row whose policy name column is <code>Unused PV</code>, and click the <code>Delete</code> link in the action column of the row to open the <code>Delete Persistent Volume</code> dialog box, which displays the Persistent Volume details and recommended solutions.</p>
+<p>The dialog box is displayed in the community version as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png" width="900" height="323">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Delete Persistent Volume dialog box
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>In the commercial version, the dialog box is displayed as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv-b3_hu381f4197b01951d70e087b61e1cfa586_63315_900x0_resize_catmullrom_3.png" width="900" height="315">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Delete Persistent Volume dialog box
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>Click the <code>OK</code> button in the dialog box to create a task to delete the Persistent Volume.</p>
+<h2 id="adjust-persistent-volume-size">Adjust Persistent Volume size<a class="td-heading-self-link" href="#adjust-persistent-volume-size" aria-label="Heading self-link"></a></h2>
+<p>Select <code>Low Utilization PV</code> as the policy name in the <strong>Query Area</strong>, and the system will only display list items that comply with the <code>Low Utilization PV</code> policy, as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png" width="900" height="500">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Filter list items by `Low Utilization PV` policy name
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>Click the <code>Adjust' link in the list **Action Bar** to open the </code>Adjust Persistent Volume Size` dialog box, which displays the detailed information of the Persistent Volume and the recommended adjustment plan, as shown in the figure below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png" width="900" height="417">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Resize Persistent Volume
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>In the commercial version, parameters can be set and then automatically adjusted by background tasks, as shown in the figure below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv-b5_hu452c317069072d2f009fc1a8b16aca39_150263_900x0_resize_catmullrom_3.png" width="900" height="450">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Adjust the Persistent Volume dialog box: Set parameters
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>After setting the <code>target capacity</code>, <code>whether to keep the original PVC name</code> and <code>whether to delete the original PV</code>, click <code>OK</code> to quickly adjust the Persistent Volume size.</p>
+<p>Click the <code>Adjust</code> link in the <strong>Action Bar</strong> again. At this time, you can view the execution log of adjusting the size of the Persistent Volume, as shown in the figure below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/pv/pv-b6_hu6991ea5bc42325c0f3cc1f4d0cf07f2a_260247_900x0_resize_catmullrom_3.png" width="900" height="455">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Adjust Persistent Volume dialog box: View task log
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>Adjusting PV will use the cluster access account provided by the user to operate the PV in the cluster. You need to set up a cluster access account. For details, please see <a href="/docs/user-guide/personal-settings/clusteraccessaccount/">Setting up a cluster access account</a>.</p>
+<blockquote>
+<p>Note: If you choose not to delete the original PV, you need to delete the original PV yourself, otherwise you will still bear the cost of the PV.</p>
+</blockquote>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Business Cooperation" aria-label="Business Cooperation">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Wiseinf Inc.</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

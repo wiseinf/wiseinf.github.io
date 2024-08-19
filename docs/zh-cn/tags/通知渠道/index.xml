@@ -1,0 +1,158 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 通知渠道</title>
+    <link>//localhost:1313/zh-cn/tags/%E9%80%9A%E7%9F%A5%E6%B8%A0%E9%81%93/</link>
+    <description>Recent content in 通知渠道 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E9%80%9A%E7%9F%A5%E6%B8%A0%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 通知渠道</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/management/channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/management/channel/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述如何管理通知渠道，包括查看，添加、更新或者删除通知渠道。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;查看渠道&#34;&gt;查看渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 通知渠道&lt;/code&gt;进入通知渠道管理页面，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/overview_hucff31aac09e394ec659275683fd563d9_32586_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;184&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+通知渠道管理页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;通知渠道管理页面将以列表的形式展示通知渠道。主要包括5栏：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;名称：通知渠道名称。&lt;/li&gt;
+&lt;li&gt;渠道类型：通知渠道类型。&lt;/li&gt;
+&lt;li&gt;连接参数：展示该渠道类型的连接参数。&lt;/li&gt;
+&lt;li&gt;其他参数：展示其他参数&lt;/li&gt;
+&lt;li&gt;操作：操作栏，包括编辑、删除等操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;添加渠道&#34;&gt;添加渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击通知渠道管理页面上方的&lt;code&gt;新增&lt;/code&gt;按钮，选择通知渠道类型，并填写通知渠道信息，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/addchannel_hu97b2511821a76fc3f758d82b0054f24e_39179_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+添加通知渠道对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述请参见下表。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;名称&lt;/td&gt;
+&lt;td&gt;通知渠道名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;渠道类型&lt;/td&gt;
+&lt;td&gt;通知渠道类型，目前仅支持Email&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机&lt;/td&gt;
+&lt;td&gt;Email SMTP主机名，例如 &lt;code&gt;smtp.wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;端口&lt;/td&gt;
+&lt;td&gt;Email SMTP端口，例如 &lt;code&gt;25&lt;/code&gt;, &lt;code&gt;465&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;启用SSL&lt;/td&gt;
+&lt;td&gt;是否启用SSL，默认为不启用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Email&lt;/td&gt;
+&lt;td&gt;Email地址，例如 &lt;code&gt;admin@wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;发送者名称&lt;/td&gt;
+&lt;td&gt;发送者名称，例如 &lt;code&gt;Wiseinf&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;密码&lt;/td&gt;
+&lt;td&gt;Email SMTP密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;参数列表&lt;/td&gt;
+&lt;td&gt;用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过&lt;code&gt;{{.param.参数名}}&lt;/code&gt;的方式在模板中引用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;按照字段名输入相应信息，点击&lt;code&gt;确定&lt;/code&gt;按钮，即可添加通知渠道。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具体上述字段的取值，您可以咨询您的邮件服务商，或者是邮件系统管理员。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;更新渠道&#34;&gt;更新渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;更新通知渠道，点击通知渠道管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将更新通知渠道信息，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/editchannel_hu6c88139678d29abc0f34c75f65f2bc6f_45533_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+编辑通知渠道对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/#添加渠道&#34;&gt;添加渠道&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;h2 id=&#34;删除渠道&#34;&gt;删除渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击通知渠道管理页面列表中的的&lt;code&gt;删除&lt;/code&gt;按钮，将删除通知渠道，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/deletechannel_hu600240e395bbeb1ed5b0fe17d416beb2_56557_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;214&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+编辑通知渠道对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;删除通知渠道之前，将弹出删除确认对话框，用户确认后执行删除操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：当该通知渠道被通知规则所使用时，会提示删除不成功。应该首先删除使用该通知渠道的通知规则后，然后再删除该通知渠道。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

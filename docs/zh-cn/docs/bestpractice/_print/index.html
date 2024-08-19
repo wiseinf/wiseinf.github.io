@@ -1,0 +1,367 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/zh-cn/docs/bestpractice/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/zh-cn/docs/bestpractice/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>最佳实践 | Cluster Optimizer</title>
+<meta name="description" content="描述使用Cluster Optimizer的常用场景和最佳实践。
+">
+<meta property="og:url" content="//localhost:1313/zh-cn/docs/bestpractice/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="最佳实践">
+  <meta property="og:description" content="描述使用Cluster Optimizer的常用场景和最佳实践。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="最佳实践">
+  <meta itemprop="description" content="描述使用Cluster Optimizer的常用场景和最佳实践。">
+  <meta itemprop="wordCount" content="2">
+  <meta itemprop="keywords" content="集群引擎,最佳实践">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="最佳实践">
+  <meta name="twitter:description" content="描述使用Cluster Optimizer的常用场景和最佳实践。">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/bestpractice/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/bestpractice/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">最佳实践</h1>
+<div class="lead">描述使用Cluster Optimizer的常用场景和最佳实践。</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-b42eb316ba0f0e71f3d63fd4dc5880ff">周期性的获取优化建议通知</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>描述使用Cluster Optimizer的常用场景和最佳实践。</p>
+
+</div>
+
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-b42eb316ba0f0e71f3d63fd4dc5880ff">1 - 周期性的获取优化建议通知</h1>
+    <div class="lead">描述通过Cluster Optimizer设置周期性的优化建议通知机制，方便通过邮件获取相应的优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述通过Cluster Optimizer设置周期性的优化建议通知机制，方便通过邮件获取相应的优化建议。</p>
+
+</div>
+
+<h2 id="概览">概览<a class="td-heading-self-link" href="#%e6%a6%82%e8%a7%88" aria-label="Heading self-link"></a></h2>
+<p>在Kubernetes集群运营过程中，我们经常需要定期获取关键指标或信息，并将这些信息通过邮件或其他通知方式传达给相关用户。周期性的通知机制可以使得用户能够根据收到的信息进行必要的调整和优化操作。</p>
+<p>集群优化平台能够自动监测集群中可能出现的问题和潜在优化点，如节点利用率低、应用内存溢出、未使用的Persistent Volume等，并生成包含详细信息和推荐参数的优化建议，通过邮件通知用户。例如，当检测到某个应用内存溢出时，系统会自动收集相关信息，并将这些信息发送给该应用的负责人或责任人。这不仅提高了问题响应的效率，也确保了集群资源的高效利用和应用的稳定运行。通过此方式，用户可以更加主动地管理和维护集群和集群中的应用，提升整体运营效能。</p>
+<h2 id="使用场景">使用场景<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="Heading self-link"></a></h2>
+<p>用户想通过邮件获取常见的优化建议信息，例如：节点利用率低、应用内存溢出、Persistent Volume未被使用等，并针对这些优化建议信息执行相应的操作。
+本文将以配置节点组优化建议为例，概述如何配置Cluster Optimizer，使其能够提供周期性的优化建议通知。</p>
+<p>假设我们期望将集群中的节点组优化建议在每日早上8点通过邮件通知用户Jay（邮箱地址是<code>jay@wiseinf.com</code>），具体前置条件和配置流程如下。</p>
+<p>假设用户有如下需求：</p>
+<ol>
+<li>将节点组优化建议结果发送给用户<code>Jay</code>（邮箱地址是<code>jay@wiseinf.com</code>）</li>
+<li>每日上午8点通过邮件接收通知</li>
+</ol>
+<p>集群优化平台通过如下两个组件来为用户提供通知：</p>
+<ul>
+<li>通知渠道：提供发送通知的基础配置参数，例如，对于邮件通知来说，典型配置包括主机地址、端口、用户名和密码等。通知渠道可以被多个通知规则使用。</li>
+<li>通知规则：提供构造通知内容的配置参数、接收者地址等。</li>
+</ul>
+<p>下面将描述通过集群优化平台配置通知渠道和通知规则，使其能够满足上述用户需求。</p>
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>已部署<strong>Cluster Optimizer</strong>，具体请参见<a href="/zh-cn/docs/setup/">安装部署</a></li>
+<li>已导入集群信息，具体请参见<a href="/zh-cn/docs/user-guide/import-cluster/">导入集群</a></li>
+<li>SMTP服务器相关信息，包括主机地址、端口、用户名、密码等。</li>
+</ol>
+<!-- ## 系统架构 -->
+<h2 id="配置步骤">配置步骤<a class="td-heading-self-link" href="#%e9%85%8d%e7%bd%ae%e6%ad%a5%e9%aa%a4" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>配置通知渠道：从<code>设置 --&gt; 通知渠道</code>进入通知渠道管理页面，在通知渠道页面，点击<code>新增</code>按钮，弹出<code>添加通知渠道</code>对话框。在通知渠道对话框中，输入相应信息，然后点击<code>确定</code>按钮，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/bestpractice/periodic_notification/channel_hu5ce7dbab866c4b72b08e502087ed4a08_44296_900x0_resize_catmullrom_3.png" width="900" height="961">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    通知渠道设置
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>其中，通知渠道名称设置为<code>email</code>，主机地址设置为<code>smtp.wiseinf.com</code>、端口设置为<code>465</code>、用户名设置为<code>optimizer@wiseinf.com</code>、密码等，其中SMTP服务器主机地址、端口、用户名、密码等信息是前置条件中获取的SMTP服务器相关信息，需要根据实际情况填写。</p>
+<blockquote>
+<p>注意：通知渠道对话框配置项说明请参见[添加渠道]/zh-cn/docs/user-guide/management/channel/#添加渠道</p>
+</blockquote>
+</li>
+<li>
+<p>配置通知规则： 从<code>设置 --&gt; 通知规则</code>进入通知规则管理页面，在通知渠道页面，点击<code>新增</code>按钮，弹出<code>添加通知规则</code>对话框。在通知规则对话框中主要包括如下信息：通知接收者信息、关注的优化建议、通知渠道和匹配规则。
+请输入相应信息，然后点击<code>确定</code>按钮，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/bestpractice/periodic_notification/rule_hu90e42b27ad4d55dfaab4d38611ffaddc_64291_900x0_resize_catmullrom_3.png" width="900" height="924">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    通知规则设置
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>其中，接收者设置为<code>jay@wiseinf.com</code>，通知渠道选择<strong>步骤1</strong>中创建的<code>email</code>通知渠道，调度时间设置为每日早上8点，优化策略选择节点组推荐，集群选择前置条件中导入的集群，即可，如下图所示。</p>
+<blockquote>
+<p>注意：通知规则对话框配置项说明请参见[添加通知规则]/zh-cn/docs/user-guide/management/rule/#添加通知规则</p>
+</blockquote>
+</li>
+<li>
+<p>完成上述配置后，可通过邮件定时接受相应的邮件，邮件内容如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/bestpractice/periodic_notification/email_hu4c8db2394b8c7180dce0a7cec9555708_55391_900x0_resize_catmullrom_3.png" width="900" height="191">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    节点组优化邮件内容
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>从中可知集群中节点组当前的实例类型、自动扩缩容、节点最大值和最小值，优化后的实例类型、自动扩缩容、节点最大值和最小值。用户可以根据这些设置来指导节点组的优化。例如，图中当前的实例类型为<code>r5a.4xlarge</code>，可考虑调整为<code>r6a.large</code>、<code>r5a.large</code>等。集群优化平台推荐节点实例时将考虑多种因素：包括节点的价格、节点区域的可用性、节点的架构、集群节点组的CPU、内存用量等。同时，节点组推荐了节点组的节点最大值和最小值，利用推荐值可在动态负载更有效利用自动扩缩容的能力，最大限度的满足集合应用稳定性的情况下，有效降低成本。</p>
+</li>
+</ol>
+<h2 id="了解更多">了解更多<a class="td-heading-self-link" href="#%e4%ba%86%e8%a7%a3%e6%9b%b4%e5%a4%9a" aria-label="Heading self-link"></a></h2>
+<p>集群优化平台提供了一系列的能力，便于用户便捷的获取优化推荐通知。</p>
+<p>集群优化平台提供了一些列的优化策略，包括低利用率节点、低利用率磁盘、Persistent Volume识别、应用资源推荐、内存溢出等。
+集群优化平台中通知规则提供了一系列的匹配规则，用户可以根据需要选择不同的匹配规则，包括对资源所有者包括部门、组、用户）的匹配、名称空间匹配。
+用户可使用个性化自定义模板，实现个性化的邮件通知。</p>
+<h2 id="参考链接">参考链接<a class="td-heading-self-link" href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5" aria-label="Heading self-link"></a></h2>
+<ol>
+<li><a href="/zh-cn/docs/setup/">集群优化平台安装部署流程</a></li>
+<li><a href="/zh-cn/docs/user-guide/import-cluster/">导入集群</a></li>
+<li><a href="/zh-cn/">云智优本官网</a></li>
+</ol>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

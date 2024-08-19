@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="/docs/setup/setup-using-kubectl/">
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/setup/setup-using-kubectl/index.xml">
+<link rel="canonical" type="text/html" href="//localhost:1313/docs/setup/setup-using-kubectl/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/setup/setup-using-kubectl/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -19,26 +19,30 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Setup using kubectl | Cluster Optimizer</title>
-<meta name="description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
+<title>Install via kubectl | Cluster Optimizer</title>
+<meta name="description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through `kubectl`.
 ">
-<meta property="og:title" content="Setup using kubectl" />
-<meta property="og:description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
-" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/setup/setup-using-kubectl/" /><meta property="og:site_name" content="Cluster Optimizer" />
+<meta property="og:url" content="//localhost:1313/docs/setup/setup-using-kubectl/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="Install via kubectl">
+  <meta property="og:description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through `kubectl`.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Setup using kubectl">
-<meta itemprop="description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
-"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Setup using kubectl"/>
-<meta name="twitter:description" content="Instructions for installing the **Cluster Optimizer**  on Kubernetes.
-"/>
+  <meta itemprop="name" content="Install via kubectl">
+  <meta itemprop="description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through `kubectl`.">
+  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
+  <meta itemprop="wordCount" content="669">
+  <meta itemprop="keywords" content="Cluster Optimizer">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Install via kubectl">
+  <meta name="twitter:description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through `kubectl`.">
 
 
 
 
-<link rel="preload" href="/scss/main.min.53e92f67aaf3e1a55dd8d6ec35a821d7ce9abe0cf359830a9ca5b09925e96f39.css" as="style">
-<link href="/scss/main.min.53e92f67aaf3e1a55dd8d6ec35a821d7ce9abe0cf359830a9ca5b09925e96f39.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -46,16 +50,8 @@
   crossorigin="anonymous"></script>
 
 
-<link href="/css/pricing.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-STB7S5D1BR');
-}
-</script>
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
   </head>
   <body class="td-section">
     <header>
@@ -65,7 +61,10 @@ if (!doNotTrack) {
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Docs</span></a>
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/price/"><span>Pricing</span></a>
@@ -112,8 +111,8 @@ This is the multi-page printable view of this section.
 
 
 
-<h1 class="title">Setup using kubectl</h1>
-<div class="lead">Instructions for installing the <strong>Cluster Optimizer</strong>  on Kubernetes.</div>
+<h1 class="title">Install via kubectl</h1>
+<div class="lead">Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through <code>kubectl</code>.</div>
 
 
 
@@ -134,45 +133,43 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Instructions for installing the <strong>Cluster Optimizer</strong>  on Kubernetes.</p>
+<p>This page describes the detailed steps to install the one-stop cloud native cluster optimization platform (Cluster Optimizer).</p>
 
 </div>
 
 <h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
 <ul>
 <li>Mysql database, version 5.7 and above</li>
-<li>kubernetes cluster, version 1.22 and above</li>
-<li>Git</li>
+<li>Kubernetes cluster, version 1.22 and above</li>
+<li>The certificate of the Kubernetes cluster can create the <code>wiseinf-system</code> namespace and create Deployment, ConfigMap, Service and other resources under this namespace</li>
 </ul>
 <h2 id="clone-installation-script">Clone installation script<a class="td-heading-self-link" href="#clone-installation-script" aria-label="Heading self-link"></a></h2>
-<blockquote>
-<p>We assume the installation script library has been cloned into <code>setup</code> subdirectory of user&rsquo;s home directory.</p>
-</blockquote>
-<ol>
-<li>Clone installation script into local using git:
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    <span style="color:#204a87">cd</span> ~
-</span></span><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
-</span></span></code></pre></div></li>
-<li>Navigate to the <code>setup</code> directory.
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>   <span style="color:#204a87">cd</span> setup
-</span></span></code></pre></div>The installation directory contains:
-<ul>
-<li>Kubernetes YAML files in <code>cluster-optimizer/yaml</code></li>
-<li>SQL script in <code>cluster-optimizer/sql/</code></li>
-</ul>
-</li>
-</ol>
-<h2 id="setup-deployment-cluster-optimizer">Setup deployment <strong>Cluster Optimizer</strong><a class="td-heading-self-link" href="#setup-deployment-cluster-optimizer" aria-label="Heading self-link"></a></h2>
 <ol>
 <li>
-<p>Create namespace <code>wiseinf-system</code> using:</p>
+<p>Open the command line console and clone the installation script to the local computer through the following command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
+</span></span></code></pre></div><blockquote>
+<ol>
+<li>
+<p>If you use the Gitee warehouse address, you need to replace <code>https://github.com/wiseinf/setup.git</code> in the above command with <code>https://gitee.com/wiseinf/setup.git</code>.</p>
+</li>
+<li>
+<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it has not been cloned to the user&rsquo;s home directory, the file path in the command needs to be adjusted according to the actual situation.</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="deploy-application">Deploy application<a class="td-heading-self-link" href="#deploy-application" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>Create the namespace <code>wiseinf-system</code> through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/namespace.yaml
 </span></span></code></pre></div></li>
 <li>
-<p>Create database <code>optimizer-mysql</code> using:</p>
+<p>Create the database <code>optimizer-mysql</code> through the following command, its service name is <code>optimizer-mysql</code>, and can be accessed through the user <code>root</code> and the password <code>Optimizer~</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/mysql.yaml
-</span></span></code></pre></div><p>Its service name is <code>optimizer-mysql</code>, and can be accessed by user <code>root</code> with password <code>Optimizer~</code>.</p>
-<p>To bind the database to a specific node, please edit the ~/setup/cluster-optimizer/yaml/mysql.yaml file, uncomment the affinity field, and modify the value field to the desired node name, as shown below.</p>
+</span></span></code></pre></div><p>If you need to bind the database to the specified node, please edit the <code>~/setup/cluster-optimizer/yaml/mysql.yaml</code> file, remove the comments in the <code>affinity</code> field, and modify the value of the <code>value</code> field to Specify the node name as shown below.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">affinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">nodeAffinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -186,57 +183,56 @@ This is the multi-page printable view of this section.
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div></li>
 <li>
-<p>Create deployment <code>optimizer</code> using:</p>
+<p>Create <code>Deployment</code> <code>optimizer</code> through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 </span></span></code></pre></div><blockquote>
-<p>Note: If you intend to use a deployed database, please refer to <a href="#using-a-deployed-database">Using a Deployed Database</a>.</p>
+<p>Note: If you want to use a deployed database, please see [Use Deployed Database](#Use Deployed Database).</p>
 </blockquote>
 </li>
 <li>
-<p>Check if <code>optimizer</code> is running:</p>
+<p>Check whether <code>optimizer</code> is running normally through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
-</span></span></code></pre></div><p>You can get:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    NAME                         READY   STATUS    RESTARTS   AGE
-</span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6   2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
+</span></span></code></pre></div><p>If it runs normally, you can get output similar to the following, in which the currently running Pod Name is <code>optimizer-5b956655df-gspq6</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    NAME READY STATUS RESTARTS AGE
+</span></span><span style="display:flex;"><span>    optimizer-5b956655df-gspq6 2/2 Running <span style="color:#0000cf;font-weight:bold">0</span> 1m
 </span></span></code></pre></div></li>
 <li>
-<p>Create a <strong>port-forward</strong> to access <code>optimizer</code> service:</p>
+<p>Create <strong>port-forward</strong> to access the <code>optimizer</code> service through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
 </span></span></code></pre></div></li>
 <li>
-<p>Open your browser and visit url <code>http://localhost:8000/</code>.</p>
+<p>Open the browser and visit the address <code>http://localhost:8000/</code>.</p>
 </li>
 <li>
-<p>If you can see the home page of <strong>Cluster Optimizer</strong>, you have successfully setup <code>optimizer</code>.</p>
+<p>If you can see the <strong>Cluster Optimizer</strong> homepage, the application <strong>Cluster Optimizer</strong> is deployed successfully.</p>
 </li>
 </ol>
-<h2 id="using-a-deployed-database">Using a Deployed Database<a class="td-heading-self-link" href="#using-a-deployed-database" aria-label="Heading self-link"></a></h2>
-<p>If you want to use a deployed database or want to deploy the database by yourself, please follow the instructions below:</p>
+<h2 id="use-deployed-database">Use deployed database<a class="td-heading-self-link" href="#use-deployed-database" aria-label="Heading self-link"></a></h2>
+<p>If you want to use the deployed database and use a new username and password to access <strong>Cluster Optimizer</strong>, please refer to the following steps:</p>
 <ol>
 <li>
-<p>Login into mysql database using:</p>
+<p>Execute the <code>mysql</code> command on the command line console to log in to the Mysql database. <code>127.0.0.1</code> is the Mysql database host address. You need to replace it with the actual address you use.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
-</span></span></code></pre></div><p>The 127.0.0.1 is the host address of the MySQL database, which you need to replace with the actual address you are using.</p>
-<blockquote>
-<p>Note: If you are using a remote database, please make sure the database is accessible from the kubernetes cluster.</p>
+</span></span></code></pre></div><blockquote>
+<p>Note: If you use a remote database, make sure the database is accessible from the Kubernetes cluster.</p>
 </blockquote>
 </li>
 <li>
-<p>Create database schema <code>optconf</code>(used to store configurations) and <code>optdata</code>(used to store data)</p>
+<p>Create database schema <code>optconf</code> (optimization configuration library) and <code>optdata</code> (optimization database).</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
 </span></span></code></pre></div><blockquote>
-<p>Note: Please be aware of the risk of data loss. The script will drop schema <code>optconf</code> and <code>optdata</code> first and then create new schemas. If you already have an <code>optconf</code> or an <code>optdata</code> schema, your data in this schema will be lost.</p>
+<p>Note: Please be aware of the risk of data loss. If the <code>optconf</code> library and <code>optdata</code> library already exist in the mysql database, the above script will first delete the library and then create a new library.</p>
 </blockquote>
 </li>
 <li>
-<p>Create a new user and grant permission to the new user. The user name is <code>optimizer</code>, password is <code>Optimizer~</code>, you can change it to your own.</p>
+<p>Create a new username and password, and set corresponding permissions for them. The username in the script is <code>optimizer</code> and the password is <code>Optimizer~</code>. You can adjust it according to your needs.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
 </span></span></code></pre></div></li>
 <li>
-<p>Adjust the database information in the <strong>Cluster Optimizer</strong> configuration file. Edit the ConfigMap optimizer-conf in the file ~/setup/cluster-optimizer/yaml/optimizer.yaml, and adjust the values of dataSource.name under the configuration items optdata and optconf to match the corresponding information of the MySQL database, including the username, password, database address, and port.</p>
+<p>Adjust the database information in the <strong>Cluster Optimizer</strong> configuration file. Edit the <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>, and change the <code>dataSource.name</code> value under the configuration items <code>optdata</code> and <code>optconf</code> The user name, user password, database address and port are adjusted to the corresponding information of the Mysql database.</p>
 </li>
 <li>
-<p>Restart the application and check the log output of the <strong>Cluster Optimizer</strong> to verify if the database configuration information matches your expectations. For example:</p>
+<p>Restart the application and check the log output of <strong>Cluster Optimizer</strong> (as shown below) to see whether the database configuration information is consistent with your expectations.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optconf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -253,14 +249,14 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>At the same time, also check for any database-related errors. If there are no relevant errors, it indicates that the new database has been successfully used.</p>
+</span></span></code></pre></div><p>At the same time, also check whether there are any database-related errors. If there are no related errors, it proves that a new database has been used.</p>
 </li>
 </ol>
-<h2 id="next-import-a-cluster">Next: Import a cluster<a class="td-heading-self-link" href="#next-import-a-cluster" aria-label="Heading self-link"></a></h2>
-<p>Next, you can import a cluster and view its optimization recommendations. For details, please visit following links:</p>
+<h2 id="next-step-import-the-cluster">Next step: Import the cluster<a class="td-heading-self-link" href="#next-step-import-the-cluster" aria-label="Heading self-link"></a></h2>
+<p>Next, you can add a cluster and view its related optimization recommendations. For details, see:</p>
 <ul>
-<li><a href="/docs/import-aws">Import Cluster from AWS</a></li>
-<li><a href="/docs/import-aliyun">Import Cluster from Alibaba Cloud</a></li>
+<li><a href="/docs/user-guide/import-cluster/import-aws/">Import AWS EKS cluster</a></li>
+<li><a href="/docs/user-guide/import-cluster/import-alibaba/">Import Alibaba Cloud Cluster</a></li>
 </ul>
 
 </div>
@@ -326,8 +322,8 @@ This is the multi-page printable view of this section.
 </footer>
 
     </div>
-    <script src="/js/main.min.1f48fc7981e4db829114650dc98d270b6642a46c1e4ebddb8389ff0a463a6328.js" integrity="sha256-H0j8eYHk24KRFGUNyY0nC2ZCpGweTr3bg4n/CkY6Yyg=" crossorigin="anonymous"></script>
-<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

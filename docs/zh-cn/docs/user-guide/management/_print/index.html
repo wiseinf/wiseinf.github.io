@@ -1,0 +1,737 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/zh-cn/docs/user-guide/management/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/zh-cn/docs/user-guide/management/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>管理设置 | Cluster Optimizer</title>
+<meta name="description" content="描述集群优化平台管理相关操作，包括通知渠道管理，通知规则管理，用户管理等。
+">
+<meta property="og:url" content="//localhost:1313/zh-cn/docs/user-guide/management/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="管理设置">
+  <meta property="og:description" content="描述集群优化平台管理相关操作，包括通知渠道管理，通知规则管理，用户管理等。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="管理设置">
+  <meta itemprop="description" content="描述集群优化平台管理相关操作，包括通知渠道管理，通知规则管理，用户管理等。">
+  <meta itemprop="keywords" content="Cluster Optimizer,管理设置">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="管理设置">
+  <meta name="twitter:description" content="描述集群优化平台管理相关操作，包括通知渠道管理，通知规则管理，用户管理等。">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/user-guide/management/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/user-guide/management/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">管理设置</h1>
+<div class="lead">描述集群优化平台管理相关操作，包括通知渠道管理，通知规则管理，用户管理等。</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-7ef970caa7a5855fad8828381ba9b562">用户管理</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-38c9ec300cbef8d19ccbe0c29a55bfc3">通知渠道</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-46d0a2aaf7efc21cf80ea73eabb58128">通知规则</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-7ef970caa7a5855fad8828381ba9b562">1 - 用户管理</h1>
+    <div class="lead">描述用户管理的相关操作。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述用户管理的相关操作。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>管理用户需具备管理员权限。</li>
+<li>仅适用于商业版本。</li>
+</ul>
+<h2 id="查看用户列表">查看用户列表<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e7%94%a8%e6%88%b7%e5%88%97%e8%a1%a8" aria-label="Heading self-link"></a></h2>
+<p>从<code>设置 --&gt; 用户</code>进入用户管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png" width="900" height="202">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+用户管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>用户管理页面将以列表的形式展示通知渠道。主要包括5栏：</p>
+<ul>
+<li>用户名：展示用户名称。</li>
+<li>全称：展示用户名称。</li>
+<li>电子邮箱：展示用户电子邮箱。</li>
+<li>电话号码：展示用户电话号码。</li>
+<li>角色：展示用户角色。</li>
+<li>操作：操作栏，包括编辑、删除等操作。</li>
+</ul>
+<h2 id="添加用户">添加用户<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击用户管理页面上方的<code>增加</code>按钮，将弹出添加用户对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png" width="900" height="562">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加用户对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>用户名称， 必选</td>
+</tr>
+<tr>
+<td>姓</td>
+<td>用户姓，可选</td>
+</tr>
+<tr>
+<td>名</td>
+<td>用户名，可选</td>
+</tr>
+<tr>
+<td>电子邮箱</td>
+<td>用户电子邮箱，必选</td>
+</tr>
+<tr>
+<td>密码</td>
+<td>用户登录密码，必选</td>
+</tr>
+<tr>
+<td>确认密码</td>
+<td>确认用户登录密码，必选</td>
+</tr>
+<tr>
+<td>手机号</td>
+<td>用户手机号，必选</td>
+</tr>
+<tr>
+<td>用户角色</td>
+<td>目前，系统提供管理员和用户两种角色，默认为用户，必选</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加用户。</p>
+<h2 id="更新用户">更新用户<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e7%94%a8%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击用户管理页面列表中的<code>编辑</code>按钮，将弹出编辑用户对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png" width="900" height="562">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑用户对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/management/user/#添加用户">添加用户</a>一致，不在赘述。</p>
+<h2 id="删除用户">删除用户<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e7%94%a8%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击用户管理页面的<code>删除</code>按钮，将删除用户。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png" width="900" height="191">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除用户
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除用户之前，将弹出删除确认对话框，确认后执行删除操作。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-38c9ec300cbef8d19ccbe0c29a55bfc3">2 - 通知渠道</h1>
+    <div class="lead">描述如何设置通知渠道。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述如何管理通知渠道，包括查看，添加、更新或者删除通知渠道。</p>
+
+</div>
+
+<h2 id="查看渠道">查看渠道<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>从<code>设置 --&gt; 通知渠道</code>进入通知渠道管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/overview_hucff31aac09e394ec659275683fd563d9_32586_900x0_resize_catmullrom_3.png" width="900" height="184">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+通知渠道管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>通知渠道管理页面将以列表的形式展示通知渠道。主要包括5栏：</p>
+<ul>
+<li>名称：通知渠道名称。</li>
+<li>渠道类型：通知渠道类型。</li>
+<li>连接参数：展示该渠道类型的连接参数。</li>
+<li>其他参数：展示其他参数</li>
+<li>操作：操作栏，包括编辑、删除等操作。</li>
+</ul>
+<h2 id="添加渠道">添加渠道<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>点击通知渠道管理页面上方的<code>新增</code>按钮，选择通知渠道类型，并填写通知渠道信息，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/addchannel_hu97b2511821a76fc3f758d82b0054f24e_39179_900x0_resize_catmullrom_3.png" width="900" height="964">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加通知渠道对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>通知渠道名称</td>
+</tr>
+<tr>
+<td>渠道类型</td>
+<td>通知渠道类型，目前仅支持Email</td>
+</tr>
+<tr>
+<td>主机</td>
+<td>Email SMTP主机名，例如 <code>smtp.wiseinf.com</code></td>
+</tr>
+<tr>
+<td>端口</td>
+<td>Email SMTP端口，例如 <code>25</code>, <code>465</code></td>
+</tr>
+<tr>
+<td>启用SSL</td>
+<td>是否启用SSL，默认为不启用</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Email地址，例如 <code>admin@wiseinf.com</code></td>
+</tr>
+<tr>
+<td>发送者名称</td>
+<td>发送者名称，例如 <code>Wiseinf</code></td>
+</tr>
+<tr>
+<td>密码</td>
+<td>Email SMTP密码</td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过<code>{{.param.参数名}}</code>的方式在模板中引用。</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加通知渠道。</p>
+<blockquote>
+<p>具体上述字段的取值，您可以咨询您的邮件服务商，或者是邮件系统管理员。</p>
+</blockquote>
+<h2 id="更新渠道">更新渠道<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>更新通知渠道，点击通知渠道管理页面列表中的<code>编辑</code>按钮，将更新通知渠道信息，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/editchannel_hu6c88139678d29abc0f34c75f65f2bc6f_45533_900x0_resize_catmullrom_3.png" width="900" height="964">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑通知渠道对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/management/channel/#添加渠道">添加渠道</a>一致，不在赘述。</p>
+<h2 id="删除渠道">删除渠道<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>点击通知渠道管理页面列表中的的<code>删除</code>按钮，将删除通知渠道，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/deletechannel_hu600240e395bbeb1ed5b0fe17d416beb2_56557_900x0_resize_catmullrom_3.png" width="900" height="214">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑通知渠道对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除通知渠道之前，将弹出删除确认对话框，用户确认后执行删除操作。</p>
+<blockquote>
+<p>注意：当该通知渠道被通知规则所使用时，会提示删除不成功。应该首先删除使用该通知渠道的通知规则后，然后再删除该通知渠道。</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-46d0a2aaf7efc21cf80ea73eabb58128">3 - 通知规则</h1>
+    <div class="lead">描述管理通知规则的详细信息。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述管理通知规则的详细信息。</p>
+
+</div>
+
+<h2 id="查看通知规则">查看通知规则<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>从<code>设置 --&gt; 通知规则</code>进入通知规则管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/overview_hud10719c48adf621bd59bc0991cb7dd5e_61084_900x0_resize_catmullrom_3.png" width="900" height="197">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+通知规则管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>通知规则管理页面将以列表的形式展示通知渠道。主要包括5栏：</p>
+<ul>
+<li>名称：通知渠道名称。</li>
+<li>渠道类型：通知渠道类型。</li>
+<li>连接参数：展示该渠道类型的连接参数。</li>
+<li>其他参数：展示其他参数</li>
+<li>操作：操作栏，包括编辑、删除等操作。</li>
+</ul>
+<h2 id="添加通知规则">添加通知规则<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>点击通知规则管理页面上方的<code>增加</code>按钮，将弹出添加通知规则对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/addrule_hu85976e3cbbb33cf256e2735191b00c47_58685_900x0_resize_catmullrom_3.png" width="900" height="923">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加通知规则对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>通知渠道名称</td>
+</tr>
+<tr>
+<td>接收者</td>
+<td>通知接收者地址，比如 <code>admin@wiseinf.com</code></td>
+</tr>
+<tr>
+<td>通知渠道</td>
+<td>可通过下拉框选择具体的通知渠道名</td>
+</tr>
+<tr>
+<td>调度时间</td>
+<td>设置该规则的具体调度时间。</td>
+</tr>
+<tr>
+<td>优化策略</td>
+<td>选择具体的优化策略</td>
+</tr>
+<tr>
+<td>集群</td>
+<td>选择需要关注的集群</td>
+</tr>
+<tr>
+<td>名称空间</td>
+<td>输入名称空间名，空值将匹配所有名称空间</td>
+</tr>
+<tr>
+<td>部门</td>
+<td>输入部门名，空值将匹配所有部门名称</td>
+</tr>
+<tr>
+<td>组</td>
+<td>输入组名，空值将匹配所有组名</td>
+</tr>
+<tr>
+<td>用户</td>
+<td>输入用户名，空值将匹配所有用户名</td>
+</tr>
+<tr>
+<td>模板ID</td>
+<td>模板ID名，默认值为<code>default</code></td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过<code>{{.param.参数名}}</code>的方式在模板中引用。通知渠道参数列表中的同名参数将覆盖。</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加通知规则。</p>
+<h2 id="更新通知规则">更新通知规则<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>更新通知渠道，点击通知渠道管理页面列表中的<code>编辑</code>按钮，将弹出添加通知规则对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/editrule_huf3f8e083d06596a212cbf2e980c5da45_65629_900x0_resize_catmullrom_3.png" width="900" height="928">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑通知规则对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/management/rule/#添加通知规则">添加通知规则</a>一致，不在赘述。</p>
+<h2 id="删除通知规则">删除通知规则<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>点击通知渠道管理页面的<code>删除</code>按钮，将删除通知规则。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/deleterule_hue2d65ed7fb5e30f007de7122a94a917a_43216_900x0_resize_catmullrom_3.png" width="900" height="112">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除通知规则
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除通知规则之前，将弹出删除确认对话框，用户确认后执行删除操作。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

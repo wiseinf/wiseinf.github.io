@@ -1,77 +1,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – News</title>
-    <link>/blog/news/</link>
+    <link>//localhost:1313/blog/news/</link>
     <description>Recent content in News on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/blog/news/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/blog/news/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
-    
-    <item>
-      <title>Blog: Easy documentation with Docsy</title>
-      <link>/blog/2018/10/06/easy-documentation-with-docsy/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2018/10/06/easy-documentation-with-docsy/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_3.png" width="640" height="253"/>]]>
-        
-        &lt;p&gt;&lt;strong&gt;This is a typical blog post that includes images.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p&gt;
-&lt;h2 id=&#34;including-images&#34;&gt;Including images&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#including-images&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s an image (&lt;code&gt;featured-sunset-get.png&lt;/code&gt;) that includes a byline and a caption.&lt;/p&gt;
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-
-Fetch and scale an image in the upcoming Hugo 0.43.
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Riona MacNamara / CC-BY-CA&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The front matter of this post specifies properties to be assigned to all image resources:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;resources:
-- src: &amp;#34;**.{png,jpg}&amp;#34;
-  title: &amp;#34;Image #:counter&amp;#34;
-  params:
-    byline: &amp;#34;Photo: Riona MacNamara / CC-BY-CA&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To include the image in a page, specify its details like this:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-
-Fetch and scale an image in the upcoming Hugo 0.43.
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Riona MacNamara / CC-BY-CA&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The image will be rendered at the size and byline specified in the front matter.&lt;/p&gt;
-
-      </description>
-    </item>
     
     <item>
       <title>Blog: Second blog post</title>
-      <link>/blog/2018/10/06/second-blog-post/</link>
+      <link>//localhost:1313/blog/2018/10/06/second-blog-post/</link>
       <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2018/10/06/second-blog-post/</guid>
+      <guid>//localhost:1313/blog/2018/10/06/second-blog-post/</guid>
       <description>
         
         
@@ -300,9 +248,9 @@ bar := &amp;#34;foo&amp;#34;;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;p&gt;Small images should be shown at their actual size.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/300/200/&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/300/200/&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/1200/800/&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/1200/800/&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;components&#34;&gt;Components&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#components&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;alerts&#34;&gt;Alerts&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alerts&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;

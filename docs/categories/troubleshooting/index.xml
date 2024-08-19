@@ -1,0 +1,39 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Troubleshooting</title>
+    <link>//localhost:1313/categories/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Troubleshooting</title>
+      <link>//localhost:1313/docs/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/troubleshooting/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;cloud-service-provider-related-faults&#34;&gt;Cloud service provider related faults&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#cloud-service-provider-related-faults&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;amazon-aws&#34;&gt;Amazon AWS&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#amazon-aws&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Failed to obtain AWS credentials, the log shows &lt;code&gt;getting credentials: exec: executable aws failed with exit code 253&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The main reason: Use the &lt;code&gt;aws&lt;/code&gt; command to obtain credentials when accessing EKS Kubernetes in AWS. &lt;code&gt;aws&lt;/code&gt; is not installed by default in &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;. It obtains credentials through the API. Because it involves automatically refreshing kubeconfig, you need to edit the cluster and select &lt;code&gt;Automatically refresh Kubeconfig&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

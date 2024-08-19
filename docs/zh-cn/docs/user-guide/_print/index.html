@@ -1,0 +1,3364 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/zh-cn/docs/user-guide/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/zh-cn/docs/user-guide/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>用户手册 | Cluster Optimizer</title>
+<meta name="description" content="描述集群优化平台的用户相关手册.
+">
+<meta property="og:url" content="//localhost:1313/zh-cn/docs/user-guide/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="用户手册">
+  <meta property="og:description" content="描述集群优化平台的用户相关手册.">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="用户手册">
+  <meta itemprop="description" content="描述集群优化平台的用户相关手册.">
+  <meta itemprop="keywords" content="Cluster Optimizer,用户手册">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="用户手册">
+  <meta name="twitter:description" content="描述集群优化平台的用户相关手册.">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/user-guide/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/user-guide/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">用户手册</h1>
+<div class="lead">描述集群优化平台的用户相关手册.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-e6ed57e7dbeef8034ccedff9d9ca8a58">导入集群</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-1c6330491944d0bff232f8016982844c">导入阿里云集群</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-0f203e01bd41dd1a33479270e1e5a900">导入AWS EKS集群</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-1b438a7583c6ec8982f6ad56f877e836">集群概览</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-962dbae9f82c12c09c342b608324a0f8">节点组优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-24adf40f029c63a38de13dad8070b127">节点优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-8b0fefaf2bd328b7a0510ea655049f57">GPU节点优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-7bb3c3784f49af2909b97008985f2824">磁盘优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-b9433f7c12b3c664af41af5ff4ef542c">Persistent Volume优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>8: <a href="#pg-a5be3adb43033703c72f5abb0db00a80">应用优化</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-edeb53809f005912c6ee239938f0667c">任务管理</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>10: <a href="#pg-c45f86707c5300923565772c53d3fb61">个人设置</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>10.1: <a href="#pg-3c0d10cfd5fa60759266937d29fa34e2">个人账户设置</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>10.2: <a href="#pg-41d71a2b3dcedf8ede0f40a92a4f0523">集群访问账户</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>11: <a href="#pg-d0316f49e87d6a622becb11c63d3c569">管理设置</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>11.1: <a href="#pg-7ef970caa7a5855fad8828381ba9b562">用户管理</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>11.2: <a href="#pg-38c9ec300cbef8d19ccbe0c29a55bfc3">通知渠道</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>11.3: <a href="#pg-46d0a2aaf7efc21cf80ea73eabb58128">通知规则</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>12: <a href="#pg-e986112ec0d9d371b5529ef8bb3b39b7">优化操作</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>12.1: <a href="#pg-139070b48b792c1639c638cc75e3fde2">调整节点池</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>12.2: <a href="#pg-35da873a43764310b07023189a978466">调整节点</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>12.3: <a href="#pg-923a83f4d877971f61341f9235e496a8">调整磁盘</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>12.4: <a href="#pg-4f9919d12da784dc7db0a3d2a7fa6cef">删除Persistent Volume</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-e6ed57e7dbeef8034ccedff9d9ca8a58">1 - 导入集群</h1>
+    <div class="lead">描述导入集群的详细步骤，您可以导入多个云服务商的集群。</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-1c6330491944d0bff232f8016982844c">1.1 - 导入阿里云集群</h1>
+    <div class="lead">描述导入阿里云集群的详细步骤.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本节描述导入阿里云集群的详细步骤。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>获取阿里云Access Key和Access Key Secret，具备如下权限。具体申请过程请参考<a href="https://help.aliyun.com/document_detail/116401.htm">创建Access Key</a>。</p>
+<table>
+<thead>
+<tr>
+<th>服务</th>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>云服务器（ECS）</td>
+<td>ecs:DescribeDisks<br/> ecs:DescribeInstances<br/> ecs:DescribeRegions</td>
+<td>需此权限获取磁盘、实例和地域信息</td>
+</tr>
+<tr>
+<td>容器服务Kubernetes版（CS）</td>
+<td>cs:DescribeClusterNodePools<br/> cs:DescribeClusterNodePoolDetail<br/> cs:DescribeClusters <br/> cs:DescribeClusterUserKubeconfig<br/> cs:DescribeClusterNodes</td>
+<td>需此权限获取集群、节点池、节点、Kubeconfig等信息</td>
+</tr>
+</tbody>
+</table>
+<p>其权限策略文件描述如下，您可以直接在阿里云控制台中导入该策略，具体请参考<a href="https://help.aliyun.com/zh/ram/user-guide/create-a-custom-policy#section-kwn-gu8-48m">通过脚本编辑模式创建自定义权限策略</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Statement&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Effect&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Allow&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ecs:DescribeDisks&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ecs:DescribeInstances&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ecs:DescribeRegions&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Resource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Condition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Effect&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Allow&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterNodePools&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterNodePoolDetail&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusters&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterUserKubeconfig&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;cs:DescribeClusterNodes&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Resource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Condition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>阿里云Kubernetes集群Kubeconfig。集群版本1.22及以上，建议使用ACK集群。具体请参见<a href="https://help.aliyun.com/zh/ack/">容器服务Kubernetes版</a>。</p>
+</li>
+<li>
+<p>Kubeconfig需具备如下权限。</p>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取节点信息</td>
+</tr>
+<tr>
+<td>Pod</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取Pod信息</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取Namespace信息</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取Service信息</td>
+</tr>
+<tr>
+<td>Persistent Volume<br/> Persistent Volume Claim</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取Persistent Volume、Persistent Volume Claim信息</td>
+</tr>
+<tr>
+<td>Deployment<br/>StatefulSet<br/>DaemonSet<br/><br/>ReplicaSet<br>ReplicationControllers<br/></td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取Deployment、StatefulSet、DaemonSet、ReplicaSet、ReplicationContoller信息</td>
+</tr>
+<tr>
+<td>Job<br/>CronJob</td>
+<td>List<br/>Get<br/> Watch</td>
+<td>获取Job和CronJob信息</td>
+</tr>
+</tbody>
+</table>
+<p>权限文件如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">rbac.authorization.k8s.io/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ClusterRole</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">rules</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">nodes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">pods</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">pods/status</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumeclaims</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">namespaces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;apps/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">deployments</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">replicasets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">replicationcontollers</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">statefulsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">daemonsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;batch/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">jobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">cronjobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;storage/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">storageclasses</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>Prometheus监控或者Thanos监控。该监控用于给集群中的节点、容器等提供监控数据。</p>
+</li>
+</ol>
+<h2 id="导入步骤">导入步骤<a class="td-heading-self-link" href="#%e5%af%bc%e5%85%a5%e6%ad%a5%e9%aa%a4" aria-label="Heading self-link"></a></h2>
+<h3 id="添加阿里云账号">添加阿里云账号<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e9%98%bf%e9%87%8c%e4%ba%91%e8%b4%a6%e5%8f%b7" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>选择<code>设置</code>菜单，选择<code>云账户</code>标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png" width="900" height="346">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    云账户管理主页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+<li>
+<p>在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp02_hued1b873e3939167d1f90bbc9956d703f_88202_500x0_resize_catmullrom_3.png" width="500" height="349">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    添加云账户界面
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+</ol>
+<h3 id="添加阿里云集群">添加阿里云集群<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e9%98%bf%e9%87%8c%e4%ba%91%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>选择<code>设置</code>菜单，选择集群标签进入集群管理页面。默认情况下，该页面将分页展示平台管理的所有集群，包括名称、集群ID集群地域、Access Token名称，对应的云服务商以及Prometheus地址，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png" width="900" height="345">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+集群管理主页面
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>点击<code>导入集群</code>按钮即弹出导入对话框，可在此导入集群。导入集群分为5个步骤，目前仅支持阿里云集群。</p>
+<ol>
+<li>设置阿里云访问凭据</li>
+<li>连接Kubernetes集群</li>
+<li>连接Prometheus</li>
+<li>查看配置</li>
+<li>完成</li>
+</ol>
+</li>
+<li>
+<p>设置阿里云访问凭据界面如下图所示。在阿里云访问凭据界面，通过使用已有凭据来设置阿里云访问凭据，此处选择<code>添加阿里云账号</code>中添加的阿里云账号，如下图所示。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png" width="900" height="270">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+导入集群界面-设置阿里云访问凭据
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>设置完阿里云访问凭据后，点击下一步按钮，即可进入连接Kubernetes集群页面，如下图所示。平台支持连接2种类型的Kubernetes集群，包括托管集群和自建集群。连接托管集群页面如下图所示。此处我们选择托管集群，平台通过云账户自动获取用户集群，用户通过集群下拉框来选择相应的集群、输入描述字段、选择是否使用API Server私网地址、选择是否自动刷新KubeConfig以及KubeConfig生命周期，最后输入节点组标签即可。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png" width="900" height="602">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    连接Kubernetes集群页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>连接Prometheus页面如下图所示。用户在此页面输入信息后，点击下一步按钮进入查看配置页面。输入信息明细如下表所示。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png" width="900" height="437">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    连接Prometheus页面
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+连接Prometheus参数说明如表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">是否Thanos</td>
+<td style="text-align:left">若后端集群为Thanos，则应勾选此项。</td>
+</tr>
+<tr>
+<td style="text-align:left">Prometheus地址</td>
+<td style="text-align:left">Prometheus地址，必须可访问。</td>
+</tr>
+<tr>
+<td style="text-align:left">限制访问速率</td>
+<td style="text-align:left">若需要现在平台对Prometheus的访问速率，则应勾选此项。</td>
+</tr>
+<tr>
+<td style="text-align:left">最大并发数</td>
+<td style="text-align:left">平台访问Prometheus的最大并发数。</td>
+</tr>
+<tr>
+<td style="text-align:left">集群标签</td>
+<td style="text-align:left">集群标签用于从Prometheus或者Thanos中筛选该集群的监控指标</td>
+</tr>
+<tr>
+<td style="text-align:left">集群标签值</td>
+<td style="text-align:left">集群标签值用于从Prometheus或者Thanos中筛选该集群的监控指标</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>查看配置页面如下图所示，该页面显示了阿里云访问凭据、连接Kubernetes集群和连接Prometheus集群的详细参数，方便用户确认。当用户完成确认后，点击导入按钮，即可进入完成页面。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png" width="900" height="598">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+查看配置页面
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>完成页面如图下图所示，页面将显示提交情况。点击完成，即完成集群导入。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png" width="900" height="299">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+完成页面
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+</ol>
+<h2 id="下一步操作">下一步操作<a class="td-heading-self-link" href="#%e4%b8%8b%e4%b8%80%e6%ad%a5%e6%93%8d%e4%bd%9c" aria-label="Heading self-link"></a></h2>
+<p>导入集群完成后，等待一段时间（等待优化策略完成调度和执行），即可查看该集群多个维度的优化建议，包括：</p>
+<ul>
+<li><a href="/zh-cn/docs/user-guide/nodegroup/">节点组</a></li>
+<li><a href="/zh-cn/docs/user-guide/node/">节点</a></li>
+<li><a href="/zh-cn/docs/user-guide/gpunode/">GPU节点</a></li>
+<li><a href="/zh-cn/docs/user-guide/disk/">磁盘</a></li>
+<li><a href="/zh-cn/docs/user-guide/pv/">Persistent volume</a></li>
+<li><a href="/docs/user-guide/application">应用</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0f203e01bd41dd1a33479270e1e5a900">1.2 - 导入AWS EKS集群</h1>
+    <div class="lead">描述导入AWS EKS集群的详细步骤.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本节描述导入AWS EKS集群的详细步骤。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p>需要提供一个Access Key &amp; Secret，其权限策略如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2012-10-17&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Statement&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Sid&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Optimizer&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Effect&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Allow&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ec2:DescribeInstances&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ec2:DescribeLaunchTemplates&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ec2:DescribeRegions&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ec2:DescribeVolumes&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;ec2:DescribeLaunchTemplateVersions&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;eks:DescribeNodegroup&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;eks:ListNodegroups&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;eks:DescribeCluster&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;eks:ListClusters&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;autoscaling:DescribeAutoScalingInstances&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;autoscaling:DescribeAutoScalingGroups&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Resource&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>一个Kubernetes集群，版本1.22及以上，推荐使用EKS集群.</p>
+</li>
+<li>
+<p>需要提供一个Kubeconfig，用于访问集群相关信息。其权限要求如下（若仅为开发测试集群，无敏感信息，为简单起见，也可以授予集群的全部只读权限）：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">rbac.authorization.k8s.io/v1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ClusterRole</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">rules</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">nodes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">pods</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">pods/status</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumes</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">persistentvolumeclaims</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">services</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">namespaces</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;apps/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">deployments</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">replicasets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">replicationcontollers</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">statefulsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">daemonsets</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;batch/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">jobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">cronjobs</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">apiGroups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#4e9a06">&#34;storage/v1&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">storageclasses</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">verbs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">get</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">watch</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>集群所对应的Prometheus/Thanos地址。</p>
+</li>
+<li>
+<p>应用需要能够访问EKS集群和Prometheus/Thanos。</p>
+</li>
+</ol>
+<h2 id="导入-kuberentes-集群">导入 Kuberentes 集群<a class="td-heading-self-link" href="#%e5%af%bc%e5%85%a5-kuberentes-%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h2>
+<h3 id="添加云账号">添加云账号<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e4%ba%91%e8%b4%a6%e5%8f%b7" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>从<code>设置 --&gt; 云账号</code>进入云账号管理页面，如下图。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png" width="900" height="346">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+   云账户管理
+   <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>单击<code>新增</code>按钮添加云帐户。 可以输入<code>名称</code>，选择<code>Amazon AWS</code>作为<code>云提供商</code>，然后输入<code>Access Key</code>和<code>Access Key Secret</code>，最后单击<code>确认</code>。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png" width="500" height="350">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+   添加云账号
+   <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+<blockquote>
+<p>输入<code>Access Key</code>和<code>Access Key Secret</code>后，您还可以通过单击底部<code>测试连通性</code>按钮来测试访问凭据是否能够正常连接到云提供商。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="导入集群">导入集群<a class="td-heading-self-link" href="#%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>从<code>设置 --&gt; 集群</code>进入集群管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png" width="900" height="345">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+     集群管理
+     <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+<li>
+<p>单击<code>导入集群</code>按钮，然后单击<code>AWS</code>云提供商徽标以开始从AWS导入集群。 它包含五个步骤：</p>
+<ol>
+<li>连接AWS</li>
+<li>连接kubernetes</li>
+<li>连接Metrics Server</li>
+<li>查看配置</li>
+<li>完成</li>
+</ol>
+</li>
+<li>
+<p>在<code>连接AWS</code>步骤中，选择<code>使用已有凭据</code>，选择<code>添加云帐户</code>部分中创建的云帐户，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png" width="900" height="276">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+    导入集群：连接到 AWS
+    <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>然后单击<code>下一步</code>按钮转到<code>连接kubernetes</code>步骤。</p>
+</li>
+<li>
+<p>在<code>连接kubernetes</code>步骤中，选择<code>Managed cluster</code>，如下图。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png" width="900" height="602">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+     导入集群：连接kubernetes集群
+     <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+先选择<code>地域</code>，然后选择<code>集群</code>，然后输入以下配置项：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">配置项</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>描述</code></td>
+<td style="text-align:left">集群描述</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>使用私有API Server私有地址</code></td>
+<td style="text-align:left">是否使用私有API Server地址。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Kubeconfig</code></td>
+<td style="text-align:left">连接到集群的Kubeconfig。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>自动刷新Kubeconfig</code></td>
+<td style="text-align:left">是否自动刷新kubeconfig。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>节点组标签</code></td>
+<td style="text-align:left">用于标识节点所属的节点组。 对于EKS，默认值为<code>eks.amazonaws.com/nodegroup</code>。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：鉴于平台不使用AWS客户端来获取用户身份验证信息，如果您的 <code>Kubeconfig</code>配置项中获取用户身份信息依赖于<code>aws get token</code>命令，则必须启用 <code>自动刷新 Kubeconfig</code>。这确保了平台动态获取用户身份验证详细信息。</p>
+</blockquote>
+<p>然后单击<code>下一步</code>按钮转到<code>连接Metrics服务</code>步骤。</p>
+</li>
+<li>
+<p>在<code>连接Metrics服务</code>步骤中，输入以下配置项，如下所示。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">配置项</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>是否Thanos</code></td>
+<td style="text-align:left">若Metrics Server是 Thanos，则应选中此项。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Metrics服务地址</code></td>
+<td style="text-align:left">Metrics服务器地址，目前支持Prometheus和Thanos。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>限制访问速率</code></td>
+<td style="text-align:left">是否取用到Metrics服务地址的访问速率限制。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>最大并发数</code></td>
+<td style="text-align:left">指定访问Metrics服务地址的最大并发数。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>集群标签</code></td>
+<td style="text-align:left">用作标签名称，用于从Metrics服务过滤集群的指标。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>集群标签值</code></td>
+<td style="text-align:left">用作标签值，用于从Metrics服务过滤集群的指标。</td>
+</tr>
+</tbody>
+</table>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png" width="900" height="447">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+     导入集群：连接Metrics服务
+     <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>然后单击<code>下一步</code>按钮转到<code>查看配置</code>步骤。</p>
+</li>
+<li>
+<p>在<code>查看配置</code>步骤中，显示连接AWS、连接Kubernetes、连接Metrics服务的配置。您可以检查配置是否符合预期。
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png" width="900" height="600">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+     导入集群：查看配置
+     <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+确认这些配置后，您可以单击<code>导入</code>按钮转到<code>完成</code>步骤。</p>
+</li>
+<li>
+<p>在<code>完成</code>步骤中，会显示提交状态，如下图。 当提交状态显示集群已导入时，您可以点击<code>完成</code>按钮。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/import-cluster/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png" width="900" height="599">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+     导入集群：完成
+     <small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+</li>
+</ol>
+<h2 id="下一步">下一步<a class="td-heading-self-link" href="#%e4%b8%8b%e4%b8%80%e6%ad%a5" aria-label="Heading self-link"></a></h2>
+<p>导入集群后，您可以查看集群多个方面的优化建议，包括：</p>
+<ul>
+<li><a href="/zh-cn/docs/user-guide/nodegroup/">节点组</a></li>
+<li><a href="/zh-cn/docs/user-guide/node/">节点</a></li>
+<li><a href="/zh-cn/docs/user-guide/gpunode/">GPU节点</a></li>
+<li><a href="/zh-cn/docs/user-guide/disk/">磁盘</a></li>
+<li><a href="/zh-cn/docs/user-guide/pv/">Persistent volume</a></li>
+<li><a href="/docs/user-guide/application">应用</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1b438a7583c6ec8982f6ad56f877e836">2 - 集群概览</h1>
+    <div class="lead">查看平台中连接的集群。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>查看平台中连接的集群。</p>
+
+</div>
+
+<h2 id="查看集群">查看集群<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e9%9b%86%e7%be%a4" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>集群</code>，显示集群概览页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/cluster/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png" width="900" height="397">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+集群概览页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>主展示区将展示平台管理的集群列表。包括集群（集群名称和集群ID）、集群地域、Access Token名称、云服务商、Prometheus地址、健康状态等信息。</p>
+<p>在商业版本中，额外提供了集群状态和操作栏，如下图所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/cluster/cluster-biz_huec32945de9624f20315c8796979aa7bc_89466_900x0_resize_catmullrom_3.png" width="900" height="263">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+集群概览页：商业版
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>集群状态用户展示集群相应状态，便于用户了解集群状态。主要包括：</p>
+<ol>
+<li>运行中：集群正常运行。</li>
+<li>休眠中：集群正在转入休眠状态。</li>
+<li>休眠：集群已休眠。休眠状态中，集群已释放了相应的节点资源，此时集群使用受限。</li>
+<li>唤醒中：集群正在转入运行中状态。</li>
+</ol>
+<p>集群操作栏用户对集群进行操作，包括：</p>
+<ul>
+<li>设置集群休眠</li>
+<li>立即休眠</li>
+<li>立即唤醒</li>
+<li>日志</li>
+</ul>
+<h2 id="设置集群休眠">设置集群休眠<a class="td-heading-self-link" href="#%e8%ae%be%e7%bd%ae%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0" aria-label="Heading self-link"></a></h2>
+<p>集群休眠通过合理的管理集群中的节点，来降低集群的资源占用，节约成本，假设集群在周一至周五晚上9点开始休眠，周一至周五早上8点开始唤醒（也就是结束休眠），则机器成本节约可高达54.8%。设置集群休眠可以设置集群的<strong>休眠时间</strong>和<strong>唤醒时间</strong>。在休眠时间，将集群中的负载的状态进行存储，同时逐步释放集群中的节点资源。在唤醒时间，系统逐步恢复集群中的节点资源，同时恢复负载的原有状态。集群休眠特别适用于开发、测试等线下环境。</p>
+<p>点击操作栏中的设置集群休眠，弹出对话框如下所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/cluster/set-hibernate-schedule_hubc10ee5423eddc71b603216431c056c2_48356_900x0_resize_catmullrom_3.png" width="900" height="299">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+设置集群休眠
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在<code>是否启用休眠</code>选项中选择<code>启用</code>，然后设置具体的<code>休眠时间</code>和<code>唤醒时间</code>，点击<code>确定</code>按钮即可。默认休眠时间是周一至周五晚上9点，默认唤醒时间是周一至周五早上8点。</p>
+<p>若想取消集群休眠，在<code>是否启用休眠</code>选项中选择<code>不启用</code>，点击<code>确定</code>按钮即可。</p>
+<p>集群休眠时将使用用户提供的集群访问账号来操作集群。您需要设置集群访问账号，具体请参见<a href="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/">设置集群访问账号</a>。</p>
+<blockquote>
+<p>注意：<code>休眠时间</code>和<code>唤醒时间</code>间隔必须大于2小时。</p>
+</blockquote>
+<h2 id="立即休眠">立即休眠<a class="td-heading-self-link" href="#%e7%ab%8b%e5%8d%b3%e4%bc%91%e7%9c%a0" aria-label="Heading self-link"></a></h2>
+<p>鼠标移至<code>...</code>，点击<code>立即休眠</code>按钮，即可立即将集群休眠。</p>
+<h2 id="立即唤醒">立即唤醒<a class="td-heading-self-link" href="#%e7%ab%8b%e5%8d%b3%e5%94%a4%e9%86%92" aria-label="Heading self-link"></a></h2>
+<p>鼠标移至<code>...</code>，点击<code>立即唤醒</code>按钮，即可立即将集群唤醒。</p>
+<h2 id="日志">日志<a class="td-heading-self-link" href="#%e6%97%a5%e5%bf%97" aria-label="Heading self-link"></a></h2>
+<p>鼠标移至<code>...</code>，点击<code>日志</code>按钮，即可查看集群休眠或唤醒相关日志。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-962dbae9f82c12c09c342b608324a0f8">3 - 节点组优化</h1>
+    <div class="lead">描述节点组相关信息及优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了一站式云原生集群优化平台（Cluster Optimizer）提供的节点组优化操作。</p>
+
+</div>
+
+<h2 id="查看节点池">查看节点池<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e8%8a%82%e7%82%b9%e6%b1%a0" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>节点组</code>菜单，则显示节点组页，如下图所示。节点组页分为3个区：</p>
+<ol>
+<li><strong>集群选择区</strong>：选择相应的集群。</li>
+<li><strong>查询区</strong>：可根据所有者相关信息、节点组名称和节点组ID等过滤列表项。</li>
+<li><strong>列表区</strong>：展示节点组的信息、其当前设置和优化设置。</li>
+</ol>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/nodegroup/ng1_hu77fb89e3693c9149284b097a85c9bdcc_61241_900x0_resize_catmullrom_3.png" width="900" height="335">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+节点组页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>用户选择具体的集群后，列表区显示分为5栏：</p>
+<ol>
+<li><strong>节点组栏</strong>：展示节点组名称和节点组ID。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>当前设置栏</strong>：展示节点组当前的实例类型、是否自动扩缩容、最小节点数和最大节点数。</li>
+<li><strong>优化设置栏</strong>：展示平台智能推荐的节点组实例类型、推荐是否启动扩缩容、推荐的最小节点数和最大节点数。</li>
+<li><strong>操作栏</strong>：展示对节点组相应的操作。，</li>
+</ol>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/nodegroup/ng2_hub16f4d365be75272fcf7425dd573ee8d_95095_900x0_resize_catmullrom_3.png" width="900" height="339">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+节点组页-选择完集群
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<h2 id="调整节点组">调整节点组<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9%e7%bb%84" aria-label="Heading self-link"></a></h2>
+<p>点击上图中的<code>调整</code>链接，可打开调整节点组对话框，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/nodegroup/ng3_hu9f9b1a936626968643677fe10b09c15b_67576_900x0_resize_catmullrom_3.png" width="900" height="470">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整节点组对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<blockquote>
+<p>注意：当前仅展示调整节点组的相关操作。后续将提供自动化动作，可在用户确认完设置之后自动化进行调整。</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-24adf40f029c63a38de13dad8070b127">4 - 节点优化</h1>
+    <div class="lead">描述节点相关信息及优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了节点相关信息及优化建议。</p>
+
+</div>
+
+<h2 id="查看节点">查看节点<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e8%8a%82%e7%82%b9" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>节点</code>菜单，则显示节点页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/node/node1_hu95bd09445d93ae613c5c9076a96a49cb_58357_900x0_resize_catmullrom_3.png" width="900" height="331">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+节点页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>节点页分为3个区：</p>
+<ol>
+<li><strong>集群选择区</strong>：选择相应的集群。</li>
+<li><strong>查询区</strong>：可根据节点组名称和节点组ID过滤列表项。</li>
+<li><strong>列表区</strong>：展示节点组的信息、其当前设置和优化设置。</li>
+</ol>
+<p>选择集群的节点页如下所示：
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/node/node2_hu09c3e184ea3ba57694bc714271231b6e_98269_900x0_resize_catmullrom_3.png" width="900" height="337">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+节点页-选择集群
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+</p>
+<p>列表区显示分为5栏：</p>
+<ol>
+<li><strong>节点栏</strong>：展示节点名称、实例ID和地域信息。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>当前设置栏</strong>：展示节点的实例类型、CPU核数和内存大小。</li>
+<li><strong>详情栏</strong>：展示策略所提供的信息。例如，对于低利用率节点策略来说，会观测CPU和内存的平均利用率，并同平台设置的阈值进行比较，帮助用户调整节点实例类型。</li>
+<li><strong>操作栏</strong>：展示对节点相应的操作。</li>
+</ol>
+<h2 id="调整节点">调整节点<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9" aria-label="Heading self-link"></a></h2>
+<p>点击<code>调整</code>链接可打开调整节点对话框，对话框中展示了详细的调整信息和推荐的调整方案，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/node/node3_hu32cfa8a965b9a11abce3b7295de5aeae_82088_900x0_resize_catmullrom_3.png" width="900" height="390">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整节点页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<blockquote>
+<p>注意：当前仅展示调整节点的相关操作。后续将提供自动化动作，可在用户确认完设置之后自动化进行调整。</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8b0fefaf2bd328b7a0510ea655049f57">5 - GPU节点优化</h1>
+    <div class="lead">描述GPU节点相关信息及优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了GPU节点相关信息及优化建议。</p>
+
+</div>
+
+<h2 id="查看gpu节点信息">查看GPU节点信息<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8bgpu%e8%8a%82%e7%82%b9%e4%bf%a1%e6%81%af" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>GPU节点</code>菜单，则显示GPU节点页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/gpunode/node1_hu11de7fa6f5792bee46eecd0ff2d6fe59_62611_900x0_resize_catmullrom_3.png" width="900" height="330">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+GPU节点
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>GPU节点分为3个区域：</p>
+<ol>
+<li><strong>集群选择区</strong>：用于选择集群。</li>
+<li><strong>查询区</strong>: 用于通过多个条件来筛选GPU节点。</li>
+<li><strong>列表区</strong>: 显示GPU节点信息，其所有者，相应的配置及利用率等。</li>
+</ol>
+<p>选择集群后，GPU节点列表区将显示该集群下满足条件的GPU节点列表，如下所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/gpunode/node2_hu8a8870711849f61c2b876059e82bf749_108493_900x0_resize_catmullrom_3.png" width="900" height="379">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Node: cluster selected
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>The list area is divided into five columns:</p>
+<p>列表区显示分为5栏：</p>
+<ol>
+<li><strong>节点信息栏</strong>：展示GPU节点名称、实例ID和地域信息。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>设置栏</strong>：展示GPU节点的实例类型、CPU核数、内存大小、GPU数量及GPU类型。</li>
+<li><strong>详情栏</strong>：展示策略所提供的信息。例如，对于低利用率节点策略来说，会观测CPU和内存的平均利用率，并同平台设置的阈值进行比较，帮助用户调整节点实例类型。</li>
+<li><strong>操作栏</strong>：展示对节点相应的操作。</li>
+</ol>
+<h2 id="调整节点">调整节点<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9" aria-label="Heading self-link"></a></h2>
+<p>点击<strong>操作栏</strong>中的<code>调整</code>链接可打开调整节点对话框，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/gpunode/node3_huaea085118e52e157dc1080a518bf0044_82621_900x0_resize_catmullrom_3.png" width="900" height="385">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Node: Adjust node
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<blockquote>
+<p>注意：当前仅展示调整GPU节点的相关操作。后续将提供自动化动作，可在用户确认完设置之后自动化进行调整。</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7bb3c3784f49af2909b97008985f2824">6 - 磁盘优化</h1>
+    <div class="lead">描述磁盘相关信息及优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了磁盘相关信息及优化建议。</p>
+
+</div>
+
+<h2 id="查看磁盘">查看磁盘<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e7%a3%81%e7%9b%98" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>磁盘</code>菜单，则显示磁盘页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/disk/disk1_huf18be61b2bb287986bbfd11e4b8027fb_60558_900x0_resize_catmullrom_3.png" width="900" height="332">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+磁盘页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>磁盘页分为3个区：</p>
+<ol>
+<li><strong>集群选择区</strong>：选择相应的集群。</li>
+<li><strong>查询区</strong>：以通过磁盘ID、实例ID和节点名称来查询相应的磁盘。</li>
+<li><strong>列表区</strong>：展示磁盘、实例、用量和操作栏。</li>
+</ol>
+<p>选择集群后的磁盘页如下所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/disk/disk2_hu0c2dfbeeb5ff0094a09339f24c00c53f_132924_900x0_resize_catmullrom_3.png" width="900" height="419">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+磁盘页-选择集群
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>列表区显示分为4栏：</p>
+<ol>
+<li><strong>磁盘栏</strong>：展示磁盘ID、设备名称和创建时间。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>实例栏</strong>：展示磁盘所在的节点ID、节点名称和地域。</li>
+<li><strong>用量栏</strong>：展示磁盘容量、最大利用率、平均利用率和最后更新时间。</li>
+<li><strong>操作栏</strong>：展示对磁盘相应的操作。</li>
+</ol>
+<h2 id="调整磁盘">调整磁盘<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4%e7%a3%81%e7%9b%98" aria-label="Heading self-link"></a></h2>
+<p>点击<code>调整</code>链接可打开调整磁盘大小对话框，其中展示了磁盘详细的调整信息和推荐的调整方案，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/disk/disk3_hude0b7714c8d3009920b709d038ae0d51_90737_900x0_resize_catmullrom_3.png" width="900" height="354">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整磁盘页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b9433f7c12b3c664af41af5ff4ef542c">7 - Persistent Volume优化</h1>
+    <div class="lead">描述Persistent Volume相关信息及优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了Persistent Volume相关信息及优化建议。</p>
+
+</div>
+
+<h2 id="查看persistent-volume">查看Persistent Volume<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8bpersistent-volume" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>Persistent Volume</code>菜单，则显示Persistent Volume页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv1_hucb8d24ddb3f2cb76db829cd2ba9e71f7_60051_900x0_resize_catmullrom_3.png" width="900" height="329">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Persistent Volume页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>Persistent Volume页分为3个区：</p>
+<ol>
+<li><strong>集群选择区</strong>：选择相应的集群。</li>
+<li><strong>查询区</strong>：可根据名称、PVC名称空间、PVC名称和策略名称过滤列表项。</li>
+<li><strong>列表区</strong>：展示PV、PVC、策略名称、用量、最近更新时间和操作栏。</li>
+</ol>
+<p>选择集群后的Persistent Volume页如下所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv2_hu761a73dea420d55d4cdeb6bb52d12ae4_90091_900x0_resize_catmullrom_3.png" width="900" height="323">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Persistent Volume页-选择集群
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>列表区显示分为5栏：</p>
+<ol>
+<li><strong>PV栏</strong>：展示PV名称、地域、容量和创建时间。</li>
+<li><strong>所有者栏</strong>：展示PV所有者的部门、组及具体的人员。</li>
+<li><strong>PVC栏</strong>：展示PVC名称空间和名称。</li>
+<li><strong>用量栏</strong>：展示优化策略名称，优化策略所提供的用量数据，以及最后更新时间等。目前，平台包含<code>未使用PV</code>和<code>低利用率PV</code>两大优化策略，对于<code>未使用PV</code>策略来说，其PV用量为空。</li>
+<li><strong>操作栏</strong>：展示对Persistent Volume相应的操作。</li>
+</ol>
+<h2 id="删除persistent-volume">删除Persistent Volume<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4persistent-volume" aria-label="Heading self-link"></a></h2>
+<p>选择策略名称栏是<code>未使用PV</code>的行，点击该行操作栏中的<code>删除</code>链接可打开<code>删除Persistent Volume</code>对话框，其中展示了Persistent Volume详细信息和推荐方案。</p>
+<p>在社区版中对话框展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv3_hu20fe78c188fd49807126a8812c694cb4_61344_900x0_resize_catmullrom_3.png" width="900" height="323">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除Persistent Volume对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中对话框展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv-b3_huc68b717a44e2c08147b279ecfa344ba3_60650_900x0_resize_catmullrom_3.png" width="900" height="300">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除Persistent Volume对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>点击对话框中的<code>确定</code>按钮，则创建任务删除该Persistent Volume。</p>
+<h2 id="调整persistent-volume大小">调整Persistent Volume大小<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4persistent-volume%e5%a4%a7%e5%b0%8f" aria-label="Heading self-link"></a></h2>
+<p>在<strong>查询区</strong>中的策略名称选择<code>低利用率PV</code>，系统将仅展示符合<code>低利用率PV</code>策略的列表项，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv4_hu801588667bd5229fc743e3a25182bd5e_112015_900x0_resize_catmullrom_3.png" width="900" height="396">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+通过`低利用率PV`策略名称过滤列表项
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>点击列表<strong>操作栏</strong>中的<code>调整</code>链接可打开<code>调整Persistent Volume大小</code>对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv5_hufa19166f247a908b1fb34abc41a8d84b_90538_900x0_resize_catmullrom_3.png" width="900" height="401">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整Persistent Volume大小
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中，可以设置参数后由后台任务自动调整，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv-b5_huef030b39b52f917f4f18b8235f4418ea_65704_900x0_resize_catmullrom_3.png" width="900" height="454">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整Persistent Volume对话框：设置参数
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>设置<code>目标容量</code>，<code>是否保持原有PVC名称</code>，<code>是否删除原有PV</code>后，点击<code>确定</code>，即可快速调整Persistent Volume大小。</p>
+<p>再次点击<strong>操作栏</strong>中的<code>调整</code>链接，此时可查看调整Persistent Volume大小的执行日志，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/pv/pv-b6_hua82026309ad0e5fcfb71ee701a46a6d6_121835_900x0_resize_catmullrom_3.png" width="900" height="464">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+调整Persistent Volume对话框：查看任务日志
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>调整PV将使用用户提供的集群访问账号来操作集群中的PV。您需要设置集群访问账号，具体请参见<a href="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/">设置集群访问账号</a>。</p>
+<blockquote>
+<p>注意：若选择不<code>是否删除原有PV</code>，您需要自行删除原有PV，否则您仍将承担该PV的费用。</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a5be3adb43033703c72f5abb0db00a80">8 - 应用优化</h1>
+    <div class="lead">描述应用详情以及优化建议。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了应用详情以及优化建议。</p>
+
+</div>
+
+<h2 id="查看应用">查看应用<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e5%ba%94%e7%94%a8" aria-label="Heading self-link"></a></h2>
+<p>点击平台左侧菜单栏的<code>应用</code>菜单，则显示应用页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app1_huff47eda272bf1f12bd55b42f7210d79f_61195_900x0_resize_catmullrom_3.png" width="900" height="332">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>应用页分为3个区：</p>
+<ol>
+<li><strong>集群选择区</strong>：选择相应的集群。</li>
+<li><strong>查询区</strong>：可通过名称空间、负载名称、负载类型、容器和策略名称进行查询。目前，平台支持资源推荐、未设置资源额度、内存溢出策略。</li>
+<li><strong>列表区</strong>：展示名称、容器、当前设置、策略名称、详情和操作栏，不同的策略名称，其展示信息会有一些差异。</li>
+</ol>
+<p>集群选择区选择集群后，平台默认聚合所有策略的结果，以列表方式展示，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app2_hu8d411a6d137d5c100b23f7e12662fd72_122300_900x0_resize_catmullrom_3.png" width="900" height="444">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：选择集群
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<h2 id="资源推荐">资源推荐<a class="td-heading-self-link" href="#%e8%b5%84%e6%ba%90%e6%8e%a8%e8%8d%90" aria-label="Heading self-link"></a></h2>
+<h3 id="查看资源推荐相关应用">查看资源推荐相关应用<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e8%b5%84%e6%ba%90%e6%8e%a8%e8%8d%90%e7%9b%b8%e5%85%b3%e5%ba%94%e7%94%a8" aria-label="Heading self-link"></a></h3>
+<p>若策略名称为资源推荐，则列表区如上图所示。列表区显示分为6栏，分别是：</p>
+<ol>
+<li><strong>名称栏</strong>：展示负载名称、名称空间和负载类型。</li>
+<li><strong>容器栏</strong>：展示容器名称。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>当前设置</strong>：展示该容器的CPU Request、CPU Limit、内存Request和内存Limit。</li>
+<li><strong>详情</strong>：展示CPU平均使用量、CPU最大使用量、内存平均使用量、内存最大使用量、CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值、策略名称和最近更新时间。</li>
+<li><strong>操作栏</strong>：展示对应用相应的操作。</li>
+</ol>
+<h3 id="调整资源额度">调整资源额度<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4%e8%b5%84%e6%ba%90%e9%a2%9d%e5%ba%a6" aria-label="Heading self-link"></a></h3>
+<p>点击<code>调整</code>链接可打开调整资源额度对话框，其中展示应用详情、推荐值及相应调整语句。</p>
+<p>在社区版中展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app3_hua386211b79d0a0cff25cd1bd8bfaa9bb_100048_900x0_resize_catmullrom_3.png" width="900" height="588">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：调整资源额度对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app-b3_huf3dc9e78259daeb341c82e4495fe8e3a_76204_900x0_resize_catmullrom_3.png" width="900" height="492">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：调整资源额度对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版本中，点击<code>确定</code>按钮，将自动创建任务，自动化的进行资源调整。</p>
+<h2 id="未设置资源配额">未设置资源配额<a class="td-heading-self-link" href="#%e6%9c%aa%e8%ae%be%e7%bd%ae%e8%b5%84%e6%ba%90%e9%85%8d%e9%a2%9d" aria-label="Heading self-link"></a></h2>
+<h3 id="查看未设置资源配额应用">查看未设置资源配额应用<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e6%9c%aa%e8%ae%be%e7%bd%ae%e8%b5%84%e6%ba%90%e9%85%8d%e9%a2%9d%e5%ba%94%e7%94%a8" aria-label="Heading self-link"></a></h3>
+<p>若策略名称为未设置资源配额，则列表区展示如下图所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app4_huedd6c5fcc600368086f3b49817824d60_125502_900x0_resize_catmullrom_3.png" width="900" height="434">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：选择未设置资源配额策略
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>列表区显示分为6栏，分别是：</p>
+<ol>
+<li><strong>名称栏</strong>：展示负载名称、名称空间和负载类型。</li>
+<li><strong>容器栏</strong>：展示容器名称。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>当前设置</strong>：展示该容器的CPU Request、CPU Limit、内存Request和内存Limit是否已设置。</li>
+<li><strong>详情</strong>：展示CPU Request推荐值、CPU Limit推荐值、内存Request推荐值、内存Limit推荐值、策略名称和和最近更新时间。</li>
+<li><strong>操作栏</strong>：展示对应用相应的操作，</li>
+</ol>
+<h3 id="设置应用资源额度">设置应用资源额度<a class="td-heading-self-link" href="#%e8%ae%be%e7%bd%ae%e5%ba%94%e7%94%a8%e8%b5%84%e6%ba%90%e9%a2%9d%e5%ba%a6" aria-label="Heading self-link"></a></h3>
+<p>点击上图中的<code>调整</code>链接可打开设置应用资源额度对话框，其中展示应用详情、推荐值及相应调整语句。</p>
+<p>在社区版中展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app5_hu9b23dcaa40dfff00cc42b0760dae8895_86412_900x0_resize_catmullrom_3.png" width="900" height="529">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：设置应用资源额度对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app-b5_hu2fee965e62435eb893586fd7187c86a6_64219_900x0_resize_catmullrom_3.png" width="900" height="432">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：调整资源额度对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版本中，点击<code>确定</code>按钮，将自动创建任务，自动化的进行资源调整。</p>
+<h2 id="内存溢出">内存溢出<a class="td-heading-self-link" href="#%e5%86%85%e5%ad%98%e6%ba%a2%e5%87%ba" aria-label="Heading self-link"></a></h2>
+<h3 id="查看内存溢出应用">查看内存溢出应用<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e5%86%85%e5%ad%98%e6%ba%a2%e5%87%ba%e5%ba%94%e7%94%a8" aria-label="Heading self-link"></a></h3>
+<p>若策略名称为内存溢出，则列表区展示如下图所示：</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app6_hucd9ceeb6b97cdd53da819d43576d8806_113328_900x0_resize_catmullrom_3.png" width="900" height="411">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：选择内存溢出策略
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>列表区显示分为6栏，分别是：</p>
+<ol>
+<li><strong>名称栏</strong>：展示负载名称、名称空间和负载类型。</li>
+<li><strong>容器栏</strong>：展示容器名称。</li>
+<li><strong>所有者栏</strong>：展示节点所有者的部门、组及具体的人员。</li>
+<li><strong>当前设置</strong>：展示该容器的内存Request和内存Limit。</li>
+<li><strong>详情</strong>：展示最近OOM时间、最近OOM Pod、OOM次数和和最近更新时间。</li>
+<li><strong>操作栏</strong>：展示对应用相应的操作。</li>
+</ol>
+<h3 id="调整应用内存大小">调整应用内存大小<a class="td-heading-self-link" href="#%e8%b0%83%e6%95%b4%e5%ba%94%e7%94%a8%e5%86%85%e5%ad%98%e5%a4%a7%e5%b0%8f" aria-label="Heading self-link"></a></h3>
+<p>点击调整链接可打开调整应用内存大小对话框，其中展示应用详情、推荐内存限制值及相应调整语句。</p>
+<p>在社区版中展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app7_huc4b543c74a690707313f0191c7446d7e_73869_900x0_resize_catmullrom_3.png" width="900" height="431">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：调整应用内存大小对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版中展示如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/app/app-b7_hud7c4841b9c160d91e996bd174f81455f_52280_900x0_resize_catmullrom_3.png" width="900" height="316">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+应用：调整资源额度对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在商业版本中，点击<code>确定</code>按钮，将自动创建任务，自动化的进行资源调整。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-edeb53809f005912c6ee239938f0667c">9 - 任务管理</h1>
+    <div class="lead">描述任务管理。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述任务管理。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>仅适用于商业版本</li>
+</ul>
+<h2 id="查看任务">查看任务<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e4%bb%bb%e5%8a%a1" aria-label="Heading self-link"></a></h2>
+<p>点击顶部右侧的任务图标，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/tasks/task_hue941aa2b00f74f89c0887a9530c87da4_10823_900x0_resize_catmullrom_3.png" width="900" height="243">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+任务管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>则显示任务管理页，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/tasks/overview_hue59ab8e8199a235babcdebf1861aa317_79519_900x0_resize_catmullrom_3.png" width="900" height="376">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+任务管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>任务管理页分为2个区：</p>
+<ol>
+<li><strong>查询区</strong>：可根据策略名称、任务状态和创建人过滤任务项。</li>
+<li><strong>列表区</strong>：展示任务名称、策略名称、配置项等信息。</li>
+</ol>
+<p>在查询区中，策略名称目前提供未使用PV、应用资源推荐、未使用资源配额、内存溢出等4项。任务状态包括运行中、运行成功和运行失败。</p>
+<p>列表区显示分为6栏：</p>
+<ol>
+<li><strong>任务名称栏</strong>：展示任务名称。</li>
+<li><strong>策略名称栏</strong>：展示策略名称。</li>
+<li><strong>任务参数栏</strong>：展示任务参数。</li>
+<li><strong>状态栏</strong>：展示任务状态。</li>
+<li><strong>创建人栏</strong>：展示任务创建人。</li>
+<li><strong>操作栏</strong>：展示对任务的操作，包括重新运行、取消执行、删除、查看日志等。</li>
+</ol>
+<p>任务的创建由相应的策略负责，请参见：</p>
+<ul>
+<li><a href="/zh-cn/docs/user-guide/pv/#删除Persistent Volume">未使用PV</a></li>
+<li><a href="/zh-cn/docs/user-guide/app/#调整资源额度">应用资源推荐</a></li>
+<li><a href="/zh-cn/docs/user-guide/app/#设置应用资源额度">未使用资源配额</a></li>
+<li><a href="/zh-cn/docs/user-guide/app/#调整应用内存大小">内存溢出</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c45f86707c5300923565772c53d3fb61">10 - 个人设置</h1>
+    <div class="lead">描述个人设置相关操作.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-3c0d10cfd5fa60759266937d29fa34e2">10.1 - 个人账户设置</h1>
+    <div class="lead">描述个人账户设置相关操作。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述个人账户设置相关操作。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>仅适用于商业版本。</li>
+</ul>
+<h2 id="更新个人信息">更新个人信息<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e4%b8%aa%e4%ba%ba%e4%bf%a1%e6%81%af" aria-label="Heading self-link"></a></h2>
+<p>点击顶部左侧导航栏的用户头像，如下图所示。在展开的菜单上点击<code>个人设置</code>，即可进入个人设置页面。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/setting/setting_hu68fa0afb4311abf51ff02c92ee6599a9_21289_900x0_resize_catmullrom_3.png" width="900" height="213">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+个人设置菜单
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>在个人设置页面，点击<code>个人账户</code>标签，即可查看和更新个人信息，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/setting/account_hu5b2976f07b85029ed60b6bc3e067a998_150490_900x0_resize_catmullrom_3.png" width="900" height="504">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+个人设置页面
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>用户名称， 必选</td>
+</tr>
+<tr>
+<td>姓</td>
+<td>用户姓，可选</td>
+</tr>
+<tr>
+<td>名</td>
+<td>用户名，可选</td>
+</tr>
+<tr>
+<td>电子邮箱</td>
+<td>用户电子邮箱，必选</td>
+</tr>
+<tr>
+<td>密码</td>
+<td>用户登录密码，必选</td>
+</tr>
+<tr>
+<td>确认密码</td>
+<td>确认用户登录密码，必选</td>
+</tr>
+<tr>
+<td>手机号</td>
+<td>用户手机号，必选</td>
+</tr>
+<tr>
+<td>用户角色</td>
+<td>目前，系统提供管理员和用户两种角色，默认为用户，必选</td>
+</tr>
+<tr>
+<td>区域设置</td>
+<td>目前支持中文和英文区域设置。</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可修改个人信息。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-41d71a2b3dcedf8ede0f40a92a4f0523">10.2 - 集群访问账户</h1>
+    <div class="lead">描述管理个人集群访问账户的相关操作。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述管理个人集群访问账户的相关操作。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>仅适用于商业版本。</li>
+</ul>
+<h2 id="查看集群访问账户">查看集群访问账户<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击顶部左侧导航栏的用户头像，如下图所示。在展开的菜单上点击<code>个人设置</code>，即可进入个人设置页面。</p>
+<p>在个人设置页面，点击<code>集群访问账户</code>标签，即可查看和管理集群访问账户，如下图所示。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/list_hua0198f9734c413a4f8b842c8fb46f4a4_68538_900x0_resize_catmullrom_3.png" width="900" height="317">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+集群访问账户列表
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集群ID</td>
+<td>用户名称， 必选</td>
+</tr>
+<tr>
+<td>云服务商访问账号</td>
+<td>用户姓，必选</td>
+</tr>
+<tr>
+<td>Kubeconfig</td>
+<td>用户电子邮箱，必选</td>
+</tr>
+<tr>
+<td>操作</td>
+<td>展示用户操作</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可修改个人信息。</p>
+<h2 id="添加集群访问账户">添加集群访问账户<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击集群访问账户管理页面上方的<code>增加</code>按钮，将弹出添加集群访问账户对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/add_huf21aa57c122e21fe2e2bcfef98206792_28637_900x0_resize_catmullrom_3.png" width="900" height="373">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加集群访问账户对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集群ID</td>
+<td>访问的集群ID， 必选</td>
+</tr>
+<tr>
+<td>Access Key</td>
+<td>访问云服务商的访问密钥，必选</td>
+</tr>
+<tr>
+<td>Access Key Secret</td>
+<td>访问云服务商的访问密钥，必选</td>
+</tr>
+<tr>
+<td>Kubeconfig</td>
+<td>访问Kubernetes的凭据，必选</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加集群访问账户。</p>
+<blockquote>
+<p>注意：若您没有添加集群，则集群ID字段下拉框为空，系统将报错，无法添加集群访问账户。您可以[导入集群](/zh-cn/docs/user-guide/import-cluster/]后再创建集群访问账户。</p>
+</blockquote>
+<h2 id="更新集群访问账户">更新集群访问账户<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击集群访问账户管理页面列表中的<code>集群访问账户</code>按钮，将弹出编辑集群访问账户对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu11406b62fdc268b9aee5d5035487af3b_137513_900x0_resize_catmullrom_3.png" width="900" height="1010">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑集群访问账户对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/#添加集群访问账户">添加集群访问账户</a>一致，不在赘述。</p>
+<h2 id="删除集群访问账户">删除集群访问账户<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击集群访问账户管理页面的<code>删除</code>按钮，将删除该集群访问账户。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu4f1eecfa00819d4d933bf71db9f2e8b6_85772_900x0_resize_catmullrom_3.png" width="900" height="185">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除集群访问账户
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除集群访问账户之前，将弹出删除确认对话框，确认后执行删除操作。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d0316f49e87d6a622becb11c63d3c569">11 - 管理设置</h1>
+    <div class="lead">描述集群优化平台管理相关操作，包括通知渠道管理，通知规则管理，用户管理等。</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-7ef970caa7a5855fad8828381ba9b562">11.1 - 用户管理</h1>
+    <div class="lead">描述用户管理的相关操作。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述用户管理的相关操作。</p>
+
+</div>
+
+<h2 id="前置条件">前置条件<a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>管理用户需具备管理员权限。</li>
+<li>仅适用于商业版本。</li>
+</ul>
+<h2 id="查看用户列表">查看用户列表<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e7%94%a8%e6%88%b7%e5%88%97%e8%a1%a8" aria-label="Heading self-link"></a></h2>
+<p>从<code>设置 --&gt; 用户</code>进入用户管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png" width="900" height="202">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+用户管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>用户管理页面将以列表的形式展示通知渠道。主要包括5栏：</p>
+<ul>
+<li>用户名：展示用户名称。</li>
+<li>全称：展示用户名称。</li>
+<li>电子邮箱：展示用户电子邮箱。</li>
+<li>电话号码：展示用户电话号码。</li>
+<li>角色：展示用户角色。</li>
+<li>操作：操作栏，包括编辑、删除等操作。</li>
+</ul>
+<h2 id="添加用户">添加用户<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击用户管理页面上方的<code>增加</code>按钮，将弹出添加用户对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png" width="900" height="562">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加用户对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>用户名称， 必选</td>
+</tr>
+<tr>
+<td>姓</td>
+<td>用户姓，可选</td>
+</tr>
+<tr>
+<td>名</td>
+<td>用户名，可选</td>
+</tr>
+<tr>
+<td>电子邮箱</td>
+<td>用户电子邮箱，必选</td>
+</tr>
+<tr>
+<td>密码</td>
+<td>用户登录密码，必选</td>
+</tr>
+<tr>
+<td>确认密码</td>
+<td>确认用户登录密码，必选</td>
+</tr>
+<tr>
+<td>手机号</td>
+<td>用户手机号，必选</td>
+</tr>
+<tr>
+<td>用户角色</td>
+<td>目前，系统提供管理员和用户两种角色，默认为用户，必选</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加用户。</p>
+<h2 id="更新用户">更新用户<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e7%94%a8%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击用户管理页面列表中的<code>编辑</code>按钮，将弹出编辑用户对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png" width="900" height="562">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑用户对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/management/user/#添加用户">添加用户</a>一致，不在赘述。</p>
+<h2 id="删除用户">删除用户<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e7%94%a8%e6%88%b7" aria-label="Heading self-link"></a></h2>
+<p>点击用户管理页面的<code>删除</code>按钮，将删除用户。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png" width="900" height="191">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除用户
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除用户之前，将弹出删除确认对话框，确认后执行删除操作。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-38c9ec300cbef8d19ccbe0c29a55bfc3">11.2 - 通知渠道</h1>
+    <div class="lead">描述如何设置通知渠道。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述如何管理通知渠道，包括查看，添加、更新或者删除通知渠道。</p>
+
+</div>
+
+<h2 id="查看渠道">查看渠道<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>从<code>设置 --&gt; 通知渠道</code>进入通知渠道管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/overview_hucff31aac09e394ec659275683fd563d9_32586_900x0_resize_catmullrom_3.png" width="900" height="184">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+通知渠道管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>通知渠道管理页面将以列表的形式展示通知渠道。主要包括5栏：</p>
+<ul>
+<li>名称：通知渠道名称。</li>
+<li>渠道类型：通知渠道类型。</li>
+<li>连接参数：展示该渠道类型的连接参数。</li>
+<li>其他参数：展示其他参数</li>
+<li>操作：操作栏，包括编辑、删除等操作。</li>
+</ul>
+<h2 id="添加渠道">添加渠道<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>点击通知渠道管理页面上方的<code>新增</code>按钮，选择通知渠道类型，并填写通知渠道信息，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/addchannel_hu97b2511821a76fc3f758d82b0054f24e_39179_900x0_resize_catmullrom_3.png" width="900" height="964">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加通知渠道对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>通知渠道名称</td>
+</tr>
+<tr>
+<td>渠道类型</td>
+<td>通知渠道类型，目前仅支持Email</td>
+</tr>
+<tr>
+<td>主机</td>
+<td>Email SMTP主机名，例如 <code>smtp.wiseinf.com</code></td>
+</tr>
+<tr>
+<td>端口</td>
+<td>Email SMTP端口，例如 <code>25</code>, <code>465</code></td>
+</tr>
+<tr>
+<td>启用SSL</td>
+<td>是否启用SSL，默认为不启用</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Email地址，例如 <code>admin@wiseinf.com</code></td>
+</tr>
+<tr>
+<td>发送者名称</td>
+<td>发送者名称，例如 <code>Wiseinf</code></td>
+</tr>
+<tr>
+<td>密码</td>
+<td>Email SMTP密码</td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过<code>{{.param.参数名}}</code>的方式在模板中引用。</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加通知渠道。</p>
+<blockquote>
+<p>具体上述字段的取值，您可以咨询您的邮件服务商，或者是邮件系统管理员。</p>
+</blockquote>
+<h2 id="更新渠道">更新渠道<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>更新通知渠道，点击通知渠道管理页面列表中的<code>编辑</code>按钮，将更新通知渠道信息，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/editchannel_hu6c88139678d29abc0f34c75f65f2bc6f_45533_900x0_resize_catmullrom_3.png" width="900" height="964">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑通知渠道对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/management/channel/#添加渠道">添加渠道</a>一致，不在赘述。</p>
+<h2 id="删除渠道">删除渠道<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e6%b8%a0%e9%81%93" aria-label="Heading self-link"></a></h2>
+<p>点击通知渠道管理页面列表中的的<code>删除</code>按钮，将删除通知渠道，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/channel/deletechannel_hu600240e395bbeb1ed5b0fe17d416beb2_56557_900x0_resize_catmullrom_3.png" width="900" height="214">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑通知渠道对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除通知渠道之前，将弹出删除确认对话框，用户确认后执行删除操作。</p>
+<blockquote>
+<p>注意：当该通知渠道被通知规则所使用时，会提示删除不成功。应该首先删除使用该通知渠道的通知规则后，然后再删除该通知渠道。</p>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-46d0a2aaf7efc21cf80ea73eabb58128">11.3 - 通知规则</h1>
+    <div class="lead">描述管理通知规则的详细信息。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述管理通知规则的详细信息。</p>
+
+</div>
+
+<h2 id="查看通知规则">查看通知规则<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>从<code>设置 --&gt; 通知规则</code>进入通知规则管理页面，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/overview_hud10719c48adf621bd59bc0991cb7dd5e_61084_900x0_resize_catmullrom_3.png" width="900" height="197">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+通知规则管理页
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>通知规则管理页面将以列表的形式展示通知渠道。主要包括5栏：</p>
+<ul>
+<li>名称：通知渠道名称。</li>
+<li>渠道类型：通知渠道类型。</li>
+<li>连接参数：展示该渠道类型的连接参数。</li>
+<li>其他参数：展示其他参数</li>
+<li>操作：操作栏，包括编辑、删除等操作。</li>
+</ul>
+<h2 id="添加通知规则">添加通知规则<a class="td-heading-self-link" href="#%e6%b7%bb%e5%8a%a0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>点击通知规则管理页面上方的<code>增加</code>按钮，将弹出添加通知规则对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/addrule_hu85976e3cbbb33cf256e2735191b00c47_58685_900x0_resize_catmullrom_3.png" width="900" height="923">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+添加通知规则对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述请参见下表。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>通知渠道名称</td>
+</tr>
+<tr>
+<td>接收者</td>
+<td>通知接收者地址，比如 <code>admin@wiseinf.com</code></td>
+</tr>
+<tr>
+<td>通知渠道</td>
+<td>可通过下拉框选择具体的通知渠道名</td>
+</tr>
+<tr>
+<td>调度时间</td>
+<td>设置该规则的具体调度时间。</td>
+</tr>
+<tr>
+<td>优化策略</td>
+<td>选择具体的优化策略</td>
+</tr>
+<tr>
+<td>集群</td>
+<td>选择需要关注的集群</td>
+</tr>
+<tr>
+<td>名称空间</td>
+<td>输入名称空间名，空值将匹配所有名称空间</td>
+</tr>
+<tr>
+<td>部门</td>
+<td>输入部门名，空值将匹配所有部门名称</td>
+</tr>
+<tr>
+<td>组</td>
+<td>输入组名，空值将匹配所有组名</td>
+</tr>
+<tr>
+<td>用户</td>
+<td>输入用户名，空值将匹配所有用户名</td>
+</tr>
+<tr>
+<td>模板ID</td>
+<td>模板ID名，默认值为<code>default</code></td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过<code>{{.param.参数名}}</code>的方式在模板中引用。通知渠道参数列表中的同名参数将覆盖。</td>
+</tr>
+</tbody>
+</table>
+<p>按照字段名输入相应信息，点击<code>确定</code>按钮，即可添加通知规则。</p>
+<h2 id="更新通知规则">更新通知规则<a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>更新通知渠道，点击通知渠道管理页面列表中的<code>编辑</code>按钮，将弹出添加通知规则对话框，如下图。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/editrule_huf3f8e083d06596a212cbf2e980c5da45_65629_900x0_resize_catmullrom_3.png" width="900" height="928">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+编辑通知规则对话框
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>具体字段名和描述同<a href="/zh-cn/docs/user-guide/management/rule/#添加通知规则">添加通知规则</a>一致，不在赘述。</p>
+<h2 id="删除通知规则">删除通知规则<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h2>
+<p>点击通知渠道管理页面的<code>删除</code>按钮，将删除通知规则。</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/management/rule/deleterule_hue2d65ed7fb5e30f007de7122a94a917a_43216_900x0_resize_catmullrom_3.png" width="900" height="112">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+删除通知规则
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>删除通知规则之前，将弹出删除确认对话框，用户确认后执行删除操作。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e986112ec0d9d371b5529ef8bb3b39b7">12 - 优化操作</h1>
+    <div class="lead">描述云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了云原生集群优化平台（Cluster Optimizer）提供的集群优化操作。</p>
+
+</div>
+
+<p>集群优化操作主要包括：</p>
+<ul>
+<li>调整节点池</li>
+<li>调整节点</li>
+<li>调整磁盘</li>
+<li>&hellip;</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-139070b48b792c1639c638cc75e3fde2">12.1 - 调整节点池</h1>
+    <div class="lead">调整节点池。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了调整节点池的操作。</p>
+
+</div>
+
+<h2 id="阿里云">阿里云<a class="td-heading-self-link" href="#%e9%98%bf%e9%87%8c%e4%ba%91" aria-label="Heading self-link"></a></h2>
+<h3 id="前提条件">前提条件<a class="td-heading-self-link" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>具备编辑节点池权限。</li>
+</ul>
+<h3 id="操作步骤">操作步骤<a class="td-heading-self-link" href="#%e6%93%8d%e4%bd%9c%e6%ad%a5%e9%aa%a4" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>登录容器服务管理控制台，在左侧导航栏选择集群。</li>
+<li>在集群列表页面，单击目标集群名称，然后在左侧导航栏，选择节点管理 &gt; 节点池。</li>
+<li>在节点池列表页面中，单击目标节点池所在行操作列的编辑。</li>
+<li>在编辑节点池页面，编辑节点池的配置项。节点池优化主要关注<strong>实例规格</strong>和<strong>自动伸缩</strong>配置项。
+<ol>
+<li>根据调整节点池对话框中推荐的实例规则，在<strong>实例规格</strong>中选择相应的实例规格。</li>
+<li>根据调整节点池对话框中推荐的自动扩缩容、最小节点数和最大节点数，在<strong>自动伸缩</strong>配置项中进行调整。若没有开启集群自动弹性伸缩，可参考<a href="https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/auto-scaling-of-nodes#section-i4v-dgt-7wv">节点自动伸缩</a>进行配置。</li>
+</ol>
+</li>
+</ol>
+<p>想了解更多细节，请参考：<a href="https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/edit-node-pool">编辑节点池</a></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-35da873a43764310b07023189a978466">12.2 - 调整节点</h1>
+    <div class="lead">调整节点。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了调整节点的操作。</p>
+
+</div>
+
+<h2 id="阿里云">阿里云<a class="td-heading-self-link" href="#%e9%98%bf%e9%87%8c%e4%ba%91" aria-label="Heading self-link"></a></h2>
+<h3 id="前提条件">前提条件<a class="td-heading-self-link" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h3>
+<p>TBD&hellip;</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-923a83f4d877971f61341f9235e496a8">12.3 - 调整磁盘</h1>
+    <div class="lead">调整磁盘。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了调整磁盘的操作。</p>
+
+</div>
+
+<h2 id="阿里云">阿里云<a class="td-heading-self-link" href="#%e9%98%bf%e9%87%8c%e4%ba%91" aria-label="Heading self-link"></a></h2>
+<h3 id="前提条件">前提条件<a class="td-heading-self-link" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h3>
+<p>TBD&hellip;</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4f9919d12da784dc7db0a3d2a7fa6cef">12.4 - 删除Persistent Volume</h1>
+    <div class="lead">删除Persistent Volume。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>描述了删除Persistent Volume的操作。</p>
+
+</div>
+
+<h2 id="阿里云">阿里云<a class="td-heading-self-link" href="#%e9%98%bf%e9%87%8c%e4%ba%91" aria-label="Heading self-link"></a></h2>
+<h3 id="前提条件">前提条件<a class="td-heading-self-link" href="#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h3>
+<p>TBD&hellip;</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

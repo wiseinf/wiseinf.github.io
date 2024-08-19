@@ -1,0 +1,731 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="//localhost:1313/zh-cn/docs/configuration/conf/">
+<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/zh-cn/docs/configuration/conf/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>配置参数 | Cluster Optimizer</title>
+<meta name="description" content="描述云原生集群优化平台配置文件的配置参数。
+">
+<meta property="og:url" content="//localhost:1313/zh-cn/docs/configuration/conf/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="配置参数">
+  <meta property="og:description" content="描述云原生集群优化平台配置文件的配置参数。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="配置参数">
+  <meta itemprop="description" content="描述云原生集群优化平台配置文件的配置参数。">
+  <meta itemprop="wordCount" content="351">
+  <meta itemprop="keywords" content="集群优化,配置参数">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="配置参数">
+  <meta name="twitter:description" content="描述云原生集群优化平台配置文件的配置参数。">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet">
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/docs/configuration/conf/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/docs/configuration/conf/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">配置参数</h1>
+<div class="lead">描述云原生集群优化平台配置文件的配置参数。</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>描述云原生集群优化平台配置文件的配置参数。</p>
+
+</div>
+
+<h2 id="概述">概述<a class="td-heading-self-link" href="#%e6%a6%82%e8%bf%b0" aria-label="Heading self-link"></a></h2>
+<p>云原生集群优化平台必须依赖于配置文件才能运行。可通过命令行参数<code>--config</code>来制定配置文件位置，例如：<code>--config=conf/cluster-optimizer.yaml</code>。默认路径为<code>conf/cluster-optimizer.yaml</code></p>
+<p>配置文件格式为YAML格式，示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">7070</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">engine</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">maxQueryDuration</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">4h</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">optconf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dataSource</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;root:optimizer@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">maxOpenConns</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">optdata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dataSource</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;root:optimizer@tcp(127.0.0.1:3306)/optdata?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">maxOpenConns</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">optimize</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">defaultCron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;0 0 1 * * ?&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">strategyConfigs</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">&#34;OOM&#34;: </span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;Resource Recommendation&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;Low Utilization Node&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#4e9a06">&#34;No Quota&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">sms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">notification</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">templateBasePath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">templates/notification</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><h2 id="配置参数">配置参数<a class="td-heading-self-link" href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" aria-label="Heading self-link"></a></h2>
+<h3 id="serverport"><code>server.port</code><a class="td-heading-self-link" href="#serverport" aria-label="Heading self-link"></a></h3>
+<p>参数<code>server.port</code>是云原生集群优化平台挺的对外服务端口。默认值是<code>7070</code>。</p>
+<h3 id="enginemaxqueryduration"><code>engine.maxQueryDuration</code><a class="td-heading-self-link" href="#enginemaxqueryduration" aria-label="Heading self-link"></a></h3>
+<p>参数<code>engine.maxQueryDuration</code>设置查询度量服务器（例如Prometheus）的最大查询周期，默认值是1天。当查询时间范围超过最大查询周期是，会将其分割为多个查询窗口分别查询，从而降低服务器的压力。</p>
+<h3 id="optconf"><code>optconf</code><a class="td-heading-self-link" href="#optconf" aria-label="Heading self-link"></a></h3>
+<p>参数<code>optconf</code>用于配置优化配置库。</p>
+<p>其子参数包括<code>dataSource.name</code>和<code>maxOpenConns</code>，下面分别进行阐述。</p>
+<h4 id="datasourcename"><code>dataSource.name</code><a class="td-heading-self-link" href="#datasourcename" aria-label="Heading self-link"></a></h4>
+<p>参数<code>dataSource.name</code>用于设置Mysql数据源名称，例如<code>root:optimizer@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local</code>。
+其中，<code>createDatabaseIfNotExist</code>表示在数据库不存在的时候，优先创建此数据库。</p>
+<h4 id="maxopenconns"><code>maxOpenConns</code><a class="td-heading-self-link" href="#maxopenconns" aria-label="Heading self-link"></a></h4>
+<p>参数<code>maxOpenConns</code>设置数据库最大开启连接数。</p>
+<h3 id="optdata"><code>optdata</code><a class="td-heading-self-link" href="#optdata" aria-label="Heading self-link"></a></h3>
+<p>参数<code>optdata</code>用于配置优化数据库。</p>
+<p>其子参数包括<code>dataSource.name</code>和<code>maxOpenConns</code>，其含义与<code>optconf</code>相应子参数一致，不再阐述。</p>
+<h3 id="optimize"><code>optimize</code><a class="td-heading-self-link" href="#optimize" aria-label="Heading self-link"></a></h3>
+<p>参数<code>optimize</code>用于设置优化引擎相关参数，下面将分别阐述其子参数设置。</p>
+<h4 id="defaultcron"><code>defaultCron</code><a class="td-heading-self-link" href="#defaultcron" aria-label="Heading self-link"></a></h4>
+<p>参数<code>defaultCron</code>用于设置优化引擎默认的调度参数，默认值是<code>0 0 1 * * ?</code>（每天凌晨1点执行），</p>
+<h4 id="enabled"><code>enabled</code><a class="td-heading-self-link" href="#enabled" aria-label="Heading self-link"></a></h4>
+<p>参数<code>enabled</code>设置是否启用该优化引擎，默认值是<code>true</code>。</p>
+<h4 id="strategyconfigs"><code>strategyConfigs</code><a class="td-heading-self-link" href="#strategyconfigs" aria-label="Heading self-link"></a></h4>
+<p>参数<code>strategyConfigs</code>用于配置该优化引擎的策略配置。其配置为键-值对的方式，键是策略的名称，值是该策略的配置。</p>
+<p>策略名称是字符串，策略值的内容如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;0 0 1 * * ?&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">parameters</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">key1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">value1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">key2</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">value2</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>其中，<code>enabled</code>表示是否启用该优化策略，默认值是<code>true</code>。<code>cron</code>设置该策略的调度参数。<code>parameters</code>为策略提供配置，不同的策略，其参数存在差异，下面分别说明。</p>
+<ol>
+<li>节点组推荐策略<code>Node Group Recommendation</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.7</td>
+<td>节点组最大CPU利用率，取值范围为*(0,1]*</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>节点组最大内存利用率，取值范围为*(0,1]*</td>
+</tr>
+<tr>
+<td><code>cpuMinCores</code></td>
+<td>2</td>
+<td>推荐实例类型CPU最小值，单位核，必须大于或等于1</td>
+</tr>
+<tr>
+<td><code>memoryMinGBs</code></td>
+<td>4</td>
+<td>推荐实例类型内存最小值，单位GB，必须大于或等于1</td>
+</tr>
+<tr>
+<td><code>recommendTopK</code></td>
+<td>5</td>
+<td>最多推荐的实例类型数量，取值范围为*[1,10]*</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>节点推荐<code>Node Recommendation</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24小时</td>
+<td>时间范围，取值是Duration。</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24小时</td>
+<td>时间范围步长，取值是Duration。</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2分钟</td>
+<td>查询分辨率，取值是Duration。</td>
+</tr>
+<tr>
+<td><code>cpuStep</code></td>
+<td>1</td>
+<td>CPU最小步长，单位核</td>
+</tr>
+<tr>
+<td><code>memoryStep</code></td>
+<td>1</td>
+<td>内存最小步长，单位GB</td>
+</tr>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.6</td>
+<td>节点最大CPU利用率</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>节点最大内存利用率</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>低利用率节点<code>Underutilized Node</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24小时</td>
+<td>时间范围，取值是Duration</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24小时</td>
+<td>每批范围，取值是Duration</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2分钟</td>
+<td>查询分辨率</td>
+</tr>
+<tr>
+<td><code>cpuAvgThreshold</code></td>
+<td>0.2</td>
+<td>CPU平均利用率阈值</td>
+</tr>
+<tr>
+<td><code>cpuMaxThreshold</code></td>
+<td>0.6</td>
+<td>CPU最大利用率阈值</td>
+</tr>
+<tr>
+<td><code>memoryAvgThreshold</code></td>
+<td>0.3</td>
+<td>内存平均利用率阈值</td>
+</tr>
+<tr>
+<td><code>memoryMaxThreshold</code></td>
+<td>0.6</td>
+<td>内存最大利用率阈值</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>低利用率GPU节点<code>Underutilized GPU Node</code>。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24</td>
+<td>时间范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>每批范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>查询分辨率，单位分钟</td>
+</tr>
+<tr>
+<td><code>gpuAvgThreshold</code></td>
+<td>0.2</td>
+<td>GPU平均利用率阈值</td>
+</tr>
+<tr>
+<td><code>gpuMaxThreshold</code></td>
+<td>0.8</td>
+<td>GPU最大利用率阈值</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>低利用率磁盘<code>Underutilized Disk</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24</td>
+<td>时间范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>每批范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>查询分辨率，单位分钟</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>0.3</td>
+<td>磁盘利用率阈值，低于此阈值，我们认为利用率低。</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>未使用持久化存储卷<code>Unused PV</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boundDuration</code></td>
+<td>1</td>
+<td>持久化存储卷绑定周期，默认值1小时。若在持久化存储卷绑定周期未绑定且未关联Persistent Volume Claim，则认为该存储卷未被使用。</td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li>低利用率持久化存储卷<code>Underutilized PV</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24</td>
+<td>时间范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>每批范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>查询分辨率，单位分钟</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>0.3</td>
+<td>PV利用率阈值，低于此阈值，我们认为利用率低。</td>
+</tr>
+</tbody>
+</table>
+<ol start="8">
+<li>应用资源推荐<code>Resource Recommendation</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24*8</td>
+<td>时间范围，取值是Duration，默认值8天</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>每批范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>查询分辨率，单位分钟</td>
+</tr>
+<tr>
+<td><code>cpuStep</code></td>
+<td>0.05</td>
+<td>CPU最小步长，单位核</td>
+</tr>
+<tr>
+<td><code>memoryStep</code></td>
+<td>0.1</td>
+<td>内存最小步长，单位GB</td>
+</tr>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.6</td>
+<td>节点最大CPU利用率</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>节点最大内存利用率</td>
+</tr>
+</tbody>
+</table>
+<ol start="9">
+<li>应用未设置资源额度<code>Resource Quota Unset</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24*8</td>
+<td>时间范围，取值是Duration，默认值8天</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>24</td>
+<td>每批范围，取值是Duration，默认值24小时</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>2</td>
+<td>查询分辨率，单位分钟</td>
+</tr>
+<tr>
+<td><code>cpuStep</code></td>
+<td>0.05</td>
+<td>CPU最小步长，单位核</td>
+</tr>
+<tr>
+<td><code>memoryStep</code></td>
+<td>0.1</td>
+<td>内存最小步长，单位GB</td>
+</tr>
+<tr>
+<td><code>cpuMaxUsage</code></td>
+<td>0.6</td>
+<td>节点最大CPU利用率</td>
+</tr>
+<tr>
+<td><code>memoryMaxUsage</code></td>
+<td>0.8</td>
+<td>节点最大内存利用率</td>
+</tr>
+</tbody>
+</table>
+<ol start="10">
+<li>内存溢出<code>OOM</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>24*8</td>
+<td>时间范围，取值是Duration，默认值8天，仅关注该时间范围内出现内存溢出的事件。</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>1小时</td>
+<td>过期时间清理周期</td>
+</tr>
+</tbody>
+</table>
+<h3 id="短信发送配置sms">短信发送配置<code>sms</code><a class="td-heading-self-link" href="#%e7%9f%ad%e4%bf%a1%e5%8f%91%e9%80%81%e9%85%8d%e7%bd%aesms" aria-label="Heading self-link"></a></h3>
+<p>短信发送配置主要为系统发送验证码/安全码，其配置参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td><code>true</code></td>
+<td>是否开启短信</td>
+</tr>
+<tr>
+<td><code>provider</code></td>
+<td></td>
+<td>短信服务商，目前支持AWS、Azure、阿里云、腾讯云、百度云等</td>
+</tr>
+<tr>
+<td><code>accessKeyId</code></td>
+<td></td>
+<td>AccessKeyId对应于短信服务商的相应字段，不同的短信服务商对应的字段略有差异。</td>
+</tr>
+<tr>
+<td><code>accessKeySecret</code></td>
+<td></td>
+<td>AccessKeySecret对于应短信服务商的相应字段，不同的短信服务商对应的字段略有差异。</td>
+</tr>
+<tr>
+<td><code>signName</code></td>
+<td></td>
+<td>短信服务商的签名</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td></td>
+<td>短信服务商的模板ID</td>
+</tr>
+<tr>
+<td><code>extras</code></td>
+<td><code>[]</code></td>
+<td>短信服务商所需其他参数有序列表</td>
+</tr>
+</tbody>
+</table>
+<p>示例：对于腾讯云来说，其配置如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">sms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">provider</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;Tencent Cloud SMS&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">accessKeyID</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">AK******</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">accessKeySecret</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NY******</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">signName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">云智优本</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">210000</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">extras</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#0000cf;font-weight:bold">1000000000</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><p>其中，<code>accessKeyID</code>和<code>accessKeySecret</code>是腾讯云短信服务的密钥，分别对应<a href="https://console.cloud.tencent.com/cam/capi">云API密钥</a>上申请的标识身份的<code>SecretId</code>及其对应的<code>SecretKey</code>。
+<code>signName</code>是短信签名，<code>template</code>是短信模板ID，<code>extra</code>是额外参数，在腾讯云短信服务中，<code>extra</code>是应用ID，分为对应于<a href="https://cloud.tencent.com/document/product/382/55981">发送短信接口</a>中的<code>SignName</code>、<code>TemplateId</code>和<code>SmsSdkAppId</code>.</p>
+<h3 id="notification"><code>notification</code><a class="td-heading-self-link" href="#notification" aria-label="Heading self-link"></a></h3>
+<p>参数<code>notification</code>用于配置优化平台的通知配置。</p>
+<h3 id="notificationtemplatebasepath"><code>notification.templateBasePath</code><a class="td-heading-self-link" href="#notificationtemplatebasepath" aria-label="Heading self-link"></a></h3>
+<p>参数<code>notification.templateBasePath</code>设置通知模板的路径，默认值是<code>templates/notification</code>。</p>
+<p>目前，默认的模板名称是<code>default</code>。</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

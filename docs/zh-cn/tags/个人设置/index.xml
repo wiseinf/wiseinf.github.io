@@ -1,0 +1,31 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 个人设置</title>
+    <link>//localhost:1313/zh-cn/tags/%E4%B8%AA%E4%BA%BA%E8%AE%BE%E7%BD%AE/</link>
+    <description>Recent content in 个人设置 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E4%B8%AA%E4%BA%BA%E8%AE%BE%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 个人设置</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/personal-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/personal-settings/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

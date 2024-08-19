@@ -1,0 +1,440 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 管理设置</title>
+    <link>//localhost:1313/zh-cn/docs/user-guide/management/</link>
+    <description>Recent content in 管理设置 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/docs/user-guide/management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 用户管理</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/management/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/management/user/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述用户管理的相关操作。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;管理用户需具备管理员权限。&lt;/li&gt;
+&lt;li&gt;仅适用于商业版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;查看用户列表&#34;&gt;查看用户列表&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e7%94%a8%e6%88%b7%e5%88%97%e8%a1%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 用户&lt;/code&gt;进入用户管理页面，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;202&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+用户管理页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;用户管理页面将以列表的形式展示通知渠道。主要包括5栏：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户名：展示用户名称。&lt;/li&gt;
+&lt;li&gt;全称：展示用户名称。&lt;/li&gt;
+&lt;li&gt;电子邮箱：展示用户电子邮箱。&lt;/li&gt;
+&lt;li&gt;电话号码：展示用户电话号码。&lt;/li&gt;
+&lt;li&gt;角色：展示用户角色。&lt;/li&gt;
+&lt;li&gt;操作：操作栏，包括编辑、删除等操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;添加用户&#34;&gt;添加用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击用户管理页面上方的&lt;code&gt;增加&lt;/code&gt;按钮，将弹出添加用户对话框，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+添加用户对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述请参见下表。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;名称&lt;/td&gt;
+&lt;td&gt;用户名称， 必选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;姓&lt;/td&gt;
+&lt;td&gt;用户姓，可选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;名&lt;/td&gt;
+&lt;td&gt;用户名，可选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电子邮箱&lt;/td&gt;
+&lt;td&gt;用户电子邮箱，必选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;密码&lt;/td&gt;
+&lt;td&gt;用户登录密码，必选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;确认密码&lt;/td&gt;
+&lt;td&gt;确认用户登录密码，必选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;手机号&lt;/td&gt;
+&lt;td&gt;用户手机号，必选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;用户角色&lt;/td&gt;
+&lt;td&gt;目前，系统提供管理员和用户两种角色，默认为用户，必选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;按照字段名输入相应信息，点击&lt;code&gt;确定&lt;/code&gt;按钮，即可添加用户。&lt;/p&gt;
+&lt;h2 id=&#34;更新用户&#34;&gt;更新用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击用户管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将弹出编辑用户对话框，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+编辑用户对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/#添加用户&#34;&gt;添加用户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;h2 id=&#34;删除用户&#34;&gt;删除用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击用户管理页面的&lt;code&gt;删除&lt;/code&gt;按钮，将删除用户。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+删除用户
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;删除用户之前，将弹出删除确认对话框，确认后执行删除操作。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 通知渠道</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/management/channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/management/channel/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述如何管理通知渠道，包括查看，添加、更新或者删除通知渠道。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;查看渠道&#34;&gt;查看渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 通知渠道&lt;/code&gt;进入通知渠道管理页面，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/overview_hucff31aac09e394ec659275683fd563d9_32586_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;184&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+通知渠道管理页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;通知渠道管理页面将以列表的形式展示通知渠道。主要包括5栏：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;名称：通知渠道名称。&lt;/li&gt;
+&lt;li&gt;渠道类型：通知渠道类型。&lt;/li&gt;
+&lt;li&gt;连接参数：展示该渠道类型的连接参数。&lt;/li&gt;
+&lt;li&gt;其他参数：展示其他参数&lt;/li&gt;
+&lt;li&gt;操作：操作栏，包括编辑、删除等操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;添加渠道&#34;&gt;添加渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击通知渠道管理页面上方的&lt;code&gt;新增&lt;/code&gt;按钮，选择通知渠道类型，并填写通知渠道信息，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/addchannel_hu97b2511821a76fc3f758d82b0054f24e_39179_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+添加通知渠道对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述请参见下表。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;名称&lt;/td&gt;
+&lt;td&gt;通知渠道名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;渠道类型&lt;/td&gt;
+&lt;td&gt;通知渠道类型，目前仅支持Email&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机&lt;/td&gt;
+&lt;td&gt;Email SMTP主机名，例如 &lt;code&gt;smtp.wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;端口&lt;/td&gt;
+&lt;td&gt;Email SMTP端口，例如 &lt;code&gt;25&lt;/code&gt;, &lt;code&gt;465&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;启用SSL&lt;/td&gt;
+&lt;td&gt;是否启用SSL，默认为不启用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Email&lt;/td&gt;
+&lt;td&gt;Email地址，例如 &lt;code&gt;admin@wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;发送者名称&lt;/td&gt;
+&lt;td&gt;发送者名称，例如 &lt;code&gt;Wiseinf&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;密码&lt;/td&gt;
+&lt;td&gt;Email SMTP密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;参数列表&lt;/td&gt;
+&lt;td&gt;用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过&lt;code&gt;{{.param.参数名}}&lt;/code&gt;的方式在模板中引用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;按照字段名输入相应信息，点击&lt;code&gt;确定&lt;/code&gt;按钮，即可添加通知渠道。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具体上述字段的取值，您可以咨询您的邮件服务商，或者是邮件系统管理员。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;更新渠道&#34;&gt;更新渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;更新通知渠道，点击通知渠道管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将更新通知渠道信息，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/editchannel_hu6c88139678d29abc0f34c75f65f2bc6f_45533_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+编辑通知渠道对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/#添加渠道&#34;&gt;添加渠道&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;h2 id=&#34;删除渠道&#34;&gt;删除渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击通知渠道管理页面列表中的的&lt;code&gt;删除&lt;/code&gt;按钮，将删除通知渠道，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/deletechannel_hu600240e395bbeb1ed5b0fe17d416beb2_56557_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;214&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+编辑通知渠道对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;删除通知渠道之前，将弹出删除确认对话框，用户确认后执行删除操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：当该通知渠道被通知规则所使用时，会提示删除不成功。应该首先删除使用该通知渠道的通知规则后，然后再删除该通知渠道。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 通知规则</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/management/rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/management/rule/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;描述管理通知规则的详细信息。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;查看通知规则&#34;&gt;查看通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 通知规则&lt;/code&gt;进入通知规则管理页面，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/overview_hud10719c48adf621bd59bc0991cb7dd5e_61084_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;197&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+通知规则管理页
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;通知规则管理页面将以列表的形式展示通知渠道。主要包括5栏：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;名称：通知渠道名称。&lt;/li&gt;
+&lt;li&gt;渠道类型：通知渠道类型。&lt;/li&gt;
+&lt;li&gt;连接参数：展示该渠道类型的连接参数。&lt;/li&gt;
+&lt;li&gt;其他参数：展示其他参数&lt;/li&gt;
+&lt;li&gt;操作：操作栏，包括编辑、删除等操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;添加通知规则&#34;&gt;添加通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击通知规则管理页面上方的&lt;code&gt;增加&lt;/code&gt;按钮，将弹出添加通知规则对话框，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/addrule_hu85976e3cbbb33cf256e2735191b00c47_58685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;923&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+添加通知规则对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述请参见下表。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;名称&lt;/td&gt;
+&lt;td&gt;通知渠道名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;接收者&lt;/td&gt;
+&lt;td&gt;通知接收者地址，比如 &lt;code&gt;admin@wiseinf.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通知渠道&lt;/td&gt;
+&lt;td&gt;可通过下拉框选择具体的通知渠道名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;调度时间&lt;/td&gt;
+&lt;td&gt;设置该规则的具体调度时间。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;优化策略&lt;/td&gt;
+&lt;td&gt;选择具体的优化策略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;集群&lt;/td&gt;
+&lt;td&gt;选择需要关注的集群&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;名称空间&lt;/td&gt;
+&lt;td&gt;输入名称空间名，空值将匹配所有名称空间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;部门&lt;/td&gt;
+&lt;td&gt;输入部门名，空值将匹配所有部门名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;组&lt;/td&gt;
+&lt;td&gt;输入组名，空值将匹配所有组名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;用户&lt;/td&gt;
+&lt;td&gt;输入用户名，空值将匹配所有用户名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;模板ID&lt;/td&gt;
+&lt;td&gt;模板ID名，默认值为&lt;code&gt;default&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;参数列表&lt;/td&gt;
+&lt;td&gt;用户自定义参数列表，为键值对方式，该参数列表会传递到通知渠道的模板中，可通过&lt;code&gt;{{.param.参数名}}&lt;/code&gt;的方式在模板中引用。通知渠道参数列表中的同名参数将覆盖。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;按照字段名输入相应信息，点击&lt;code&gt;确定&lt;/code&gt;按钮，即可添加通知规则。&lt;/p&gt;
+&lt;h2 id=&#34;更新通知规则&#34;&gt;更新通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;更新通知渠道，点击通知渠道管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将弹出添加通知规则对话框，如下图。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/editrule_huf3f8e083d06596a212cbf2e980c5da45_65629_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;928&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+编辑通知规则对话框
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/#添加通知规则&#34;&gt;添加通知规则&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;h2 id=&#34;删除通知规则&#34;&gt;删除通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;点击通知渠道管理页面的&lt;code&gt;删除&lt;/code&gt;按钮，将删除通知规则。&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/deleterule_hue2d65ed7fb5e30f007de7122a94a917a_43216_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;112&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+删除通知规则
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;删除通知规则之前，将弹出删除确认对话框，用户确认后执行删除操作。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
