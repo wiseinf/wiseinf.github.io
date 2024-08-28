@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Releases</title>
-    <link>//localhost:1313/blog/releases/</link>
+    <link>/blog/releases/</link>
     <description>Recent content in Releases on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/blog/releases/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Blog: Cluster Optimizer version 1.2.1 has been released</title>
-      <link>//localhost:1313/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</link>
+      <link>/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</link>
       <pubDate>Thu, 30 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</guid>
+      <guid>/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</guid>
       <description>
         
         
@@ -29,17 +29,17 @@
 &lt;li&gt;Database Schema is automatically upgraded.&lt;/li&gt;
 &lt;li&gt;Support testing notification channel connectivity to facilitate verification of the correctness of input parameters.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, see: &lt;a href=&#34;//localhost:1313/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, see: &lt;a href=&#34;/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer version 1.2.0 has been released</title>
-      <link>//localhost:1313/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/</link>
+      <link>/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/</guid>
+      <guid>/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/</guid>
       <description>
         
         
@@ -51,17 +51,17 @@
 &lt;li&gt;Automated actions: Support application-level resource recommendation, unset resource quotas and memory overflows, and delete unused persistent volumes and other automated actions. Support standard workloads &lt;em&gt;Deployment&lt;/em&gt;, &lt;em&gt;StatefulSet&lt;/em&gt;, &lt;em&gt;DaemonSet&lt;/em&gt; and &lt;em&gt;CronJob&lt;/em&gt;. &lt;em&gt;Job&lt;/em&gt; is not supported, and its resource quota (Resource Quota) cannot be modified.&lt;/li&gt;
 &lt;li&gt;Task management: Supports daily task management operations such as creating, running, re-running, canceling, viewing task logs, and deleting tasks.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, see: &lt;a href=&#34;//localhost:1313/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, see: &lt;a href=&#34;/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer version 1.1.0 has been released</title>
-      <link>//localhost:1313/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/</link>
+      <link>/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/</guid>
+      <guid>/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/</guid>
       <description>
         
         
@@ -75,17 +75,17 @@
 &lt;li&gt;Cluster status: Can display the status of Kubernetes and Metrics services imported into the cluster. For abnormal conditions, the cause of the abnormality can be quickly discovered.&lt;/li&gt;
 &lt;li&gt;Support automatic creation of database Schema: You can use the parameter &lt;code&gt;createDatabaseIfNotExist&lt;/code&gt;=&lt;code&gt;true&lt;/code&gt; in the database connection configuration item to indicate whether to automatically create the database if the database does not exist. When the specified user name and password have permission to create a database, the system will automatically create the database.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, see: &lt;a href=&#34;//localhost:1313/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, see: &lt;a href=&#34;/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer version 1.1.0 has been released</title>
-      <link>//localhost:1313/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</link>
+      <link>/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</guid>
+      <guid>/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</guid>
       <description>
         
         

@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="text/html" href="//localhost:1313/docs/user-guide/pv/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/pv/index.xml">
-<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" type="text/html" href="/docs/user-guide/pv/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/user-guide/pv/index.xml">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -20,29 +20,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Persistent Volume | Cluster Optimizer</title>
-<meta name="description" content="Describes Persistent Volume related information and optimization suggestions.
+<meta name="description" content="Describes persistent volume information and provides optimization suggestions.
 ">
-<meta property="og:url" content="//localhost:1313/docs/user-guide/pv/">
+<meta property="og:url" content="/docs/user-guide/pv/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Persistent Volume">
-  <meta property="og:description" content="Describes Persistent Volume related information and optimization suggestions.">
+  <meta property="og:description" content="Describes persistent volume information and provides optimization suggestions.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Persistent Volume">
-  <meta itemprop="description" content="Describes Persistent Volume related information and optimization suggestions.">
-  <meta itemprop="dateModified" content="2024-08-19T11:27:11+08:00">
-  <meta itemprop="wordCount" content="554">
+  <meta itemprop="description" content="Describes persistent volume information and provides optimization suggestions.">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="526">
   <meta itemprop="keywords" content="Cluster Optimizer,Persistent Volume Optimization">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Persistent Volume">
-  <meta name="twitter:description" content="Describes Persistent Volume related information and optimization suggestions.">
+  <meta name="twitter:description" content="Describes persistent volume information and provides optimization suggestions.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -124,14 +133,14 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupsetup-using-helm-li">
   <a href="/docs/setup/setup-using-helm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-helm"><span class="">Install via Helm</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupupgrade-li">
-  <a href="/docs/setup/upgrade/" title="Install the commercial version" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupupgrade"><span class="">Install commercial version</span></a>
+  <a href="/docs/setup/upgrade/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupupgrade"><span class="">Upgrading to the commercial version</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsuser-guide-li">
   <a href="/docs/user-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guide"><span class="">User Manual</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsuser-guideimport-cluster-li">
-  <a href="/docs/user-guide/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-cluster"><span class="">Import cluster</span></a>
+  <a href="/docs/user-guide/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-cluster"><span class="">Import Cluster</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideimport-clusterimport-alibaba-li">
   <a href="/docs/user-guide/import-cluster/import-alibaba/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-clusterimport-alibaba"><span class="">Import Alibaba Cloud Cluster</span></a>
@@ -159,7 +168,7 @@
   <a href="/docs/user-guide/personal-settings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settings"><span class="">Personal Settings</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingssetting-li">
-  <a href="/docs/user-guide/personal-settings/setting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingssetting"><span class="">Personal Account Settings</span></a>
+  <a href="/docs/user-guide/personal-settings/setting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingssetting"><span class="">Personal Account</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingsclusteraccessaccount-li">
   <a href="/docs/user-guide/personal-settings/clusteraccessaccount/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingsclusteraccessaccount"><span class="">Cluster Access Account</span></a>
 </li>
@@ -225,9 +234,9 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#view-persistent-volume">View Persistent Volume</a></li>
+    <li><a href="#view-persistent-volumes">View Persistent Volumes</a></li>
     <li><a href="#delete-persistent-volume">Delete Persistent Volume</a></li>
-    <li><a href="#adjust-persistent-volume-size">Adjust Persistent Volume size</a></li>
+    <li><a href="#adjust-persistent-volume-size">Adjust Persistent Volume Size</a></li>
   </ul>
 </nav>
       </div>
@@ -235,51 +244,51 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/application-optimizer/" data-taxonomy-term="application-optimizer"><span class="taxonomy-label">Application Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">29</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">29</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimizing-application/" data-taxonomy-term="optimizing-application"><span class="taxonomy-label">Optimizing Application</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">21</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">21</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   
@@ -302,19 +311,19 @@
             
 <div class="td-content">
 	<h1>Persistent Volume</h1>
-  <div class="lead">Describes Persistent Volume related information and optimization suggestions.</div>
+  <div class="lead">Describes persistent volume information and provides optimization suggestions.</div>
 	<header class="article-meta">
 		<div class="taxonomy taxonomy-terms-article taxo-tags">
   <h5 class="taxonomy-title">Tags:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
-    <li><a class="taxonomy-term" href="//localhost:1313/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span></a></li>
+    <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span></a></li>
+    <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span></a></li>
     </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
   <h5 class="taxonomy-title">Categories:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
+    <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
     </ul>
 </div>
 
@@ -322,12 +331,12 @@
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes Persistent Volume related information and optimization suggestions.</p>
+<p>This section describes persistent volume information and provides optimization suggestions.</p>
 
 </div>
 
-<h2 id="view-persistent-volume">View Persistent Volume<a class="td-heading-self-link" href="#view-persistent-volume" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Persistent Volume</code> menu on the left menu bar of the platform to display the Persistent Volume page, as shown in the figure below.</p>
+<h2 id="view-persistent-volumes">View Persistent Volumes<a class="td-heading-self-link" href="#view-persistent-volumes" aria-label="Heading self-link"></a></h2>
+<p>Click the <code>Persistent Volume</code> menu on the left sidebar to display the Persistent Volume page, as shown below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv1_hu24db01f2be02a5928ee5616e06248119_86898_900x0_resize_catmullrom_3.png" width="900" height="436">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -340,13 +349,13 @@ Persistent Volume page
 </figcaption>
 </figure>
 
-<p>The Persistent Volume page is divided into 3 areas:</p>
+<p>The Persistent Volume page is divided into three sections:</p>
 <ol>
-<li><strong>Cluster selection area</strong>: Select the corresponding cluster.</li>
-<li><strong>Query area</strong>: List items can be filtered based on name, PVC namespace, PVC name and policy name.</li>
-<li><strong>List area</strong>: Displays PV, PVC, policy name, usage, latest update time and operation bar.</li>
+<li><strong>Cluster Selection Area</strong>: Choose the relevant cluster.</li>
+<li><strong>Query Area</strong>: Filter the list based on name, PVC namespace, PVC name, and policy name.</li>
+<li><strong>List Area</strong>: Displays information such as PV, PVC, policy name, usage, latest update time, and available actions.</li>
 </ol>
-<p>The Persistent Volume page after selecting the cluster is as follows:</p>
+<p>After selecting a cluster, the Persistent Volume page will look like this:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv2_hue425eb8ed03739d9b17157285a333f1a_136274_900x0_resize_catmullrom_3.png" width="900" height="505">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -359,58 +368,59 @@ Persistent Volume page-select cluster
 </figcaption>
 </figure>
 
-<p>The list area display is divided into 5 columns:</p>
+<p>The list area is divided into five columns:</p>
 <ol>
-<li><strong>PV column</strong>: Displays the PV name, region, capacity and creation time.</li>
-<li><strong>Owner Column</strong>: Displays the department, group and specific personnel of the PV owner.</li>
-<li><strong>PVC column</strong>: Displays the PVC namespace and name.</li>
-<li><strong>Usage column</strong>: Displays the name of the optimization strategy, the usage data provided by the optimization strategy, and the last update time. Currently, the platform includes two optimization strategies: <code>Unused PV</code> and <code>Low Utilization PV</code>. For the <code>Unused PV</code> strategy, its PV usage is empty.</li>
-<li><strong>Operation Bar</strong>: Displays the corresponding operations on the Persistent Volume.</li>
+<li><strong>PV</strong>: Displays the PV name, region, capacity, and creation time.</li>
+<li><strong>Owner</strong>: Displays the department, group, and specific personnel responsible for the PV.</li>
+<li><strong>PVC</strong>: Displays the PVC namespace and name.</li>
+<li><strong>Usage</strong>: Shows the name of the optimization strategy, usage data provided by the strategy, and the last update time. Currently, the platform supports two optimization strategies: <code>Unused PV</code> and <code>Underutilized PV</code>. For the <code>Unused PV</code> strategy, this column will be empty.</li>
+<li><strong>Action</strong>: Lists the available actions for the Persistent Volume.</li>
 </ol>
 <h2 id="delete-persistent-volume">Delete Persistent Volume<a class="td-heading-self-link" href="#delete-persistent-volume" aria-label="Heading self-link"></a></h2>
-<p>Select the row whose policy name column is <code>Unused PV</code>, and click the <code>Delete</code> link in the action column of the row to open the <code>Delete Persistent Volume</code> dialog box, which displays the Persistent Volume details and recommended solutions.</p>
-<p>The dialog box is displayed in the community version as shown below.</p>
+<p>Select the row where the strategy name column is <code>Unused PV</code>, and click the <code>Delete</code> link in the action column of that row. This will open the <code>Delete Persistent Volume</code> dialog box, displaying the details of the Persistent Volume and recommended actions.</p>
+<p>In the community version, it appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png" width="900" height="323">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Delete Persistent Volume dialog box
+Delete Persistent Volume Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>In the commercial version, the dialog box is displayed as shown below.</p>
+<p>In the commercial version, it appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv-b3_hu381f4197b01951d70e087b61e1cfa586_63315_900x0_resize_catmullrom_3.png" width="900" height="315">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Delete Persistent Volume dialog box
+Delete Persistent Volume Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Click the <code>OK</code> button in the dialog box to create a task to delete the Persistent Volume.</p>
-<h2 id="adjust-persistent-volume-size">Adjust Persistent Volume size<a class="td-heading-self-link" href="#adjust-persistent-volume-size" aria-label="Heading self-link"></a></h2>
-<p>Select <code>Low Utilization PV</code> as the policy name in the <strong>Query Area</strong>, and the system will only display list items that comply with the <code>Low Utilization PV</code> policy, as shown below.</p>
+<p>Click the <code>OK</code> button in the dialog box to create a task that will delete the persistent volume.</p>
+<h2 id="adjust-persistent-volume-size">Adjust Persistent Volume Size<a class="td-heading-self-link" href="#adjust-persistent-volume-size" aria-label="Heading self-link"></a></h2>
+<p>Select <code>Underutilized PV</code> as the strategy name in the <strong>Query Area</strong>. The system will then display only the list items that match the <code>Underutilized PV</code> strategy, as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png" width="900" height="500">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Filter list items by `Low Utilization PV` policy name
+Filter list items by `Underutilized PV` policy name
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Click the <code>Adjust' link in the list **Action Bar** to open the </code>Adjust Persistent Volume Size` dialog box, which displays the detailed information of the Persistent Volume and the recommended adjustment plan, as shown in the figure below.</p>
+<p>Click the <code>Adjust</code> link in the list’s <code>Action</code> column to open the <code>Adjust Persistent Volume Size</code> dialog box. This dialog box displays detailed information about the Persistent Volume and the recommended adjustment plan.</p>
+<p>In the community version, it appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png" width="900" height="417">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -423,7 +433,7 @@ Resize Persistent Volume
 </figcaption>
 </figure>
 
-<p>In the commercial version, parameters can be set and then automatically adjusted by background tasks, as shown in the figure below.</p>
+<p>In the commercial version, you can set parameters and automatically adjust the volume using background tasks, as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv-b5_hu452c317069072d2f009fc1a8b16aca39_150263_900x0_resize_catmullrom_3.png" width="900" height="450">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -436,8 +446,8 @@ Adjust the Persistent Volume dialog box: Set parameters
 </figcaption>
 </figure>
 
-<p>After setting the <code>target capacity</code>, <code>whether to keep the original PVC name</code> and <code>whether to delete the original PV</code>, click <code>OK</code> to quickly adjust the Persistent Volume size.</p>
-<p>Click the <code>Adjust</code> link in the <strong>Action Bar</strong> again. At this time, you can view the execution log of adjusting the size of the Persistent Volume, as shown in the figure below.</p>
+<p>After setting the <code>target capacity</code>, <code>whether to keep the original PVC name</code>, and <code>whether to delete the original PV</code>, click <code>OK</code> to quickly adjust the persistent volume size.</p>
+<p>Click the <code>Adjust</code> link in the <code>Action</code> column again to view the execution log of the persistent volume size adjustment, as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/pv/pv-b6_hu6991ea5bc42325c0f3cc1f4d0cf07f2a_260247_900x0_resize_catmullrom_3.png" width="900" height="455">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -450,9 +460,9 @@ Adjust Persistent Volume dialog box: View task log
 </figcaption>
 </figure>
 
-<p>Adjusting PV will use the cluster access account provided by the user to operate the PV in the cluster. You need to set up a cluster access account. For details, please see <a href="/docs/user-guide/personal-settings/clusteraccessaccount/">Setting up a cluster access account</a>.</p>
+<p>Adjusting the PV will use the cluster access account provided by the user to manage the PV in the cluster. To set up a cluster access account, refer to <a href="/docs/user-guide/personal-settings/clusteraccessaccount/">Setting up a cluster access account</a>.</p>
 <blockquote>
-<p>Note: If you choose not to delete the original PV, you need to delete the original PV yourself, otherwise you will still bear the cost of the PV.</p>
+<p><strong>Note</strong>: If you choose not to delete the original persistent volume, you will need to delete it manually, or you will continue to incur costs for the persistent volume.</p>
 </blockquote>
 
   <div class="section-index">
@@ -508,8 +518,8 @@ Adjust Persistent Volume dialog box: View task log
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/user-guide/node/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/node/index.xml">
+<link rel="canonical" type="text/html" href="/docs/user-guide/node/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/user-guide/node/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,29 +20,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Node | Cluster Optimizer</title>
-<meta name="description" content="Describe node-related information and optimization suggestions.
+<meta name="description" content="Describe node-related information and provides optimization suggestions.
 ">
-<meta property="og:url" content="//localhost:1313/docs/user-guide/node/">
+<meta property="og:url" content="/docs/user-guide/node/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Node">
-  <meta property="og:description" content="Describe node-related information and optimization suggestions.">
+  <meta property="og:description" content="Describe node-related information and provides optimization suggestions.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Node">
-  <meta itemprop="description" content="Describe node-related information and optimization suggestions.">
-  <meta itemprop="dateModified" content="2024-08-19T11:27:11+08:00">
-  <meta itemprop="wordCount" content="255">
+  <meta itemprop="description" content="Describe node-related information and provides optimization suggestions.">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="249">
   <meta itemprop="keywords" content="Cluster Optimizer,Node Optimizer">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Node">
-  <meta name="twitter:description" content="Describe node-related information and optimization suggestions.">
+  <meta name="twitter:description" content="Describe node-related information and provides optimization suggestions.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -112,7 +121,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Node</h1>
-<div class="lead">Describe node-related information and optimization suggestions.</div>
+<div class="lead">Describe node-related information and provides optimization suggestions.</div>
 
 
 
@@ -133,67 +142,68 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes node-related information and optimization suggestions.</p>
+<p>This section describes GPU node related information and provides optimization suggestions.</p>
 
 </div>
 
-<h2 id="view-nodes">View nodes<a class="td-heading-self-link" href="#view-nodes" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Node</code> menu on the left menu bar of the platform to display the node page, as shown in the figure below.</p>
+<h2 id="view-nodes">View Nodes<a class="td-heading-self-link" href="#view-nodes" aria-label="Heading self-link"></a></h2>
+<p>Click the <code>Node</code> menu on the platform’s left navigation bar to display the Node page, as shown below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/node/node1_hu9395c92acd4261258a440a868d64dab7_71908_900x0_resize_catmullrom_3.png" width="900" height="292">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-node page
+Node page
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>The node page is divided into 3 areas:</p>
+<p>The Node page is organized into three sections:</p>
 <ol>
-<li><strong>Cluster selection area</strong>: Select the corresponding cluster.</li>
-<li><strong>Query area</strong>: List items can be filtered based on the node group name and node group ID.</li>
-<li><strong>List area</strong>: Displays the information of the node group, its current settings and optimization settings.</li>
+<li><strong>Cluster Selection Area</strong>: Choose the desired cluster.</li>
+<li><strong>Query Area</strong>: Filter items based on the node group name or node group ID.</li>
+<li><strong>List Area</strong>: Displays node group information, current settings, and optimization options.</li>
 </ol>
-<p>The Select Cluster Nodes page looks like this:
+<p>After selecting a cluster, the List Area will show nodes that match the specified criteria within the cluster, as illustrated below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/node/node2_hu79d0c36850ca2a10e2eb2df8c0f6e0d3_153658_900x0_resize_catmullrom_3.png" width="900" height="396">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Node page-select cluster
+Node page - Select Cluster
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
-</p>
-<p>The list area display is divided into 5 columns:</p>
+
+<p>The List Area is divided into five columns:</p>
+<p>The List Area is divided into five columns:</p>
 <ol>
-<li><strong>Node column</strong>: Displays node name, instance ID and region information.</li>
-<li><strong>Owner column</strong>: Displays the department, group and specific personnel of the node owner.</li>
-<li><strong>Current settings column</strong>: Displays the instance type, number of CPU cores, and memory size of the node.</li>
-<li><strong>Details column</strong>: Displays the information provided by the strategy. For example, for low-utilization node strategies, the average utilization of CPU and memory will be observed and compared with the thresholds set by the platform to help users adjust node instance types.</li>
-<li><strong>Operation column</strong>: Displays the corresponding operations on the node.</li>
+<li><strong>Node</strong>: Displays the GPU node name, instance ID, and region.</li>
+<li><strong>Owner</strong>: Shows the department, group, and assigned personnel responsible for the node.</li>
+<li><strong>Settings</strong>: Displays the instance type, number of CPU cores, memory size, number of GPUs, and GPU type for the node.</li>
+<li><strong>Details</strong>: Provides strategy-related information. For instance, in low-utilization strategies, average CPU and memory utilization are compared against platform thresholds to assist users in optimizing node instance types.</li>
+<li><strong>Actions</strong>: Provides options for managing the node.</li>
 </ol>
-<h2 id="adjust-nodes">Adjust nodes<a class="td-heading-self-link" href="#adjust-nodes" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Adjust</code> link to open the Adjust Node dialog box, which displays detailed adjustment information and recommended adjustment plans, as shown below.</p>
+<h2 id="adjust-a-node">Adjust a Node<a class="td-heading-self-link" href="#adjust-a-node" aria-label="Heading self-link"></a></h2>
+<p>Click the <code>Adjust</code> link in the <code>Action</code> column to open the <code>Adjust Node</code> dialog box, as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png" width="900" height="424">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Adjust node page
+`Adjust Node` Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
 <blockquote>
-<p>Note: Currently only the related operations of adjusting nodes are displayed. Automated actions will be provided in the future, and adjustments can be made automatically after the user confirms the settings.</p>
+<p><strong>Note</strong>: Currently, only manual operations for adjusting GPU nodes are supported. Automated actions will be available in future releases, allowing for automatic adjustments once user confirmation is received.</p>
 </blockquote>
 
 </div>
@@ -259,8 +269,8 @@ Adjust node page
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Manual Operation</title>
-    <link>//localhost:1313/docs/user-guide/operations/</link>
+    <link>/docs/user-guide/operations/</link>
     <description>Recent content in Manual Operation on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/docs/user-guide/operations/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/user-guide/operations/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,48 +16,45 @@
     
     <item>
       <title>Docs: Adjusting Node Group</title>
-      <link>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</link>
+      <link>/docs/user-guide/operations/adjust-nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</guid>
+      <guid>/docs/user-guide/operations/adjust-nodegroup/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes the operation of adjusting a node group.&lt;/p&gt;
+&lt;p&gt;This section describes the instructions for adjusting a node group on Alibaba Cloud, AWS and so on.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;alibaba-cloud&#34;&gt;Alibaba Cloud&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#alibaba-cloud&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Have permission to edit node groups (node pool).&lt;/li&gt;
+&lt;li&gt;Ensure you have the necessary permissions to edit node groups (node pools).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;operation-steps&#34;&gt;Operation steps&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#operation-steps&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#instructions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Log in to the Container Service Management Console and select the cluster in the left navigation bar.&lt;/li&gt;
-&lt;li&gt;On the cluster list page, click the target cluster name, and then select Node Management &amp;gt; Node Pool in the left navigation bar.&lt;/li&gt;
-&lt;li&gt;On the node pool list page, click Edit in the Action column of the row where the target node pool is located.&lt;/li&gt;
-&lt;li&gt;On the Edit Node Pool page, edit the configuration items of the node pool. Node pool optimization mainly focuses on &lt;strong&gt;instance specifications&lt;/strong&gt; and &lt;strong&gt;automatic scaling&lt;/strong&gt; configuration items.
-&lt;ol&gt;
-&lt;li&gt;According to the recommended instance rules in the Adjust Node Pool dialog box, select the corresponding instance specification in &lt;strong&gt;Instance Specifications&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Make adjustments in the &lt;strong&gt;Auto Scaling&lt;/strong&gt; configuration item based on the recommended automatic scaling, minimum number of nodes, and maximum number of nodes in the Adjust Node Pool dialog box. If cluster automatic scaling is not enabled, please refer to &lt;a href=&#34;https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/auto-scaling-of-nodes#section-i4v-dgt-7wv&#34;&gt;Node automatic scaling&lt;/a&gt; to configure.&lt;/li&gt;
+&lt;li&gt;Log in to the &lt;code&gt;Container Service Management Console&lt;/code&gt; and select the desired cluster from the left navigation bar.&lt;/li&gt;
+&lt;li&gt;On the &lt;code&gt;Cluster&lt;/code&gt; page, click on the target cluster name, then navigate to &lt;code&gt;Node Management&lt;/code&gt; &amp;gt; &lt;code&gt;Node Pool&lt;/code&gt; in the left navigation bar.&lt;/li&gt;
+&lt;li&gt;On the &lt;code&gt;Node Pool&lt;/code&gt; page, click &lt;code&gt;Edit&lt;/code&gt; in the Action column for the target node pool.&lt;/li&gt;
+&lt;li&gt;On the &lt;code&gt;Edit Node Pool&lt;/code&gt; page, modify the configuration of the node pool. Node pool optimization primarily focuses on the &lt;code&gt;Instance Specifications&lt;/code&gt; and &lt;code&gt;Auto Scaling&lt;/code&gt; configuration items:&lt;/li&gt;
+&lt;li&gt;Based on the recommended instance rules in the &lt;code&gt;Adjust Node Pool&lt;/code&gt; dialog box, select the appropriate instance specification under &lt;code&gt;Instance Specifications&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Adjust the &lt;code&gt;Auto Scaling&lt;/code&gt; settings, including the recommended minimum and maximum number of nodes, as per the recommendations in the &lt;code&gt;Adjust Node Pool &lt;/code&gt;dialog box. If cluster auto-scaling is not enabled, refer to Node Automatic Scaling for configuration instructions.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For more details, please refer to: &lt;a href=&#34;https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/edit-node-pool&#34;&gt;Edit Node Pool&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For more detailed guidance, please refer to the &lt;a href=&#34;https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/edit-node-pool&#34;&gt;Edit Node Pool&lt;/a&gt; documentation.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Adjustment Node</title>
-      <link>//localhost:1313/docs/user-guide/operations/adjust-node/</link>
+      <link>/docs/user-guide/operations/adjust-node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/operations/adjust-node/</guid>
+      <guid>/docs/user-guide/operations/adjust-node/</guid>
       <description>
         
         
@@ -77,10 +74,10 @@
     
     <item>
       <title>Docs: Adjust Disk</title>
-      <link>//localhost:1313/docs/user-guide/operations/adjust-disk/</link>
+      <link>/docs/user-guide/operations/adjust-disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/operations/adjust-disk/</guid>
+      <guid>/docs/user-guide/operations/adjust-disk/</guid>
       <description>
         
         
@@ -100,10 +97,10 @@
     
     <item>
       <title>Docs: Delete Persistent Volume</title>
-      <link>//localhost:1313/docs/user-guide/operations/delete-pv/</link>
+      <link>/docs/user-guide/operations/delete-pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/operations/delete-pv/</guid>
+      <guid>/docs/user-guide/operations/delete-pv/</guid>
       <description>
         
         

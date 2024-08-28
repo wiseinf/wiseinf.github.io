@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Command Line Parameters</title>
-    <link>//localhost:1313/tags/command-line-parameters/</link>
+    <link>/tags/command-line-parameters/</link>
     <description>Recent content in Command Line Parameters on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/tags/command-line-parameters/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/tags/command-line-parameters/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,53 +16,52 @@
     
     <item>
       <title>Docs: Command line parameters</title>
-      <link>//localhost:1313/docs/configuration/command-line/</link>
+      <link>/docs/configuration/command-line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/configuration/command-line/</guid>
+      <guid>/docs/configuration/command-line/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes the command line parameters of the cloud native cluster optimization platform.&lt;/p&gt;
+&lt;p&gt;This section provides a detailed description of the command line parameters for the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; platform.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;command-line-parameters&#34;&gt;Command line parameters&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#command-line-parameters&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;You can get the usage of &lt;code&gt;Cluster Optimizer&lt;/code&gt; through &lt;code&gt;--help&lt;/code&gt;, as follows:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$optimizer --help
-Usage:
-  optimizer optimizer [flags]
-
-Flags:
-      --features stringArray Enable features, available features are [APIServer, Optimizer]
-  -h, --help help for optimizer
-
-Global Flags:
-      --config string config file (default is $OPTIMIZER_HOME/conf/cluster-optimizer.yaml)
-      --log-enable-color Enable color in log
-      --log-enable-console Enable log to console
-      --log-format string Set the log format (json or text) (default &amp;#34;json&amp;#34;)
-      --log-level string Set the log level (debug, info, warn, error, fatal) (default &amp;#34;info&amp;#34;)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The parameters are described in detail below.&lt;/p&gt;
-&lt;h2 id=&#34;parameter-description&#34;&gt;Parameter description&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#parameter-description&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;command-line-parameters&#34;&gt;Command Line Parameters&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#command-line-parameters&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The usage details for the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; can be obtained by executing the &lt;code&gt;--help&lt;/code&gt; command, as shown below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;$optimizer&lt;/span&gt; --help
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Usage:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  optimizer optimizer &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;flags&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Flags:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      --features stringArray Enable features, available features are &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;APIServer, Optimizer&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  -h, --help &lt;span style=&#34;color:#204a87&#34;&gt;help&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; optimizer
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Global Flags:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      --config string config file &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default is &lt;span style=&#34;color:#000&#34;&gt;$OPTIMIZER_HOME&lt;/span&gt;/conf/cluster-optimizer.yaml&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      --log-enable-color Enable color in log
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      --log-enable-console Enable log to console
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      --log-format string Set the log format &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;json or text&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;json&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      --log-level string Set the log level &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;debug, info, warn, error, fatal&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;info&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following sections provide an in-depth explanation of each parameter.&lt;/p&gt;
+&lt;h2 id=&#34;parameter-descriptions&#34;&gt;Parameter Descriptions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#parameter-descriptions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;--help&#34;&gt;&lt;code&gt;--help&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--help&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameter &lt;code&gt;--help&lt;/code&gt; provides command line usage help.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--help&lt;/code&gt; flag displays usage information for the command line interface, providing an overview of available commands and flags.&lt;/p&gt;
 &lt;h3 id=&#34;-f---features&#34;&gt;&lt;code&gt;-f, --features&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#-f---features&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameters &lt;code&gt;-f, --features&lt;/code&gt; indicate the features started by the cluster optimization platform, where &lt;code&gt;APIServer&lt;/code&gt; means only providing API services, and &lt;code&gt;Optimizer&lt;/code&gt; means starting the optimizer features.&lt;/p&gt;
-&lt;p&gt;The default value is &lt;code&gt;APIServer,Optimizer&lt;/code&gt;, which means that the automatic expansion and contraction features and the virtual capacity feature are enabled at the same time.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;-f&lt;/code&gt;, &lt;code&gt;--features&lt;/code&gt; flags specify which features of the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; should be activated. The available features are &lt;code&gt;APIServer&lt;/code&gt;, which enables only the API services, and &lt;code&gt;Optimizer&lt;/code&gt;, which activates the optimization functionalities. By default, both &lt;code&gt;APIServer&lt;/code&gt; and &lt;code&gt;Optimizer&lt;/code&gt; are enabled, allowing for both automatic scaling features and virtual capacity management.&lt;/p&gt;
 &lt;h3 id=&#34;--config&#34;&gt;&lt;code&gt;--config&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--config&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameter &lt;code&gt;--config&lt;/code&gt; indicates the configuration file path used by the cluster optimization platform. For its configuration, please refer to &lt;a href=&#34;//localhost:1313/docs/configuration/conf/&#34;&gt;Configuration File&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--config&lt;/code&gt; parameter specifies the path to the configuration file used by the cluster optimization platform. For details on configuring this file, refer to the &lt;a href=&#34;/docs/configuration/conf/&#34;&gt;Configuration File&lt;/a&gt; documentation.&lt;/p&gt;
 &lt;h3 id=&#34;--log-enable-color&#34;&gt;&lt;code&gt;--log-enable-color&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-color&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameter &lt;code&gt;--log-enable-color&lt;/code&gt; indicates whether to enable the color attribute in the log. In the console interface, enabling this feature can improve readability. The default value is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--log-enable-color&lt;/code&gt; flag determines whether to enable color coding in log outputs. Enabling this option can enhance log readability in console interfaces. The default value is &lt;code&gt;false&lt;/code&gt;, meaning color is not enabled by default.&lt;/p&gt;
 &lt;h3 id=&#34;--log-enable-console&#34;&gt;&lt;code&gt;--log-enable-console&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-console&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameter &lt;code&gt;--log-enable-console&lt;/code&gt; indicates whether to enable the console log. The console log can be easily accessed through the &lt;code&gt;kubectl log&lt;/code&gt; command. The default value is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--log-enable-console&lt;/code&gt; flag enables logging to the console, which can be particularly useful when logs are accessed via the kubectl log command. The default setting is &lt;code&gt;false&lt;/code&gt;, indicating that console logging is disabled by default.&lt;/p&gt;
 &lt;h3 id=&#34;--log-format&#34;&gt;&lt;code&gt;--log-format&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-format&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameter &lt;code&gt;--log-format&lt;/code&gt; is used to set the log format. The available log format is &lt;code&gt;json&lt;/code&gt; or &lt;code&gt;text&lt;/code&gt;. The default value is &lt;code&gt;json&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--log-format&lt;/code&gt; flag sets the format for log output. The available formats are &lt;code&gt;json&lt;/code&gt; and &lt;code&gt;text&lt;/code&gt;, with &lt;code&gt;json&lt;/code&gt; being the default format. This parameter allows users to tailor the log output format to their needs.&lt;/p&gt;
 &lt;h3 id=&#34;--log-level&#34;&gt;&lt;code&gt;--log-level&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-level&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The parameter &lt;code&gt;--log-level&lt;/code&gt; is used to set the log level. Optional values ​​include &lt;code&gt;debug&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;warn&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;, &lt;code&gt;fatal&lt;/code&gt;. The default value is &lt;code&gt;info&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--log-level&lt;/code&gt; parameter defines the verbosity of log outputs. The possible values are &lt;code&gt;debug&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;warn&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;, and &lt;code&gt;fatal&lt;/code&gt;, with &lt;code&gt;info&lt;/code&gt; being the default setting. This allows users to control the level of detail provided in the logs.&lt;/p&gt;
 
       </description>
     </item>

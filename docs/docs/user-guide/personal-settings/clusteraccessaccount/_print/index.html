@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/index.xml">
+<link rel="canonical" type="text/html" href="/docs/user-guide/personal-settings/clusteraccessaccount/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/user-guide/personal-settings/clusteraccessaccount/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -22,7 +22,7 @@
 <title>Cluster Access Account | Cluster Optimizer</title>
 <meta name="description" content="Describes operations related to managing personal cluster access accounts.
 ">
-<meta property="og:url" content="//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/">
+<meta property="og:url" content="/docs/user-guide/personal-settings/clusteraccessaccount/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Cluster Access Account">
   <meta property="og:description" content="Describes operations related to managing personal cluster access accounts.">
@@ -31,8 +31,8 @@
 
   <meta itemprop="name" content="Cluster Access Account">
   <meta itemprop="description" content="Describes operations related to managing personal cluster access accounts.">
-  <meta itemprop="dateModified" content="2024-08-19T11:27:11+08:00">
-  <meta itemprop="wordCount" content="398">
+  <meta itemprop="dateModified" content="2024-08-28T18:02:36+08:00">
+  <meta itemprop="wordCount" content="469">
   <meta itemprop="keywords" content="Cluster Optimizer,Cluster Access Account">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Cluster Access Account">
@@ -41,8 +41,8 @@
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -133,30 +142,34 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes operations related to managing personal cluster access accounts.</p>
+<p>This section describes operations related to managing personal cluster access accounts.</p>
 
 </div>
 
 <h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
 <ul>
-<li>Available only in commercial version.</li>
+<li>The features described are available only in the commercial version.</li>
 </ul>
-<h2 id="view-cluster-access-account">View cluster access account<a class="td-heading-self-link" href="#view-cluster-access-account" aria-label="Heading self-link"></a></h2>
-<p>Click on the user avatar in the top left navigation bar, as shown below. Click <code>Personal Settings</code> on the expanded menu to enter the personal settings page.</p>
-<p>On the personal settings page, click the <code>Cluster Access Account</code> tab to view and manage the cluster access account, as shown in the figure below.</p>
+<h2 id="viewing-cluster-access-account">Viewing Cluster Access Account<a class="td-heading-self-link" href="#viewing-cluster-access-account" aria-label="Heading self-link"></a></h2>
+<p>To view and manage your cluster access account, follow these steps:</p>
+<ol>
+<li>Click on your user avatar in the top left navigation bar, as shown below.</li>
+<li>From the expanded menu, select <code>Personal Settings</code> to access the personal settings page.</li>
+<li>On the personal settings page, click the <code>Cluster Access Account</code> tab to view and manage your cluster access account, as illustrated below.</li>
+</ol>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png" width="900" height="324">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Cluster access account list
+Cluster Access Account List
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Please see the table below for specific field names and descriptions.</p>
+<p>The table below provides detailed descriptions of the fields available in this section:</p>
 <table>
 <thead>
 <tr>
@@ -167,38 +180,40 @@ Cluster access account list
 <tbody>
 <tr>
 <td>Cluster ID</td>
-<td>User name, required</td>
+<td>The unique identifier for the cluster.</td>
 </tr>
 <tr>
-<td>Cloud service provider access account</td>
-<td>User last name, required</td>
+<td>Cloud Provider Access Account</td>
+<td>The account used to access the cloud service provider.</td>
 </tr>
 <tr>
 <td>Kubeconfig</td>
-<td>User email address, required</td>
+<td>Configuration file containing credentials for accessing the Kubernetes cluster.</td>
 </tr>
 <tr>
-<td>Operation</td>
-<td>Display user operations</td>
+<td>Action</td>
+<td>Actions available for managing the cluster access account.</td>
 </tr>
 </tbody>
 </table>
-<p>Enter the corresponding information according to the field name and click the <code>OK</code> button to modify the personal information.</p>
-<h2 id="add-cluster-access-account">Add cluster access account<a class="td-heading-self-link" href="#add-cluster-access-account" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Add</code> button at the top of the cluster access account management page, and the Add Cluster Access Account dialog box will pop up, as shown below.</p>
+<h2 id="adding-a-cluster-access-account">Adding a Cluster Access Account<a class="td-heading-self-link" href="#adding-a-cluster-access-account" aria-label="Heading self-link"></a></h2>
+<p>To add a new cluster access account:</p>
+<ol>
+<li>Click the <code>Add</code> button at the top of the <code>Cluster Access Account</code> management page. The Add Cluster Access Account dialog box will appear, as shown below.</li>
+</ol>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png" width="900" height="372">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Add Cluster Access Account Dialog Box
-<small class="text-muted"><br/>Wiseinf Inc.</small>
+  Add Cluster Access Account Dialog Box
+  <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Please see the table below for specific field names and descriptions.</p>
+<p>Refer to the table below for descriptions of the required fields:</p>
 <table>
 <thead>
 <tr>
@@ -209,56 +224,71 @@ Add Cluster Access Account Dialog Box
 <tbody>
 <tr>
 <td>Cluster ID</td>
-<td>Accessed cluster ID, required</td>
+<td>The ID of the cluster you want to access. This field is required.</td>
 </tr>
 <tr>
 <td>Access Key</td>
-<td>Access key to access the cloud service provider, required</td>
+<td>The access key for your cloud service provider. This field is required.</td>
 </tr>
 <tr>
 <td>Access Key Secret</td>
-<td>Access key to access the cloud service provider, required</td>
+<td>The secret associated with your cloud service provider access key. This field is required.</td>
 </tr>
 <tr>
 <td>Kubeconfig</td>
-<td>Credentials for accessing Kubernetes, required</td>
+<td>The configuration containing credentials for accessing the Kubernetes cluster. This field is required.</td>
 </tr>
 </tbody>
 </table>
-<p>Enter the corresponding information according to the field name and click the <code>OK</code> button to add the cluster access account.</p>
+<ol start="2">
+<li>After entering the necessary information, click the <code>OK</code> button to add the cluster access account.</li>
+</ol>
 <blockquote>
-<p>Note: If you have not added a cluster, the drop-down box of the cluster ID field is empty, the system will report an error, and the cluster access account cannot be added. You can create a cluster access account after [Importing the cluster](/docs/user-guide/import-cluster/].</p>
+<p><strong>Note</strong>: If no clusters have been added, the drop-down list for the Cluster ID field will be empty. In such cases, an error will occur, and the cluster access account cannot be added. Ensure that you have <a href="/docs/user-guide/import-cluster/">imported the cluster</a> before attempting to add a cluster access account.</p>
 </blockquote>
-<h2 id="update-cluster-access-account">Update cluster access account<a class="td-heading-self-link" href="#update-cluster-access-account" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Cluster Access Account</code> button in the list of cluster access account management pages, and the Edit Cluster Access Account dialog box will pop up, as shown below.</p>
+<h2 id="updating-a-cluster-access-account">Updating a Cluster Access Account<a class="td-heading-self-link" href="#updating-a-cluster-access-account" aria-label="Heading self-link"></a></h2>
+<p>To update an existing cluster access account:</p>
+<ol>
+<li>Click the Cluster Access Account button in the list of cluster access accounts. This will open the Edit Cluster Access Account dialog box, as shown below.</li>
+</ol>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png" width="900" height="1010">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Edit Cluster Access Account Dialog Box
-<small class="text-muted"><br/>Wiseinf Inc.</small>
+  Edit Cluster Access Account Dialog Box
+  <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>The specific field names and descriptions are the same as [Add Cluster Access Account] (#Add Cluster Access Account) and will not be repeated.</p>
-<h2 id="delete-cluster-access-account">Delete cluster access account<a class="td-heading-self-link" href="#delete-cluster-access-account" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Delete</code> button on the cluster access account management page to delete the cluster access account.</p>
+<ol start="2">
+<li>After entering the necessary information, click the <code>OK</code> button to add the cluster access account. The field names and descriptions are the same as those listed in the <a href="/docs/user-guide/personal-settings/clusteraccessaccount/#adding-a-cluster-access-account">Adding a Cluster Access Account</a> section.</li>
+</ol>
+<h2 id="deleting-a-cluster-access-account">Deleting a Cluster Access Account<a class="td-heading-self-link" href="#deleting-a-cluster-access-account" aria-label="Heading self-link"></a></h2>
+<p>To delete a cluster access account:</p>
+<ol>
+<li>Click the <code>Delete</code> button on the Cluster Access Account management page.</li>
+</ol>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png" width="900" height="113">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Delete cluster access account
-<small class="text-muted"><br/>Wiseinf Inc.</small>
+  Delete Cluster Access Account
+  <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Before deleting the cluster access account, a deletion confirmation dialog box will pop up. After confirmation, the deletion operation will be performed.</p>
+<ol start="2">
+<li>Before deletion, a confirmation dialog box will appear. After confirming, the account will be deleted.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Deleting a cluster access account will cause any tasks using that account to fail.</p>
+</blockquote>
 
 </div>
 </div>
@@ -323,8 +353,8 @@ Delete cluster access account
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

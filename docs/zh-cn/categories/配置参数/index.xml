@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 配置参数</title>
-    <link>//localhost:1313/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</link>
+    <link>/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</link>
     <description>Recent content in 配置参数 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 配置参数</title>
-      <link>//localhost:1313/zh-cn/docs/configuration/conf/</link>
+      <link>/zh-cn/docs/configuration/conf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/configuration/conf/</guid>
+      <guid>/zh-cn/docs/configuration/conf/</guid>
       <description>
         
         
@@ -543,6 +543,122 @@
 &lt;h3 id=&#34;notificationtemplatebasepath&#34;&gt;&lt;code&gt;notification.templateBasePath&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#notificationtemplatebasepath&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;参数&lt;code&gt;notification.templateBasePath&lt;/code&gt;设置通知模板的路径，默认值是&lt;code&gt;templates/notification&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;目前，默认的模板名称是&lt;code&gt;default&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;邮件配置-email&#34;&gt;邮件配置 &lt;code&gt;email&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e9%82%ae%e4%bb%b6%e9%85%8d%e7%bd%ae-email&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;邮件配置主要用于系统发送电子邮件。其配置参数如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数名称&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;enabled&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;确定是否启用邮件功能。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;provider&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;指定电子邮件服务提供商。支持的提供商包括 AWS、Azure、阿里云、腾讯云等。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;clientId&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;对应电子邮件服务提供商的 &lt;code&gt;ClientId&lt;/code&gt;。不同提供商的字段名称可能有所不同。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;clientSecret&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;对应电子邮件服务提供商的 &lt;code&gt;ClientSecret&lt;/code&gt;。不同提供商的字段名称可能有所不同。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;host&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;指定电子邮件服务提供商 SMTP 服务器的主机名或 IP 地址。这对于将邮件流量定向到正确的服务器以处理外发邮件至关重要。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;port&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;定义用于连接电子邮件服务提供商 SMTP 服务器的网络端口。常见的端口值为 TLS/STARTTLS 的 587、SSL 的 465 和非加密通信的 25。端口选择必须符合电子邮件服务的安全要求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;disableSSL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;确定是否禁用与 SMTP 服务器连接的 SSL 加密。如果设置为 true，则关闭 SSL，这可能对某些服务器配置或在加密由其他方式管理的环境中是必要的。但是，禁用 SSL 可能会使通信暴露于潜在的安全风险中。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;endpoint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;定义用于连接电子邮件服务提供商 API 的 URL 或特定网络端点。这对于基于云或 API 驱动的电子邮件服务特别重要，在这些服务中，电子邮件通过 HTTP 请求而不是传统的 SMTP 发送。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;method&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;指定与电子邮件服务提供商 API 交互时使用的 HTTP 方法（如 POST、GET、PUT 等）。通常使用 POST 来发送电子邮件，因为它允许在请求体中传输电子邮件内容和元数据。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;region&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;指定电子邮件服务提供商服务器所在的地理区域。这对于优化延迟、遵守数据驻留要求以及可能的成本管理非常重要，具体取决于电子邮件服务提供商。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;template&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;电子邮件服务提供商用于发送消息的模板。默认值为 &lt;code&gt;templates/email_code.tpl&lt;/code&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;fromAddress&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;设置出现在电子邮件 &amp;ldquo;发件人&amp;rdquo; 字段中的电子邮件地址。收件人会将此地址视为发件人地址。此地址应为电子邮件服务提供商系统中已验证或授权的地址。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;fromName&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;指定与 &lt;code&gt;fromAddress&lt;/code&gt; 关联的显示名称。此名称会在收件人的收件箱中显示为发件人的名称，增强电子邮件的品牌形象和识别度。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;许可证配置-license&#34;&gt;许可证配置 &lt;code&gt;license&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%ae%b8%e5%8f%af%e8%af%81%e9%85%8d%e7%bd%ae-license&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;许可证配置主要用于商业版的许可证配置。其配置参数如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数名称&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;accessKeyId&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;accessKeyId&lt;/code&gt; 是分配给您的账户或应用程序的唯一标识符，用于在线检索许可证时对请求进行身份验证。此密钥是认证过程的关键部分，并与 &lt;code&gt;accessKeySecret&lt;/code&gt; 一起使用，以确保对许可服务的安全访问。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;accessKeySecret&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;accessKeySecret&lt;/code&gt; 是与 &lt;code&gt;accessKeyId&lt;/code&gt; 配对的密钥，用于对 API 请求进行签名和身份验证，确保与许可服务的安全通信。此密钥必须保密，因为它提供了与许可证检索和验证相关的关键操作的访问权限。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;managerBaseUrl&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;managerBaseUrl&lt;/code&gt; 指定许可管理服务的基本 URL。此 URL 用作与许可证检索相关的所有 API 请求的端点。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;certificate&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;指的是离线提供的许可证证书。此证书用于验证许可证的真实性和完整性。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;signature&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;包含离线提供的许可证加密签名。此签名用于验证许可证证书的完整性和真实性，确保其未被篡改。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
       </description>
     </item>

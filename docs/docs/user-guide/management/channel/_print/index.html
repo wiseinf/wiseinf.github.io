@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/user-guide/management/channel/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/management/channel/index.xml">
+<link rel="canonical" type="text/html" href="/docs/user-guide/management/channel/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/user-guide/management/channel/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,29 +20,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Notification Channel | Cluster Optimizer</title>
-<meta name="description" content="Describes how to set up notification channels.
+<meta name="description" content="Describes operations to manage notification channels,
 ">
-<meta property="og:url" content="//localhost:1313/docs/user-guide/management/channel/">
+<meta property="og:url" content="/docs/user-guide/management/channel/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Notification Channel">
-  <meta property="og:description" content="Describes how to set up notification channels.">
+  <meta property="og:description" content="Describes operations to manage notification channels,">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Notification Channel">
-  <meta itemprop="description" content="Describes how to set up notification channels.">
-  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
-  <meta itemprop="wordCount" content="407">
+  <meta itemprop="description" content="Describes operations to manage notification channels,">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="478">
   <meta itemprop="keywords" content="Cluster Optimizer,Notification Channel">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Notification Channel">
-  <meta name="twitter:description" content="Describes how to set up notification channels.">
+  <meta name="twitter:description" content="Describes operations to manage notification channels,">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -112,7 +121,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Notification Channel</h1>
-<div class="lead">Describes how to set up notification channels.</div>
+<div class="lead">Describes operations to manage notification channels,</div>
 
 
 
@@ -133,12 +142,12 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes how to manage notification channels, including viewing, adding, updating, or deleting notification channels.</p>
+<p>This section describes operations to manage notification channels, including viewing, adding, updating, and deleting notification channels.</p>
 
 </div>
 
-<h2 id="view-channels">View channels<a class="td-heading-self-link" href="#view-channels" aria-label="Heading self-link"></a></h2>
-<p>Enter the notification channel management page from <code>Settings --&gt; Notification Channels</code>, as shown below.</p>
+<h2 id="view-channels">View Channels<a class="td-heading-self-link" href="#view-channels" aria-label="Heading self-link"></a></h2>
+<p>To access the notification channel management page, navigate to <code>Settings</code> &ndash;&gt; <code>Notification Channels</code>, as shown below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/management/channel/overview_hu824b275e1628a53c9cee5473e61eb3d8_65173_900x0_resize_catmullrom_3.png" width="900" height="273">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -151,29 +160,29 @@ Notification channel management page
 </figcaption>
 </figure>
 
-<p>The notification channel management page will display notification channels in the form of a list. It mainly includes 5 columns:</p>
+<p>The notification channel management page displays channels in a list format with the following columns:</p>
 <ul>
-<li>Name: Notification channel name.</li>
-<li>Channel type: Notification channel type.</li>
-<li>Connection parameters: Displays the connection parameters of this channel type.</li>
-<li>Other parameters: display other parameters</li>
-<li>Operation: Operation bar, including editing, deletion and other operations.</li>
+<li><strong>Name</strong>: The name of the notification channel.</li>
+<li><strong>Channel Type</strong>: The type of notification channel.</li>
+<li><strong>Connection Parameters</strong>: Displays the connection parameters for the channel type.</li>
+<li><strong>Other Parameters</strong>: Displays additional parameters.</li>
+<li><strong>Action</strong>: Provides actions such as editing and deletion.</li>
 </ul>
-<h2 id="add-channel">Add channel<a class="td-heading-self-link" href="#add-channel" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Add</code> button at the top of the notification channel management page, select the notification channel type, and fill in the notification channel information, as shown below.</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/user-guide/management/channel/addchannel_hua77b47c0ce1f13b8995bfd0486a81898_41893_900x0_resize_catmullrom_3.png" width="900" height="961">
+<h2 id="adding-a-channel">Adding a Channel<a class="td-heading-self-link" href="#adding-a-channel" aria-label="Heading self-link"></a></h2>
+<p>To add a new notification channel, click the <code>Add</code> button at the top of the notification channel management page, select the channel type, and fill in the necessary information, as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+<img class="card-img-top" src="/docs/user-guide/management/channel/addchannel_hua77b47c0ce1f13b8995bfd0486a81898_41893_600x0_resize_catmullrom_3.png" width="600" height="641">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Add notification channel dialog
+Add Notification Channel Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Please see the table below for specific field names and descriptions.</p>
+<p>Refer to the table below for field names and descriptions:</p>
 <table>
 <thead>
 <tr>
@@ -184,23 +193,23 @@ Add notification channel dialog
 <tbody>
 <tr>
 <td>Name</td>
-<td>Notification channel name</td>
+<td>Name of the notification channel.</td>
 </tr>
 <tr>
-<td>Channel type</td>
-<td>Notification channel type, currently only supports Email</td>
+<td>Channel Type</td>
+<td>Type of the notification channel. Currently, only <code>Email</code> is supported.</td>
 </tr>
 <tr>
 <td>Host</td>
-<td>Email SMTP hostname, for example <code>smtp.wiseinf.com</code></td>
+<td>Email SMTP hostname, e.g., <code>smtp.wiseinf.com</code></td>
 </tr>
 <tr>
 <td>Port</td>
-<td>Email SMTP port, such as <code>25</code>, <code>465</code></td>
+<td>Email SMTP port, e.g., <code>25</code>, <code>465</code></td>
 </tr>
 <tr>
 <td>Enable SSL</td>
-<td>Whether to enable SSL, the default is not enabled</td>
+<td>Whether to enable SSL (default is disabled).</td>
 </tr>
 <tr>
 <td>Email</td>
@@ -208,38 +217,39 @@ Add notification channel dialog
 </tr>
 <tr>
 <td>Sender name</td>
-<td>Sender name, e.g. <code>Wiseinf</code></td>
+<td>Name of the sender, e.g.,  <code>Wiseinf</code></td>
 </tr>
 <tr>
 <td>Password</td>
-<td>Email SMTP Password</td>
+<td>Email SMTP password.</td>
 </tr>
 <tr>
 <td>Parameter list</td>
-<td>User-defined parameter list in the form of key-value pairs. This parameter list will be passed to the template of the notification channel and can be referenced in the template through <code>{{.param.parameter name}}</code>.</td>
+<td>User-defined parameter list in key-value pair format. This list can be referenced in the notification channel template using <code>{{.param.parameter_name}}</code>.</td>
 </tr>
 </tbody>
 </table>
-<p>Enter the corresponding information according to the field name and click the <code>OK</code> button to add the notification channel.</p>
+<p>After entering the required information, click <code>Confirm</code> button to add the notification channel.</p>
 <blockquote>
-<p>For specific values ​​of the above fields, you can consult your email service provider or email system administrator.</p>
+<p><strong>Note</strong>: Consult your email service provider or email system administrator for specific values of the above fields.</p>
 </blockquote>
-<h2 id="update-channel">Update channel<a class="td-heading-self-link" href="#update-channel" aria-label="Heading self-link"></a></h2>
-<p>To update notification channels, click the <code>Edit</code> button in the list of notification channel management pages to update the notification channel information, as shown below.</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/user-guide/management/channel/editchannel_hu18262063cc359697a35dc12ddb73059d_45805_900x0_resize_catmullrom_3.png" width="900" height="962">
+<h2 id="updating-a-channel">Updating a Channel<a class="td-heading-self-link" href="#updating-a-channel" aria-label="Heading self-link"></a></h2>
+<p>To update a notification channel, click the <code>Edit</code> button in the notification channel management list to modify the channel information, as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+<img class="card-img-top" src="/docs/user-guide/management/channel/editchannel_hu18262063cc359697a35dc12ddb73059d_45805_600x0_resize_catmullrom_3.png" width="600" height="642">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Edit notification channel dialog box
+Edit Notification Channel Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>The specific field names and descriptions are the same as [Add Channel] (#Add Channel) and will not be repeated.</p>
-<h2 id="delete-channel">Delete channel<a class="td-heading-self-link" href="#delete-channel" aria-label="Heading self-link"></a></h2>
+<p>The field names and descriptions are identical to those in the <a href="/docs/user-guide/management/channel/#adding-a-channel">Adding a Channel</a> section.</p>
+<p>After entering the required information, click <code>Confirm</code> button to update the notification channel.</p>
+<h2 id="deleting-a-channel">Deleting a Channel<a class="td-heading-self-link" href="#deleting-a-channel" aria-label="Heading self-link"></a></h2>
 <p>Click the <code>Delete</code> button in the list of notification channel management pages to delete the notification channel, as shown below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png" width="900" height="209">
@@ -256,6 +266,23 @@ Edit notification channel dialog box
 <p>Before deleting the notification channel, a deletion confirmation dialog box will pop up, and the deletion operation will be performed after the user confirms.</p>
 <blockquote>
 <p>Note: When the notification channel is used by notification rules, it will prompt that the deletion was unsuccessful. You should first delete the notification rules that use the notification channel, and then delete the notification channel.</p>
+</blockquote>
+<p>To delete a notification channel, click the <code>Delete</code> button in the notification channel management list, as shown below.</p>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png" width="900" height="209">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Delete Notification Channel Dialog
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>A confirmation dialog box will appear before the deletion is finalized. After confirmation, the channel will be deleted.</p>
+<blockquote>
+<p><strong>Note</strong>: If the notification channel is being used by notification rules, the deletion will fail. You must first delete the notification rules associated with the channel before deleting the channel itself.</p>
 </blockquote>
 
 </div>
@@ -321,8 +348,8 @@ Edit notification channel dialog box
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

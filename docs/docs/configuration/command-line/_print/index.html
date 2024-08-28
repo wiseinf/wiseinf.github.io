@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/configuration/command-line/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/configuration/command-line/index.xml">
+<link rel="canonical" type="text/html" href="/docs/configuration/command-line/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/configuration/command-line/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -22,7 +22,7 @@
 <title>Command line parameters | Cluster Optimizer</title>
 <meta name="description" content="Describes the command line parameters of the cloud native cluster optimization platform.
 ">
-<meta property="og:url" content="//localhost:1313/docs/configuration/command-line/">
+<meta property="og:url" content="/docs/configuration/command-line/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Command line parameters">
   <meta property="og:description" content="Describes the command line parameters of the cloud native cluster optimization platform.">
@@ -31,8 +31,8 @@
 
   <meta itemprop="name" content="Command line parameters">
   <meta itemprop="description" content="Describes the command line parameters of the cloud native cluster optimization platform.">
-  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
-  <meta itemprop="wordCount" content="291">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="360">
   <meta itemprop="keywords" content="Cluster Optimization,Command Line Parameters">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Command line parameters">
@@ -41,8 +41,8 @@
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -133,43 +142,42 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes the command line parameters of the cloud native cluster optimization platform.</p>
+<p>This section provides a detailed description of the command line parameters for the <strong>Cluster Optimizer</strong> platform.</p>
 
 </div>
 
-<h2 id="command-line-parameters">Command line parameters<a class="td-heading-self-link" href="#command-line-parameters" aria-label="Heading self-link"></a></h2>
-<p>You can get the usage of <code>Cluster Optimizer</code> through <code>--help</code>, as follows:</p>
-<pre tabindex="0"><code>$optimizer --help
-Usage:
-  optimizer optimizer [flags]
-
-Flags:
-      --features stringArray Enable features, available features are [APIServer, Optimizer]
-  -h, --help help for optimizer
-
-Global Flags:
-      --config string config file (default is $OPTIMIZER_HOME/conf/cluster-optimizer.yaml)
-      --log-enable-color Enable color in log
-      --log-enable-console Enable log to console
-      --log-format string Set the log format (json or text) (default &#34;json&#34;)
-      --log-level string Set the log level (debug, info, warn, error, fatal) (default &#34;info&#34;)
-</code></pre><p>The parameters are described in detail below.</p>
-<h2 id="parameter-description">Parameter description<a class="td-heading-self-link" href="#parameter-description" aria-label="Heading self-link"></a></h2>
+<h2 id="command-line-parameters">Command Line Parameters<a class="td-heading-self-link" href="#command-line-parameters" aria-label="Heading self-link"></a></h2>
+<p>The usage details for the <strong>Cluster Optimizer</strong> can be obtained by executing the <code>--help</code> command, as shown below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#000">$optimizer</span> --help
+</span></span><span style="display:flex;"><span>Usage:
+</span></span><span style="display:flex;"><span>  optimizer optimizer <span style="color:#ce5c00;font-weight:bold">[</span>flags<span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Flags:
+</span></span><span style="display:flex;"><span>      --features stringArray Enable features, available features are <span style="color:#ce5c00;font-weight:bold">[</span>APIServer, Optimizer<span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>  -h, --help <span style="color:#204a87">help</span> <span style="color:#204a87;font-weight:bold">for</span> optimizer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Global Flags:
+</span></span><span style="display:flex;"><span>      --config string config file <span style="color:#ce5c00;font-weight:bold">(</span>default is <span style="color:#000">$OPTIMIZER_HOME</span>/conf/cluster-optimizer.yaml<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>      --log-enable-color Enable color in log
+</span></span><span style="display:flex;"><span>      --log-enable-console Enable log to console
+</span></span><span style="display:flex;"><span>      --log-format string Set the log format <span style="color:#ce5c00;font-weight:bold">(</span>json or text<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">(</span>default <span style="color:#4e9a06">&#34;json&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>      --log-level string Set the log level <span style="color:#ce5c00;font-weight:bold">(</span>debug, info, warn, error, fatal<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">(</span>default <span style="color:#4e9a06">&#34;info&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span></code></pre></div><p>The following sections provide an in-depth explanation of each parameter.</p>
+<h2 id="parameter-descriptions">Parameter Descriptions<a class="td-heading-self-link" href="#parameter-descriptions" aria-label="Heading self-link"></a></h2>
 <h3 id="--help"><code>--help</code><a class="td-heading-self-link" href="#--help" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>--help</code> provides command line usage help.</p>
+<p>The <code>--help</code> flag displays usage information for the command line interface, providing an overview of available commands and flags.</p>
 <h3 id="-f---features"><code>-f, --features</code><a class="td-heading-self-link" href="#-f---features" aria-label="Heading self-link"></a></h3>
-<p>The parameters <code>-f, --features</code> indicate the features started by the cluster optimization platform, where <code>APIServer</code> means only providing API services, and <code>Optimizer</code> means starting the optimizer features.</p>
-<p>The default value is <code>APIServer,Optimizer</code>, which means that the automatic expansion and contraction features and the virtual capacity feature are enabled at the same time.</p>
+<p>The <code>-f</code>, <code>--features</code> flags specify which features of the <strong>Cluster Optimizer</strong> should be activated. The available features are <code>APIServer</code>, which enables only the API services, and <code>Optimizer</code>, which activates the optimization functionalities. By default, both <code>APIServer</code> and <code>Optimizer</code> are enabled, allowing for both automatic scaling features and virtual capacity management.</p>
 <h3 id="--config"><code>--config</code><a class="td-heading-self-link" href="#--config" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>--config</code> indicates the configuration file path used by the cluster optimization platform. For its configuration, please refer to <a href="/docs/configuration/conf/">Configuration File</a></p>
+<p>The <code>--config</code> parameter specifies the path to the configuration file used by the cluster optimization platform. For details on configuring this file, refer to the <a href="/docs/configuration/conf/">Configuration File</a> documentation.</p>
 <h3 id="--log-enable-color"><code>--log-enable-color</code><a class="td-heading-self-link" href="#--log-enable-color" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>--log-enable-color</code> indicates whether to enable the color attribute in the log. In the console interface, enabling this feature can improve readability. The default value is <code>false</code>.</p>
+<p>The <code>--log-enable-color</code> flag determines whether to enable color coding in log outputs. Enabling this option can enhance log readability in console interfaces. The default value is <code>false</code>, meaning color is not enabled by default.</p>
 <h3 id="--log-enable-console"><code>--log-enable-console</code><a class="td-heading-self-link" href="#--log-enable-console" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>--log-enable-console</code> indicates whether to enable the console log. The console log can be easily accessed through the <code>kubectl log</code> command. The default value is <code>false</code>.</p>
+<p>The <code>--log-enable-console</code> flag enables logging to the console, which can be particularly useful when logs are accessed via the kubectl log command. The default setting is <code>false</code>, indicating that console logging is disabled by default.</p>
 <h3 id="--log-format"><code>--log-format</code><a class="td-heading-self-link" href="#--log-format" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>--log-format</code> is used to set the log format. The available log format is <code>json</code> or <code>text</code>. The default value is <code>json</code>.</p>
+<p>The <code>--log-format</code> flag sets the format for log output. The available formats are <code>json</code> and <code>text</code>, with <code>json</code> being the default format. This parameter allows users to tailor the log output format to their needs.</p>
 <h3 id="--log-level"><code>--log-level</code><a class="td-heading-self-link" href="#--log-level" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>--log-level</code> is used to set the log level. Optional values ​​include <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>fatal</code>. The default value is <code>info</code>.</p>
+<p>The <code>--log-level</code> parameter defines the verbosity of log outputs. The possible values are <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, and <code>fatal</code>, with <code>info</code> being the default setting. This allows users to control the level of detail provided in the logs.</p>
 
 </div>
 </div>
@@ -234,8 +242,8 @@ Global Flags:
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

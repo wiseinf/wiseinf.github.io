@@ -67,6 +67,16 @@
     mix-blend-mode: multiply
 }
 
+.double-strike {
+    color: red;
+    text-decoration: line-through;
+    text-decoration-style: double;
+  }
+
+.pricing-table-subtitle {
+    color: red;
+}
+
 @supports (-ms-ime-align: auto) {
     .pricing-table-inner::before {
         box-shadow: 0 16px 48px rgba(31, 43, 53, 0.12)

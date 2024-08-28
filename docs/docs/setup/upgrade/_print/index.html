@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/setup/upgrade/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/setup/upgrade/index.xml">
+<link rel="canonical" type="text/html" href="/docs/setup/upgrade/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/setup/upgrade/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -19,30 +19,30 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Install the commercial version | Cluster Optimizer</title>
-<meta name="description" content="Describes detailed steps for installing the commercial version.
+<title>Upgrading to the commercial version | Cluster Optimizer</title>
+<meta name="description" content="Describes detailed instructions on upgrading the cluster optimizer to the commercial version.
 ">
-<meta property="og:url" content="//localhost:1313/docs/setup/upgrade/">
+<meta property="og:url" content="/docs/setup/upgrade/">
   <meta property="og:site_name" content="Cluster Optimizer">
-  <meta property="og:title" content="Install the commercial version">
-  <meta property="og:description" content="Describes detailed steps for installing the commercial version.">
+  <meta property="og:title" content="Upgrading to the commercial version">
+  <meta property="og:description" content="Describes detailed instructions on upgrading the cluster optimizer to the commercial version.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Install the commercial version">
-  <meta itemprop="description" content="Describes detailed steps for installing the commercial version.">
-  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
-  <meta itemprop="wordCount" content="657">
+  <meta itemprop="name" content="Upgrading to the commercial version">
+  <meta itemprop="description" content="Describes detailed instructions on upgrading the cluster optimizer to the commercial version.">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="898">
   <meta itemprop="keywords" content="Cluster Optimizer">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Install the commercial version">
-  <meta name="twitter:description" content="Describes detailed steps for installing the commercial version.">
+  <meta name="twitter:title" content="Upgrading to the commercial version">
+  <meta name="twitter:description" content="Describes detailed instructions on upgrading the cluster optimizer to the commercial version.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -111,8 +120,8 @@ This is the multi-page printable view of this section.
 
 
 
-<h1 class="title">Install the commercial version</h1>
-<div class="lead">Describes detailed steps for installing the commercial version.</div>
+<h1 class="title">Upgrading to the commercial version</h1>
+<div class="lead">Describes detailed instructions on upgrading the cluster optimizer to the commercial version.</div>
 
 
 
@@ -133,100 +142,183 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>This page describes detailed steps for installing the commercial version.</p>
+<p>This page provides a comprehensive guide on upgrading the cluster optimizer to the commercial version.</p>
 
 </div>
 
 <h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
 <ul>
-<li>The community version of the cluster optimization platform has been deployed. For specific installation steps, please refer to [Installation via Kubectl] (/docs/setup/setup-using-kubectl/) and [Installation via Helm] (/docs/setup/setup-using-helm/).</li>
-<li>To obtain commercial version authorization, you can obtain authorization through the company&rsquo;s official website or email [Contact Us] (mailto: <a href="mailto:business@wiseinf.com">business@wiseinf.com</a>).</li>
+<li>The community version of the <strong>Cluster Optimizer</strong> has been successfully deployed. For detailed installation instructions, please refer to [Installation via Kubectl] (/docs/setup/setup-using-kubectl/) or [Installation via Helm] (/docs/setup/setup-using-helm/).</li>
 </ul>
 <h2 id="configure-user-database">Configure user database<a class="td-heading-self-link" href="#configure-user-database" aria-label="Heading self-link"></a></h2>
-<ol>
+<ul>
 <li>
-<p>Open the command line console and clone the installation script to the local computer through the following command.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
-</span></span></code></pre></div><blockquote>
-<ol>
-<li>
-<p>If you use the Gitee warehouse address, you need to replace <code>https://github.com/wiseinf/setup.git</code> in the above command with <code>https://gitee.com/wiseinf/setup.git</code>.</p>
-</li>
-<li>
-<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it has not been cloned to the user&rsquo;s home directory, the file path in the command needs to be adjusted according to the actual situation.</p>
-</li>
-</ol>
-</blockquote>
-</li>
-<li>
-<p>Adjust the database information in the <strong>Cluster Optimizer</strong> configuration file. Edit <strong>ConfigMap</strong> <code>optimizer-conf</code> in the file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code> and add the following configuration items.</p>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>kubectl</code>, you can modify the <strong>ConfigMap</strong> <code>optimizer-conf</code> within the <strong>Cluster Optimizer</strong> configuration file located at <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code> to include the following configuration items.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">dataSource</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;root:optimizer@tcp(optimizer-mysql:3306)/user?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;parseTime=true&amp;loc=Local&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">maxOpenConns</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span></code></pre></div></li>
-</ol>
-<h2 id="configure-commercial-license">Configure commercial license<a class="td-heading-self-link" href="#configure-commercial-license" aria-label="Heading self-link"></a></h2>
-<ol>
 <li>
-<p>Adjust the database information in the <strong>Cluster Optimizer</strong> configuration file. Edit <strong>ConfigMap</strong><code>optimizer-conf</code> in the file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code> and add the following configuration items.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">license</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">certificate</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{<span style="color:#000">obtained authorization certificate}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">signature</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{<span style="color:#000">obtained authorized signature}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div></li>
-<li>
-<p>Deploy <code>Deployment</code> <code>optimizer</code> through the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
-</span></span></code></pre></div><blockquote>
-<p>Note:</p>
-<ol>
-<li>If the Pod of <code>Deployment</code> <code>optimizer</code> has not been restarted, please use <code>kubectl delete pod -l app=optimizer -n wiseinf-system</code> to delete the Pod of <code>Deployment</code> <code>optimizer</code> and then re-create it. `</li>
-<li>If you want to use a deployed database, please refer to [Use Deployed Database](#Use Deployed Database).</li>
-</ol>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>helm</code>, you can modify the <code>helm</code>&rsquo;s <code>values.yaml</code> file to include the following configuration items.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">optimizedb</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">user</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">root</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">maxOpenConns</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div><blockquote>
+<p><strong>Note</strong>: For instructions on utilizing a deployed database, please refer to the section <a href="/docs/setup/upgrade/#using-a-deployed-database">Using a Deployed Database</a>.</p>
 </blockquote>
 </li>
+</ul>
+<h2 id="configure-license">Configure license<a class="td-heading-self-link" href="#configure-license" aria-label="Heading self-link"></a></h2>
+<h3 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h3>
+<p>There are two methods to obtain a license:</p>
+<ol>
+<li>Online subscription.</li>
+<li>License acquisition via email.</li>
+</ol>
+<p>The recommended approach is <code>online subscription</code>.</p>
+<h3 id="online-subscription">Online subscription<a class="td-heading-self-link" href="#online-subscription" aria-label="Heading self-link"></a></h3>
+<ol>
 <li>
-<p>Check the log output and confirm that the Pod status of <code>Deployment</code> <code>optimizer</code> is <code>Running</code>.</p>
+<p>Visit the <a href="https://portal.wiseinf.com/subscribe">subscription page</a> of <strong>Cluster Optimizer</strong>.</p>
+</li>
+<li>
+<p>Login in to the subscription page.</p>
+</li>
+<li>
+<p>Select the subscription type, enter the number of nodes and complete the payment.</p>
+</li>
+<li>
+<p>After a successful, visit the <a href="https://portal.wiseinf.com/"><strong>Portal</strong></a> to manage subscription.</p>
+</li>
+<li>
+<p>Navigate to the <code>Access Key</code> page in the [<strong>Portal</strong>] and click <code>Generate</code> button to create an access key.</p>
+</li>
+<li>
+<p>Configure the <code>accessKeyId</code> and <code>accessKeySecret</code>.</p>
+<ol>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>kubectl</code>, you can modify <strong>ConfigMap</strong><code>optimizer-conf</code> in the <strong>Cluster Optimizer</strong> configuration file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code> to include the following configuration items.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">license</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">accessKeyId</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  </span>{<span style="color:#000">accessKeyId generated in above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">accessKeySecret</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{<span style="color:#000">accessKeySecret generated in above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>helm</code>, you can modify <code>helm</code>&rsquo;s <code>values.yaml</code> file to include the following configuration items.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">license</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">accessKeyId</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  </span>{<span style="color:#000">accessKeyId generated in above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">accessKeySecret</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{<span style="color:#000">accessKeySecret generated in above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Redeploy <code>optimizer</code> <code>Deployment</code>.</p>
+<ol>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>kubectl</code>, execute the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
+</span></span></code></pre></div></li>
+<li>
+<p>If the c<strong>Cluster Optimizer</strong> is deployed using <code>helm</code>, execute the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm upgrade demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
+</span></span></code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Review the log output and verify that the pod status for the <code>optimizer</code> deployment is <code>Running</code>.</p>
+</li>
+</ol>
+<h3 id="license-acquisition-via-email">License acquisition via email<a class="td-heading-self-link" href="#license-acquisition-via-email" aria-label="Heading self-link"></a></h3>
+<ol>
+<li>
+<p>You can obtain a license by contacting us via email at <a href="mailto:business@wiseinf.com">Contact Us</a>. After your payment, the license information, including a <code>certificate</code> and a <code>signature</code>, will be sent to your email.”
+```</p>
+</li>
+<li>
+<p>Configure the <code>certificate</code> and <code>signature</code>.</p>
+<ol>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>kubectl</code>, you can modify <strong>ConfigMap</strong><code>optimizer-conf</code> in the <strong>Cluster Optimizer</strong> configuration file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code> to include the following configuration items.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">license</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">certificate</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  </span>{<span style="color:#000">signature from above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">signature</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{<span style="color:#000">signature from above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>helm</code>, you can modify <code>helm</code>&rsquo;s <code>values.yaml</code> file to include the following configuration items.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">license</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">certificate</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  </span>{<span style="color:#000">signature from above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">signature</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{<span style="color:#000">signature from above step}</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Redeploy <code>optimizer</code> <code>Deployment</code>.</p>
+<ol>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>kubectl</code>, execute the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
+</span></span></code></pre></div></li>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>helm</code>, execute the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm upgrade demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
+</span></span></code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Review the log output and verify that the pod status for the <code>optimizer</code> deployment is <code>Running</code>.</p>
 </li>
 </ol>
 <h2 id="system-initialization">System initialization<a class="td-heading-self-link" href="#system-initialization" aria-label="Heading self-link"></a></h2>
 <ol>
-<li>
-<p>Open the browser and visit the address <code>http://localhost:8000/init</code> to access the initialization page of the commercial version. Enter the user name, password, email, mobile phone number and other information on the page, and click the <code>OK</code> button to complete the system initialization.</p>
-</li>
-<li>
-<p>Visit the address <code>http://localhost:8000/user/login</code>, enter the user name and password to log in to the system.</p>
-</li>
-<li>
-<p>At this point, you have upgraded the system to the commercial version.</p>
-</li>
+<li>Open your browser and navigate to <code>http://localhost:8000/init</code> to access the initialization page for the commercial version. Enter your username, password, email, mobile number, and other required information, then click the <code>OK</code> button to complete the system initialization.</li>
+<li>Go to <code>http://localhost:8000/user/login</code>, and log in with your username and password.</li>
+<li>Your system has now been successfully upgraded to the commercial version.</li>
 </ol>
-<h2 id="use-deployed-database">Use deployed database<a class="td-heading-self-link" href="#use-deployed-database" aria-label="Heading self-link"></a></h2>
-<p>If you want to use the deployed user database and use a new username and password to access <strong>Cluster Optimizer</strong>, please refer to the following steps:</p>
+<h2 id="using-a-deployed-database">Using a deployed database<a class="td-heading-self-link" href="#using-a-deployed-database" aria-label="Heading self-link"></a></h2>
+<p>If you want to use the deployed user database with a new username and password for accessing from the <strong>Cluster Optimizer</strong>, follow these steps:</p>
 <ol>
 <li>
-<p>Execute the <code>mysql</code> command on the command line console to log in to the Mysql database. <code>127.0.0.1</code> is the Mysql database host address. You need to replace it with the actual address you use.</p>
+<p>Open your command line interface and use the <code>mysql</code> command to connect to the MySQL database. Replace <code>127.0.0.1</code> with your actual MySQL database host address.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
 </span></span></code></pre></div><blockquote>
-<p>Note: If you use a remote database, make sure the database is accessible from the Kubernetes cluster.</p>
+<p>Note: Ensure that the database is accessible from the Kubernetes cluster if you are using a remote database.</p>
 </blockquote>
 </li>
 <li>
-<p>Create database schema <code>user</code> (user library).</p>
+<p>Create the <code>user</code> database schema.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user_database.sql
 </span></span></code></pre></div><blockquote>
-<p>Note: Please be aware of the risk of data loss. If the <code>user</code> library already exists in the mysql database, the above script will first delete the library and then create a new library.</p>
+<p>Note: This script will delete the existing user database if it exists and create a new one. Proceed with caution to avoid data loss.</p>
 </blockquote>
 </li>
 <li>
-<p>Create a new username and password, and set corresponding permissions for them. The username in the script is <code>optimizer</code> and the password is <code>Optimizer~</code>. You can adjust it according to your needs.</p>
+<p>Create a new username and password, and assign the appropriate permissions. The default username and password in the script are <code>optimizer</code> and <code>Optimizer~</code>, respectively. Adjust these as needed.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user_user.sql
 </span></span></code></pre></div></li>
 <li>
-<p>Adjust the database information in the <strong>Cluster Optimizer</strong> configuration file. Edit the <strong>ConfigMap</strong><code>optimizer-conf</code> in the file <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code> and change the user name and user name in the <code>dataSource.name</code> value under the configuration item <code>user</code> The password, database address and port are adjusted to the corresponding information of the Mysql database.</p>
+<p>Update the <strong>Cluster Optimizer</strong> configuration file with the new database details.</p>
+<ol>
+<li>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>kubectl</code>, edit the  <code>optimizer-conf</code> ConfigMap within <code>~/setup/cluster-optimizer/yaml/optimizer.yaml</code>, and modify the <code>dataSource.name</code> value under the user configuration item with the new username, password, database address, and port.</p>
 </li>
 <li>
-<p>Restart the application and check the log output of <strong>Cluster Optimizer</strong> (as shown below) to see whether the database configuration information is consistent with your expectations.</p>
+<p>If the <strong>Cluster Optimizer</strong> is deployed using <code>helm</code>, edit the <code>values.yaml</code> file and modify the <code>dataSource.name</code> value under the user configuration item with the new username, password, database address, and port.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">optimizedb</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#8f5902;font-style:italic"># Database address for configuration schema</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optconf        </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># Database schema for configuration</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">3306</span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#8f5902;font-style:italic"># Database port</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer        </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># Username for database access</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~   </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># Password for database access</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Restart the application and review the log output of <strong>Cluster Optimizer</strong> to verify that the database configuration matches your expectations.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -237,11 +329,11 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>At the same time, also check whether there are any database-related errors. If there are no related errors, it proves that a new database has been used.</p>
+</span></span></code></pre></div><p>Additionally, check for any database-related errors in the logs. The absence of errors indicates that the new database configuration is successfully applied.</p>
 </li>
 </ol>
 <h2 id="next-step-import-the-cluster">Next step: Import the cluster<a class="td-heading-self-link" href="#next-step-import-the-cluster" aria-label="Heading self-link"></a></h2>
-<p>Next, you can add a cluster and view its related optimization recommendations. For details, see:</p>
+<p>Next, you can add a cluster and review its associated optimization recommendations. For more details, refer to:</p>
 <ul>
 <li><a href="/docs/user-guide/import-cluster/import-aws/">Import AWS EKS cluster</a></li>
 <li><a href="/docs/user-guide/import-cluster/import-alibaba/">Import Alibaba Cloud Cluster</a></li>
@@ -310,8 +402,8 @@ This is the multi-page printable view of this section.
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

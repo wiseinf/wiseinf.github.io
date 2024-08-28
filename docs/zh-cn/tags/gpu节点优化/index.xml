@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – GPU节点优化</title>
-    <link>//localhost:1313/zh-cn/tags/gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/</link>
+    <link>/zh-cn/tags/gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/</link>
     <description>Recent content in GPU节点优化 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/tags/gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/tags/gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: GPU节点优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/gpunode/</link>
+      <link>/zh-cn/docs/user-guide/gpunode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/gpunode/</guid>
+      <guid>/zh-cn/docs/user-guide/gpunode/</guid>
       <description>
         
         
@@ -33,7 +33,7 @@
 &lt;h2 id=&#34;查看gpu节点信息&#34;&gt;查看GPU节点信息&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8bgpu%e8%8a%82%e7%82%b9%e4%bf%a1%e6%81%af&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;GPU节点&lt;/code&gt;菜单，则显示GPU节点页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/node1_hu11de7fa6f5792bee46eecd0ff2d6fe59_62611_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;330&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/gpunode/node1_hu11de7fa6f5792bee46eecd0ff2d6fe59_62611_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;330&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -52,7 +52,7 @@ GPU节点
 &lt;/ol&gt;
 &lt;p&gt;选择集群后，GPU节点列表区将显示该集群下满足条件的GPU节点列表，如下所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/node2_hu8a8870711849f61c2b876059e82bf749_108493_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;379&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/gpunode/node2_hu8a8870711849f61c2b876059e82bf749_108493_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;379&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -75,7 +75,7 @@ Node: cluster selected
 &lt;h2 id=&#34;调整节点&#34;&gt;调整节点&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击&lt;strong&gt;操作栏&lt;/strong&gt;中的&lt;code&gt;调整&lt;/code&gt;链接可打开调整节点对话框，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/node3_huaea085118e52e157dc1080a518bf0044_82621_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;385&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/gpunode/node3_huaea085118e52e157dc1080a518bf0044_82621_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;385&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

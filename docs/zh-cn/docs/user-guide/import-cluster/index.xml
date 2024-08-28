@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 导入集群</title>
-    <link>//localhost:1313/zh-cn/docs/user-guide/import-cluster/</link>
+    <link>/zh-cn/docs/user-guide/import-cluster/</link>
     <description>Recent content in 导入集群 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/docs/user-guide/import-cluster/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/docs/user-guide/import-cluster/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 导入阿里云集群</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/</link>
+      <link>/zh-cn/docs/user-guide/import-cluster/import-alibaba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/</guid>
+      <guid>/zh-cn/docs/user-guide/import-cluster/import-alibaba/</guid>
       <description>
         
         
@@ -199,7 +199,7 @@
 &lt;li&gt;
 &lt;p&gt;选择&lt;code&gt;设置&lt;/code&gt;菜单，选择&lt;code&gt;云账户&lt;/code&gt;标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -214,7 +214,7 @@
 &lt;li&gt;
 &lt;p&gt;在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp02_hued1b873e3939167d1f90bbc9956d703f_88202_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp02_hued1b873e3939167d1f90bbc9956d703f_88202_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -232,7 +232,7 @@
 &lt;li&gt;
 &lt;p&gt;选择&lt;code&gt;设置&lt;/code&gt;菜单，选择集群标签进入集群管理页面。默认情况下，该页面将分页展示平台管理的所有集群，包括名称、集群ID集群地域、Access Token名称，对应的云服务商以及Prometheus地址，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -257,7 +257,7 @@
 &lt;li&gt;
 &lt;p&gt;设置阿里云访问凭据界面如下图所示。在阿里云访问凭据界面，通过使用已有凭据来设置阿里云访问凭据，此处选择&lt;code&gt;添加阿里云账号&lt;/code&gt;中添加的阿里云账号，如下图所示。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -272,7 +272,7 @@
 &lt;li&gt;
 &lt;p&gt;设置完阿里云访问凭据后，点击下一步按钮，即可进入连接Kubernetes集群页面，如下图所示。平台支持连接2种类型的Kubernetes集群，包括托管集群和自建集群。连接托管集群页面如下图所示。此处我们选择托管集群，平台通过云账户自动获取用户集群，用户通过集群下拉框来选择相应的集群、输入描述字段、选择是否使用API Server私网地址、选择是否自动刷新KubeConfig以及KubeConfig生命周期，最后输入节点组标签即可。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -287,7 +287,7 @@
 &lt;li&gt;
 &lt;p&gt;连接Prometheus页面如下图所示。用户在此页面输入信息后，点击下一步按钮进入查看配置页面。输入信息明细如下表所示。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -337,7 +337,7 @@
 &lt;li&gt;
 &lt;p&gt;查看配置页面如下图所示，该页面显示了阿里云访问凭据、连接Kubernetes集群和连接Prometheus集群的详细参数，方便用户确认。当用户完成确认后，点击导入按钮，即可进入完成页面。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;598&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;598&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -352,7 +352,7 @@
 &lt;li&gt;
 &lt;p&gt;完成页面如图下图所示，页面将显示提交情况。点击完成，即完成集群导入。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -368,12 +368,12 @@
 &lt;h2 id=&#34;下一步操作&#34;&gt;下一步操作&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e6%93%8d%e4%bd%9c&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;导入集群完成后，等待一段时间（等待优化策略完成调度和执行），即可查看该集群多个维度的优化建议，包括：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -381,10 +381,10 @@
     
     <item>
       <title>Docs: 导入AWS EKS集群</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/</link>
+      <link>/zh-cn/docs/user-guide/import-cluster/import-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/</guid>
+      <guid>/zh-cn/docs/user-guide/import-cluster/import-aws/</guid>
       <description>
         
         
@@ -490,7 +490,7 @@
 &lt;li&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 云账号&lt;/code&gt;进入云账号管理页面，如下图。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -505,7 +505,7 @@
 &lt;li&gt;
 &lt;p&gt;单击&lt;code&gt;新增&lt;/code&gt;按钮添加云帐户。 可以输入&lt;code&gt;名称&lt;/code&gt;，选择&lt;code&gt;Amazon AWS&lt;/code&gt;作为&lt;code&gt;云提供商&lt;/code&gt;，然后输入&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;，最后单击&lt;code&gt;确认&lt;/code&gt;。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;350&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;350&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -526,7 +526,7 @@
 &lt;li&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 集群&lt;/code&gt;进入集群管理页面，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -551,7 +551,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;连接AWS&lt;/code&gt;步骤中，选择&lt;code&gt;使用已有凭据&lt;/code&gt;，选择&lt;code&gt;添加云帐户&lt;/code&gt;部分中创建的云帐户，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;276&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;276&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -567,7 +567,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;连接kubernetes&lt;/code&gt;步骤中，选择&lt;code&gt;Managed cluster&lt;/code&gt;，如下图。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -651,7 +651,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;447&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;447&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -667,7 +667,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;查看配置&lt;/code&gt;步骤中，显示连接AWS、连接Kubernetes、连接Metrics服务的配置。您可以检查配置是否符合预期。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;600&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;600&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -683,7 +683,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;完成&lt;/code&gt;步骤中，会显示提交状态，如下图。 当提交状态显示集群已导入时，您可以点击&lt;code&gt;完成&lt;/code&gt;按钮。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;599&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;599&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -699,12 +699,12 @@
 &lt;h2 id=&#34;下一步&#34;&gt;下一步&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;导入集群后，您可以查看集群多个方面的优化建议，包括：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

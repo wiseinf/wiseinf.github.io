@@ -1,167 +1,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Node Group Optimization</title>
-    <link>//localhost:1313/tags/node-group-optimization/</link>
+    <link>/tags/node-group-optimization/</link>
     <description>Recent content in Node Group Optimization on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/tags/node-group-optimization/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/tags/node-group-optimization/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
-    
-    <item>
-      <title>Docs: Cluster</title>
-      <link>//localhost:1313/docs/user-guide/cluster/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/user-guide/cluster/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;View connected clusters in the platform.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&#34;view-cluster&#34;&gt;View cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click &lt;code&gt;Cluster&lt;/code&gt; on the left menu bar of the platform to display the cluster overview page, as shown in the figure below.&lt;/p&gt;
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/overview_hu412a39f91c157a1ac904bdf2cb862fb5_121350_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;440&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-
-Cluster overview page
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The main display area will display the list of clusters managed by the platform. Including cluster (cluster name and cluster ID), cluster region, Access Token name, cloud service provider, Prometheus address, health status and other information.&lt;/p&gt;
-&lt;p&gt;In the commercial version, additional cluster status and operation bars are provided, as shown in the following figure:&lt;/p&gt;
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/cluster-biz_hu824e5aa7d52d886fb6d8746936cec905_190264_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-
-Cluster Overview Page: Commercial Edition
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Cluster status displays the corresponding status of the cluster to users, making it easier for users to understand the cluster status. Mainly include:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Running: The cluster is running normally.&lt;/li&gt;
-&lt;li&gt;Sleeping: The cluster is entering sleep state.&lt;/li&gt;
-&lt;li&gt;Hibernate: The cluster has hibernated. In the dormant state, the cluster has released corresponding node resources, and the cluster usage is limited at this time.&lt;/li&gt;
-&lt;li&gt;Waking up: The cluster is transitioning to the running state.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In the cluster operation column, users can operate the cluster, including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set cluster hibernation
-*Hibernate immediately&lt;/li&gt;
-&lt;li&gt;Wake up immediately&lt;/li&gt;
-&lt;li&gt;log&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;set-cluster-hibernation&#34;&gt;Set cluster hibernation&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#set-cluster-hibernation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Cluster hibernation reduces cluster resource usage and saves costs by properly managing the nodes in the cluster. Assume that the cluster starts sleeping at 9 pm from Monday to Friday and wakes up at 8 am from Monday to Friday (that is, ending hibernation). The machine cost savings can be as high as 54.8%. Setting cluster hibernation allows you to set the &lt;strong&gt;sleep time&lt;/strong&gt; and &lt;strong&gt;wakeup time&lt;/strong&gt; of the cluster. During the sleep time, the status of the load in the cluster is stored, and the node resources in the cluster are gradually released. During the wake-up time, the system gradually restores the node resources in the cluster and restores the original state of the load. Cluster hibernation is especially suitable for offline environments such as development and testing.&lt;/p&gt;
-&lt;p&gt;Click Set Cluster Hibernation in the operation bar, and the dialog box will pop up as shown below:&lt;/p&gt;
-&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/set-hibernate-schedule_hu47036cfb09e157008cbc736129a941bd_109510_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;298&#34;&gt;
-&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-&lt;p class=&#34;card-text&#34;&gt;
-
-
-Set cluster hibernation
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Select &lt;code&gt;Enable&lt;/code&gt; in the &lt;code&gt;Whether to enable sleep&lt;/code&gt; option, then set the specific &lt;code&gt;sleep time&lt;/code&gt; and &lt;code&gt;wake up time&lt;/code&gt;, and click the &lt;code&gt;OK&lt;/code&gt; button. The default sleep time is 9pm from Monday to Friday, and the default wake-up time is 8am from Monday to Friday.&lt;/p&gt;
-&lt;p&gt;If you want to cancel cluster hibernation, select &lt;code&gt;Disable&lt;/code&gt; in the &lt;code&gt;Whether to enable hibernation&lt;/code&gt; option and click the &lt;code&gt;OK&lt;/code&gt; button.&lt;/p&gt;
-&lt;p&gt;When the cluster is dormant, the cluster access account provided by the user will be used to operate the cluster. You need to set up a cluster access account. For details, please see &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note: The interval between &lt;code&gt;sleep time&lt;/code&gt; and &lt;code&gt;wake up time&lt;/code&gt; must be greater than 2 hours.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;hibernate-now&#34;&gt;Hibernate now&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#hibernate-now&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Move the mouse to &lt;code&gt;...&lt;/code&gt; and click the &lt;code&gt;Hibernate Now&lt;/code&gt; button to hibernate the cluster immediately.&lt;/p&gt;
-&lt;h2 id=&#34;wake-up-immediately&#34;&gt;Wake up immediately&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#wake-up-immediately&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Move the mouse to &lt;code&gt;...&lt;/code&gt; and click the &lt;code&gt;Wake Up Now&lt;/code&gt; button to wake up the cluster immediately.&lt;/p&gt;
-&lt;h2 id=&#34;log&#34;&gt;log&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#log&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Move the mouse to &lt;code&gt;...&lt;/code&gt; and click the &lt;code&gt;Log&lt;/code&gt; button to view logs related to cluster sleep or wake-up.&lt;/p&gt;
-
-      </description>
-    </item>
     
     <item>
       <title>Docs: Node Group</title>
-      <link>//localhost:1313/docs/user-guide/nodegroup/</link>
+      <link>/docs/user-guide/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/nodegroup/</guid>
+      <guid>/docs/user-guide/nodegroup/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes the node group optimization operations provided by the one-stop cloud native cluster optimization platform (Cluster Optimizer).&lt;/p&gt;
+&lt;p&gt;This section describes node group information and provides optimization suggestions.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;h2 id=&#34;view-node-group&#34;&gt;View node group&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-node-group&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click the &lt;code&gt;Node Group&lt;/code&gt; menu on the left menu bar of the platform to display the node group page, as shown in the figure below. The node group page is divided into 3 areas:&lt;/p&gt;
+&lt;h2 id=&#34;view-node-groups&#34;&gt;View Node Groups&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-node-groups&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Node Group&lt;/code&gt; menu on the platform’s left navigation bar to access the Node Group page, as shown below. The Node Group page is organized into three main sections:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Cluster selection area&lt;/strong&gt;: Select the corresponding cluster.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Query area&lt;/strong&gt;: List items can be filtered based on owner-related information, node group name, node group ID, etc.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;List area&lt;/strong&gt;: Displays the information of the node group, its current settings and optimization settings.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Selection Area&lt;/strong&gt;: Choose the relevant cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Query Area&lt;/strong&gt;: Filter items based on owner information, node group name, node group ID, and other criteria.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List Area&lt;/strong&gt;: Displays node group information, current settings, and optimization settings.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
 
-Node group page
+`Node Group` Page
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;After the user selects a specific cluster, the list area is divided into 5 columns:&lt;/p&gt;
+&lt;p&gt;After selecting a specific cluster, the &lt;strong&gt;List Area&lt;/strong&gt; is divided into five columns:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Node group column&lt;/strong&gt;: Displays the node group name and node group ID.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Owner Column&lt;/strong&gt;: Displays the department, group and specific personnel of the node owner.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Current Settings Column&lt;/strong&gt;: Displays the current instance type of the node group, whether to automatically expand or shrink, the minimum number of nodes, and the maximum number of nodes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Optimization Settings Column&lt;/strong&gt;: Displays the node group instance types intelligently recommended by the platform, whether to enable expansion and contraction, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Operation Bar&lt;/strong&gt;: Displays the corresponding operations on the node group. ,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node Group&lt;/strong&gt;: Displays the node group name and node group ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: Displays the department, group, and specific personnel responsible for the node group.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current Settings&lt;/strong&gt;: Shows the current instance type of the node group, auto-scaling status, minimum number of nodes, and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization Settings&lt;/strong&gt;: Displays the platform’s intelligent recommendations for node group instance types, auto-scaling status, and the recommended minimum and maximum number of nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: Provides available actions for the node group.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
 
-Node group page-after selecting the cluster
+Node Group Page - After selecting the cluster
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust node group&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node-group&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the picture above to open the Adjust Node Group dialog box, as shown in the picture below.&lt;/p&gt;
+&lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust Node Group&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node-group&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the image above to open the Adjust Node Group dialog box, as illustrated below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -173,7 +84,7 @@ Adjust Node Group Dialog
 &lt;/figure&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Note: Currently only operations related to adjusting node groups are displayed. Automated actions will be provided in the future, and adjustments can be made automatically after the user confirms the settings.&lt;/p&gt;
+&lt;p&gt;Note: Currently, only manual operations for adjusting node groups are available. Automated actions will be introduced in the future, allowing for automatic adjustments once the user confirms the settings.&lt;/p&gt;
 &lt;/blockquote&gt;
 
       </description>

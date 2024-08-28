@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Persistent Volume</title>
-    <link>//localhost:1313/docs/user-guide/pv/</link>
+    <link>/docs/user-guide/pv/</link>
     <description>Recent content in Persistent Volume on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/docs/user-guide/pv/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/user-guide/pv/index.xml" rel="self" type="application/rss+xml" />
     
     
       

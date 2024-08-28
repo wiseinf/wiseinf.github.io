@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Cluster Access Account</title>
-    <link>//localhost:1313/tags/cluster-access-account/</link>
+    <link>/tags/cluster-access-account/</link>
     <description>Recent content in Cluster Access Account on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/tags/cluster-access-account/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/tags/cluster-access-account/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,40 +16,44 @@
     
     <item>
       <title>Docs: Cluster Access Account</title>
-      <link>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</link>
+      <link>/docs/user-guide/personal-settings/clusteraccessaccount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
+      <guid>/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
       <description>
         
         
         
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Describes operations related to managing personal cluster access accounts.&lt;/p&gt;
+&lt;p&gt;This section describes operations related to managing personal cluster access accounts.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#preconditions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Available only in commercial version.&lt;/li&gt;
+&lt;li&gt;The features described are available only in the commercial version.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;view-cluster-access-account&#34;&gt;View cluster access account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click on the user avatar in the top left navigation bar, as shown below. Click &lt;code&gt;Personal Settings&lt;/code&gt; on the expanded menu to enter the personal settings page.&lt;/p&gt;
-&lt;p&gt;On the personal settings page, click the &lt;code&gt;Cluster Access Account&lt;/code&gt; tab to view and manage the cluster access account, as shown in the figure below.&lt;/p&gt;
+&lt;h2 id=&#34;viewing-cluster-access-account&#34;&gt;Viewing Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#viewing-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To view and manage your cluster access account, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on your user avatar in the top left navigation bar, as shown below.&lt;/li&gt;
+&lt;li&gt;From the expanded menu, select &lt;code&gt;Personal Settings&lt;/code&gt; to access the personal settings page.&lt;/li&gt;
+&lt;li&gt;On the personal settings page, click the &lt;code&gt;Cluster Access Account&lt;/code&gt; tab to view and manage your cluster access account, as illustrated below.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;324&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;324&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
 
-Cluster access account list
+Cluster Access Account List
 &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Please see the table below for specific field names and descriptions.&lt;/p&gt;
+&lt;p&gt;The table below provides detailed descriptions of the fields available in this section:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -60,38 +64,40 @@ Cluster access account list
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Cluster ID&lt;/td&gt;
-&lt;td&gt;User name, required&lt;/td&gt;
+&lt;td&gt;The unique identifier for the cluster.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Cloud service provider access account&lt;/td&gt;
-&lt;td&gt;User last name, required&lt;/td&gt;
+&lt;td&gt;Cloud Provider Access Account&lt;/td&gt;
+&lt;td&gt;The account used to access the cloud service provider.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Kubeconfig&lt;/td&gt;
-&lt;td&gt;User email address, required&lt;/td&gt;
+&lt;td&gt;Configuration file containing credentials for accessing the Kubernetes cluster.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Operation&lt;/td&gt;
-&lt;td&gt;Display user operations&lt;/td&gt;
+&lt;td&gt;Action&lt;/td&gt;
+&lt;td&gt;Actions available for managing the cluster access account.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Enter the corresponding information according to the field name and click the &lt;code&gt;OK&lt;/code&gt; button to modify the personal information.&lt;/p&gt;
-&lt;h2 id=&#34;add-cluster-access-account&#34;&gt;Add cluster access account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#add-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the cluster access account management page, and the Add Cluster Access Account dialog box will pop up, as shown below.&lt;/p&gt;
+&lt;h2 id=&#34;adding-a-cluster-access-account&#34;&gt;Adding a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adding-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To add a new cluster access account:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the &lt;code&gt;Cluster Access Account&lt;/code&gt; management page. The Add Cluster Access Account dialog box will appear, as shown below.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;372&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;372&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
 
-Add Cluster Access Account Dialog Box
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+  Add Cluster Access Account Dialog Box
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Please see the table below for specific field names and descriptions.&lt;/p&gt;
+&lt;p&gt;Refer to the table below for descriptions of the required fields:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -102,56 +108,71 @@ Add Cluster Access Account Dialog Box
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Cluster ID&lt;/td&gt;
-&lt;td&gt;Accessed cluster ID, required&lt;/td&gt;
+&lt;td&gt;The ID of the cluster you want to access. This field is required.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Access Key&lt;/td&gt;
-&lt;td&gt;Access key to access the cloud service provider, required&lt;/td&gt;
+&lt;td&gt;The access key for your cloud service provider. This field is required.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Access Key Secret&lt;/td&gt;
-&lt;td&gt;Access key to access the cloud service provider, required&lt;/td&gt;
+&lt;td&gt;The secret associated with your cloud service provider access key. This field is required.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Kubeconfig&lt;/td&gt;
-&lt;td&gt;Credentials for accessing Kubernetes, required&lt;/td&gt;
+&lt;td&gt;The configuration containing credentials for accessing the Kubernetes cluster. This field is required.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Enter the corresponding information according to the field name and click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Note: If you have not added a cluster, the drop-down box of the cluster ID field is empty, the system will report an error, and the cluster access account cannot be added. You can create a cluster access account after [Importing the cluster](/docs/user-guide/import-cluster/].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If no clusters have been added, the drop-down list for the Cluster ID field will be empty. In such cases, an error will occur, and the cluster access account cannot be added. Ensure that you have &lt;a href=&#34;/docs/user-guide/import-cluster/&#34;&gt;imported the cluster&lt;/a&gt; before attempting to add a cluster access account.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;update-cluster-access-account&#34;&gt;Update cluster access account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#update-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click the &lt;code&gt;Cluster Access Account&lt;/code&gt; button in the list of cluster access account management pages, and the Edit Cluster Access Account dialog box will pop up, as shown below.&lt;/p&gt;
+&lt;h2 id=&#34;updating-a-cluster-access-account&#34;&gt;Updating a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To update an existing cluster access account:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the Cluster Access Account button in the list of cluster access accounts. This will open the Edit Cluster Access Account dialog box, as shown below.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
 
-Edit Cluster Access Account Dialog Box
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+  Edit Cluster Access Account Dialog Box
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The specific field names and descriptions are the same as [Add Cluster Access Account] (#Add Cluster Access Account) and will not be repeated.&lt;/p&gt;
-&lt;h2 id=&#34;delete-cluster-access-account&#34;&gt;Delete cluster access account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#delete-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button on the cluster access account management page to delete the cluster access account.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account. The field names and descriptions are the same as those listed in the &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/#adding-a-cluster-access-account&#34;&gt;Adding a Cluster Access Account&lt;/a&gt; section.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;deleting-a-cluster-access-account&#34;&gt;Deleting a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To delete a cluster access account:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button on the Cluster Access Account management page.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
 
-Delete cluster access account
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+  Delete Cluster Access Account
+  &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Before deleting the cluster access account, a deletion confirmation dialog box will pop up. After confirmation, the deletion operation will be performed.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Before deletion, a confirmation dialog box will appear. After confirming, the account will be deleted.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Deleting a cluster access account will cause any tasks using that account to fail.&lt;/p&gt;
+&lt;/blockquote&gt;
 
       </description>
     </item>

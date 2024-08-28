@@ -1,0 +1,217 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Optimizing Application</title>
+    <link>/tags/optimizing-application/</link>
+    <description>Recent content in Optimizing Application on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/optimizing-application/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Application / Workload</title>
+      <link>/docs/user-guide/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/user-guide/app/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Review applications / workloads and providing optimization suggestions.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;review-applications--workloads&#34;&gt;Review applications / workloads&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-applications--workloads&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Click on the &lt;code&gt;Application&lt;/code&gt; menu on the left menu bar of the platform to reveal the application page, as shown  below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;352&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+application
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The application page is divided into three areas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Selection Area&lt;/strong&gt;: Select the appropriate cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Query Area&lt;/strong&gt;: Query by namespace, load name, load type, container, and policy name. The platform currently supports &lt;code&gt;resource recommendation&lt;/code&gt;, &lt;code&gt;resource quotas unset&lt;/code&gt;, and &lt;code&gt;out of memory&lt;/code&gt; strategies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;List Area&lt;/strong&gt;: Displays the name, container, current settings, policy name, details, and an operation bar. The displayed information may vary depending on the strategy name.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After selecting a cluster in the &lt;strong&gt;Cluster Selection Area&lt;/strong&gt;, the platform aggregates and displays the results of all strategies by default in a list, as shown in the figure below.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Select a cluster
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;resource-recommendation&#34;&gt;Resource recommendation&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#resource-recommendation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;review-resource-recommendations&#34;&gt;Review resource recommendations&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-resource-recommendations&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;When the strategy name is &lt;code&gt;Resource Recommendation&lt;/code&gt;, the list area is displayed as shown in the figure above. The list area is divided into six columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;/strong&gt;: Displays the application name, namespace, and application type.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;: Shows the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: Indicates the department, group, and specific personnel of the node owner.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current Settings&lt;/strong&gt;: Shows the CPU Request, CPU Limit, Memory Request, and Memory Limit for the container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: Includes average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, recommended values for CPU Request, CPU Limit, Memory Request, and Memory Limit, strategy name, and last updated time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Actions&lt;/strong&gt;: Displays the available operations for the application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;adjust-resource-quota&#34;&gt;Adjust resource quota&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-resource-quota&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Resource Quota&lt;/code&gt; dialog box, which displays application details, recommended values ​​and corresponding adjustment statements.&lt;/p&gt;
+&lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;560&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Adjust resource quota dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the commercial version, it appears as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b3_huf2002155a079f505abdfbd5c4f88a8fe_77389_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;491&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Adjust resource quota dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the commercial version, clicking the &lt;code&gt;OK&lt;/code&gt; button will automatically create tasks and adjust resources accordingly.&lt;/p&gt;
+&lt;h2 id=&#34;resource-quota-unset&#34;&gt;Resource quota unset&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#resource-quota-unset&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;review-resource-quota-unset&#34;&gt;Review resource quota unset&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-resource-quota-unset&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;When the strategy name is &lt;code&gt;Resource Quota Unset&lt;/code&gt;, the list area appears as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app4_hu6c148e4c2d42e6030eda415bc43d9aa3_125204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Select `Resource Quota Unset` strategy
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The list area is divided into six columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;/strong&gt;: Displays the application name, namespace, and application type.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;: Shows the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: Displays the department, group, and specific personnel of the node owner.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current Settings&lt;/strong&gt;: Indicates whether the container’s CPU Request, CPU Limit, Memory Request, and Memory Limit have been set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: Shows the recommended values for CPU Request, CPU Limit, Memory Request, Memory Limit, policy name, and last update time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Operations&lt;/strong&gt;: Displays the available actions for the application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;set-resource-quota&#34;&gt;Set resource quota&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#set-resource-quota&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the image above to open the &lt;code&gt;Set Application Resource Quota&lt;/code&gt; dialog box, which displays application details, recommended values, and corresponding adjustment commands.&lt;/p&gt;
+&lt;p&gt;In the community version, it is displayed as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app5_hu80dc269157f0934e6e5833c00cd461d5_84676_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;501&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Set application resource quota dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the commercial version, it is displayed as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b5_hu784ee8109267f2eab7d46c944c7605ee_64257_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Set rapplication esource quota dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the commercial version, clicking the &lt;code&gt;OK&lt;/code&gt; button will automatically create tasks and adjust resources accordingly.&lt;/p&gt;
+&lt;h2 id=&#34;out-of-memory&#34;&gt;Out of memory&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#out-of-memory&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;view-memory-overflow-applications&#34;&gt;View memory overflow applications&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-memory-overflow-applications&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;When the strategy name is &lt;code&gt;Out of Memory&lt;/code&gt;, the list area appears as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app6_hubb1e5856ae2e20a0843d5125bd00838a_116310_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Select `Out of Memory` strategy
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The list area is divided into six columns:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;/strong&gt;: Displays the application name, namespace, and application type.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;: Shows the container name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;: Displays the department, group, and specific personnel of the node owner.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current Settings&lt;/strong&gt;: Displays the memory request and memory limit of the container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Details&lt;/strong&gt;: Shows the latest OOM time, recent OOM Pod, number of OOMs, and last update time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Operations&lt;/strong&gt;: Displays the available actions for the application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;adjust-application-memory-size&#34;&gt;Adjust application memory size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-application-memory-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Application Memory Size&lt;/code&gt; dialog box, which displays application details, recommended memory limit values, and corresponding adjustment commands.&lt;/p&gt;
+&lt;p&gt;In the community version, it is displayed as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app7_hu253ed517a5b0de63cf78b90da814ac72_72861_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Applications: Adjust application memory size dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the commercial version, it is displayed as shown below:&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b7_hu2c480889fc421f01df4cf685a778ca2f_51682_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Application: Adjust application memory size dialog box
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the commercial version, clicking the OK button will automatically create tasks and adjust resources accordingly.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

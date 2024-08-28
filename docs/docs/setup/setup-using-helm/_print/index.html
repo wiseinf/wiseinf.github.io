@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/setup/setup-using-helm/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/setup/setup-using-helm/index.xml">
+<link rel="canonical" type="text/html" href="/docs/setup/setup-using-helm/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/setup/setup-using-helm/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,29 +20,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Install via Helm | Cluster Optimizer</title>
-<meta name="description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.
+<meta name="description" content="This document provides detailed instructions for installing the Cluster Optimizer using Helm.
 ">
-<meta property="og:url" content="//localhost:1313/docs/setup/setup-using-helm/">
+<meta property="og:url" content="/docs/setup/setup-using-helm/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Install via Helm">
-  <meta property="og:description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.">
+  <meta property="og:description" content="This document provides detailed instructions for installing the Cluster Optimizer using Helm.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Install via Helm">
-  <meta itemprop="description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.">
-  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
-  <meta itemprop="wordCount" content="775">
+  <meta itemprop="description" content="This document provides detailed instructions for installing the Cluster Optimizer using Helm.">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="709">
   <meta itemprop="keywords" content="Cluster Optimizer">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Install via Helm">
-  <meta name="twitter:description" content="Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.">
+  <meta name="twitter:description" content="This document provides detailed instructions for installing the Cluster Optimizer using Helm.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -112,7 +121,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Install via Helm</h1>
-<div class="lead">Describes the detailed steps to install the cloud-native cluster optimization platform (Cluster Optimizer) through Helm.</div>
+<div class="lead">This document provides detailed instructions for installing the Cluster Optimizer using Helm.</div>
 
 
 
@@ -133,134 +142,120 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>This page describes the detailed steps for installing <strong>Cluster Optimizer</strong> via Helm.</p>
+<p>This document provides detailed instructions for installing the <strong>Cluster Optimizer</strong> with Helm.</p>
 
 </div>
 
 <h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
 <ul>
-<li>Mysql database, version 5.7 and above</li>
-<li>Kubernetes cluster, version 1.22 and above</li>
-<li>The certificate of the Kubernetes cluster can create the <code>wiseinf-system</code> namespace and create Deployment, ConfigMap, Service and other resources under this namespace</li>
-<li>Helm, 3.0.0 and above recommended</li>
+<li>MySQL database, version 5.7 or higher</li>
+<li>Kubernetes cluster, version 1.22 or higher</li>
+<li>Kubernetes cluster with the necessary permissions to create the <code>wiseinf-system</code> namespace and deploy resources such as Deployments, ConfigMaps, and Services within this namespace</li>
+<li>Helm, version 3.0.0 or higher</li>
 </ul>
 <h2 id="deploy-application">Deploy application<a class="td-heading-self-link" href="#deploy-application" aria-label="Heading self-link"></a></h2>
 <ol>
 <li>
-<p>Add the Helm warehouse <code>cluster-optimizer</code> through the following command:</p>
+<p>Add the <code>cluster-optimizer</code> Helm repository using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm repo add cluster-optimizer https://wiseinf.github.io/cluster-optimizer/
 </span></span></code></pre></div></li>
 <li>
-<p>Update the warehouse through the following command:</p>
+<p>Update the repository using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm repo update
 </span></span></code></pre></div></li>
 <li>
-<p>View the Charts contained in the warehouse <code>cluster-optimizer</code> through the following command:</p>
+<p>View the charts available in the <code>cluster-optimizer</code> repository using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm search repo cluster-optimizer
 </span></span></code></pre></div><p>The output is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME CHART VERSION APP VERSION DESCRIPTION
 </span></span><span style="display:flex;"><span>cluster-optimizer/cluster-optimizer 0.1.0 1.1.0 A Helm chart <span style="color:#204a87;font-weight:bold">for</span> cluster optimizer
-</span></span></code></pre></div><p>It can be seen that the warehouse includes a Chart named <code>cluster-optimizer/cluster-optimizer</code>.</p>
+</span></span></code></pre></div><p>The repository includes a chart named <code>cluster-optimizer/cluster-optimizer</code>.</p>
 </li>
 <li>
-<p>Install the <code>demo</code> Chart through the following command:</p>
+<p>Install the <code>demo</code> chart using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -n wiseinf-system --create-namespace
-</span></span></code></pre></div><p>Among them, <code>-n wiseinf-system</code> means to install <code>demo</code> under the namespace <code>wiseinf-system</code>, and the parameter <code>--create-namespace</code> means to create this namespace. The output is as follows:</p>
+</span></span></code></pre></div><p>In this command, <code>-n wiseinf-system</code> specifies that the <code>demo</code> chart will be installed in the <code>wiseinf-system</code> namespace, while the <code>--create-namespace</code> flag ensures that the namespace is created if it does not already exist. The output is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME: demo
 </span></span><span style="display:flex;"><span>LAST DEPLOYED: Thu Mar <span style="color:#0000cf;font-weight:bold">28</span> 15:54:42 <span style="color:#0000cf;font-weight:bold">2024</span>
 </span></span><span style="display:flex;"><span>NAMESPACE: default
 </span></span><span style="display:flex;"><span>STATUS: deployed
 </span></span><span style="display:flex;"><span>REVISION: <span style="color:#0000cf;font-weight:bold">1</span>
 </span></span><span style="display:flex;"><span>...
-</span></span></code></pre></div><p>It means that Helm has successfully deployed the <code>demo</code> Chart.</p>
+</span></span></code></pre></div><p>It indicates that Helm has successfully deployed the <code>demo</code> chart.</p>
 </li>
 <li>
-<p>Check whether <code>optimizer</code> is running normally through the following command:</p>
+<p>Check whether the <code>optimizer</code> pod is running normally through the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl get pods -n wiseinf-system
 </span></span></code></pre></div><p>The output is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME READY STATUS RESTARTS AGE
 </span></span><span style="display:flex;"><span>cluster-optimizer-demo-7bfdfdf954-2cgqb 2/2 Running <span style="color:#0000cf;font-weight:bold">0</span> 108s
 </span></span><span style="display:flex;"><span>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7 1/1 Running <span style="color:#0000cf;font-weight:bold">0</span> 108s
-</span></span></code></pre></div><p>As you can see from the output, Helm has deployed two Pods, of which <code>cluster-optimizer-demo-7bfdfdf954-2cgqb</code> is the Pod of Cluster Optimizer, and <code>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7</code> is the Mysql database it depends on. .</p>
+</span></span></code></pre></div><p>As the output indicates, Helm has successfully deployed two pods. The first is the <code>cluster-optimizer-demo-7bfdfdf954-2cgqb</code> pod, which represents the Cluster Optimizer service. The second is the <code>cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7</code> pod, which serves as the MySQL database upon which the first pod depends.</p>
 <blockquote>
-<p>Note: If you want to use a deployed database, please see [Use Deployed Database](#Use Deployed Database).</p>
+<p><strong>Note</strong>: For instructions on utilizing a deployed database, please refer to the section <a href="/docs/setup/setup-using-helm/#using-a-deployed-database">Using a Deployed Database</a>.</p>
 </blockquote>
 </li>
 <li>
-<p>Create <strong>port-forward</strong> to access the <code>optimizer</code> service through the following command:</p>
+<p>Create a <strong>port-forward</strong> to access the <code>optimizer</code> service using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    kubectl port-forward svc/optimizer 8000:80 -n wiseinf-system
 </span></span></code></pre></div></li>
 <li>
-<p>Open the browser and visit the address <code>http://localhost:8000/</code>.</p>
+<p>Open your web browser and navigate to the address <code>http://localhost:8000/</code>.</p>
 </li>
 <li>
-<p>If you can see the <strong>Cluster Optimizer</strong> homepage, the application <strong>Cluster Optimizer</strong> is deployed successfully.</p>
+<p>If the <strong>Cluster Optimizer</strong> homepage is displayed, this indicates that the <strong>Cluster Optimizer</strong> application has been deployed successfully.</p>
 </li>
 <li>
-<p>You can delete the <code>demo</code> Chart through the command:</p>
+<p>To delete the <code>demo</code> chart, execute the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>helm uninstall demo
 </span></span></code></pre></div></li>
 </ol>
-<h2 id="use-deployed-database">Use deployed database<a class="td-heading-self-link" href="#use-deployed-database" aria-label="Heading self-link"></a></h2>
-<p>If you want to use the deployed database and use a new username and password to access <strong>Cluster Optimizer</strong>, please refer to the following steps:</p>
+<h2 id="using-a-deployed-database">Using a Deployed Database<a class="td-heading-self-link" href="#using-a-deployed-database" aria-label="Heading self-link"></a></h2>
+<p>If you want to use the deployed user database with a new username and password for accessing from the <strong>Cluster Optimizer</strong>, follow these steps:</p>
 <ol>
 <li>
-<p>Open the command line console and clone the installation script to the local computer through the following command.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    git clone https://github.com/wiseinf/setup.git
-</span></span></code></pre></div><blockquote>
-<ol>
-<li>
-<p>If you use the Gitee warehouse address, you need to replace <code>https://github.com/wiseinf/setup.git</code> in the above command with <code>https://gitee.com/wiseinf/setup.git</code>.</p>
-</li>
-<li>
-<p>The subsequent steps assume that the <code>setup</code> library has been cloned to the user&rsquo;s home directory. If it has not been cloned to the user&rsquo;s home directory, the file path in the command needs to be adjusted according to the actual situation.</p>
-</li>
-</ol>
-</blockquote>
-</li>
-<li>
-<p>Execute the <code>mysql</code> command on the command line console to log in to the Mysql database. <code>127.0.0.1</code> is the Mysql database host address. You need to replace it with the actual address you use.</p>
+<p>Open your command line interface and use the <code>mysql</code> command to connect to the MySQL database. Replace <code>127.0.0.1</code> with your actual MySQL database host address.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql -h127.0.0.1 -uroot
 </span></span></code></pre></div><blockquote>
-<p>Note: If you use a remote database, make sure the database is accessible from the Kubernetes cluster.</p>
+<p>Note: Ensure that the database is accessible from the Kubernetes cluster if you are using a remote database.</p>
 </blockquote>
 </li>
 <li>
-<p>Create database schema <code>optconf</code> (optimization configuration library) and <code>optdata</code> (optimization database).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
+<p>Create the <code>optconf</code> and <code>optdata</code> database schema.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>     mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_database.sql
 </span></span></code></pre></div><blockquote>
-<p>Note: Please be aware of the risk of data loss. If the <code>optconf</code> library and <code>optdata</code> library already exist in the mysql database, the above script will first delete the library and then create a new library.</p>
+<p>Note: This script will delete the existing user database if it exists and create a new one. Proceed with caution to avoid data loss.</p>
 </blockquote>
 </li>
 <li>
-<p>Create a new username and password, and set appropriate permissions for them. The username in the script is <code>optimizer</code> and the password is <code>Optimizer~</code>. You can adjust it according to your needs.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
+<p>Create a new username and password, and assign the appropriate permissions. The default username and password in the script are <code>optimizer</code> and <code>Optimizer~</code>, respectively. Adjust these as needed.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>   mysql&gt; <span style="color:#204a87">source</span> ~/setup/cluster-optimizer/sql/create_user.sql
 </span></span></code></pre></div></li>
 <li>
 <p>Create the file <code>values.yaml</code> and edit its content as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">optimizedb</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">conf</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">schema:optconf</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#8f5902;font-style:italic"># Database address for configuration schema</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optconf        </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># Database schema for configuration</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">3306</span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#8f5902;font-style:italic"># Database port</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer        </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># Username for database access</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~   </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># Password for database access</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">data</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">dbHost</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">127.0.0.1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">schema</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optdata</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;3306&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">3306</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">optimizer</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">password</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Optimizer~</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Among them, <code>dbHost</code> is the database address, <code>schema</code> is the database Schema, <code>port</code> is the port, <code>user</code> and <code>password</code> are the username and password respectively.</p>
+</span></span></span></code></pre></div><p>In the configuration, <code>dbHost</code> is the database address, <code>schema</code> is the database schema, <code>port</code> is the database port, <code>user</code> and <code>password</code> are the username and password respectively.</p>
 </li>
 <li>
-<p>Install the <code>demo</code> Chart through the following command:</p>
+<p>Install the <code>demo</code> chart using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm install demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
-</span></span></code></pre></div><p>You can also adjust the database settings by upgrading the original deployment:</p>
+</span></span></code></pre></div><p>You can also modify the database settings by performing an upgrade on the existing deployment with the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    helm upgrade demo cluster-optimizer/cluster-optimizer -f values.yaml --namespace wiseinf-system
 </span></span></code></pre></div></li>
 <li>
-<p>Restart the application, check the log output of the <strong>Cluster Optimizer</strong> Pod (as shown below), and check whether the database configuration information is consistent with your expectations.</p>
+<p>Review the log output of <strong>Cluster Optimizer</strong> to verify that the database configuration matches your expectations.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;optconf&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -277,7 +272,7 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a40000">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>At the same time, also check whether there are any database-related errors. If there are no related errors, it proves that a new database has been used.</p>
+</span></span></code></pre></div><p>Additionally, check for any database-related errors in the logs. The absence of errors indicates that the new database configuration is successfully applied.</p>
 </li>
 </ol>
 <h2 id="next-step-import-the-cluster">Next step: Import the cluster<a class="td-heading-self-link" href="#next-step-import-the-cluster" aria-label="Heading self-link"></a></h2>
@@ -350,8 +345,8 @@ This is the multi-page printable view of this section.
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

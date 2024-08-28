@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Configuration</title>
-    <link>//localhost:1313/tags/configuration/</link>
+    <link>/tags/configuration/</link>
     <description>Recent content in Configuration on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Configuration</title>
-      <link>//localhost:1313/docs/configuration/</link>
+      <link>/docs/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/configuration/</guid>
+      <guid>/docs/configuration/</guid>
       <description>
         
         

@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="text/html" href="//localhost:1313/docs/configuration/conf/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/configuration/conf/index.xml">
-<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" type="text/html" href="/docs/configuration/conf/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/configuration/conf/index.xml">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -22,7 +22,7 @@
 <title>Configuration parameters | Cluster Optimizer</title>
 <meta name="description" content="Describes the configuration parameters of the cloud native cluster optimization platform configuration file.
 ">
-<meta property="og:url" content="//localhost:1313/docs/configuration/conf/">
+<meta property="og:url" content="/docs/configuration/conf/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Configuration parameters">
   <meta property="og:description" content="Describes the configuration parameters of the cloud native cluster optimization platform configuration file.">
@@ -31,8 +31,8 @@
 
   <meta itemprop="name" content="Configuration parameters">
   <meta itemprop="description" content="Describes the configuration parameters of the cloud native cluster optimization platform configuration file.">
-  <meta itemprop="dateModified" content="2024-08-18T17:40:03+08:00">
-  <meta itemprop="wordCount" content="1365">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="1816">
   <meta itemprop="keywords" content="Cluster Optimization,Configuration Parameters">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Configuration parameters">
@@ -41,8 +41,8 @@
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -124,14 +133,14 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupsetup-using-helm-li">
   <a href="/docs/setup/setup-using-helm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupsetup-using-helm"><span class="">Install via Helm</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docssetupupgrade-li">
-  <a href="/docs/setup/upgrade/" title="Install the commercial version" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupupgrade"><span class="">Install commercial version</span></a>
+  <a href="/docs/setup/upgrade/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssetupupgrade"><span class="">Upgrading to the commercial version</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsuser-guide-li">
   <a href="/docs/user-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guide"><span class="">User Manual</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsuser-guideimport-cluster-li">
-  <a href="/docs/user-guide/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-cluster"><span class="">Import cluster</span></a>
+  <a href="/docs/user-guide/import-cluster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-cluster"><span class="">Import Cluster</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guideimport-clusterimport-alibaba-li">
   <a href="/docs/user-guide/import-cluster/import-alibaba/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guideimport-clusterimport-alibaba"><span class="">Import Alibaba Cloud Cluster</span></a>
@@ -159,7 +168,7 @@
   <a href="/docs/user-guide/personal-settings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settings"><span class="">Personal Settings</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingssetting-li">
-  <a href="/docs/user-guide/personal-settings/setting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingssetting"><span class="">Personal Account Settings</span></a>
+  <a href="/docs/user-guide/personal-settings/setting/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingssetting"><span class="">Personal Account</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsuser-guidepersonal-settingsclusteraccessaccount-li">
   <a href="/docs/user-guide/personal-settings/clusteraccessaccount/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsuser-guidepersonal-settingsclusteraccessaccount"><span class="">Cluster Access Account</span></a>
 </li>
@@ -226,18 +235,20 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#configuration-parameters">Configuration parameters</a>
+    <li><a href="#configuration-parameters">Configuration Parameters</a>
       <ul>
         <li><a href="#serverport"><code>server.port</code></a></li>
         <li><a href="#enginemaxqueryduration"><code>engine.maxQueryDuration</code></a></li>
         <li><a href="#optconf"><code>optconf</code></a></li>
         <li><a href="#optdata"><code>optdata</code></a></li>
         <li><a href="#optimize"><code>optimize</code></a></li>
-        <li><a href="#sms-sending-configuration-sms">SMS sending configuration <code>sms</code></a></li>
+        <li><a href="#sms-configuration-sms">SMS Configuration <code>sms</code></a></li>
         <li><a href="#notification"><code>notification</code></a></li>
         <li><a href="#notificationtemplatebasepath"><code>notification.templateBasePath</code></a></li>
       </ul>
     </li>
+    <li><a href="#email-configuration-email">Email Configuration <code>email</code></a></li>
+    <li><a href="#license-configuration-license">License configuration <code>license</code></a></li>
   </ul>
 </nav>
       </div>
@@ -245,51 +256,51 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/application-optimizer/" data-taxonomy-term="application-optimizer"><span class="taxonomy-label">Application Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">29</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">29</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimizing-application/" data-taxonomy-term="optimizing-application"><span class="taxonomy-label">Optimizing Application</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">21</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="//localhost:1313/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">21</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
   
@@ -317,15 +328,15 @@
 		<div class="taxonomy taxonomy-terms-article taxo-tags">
   <h5 class="taxonomy-title">Tags:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="//localhost:1313/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
-    <li><a class="taxonomy-term" href="//localhost:1313/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span></a></li>
+    <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
+    <li><a class="taxonomy-term" href="/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span></a></li>
     </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
   <h5 class="taxonomy-title">Categories:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="//localhost:1313/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
-    <li><a class="taxonomy-term" href="//localhost:1313/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span></a></li>
+    <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span></a></li>
+    <li><a class="taxonomy-term" href="/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span></a></li>
     </ul>
 </div>
 
@@ -333,13 +344,14 @@
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes the configuration parameters of the cloud native cluster optimization platform configuration file.</p>
+<p>This document provides a comprehensive overview of the configuration parameters within the <strong>Cluster Optimizer</strong> platform’s configuration file.</p>
 
 </div>
 
 <h2 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h2>
 <p>The cloud-native cluster optimization platform must rely on configuration files to run. The configuration file location can be specified through the command line parameter <code>--config</code>, for example: <code>--config=conf/cluster-optimizer.yaml</code>. The default path is <code>conf/cluster-optimizer.yaml</code></p>
-<p>The configuration file format is YAML format, the example is as follows:</p>
+<p>The cloud-native cluster optimization platform requires configuration files to define its operational parameters. The location of the configuration file can be specified using the <code>--config</code> command-line argument, e.g., <code>--config=conf/cluster-optimizer.yaml</code>. By default, the configuration file is located at <code>conf/cluster-optimizer.yaml</code>.</p>
+<p>The configuration file is written in YAML format, as illustrated below:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">server</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">port</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">7070</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">engine</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -369,39 +381,40 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000">...</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">notification</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">templateBasePath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">templates/notification</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><h2 id="configuration-parameters">Configuration parameters<a class="td-heading-self-link" href="#configuration-parameters" aria-label="Heading self-link"></a></h2>
+</span></span></span></code></pre></div><h2 id="configuration-parameters">Configuration Parameters<a class="td-heading-self-link" href="#configuration-parameters" aria-label="Heading self-link"></a></h2>
 <h3 id="serverport"><code>server.port</code><a class="td-heading-self-link" href="#serverport" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>server.port</code> is the external service port of the cloud native cluster optimization platform. The default value is <code>7070</code>.</p>
+<p>The <code>server.port</code> parameter defines the external service port for the <strong>Cluster Optimizer</strong> platform. The default value is <code>7070</code>.</p>
 <h3 id="enginemaxqueryduration"><code>engine.maxQueryDuration</code><a class="td-heading-self-link" href="#enginemaxqueryduration" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>engine.maxQueryDuration</code> sets the maximum query period of the query measurement server (such as Prometheus). The default value is 1 day. When the query time range exceeds the maximum query period, it will be divided into multiple query windows for separate queries, thereby reducing the pressure on the server.</p>
+<p>The parameter <code>engine.maxQueryDuration</code> sets the maximum query period of the query measurement server (such as Prometheus). The default value is <code>1d</code>(24 hours). When the query time range exceeds the maximum query period, it will be divided into multiple query windows for separate queries, thereby reducing the pressure on the server.</p>
 <h3 id="optconf"><code>optconf</code><a class="td-heading-self-link" href="#optconf" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>optconf</code> is used to configure the optimization configuration library.</p>
-<p>Its sub-parameters include <code>dataSource.name</code> and <code>maxOpenConns</code>, which are explained below.</p>
+<p>The optconf parameter configures the optimization configuration database. It includes the following sub-parameters:</p>
 <h4 id="datasourcename"><code>dataSource.name</code><a class="td-heading-self-link" href="#datasourcename" aria-label="Heading self-link"></a></h4>
-<p>The parameter <code>dataSource.name</code> is used to set the Mysql data source name, for example <code>root:optimizer@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local</code>.
-Among them, <code>createDatabaseIfNotExist</code> means that when the database does not exist, create this database first.</p>
+<p>The <code>dataSource.name</code> parameter specifies the MySQL data source connection string. For example: <code>root:optimizer@tcp(127.0.0.1:3306)/optconf?createDatabaseIfNotExist=true&amp;charset=utf8mb4&amp;readTimeout=30s&amp;writeTimeout=30s&amp;parseTime=true&amp;loc=Local</code>. The <code>createDatabaseIfNotExist</code> option ensures that the database is created if it does not already exist.</p>
 <h4 id="maxopenconns"><code>maxOpenConns</code><a class="td-heading-self-link" href="#maxopenconns" aria-label="Heading self-link"></a></h4>
-<p>The parameter <code>maxOpenConns</code> sets the maximum number of open connections to the database.</p>
+<p>The <code>maxOpenConns</code> parameter defines the maximum number of open connections to the database.</p>
 <h3 id="optdata"><code>optdata</code><a class="td-heading-self-link" href="#optdata" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>optdata</code> is used to configure the optimization database.</p>
-<p>Its sub-parameters include <code>dataSource.name</code> and <code>maxOpenConns</code>, whose meanings are consistent with the corresponding sub-parameters of <code>optconf</code> and will not be explained again.</p>
+<p>The <code>optdata</code> parameter configures the optimization data database. Its sub-parameters are identical to those in the <code>optconf</code> section, and their meanings remain consistent.</p>
 <h3 id="optimize"><code>optimize</code><a class="td-heading-self-link" href="#optimize" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>optimize</code> is used to set parameters related to the optimization engine. Its sub-parameter settings will be described below.</p>
+<p>The optimize parameter governs the settings related to the optimization engine. It includes several sub-parameters:</p>
 <h4 id="defaultcron"><code>defaultCron</code><a class="td-heading-self-link" href="#defaultcron" aria-label="Heading self-link"></a></h4>
-<p>The parameter <code>defaultCron</code> is used to set the default scheduling parameters of the optimization engine. The default value is <code>0 0 1 * * ?</code> (executed at 1 am every day),</p>
+<p>The <code>defaultCron</code> parameter defines the default scheduling cron expression for the optimization engine. The default value is &ldquo;<code>0 0 1 * * ?</code>&rdquo; (which schedules execution at 1:00 AM daily).</p>
 <h4 id="enabled"><code>enabled</code><a class="td-heading-self-link" href="#enabled" aria-label="Heading self-link"></a></h4>
-<p>The parameter <code>enabled</code> sets whether to enable the optimization engine. The default value is <code>true</code>.</p>
+<p>The <code>enabled</code> parameter enables or disables the optimization engine. The default value is true.</p>
 <h4 id="strategyconfigs"><code>strategyConfigs</code><a class="td-heading-self-link" href="#strategyconfigs" aria-label="Heading self-link"></a></h4>
-<p>The parameter <code>strategyConfigs</code> is used to configure the strategy configuration of the optimization engine. It is configured as a key-value pair. The key is the name of the policy and the value is the configuration of the policy.</p>
-<p>The policy name is a string, and the content of the policy value is as follows:</p>
+<p>The <code>strategyConfigs</code> parameter is a key-value pair that configures specific optimization strategies. Each key represents a strategy name, and its value contains the strategy’s configuration.</p>
+<p>The structure of a strategy configuration is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">cron</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;0 0 1 * * ?&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">parameters</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">key1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">value1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">key2</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">value2</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Among them, <code>enabled</code> indicates whether to enable the optimization strategy, and the default value is <code>true</code>. <code>cron</code> sets the scheduling parameters of this policy. <code>parameters</code> provides configuration for the strategy. Different strategies have different parameters, which are explained below.</p>
+</span></span></span></code></pre></div><ul>
+<li><code>enabled</code>: Determines whether the strategy is active. The default value is true.</li>
+<li><code>cron</code>: Specifies the cron expression for scheduling the strategy.</li>
+<li><code>parameters</code>: Contains strategy-specific settings, detailed below.</li>
+</ul>
 <ol>
-<li>Node Group Recommendation Strategy <code>Node Group Recommendation</code></li>
+<li>Strategy <code>Node Group Recommendation</code></li>
 </ol>
 <table>
 <thead>
@@ -415,32 +428,32 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tr>
 <td><code>cpuMaxUsage</code></td>
 <td>0.7</td>
-<td>The maximum CPU utilization of the node group, the value range is <em>(0,1]</em></td>
+<td>Maximum CPU utilization for the node group, range: <code>(0,1]</code></td>
 </tr>
 <tr>
 <td><code>memoryMaxUsage</code></td>
 <td>0.8</td>
-<td>The maximum memory utilization of the node group, the value range is <em>(0,1]</em></td>
+<td>Maximum memory utilization for the node group, range: (0,1]</td>
 </tr>
 <tr>
 <td><code>cpuMinCores</code></td>
 <td>2</td>
-<td>Recommended instance type CPU minimum value, unit core, must be greater than or equal to 1</td>
+<td>Minimum CPU cores for recommended instance types, must be ≥ 1</td>
 </tr>
 <tr>
 <td><code>memoryMinGBs</code></td>
 <td>4</td>
-<td>Recommended minimum instance type memory, in GB, must be greater than or equal to 1</td>
+<td>Minimum memory for recommended instance types, in GB, must be ≥ 1</td>
 </tr>
 <tr>
 <td><code>recommendTopK</code></td>
 <td>5</td>
-<td>The maximum number of recommended instance types, the value range is <em>[1,10]</em></td>
+<td>Maximum number of recommended instance types, range: <code>[1,10]</code></td>
 </tr>
 </tbody>
 </table>
 <ol start="2">
-<li>Node recommendation<code>Node Recommendation</code></li>
+<li>Strategy <code>Node Recommendation</code></li>
 </ol>
 <table>
 <thead>
@@ -453,23 +466,23 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24 hours</td>
-<td>Time range, the value is Duration.</td>
+<td>8d</td>
+<td>Time range for the analysis.</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24 hours</td>
-<td>Time range step, the value is Duration.</td>
+<td>24h</td>
+<td>Step size for the time range.</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2 minutes</td>
-<td>Query the resolution, the value is Duration.</td>
+<td>2m</td>
+<td>Query resolution.</td>
 </tr>
 <tr>
 <td><code>cpuStep</code></td>
 <td>1</td>
-<td>CPU minimum step size, unit core</td>
+<td>Minimum CPU step size, in cores.</td>
 </tr>
 <tr>
 <td><code>memoryStep</code></td>
@@ -479,17 +492,17 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tr>
 <td><code>cpuMaxUsage</code></td>
 <td>0.6</td>
-<td>Node maximum CPU utilization</td>
+<td>Maximum CPU utilization for the node</td>
 </tr>
 <tr>
 <td><code>memoryMaxUsage</code></td>
 <td>0.8</td>
-<td>The maximum memory utilization of the node</td>
+<td>Maximum memory utilization for the node</td>
 </tr>
 </tbody>
 </table>
 <ol start="3">
-<li>Low utilization node <code>Underutilized Node</code></li>
+<li>Strategy <code>Underutilized Node</code></li>
 </ol>
 <table>
 <thead>
@@ -502,28 +515,28 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24 hours</td>
-<td>Time range, the value is Duration</td>
+<td>8d</td>
+<td>Time range for the analysis.</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24 hours</td>
-<td>The range of each batch, the value is Duration</td>
+<td>24h</td>
+<td>Step size for the time range</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2 minutes</td>
+<td>2m</td>
 <td>Query resolution</td>
 </tr>
 <tr>
 <td><code>cpuAvgThreshold</code></td>
 <td>0.2</td>
-<td>CPU average utilization threshold</td>
+<td>Average CPU utilization threshold</td>
 </tr>
 <tr>
 <td><code>cpuMaxThreshold</code></td>
 <td>0.6</td>
-<td>CPU maximum utilization threshold</td>
+<td>Maximum CPU utilization threshold</td>
 </tr>
 <tr>
 <td><code>memoryAvgThreshold</code></td>
@@ -538,7 +551,7 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 </tbody>
 </table>
 <ol start="4">
-<li>Low utilization GPU node <code>Underutilized GPU Node</code>.</li>
+<li>Strategy <code>Underutilized GPU Node</code>.</li>
 </ol>
 <table>
 <thead>
@@ -551,33 +564,33 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24</td>
-<td>Time range, the value is Duration, the default value is 24 hours</td>
+<td>8d</td>
+<td>Time range for analysis</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24</td>
-<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+<td>24h</td>
+<td>Step size for the time range</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2</td>
-<td>Query resolution in minutes</td>
+<td>2m</td>
+<td>Query resolution</td>
 </tr>
 <tr>
 <td><code>gpuAvgThreshold</code></td>
 <td>0.2</td>
-<td>GPU average utilization threshold</td>
+<td>Average GPU utilization threshold</td>
 </tr>
 <tr>
 <td><code>gpuMaxThreshold</code></td>
 <td>0.8</td>
-<td>GPU maximum utilization threshold</td>
+<td>Maximum GPU utilization threshold</td>
 </tr>
 </tbody>
 </table>
 <ol start="5">
-<li>Low utilization disk <code>Underutilized Disk</code></li>
+<li>Strategy <code>Underutilized Disk</code></li>
 </ol>
 <table>
 <thead>
@@ -590,28 +603,28 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24</td>
-<td>Time range, the value is Duration, the default value is 24 hours</td>
+<td>8d</td>
+<td>Time range for analysis</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24</td>
-<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+<td>24h</td>
+<td>Step size for the time range</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2</td>
-<td>Query resolution in minutes</td>
+<td>2m</td>
+<td>Query resolution</td>
 </tr>
 <tr>
 <td><code>threshold</code></td>
 <td>0.3</td>
-<td>The disk utilization threshold, below which we consider the utilization to be low.</td>
+<td>Disk utilization threshold for low usage.</td>
 </tr>
 </tbody>
 </table>
 <ol start="6">
-<li>Unused persistent storage volume <code>Unused PV</code></li>
+<li>Strategy <code>Unused PV</code></li>
 </ol>
 <table>
 <thead>
@@ -624,13 +637,13 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>boundDuration</code></td>
-<td>1</td>
-<td>Persistent storage volume binding period, default value is 1 hour. If it is not bound during the persistent storage volume binding cycle and is not associated with a Persistent Volume Claim, the storage volume is considered unused.</td>
+<td>1h</td>
+<td>Time duration before a persistent storage volume is considered unused if unbound.</td>
 </tr>
 </tbody>
 </table>
 <ol start="7">
-<li>Low utilization persistent storage volume <code>Underutilized PV</code></li>
+<li>Strategy <code>Underutilized PV</code></li>
 </ol>
 <table>
 <thead>
@@ -643,28 +656,28 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24</td>
-<td>Time range, the value is Duration, the default value is 24 hours</td>
+<td>8d</td>
+<td>Time range for analysis</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24</td>
-<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+<td>24h</td>
+<td>Step size for the time range</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2</td>
-<td>Query resolution in minutes</td>
+<td>2m</td>
+<td>Query resolution</td>
 </tr>
 <tr>
 <td><code>threshold</code></td>
 <td>0.3</td>
-<td>PV utilization threshold, below which we consider the utilization to be low.</td>
+<td>Persistent volume utilization threshold for low usage.</td>
 </tr>
 </tbody>
 </table>
 <ol start="8">
-<li>Application resource recommendation<code>Resource Recommendation</code></li>
+<li>Strategy <code>Resource Recommendation</code></li>
 </ol>
 <table>
 <thead>
@@ -677,43 +690,43 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24*8</td>
-<td>Time range, the value is Duration, the default value is 8 days</td>
+<td>8d</td>
+<td>Time range for analysis</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24</td>
-<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+<td>24h</td>
+<td>Step size for the time range</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2</td>
-<td>Query resolution in minutes</td>
+<td>2m</td>
+<td>Query resolution</td>
 </tr>
 <tr>
 <td><code>cpuStep</code></td>
 <td>0.05</td>
-<td>CPU minimum step size, unit core</td>
+<td>Minimum CPU step size, in cores</td>
 </tr>
 <tr>
 <td><code>memoryStep</code></td>
 <td>0.1</td>
-<td>Minimum memory step size, unit GB</td>
+<td>Minimum memory step size, in GiB</td>
 </tr>
 <tr>
 <td><code>cpuMaxUsage</code></td>
 <td>0.6</td>
-<td>Node maximum CPU utilization</td>
+<td>Maximum CPU utilization for recommendation</td>
 </tr>
 <tr>
 <td><code>memoryMaxUsage</code></td>
 <td>0.8</td>
-<td>The maximum memory utilization of the node</td>
+<td>Maximum memory utilization for recommendation</td>
 </tr>
 </tbody>
 </table>
 <ol start="9">
-<li>The application does not set resource quota <code>Resource Quota Unset</code></li>
+<li>Strategy <code>Resource Quota Unset</code></li>
 </ol>
 <table>
 <thead>
@@ -726,43 +739,43 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24*8</td>
-<td>Time range, the value is Duration, the default value is 8 days</td>
+<td>8d</td>
+<td>Time range for analysis</td>
 </tr>
 <tr>
 <td><code>step</code></td>
-<td>24</td>
-<td>The range of each batch, the value is Duration, the default value is 24 hours</td>
+<td>24h</td>
+<td>Step size for the time range</td>
 </tr>
 <tr>
 <td><code>resolution</code></td>
-<td>2</td>
-<td>Query resolution in minutes</td>
+<td>2m</td>
+<td>Query resolution</td>
 </tr>
 <tr>
 <td><code>cpuStep</code></td>
 <td>0.05</td>
-<td>CPU minimum step size, unit core</td>
+<td>Minimum CPU step size, in cores</td>
 </tr>
 <tr>
 <td><code>memoryStep</code></td>
 <td>0.1</td>
-<td>Minimum memory step size, unit GB</td>
+<td>Minimum memory step size, in GiB</td>
 </tr>
 <tr>
 <td><code>cpuMaxUsage</code></td>
 <td>0.6</td>
-<td>Node maximum CPU utilization</td>
+<td>Maximum CPU utilization for recommendation</td>
 </tr>
 <tr>
 <td><code>memoryMaxUsage</code></td>
 <td>0.8</td>
-<td>The maximum memory utilization of the node</td>
+<td>Maximum memory utilization for recommendation</td>
 </tr>
 </tbody>
 </table>
 <ol start="10">
-<li>Memory overflow <code>OOM</code></li>
+<li>Strategy <code>OOM</code> (Out of Memory)</li>
 </ol>
 <table>
 <thead>
@@ -775,18 +788,18 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tbody>
 <tr>
 <td><code>duration</code></td>
-<td>24*8</td>
-<td>Time range, the value is Duration, the default value is 8 days, only pay attention to memory overflow events within this time range.</td>
+<td>8d</td>
+<td>Specifies the time range in days to monitor for memory overflow (OOM) events. The default value is 8 days.</td>
 </tr>
 <tr>
 <td><code>interval</code></td>
 <td>1 hour</td>
-<td>Expiration time cleanup cycle</td>
+<td>Defines the cleanup cycle for expired OOM events.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="sms-sending-configuration-sms">SMS sending configuration <code>sms</code><a class="td-heading-self-link" href="#sms-sending-configuration-sms" aria-label="Heading self-link"></a></h3>
-<p>The SMS sending configuration is mainly for the system to send verification codes/security codes. Its configuration parameters are as follows:</p>
+<h3 id="sms-configuration-sms">SMS Configuration <code>sms</code><a class="td-heading-self-link" href="#sms-configuration-sms" aria-label="Heading self-link"></a></h3>
+<p>The SMS configuration is mainly for the system to send verification codes/security codes. Its configuration parameters are as follows:</p>
 <table>
 <thead>
 <tr>
@@ -799,41 +812,41 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 <tr>
 <td><code>enabled</code></td>
 <td><code>true</code></td>
-<td>Whether to enable text messages</td>
+<td>Determines whether SMS functionality is enabled.</td>
 </tr>
 <tr>
 <td><code>provider</code></td>
 <td></td>
-<td>SMS service provider, currently supports AWS, Azure, Alibaba Cloud, Tencent Cloud, Baidu Cloud, etc.</td>
+<td>Specifies the SMS service provider. Supported providers include AWS, Azure, Alibaba Cloud, Tencent Cloud, Baidu Cloud, etc.</td>
 </tr>
 <tr>
 <td><code>accessKeyId</code></td>
 <td></td>
-<td>AccessKeyId corresponds to the corresponding field of the SMS service provider, and the fields corresponding to different SMS service providers are slightly different.</td>
+<td>Corresponds to the <code>AccessKeyId</code> of the SMS service provider. Field names may vary depending on the provider.</td>
 </tr>
 <tr>
 <td><code>accessKeySecret</code></td>
 <td></td>
-<td>AccessKeySecret has corresponding fields corresponding to SMS service providers. Different SMS service providers have slightly different fields.</td>
+<td>Corresponds to the <code>AccessKeySecret</code> of the SMS service provider. Field names may vary depending on the provider.</td>
 </tr>
 <tr>
 <td><code>signName</code></td>
 <td></td>
-<td>Signature of SMS service provider</td>
+<td>The signature used by the SMS service provider.</td>
 </tr>
 <tr>
 <td><code>template</code></td>
 <td></td>
-<td>The template ID of the SMS service provider</td>
+<td>The template ID used by the SMS service provider for sending messages.</td>
 </tr>
 <tr>
 <td><code>extras</code></td>
 <td><code>[]</code></td>
-<td>An ordered list of other parameters required by the SMS service provider</td>
+<td>An ordered list of additional parameters required by the SMS service provider.</td>
 </tr>
 </tbody>
 </table>
-<p>Example: For Tencent Cloud, its configuration is as follows:</p>
+<p>Example Configuration for Tencent Cloud:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">sms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">enabled</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">provider</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;Tencent Cloud SMS&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
@@ -843,12 +856,134 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">210000</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">extras</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#0000cf;font-weight:bold">1000000000</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Among them, <code>accessKeyID</code> and <code>accessKeySecret</code> are the keys of Tencent Cloud SMS service, which respectively correspond to the identity applied on <a href="https://console.cloud.tencent.com/cam/capi">Cloud API Key</a> SecretId<code>and its corresponding</code>SecretKey<code>. </code>signName<code>is the SMS signature,</code>template<code>is the SMS template ID, and</code>extra<code>is an additional parameter. In Tencent Cloud SMS service,</code>extra<code>is the application ID, which is divided into corresponding [Send SMS Interface] (https://</code>SignName<code>, </code>TemplateId<code>and</code>SmsSdkAppId` in cloud.tencent.com/document/product/382/55981).</p>
+</span></span></span></code></pre></div><p>In this example:</p>
+<ul>
+<li><code>accessKeyID</code> and <code>accessKeySecret</code>: These are the credentials for Tencent Cloud SMS, corresponding to the <code>SecretId</code> and <code>SecretKey</code> fields, respectively. These credentials can be obtained from the <a href="https://console.cloud.tencent.com/cam/capi">Cloud API Key</a>.</li>
+<li><code>signName</code>: This parameter is the SMS signature used by Tencent Cloud SMS. It corresponds to the <code>SignName</code> field as outlined in the <a href="https://cloud.tencent.com/document/product/382/55981">Send SMS Interface</a>..</li>
+<li><code>template</code>: This refers to the ID of the SMS template used for message formatting. It corresponds to the TemplateId field, as detailed in the <a href="https://cloud.tencent.com/document/product/382/55981">Send SMS Interface</a>..</li>
+<li><code>extras</code>: This is a list of additional parameters required by the SMS service provider. For Tencent Cloud SMS, this includes the <code>SmsSdkAppId</code>, which corresponds directly to the <code>SmsSdkAppId</code> field as specified in the <a href="https://cloud.tencent.com/document/product/382/55981">Send SMS Interface</a>.</li>
+</ul>
 <h3 id="notification"><code>notification</code><a class="td-heading-self-link" href="#notification" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>notification</code> is used to configure the notification configuration of the optimization platform.</p>
+<p>The <code>notification</code> parameter is utilized for configuring the notification settings of the optimization platform.</p>
 <h3 id="notificationtemplatebasepath"><code>notification.templateBasePath</code><a class="td-heading-self-link" href="#notificationtemplatebasepath" aria-label="Heading self-link"></a></h3>
-<p>The parameter <code>notification.templateBasePath</code> sets the path of the notification template. The default value is <code>templates/notification</code>.</p>
-<p>Currently, the default template name is <code>default</code>.</p>
+<p>The <code>notification.templateBasePath</code> parameter specifies the directory path where notification templates are stored. The default path is <code>templates/notification</code>.</p>
+<p>Currently, the default notification template name is <code>default</code>.</p>
+<h2 id="email-configuration-email">Email Configuration <code>email</code><a class="td-heading-self-link" href="#email-configuration-email" aria-label="Heading self-link"></a></h2>
+<p>The Email configuration is mainly for the system to send emails. Its configuration parameters are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td><code>true</code></td>
+<td>Determines whether email functionality is enabled.</td>
+</tr>
+<tr>
+<td><code>provider</code></td>
+<td></td>
+<td>Specifies the email service provider. Supported providers include AWS, Azure, Alibaba Cloud, Tencent Cloud, etc.</td>
+</tr>
+<tr>
+<td><code>clientId</code></td>
+<td></td>
+<td>Corresponds to the <code>ClientId</code> of the email service provider. Field names may vary depending on the provider.</td>
+</tr>
+<tr>
+<td><code>clientSecret</code></td>
+<td></td>
+<td>Corresponds to the <code>ClientSecret</code> of the email service provider. Field names may vary depending on the provider.</td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td></td>
+<td>Specifies the hostname or IP address of the email service provider’s SMTP server. It is crucial for directing email traffic to the correct server for processing outgoing emails.</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td></td>
+<td>Defines the network port used to connect to the email service provider’s SMTP server. Common port values are 587 for TLS/STARTTLS, 465 for SSL, and 25 for non-encrypted communication. The choice of port must align with the security requirements of the email service.</td>
+</tr>
+<tr>
+<td><code>disableSSL</code></td>
+<td></td>
+<td>Determines whether SSL encryption is disabled for the connection to the SMTP server. If set to true, SSL is turned off, which may be necessary for certain server configurations or in environments where encryption is managed differently. However, disabling SSL can expose communication to potential security risks.</td>
+</tr>
+<tr>
+<td><code>endpoint</code></td>
+<td></td>
+<td>Defines the URL or specific network endpoint used for connecting to the email service provider’s API. This is particularly relevant for cloud-based or API-driven email services, where emails are sent via HTTP requests rather than traditional SMTP.</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td></td>
+<td>Indicates the HTTP method (such as POST, GET, PUT, etc.) used when interacting with the email service provider’s API. Typically, POST is used for sending emails because it allows for the transmission of email content and metadata in the request body.</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td></td>
+<td>Specifies the geographical region in which the email service provider’s servers are located. This is important for optimizing latency, compliance with data residency requirements, and possibly cost management, depending on the email service provider.</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td></td>
+<td>The template used by the email service provider for sending messages. Default value is <code>templates/email_code.tpl</code>.</td>
+</tr>
+<tr>
+<td><code>fromAddress</code></td>
+<td></td>
+<td>Sets the email address that appears in the &ldquo;From&rdquo; field of the email. It is the address that recipients will see as the sender. This address should be a verified or authorized address within the email service provider’s system.</td>
+</tr>
+<tr>
+<td><code>fromName</code></td>
+<td></td>
+<td>Specifies the display name associated with the <code>fromAddress</code>. This name appears in the recipient’s inbox as the sender’s name, enhancing the email’s branding and recognition.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="license-configuration-license">License configuration <code>license</code><a class="td-heading-self-link" href="#license-configuration-license" aria-label="Heading self-link"></a></h2>
+<p>The license configuration is mainly for configing license for commercial version. Its configuration parameters are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accessKeyId</td>
+<td></td>
+<td>The <code>accessKeyId</code> is a unique identifier assigned to your account or application. It is utilized to authenticate requests when retrieving a license online. This key is integral to the authentication process and works in conjunction with the <code>accessKeySecret</code> to facilitate secure access to licensing services.</td>
+</tr>
+<tr>
+<td>accessKeySecret</td>
+<td></td>
+<td>The <code>accessKeySecret</code> is the secret key paired with the <code>accessKeyId</code>. It is used to sign and authenticate API requests, ensuring secure communication with the licensing services. This key must remain confidential, as it grants access to critical operations related to license retrieval and validation.</td>
+</tr>
+<tr>
+<td>managerBaseUrl</td>
+<td></td>
+<td>The <code>managerBaseUrl</code> specifies the base URL for the licensing manager service. This URL is used as the endpoint for all API requests related to license retrieval.</td>
+</tr>
+<tr>
+<td>certificate</td>
+<td></td>
+<td>Refers to the license certificate provided offline. This certificate is used to validate the authenticity and integrity of the license.</td>
+</tr>
+<tr>
+<td>signature</td>
+<td></td>
+<td>Contains the cryptographic signature of the license, provided offline. This signature is used to verify the integrity and authenticity of the license certificate, ensuring that it has not been tampered with.</td>
+</tr>
+</tbody>
+</table>
 
   <div class="section-index">
     
@@ -903,8 +1038,8 @@ Among them, <code>createDatabaseIfNotExist</code> means that when the database d
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>

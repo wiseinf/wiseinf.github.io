@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="//localhost:1313/docs/user-guide/app/">
-<link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/docs/user-guide/app/index.xml">
+<link rel="canonical" type="text/html" href="/docs/user-guide/app/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/user-guide/app/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -20,29 +20,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Application / Workload | Cluster Optimizer</title>
-<meta name="description" content="Describe application details and optimization suggestions.
+<meta name="description" content="Review applications / workloads and providing optimization suggestions.
 ">
-<meta property="og:url" content="//localhost:1313/docs/user-guide/app/">
+<meta property="og:url" content="/docs/user-guide/app/">
   <meta property="og:site_name" content="Cluster Optimizer">
   <meta property="og:title" content="Application / Workload">
-  <meta property="og:description" content="Describe application details and optimization suggestions.">
+  <meta property="og:description" content="Review applications / workloads and providing optimization suggestions.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Application / Workload">
-  <meta itemprop="description" content="Describe application details and optimization suggestions.">
-  <meta itemprop="dateModified" content="2024-08-19T11:27:11+08:00">
-  <meta itemprop="wordCount" content="752">
-  <meta itemprop="keywords" content="Cluster Optimizer,Application Optimizer">
+  <meta itemprop="description" content="Review applications / workloads and providing optimization suggestions.">
+  <meta itemprop="dateModified" content="2024-08-28T17:54:54+08:00">
+  <meta itemprop="wordCount" content="704">
+  <meta itemprop="keywords" content="Cluster Optimizer,Optimizing Application">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Application / Workload">
-  <meta name="twitter:description" content="Describe application details and optimization suggestions.">
+  <meta name="twitter:description" content="Review applications / workloads and providing optimization suggestions.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
 
 <script
   src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
@@ -51,7 +51,16 @@
 
 
 <link href="/css/pricing.css" rel="stylesheet">
-<link href="/css/company.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
   </head>
   <body class="td-section">
     <header>
@@ -112,7 +121,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Application / Workload</h1>
-<div class="lead">Describe application details and optimization suggestions.</div>
+<div class="lead">Review applications / workloads and providing optimization suggestions.</div>
 
 
 
@@ -133,12 +142,12 @@ This is the multi-page printable view of this section.
       
 
 <div class="pageinfo pageinfo-primary">
-<p>Application details and optimization suggestions are described.</p>
+<p>Review applications / workloads and providing optimization suggestions.</p>
 
 </div>
 
-<h2 id="view-application">View application<a class="td-heading-self-link" href="#view-application" aria-label="Heading self-link"></a></h2>
-<p>Click the <code>Application</code> menu on the left menu bar of the platform to display the application page, as shown in the figure below.</p>
+<h2 id="review-applications--workloads">Review applications / workloads<a class="td-heading-self-link" href="#review-applications--workloads" aria-label="Heading self-link"></a></h2>
+<p>Click on the <code>Application</code> menu on the left menu bar of the platform to reveal the application page, as shown  below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png" width="900" height="352">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -151,13 +160,13 @@ application
 </figcaption>
 </figure>
 
-<p>The application page is divided into 3 areas:</p>
+<p>The application page is divided into three areas:</p>
 <ol>
-<li><strong>Cluster selection area</strong>: Select the corresponding cluster.</li>
-<li><strong>Query area</strong>: You can query by namespace, load name, load type, container and policy name. Currently, the platform supports resource recommendation, unset resource quota, and memory overflow strategies.</li>
-<li><strong>List area</strong>: Display name, container, current settings, policy name, details and operation bar. Different policy names will have some differences in the displayed information.</li>
+<li><strong>Cluster Selection Area</strong>: Select the appropriate cluster.</li>
+<li><strong>Query Area</strong>: Query by namespace, load name, load type, container, and policy name. The platform currently supports <code>resource recommendation</code>, <code>resource quotas unset</code>, and <code>out of memory</code> strategies.</li>
+<li><strong>List Area</strong>: Displays the name, container, current settings, policy name, details, and an operation bar. The displayed information may vary depending on the strategy name.</li>
 </ol>
-<p>After selecting a cluster in the cluster selection area, the platform aggregates the results of all strategies by default and displays them in a list, as shown in the figure below.</p>
+<p>After selecting a cluster in the <strong>Cluster Selection Area</strong>, the platform aggregates and displays the results of all strategies by default in a list, as shown in the figure below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png" width="900" height="388">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -171,19 +180,19 @@ Application: Select a cluster
 </figure>
 
 <h2 id="resource-recommendation">Resource recommendation<a class="td-heading-self-link" href="#resource-recommendation" aria-label="Heading self-link"></a></h2>
-<h3 id="view-resources-and-recommend-related-applications">View resources and recommend related applications<a class="td-heading-self-link" href="#view-resources-and-recommend-related-applications" aria-label="Heading self-link"></a></h3>
-<p>If the policy name is Resource Recommendation, the list area will be as shown in the figure above. The list area display is divided into 6 columns, which are:</p>
+<h3 id="review-resource-recommendations">Review resource recommendations<a class="td-heading-self-link" href="#review-resource-recommendations" aria-label="Heading self-link"></a></h3>
+<p>When the strategy name is <code>Resource Recommendation</code>, the list area is displayed as shown in the figure above. The list area is divided into six columns:</p>
 <ol>
-<li><strong>Name column</strong>: Displays the payload name, namespace and payload type.</li>
-<li><strong>Container bar</strong>: Displays the container name.</li>
-<li><strong>Owner column</strong>: Displays the department, group and specific personnel of the node owner.</li>
-<li><strong>Current Settings</strong>: Displays the CPU Request, CPU Limit, Memory Request and Memory Limit of the container.</li>
-<li><strong>Details</strong>: Display average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, CPU Request recommended value, CPU Limit recommended value, Memory Request recommended value, Memory Limit recommended value, strategy Name and last updated.</li>
-<li><strong>Operation column</strong>: Displays the corresponding operations on the application.</li>
+<li><strong>Name</strong>: Displays the application name, namespace, and application type.</li>
+<li><strong>Container</strong>: Shows the container name.</li>
+<li><strong>Owner</strong>: Indicates the department, group, and specific personnel of the node owner.</li>
+<li><strong>Current Settings</strong>: Shows the CPU Request, CPU Limit, Memory Request, and Memory Limit for the container.</li>
+<li><strong>Details</strong>: Includes average CPU usage, maximum CPU usage, average memory usage, maximum memory usage, recommended values for CPU Request, CPU Limit, Memory Request, and Memory Limit, strategy name, and last updated time.</li>
+<li><strong>Actions</strong>: Displays the available operations for the application.</li>
 </ol>
 <h3 id="adjust-resource-quota">Adjust resource quota<a class="td-heading-self-link" href="#adjust-resource-quota" aria-label="Heading self-link"></a></h3>
-<p>Click the <code>Adjust</code> link to open the Adjust Resource Quota dialog box, which displays application details, recommended values ​​and corresponding adjustment statements.</p>
-<p>It is displayed in the community version as shown below.</p>
+<p>Click the <code>Adjust</code> link to open the <code>Adjust Resource Quota</code> dialog box, which displays application details, recommended values ​​and corresponding adjustment statements.</p>
+<p>In the community version, it appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png" width="900" height="560">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -196,7 +205,7 @@ Application: Adjust resource quota dialog box
 </figcaption>
 </figure>
 
-<p>It is displayed in the commercial version as shown below.</p>
+<p>In the commercial version, it appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app-b3_huf2002155a079f505abdfbd5c4f88a8fe_77389_900x0_resize_catmullrom_3.png" width="900" height="491">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -209,34 +218,34 @@ Application: Adjust resource quota dialog box
 </figcaption>
 </figure>
 
-<p>In the commercial version, click the <code>OK</code> button to automatically create tasks and automatically adjust resources.</p>
-<h2 id="resource-quota-is-not-set">Resource quota is not set<a class="td-heading-self-link" href="#resource-quota-is-not-set" aria-label="Heading self-link"></a></h2>
-<h3 id="view-applications-that-do-not-have-resource-quotas-set">View applications that do not have resource quotas set<a class="td-heading-self-link" href="#view-applications-that-do-not-have-resource-quotas-set" aria-label="Heading self-link"></a></h3>
-<p>If the policy name is No resource quota set, the list area is displayed as shown below:</p>
+<p>In the commercial version, clicking the <code>OK</code> button will automatically create tasks and adjust resources accordingly.</p>
+<h2 id="resource-quota-unset">Resource quota unset<a class="td-heading-self-link" href="#resource-quota-unset" aria-label="Heading self-link"></a></h2>
+<h3 id="review-resource-quota-unset">Review resource quota unset<a class="td-heading-self-link" href="#review-resource-quota-unset" aria-label="Heading self-link"></a></h3>
+<p>When the strategy name is <code>Resource Quota Unset</code>, the list area appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app4_hu6c148e4c2d42e6030eda415bc43d9aa3_125204_900x0_resize_catmullrom_3.png" width="900" height="432">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Apply: Select the resource quota policy that is not set
+Application: Select `Resource Quota Unset` strategy
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>The list area display is divided into 6 columns, which are:</p>
+<p>The list area is divided into six columns:</p>
 <ol>
-<li><strong>Name column</strong>: Displays the payload name, namespace and payload type.</li>
-<li><strong>Container bar</strong>: Displays the container name.</li>
-<li><strong>Owner Column</strong>: Displays the department, group and specific personnel of the node owner.</li>
-<li><strong>Current Settings</strong>: Shows whether the container&rsquo;s CPU Request, CPU Limit, Memory Request and Memory Limit have been set.</li>
-<li><strong>Details</strong>: Displays the recommended value of CPU Request, recommended value of CPU Limit, recommended value of Memory Request, recommended value of Memory Limit, policy name and latest update time.</li>
-<li><strong>Operation Bar</strong>: Displays the corresponding operations on the application.</li>
+<li><strong>Name</strong>: Displays the application name, namespace, and application type.</li>
+<li><strong>Container</strong>: Shows the container name.</li>
+<li><strong>Owner</strong>: Displays the department, group, and specific personnel of the node owner.</li>
+<li><strong>Current Settings</strong>: Indicates whether the container’s CPU Request, CPU Limit, Memory Request, and Memory Limit have been set.</li>
+<li><strong>Details</strong>: Shows the recommended values for CPU Request, CPU Limit, Memory Request, Memory Limit, policy name, and last update time.</li>
+<li><strong>Operations</strong>: Displays the available actions for the application.</li>
 </ol>
-<h3 id="set-application-resource-quota">Set application resource quota<a class="td-heading-self-link" href="#set-application-resource-quota" aria-label="Heading self-link"></a></h3>
-<p>Click the `Adjust&rsquo; link in the picture above to open the Set Application Resource Quota dialog box, which displays application details, recommended values ​​and corresponding adjustment statements.</p>
-<p>It is displayed in the community version as shown below.</p>
+<h3 id="set-resource-quota">Set resource quota<a class="td-heading-self-link" href="#set-resource-quota" aria-label="Heading self-link"></a></h3>
+<p>Click the <code>Adjust</code> link in the image above to open the <code>Set Application Resource Quota</code> dialog box, which displays application details, recommended values, and corresponding adjustment commands.</p>
+<p>In the community version, it is displayed as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app5_hu80dc269157f0934e6e5833c00cd461d5_84676_900x0_resize_catmullrom_3.png" width="900" height="501">
 <figcaption class="card-body px-0 pt-2 pb-0">
@@ -249,73 +258,73 @@ Application: Set application resource quota dialog box
 </figcaption>
 </figure>
 
-<p>It is displayed in the commercial version as shown below.</p>
+<p>In the commercial version, it is displayed as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app-b5_hu784ee8109267f2eab7d46c944c7605ee_64257_900x0_resize_catmullrom_3.png" width="900" height="432">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Application: Adjust resource quota dialog box
+Application: Set rapplication esource quota dialog box
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>In the commercial version, click the <code>OK</code> button to automatically create tasks and automatically adjust resources.</p>
-<h2 id="memory-overflow">Memory overflow<a class="td-heading-self-link" href="#memory-overflow" aria-label="Heading self-link"></a></h2>
+<p>In the commercial version, clicking the <code>OK</code> button will automatically create tasks and adjust resources accordingly.</p>
+<h2 id="out-of-memory">Out of memory<a class="td-heading-self-link" href="#out-of-memory" aria-label="Heading self-link"></a></h2>
 <h3 id="view-memory-overflow-applications">View memory overflow applications<a class="td-heading-self-link" href="#view-memory-overflow-applications" aria-label="Heading self-link"></a></h3>
-<p>If the policy name is Memory Overflow, the list area will be displayed as shown below:</p>
+<p>When the strategy name is <code>Out of Memory</code>, the list area appears as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app6_hubb1e5856ae2e20a0843d5125bd00838a_116310_900x0_resize_catmullrom_3.png" width="900" height="411">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Application: Select memory overflow policy
+Application: Select `Out of Memory` strategy
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>The list area display is divided into 6 columns, which are:</p>
+<p>The list area is divided into six columns:</p>
 <ol>
-<li><strong>Name column</strong>: Displays the payload name, namespace and payload type.</li>
-<li><strong>Container bar</strong>: Displays the container name.</li>
-<li><strong>Owner Column</strong>: Displays the department, group and specific personnel of the node owner.</li>
-<li><strong>Current settings</strong>: Displays the memory request and memory limit of the container.</li>
-<li><strong>Details</strong>: Displays the latest OOM time, recent OOM Pod, number of OOMs, and latest update time.</li>
-<li><strong>Operation column</strong>: Displays the corresponding operations on the application.</li>
+<li><strong>Name</strong>: Displays the application name, namespace, and application type.</li>
+<li><strong>Container</strong>: Shows the container name.</li>
+<li><strong>Owner</strong>: Displays the department, group, and specific personnel of the node owner.</li>
+<li><strong>Current Settings</strong>: Displays the memory request and memory limit of the container.</li>
+<li><strong>Details</strong>: Shows the latest OOM time, recent OOM Pod, number of OOMs, and last update time.</li>
+<li><strong>Operations</strong>: Displays the available actions for the application.</li>
 </ol>
 <h3 id="adjust-application-memory-size">Adjust application memory size<a class="td-heading-self-link" href="#adjust-application-memory-size" aria-label="Heading self-link"></a></h3>
-<p>Click the Adjust link to open the Adjust Application Memory Size dialog box, which displays application details, recommended memory limit values, and corresponding adjustment statements.</p>
-<p>It is displayed in the community version as shown below.</p>
+<p>Click the <code>Adjust</code> link to open the <code>Adjust Application Memory Size</code> dialog box, which displays application details, recommended memory limit values, and corresponding adjustment commands.</p>
+<p>In the community version, it is displayed as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app7_hu253ed517a5b0de63cf78b90da814ac72_72861_900x0_resize_catmullrom_3.png" width="900" height="431">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Applications: Adjust application memory size dialog
+Applications: Adjust application memory size dialog box
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>It is displayed in the commercial version as shown below.</p>
+<p>In the commercial version, it is displayed as shown below:</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/user-guide/app/app-b7_hu2c480889fc421f01df4cf685a778ca2f_51682_900x0_resize_catmullrom_3.png" width="900" height="315">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-Application: Adjust resource quota dialog box
+Application: Adjust application memory size dialog box
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>In the commercial version, click the <code>OK</code> button to automatically create tasks and automatically adjust resources.</p>
+<p>In the commercial version, clicking the OK button will automatically create tasks and adjust resources accordingly.</p>
 
 </div>
 </div>
@@ -380,8 +389,8 @@ Application: Adjust resource quota dialog box
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>
