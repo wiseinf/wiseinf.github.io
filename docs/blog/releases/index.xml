@@ -15,6 +15,26 @@
     
     
     <item>
+      <title>Blog: Cluster Optimizer v1.3.0 Released</title>
+      <link>/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.3.0 has been released.&lt;/p&gt;
+&lt;p&gt;Key features include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Automated Actions&lt;/strong&gt;: Supports resizing of persistent volumes (&lt;code&gt;PV&lt;/code&gt;s), currently limited to &lt;code&gt;Deployment&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Hibernation&lt;/strong&gt;: Introduces the cluster hibernation feature, allowing manual or scheduled hibernation of clusters to free up node resources, with the ability to restore both the cluster and its workload states upon waking.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, please refer to: &lt;a href=&#34;/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Cluster Optimizer version 1.2.1 has been released</title>
       <link>/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</link>
       <pubDate>Thu, 30 May 2024 00:00:00 +0000</pubDate>

@@ -419,7 +419,7 @@
                 />
   </url><url>
     <loc>/docs/bestpractice/periodic_notification/</loc>
-    <lastmod>2024-08-18T17:40:03+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -496,6 +496,19 @@
                 href="/docs/troubleshooting/"
                 />
   </url><url>
+    <loc>/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</loc>
+    <lastmod>2024-09-02T10:29:47+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/2024/07/10/cluster-optimizer-v1.3.0-released/"
+                />
+  </url><url>
     <loc>/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
@@ -535,6 +548,19 @@
                 href="/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/"
                 />
   </url><url>
+    <loc>/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/</loc>
+    <lastmod>2024-09-02T10:08:05+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/"
+                />
+  </url><url>
     <loc>/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
@@ -547,9 +573,6 @@
                 hreflang="en"
                 href="/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/"
                 />
-  </url><url>
-    <loc>/blog/2018/10/06/second-blog-post/</loc>
-    <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
     <loc>/community/</loc>
     <lastmod>2024-03-19T10:46:41+08:00</lastmod>
@@ -571,10 +594,10 @@
                 />
   </url><url>
     <loc>/tags/best-practices/</loc>
-    <lastmod>2024-08-18T17:40:03+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
     <loc>/categories/best-practices/</loc>
-    <lastmod>2024-08-18T17:40:03+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
     <loc>/blog/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
@@ -590,7 +613,7 @@
                 />
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2024-08-28T18:02:36+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -609,7 +632,7 @@
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
     <loc>/tags/cluster-engine/</loc>
-    <lastmod>2024-08-18T17:40:03+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
     <loc>/tags/cluster-optimization/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
@@ -695,7 +718,7 @@
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
     <loc>/tags/notifications/</loc>
-    <lastmod>2024-08-18T17:40:03+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
     <loc>/tags/optimization-operation/</loc>
     <lastmod>2024-08-19T11:27:11+08:00</lastmod>
@@ -732,7 +755,7 @@
                 />
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2024-08-28T18:02:36+08:00</lastmod>
+    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"

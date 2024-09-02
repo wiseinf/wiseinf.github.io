@@ -137,7 +137,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-b42eb316ba0f0e71f3d63fd4dc5880ff">Periodic notifications of optimization suggestions</a></li>
+<li>1: <a href="#pg-b42eb316ba0f0e71f3d63fd4dc5880ff">Setting Up Periodic Optimization Notifications in Cluster Optimizer</a></li>
 
 
     
@@ -186,108 +186,119 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-b42eb316ba0f0e71f3d63fd4dc5880ff">1 - Periodic notifications of optimization suggestions</h1>
-    <div class="lead">Describes how to set up a periodic optimization suggestion notification mechanism through Cluster Optimizer to facilitate obtaining corresponding optimization suggestions via email.</div>
+	<h1 id="pg-b42eb316ba0f0e71f3d63fd4dc5880ff">1 - Setting Up Periodic Optimization Notifications in Cluster Optimizer</h1>
+    <div class="lead">Explains how to configure a periodic optimization suggestion notification mechanism in Cluster Optimizer to receive optimization suggestions via email.</div>
 	
 
 <div class="pageinfo pageinfo-primary">
-<p>Describes how to set up a periodic optimization suggestion notification mechanism through Cluster Optimizer to facilitate obtaining corresponding optimization suggestions via email.</p>
+<p>This guide explains how to configure a periodic optimization suggestion notification mechanism in <strong>Cluster Optimizer</strong> to receive optimization suggestions via email.</p>
 
 </div>
 
 <h2 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h2>
-<p>During the operation of Kubernetes clusters, we often need to obtain key indicators or information regularly and communicate this information to relevant users through emails or other notification methods. The periodic notification mechanism allows users to make necessary adjustments and optimization operations based on the information received.</p>
-<p>The cluster optimization platform can automatically monitor possible problems and potential optimization points in the cluster, such as low node utilization, application memory overflow, unused Persistent Volume, etc., and generate optimization suggestions containing detailed information and recommended parameters, and notify users via email. . For example, when an application memory overflow is detected, the system will automatically collect relevant information and send this information to the person in charge or responsible person of the application. This not only improves the efficiency of problem response, but also ensures efficient utilization of cluster resources and stable operation of applications. In this way, users can more proactively manage and maintain clusters and applications in the cluster, improving overall operational efficiency.</p>
-<h2 id="usage-scenarios">Usage scenarios<a class="td-heading-self-link" href="#usage-scenarios" aria-label="Heading self-link"></a></h2>
-<p>Users want to obtain common optimization advice information through emails, such as low node utilization, application memory overflow, Persistent Volume is not used, etc., and perform corresponding operations based on these optimization advice information.
-This article will take configuring node group optimization recommendations as an example to outline how to configure Cluster Optimizer so that it can provide periodic optimization recommendation notifications.</p>
-<p>Suppose we expect to notify user Jay (email address is <code>jay@wiseinf.com</code>) via email at 8 a.m. every day of the node group optimization suggestions in the cluster. The specific preconditions and configuration process are as follows.</p>
-<p>Assume that the user has the following needs:</p>
+<p>Kubernetes clusters require regular monitoring to ensure efficient operation. A periodic notification mechanism is essential for keeping relevant users informed about key metrics or issues through emails or other notification methods. This enables users to take timely action for necessary adjustments and optimizations.</p>
+<p>Cluster Optimizer can automatically detect potential issues and optimization opportunities within a cluster, such as low node utilization, application memory overflows, or unused Persistent Volumes. It then generates detailed optimization suggestions and sends them via email to designated recipients. For instance, if an application experiences a memory overflow, the system will automatically collect relevant data and notify the responsible individual. This approach not only enhances response efficiency but also ensures effective resource utilization and stable application performance. Consequently, users can manage and maintain clusters more proactively, significantly improving overall operational efficiency.</p>
+<h2 id="use-cases">Use Cases<a class="td-heading-self-link" href="#use-cases" aria-label="Heading self-link"></a></h2>
+<p>Users may want to receive common optimization suggestions, such as notifications about low node utilization, application memory overflows, or unused Persistent Volumes, and take appropriate actions based on these recommendations. This guide provides an example of configuring Cluster Optimizer to send daily node group optimization suggestions to a user via email.</p>
+<h3 id="example-scenario">Example Scenario<a class="td-heading-self-link" href="#example-scenario" aria-label="Heading self-link"></a></h3>
+<p>Assume the user, Jay (email: <code>jay@wiseinf.com</code>), wants to receive daily email notifications at 8 a.m. with node group optimization suggestions. The following prerequisites and configuration steps outline how to achieve this.</p>
+<h3 id="user-requirements">User Requirements:<a class="td-heading-self-link" href="#user-requirements" aria-label="Heading self-link"></a></h3>
 <ol>
-<li>Send the node group optimization suggestion results to user <code>Jay</code> (the email address is <code>jay@wiseinf.com</code>)</li>
-<li>Receive notifications via email at 8 a.m. daily</li>
+<li>Send node group optimization suggestions to Jay (<code>jay@wiseinf.com</code>).</li>
+<li>Receive notifications via email daily at 8 a.m.</li>
 </ol>
-<p>The cluster optimization platform provides notifications to users through the following two components:</p>
+<p>Cluster Optimizer provides notifications through two components:</p>
 <ul>
-<li>Notification channel: Provides basic configuration parameters for sending notifications. For example, for email notifications, typical configurations include host address, port, user name and password, etc. Notification channels can be used by multiple notification rules.</li>
-<li>Notification rules: Provide configuration parameters, recipient addresses, etc. for constructing notification content.</li>
+<li><strong>Notification Channels</strong>: Configure basic parameters for sending notifications, such as SMTP host address, port, username, and password. Multiple notification rules can use the same notification channel.</li>
+<li><strong>Notification Rules</strong>: Define parameters, recipient addresses, and the content of notifications.</li>
 </ul>
-<p>The following describes how to configure notification channels and notification rules through the cluster optimization platform so that it can meet the above user needs.</p>
-<h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
+<p>The following sections explain how to configure the necessary notification channels and rules to meet the user’s requirements.</p>
+<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
 <ol>
-<li><strong>Cluster Optimizer</strong> has been deployed. For details, please refer to <a href="/docs/setup/">Installation and Deployment</a></li>
-<li>The cluster information has been imported. For details, please refer to <a href="/docs/user-guide/import-cluster/">Import cluster</a></li>
-<li>SMTP server related information, including host address, port, user name, password, etc.</li>
+<li><strong>Cluster Optimizer</strong> is already deployed. Refer to the <a href="/docs/setup/">Installation and Deployment Guide</a> for details.</li>
+<li>Cluster information has been imported. See <a href="/docs/user-guide/import-cluster/">Import Cluster Guide</a> for more information.</li>
+<li>SMTP server details, including host address, port, username, and password.</li>
 </ol>
-<!-- ## System architecture -->
-<h2 id="configuration-steps">Configuration steps<a class="td-heading-self-link" href="#configuration-steps" aria-label="Heading self-link"></a></h2>
+<h2 id="configuration-steps">Configuration Steps<a class="td-heading-self-link" href="#configuration-steps" aria-label="Heading self-link"></a></h2>
 <ol>
 <li>
-<p>Configure notification channels: Go to the notification channel management page from <code>Settings --&gt; Notification Channels</code>. On the notification channel page, click the <code>Add</code> button to pop up the <code>Add Notification Channel</code> dialog box. In the notification channel dialog box, enter the corresponding information, and then click the <code>OK</code> button, as shown in the figure below.</p>
+<p><strong>Configure Notification Channels</strong>:<br>
+Navigate to the Notification Channel Management page via <code>Settings --&gt; Notification Channels</code>. Click the <code>Add</code> button to open the <code>Add Notification Channel</code> dialog box. Enter the required information and click <code>OK</code> as shown below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/bestpractice/periodic_notification/channel_hu68919782ab86abf7d1c5207e348838b5_45863_900x0_resize_catmullrom_3.png" width="900" height="961">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-    Notification channel settings
-    <small class="text-muted"><br/>Wiseinf Inc.</small>
+   Notification Channel Settings
+   <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Among them, the notification channel name is set to <code>email</code>, the host address is set to <code>smtp.wiseinf.com</code>, the port is set to <code>465</code>, the user name is set to <code>optimizer@wiseinf.com</code>, password, etc., where the SMTP server host address is , port, username, password and other information are the SMTP server related information obtained in the prerequisites and need to be filled in according to the actual situation.</p>
+<ul>
+<li>Set the notification channel name to <code>email</code>.</li>
+<li>Enter the SMTP server host address as <code>smtp.wiseinf.com</code>, port as <code>465</code>, username as <code>optimizer@wiseinf.com</code>, and the appropriate password.</li>
+</ul>
 <blockquote>
-<p>Note: For the description of the configuration items of the notification channel dialog box, please refer to [Add Channel]/docs/user-guide/management/channel/#Add Channel</p>
+<p><strong>Note</strong>: For detailed descriptions of the notification channel configuration options, refer to the <a href="/docs/user-guide/management/channel/#Add Channel">Add Channel Guide</a>.</p>
 </blockquote>
 </li>
 <li>
-<p>Configure notification rules: Go to the notification rule management page from <code>Settings --&gt; Notification Rules</code>. On the notification channel page, click the <code>Add</code> button to pop up the <code>Add Notification Rule</code> dialog box. The notification rules dialog box mainly includes the following information: notification recipient information, focused optimization suggestions, notification channels, and matching rules.
-Please enter the corresponding information and click the <code>OK</code> button, as shown in the figure below.</p>
+<p><strong>Configure Notification Rules</strong>:<br>
+Navigate to the Notification Rule Management page via <code>Settings --&gt; Notification Rules</code>. Click the <code>Add</code> button to open the <code>Add Notification Rule</code> dialog box. Fill in the necessary details, such as recipient information, optimization suggestions to focus on, notification channels, and matching rules, then click <code>OK</code> as shown below.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/bestpractice/periodic_notification/rule_hu9667eae7f513e3a4bc6615116c6706c7_67641_900x0_resize_catmullrom_3.png" width="900" height="922">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-    Notification rule settings
-    <small class="text-muted"><br/>Wiseinf Inc.</small>
+   Notification Rule Settings
+   <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>Among them, the receiver is set to <code>jay@wiseinf.com</code>, the notification channel selects the <code>email</code> notification channel created in <strong>Step 1</strong>, the scheduling time is set to 8 am every day, the optimization strategy selects the node group recommendation, and the cluster Just select the cluster imported in the preconditions, as shown in the figure below.</p>
+<ol>
+<li>Set the recipient to <code>jay@wiseinf.com</code>.</li>
+<li>Select the <code>email</code> notification channel created in <strong>Step 1</strong>.</li>
+<li>Schedule the notification to be sent daily at 8 a.m.</li>
+<li>Choose the node group recommendation strategy and select the appropriate cluster imported in the prerequisites.</li>
+</ol>
 <blockquote>
-<p>Note: For the description of the configuration items of the notification rule dialog box, please refer to [Add Notification Rule]/docs/user-guide/management/rule/#Add Notification Rule</p>
+<p><strong>Note</strong>: For a detailed explanation of the notification rule configuration options, refer to the <a href="/docs/user-guide/management/rule/#Add Notification Rule">Add Notification Rule Guide</a>.</p>
 </blockquote>
 </li>
 <li>
-<p>After completing the above configuration, you can regularly receive corresponding emails via email. The email content is as shown in the figure below.</p>
+<p><strong>Receive Emails</strong>:<br>
+Once configured, Jay will receive daily emails containing the node group optimization suggestions. The email will include the current status of the node group, such as instance type, auto-scaling settings, and recommended adjustments. This information allows Jay to optimize node groups effectively, reducing costs and improving load management.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
 <img class="card-img-top" src="/docs/bestpractice/periodic_notification/email_hu4c8db2394b8c7180dce0a7cec9555708_55391_900x0_resize_catmullrom_3.png" width="900" height="191">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
 
-    Node group optimizes email content
-    <small class="text-muted"><br/>Wiseinf Inc.</small>
+   Node Group Optimization Email Content
+   <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
 </figure>
 
-<p>From this we can know the current status of the node group in the cluster.including instance type, automatic scaling, maximum and minimum node values, optimized instance type, automatic scaling, maximum and minimum node values. Users can guide the optimization of node groups based on these settings. For example, the current instance type in the figure is <code>r5a.4xlarge</code>, and you can consider adjusting it to <code>r6a.large</code>, <code>r5a.large</code>, etc. The cluster optimization platform will consider a variety of factors when recommending node instances: including the price of the node, the availability of the node area, the node architecture, the CPU and memory usage of the cluster node group, etc. At the same time, the node group recommends the maximum and minimum values ​​of the nodes of the node group. Using the recommended values ​​can effectively reduce costs while making dynamic load more effective in utilizing the ability to automatically expand and shrink to maximize the stability of collective applications.</p>
+<p>The example shows that the current instance type is <code>r5a.4xlarge</code>. Consider adjusting it to <code>r6a.large</code> or <code>r5a.large</code> based on the recommendations. The platform considers various factors, including instance pricing, node availability, architecture, and resource usage, to provide optimal recommendations.</p>
 </li>
 </ol>
-<h2 id="learn-more">Learn more<a class="td-heading-self-link" href="#learn-more" aria-label="Heading self-link"></a></h2>
-<p>The cluster optimization platform provides a series of capabilities to facilitate users to easily obtain optimization recommendation notifications.</p>
-<p>The cluster optimization platform provides a series of optimization strategies, including low utilization nodes, low utilization disks, Persistent Volume identification, application resource recommendation, memory overflow, etc.
-The notification rules in the cluster optimization platform provide a series of matching rules. Users can choose different matching rules according to their needs, including matching for resource owners (including departments, groups, users) and namespace matching.
-Users can use personalized custom templates to achieve personalized email notifications.</p>
-<h2 id="reference-link">Reference link<a class="td-heading-self-link" href="#reference-link" aria-label="Heading self-link"></a></h2>
+<h2 id="learn-more">Learn More<a class="td-heading-self-link" href="#learn-more" aria-label="Heading self-link"></a></h2>
+<p><strong>Cluster Optimizer</strong> offers various capabilities to facilitate easy access to optimization suggestions:</p>
+<ul>
+<li>A range of optimization strategies, including low-utilization nodes, disks, Persistent Volumes, application resource recommendations, and memory overflow alerts.</li>
+<li>Flexible notification rules that can be customized based on resource ownership, namespaces, and other criteria.</li>
+<li>Personalized email notifications using custom templates.</li>
+</ul>
+<h2 id="reference-links">Reference Links<a class="td-heading-self-link" href="#reference-links" aria-label="Heading self-link"></a></h2>
 <ol>
-<li><a href="/docs/setup/">Cluster optimization platform installation and deployment process</a></li>
-<li><a href="/docs/user-guide/import-cluster/">Import cluster</a></li>
-<li><a href="/">Wiseinf official website</a></li>
+<li><a href="/docs/setup/">Cluster Optimizer Installation and Deployment</a></li>
+<li><a href="/docs/user-guide/import-cluster/">Import Cluster Guide</a></li>
+<li><a href="/">Wiseinf Official Website</a></li>
 </ol>
 
 </div>
