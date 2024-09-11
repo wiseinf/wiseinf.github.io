@@ -400,6 +400,19 @@
                 href="/zh-cn/docs/bestpractice/periodic_notification/"
                 />
   </url><url>
+    <loc>/zh-cn/blog/blog/</loc>
+    <lastmod>2024-09-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/blog/blog/"
+                />
+  </url><url>
     <loc>/zh-cn/price/</loc>
     <xhtml:link
                 rel="alternate"
@@ -461,7 +474,7 @@
                 />
   </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2024-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -471,6 +484,32 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/"
+                />
+  </url><url>
+    <loc>/zh-cn/blog/</loc>
+    <lastmod>2024-09-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/blog/"
+                />
+  </url><url>
+    <loc>/zh-cn/blog/2024/09/11/%E8%AF%84%E4%BC%B0%E9%9B%86%E7%BE%A4%E4%BC%91%E7%9C%A0%E8%8A%82%E7%9C%81%E6%88%90%E6%9C%AC/</loc>
+    <lastmod>2024-09-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/blog/2024/09/11/%E8%AF%84%E4%BC%B0%E9%9B%86%E7%BE%A4%E4%BC%91%E7%9C%A0%E8%8A%82%E7%9C%81%E6%88%90%E6%9C%AC/"
                 />
   </url><url>
     <loc>/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</loc>
@@ -484,19 +523,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
-                />
-  </url><url>
-    <loc>/zh-cn/blog/</loc>
-    <lastmod>2024-09-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/blog/"
                 />
   </url><url>
     <loc>/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</loc>
@@ -517,7 +543,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/"
+                href="/blog/2024/05/30/cluster-optimizer-v1.2.1-released/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -530,7 +556,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/"
+                href="/blog/2024/05/20/cluster-optimizer-v1.2.0-released/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -543,7 +569,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/"
+                href="/blog/2024/04/09/cluster-optimizer-v1.1.0-released/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -569,7 +595,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/"
+                href="/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/"
                 />
     <xhtml:link
                 rel="alternate"

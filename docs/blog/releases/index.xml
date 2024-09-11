@@ -56,15 +56,15 @@
     </item>
     
     <item>
-      <title>Blog: Cluster Optimizer version 1.2.1 has been released</title>
-      <link>/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</link>
+      <title>Blog: Cluster Optimizer v1.2.1 Released</title>
+      <link>/blog/2024/05/30/cluster-optimizer-v1.2.1-released/</link>
       <pubDate>Thu, 30 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2024/05/30/cluster-optimizer-version-1.2.1-has-been-released/</guid>
+      <guid>/blog/2024/05/30/cluster-optimizer-v1.2.1-released/</guid>
       <description>
         
         
-        &lt;p&gt;The cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; version 1.2.1 has been released.&lt;/p&gt;
+        &lt;p&gt;The cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.2.1 has been released.&lt;/p&gt;
 &lt;p&gt;Key features include:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Database Schema is automatically upgraded.&lt;/li&gt;
@@ -76,15 +76,15 @@
     </item>
     
     <item>
-      <title>Blog: Cluster Optimizer version 1.2.0 has been released</title>
-      <link>/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/</link>
+      <title>Blog: Cluster Optimizer v1.2.0 Released</title>
+      <link>/blog/2024/05/20/cluster-optimizer-v1.2.0-released/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2024/05/20/cluster-optimizer-version-1.2.0-has-been-released/</guid>
+      <guid>/blog/2024/05/20/cluster-optimizer-v1.2.0-released/</guid>
       <description>
         
         
-        &lt;p&gt;Cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; version 1.2.0 has been released.&lt;/p&gt;
+        &lt;p&gt;Cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.2.0 has been released.&lt;/p&gt;
 &lt;p&gt;Key features include:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Authentication and authorization: Supports user authentication and permissions, providing users with two roles: &lt;strong&gt;Administrator&lt;/strong&gt; and &lt;strong&gt;User&lt;/strong&gt;. Administrators have all operation permissions, and users only have viewing permissions.&lt;/li&gt;
@@ -98,15 +98,15 @@
     </item>
     
     <item>
-      <title>Blog: Cluster Optimizer version 1.1.0 has been released</title>
-      <link>/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/</link>
+      <title>Blog: Cluster Optimizer v1.1.0 Released</title>
+      <link>/blog/2024/04/09/cluster-optimizer-v1.1.0-released/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2024/04/09/cluster-optimizer-version-1.1.0-has-been-released/</guid>
+      <guid>/blog/2024/04/09/cluster-optimizer-v1.1.0-released/</guid>
       <description>
         
         
-        &lt;p&gt;Cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; version 1.1.0 has been released.&lt;/p&gt;
+        &lt;p&gt;Cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.1.0 has been released.&lt;/p&gt;
 &lt;p&gt;Key features include:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;AWS Cloud EKS integration: Supports importing AWS EKS clusters and viewing optimization suggestions for the clusters.&lt;/li&gt;
@@ -122,15 +122,15 @@
     </item>
     
     <item>
-      <title>Blog: Cluster Optimizer version 1.1.0 has been released</title>
-      <link>/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</link>
+      <title>Blog: Cluster Optimizer version 1.1.0 Released</title>
+      <link>/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2024/01/08/cluster-optimizer-version-1.1.0-has-been-released/</guid>
+      <guid>/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/</guid>
       <description>
         
         
-        &lt;p&gt;Cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; version 1.0.0 has been released.&lt;/p&gt;
+        &lt;p&gt;Cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.0.0 has been released.&lt;/p&gt;
 &lt;p&gt;Key features include:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Alibaba Cloud ACK integration: Supports importing Alibaba Cloud ACK clusters and viewing optimization suggestions for the cluster, including node groups, nodes, disks, persistent volumes, and applications.&lt;/li&gt;

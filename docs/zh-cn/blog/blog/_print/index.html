@@ -1,0 +1,366 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="/zh-cn/blog/blog/">
+<link rel="alternate" type="application/rss&#43;xml" href="/zh-cn/blog/blog/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>博客 | Cluster Optimizer</title>
+<meta name="description" content="云原生集群优化平台">
+<meta property="og:url" content="/zh-cn/blog/blog/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="博客">
+  <meta property="og:description" content="云原生集群优化平台">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="博客">
+  <meta itemprop="description" content="云原生集群优化平台">
+  <meta itemprop="dateModified" content="2024-09-11T00:00:00+00:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="博客">
+  <meta name="twitter:description" content="云原生集群优化平台">
+
+
+
+
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed18adfa9d5018b92dca2b01dc0463ce";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
+  </head>
+  <body class="td-section td-blog">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/zh-cn/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/docs/"><span>文档</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/price/"><span>价格</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/zh-cn/blog/"><span>博客</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/zh-cn/about/"><span>关于我们</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/blog/blog/">English</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/zh-cn/blog/blog/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">博客</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+
+    <li><a href="#pg-d42bdcc3391dd8049e8ac545d06df354">评估集群休眠节省成本</a></li>
+
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+
+  
+
+<div class="td-content" style="">
+    <h1 id="pg-d42bdcc3391dd8049e8ac545d06df354">评估集群休眠节省成本</h1>
+	<div class="lead">本文描述了如何通过工具评估集群休眠节省的成本。</div>
+	<div class="td-byline mb-4">
+		
+        
+		<time datetime="2024-09-11" class="text-muted">2024-09-11</time>
+        
+	</div>
+	<h2 id="集群休眠概述">集群休眠概述<a class="td-heading-self-link" href="#%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0%e6%a6%82%e8%bf%b0" aria-label="Heading self-link"></a></h2>
+<p>资源闲置和利用率低是用户使用云原生集群时的痛点之一。例如，开发、测试和演示环境等线下运行的集群通常在工作时间之外的利用率很低，但企业仍需为这些资源支付费用。</p>
+<p>集群休眠能够自动或手动控制集群的休眠和恢复，释放和恢复集群中的节点来降低集群的资源占用，提高资源利用率，节约成本。例如， 通过合理配置集群休眠策略，在非工作时间段（如夜间或周末）自动关闭集群，企业可以显著减少不必要的资源消耗，实现显著的成本节约。因此，集群休眠是一种有效的成本管理策略，特别适用于线下非生产环境。</p>
+<h2 id="集群休眠策略">集群休眠策略<a class="td-heading-self-link" href="#%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0%e7%ad%96%e7%95%a5" aria-label="Heading self-link"></a></h2>
+<p>集群休眠在休眠期间逐步释放集群中的节点，存储集群中负载（例如Deployment、Job等）的状态。在恢复期间，恢复集群节点和集群中负载（例如Deployment、Job等）的状态。集群一般通过节点组（也叫节点池）来管理，节点组中会配置不同的节点类型，比如预留节点（例如包年包月）和按需节点（例如按量付费，抢占式实例）。根据节点组是否能够自动扩缩容，可将其分为非自动扩缩容节点组和自动扩缩容节点组，并采用不同的集群休眠策略。</p>
+<p>非自动扩缩容节点组中节点数量是固定配置，无法根据负载动态调整资源，需手动管理节点数量。针对此类节点组，休眠期间会将其节点数量调整为0，促使云服务商逐步释放该节点组的节点。恢复期间调整为原节点数量。值得注意的是，将节点数设置为0并不意味着节点组内所有节点都会被释放掉。一般情况下，节点组内的预留节点仍将保留。</p>
+<p>自动扩缩容节点组是一种根据实际负载动态调整节点数量的机制，以优化资源利用。针对此类节点组，集群休眠将可调整的工作负载都进行调整，并依赖于该节点组的扩缩容策略进行缩容。例如，将Deployment的副本数调整为0，将CronJob暂停等，从而触发该节点组的缩容，减少节点数量。</p>
+<h2 id="集群休眠收益评估">集群休眠收益评估<a class="td-heading-self-link" href="#%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0%e6%94%b6%e7%9b%8a%e8%af%84%e4%bc%b0" aria-label="Heading self-link"></a></h2>
+<h3 id="集群休眠收益评估工具">集群休眠收益评估工具<a class="td-heading-self-link" href="#%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0%e6%94%b6%e7%9b%8a%e8%af%84%e4%bc%b0%e5%b7%a5%e5%85%b7" aria-label="Heading self-link"></a></h3>
+<p>我们提供了工具<code>cluster-hibernate-saving-estimate</code>帮助用户评估集群中可节约的资源。该工具能够扫描集群中每个节点组的详情，给出节点组概况、最大潜在节省、潜在节省、推荐操作和节点组Deployment资源请求总和。其中：</p>
+<ul>
+<li>最大潜在节省（Max Potential Saving）：指在调整节点组中各类型节点达到理想分布情况下所能够节省的最大空间。</li>
+<li>潜在节省（Potential Saving）：指在当前节点组现状下所能够节省的空间。</li>
+<li>节点组Deployment资源请求总和（Sum of Deployment Resource Requests）：指该节点组中实际部署的Deployment的Pod的资源Request的总和，该值主要是用于参考值，用于粗略评估该节点组中Deployment的资源请求占用情况。其占比越高，则对于自动扩缩容节点组能够达到的最大潜在节省最高。</li>
+</ul>
+<blockquote>
+<p><strong>注</strong>：集群休眠收益评估工具可在<code>https://github.com/wiseinf/cluster-hibernate-saving-estimate/tags</code> 下载， 目前仅支持阿里云、AWS等云平台。</p>
+</blockquote>
+<p>下面我们分析下两种常见场景下集群休眠的收益。</p>
+<h4 id="场景1非自动伸缩节点组仅包含预留节点">场景1：非自动伸缩节点组，仅包含预留节点<a class="td-heading-self-link" href="#%e5%9c%ba%e6%99%af1%e9%9d%9e%e8%87%aa%e5%8a%a8%e4%bc%b8%e7%bc%a9%e8%8a%82%e7%82%b9%e7%bb%84%e4%bb%85%e5%8c%85%e5%90%ab%e9%a2%84%e7%95%99%e8%8a%82%e7%82%b9" aria-label="Heading self-link"></a></h4>
+<p>非自动伸缩节点组中若仅包含预留节点，典型输出如下：</p>
+<pre tabindex="0"><code>NodeGroup: cpu-ng(npa324882932487c9777eaa7f6854e4)  Total Nodes: 4  Autoscaling: false
+  OnDemandNodes: 0  
+  SpotNodes: 0  
+  ReservedNodes: 4  cpu: 32 cores, memory: 128 gib
+    Node: cn-beijing.171.19.105.70(i-bp19u4ufadv9niflo1o4) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.19.105.74(i-bp19u4ufadv9niflo1o3) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.19.105.71(i-bp19u4ufadv9niflo1o5) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.19.105.251(i-bp161b0ldoqt1k771t5e) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
+  Max Potential Saving: CPU: 14125.71 core hours; Memory: 56502.86 gib hours
+  Potential Saving: No saving, no spot or on demand nodes
+  Recommendation: adjust some reserved nodes to on-demand or spot nodes based on its usage
+  Sum of Deployment Resource Requests: CPU 8.63 cores, Memory 18.68 gibs
+该节点组包含4个预留节点，总计包含32核CPU和128Gi内存。假设该节点组在周一至周五晚上9点开始休眠，周一至周五早上8点开始恢复（也就是结束休眠），每月按照30日计算。
+</code></pre><p>该节电组最大潜在节省中CPU可节约核时是 14125.71核时，计算如下：</p>
+<pre tabindex="0"><code>    14125.71核时 = 32（CPU核数）* 720（每月小时数） * 103(每周休眠小时数) / 168（每周小时数）
+</code></pre><p>其中，32核是该节点组的总核数。最大潜在节省时将预留节点都调整为按需节点，此时可达到最大潜在节省。</p>
+<p>内存的可节约Gi时计算方式同CPU类似，不再赘述。</p>
+<p>该节点组潜在节省为0。在当前现状下，节点组都是预留节点，将节点组节点数量调整为0时不会释放任何节点，此时无法节省成本。若期望节省成本，需将部分节点调整为按需节点。</p>
+<blockquote>
+<p>注：实际调整节点类型时需考虑预留节点和按需节点价格差异。</p>
+</blockquote>
+<h4 id="场景2自动伸缩节点组-包含按需节点">场景2：自动伸缩节点组， 包含按需节点<a class="td-heading-self-link" href="#%e5%9c%ba%e6%99%af2%e8%87%aa%e5%8a%a8%e4%bc%b8%e7%bc%a9%e8%8a%82%e7%82%b9%e7%bb%84-%e5%8c%85%e5%90%ab%e6%8c%89%e9%9c%80%e8%8a%82%e7%82%b9" aria-label="Heading self-link"></a></h4>
+<pre tabindex="0"><code>NodeGroup: as-cpu-ng(np151adb107448039712d3a24f0d50a)  Total Nodes: 12  Autoscaling: true
+  OnDemandNodes: 6  cpu: 192 cores, memory: 384 gib
+    Node: cn-beijing.171.18.106.158(i-bp6f7txtyecxuauzgk6m) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.76(i-bp6f7txtyecxuauzgk6o) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.69(i-bp6f7txtyecxuauzgk6j) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.79(i-bp6f7txtyecxuauzgk6k) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.159(i-bp6f7txtyecxuauzgk6h) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.125(i-bp6f7txtyecxuauzgk6g) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+  SpotNodes: 0  
+  ReservedNodes: 6    cpu: 192 cores, memory: 384 gib
+    Node: cn-beijing.171.18.106.75(i-bp6f7txtyecxuauzgk6d) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.120(i-bp6f7txtyecxuauzgk6l) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.71(i-bp6f7txtyecxuauzgk6f) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.123(i-bp6f7txtyecxuauzgk6i) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.78(i-bp6f7txtyecxuauzgk6n) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
+    Node: cn-beijing.171.18.106.248(i-bp6f7txtyecxuauzgk6e) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid  
+  Max Potential Saving: CPU: 98880 core hours; Memory: 197760 gib hours
+  Potential Saving: CPU: 84754.29 core hours; Memory: 169508.57 gib hours
+  Recommendation: no recommendation
+  Sum of Deployment Resource Requests: CPU 224.00 cores, Memory 448.00 gibs
+</code></pre><p>该节点组最大潜在节省中CPU可节约核时计算如下：</p>
+<pre tabindex="0"><code>    98880核时 = 224（CPU核数）* 720（每月小时数）* 103(每周休眠小时数) / 168（每周小时数）
+</code></pre><p>其中，计算时采用的CPU核数是节点组Deployment资源请求总和（224核）。</p>
+<p>该节点组潜在节省中CPU可节约核时数计算如下：</p>
+<pre tabindex="0"><code>    84754.29核时 = 192（CPU核数）* 720（每月小时数）* 103(每周休眠小时数) / 168（每周小时数）
+</code></pre><p>其中，计算时采用的CPU核数是节点组Deployment资源请求总和中CPU核数和按需节点组核数总和的较小值（192核）。</p>
+<p>该节点组中潜在节省中CPU可节约核时数小于最大潜在节省中CPU最大可节约核时，此时可通过将部分预留节点调整为按需节点，达到最大潜在节省中CPU最大可节约核时。</p>
+<h2 id="问题解决方案">问题&amp;解决方案<a class="td-heading-self-link" href="#%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" aria-label="Heading self-link"></a></h2>
+<h3 id="工作负载状态的保存和恢复">工作负载状态的保存和恢复<a class="td-heading-self-link" href="#%e5%b7%a5%e4%bd%9c%e8%b4%9f%e8%bd%bd%e7%8a%b6%e6%80%81%e7%9a%84%e4%bf%9d%e5%ad%98%e5%92%8c%e6%81%a2%e5%a4%8d" aria-label="Heading self-link"></a></h3>
+<p>集群休眠涉及到工作负载状态的保存和恢复，用户主要顾虑是集群恢复时无法完全恢复工作负载的状态，导致工作负载不可用，需要进行排障，从而影响工作效率。集群休眠主要通过调整节点组（释放和恢复节点）来进行，若集群休眠和恢复导致工作负载不可用，则同样的问题也会出现在线上。在云原生的场景中，应用必须具备弹性能力，最好的解决方式是排查工作负载不可用的原因并彻底解决，使得该应用能够忍受节点故障，同时也消除该应用线上由于节点故障等导致的不可用风险。</p>
+<h3 id="期望工作负载在集群休眠时保持运行状态">期望工作负载在集群休眠时保持运行状态<a class="td-heading-self-link" href="#%e6%9c%9f%e6%9c%9b%e5%b7%a5%e4%bd%9c%e8%b4%9f%e8%bd%bd%e5%9c%a8%e9%9b%86%e7%be%a4%e4%bc%91%e7%9c%a0%e6%97%b6%e4%bf%9d%e6%8c%81%e8%bf%90%e8%a1%8c%e7%8a%b6%e6%80%81" aria-label="Heading self-link"></a></h3>
+<p>若期望工作负载在集群休眠期间仍保持运行状态，需保证工作负载具备如下特性：</p>
+<p>该负载可调度到自动扩缩容节点组上运行（集群中至少包含一个自动扩缩容节点组）
+包含标签<code>wiseinf.com/reserved</code>，其值是<code>true</code>。集群休眠调整工作负载状态时会忽略包含该标签的工作负载。目前仅支持三种类型：<code>Deployment</code>、<code>DaemonSet</code>和<code>CronJob</code>。</p>
+<h2 id="总结">总结<a class="td-heading-self-link" href="#%e6%80%bb%e7%bb%93" aria-label="Heading self-link"></a></h2>
+<p>集群休眠是一个行之有效的成本管理策略，特别适用于线下非生产环境。集群休眠收益评估工具能够快速评估集群使用集群休眠策略时每个节点池可节约的空间，同时也给出了两个典型场景（包括自动扩缩容节点组和非自动扩缩容节点组）下的评估案例，帮助用户更好的进行评估收益，从而可通过调整设置，降低资源成本。</p>
+<h2 id="关于集群优化平台">关于集群优化平台<a class="td-heading-self-link" href="#%e5%85%b3%e4%ba%8e%e9%9b%86%e7%be%a4%e4%bc%98%e5%8c%96%e5%b9%b3%e5%8f%b0" aria-label="Heading self-link"></a></h2>
+<p>集群优化平台<strong>Cluster Optimizer</strong>是云智优本公司研发的一站式云原生优化平台，致力于帮助客户降低云原生集群和应用的成本，提升运营效率。它是一个基于数据驱动的智能决策平台，是基于云资源、应用以及用户、云厂商行为数据，利用深度学习、序列决策等算法，结合云、微服务、云原生等实践经验，构建的一套技术解决方案。此平台能够全面深入分析云资源、应用、用户行为及服务商数据及使用情况，预测未来资源需求，精准识别成本优化的机会，并提供个性化的优化建议。此外，平台采用全链路闭环的自动化优化机制，提高了优化效率，减少了人为错误，使客户能够轻松实现云原生集群及应用资源的自动化管理和优化，提升资源利用效率，显著降低云成本，提高运营效率。</p>
+
+</div>
+
+
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div style="display: flex;justify-content: flex-start;">
+    <div style="margin-right: 200px; margin-left:20px; margin-bottom: 40px;">
+      <h4 style="margin-bottom: 10px;">Company</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; justify-content: space-around;">
+        <li><a href="/about" style="color: #ffffff;; text-decoration: none;">About Us</a></li>
+        <li><a href="mailto:business@wiseinf.com?subject=Cluster Optimizer" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
+        <li><a href="/aggrement" style="color: #ffffff; text-decoration: none;">User Agreement</a></li>
+        <li><a href="/privacy" style="color: #ffffff; text-decoration: none;"> Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div  style="margin-right: 200px">
+      <h4 style="margin-bottom: 10px;">Community</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+        <li><a href="https://www.facebook.com/groups/clusteroptimizer/" style="color: #ffffff; text-decoration: none;">Facebook Group</a></li>
+        <li><a href="https://github.com/wiseinf/cluster-optimizer-issues" style="color: #ffffff; text-decoration: none;">Github Issues</a></li>
+        <li><a href="http://clusteroptimizer.slack.com" style="color: #ffffff; text-decoration: none;">Slack</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="margin-bottom: 10px;">Partner</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+        <li><a href="mailto:business@wiseinf.com?subject=Become a partner" style="color: #ffffff; text-decoration: none;">Become a partner</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="帮助和支持" aria-label="帮助和支持">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=%e5%b8%ae%e5%8a%a9%e5%92%8c%e6%94%af%e6%8c%81" aria-label="帮助和支持">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="商务合作" aria-label="商务合作">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=%e5%95%86%e5%8a%a1%e5%90%88%e4%bd%9c" aria-label="商务合作">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">北京云智优本科技有限公司</span></span><span class="td-footer__all_rights_reserved">保留所有权利</span><p><span class="ms-2"><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023011485号</a></span>
+<span class="ms-2"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802042031" target="_blank">京公安网备11010802042031号</a></span></p>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
