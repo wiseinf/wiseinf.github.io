@@ -90,7 +90,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to [Creating a custom permission policy through script editing mode](&lt;a href=&#34;https://help.aliyun.com/zh/ram/user-&#34;&gt;https://help.aliyun.com/zh/ram/user-&lt;/a&gt; guide/create-a-custom-policy#section-kwn-gu8-48m)&lt;/p&gt;
+&lt;p&gt;The permission policy file is described as follows. You can import the policy directly in the Alibaba Cloud console. For details, please refer to &lt;a href=&#34;https://help.aliyun.com/zh/ram/user-guide/create-a-custom-policy#section-kwn-gu8-48m&#34;&gt;Creating a custom permission policy through script editing mode&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
@@ -124,7 +124,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Alibaba Cloud Kubernetes cluster Kubeconfig. For cluster versions 1.22 and above, it is recommended to use ACK cluster. For details, please see &lt;a href=&#34;https://help.aliyun.com/zh/ack/&#34;&gt;Container Service Kubernetes version&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Alibaba Cloud Kubernetes cluster Kubeconfig. For cluster versions 1.22 and above, it is recommended to use ACK cluster. For details, please see &lt;a href=&#34;https://help.aliyun.com/zh/ack/&#34;&gt;Container Service Kubernetes&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Kubeconfig requires the following permissions.&lt;/p&gt;

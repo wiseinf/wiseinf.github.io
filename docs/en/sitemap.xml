@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>/docs/user-guide/import-cluster/import-alibaba/</loc>
-    <lastmod>2024-08-28T17:54:54+08:00</lastmod>
+    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -496,6 +496,19 @@
                 href="/docs/troubleshooting/"
                 />
   </url><url>
+    <loc>/blog/2024/09/10/cluster-optimizer-v1.3.1-released/</loc>
+    <lastmod>2024-09-10T16:28:23+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/2024/09/10/cluster-optimizer-v1.3.1-released/"
+                />
+  </url><url>
     <loc>/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</loc>
     <lastmod>2024-09-02T10:29:47+08:00</lastmod>
     <xhtml:link
@@ -613,7 +626,7 @@
                 />
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
+    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -638,10 +651,10 @@
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
     <loc>/categories/cluster-optimization/</loc>
-    <lastmod>2024-08-28T17:54:54+08:00</lastmod>
+    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
   </url><url>
     <loc>/tags/cluster-optimizer/</loc>
-    <lastmod>2024-08-28T18:02:36+08:00</lastmod>
+    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -758,7 +771,7 @@
                 />
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2024-09-02T10:31:45+08:00</lastmod>
+    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"

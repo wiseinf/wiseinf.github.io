@@ -5,7 +5,7 @@
     <description>Recent content on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Sep 2024 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/zh-cn/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,27 @@
       
       
     
+    
+    <item>
+      <title>Blog: Cluster Optimizer v1.3.1版已发布</title>
+      <link>/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <description>
+        
+        
+        &lt;p&gt;集群优化平台 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.3.1 已正式发布。&lt;/p&gt;
+&lt;p&gt;主要特性包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Spot 节点支持&lt;/strong&gt;：在&lt;code&gt;节点&lt;/code&gt;和&lt;code&gt;GPU 节点&lt;/code&gt;页面提供对Spot实例的支持。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;访问密钥管理&lt;/strong&gt;：为用户管理访问密钥。通过访问密钥，用户可以以编程方式与 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; API 交互。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集群休眠节省估算工具&lt;/strong&gt;：提供集群休眠节省估算工具，支持 &lt;strong&gt;Amazon AWS&lt;/strong&gt; 和 &lt;strong&gt;阿里云&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;要快速部署并试用 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参阅：&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+
+      </description>
+    </item>
     
     <item>
       <title>Blog: Cluster Optimizer v1.3.0版已发布</title>

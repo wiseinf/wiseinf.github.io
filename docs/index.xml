@@ -14,6 +14,27 @@
     
     
     <item>
+      <title>Blog: Cluster Optimizer v1.3.1 Released</title>
+      <link>/blog/2024/09/10/cluster-optimizer-v1.3.1-released/</link>
+      <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2024/09/10/cluster-optimizer-v1.3.1-released/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The cluster optimization platform &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; v1.3.1 has been released.&lt;/p&gt;
+&lt;p&gt;Key features include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Spot Node Support&lt;/strong&gt;: Provides support for Spot instances on both the node and GPU node pages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Key Management&lt;/strong&gt;: Manages access keys for users. With an access key, users can programmatically interact with the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; API.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Hibernation Savings Estimation Tools&lt;/strong&gt;: Tools to estimate cost savings from cluster hibernation, with support for both &lt;strong&gt;Amazon AWS&lt;/strong&gt; and &lt;strong&gt;Alibaba Cloud&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To quickly deploy and try &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;, please refer to: &lt;a href=&#34;/docs/setup/&#34;&gt;Free Trial&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Cluster Optimizer v1.3.0 Released</title>
       <link>/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</link>
       <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
