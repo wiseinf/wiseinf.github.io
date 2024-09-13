@@ -2,835 +2,835 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/docs/user-guide/operations/adjust-nodegroup/</loc>
+    <loc>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/operations/adjust-nodegroup/"
+                href="//localhost:1313/zh-cn/docs/user-guide/operations/adjust-nodegroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/operations/adjust-nodegroup/"
+                href="//localhost:1313/docs/user-guide/operations/adjust-nodegroup/"
                 />
   </url><url>
-    <loc>/docs/configuration/command-line/</loc>
+    <loc>//localhost:1313/docs/configuration/command-line/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/configuration/command-line/"
+                href="//localhost:1313/zh-cn/docs/configuration/command-line/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/configuration/command-line/"
+                href="//localhost:1313/docs/configuration/command-line/"
                 />
   </url><url>
-    <loc>/docs/user-guide/import-cluster/import-alibaba/</loc>
+    <loc>//localhost:1313/docs/user-guide/import-cluster/import-alibaba/</loc>
     <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/import-cluster/import-alibaba/"
+                href="//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/import-cluster/import-alibaba/"
+                href="//localhost:1313/docs/user-guide/import-cluster/import-alibaba/"
                 />
   </url><url>
-    <loc>/docs/setup/setup-using-kubectl/</loc>
+    <loc>//localhost:1313/docs/setup/setup-using-kubectl/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/setup/setup-using-kubectl/"
+                href="//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/setup/setup-using-kubectl/"
+                href="//localhost:1313/docs/setup/setup-using-kubectl/"
                 />
   </url><url>
-    <loc>/docs/user-guide/personal-settings/setting/</loc>
+    <loc>//localhost:1313/docs/user-guide/personal-settings/setting/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/personal-settings/setting/"
+                href="//localhost:1313/zh-cn/docs/user-guide/personal-settings/setting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/personal-settings/setting/"
+                href="//localhost:1313/docs/user-guide/personal-settings/setting/"
                 />
   </url><url>
-    <loc>/docs/user-guide/management/user/</loc>
+    <loc>//localhost:1313/docs/user-guide/management/user/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/management/user/"
+                href="//localhost:1313/zh-cn/docs/user-guide/management/user/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/management/user/"
+                href="//localhost:1313/docs/user-guide/management/user/"
                 />
   </url><url>
-    <loc>/docs/user-guide/operations/adjust-node/</loc>
+    <loc>//localhost:1313/docs/user-guide/operations/adjust-node/</loc>
     <lastmod>2024-08-18T17:40:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/operations/adjust-node/"
+                href="//localhost:1313/zh-cn/docs/user-guide/operations/adjust-node/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/operations/adjust-node/"
+                href="//localhost:1313/docs/user-guide/operations/adjust-node/"
                 />
   </url><url>
-    <loc>/docs/user-guide/personal-settings/clusteraccessaccount/</loc>
+    <loc>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/"
+                href="//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/personal-settings/clusteraccessaccount/"
+                href="//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/"
                 />
   </url><url>
-    <loc>/docs/configuration/conf/</loc>
+    <loc>//localhost:1313/docs/configuration/conf/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/configuration/conf/"
+                href="//localhost:1313/zh-cn/docs/configuration/conf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/configuration/conf/"
+                href="//localhost:1313/docs/configuration/conf/"
                 />
   </url><url>
-    <loc>/docs/user-guide/import-cluster/import-aws/</loc>
+    <loc>//localhost:1313/docs/user-guide/import-cluster/import-aws/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/import-cluster/import-aws/"
+                href="//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/import-cluster/import-aws/"
+                href="//localhost:1313/docs/user-guide/import-cluster/import-aws/"
                 />
   </url><url>
-    <loc>/docs/user-guide/import-cluster/</loc>
+    <loc>//localhost:1313/docs/user-guide/import-cluster/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/import-cluster/"
+                href="//localhost:1313/zh-cn/docs/user-guide/import-cluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/import-cluster/"
+                href="//localhost:1313/docs/user-guide/import-cluster/"
                 />
   </url><url>
-    <loc>/docs/setup/setup-using-helm/</loc>
+    <loc>//localhost:1313/docs/setup/setup-using-helm/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/setup/setup-using-helm/"
+                href="//localhost:1313/zh-cn/docs/setup/setup-using-helm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/setup/setup-using-helm/"
+                href="//localhost:1313/docs/setup/setup-using-helm/"
                 />
   </url><url>
-    <loc>/docs/user-guide/management/channel/</loc>
+    <loc>//localhost:1313/docs/user-guide/management/channel/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/management/channel/"
+                href="//localhost:1313/zh-cn/docs/user-guide/management/channel/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/management/channel/"
+                href="//localhost:1313/docs/user-guide/management/channel/"
                 />
   </url><url>
-    <loc>/docs/user-guide/operations/adjust-disk/</loc>
+    <loc>//localhost:1313/docs/user-guide/operations/adjust-disk/</loc>
     <lastmod>2024-08-18T17:40:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/operations/adjust-disk/"
+                href="//localhost:1313/zh-cn/docs/user-guide/operations/adjust-disk/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/operations/adjust-disk/"
+                href="//localhost:1313/docs/user-guide/operations/adjust-disk/"
                 />
   </url><url>
-    <loc>/docs/user-guide/cluster/</loc>
+    <loc>//localhost:1313/docs/user-guide/cluster/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/cluster/"
+                href="//localhost:1313/zh-cn/docs/user-guide/cluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/cluster/"
+                href="//localhost:1313/docs/user-guide/cluster/"
                 />
   </url><url>
-    <loc>/docs/user-guide/management/rule/</loc>
+    <loc>//localhost:1313/docs/user-guide/management/rule/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/management/rule/"
+                href="//localhost:1313/zh-cn/docs/user-guide/management/rule/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/management/rule/"
+                href="//localhost:1313/docs/user-guide/management/rule/"
                 />
   </url><url>
-    <loc>/docs/setup/upgrade/</loc>
+    <loc>//localhost:1313/docs/setup/upgrade/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/setup/upgrade/"
+                href="//localhost:1313/zh-cn/docs/setup/upgrade/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/setup/upgrade/"
+                href="//localhost:1313/docs/setup/upgrade/"
                 />
   </url><url>
-    <loc>/docs/user-guide/operations/delete-pv/</loc>
+    <loc>//localhost:1313/docs/user-guide/operations/delete-pv/</loc>
     <lastmod>2024-08-18T17:40:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/operations/delete-pv/"
+                href="//localhost:1313/zh-cn/docs/user-guide/operations/delete-pv/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/operations/delete-pv/"
+                href="//localhost:1313/docs/user-guide/operations/delete-pv/"
                 />
   </url><url>
-    <loc>/docs/user-guide/nodegroup/</loc>
+    <loc>//localhost:1313/docs/user-guide/nodegroup/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/nodegroup/"
+                href="//localhost:1313/zh-cn/docs/user-guide/nodegroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/nodegroup/"
+                href="//localhost:1313/docs/user-guide/nodegroup/"
                 />
   </url><url>
-    <loc>/docs/user-guide/node/</loc>
+    <loc>//localhost:1313/docs/user-guide/node/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/node/"
+                href="//localhost:1313/zh-cn/docs/user-guide/node/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/node/"
+                href="//localhost:1313/docs/user-guide/node/"
                 />
   </url><url>
-    <loc>/docs/user-guide/disk/</loc>
+    <loc>//localhost:1313/docs/user-guide/disk/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/disk/"
+                href="//localhost:1313/zh-cn/docs/user-guide/disk/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/disk/"
+                href="//localhost:1313/docs/user-guide/disk/"
                 />
   </url><url>
-    <loc>/docs/user-guide/gpunode/</loc>
+    <loc>//localhost:1313/docs/user-guide/gpunode/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/gpunode/"
+                href="//localhost:1313/zh-cn/docs/user-guide/gpunode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/gpunode/"
+                href="//localhost:1313/docs/user-guide/gpunode/"
                 />
   </url><url>
-    <loc>/docs/user-guide/pv/</loc>
+    <loc>//localhost:1313/docs/user-guide/pv/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/pv/"
+                href="//localhost:1313/zh-cn/docs/user-guide/pv/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/pv/"
+                href="//localhost:1313/docs/user-guide/pv/"
                 />
   </url><url>
-    <loc>/docs/user-guide/app/</loc>
+    <loc>//localhost:1313/docs/user-guide/app/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/app/"
+                href="//localhost:1313/zh-cn/docs/user-guide/app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/app/"
+                href="//localhost:1313/docs/user-guide/app/"
                 />
   </url><url>
-    <loc>/docs/setup/</loc>
+    <loc>//localhost:1313/docs/setup/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/setup/"
+                href="//localhost:1313/zh-cn/docs/setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/setup/"
+                href="//localhost:1313/docs/setup/"
                 />
   </url><url>
-    <loc>/blog/releases/</loc>
+    <loc>//localhost:1313/blog/releases/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/releases/"
+                href="//localhost:1313/zh-cn/blog/releases/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/releases/"
+                href="//localhost:1313/blog/releases/"
                 />
   </url><url>
-    <loc>/docs/user-guide/tasks/</loc>
+    <loc>//localhost:1313/docs/user-guide/tasks/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/tasks/"
+                href="//localhost:1313/zh-cn/docs/user-guide/tasks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/tasks/"
+                href="//localhost:1313/docs/user-guide/tasks/"
                 />
   </url><url>
-    <loc>/docs/</loc>
+    <loc>//localhost:1313/docs/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/"
+                href="//localhost:1313/zh-cn/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/"
+                href="//localhost:1313/docs/"
                 />
   </url><url>
-    <loc>/blog/news/</loc>
+    <loc>//localhost:1313/blog/news/</loc>
     <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/news/"
+                href="//localhost:1313/zh-cn/blog/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/news/"
+                href="//localhost:1313/blog/news/"
                 />
   </url><url>
-    <loc>/docs/user-guide/personal-settings/</loc>
+    <loc>//localhost:1313/docs/user-guide/personal-settings/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/personal-settings/"
+                href="//localhost:1313/zh-cn/docs/user-guide/personal-settings/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/personal-settings/"
+                href="//localhost:1313/docs/user-guide/personal-settings/"
                 />
   </url><url>
-    <loc>/docs/user-guide/</loc>
+    <loc>//localhost:1313/docs/user-guide/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/"
+                href="//localhost:1313/zh-cn/docs/user-guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/"
+                href="//localhost:1313/docs/user-guide/"
                 />
   </url><url>
-    <loc>/docs/user-guide/management/</loc>
+    <loc>//localhost:1313/docs/user-guide/management/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/management/"
+                href="//localhost:1313/zh-cn/docs/user-guide/management/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/management/"
+                href="//localhost:1313/docs/user-guide/management/"
                 />
   </url><url>
-    <loc>/docs/bestpractice/periodic_notification/</loc>
+    <loc>//localhost:1313/docs/bestpractice/periodic_notification/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/bestpractice/periodic_notification/"
+                href="//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/bestpractice/periodic_notification/"
+                href="//localhost:1313/docs/bestpractice/periodic_notification/"
                 />
   </url><url>
-    <loc>/blog/blog/</loc>
+    <loc>//localhost:1313/blog/blog/</loc>
     <lastmod>2024-09-11T16:24:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/blog/"
+                href="//localhost:1313/zh-cn/blog/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/blog/"
+                href="//localhost:1313/blog/blog/"
                 />
   </url><url>
-    <loc>/docs/configuration/</loc>
+    <loc>//localhost:1313/docs/configuration/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/configuration/"
+                href="//localhost:1313/zh-cn/docs/configuration/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/configuration/"
+                href="//localhost:1313/docs/configuration/"
                 />
   </url><url>
-    <loc>/price/</loc>
+    <loc>//localhost:1313/price/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/price/"
+                href="//localhost:1313/zh-cn/price/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/price/"
+                href="//localhost:1313/price/"
                 />
   </url><url>
-    <loc>/docs/bestpractice/</loc>
+    <loc>//localhost:1313/docs/bestpractice/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/bestpractice/"
+                href="//localhost:1313/zh-cn/docs/bestpractice/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/bestpractice/"
+                href="//localhost:1313/docs/bestpractice/"
                 />
   </url><url>
-    <loc>/docs/user-guide/operations/</loc>
+    <loc>//localhost:1313/docs/user-guide/operations/</loc>
     <lastmod>2024-08-19T11:27:11+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/user-guide/operations/"
+                href="//localhost:1313/zh-cn/docs/user-guide/operations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/user-guide/operations/"
+                href="//localhost:1313/docs/user-guide/operations/"
                 />
   </url><url>
-    <loc>/docs/troubleshooting/</loc>
+    <loc>//localhost:1313/docs/troubleshooting/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/docs/troubleshooting/"
+                href="//localhost:1313/zh-cn/docs/troubleshooting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/troubleshooting/"
+                href="//localhost:1313/docs/troubleshooting/"
                 />
   </url><url>
-    <loc>/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</loc>
+    <loc>//localhost:1313/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</loc>
     <lastmod>2024-09-11T16:24:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/09/11/%E8%AF%84%E4%BC%B0%E9%9B%86%E7%BE%A4%E4%BC%91%E7%9C%A0%E8%8A%82%E7%9C%81%E6%88%90%E6%9C%AC/"
+                href="//localhost:1313/zh-cn/blog/2024/09/11/%E8%AF%84%E4%BC%B0%E9%9B%86%E7%BE%A4%E4%BC%91%E7%9C%A0%E8%8A%82%E7%9C%81%E6%88%90%E6%9C%AC/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/"
+                href="//localhost:1313/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/"
                 />
   </url><url>
-    <loc>/blog/2024/09/10/cluster-optimizer-v1.3.1-released/</loc>
+    <loc>//localhost:1313/blog/2024/09/10/cluster-optimizer-v1.3.1-released/</loc>
     <lastmod>2024-09-10T16:28:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                href="//localhost:1313/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/09/10/cluster-optimizer-v1.3.1-released/"
+                href="//localhost:1313/blog/2024/09/10/cluster-optimizer-v1.3.1-released/"
                 />
   </url><url>
-    <loc>/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</loc>
+    <loc>//localhost:1313/blog/2024/07/10/cluster-optimizer-v1.3.0-released/</loc>
     <lastmod>2024-09-02T10:29:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                href="//localhost:1313/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/07/10/cluster-optimizer-v1.3.0-released/"
+                href="//localhost:1313/blog/2024/07/10/cluster-optimizer-v1.3.0-released/"
                 />
   </url><url>
-    <loc>/blog/2024/05/30/cluster-optimizer-v1.2.1-released/</loc>
+    <loc>//localhost:1313/blog/2024/05/30/cluster-optimizer-v1.2.1-released/</loc>
     <lastmod>2024-09-11T10:30:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/05/30/cluster-optimizer-v1.2.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                href="//localhost:1313/zh-cn/blog/2024/05/30/cluster-optimizer-v1.2.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/05/30/cluster-optimizer-v1.2.1-released/"
+                href="//localhost:1313/blog/2024/05/30/cluster-optimizer-v1.2.1-released/"
                 />
   </url><url>
-    <loc>/blog/2024/05/20/cluster-optimizer-v1.2.0-released/</loc>
+    <loc>//localhost:1313/blog/2024/05/20/cluster-optimizer-v1.2.0-released/</loc>
     <lastmod>2024-09-11T10:30:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/05/20/cluster-optimizer-v1.2.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                href="//localhost:1313/zh-cn/blog/2024/05/20/cluster-optimizer-v1.2.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/05/20/cluster-optimizer-v1.2.0-released/"
+                href="//localhost:1313/blog/2024/05/20/cluster-optimizer-v1.2.0-released/"
                 />
   </url><url>
-    <loc>/blog/2024/04/09/cluster-optimizer-v1.1.0-released/</loc>
+    <loc>//localhost:1313/blog/2024/04/09/cluster-optimizer-v1.1.0-released/</loc>
     <lastmod>2024-09-11T10:30:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/04/09/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                href="//localhost:1313/zh-cn/blog/2024/04/09/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/04/09/cluster-optimizer-v1.1.0-released/"
+                href="//localhost:1313/blog/2024/04/09/cluster-optimizer-v1.1.0-released/"
                 />
   </url><url>
-    <loc>/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/</loc>
+    <loc>//localhost:1313/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/</loc>
     <lastmod>2024-09-11T16:24:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/"
+                href="//localhost:1313/zh-cn/blog/2024/04/01/cluster-optimizer-%E4%B8%80%E6%AC%BE%E4%BA%91%E5%8E%9F%E7%94%9F%E9%9B%86%E7%BE%A4%E4%BC%98%E5%8C%96%E5%B9%B3%E5%8F%B0/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/"
+                href="//localhost:1313/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/"
                 />
   </url><url>
-    <loc>/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/</loc>
+    <loc>//localhost:1313/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/</loc>
     <lastmod>2024-09-11T10:30:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
+                href="//localhost:1313/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/"
+                href="//localhost:1313/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/"
                 />
   </url><url>
-    <loc>/community/</loc>
+    <loc>//localhost:1313/community/</loc>
     <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
-    <loc>/price/pricing/</loc>
+    <loc>//localhost:1313/price/pricing/</loc>
     <lastmod>2024-03-19T10:46:41+08:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2024-09-03T11:29:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/about/"
+                href="//localhost:1313/zh-cn/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/about/"
+                href="//localhost:1313/about/"
                 />
   </url><url>
-    <loc>/tags/best-practices/</loc>
+    <loc>//localhost:1313/tags/best-practices/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
-    <loc>/categories/best-practices/</loc>
+    <loc>//localhost:1313/categories/best-practices/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
-    <loc>/blog/</loc>
+    <loc>//localhost:1313/blog/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/blog/"
+                href="//localhost:1313/zh-cn/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/"
+                href="//localhost:1313/blog/"
                 />
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/categories/"
+                href="//localhost:1313/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>/tags/cluster-access-account/</loc>
+    <loc>//localhost:1313/tags/cluster-access-account/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/categories/cluster-access-account/</loc>
+    <loc>//localhost:1313/categories/cluster-access-account/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/tags/cluster-engine/</loc>
+    <loc>//localhost:1313/tags/cluster-engine/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
-    <loc>/tags/cluster-optimization/</loc>
+    <loc>//localhost:1313/tags/cluster-optimization/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/categories/cluster-optimization/</loc>
+    <loc>//localhost:1313/categories/cluster-optimization/</loc>
     <lastmod>2024-09-10T16:29:46+08:00</lastmod>
   </url><url>
-    <loc>/tags/cluster-optimizer/</loc>
+    <loc>//localhost:1313/tags/cluster-optimizer/</loc>
     <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/tags/cluster-optimizer/"
+                href="//localhost:1313/zh-cn/tags/cluster-optimizer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/cluster-optimizer/"
+                href="//localhost:1313/tags/cluster-optimizer/"
                 />
   </url><url>
-    <loc>/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/"
+                href="//localhost:1313/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="//localhost:1313/"
                 />
   </url><url>
-    <loc>/tags/command-line-parameters/</loc>
+    <loc>//localhost:1313/tags/command-line-parameters/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/command-line-parameters/</loc>
+    <loc>//localhost:1313/categories/command-line-parameters/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/configuration/</loc>
+    <loc>//localhost:1313/tags/configuration/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
   </url><url>
-    <loc>/categories/configuration/</loc>
+    <loc>//localhost:1313/categories/configuration/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
   </url><url>
-    <loc>/tags/configuration-parameters/</loc>
+    <loc>//localhost:1313/tags/configuration-parameters/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/configuration-parameters/</loc>
+    <loc>//localhost:1313/categories/configuration-parameters/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/disk-optimizer/</loc>
+    <loc>//localhost:1313/tags/disk-optimizer/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/gpu-node-optimization/</loc>
+    <loc>//localhost:1313/tags/gpu-node-optimization/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/management-settings/</loc>
+    <loc>//localhost:1313/tags/management-settings/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/management-settings/</loc>
+    <loc>//localhost:1313/categories/management-settings/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/node-group-optimization/</loc>
+    <loc>//localhost:1313/tags/node-group-optimization/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/node-optimizer/</loc>
+    <loc>//localhost:1313/tags/node-optimizer/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/notification-channel/</loc>
+    <loc>//localhost:1313/tags/notification-channel/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/notification-channels/</loc>
+    <loc>//localhost:1313/categories/notification-channels/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/notification-rules/</loc>
+    <loc>//localhost:1313/tags/notification-rules/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/notification-rules/</loc>
+    <loc>//localhost:1313/categories/notification-rules/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/notifications/</loc>
+    <loc>//localhost:1313/tags/notifications/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
-    <loc>/tags/optimization-operation/</loc>
+    <loc>//localhost:1313/tags/optimization-operation/</loc>
     <lastmod>2024-08-19T11:27:11+08:00</lastmod>
   </url><url>
-    <loc>/tags/optimizing-application/</loc>
+    <loc>//localhost:1313/tags/optimizing-application/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/persistent-volume-optimization/</loc>
+    <loc>//localhost:1313/tags/persistent-volume-optimization/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/personal-account-settings/</loc>
+    <loc>//localhost:1313/tags/personal-account-settings/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/categories/personal-account-settings/</loc>
+    <loc>//localhost:1313/categories/personal-account-settings/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/tags/personal-settings/</loc>
+    <loc>//localhost:1313/tags/personal-settings/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
   </url><url>
-    <loc>/categories/personal-settings/</loc>
+    <loc>//localhost:1313/categories/personal-settings/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
   </url><url>
-    <loc>/privacy/</loc>
+    <loc>//localhost:1313/privacy/</loc>
     <lastmod>2024-09-03T11:29:08+08:00</lastmod>
   </url><url>
-    <loc>/search/</loc>
+    <loc>//localhost:1313/search/</loc>
     <lastmod>2024-03-19T10:46:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/search/"
+                href="//localhost:1313/zh-cn/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/search/"
+                href="//localhost:1313/search/"
                 />
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2024-09-10T16:29:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/zh-cn/tags/"
+                href="//localhost:1313/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="//localhost:1313/tags/"
                 />
   </url><url>
-    <loc>/tags/task-management/</loc>
+    <loc>//localhost:1313/tags/task-management/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/task-management/</loc>
+    <loc>//localhost:1313/categories/task-management/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/troubleshooting/</loc>
+    <loc>//localhost:1313/tags/troubleshooting/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/categories/troubleshooting/</loc>
+    <loc>//localhost:1313/categories/troubleshooting/</loc>
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
-    <loc>/aggrement/</loc>
+    <loc>//localhost:1313/aggrement/</loc>
     <lastmod>2024-09-03T11:29:08+08:00</lastmod>
   </url><url>
-    <loc>/tags/user-management/</loc>
+    <loc>//localhost:1313/tags/user-management/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/user-management/</loc>
+    <loc>//localhost:1313/categories/user-management/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/tags/user-manual/</loc>
+    <loc>//localhost:1313/tags/user-manual/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
-    <loc>/categories/user-manual/</loc>
+    <loc>//localhost:1313/categories/user-manual/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url>
 </urlset>

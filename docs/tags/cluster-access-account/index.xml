@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Cluster Access Account</title>
-    <link>/tags/cluster-access-account/</link>
+    <link>//localhost:1313/tags/cluster-access-account/</link>
     <description>Recent content in Cluster Access Account on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/cluster-access-account/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/tags/cluster-access-account/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Cluster Access Account</title>
-      <link>/docs/user-guide/personal-settings/clusteraccessaccount/</link>
+      <link>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
+      <guid>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
       <description>
         
         
@@ -42,7 +42,7 @@
 &lt;li&gt;On the personal settings page, click the &lt;code&gt;Cluster Access Account&lt;/code&gt; tab to view and manage your cluster access account, as illustrated below.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;324&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;324&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -86,7 +86,7 @@ Cluster Access Account List
 &lt;li&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the &lt;code&gt;Cluster Access Account&lt;/code&gt; management page. The Add Cluster Access Account dialog box will appear, as shown below.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;372&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;372&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -128,7 +128,7 @@ Cluster Access Account List
 &lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If no clusters have been added, the drop-down list for the Cluster ID field will be empty. In such cases, an error will occur, and the cluster access account cannot be added. Ensure that you have &lt;a href=&#34;/docs/user-guide/import-cluster/&#34;&gt;imported the cluster&lt;/a&gt; before attempting to add a cluster access account.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If no clusters have been added, the drop-down list for the Cluster ID field will be empty. In such cases, an error will occur, and the cluster access account cannot be added. Ensure that you have &lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/&#34;&gt;imported the cluster&lt;/a&gt; before attempting to add a cluster access account.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;updating-a-cluster-access-account&#34;&gt;Updating a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update an existing cluster access account:&lt;/p&gt;
@@ -136,7 +136,7 @@ Cluster Access Account List
 &lt;li&gt;Click the Cluster Access Account button in the list of cluster access accounts. This will open the Edit Cluster Access Account dialog box, as shown below.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -148,7 +148,7 @@ Cluster Access Account List
 &lt;/figure&gt;
 
 &lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account. The field names and descriptions are the same as those listed in the &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/#adding-a-cluster-access-account&#34;&gt;Adding a Cluster Access Account&lt;/a&gt; section.&lt;/li&gt;
+&lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account. The field names and descriptions are the same as those listed in the &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/#adding-a-cluster-access-account&#34;&gt;Adding a Cluster Access Account&lt;/a&gt; section.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;deleting-a-cluster-access-account&#34;&gt;Deleting a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To delete a cluster access account:&lt;/p&gt;
@@ -156,7 +156,7 @@ Cluster Access Account List
 &lt;li&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button on the Cluster Access Account management page.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

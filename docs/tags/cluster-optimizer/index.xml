@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Cluster Optimizer</title>
-    <link>/tags/cluster-optimizer/</link>
+    <link>//localhost:1313/tags/cluster-optimizer/</link>
     <description>Recent content on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/cluster-optimizer/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/tags/cluster-optimizer/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Adjusting Node Group</title>
-      <link>/docs/user-guide/operations/adjust-nodegroup/</link>
+      <link>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/adjust-nodegroup/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</guid>
       <description>
         
         
@@ -51,10 +51,10 @@
     
     <item>
       <title>Docs: Import Alibaba Cloud Cluster</title>
-      <link>/docs/user-guide/import-cluster/import-alibaba/</link>
+      <link>//localhost:1313/docs/user-guide/import-cluster/import-alibaba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/import-cluster/import-alibaba/</guid>
+      <guid>//localhost:1313/docs/user-guide/import-cluster/import-alibaba/</guid>
       <description>
         
         
@@ -234,7 +234,7 @@
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;Settings&lt;/code&gt; menu and select the &lt;code&gt;Cloud Account&lt;/code&gt; tab to enter the cloud account management page. By default, this page will display all cloud accounts managed by the platform in pages, including names and corresponding cloud service providers. It also provides an operation bar to facilitate users to perform corresponding operations, as shown in the figure below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -249,7 +249,7 @@
 &lt;li&gt;
 &lt;p&gt;On the cloud account management page, click the Add button to add a cloud account. The interface is as shown below. In this interface, the user enters the cloud account name, selects the corresponding cloud service provider, enters the Access Key and Access Key Secret, and clicks the OK button to complete adding the cloud account. After adding parameters, users can also click the Test Connectivity button to test whether the cloud account is correct. The platform currently supports Alibaba Cloud, which can be selected from the cloud service provider drop-down box. Access Key and Access Key Secret is the account information for accessing the cloud service. Please obtain it from the corresponding cloud service provider.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -267,7 +267,7 @@
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;Settings&lt;/code&gt; menu and select the cluster tab to enter the cluster management page. By default, this page will display all clusters managed by the platform in pages, including name, cluster ID, cluster region, Access Token name, corresponding cloud service provider and Prometheus address. It also provides an operation bar to facilitate users to perform corresponding operations. As shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -292,7 +292,7 @@ Cluster management main page
 &lt;li&gt;
 &lt;p&gt;The interface for setting Alibaba Cloud access credentials is as shown in the figure below. In the Alibaba Cloud access credentials interface, set the Alibaba Cloud access credentials by using existing credentials. Here, select the Alibaba Cloud account added in &lt;code&gt;Add Alibaba Cloud Account&lt;/code&gt;, as shown in the figure below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -307,7 +307,7 @@ Import cluster interface-set Alibaba Cloud access credentials
 &lt;li&gt;
 &lt;p&gt;After setting the Alibaba Cloud access credentials, click the Next button to enter the page for connecting to the Kubernetes cluster, as shown in the figure below. The platform supports connecting to two types of Kubernetes clusters, including managed clusters and self-built clusters. The Connect Hosting Cluster page is shown in the figure below. Here we choose the managed cluster. The platform automatically obtains the user cluster through the cloud account. The user selects the corresponding cluster through the cluster drop-down box, enters the description field, selects whether to use the API Server private network address, selects whether to automatically refresh KubeConfig and the KubeConfig life cycle. Finally enter the node group label.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -322,7 +322,7 @@ Import cluster interface-set Alibaba Cloud access credentials
 &lt;li&gt;
 &lt;p&gt;The connection page to Prometheus is as shown in the figure below. After the user enters information on this page, click the Next button to enter the view configuration page. The input information details are shown in the table below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -372,7 +372,7 @@ The parameter description for connecting to Prometheus is as shown in the table:
 &lt;li&gt;
 &lt;p&gt;View the configuration page as shown in the figure below. This page displays Alibaba Cloud access credentials, detailed parameters for connecting to the Kubernetes cluster and connecting to the Prometheus cluster, which is convenient for users to confirm. When the user completes the confirmation, click the Import button to enter the completion page.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -387,7 +387,7 @@ View configuration page
 &lt;li&gt;
 &lt;p&gt;The completed page is as shown below, and the submission status will be displayed on the page. Click Finish to complete the cluster import.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -403,12 +403,12 @@ Complete page
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-steps&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After importing the cluster, wait for a period of time (waiting for the optimization strategy to complete scheduling and execution), and then you can view optimization suggestions for the cluster in multiple dimensions, including:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -416,10 +416,10 @@ Complete page
     
     <item>
       <title>Docs: Install via kubectl</title>
-      <link>/docs/setup/setup-using-kubectl/</link>
+      <link>//localhost:1313/docs/setup/setup-using-kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/setup/setup-using-kubectl/</guid>
+      <guid>//localhost:1313/docs/setup/setup-using-kubectl/</guid>
       <description>
         
         
@@ -481,7 +481,7 @@ Complete page
 &lt;p&gt;Create &lt;code&gt;optimizer&lt;/code&gt; deployment using the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For instructions on utilizing a deployed database, please refer to the section &lt;a href=&#34;/docs/setup/setup-using-kubectl/#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For instructions on utilizing a deployed database, please refer to the section &lt;a href=&#34;//localhost:1313/docs/setup/setup-using-kubectl/#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -554,8 +554,8 @@ Complete page
 &lt;h2 id=&#34;next-step-import-the-cluster&#34;&gt;Next step: Import the cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-step-import-the-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Next, you can add a cluster and view its related optimization recommendations. For details, see:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/import-cluster/import-aws/&#34;&gt;Import AWS EKS cluster&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/&#34;&gt;Import AWS EKS cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -563,10 +563,10 @@ Complete page
     
     <item>
       <title>Docs: Personal Account</title>
-      <link>/docs/user-guide/personal-settings/setting/</link>
+      <link>//localhost:1313/docs/user-guide/personal-settings/setting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/personal-settings/setting/</guid>
+      <guid>//localhost:1313/docs/user-guide/personal-settings/setting/</guid>
       <description>
         
         
@@ -584,7 +584,7 @@ Complete page
 &lt;h2 id=&#34;update-personal-account&#34;&gt;Update Personal Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#update-personal-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update your personal information, click on your user avatar in the top left navigation bar, as shown below. Then, select &lt;code&gt;Personal Settings&lt;/code&gt; from the expanded menu to access the personal settings page.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 460px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/setting/setting_hu90d38966d4f45361ce2aa6eecae87bc0_23250_450x0_resize_catmullrom_3.png&#34; width=&#34;450&#34; height=&#34;141&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/setting/setting_hu90d38966d4f45361ce2aa6eecae87bc0_23250_450x0_resize_catmullrom_3.png&#34; width=&#34;450&#34; height=&#34;141&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -597,7 +597,7 @@ Personal Settings Menu
 
 &lt;p&gt;On the personal settings page, navigate to the &lt;code&gt;Personal Account&lt;/code&gt; tab to view and update your personal information, as shown in the figure below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/setting/account_hu3ca9497abfa7946562d4d90b64965c2c_139351_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/setting/account_hu3ca9497abfa7946562d4d90b64965c2c_139351_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -662,10 +662,10 @@ Personal Settings Page
     
     <item>
       <title>Docs: User Management</title>
-      <link>/docs/user-guide/management/user/</link>
+      <link>//localhost:1313/docs/user-guide/management/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/management/user/</guid>
+      <guid>//localhost:1313/docs/user-guide/management/user/</guid>
       <description>
         
         
@@ -684,7 +684,7 @@ Personal Settings Page
 &lt;h2 id=&#34;view-users&#34;&gt;View Users&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-users&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To access the user management page, navigate to &lt;code&gt;Settings&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Users&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/user/overview_huf7b1efda546e235b6c6a83c9c47de67e_72649_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;283&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/overview_huf7b1efda546e235b6c6a83c9c47de67e_72649_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;283&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -707,7 +707,7 @@ User Management Page
 &lt;h2 id=&#34;adding-a-user&#34;&gt;Adding a User&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adding-a-user&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To add a new user, click the &lt;code&gt;Add&lt;/code&gt; button at the top of the user management page. This will open the Add User dialog box, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/user/add_hu5e62e77b25d54fd7f57cd45a1e70c687_29854_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;372&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/add_hu5e62e77b25d54fd7f57cd45a1e70c687_29854_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;372&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -769,7 +769,7 @@ Add User Dialog
 &lt;h2 id=&#34;updating-a-user&#34;&gt;Updating a User&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-user&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update a user, click the &lt;code&gt;Edit&lt;/code&gt; button in the user management list. This will open the Edit User dialog box, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/user/edit_hub3cf6f281efc5e753f1663d9dc0304ae_34392_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;372&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/edit_hub3cf6f281efc5e753f1663d9dc0304ae_34392_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;372&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -780,12 +780,12 @@ Edit User Dialog
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The field names and descriptions are identical to those in the &lt;a href=&#34;/docs/user-guide/management/user/#adding-a-user&#34;&gt;Adding a User&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;The field names and descriptions are identical to those in the &lt;a href=&#34;//localhost:1313/docs/user-guide/management/user/#adding-a-user&#34;&gt;Adding a User&lt;/a&gt; section.&lt;/p&gt;
 &lt;p&gt;Fill in the necessary information according to the field names and click &lt;code&gt;Confirm&lt;/code&gt; button to update the user.&lt;/p&gt;
 &lt;h2 id=&#34;deleting-a-user&#34;&gt;Deleting a User&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-user&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To delete a user, click the &lt;code&gt;Delete&lt;/code&gt; button on the user management page.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/user/delete_hu044c8dc38155b92e0cd38eac7d980f93_32400_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/user/delete_hu044c8dc38155b92e0cd38eac7d980f93_32400_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -803,10 +803,10 @@ Delete User
     
     <item>
       <title>Docs: Adjustment Node</title>
-      <link>/docs/user-guide/operations/adjust-node/</link>
+      <link>//localhost:1313/docs/user-guide/operations/adjust-node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/adjust-node/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/adjust-node/</guid>
       <description>
         
         
@@ -826,10 +826,10 @@ Delete User
     
     <item>
       <title>Docs: Cluster Access Account</title>
-      <link>/docs/user-guide/personal-settings/clusteraccessaccount/</link>
+      <link>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
+      <guid>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
       <description>
         
         
@@ -852,7 +852,7 @@ Delete User
 &lt;li&gt;On the personal settings page, click the &lt;code&gt;Cluster Access Account&lt;/code&gt; tab to view and manage your cluster access account, as illustrated below.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;324&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/list_hu75029cc4df1da0f0287c3bc612b250b6_68244_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;324&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -896,7 +896,7 @@ Cluster Access Account List
 &lt;li&gt;Click the &lt;code&gt;Add&lt;/code&gt; button at the top of the &lt;code&gt;Cluster Access Account&lt;/code&gt; management page. The Add Cluster Access Account dialog box will appear, as shown below.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;372&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/add_hu65cc9033562207c5228f1e3c44de9131_27760_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;372&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -938,7 +938,7 @@ Cluster Access Account List
 &lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If no clusters have been added, the drop-down list for the Cluster ID field will be empty. In such cases, an error will occur, and the cluster access account cannot be added. Ensure that you have &lt;a href=&#34;/docs/user-guide/import-cluster/&#34;&gt;imported the cluster&lt;/a&gt; before attempting to add a cluster access account.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If no clusters have been added, the drop-down list for the Cluster ID field will be empty. In such cases, an error will occur, and the cluster access account cannot be added. Ensure that you have &lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/&#34;&gt;imported the cluster&lt;/a&gt; before attempting to add a cluster access account.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;updating-a-cluster-access-account&#34;&gt;Updating a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update an existing cluster access account:&lt;/p&gt;
@@ -946,7 +946,7 @@ Cluster Access Account List
 &lt;li&gt;Click the Cluster Access Account button in the list of cluster access accounts. This will open the Edit Cluster Access Account dialog box, as shown below.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu994e9a8205e89783c532d5b8c2a2e1f2_138089_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -958,7 +958,7 @@ Cluster Access Account List
 &lt;/figure&gt;
 
 &lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account. The field names and descriptions are the same as those listed in the &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/#adding-a-cluster-access-account&#34;&gt;Adding a Cluster Access Account&lt;/a&gt; section.&lt;/li&gt;
+&lt;li&gt;After entering the necessary information, click the &lt;code&gt;OK&lt;/code&gt; button to add the cluster access account. The field names and descriptions are the same as those listed in the &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/#adding-a-cluster-access-account&#34;&gt;Adding a Cluster Access Account&lt;/a&gt; section.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;deleting-a-cluster-access-account&#34;&gt;Deleting a Cluster Access Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-cluster-access-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To delete a cluster access account:&lt;/p&gt;
@@ -966,7 +966,7 @@ Cluster Access Account List
 &lt;li&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button on the Cluster Access Account management page.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu47497da471004f3238b44e512b4c455f_37437_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;113&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -989,10 +989,10 @@ Cluster Access Account List
     
     <item>
       <title>Docs: Import AWS EKS Cluster</title>
-      <link>/docs/user-guide/import-cluster/import-aws/</link>
+      <link>//localhost:1313/docs/user-guide/import-cluster/import-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/import-cluster/import-aws/</guid>
+      <guid>//localhost:1313/docs/user-guide/import-cluster/import-aws/</guid>
       <description>
         
         
@@ -1098,7 +1098,7 @@ Cluster Access Account List
 &lt;li&gt;
 &lt;p&gt;Enter the cloud account management page from &lt;code&gt;Settings --&amp;gt; Cloud Account&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1113,7 +1113,7 @@ Cluster Access Account List
 &lt;li&gt;
 &lt;p&gt;Click the &lt;code&gt;New&lt;/code&gt; button to add a cloud account. You can enter &lt;code&gt;Name&lt;/code&gt;, select &lt;code&gt;Amazon AWS&lt;/code&gt; as &lt;code&gt;Cloud Provider&lt;/code&gt;, then enter &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and finally click &lt;code&gt;Confirm&lt;/code&gt;.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1134,7 +1134,7 @@ Cluster Access Account List
 &lt;li&gt;
 &lt;p&gt;Enter the cluster management page from &lt;code&gt;Settings --&amp;gt; Cluster&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1159,7 +1159,7 @@ Cluster Access Account List
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect AWS&lt;/code&gt; step, select &lt;code&gt;Use existing credentials&lt;/code&gt; and select the cloud account created in the &lt;code&gt;Add Cloud Account&lt;/code&gt; section, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1175,7 +1175,7 @@ Cluster Access Account List
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect kubernetes&lt;/code&gt; step, select &lt;code&gt;Managed cluster&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1259,7 +1259,7 @@ First select &lt;code&gt;Region&lt;/code&gt;, then select &lt;code&gt;Cluster&lt
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1275,7 +1275,7 @@ First select &lt;code&gt;Region&lt;/code&gt;, then select &lt;code&gt;Cluster&lt
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;View Configuration&lt;/code&gt; step, display the configurations for connecting to AWS, connecting to Kubernetes, and connecting to the Metrics service. You can check whether the configuration is as expected.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1291,7 +1291,7 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Complete&lt;/code&gt; step, the submission status will be displayed, as shown below. When the submission status shows that the cluster has been imported, you can click the &lt;code&gt;Finish&lt;/code&gt; button.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1307,12 +1307,12 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;h2 id=&#34;next-step&#34;&gt;Next step&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-step&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After importing the cluster, you can view optimization suggestions for multiple aspects of the cluster, including:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -1320,10 +1320,10 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
     
     <item>
       <title>Docs: Import Cluster</title>
-      <link>/docs/user-guide/import-cluster/</link>
+      <link>//localhost:1313/docs/user-guide/import-cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/import-cluster/</guid>
+      <guid>//localhost:1313/docs/user-guide/import-cluster/</guid>
       <description>
         
         
@@ -1333,10 +1333,10 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
     
     <item>
       <title>Docs: Install via Helm</title>
-      <link>/docs/setup/setup-using-helm/</link>
+      <link>//localhost:1313/docs/setup/setup-using-helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/setup/setup-using-helm/</guid>
+      <guid>//localhost:1313/docs/setup/setup-using-helm/</guid>
       <description>
         
         
@@ -1393,7 +1393,7 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7 1/1 Running &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt; 108s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As the output indicates, Helm has successfully deployed two pods. The first is the &lt;code&gt;cluster-optimizer-demo-7bfdfdf954-2cgqb&lt;/code&gt; pod, which represents the Cluster Optimizer service. The second is the &lt;code&gt;cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7&lt;/code&gt; pod, which serves as the MySQL database upon which the first pod depends.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For instructions on utilizing a deployed database, please refer to the section &lt;a href=&#34;/docs/setup/setup-using-helm/#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For instructions on utilizing a deployed database, please refer to the section &lt;a href=&#34;//localhost:1313/docs/setup/setup-using-helm/#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1479,8 +1479,8 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;h2 id=&#34;next-step-import-the-cluster&#34;&gt;Next step: Import the cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-step-import-the-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Next, you can add a cluster and view its related optimization recommendations. For details, see:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/import-cluster/import-aws/&#34;&gt;Import AWS EKS cluster&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/&#34;&gt;Import AWS EKS cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -1488,10 +1488,10 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
     
     <item>
       <title>Docs: Notification Channel</title>
-      <link>/docs/user-guide/management/channel/</link>
+      <link>//localhost:1313/docs/user-guide/management/channel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/management/channel/</guid>
+      <guid>//localhost:1313/docs/user-guide/management/channel/</guid>
       <description>
         
         
@@ -1505,7 +1505,7 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;h2 id=&#34;view-channels&#34;&gt;View Channels&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-channels&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To access the notification channel management page, navigate to &lt;code&gt;Settings&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Notification Channels&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/channel/overview_hu824b275e1628a53c9cee5473e61eb3d8_65173_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;273&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/overview_hu824b275e1628a53c9cee5473e61eb3d8_65173_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;273&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1527,7 +1527,7 @@ Notification channel management page
 &lt;h2 id=&#34;adding-a-channel&#34;&gt;Adding a Channel&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adding-a-channel&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To add a new notification channel, click the &lt;code&gt;Add&lt;/code&gt; button at the top of the notification channel management page, select the channel type, and fill in the necessary information, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/channel/addchannel_hua77b47c0ce1f13b8995bfd0486a81898_41893_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;641&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/addchannel_hua77b47c0ce1f13b8995bfd0486a81898_41893_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;641&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1592,7 +1592,7 @@ Add Notification Channel Dialog
 &lt;h2 id=&#34;updating-a-channel&#34;&gt;Updating a Channel&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-channel&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update a notification channel, click the &lt;code&gt;Edit&lt;/code&gt; button in the notification channel management list to modify the channel information, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/channel/editchannel_hu18262063cc359697a35dc12ddb73059d_45805_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;642&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/editchannel_hu18262063cc359697a35dc12ddb73059d_45805_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;642&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1603,12 +1603,12 @@ Edit Notification Channel Dialog
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The field names and descriptions are identical to those in the &lt;a href=&#34;/docs/user-guide/management/channel/#adding-a-channel&#34;&gt;Adding a Channel&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;The field names and descriptions are identical to those in the &lt;a href=&#34;//localhost:1313/docs/user-guide/management/channel/#adding-a-channel&#34;&gt;Adding a Channel&lt;/a&gt; section.&lt;/p&gt;
 &lt;p&gt;After entering the required information, click &lt;code&gt;Confirm&lt;/code&gt; button to update the notification channel.&lt;/p&gt;
 &lt;h2 id=&#34;deleting-a-channel&#34;&gt;Deleting a Channel&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-channel&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button in the list of notification channel management pages to delete the notification channel, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;209&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;209&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1625,7 +1625,7 @@ Edit notification channel dialog box
 &lt;/blockquote&gt;
 &lt;p&gt;To delete a notification channel, click the &lt;code&gt;Delete&lt;/code&gt; button in the notification channel management list, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;209&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/channel/deletechannel_hu3be50b71ab18d1afcb59c252da4f5f06_49671_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;209&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1646,10 +1646,10 @@ Delete Notification Channel Dialog
     
     <item>
       <title>Docs: Adjust Disk</title>
-      <link>/docs/user-guide/operations/adjust-disk/</link>
+      <link>//localhost:1313/docs/user-guide/operations/adjust-disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/adjust-disk/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/adjust-disk/</guid>
       <description>
         
         
@@ -1669,10 +1669,10 @@ Delete Notification Channel Dialog
     
     <item>
       <title>Docs: Cluster</title>
-      <link>/docs/user-guide/cluster/</link>
+      <link>//localhost:1313/docs/user-guide/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/cluster/</guid>
+      <guid>//localhost:1313/docs/user-guide/cluster/</guid>
       <description>
         
         
@@ -1686,7 +1686,7 @@ Delete Notification Channel Dialog
 &lt;h2 id=&#34;view-cluster&#34;&gt;View cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Cluster&lt;/code&gt; on the left menu bar to display the cluster overview page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/cluster/overview_hu412a39f91c157a1ac904bdf2cb862fb5_121350_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;440&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/overview_hu412a39f91c157a1ac904bdf2cb862fb5_121350_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;440&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1700,7 +1700,7 @@ Cluster Overview Page
 &lt;p&gt;The main display area shows the list of managed clusters, including cluster name, cluster ID, region, access token name, cloud provider name, prometheus address, health status, and more.&lt;/p&gt;
 &lt;p&gt;In the commercial version, additional cluster status and actions are provided, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/cluster/cluster-biz_hu824e5aa7d52d886fb6d8746936cec905_190264_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/cluster-biz_hu824e5aa7d52d886fb6d8746936cec905_190264_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1729,7 +1729,7 @@ Cluster Overview Page: Commercial Version
 &lt;p&gt;Cluster hibernation helps reduce resource usage and costs by managing cluster nodes efficiently. For instance, if a cluster sleeps from 9 PM to 8 AM from Monday to Friday, machine cost savings can reach up to 54.8%. By setting cluster hibernation, you can specify the &lt;code&gt;sleep time&lt;/code&gt; and &lt;code&gt;wake-up time&lt;/code&gt;. During the sleep period, cluster load status is saved, and node resources are gradually released. During the wake-up period, node resources are restored, and the cluster returns to its previous state. Cluster hibernation is ideal for development and testing environments.&lt;/p&gt;
 &lt;p&gt;Click &lt;code&gt;Set Cluster Hibernation&lt;/code&gt; in the operation bar to open the dialog box as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/cluster/set-hibernate-schedule_hu47036cfb09e157008cbc736129a941bd_109510_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;298&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/set-hibernate-schedule_hu47036cfb09e157008cbc736129a941bd_109510_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;298&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1751,7 +1751,7 @@ Set Cluster Hibernation
 &lt;li&gt;Select &lt;code&gt;Disable&lt;/code&gt; for the Whether to enable hibernation option.&lt;/li&gt;
 &lt;li&gt;Click &lt;code&gt;OK&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;During hibernation, the cluster will use the access account provided by the user. Ensure that a cluster access account is set up. For details, see &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During hibernation, the cluster will use the access account provided by the user. Ensure that a cluster access account is set up. For details, see &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;/p&gt;
 &lt;ol&gt;
@@ -1771,10 +1771,10 @@ Set Cluster Hibernation
     
     <item>
       <title>Docs: Notification Rules</title>
-      <link>/docs/user-guide/management/rule/</link>
+      <link>//localhost:1313/docs/user-guide/management/rule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/management/rule/</guid>
+      <guid>//localhost:1313/docs/user-guide/management/rule/</guid>
       <description>
         
         
@@ -1788,7 +1788,7 @@ Set Cluster Hibernation
 &lt;h2 id=&#34;view-notification-rules&#34;&gt;View Notification Rules&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-notification-rules&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To access the notification rule management page, navigate to &lt;code&gt;Settings&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Notification Rules&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/overview_hu00c99dbacf81e012ed7731ff9b3ac40c_64922_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;265&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/overview_hu00c99dbacf81e012ed7731ff9b3ac40c_64922_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;265&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1810,7 +1810,7 @@ Notification rule management page
 &lt;h2 id=&#34;adding-a-notification-rule&#34;&gt;Adding a Notification Rule&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adding-a-notification-rule&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To add a new notification rule, click the &lt;code&gt;Add&lt;/code&gt; button at the top of the notification rule management page. This will open the &lt;code&gt;Add Notification Rule&lt;/code&gt; dialog box, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/addrule_hubf452712888088648131528102c1664c_59524_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/addrule_hubf452712888088648131528102c1664c_59524_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1884,7 +1884,7 @@ Add Notification Rule Dialog
 &lt;h2 id=&#34;updating-a-notification-rule&#34;&gt;Updating a Notification Rule&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-notification-rule&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update a notification rule, click the &lt;code&gt;Edit&lt;/code&gt; button in the notification rule management list. This will open the &lt;code&gt;Edit Notification Rule&lt;/code&gt; dialog box, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/editrule_huc4d5dfb901b7502e407e372d14f1ae45_66050_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/editrule_huc4d5dfb901b7502e407e372d14f1ae45_66050_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1895,12 +1895,12 @@ Edit Notification Rule Dialog
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The field names and descriptions are the same as those in the &lt;a href=&#34;/docs/user-guide/management/rule/#adding-a-notification-rule&#34;&gt;Adding a Notification Rule&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;The field names and descriptions are the same as those in the &lt;a href=&#34;//localhost:1313/docs/user-guide/management/rule/#adding-a-notification-rule&#34;&gt;Adding a Notification Rule&lt;/a&gt; section.&lt;/p&gt;
 &lt;p&gt;After entering the required information, click &lt;code&gt;Confirm&lt;/code&gt; button to update the notification rule.&lt;/p&gt;
 &lt;h2 id=&#34;deleting-a-notification-rule&#34;&gt;Deleting a Notification Rule&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-notification-rule&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To delete a notification rule, click the &lt;code&gt;Delete&lt;/code&gt; button in the notification rule management list, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/deleterule_hu7188e0b08ec870890cc1c619293ed15b_40498_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;189&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/deleterule_hu7188e0b08ec870890cc1c619293ed15b_40498_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;189&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1918,10 +1918,10 @@ Delete Notification Rule
     
     <item>
       <title>Docs: Upgrading to the commercial version</title>
-      <link>/docs/setup/upgrade/</link>
+      <link>//localhost:1313/docs/setup/upgrade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/setup/upgrade/</guid>
+      <guid>//localhost:1313/docs/setup/upgrade/</guid>
       <description>
         
         
@@ -1955,7 +1955,7 @@ Delete Notification Rule
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;optimizer&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;maxOpenConns&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For instructions on utilizing a deployed database, please refer to the section &lt;a href=&#34;/docs/setup/upgrade/#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For instructions on utilizing a deployed database, please refer to the section &lt;a href=&#34;//localhost:1313/docs/setup/upgrade/#using-a-deployed-database&#34;&gt;Using a Deployed Database&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2121,8 +2121,8 @@ Delete Notification Rule
 &lt;h2 id=&#34;next-step-import-the-cluster&#34;&gt;Next step: Import the cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-step-import-the-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Next, you can add a cluster and review its associated optimization recommendations. For more details, refer to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/import-cluster/import-aws/&#34;&gt;Import AWS EKS cluster&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/&#34;&gt;Import AWS EKS cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;Import Alibaba Cloud Cluster&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -2130,10 +2130,10 @@ Delete Notification Rule
     
     <item>
       <title>Docs: Delete Persistent Volume</title>
-      <link>/docs/user-guide/operations/delete-pv/</link>
+      <link>//localhost:1313/docs/user-guide/operations/delete-pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/delete-pv/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/delete-pv/</guid>
       <description>
         
         
@@ -2153,10 +2153,10 @@ Delete Notification Rule
     
     <item>
       <title>Docs: Node Group</title>
-      <link>/docs/user-guide/nodegroup/</link>
+      <link>//localhost:1313/docs/user-guide/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/nodegroup/</guid>
+      <guid>//localhost:1313/docs/user-guide/nodegroup/</guid>
       <description>
         
         
@@ -2175,7 +2175,7 @@ Delete Notification Rule
 &lt;li&gt;&lt;strong&gt;List Area&lt;/strong&gt;: Displays node group information, current settings, and optimization settings.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2195,7 +2195,7 @@ Delete Notification Rule
 &lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: Provides available actions for the node group.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2209,7 +2209,7 @@ Node Group Page - After selecting the cluster
 &lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust Node Group&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node-group&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the image above to open the Adjust Node Group dialog box, as illustrated below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2229,10 +2229,10 @@ Adjust Node Group Dialog
     
     <item>
       <title>Docs: Node</title>
-      <link>/docs/user-guide/node/</link>
+      <link>//localhost:1313/docs/user-guide/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/node/</guid>
+      <guid>//localhost:1313/docs/user-guide/node/</guid>
       <description>
         
         
@@ -2246,7 +2246,7 @@ Adjust Node Group Dialog
 &lt;h2 id=&#34;view-nodes&#34;&gt;View Nodes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-nodes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Node&lt;/code&gt; menu on the platform’s left navigation bar to display the Node page, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/node/node1_hu9395c92acd4261258a440a868d64dab7_71908_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;292&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/node/node1_hu9395c92acd4261258a440a868d64dab7_71908_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;292&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2265,7 +2265,7 @@ Node page
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the List Area will show nodes that match the specified criteria within the cluster, as illustrated below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/node/node2_hu79d0c36850ca2a10e2eb2df8c0f6e0d3_153658_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/node/node2_hu79d0c36850ca2a10e2eb2df8c0f6e0d3_153658_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2288,7 +2288,7 @@ Node page - Select Cluster
 &lt;h2 id=&#34;adjust-a-node&#34;&gt;Adjust a Node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-a-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; column to open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog box, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;424&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;424&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2308,10 +2308,10 @@ Node page - Select Cluster
     
     <item>
       <title>Docs: Disk</title>
-      <link>/docs/user-guide/disk/</link>
+      <link>//localhost:1313/docs/user-guide/disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/disk/</guid>
+      <guid>//localhost:1313/docs/user-guide/disk/</guid>
       <description>
         
         
@@ -2325,7 +2325,7 @@ Node page - Select Cluster
 &lt;h2 id=&#34;view-disks&#34;&gt;View Disks&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-disks&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Disk&lt;/code&gt; menu in the left navigation bar to access the disk management page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/disk/disk1_hu586b962710831052bb190f8f2f84d234_70715_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/disk/disk1_hu586b962710831052bb190f8f2f84d234_70715_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2344,7 +2344,7 @@ Disk Page
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the Disk page appears as follows:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/disk/disk2_huc4f6d93e34b39afdead8fc69986df97a_186869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;443&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/disk/disk2_huc4f6d93e34b39afdead8fc69986df97a_186869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;443&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2366,7 +2366,7 @@ Disk Page - Cluster Selected
 &lt;h2 id=&#34;adjust-disk-size&#34;&gt;Adjust Disk Size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-disk-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Disk Size&lt;/code&gt; dialog box. This dialog displays detailed disk adjustment information and recommended adjustment plans, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2383,10 +2383,10 @@ Adjust Disk Size Dialog
     
     <item>
       <title>Docs: GPU Node</title>
-      <link>/docs/user-guide/gpunode/</link>
+      <link>//localhost:1313/docs/user-guide/gpunode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/gpunode/</guid>
+      <guid>//localhost:1313/docs/user-guide/gpunode/</guid>
       <description>
         
         
@@ -2400,7 +2400,7 @@ Adjust Disk Size Dialog
 &lt;h2 id=&#34;view-gpu-nodes&#34;&gt;View GPU nodes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-gpu-nodes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;GPU Node&lt;/code&gt; menu in the left navigation bar to access the GPU Node page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2419,7 +2419,7 @@ GPU Node
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the List Area will show GPU nodes that match the specified criteria within the cluster, as illustrated below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2441,7 +2441,7 @@ GPU Node: Cluster Selected
 &lt;h2 id=&#34;adjust-node&#34;&gt;Adjust node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; Column to open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog box, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2461,10 +2461,10 @@ Node: Adjust Node
     
     <item>
       <title>Docs: Persistent Volume</title>
-      <link>/docs/user-guide/pv/</link>
+      <link>//localhost:1313/docs/user-guide/pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/pv/</guid>
+      <guid>//localhost:1313/docs/user-guide/pv/</guid>
       <description>
         
         
@@ -2478,7 +2478,7 @@ Node: Adjust Node
 &lt;h2 id=&#34;view-persistent-volumes&#34;&gt;View Persistent Volumes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-persistent-volumes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Persistent Volume&lt;/code&gt; menu on the left sidebar to display the Persistent Volume page, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv1_hu24db01f2be02a5928ee5616e06248119_86898_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;436&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv1_hu24db01f2be02a5928ee5616e06248119_86898_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;436&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2497,7 +2497,7 @@ Persistent Volume page
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the Persistent Volume page will look like this:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv2_hue425eb8ed03739d9b17157285a333f1a_136274_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;505&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv2_hue425eb8ed03739d9b17157285a333f1a_136274_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;505&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2520,7 +2520,7 @@ Persistent Volume page-select cluster
 &lt;p&gt;Select the row where the strategy name column is &lt;code&gt;Unused PV&lt;/code&gt;, and click the &lt;code&gt;Delete&lt;/code&gt; link in the action column of that row. This will open the &lt;code&gt;Delete Persistent Volume&lt;/code&gt; dialog box, displaying the details of the Persistent Volume and recommended actions.&lt;/p&gt;
 &lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2533,7 +2533,7 @@ Delete Persistent Volume Dialog
 
 &lt;p&gt;In the commercial version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv-b3_hu381f4197b01951d70e087b61e1cfa586_63315_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv-b3_hu381f4197b01951d70e087b61e1cfa586_63315_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2548,7 +2548,7 @@ Delete Persistent Volume Dialog
 &lt;h2 id=&#34;adjust-persistent-volume-size&#34;&gt;Adjust Persistent Volume Size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-persistent-volume-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Select &lt;code&gt;Underutilized PV&lt;/code&gt; as the strategy name in the &lt;strong&gt;Query Area&lt;/strong&gt;. The system will then display only the list items that match the &lt;code&gt;Underutilized PV&lt;/code&gt; strategy, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;500&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;500&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2562,7 +2562,7 @@ Filter list items by `Underutilized PV` policy name
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the list’s &lt;code&gt;Action&lt;/code&gt; column to open the &lt;code&gt;Adjust Persistent Volume Size&lt;/code&gt; dialog box. This dialog box displays detailed information about the Persistent Volume and the recommended adjustment plan.&lt;/p&gt;
 &lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2575,7 +2575,7 @@ Resize Persistent Volume
 
 &lt;p&gt;In the commercial version, you can set parameters and automatically adjust the volume using background tasks, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv-b5_hu452c317069072d2f009fc1a8b16aca39_150263_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;450&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv-b5_hu452c317069072d2f009fc1a8b16aca39_150263_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;450&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2589,7 +2589,7 @@ Adjust the Persistent Volume dialog box: Set parameters
 &lt;p&gt;After setting the &lt;code&gt;target capacity&lt;/code&gt;, &lt;code&gt;whether to keep the original PVC name&lt;/code&gt;, and &lt;code&gt;whether to delete the original PV&lt;/code&gt;, click &lt;code&gt;OK&lt;/code&gt; to quickly adjust the persistent volume size.&lt;/p&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; column again to view the execution log of the persistent volume size adjustment, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv-b6_hu6991ea5bc42325c0f3cc1f4d0cf07f2a_260247_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;455&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv-b6_hu6991ea5bc42325c0f3cc1f4d0cf07f2a_260247_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;455&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2600,7 +2600,7 @@ Adjust Persistent Volume dialog box: View task log
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Adjusting the PV will use the cluster access account provided by the user to manage the PV in the cluster. To set up a cluster access account, refer to &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Adjusting the PV will use the cluster access account provided by the user to manage the PV in the cluster. To set up a cluster access account, refer to &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If you choose not to delete the original persistent volume, you will need to delete it manually, or you will continue to incur costs for the persistent volume.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2610,10 +2610,10 @@ Adjust Persistent Volume dialog box: View task log
     
     <item>
       <title>Docs: Application / Workload</title>
-      <link>/docs/user-guide/app/</link>
+      <link>//localhost:1313/docs/user-guide/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/app/</guid>
+      <guid>//localhost:1313/docs/user-guide/app/</guid>
       <description>
         
         
@@ -2627,7 +2627,7 @@ Adjust Persistent Volume dialog box: View task log
 &lt;h2 id=&#34;review-applications--workloads&#34;&gt;Review applications / workloads&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-applications--workloads&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click on the &lt;code&gt;Application&lt;/code&gt; menu on the left menu bar of the platform to reveal the application page, as shown  below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;352&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;352&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2646,7 +2646,7 @@ application
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster in the &lt;strong&gt;Cluster Selection Area&lt;/strong&gt;, the platform aggregates and displays the results of all strategies by default in a list, as shown in the figure below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2672,7 +2672,7 @@ Application: Select a cluster
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Resource Quota&lt;/code&gt; dialog box, which displays application details, recommended values ​​and corresponding adjustment statements.&lt;/p&gt;
 &lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;560&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;560&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2685,7 +2685,7 @@ Application: Adjust resource quota dialog box
 
 &lt;p&gt;In the commercial version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b3_huf2002155a079f505abdfbd5c4f88a8fe_77389_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;491&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app-b3_huf2002155a079f505abdfbd5c4f88a8fe_77389_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;491&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2701,7 +2701,7 @@ Application: Adjust resource quota dialog box
 &lt;h3 id=&#34;review-resource-quota-unset&#34;&gt;Review resource quota unset&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-resource-quota-unset&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;When the strategy name is &lt;code&gt;Resource Quota Unset&lt;/code&gt;, the list area appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app4_hu6c148e4c2d42e6030eda415bc43d9aa3_125204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app4_hu6c148e4c2d42e6030eda415bc43d9aa3_125204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2725,7 +2725,7 @@ Application: Select `Resource Quota Unset` strategy
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the image above to open the &lt;code&gt;Set Application Resource Quota&lt;/code&gt; dialog box, which displays application details, recommended values, and corresponding adjustment commands.&lt;/p&gt;
 &lt;p&gt;In the community version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app5_hu80dc269157f0934e6e5833c00cd461d5_84676_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;501&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app5_hu80dc269157f0934e6e5833c00cd461d5_84676_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;501&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2738,7 +2738,7 @@ Application: Set application resource quota dialog box
 
 &lt;p&gt;In the commercial version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b5_hu784ee8109267f2eab7d46c944c7605ee_64257_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app-b5_hu784ee8109267f2eab7d46c944c7605ee_64257_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2754,7 +2754,7 @@ Application: Set rapplication esource quota dialog box
 &lt;h3 id=&#34;view-memory-overflow-applications&#34;&gt;View memory overflow applications&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-memory-overflow-applications&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;When the strategy name is &lt;code&gt;Out of Memory&lt;/code&gt;, the list area appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app6_hubb1e5856ae2e20a0843d5125bd00838a_116310_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app6_hubb1e5856ae2e20a0843d5125bd00838a_116310_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2778,7 +2778,7 @@ Application: Select `Out of Memory` strategy
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Application Memory Size&lt;/code&gt; dialog box, which displays application details, recommended memory limit values, and corresponding adjustment commands.&lt;/p&gt;
 &lt;p&gt;In the community version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app7_hu253ed517a5b0de63cf78b90da814ac72_72861_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app7_hu253ed517a5b0de63cf78b90da814ac72_72861_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2791,7 +2791,7 @@ Applications: Adjust application memory size dialog box
 
 &lt;p&gt;In the commercial version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b7_hu2c480889fc421f01df4cf685a778ca2f_51682_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app-b7_hu2c480889fc421f01df4cf685a778ca2f_51682_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2809,10 +2809,10 @@ Application: Adjust application memory size dialog box
     
     <item>
       <title>Docs: Installation</title>
-      <link>/docs/setup/</link>
+      <link>//localhost:1313/docs/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/setup/</guid>
+      <guid>//localhost:1313/docs/setup/</guid>
       <description>
         
         
@@ -2822,10 +2822,10 @@ Application: Adjust application memory size dialog box
     
     <item>
       <title>Docs: Task Management</title>
-      <link>/docs/user-guide/tasks/</link>
+      <link>//localhost:1313/docs/user-guide/tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/tasks/</guid>
+      <guid>//localhost:1313/docs/user-guide/tasks/</guid>
       <description>
         
         
@@ -2843,7 +2843,7 @@ Application: Adjust application memory size dialog box
 &lt;h2 id=&#34;view-tasks&#34;&gt;View tasks&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-tasks&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the task icon in the menu bar on the right side of the platform header, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/tasks/task_hu5d4266911dca8a1f73385ea1019a5b8e_4744_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;68&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/tasks/task_hu5d4266911dca8a1f73385ea1019a5b8e_4744_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;68&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2856,7 +2856,7 @@ Task management page
 
 &lt;p&gt;This action will display the task management page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/tasks/overview_hud2b2ac9ca0c0627cdb1a0bd18436cbeb_84824_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;448&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/tasks/overview_hud2b2ac9ca0c0627cdb1a0bd18436cbeb_84824_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;448&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2884,10 +2884,10 @@ Task management page
 &lt;/ol&gt;
 &lt;p&gt;Task creation is handled by the corresponding strategies. For more details, refer to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/pv/#Delete Persistent Volume&#34;&gt;Unused PV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/#Adjust resource quota&#34;&gt;Application Resource Recommendation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/#Set application resource quota&#34;&gt;Resource Quota Unset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/#Adjust application memory size&#34;&gt;Out of Memory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/pv/#Delete Persistent Volume&#34;&gt;Unused PV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/#Adjust resource quota&#34;&gt;Application Resource Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/#Set application resource quota&#34;&gt;Resource Quota Unset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/#Adjust application memory size&#34;&gt;Out of Memory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -2895,10 +2895,10 @@ Task management page
     
     <item>
       <title>Docs: Personal Settings</title>
-      <link>/docs/user-guide/personal-settings/</link>
+      <link>//localhost:1313/docs/user-guide/personal-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/personal-settings/</guid>
+      <guid>//localhost:1313/docs/user-guide/personal-settings/</guid>
       <description>
         
         
@@ -2908,10 +2908,10 @@ Task management page
     
     <item>
       <title>Docs: User Manual</title>
-      <link>/docs/user-guide/</link>
+      <link>//localhost:1313/docs/user-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/</guid>
+      <guid>//localhost:1313/docs/user-guide/</guid>
       <description>
         
         
@@ -2921,10 +2921,10 @@ Task management page
     
     <item>
       <title>Docs: Management Settings</title>
-      <link>/docs/user-guide/management/</link>
+      <link>//localhost:1313/docs/user-guide/management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/management/</guid>
+      <guid>//localhost:1313/docs/user-guide/management/</guid>
       <description>
         
         
@@ -2934,10 +2934,10 @@ Task management page
     
     <item>
       <title>Docs: Configuration</title>
-      <link>/docs/configuration/</link>
+      <link>//localhost:1313/docs/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/configuration/</guid>
+      <guid>//localhost:1313/docs/configuration/</guid>
       <description>
         
         
@@ -2954,10 +2954,10 @@ Task management page
     
     <item>
       <title>Docs: Manual Operation</title>
-      <link>/docs/user-guide/operations/</link>
+      <link>//localhost:1313/docs/user-guide/operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/</guid>
       <description>
         
         

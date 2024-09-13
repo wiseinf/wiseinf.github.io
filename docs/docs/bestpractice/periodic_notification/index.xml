@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Setting Up Periodic Optimization Notifications in Cluster Optimizer</title>
-    <link>/docs/bestpractice/periodic_notification/</link>
+    <link>//localhost:1313/docs/bestpractice/periodic_notification/</link>
     <description>Recent content in Setting Up Periodic Optimization Notifications in Cluster Optimizer on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/docs/bestpractice/periodic_notification/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/bestpractice/periodic_notification/index.xml" rel="self" type="application/rss+xml" />
     
     
       

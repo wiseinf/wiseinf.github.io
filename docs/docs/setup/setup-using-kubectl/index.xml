@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Install via kubectl</title>
-    <link>/docs/setup/setup-using-kubectl/</link>
+    <link>//localhost:1313/docs/setup/setup-using-kubectl/</link>
     <description>Recent content in Install via kubectl on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/docs/setup/setup-using-kubectl/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/setup/setup-using-kubectl/index.xml" rel="self" type="application/rss+xml" />
     
     
       

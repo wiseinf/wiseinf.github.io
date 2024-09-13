@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 优化操作</title>
-    <link>/zh-cn/tags/%E4%BC%98%E5%8C%96%E6%93%8D%E4%BD%9C/</link>
+    <link>//localhost:1313/zh-cn/tags/%E4%BC%98%E5%8C%96%E6%93%8D%E4%BD%9C/</link>
     <description>Recent content in 优化操作 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="/zh-cn/tags/%E4%BC%98%E5%8C%96%E6%93%8D%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/tags/%E4%BC%98%E5%8C%96%E6%93%8D%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 优化操作</title>
-      <link>/zh-cn/docs/user-guide/operations/</link>
+      <link>//localhost:1313/zh-cn/docs/user-guide/operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/user-guide/operations/</guid>
+      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/</guid>
       <description>
         
         

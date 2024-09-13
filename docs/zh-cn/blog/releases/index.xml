@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 版本更新</title>
-    <link>/zh-cn/blog/releases/</link>
+    <link>//localhost:1313/zh-cn/blog/releases/</link>
     <description>Recent content in 版本更新 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 10 Sep 2024 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="/zh-cn/blog/releases/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/blog/releases/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Blog: Cluster Optimizer v1.3.1版已发布</title>
-      <link>/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <link>//localhost:1313/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
       <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <guid>//localhost:1313/zh-cn/blog/2024/09/10/cluster-optimizer-v1.3.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
       <description>
         
         
@@ -31,17 +31,17 @@
 &lt;li&gt;&lt;strong&gt;访问密钥管理&lt;/strong&gt;：为用户管理访问密钥。通过访问密钥，用户可以以编程方式与 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; API 交互。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;集群休眠节省估算工具&lt;/strong&gt;：提供集群休眠节省估算工具，支持 &lt;strong&gt;Amazon AWS&lt;/strong&gt; 和 &lt;strong&gt;阿里云&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;要快速部署并试用 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参阅：&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;要快速部署并试用 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参阅：&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer v1.3.0版已发布</title>
-      <link>/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <link>//localhost:1313/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
       <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <guid>//localhost:1313/zh-cn/blog/2024/07/10/cluster-optimizer-v1.3.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
       <description>
         
         
@@ -51,17 +51,17 @@
 &lt;li&gt;&lt;strong&gt;商业版&lt;/strong&gt; 自动化动作：支持自动化的调整数据存储卷（Persistent Volume）的容量大小，目前仅限于Deployment。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;商业版&lt;/strong&gt; 集群休眠：支持集群休眠功能，可手动或定时将集群休眠，释放集群的节点资源，同时可以在恢复时同时恢复集群数据。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer v1.2.1版已发布</title>
-      <link>/zh-cn/blog/2024/05/30/cluster-optimizer-v1.2.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <link>//localhost:1313/zh-cn/blog/2024/05/30/cluster-optimizer-v1.2.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
       <pubDate>Thu, 30 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/blog/2024/05/30/cluster-optimizer-v1.2.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <guid>//localhost:1313/zh-cn/blog/2024/05/30/cluster-optimizer-v1.2.1%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
       <description>
         
         
@@ -71,17 +71,17 @@
 &lt;li&gt;数据库Schema自动升级。&lt;/li&gt;
 &lt;li&gt;支持测试通知渠道连通性，方便验证输入参数的正确性。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer v1.2.0版已发布</title>
-      <link>/zh-cn/blog/2024/05/20/cluster-optimizer-v1.2.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <link>//localhost:1313/zh-cn/blog/2024/05/20/cluster-optimizer-v1.2.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/blog/2024/05/20/cluster-optimizer-v1.2.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <guid>//localhost:1313/zh-cn/blog/2024/05/20/cluster-optimizer-v1.2.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
       <description>
         
         
@@ -93,17 +93,17 @@
 &lt;li&gt;自动化动作：支持应用级的资源推荐、未设置资源额度和内存溢出，以及删除未使用的持久卷等自动化动作，支持标准的工作负载&lt;em&gt;Deployment&lt;/em&gt;、&lt;em&gt;StatefulSet&lt;/em&gt;、&lt;em&gt;DaemonSet&lt;/em&gt;和&lt;em&gt;CronJob&lt;/em&gt;。不支持&lt;em&gt;Job&lt;/em&gt;，其资源额度（Resource Quota）不可修改。&lt;/li&gt;
 &lt;li&gt;任务管理：支持创建、运行、重运行、取消、查看任务日志、删除任务等日常任务管理操作。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer v1.1.0版已发布</title>
-      <link>/zh-cn/blog/2024/04/09/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <link>//localhost:1313/zh-cn/blog/2024/04/09/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/blog/2024/04/09/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <guid>//localhost:1313/zh-cn/blog/2024/04/09/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
       <description>
         
         
@@ -117,17 +117,17 @@
 &lt;li&gt;集群状态：能够展示导入集群中的Kubernetes状态和Metrics服务的状态。对于异常状态，能够快速发现到异常原因。&lt;/li&gt;
 &lt;li&gt;支持自动创建数据库Schema：可通过数据库连接配置项中的参数&lt;code&gt;createDatabaseIfNotExist&lt;/code&gt;=&lt;code&gt;true&lt;/code&gt;来指明在数据库不存在是是否自动创建数据库。当指定的用户名和密码具备创建数据库权限时，系统将自动创建数据库。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;快速部署和试用&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，请参见：&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;免费试用&lt;/a&gt;。&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Blog: Cluster Optimizer v1.1.0版已发布</title>
-      <link>/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
+      <link>//localhost:1313/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
+      <guid>//localhost:1313/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/</guid>
       <description>
         
         

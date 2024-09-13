@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Manual Operation</title>
-    <link>/docs/user-guide/operations/</link>
+    <link>//localhost:1313/docs/user-guide/operations/</link>
     <description>Recent content in Manual Operation on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/docs/user-guide/operations/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/user-guide/operations/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Adjusting Node Group</title>
-      <link>/docs/user-guide/operations/adjust-nodegroup/</link>
+      <link>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/adjust-nodegroup/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/adjust-nodegroup/</guid>
       <description>
         
         
@@ -51,10 +51,10 @@
     
     <item>
       <title>Docs: Adjustment Node</title>
-      <link>/docs/user-guide/operations/adjust-node/</link>
+      <link>//localhost:1313/docs/user-guide/operations/adjust-node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/adjust-node/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/adjust-node/</guid>
       <description>
         
         
@@ -74,10 +74,10 @@
     
     <item>
       <title>Docs: Adjust Disk</title>
-      <link>/docs/user-guide/operations/adjust-disk/</link>
+      <link>//localhost:1313/docs/user-guide/operations/adjust-disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/adjust-disk/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/adjust-disk/</guid>
       <description>
         
         
@@ -97,10 +97,10 @@
     
     <item>
       <title>Docs: Delete Persistent Volume</title>
-      <link>/docs/user-guide/operations/delete-pv/</link>
+      <link>//localhost:1313/docs/user-guide/operations/delete-pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/operations/delete-pv/</guid>
+      <guid>//localhost:1313/docs/user-guide/operations/delete-pv/</guid>
       <description>
         
         

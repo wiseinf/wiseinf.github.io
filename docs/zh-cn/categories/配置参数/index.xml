@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 配置参数</title>
-    <link>/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</link>
+    <link>//localhost:1313/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</link>
     <description>Recent content in 配置参数 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 配置参数</title>
-      <link>/zh-cn/docs/configuration/conf/</link>
+      <link>//localhost:1313/zh-cn/docs/configuration/conf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/configuration/conf/</guid>
+      <guid>//localhost:1313/zh-cn/docs/configuration/conf/</guid>
       <description>
         
         

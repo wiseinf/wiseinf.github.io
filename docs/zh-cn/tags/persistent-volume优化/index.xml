@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Persistent Volume优化</title>
-    <link>/zh-cn/tags/persistent-volume%E4%BC%98%E5%8C%96/</link>
+    <link>//localhost:1313/zh-cn/tags/persistent-volume%E4%BC%98%E5%8C%96/</link>
     <description>Recent content in Persistent Volume优化 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="/zh-cn/tags/persistent-volume%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/tags/persistent-volume%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Persistent Volume优化</title>
-      <link>/zh-cn/docs/user-guide/pv/</link>
+      <link>//localhost:1313/zh-cn/docs/user-guide/pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/user-guide/pv/</guid>
+      <guid>//localhost:1313/zh-cn/docs/user-guide/pv/</guid>
       <description>
         
         
@@ -33,7 +33,7 @@
 &lt;h2 id=&#34;查看persistent-volume&#34;&gt;查看Persistent Volume&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8bpersistent-volume&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;Persistent Volume&lt;/code&gt;菜单，则显示Persistent Volume页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv1_hucb8d24ddb3f2cb76db829cd2ba9e71f7_60051_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv1_hucb8d24ddb3f2cb76db829cd2ba9e71f7_60051_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -52,7 +52,7 @@ Persistent Volume页
 &lt;/ol&gt;
 &lt;p&gt;选择集群后的Persistent Volume页如下所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv2_hu761a73dea420d55d4cdeb6bb52d12ae4_90091_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv2_hu761a73dea420d55d4cdeb6bb52d12ae4_90091_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -75,7 +75,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;选择策略名称栏是&lt;code&gt;未使用PV&lt;/code&gt;的行，点击该行操作栏中的&lt;code&gt;删除&lt;/code&gt;链接可打开&lt;code&gt;删除Persistent Volume&lt;/code&gt;对话框，其中展示了Persistent Volume详细信息和推荐方案。&lt;/p&gt;
 &lt;p&gt;在社区版中对话框展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv3_hu20fe78c188fd49807126a8812c694cb4_61344_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv3_hu20fe78c188fd49807126a8812c694cb4_61344_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -88,7 +88,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中对话框展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv-b3_huc68b717a44e2c08147b279ecfa344ba3_60650_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;300&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv-b3_huc68b717a44e2c08147b279ecfa344ba3_60650_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;300&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -103,7 +103,7 @@ Persistent Volume页-选择集群
 &lt;h2 id=&#34;调整persistent-volume大小&#34;&gt;调整Persistent Volume大小&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4persistent-volume%e5%a4%a7%e5%b0%8f&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;在&lt;strong&gt;查询区&lt;/strong&gt;中的策略名称选择&lt;code&gt;低利用率PV&lt;/code&gt;，系统将仅展示符合&lt;code&gt;低利用率PV&lt;/code&gt;策略的列表项，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv4_hu801588667bd5229fc743e3a25182bd5e_112015_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv4_hu801588667bd5229fc743e3a25182bd5e_112015_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -116,7 +116,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;点击列表&lt;strong&gt;操作栏&lt;/strong&gt;中的&lt;code&gt;调整&lt;/code&gt;链接可打开&lt;code&gt;调整Persistent Volume大小&lt;/code&gt;对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv5_hufa19166f247a908b1fb34abc41a8d84b_90538_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;401&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv5_hufa19166f247a908b1fb34abc41a8d84b_90538_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;401&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -129,7 +129,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中，可以设置参数后由后台任务自动调整，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv-b5_huef030b39b52f917f4f18b8235f4418ea_65704_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;454&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv-b5_huef030b39b52f917f4f18b8235f4418ea_65704_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;454&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -143,7 +143,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;设置&lt;code&gt;目标容量&lt;/code&gt;，&lt;code&gt;是否保持原有PVC名称&lt;/code&gt;，&lt;code&gt;是否删除原有PV&lt;/code&gt;后，点击&lt;code&gt;确定&lt;/code&gt;，即可快速调整Persistent Volume大小。&lt;/p&gt;
 &lt;p&gt;再次点击&lt;strong&gt;操作栏&lt;/strong&gt;中的&lt;code&gt;调整&lt;/code&gt;链接，此时可查看调整Persistent Volume大小的执行日志，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv-b6_hua82026309ad0e5fcfb71ee701a46a6d6_121835_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;464&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv-b6_hua82026309ad0e5fcfb71ee701a46a6d6_121835_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;464&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -154,7 +154,7 @@ Persistent Volume页-选择集群
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;调整PV将使用用户提供的集群访问账号来操作集群中的PV。您需要设置集群访问账号，具体请参见&lt;a href=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;调整PV将使用用户提供的集群访问账号来操作集群中的PV。您需要设置集群访问账号，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：若选择不&lt;code&gt;是否删除原有PV&lt;/code&gt;，您需要自行删除原有PV，否则您仍将承担该PV的费用。&lt;/p&gt;
 &lt;/blockquote&gt;

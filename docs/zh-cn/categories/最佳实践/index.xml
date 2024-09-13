@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 最佳实践</title>
-    <link>/zh-cn/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+    <link>//localhost:1313/zh-cn/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
     <description>Recent content in 最佳实践 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="/zh-cn/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/zh-cn/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 周期性的获取优化建议通知</title>
-      <link>/zh-cn/docs/bestpractice/periodic_notification/</link>
+      <link>//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/bestpractice/periodic_notification/</guid>
+      <guid>//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/</guid>
       <description>
         
         
@@ -50,8 +50,8 @@
 &lt;p&gt;下面将描述通过集群优化平台配置通知渠道和通知规则，使其能够满足上述用户需求。&lt;/p&gt;
 &lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;已部署&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，具体请参见&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;安装部署&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;已导入集群信息，具体请参见&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/&#34;&gt;导入集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;已部署&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;安装部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;已导入集群信息，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/&#34;&gt;导入集群&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;SMTP服务器相关信息，包括主机地址、端口、用户名、密码等。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;!-- ## 系统架构 --&gt;
@@ -60,7 +60,7 @@
 &lt;li&gt;
 &lt;p&gt;配置通知渠道：从&lt;code&gt;设置 --&amp;gt; 通知渠道&lt;/code&gt;进入通知渠道管理页面，在通知渠道页面，点击&lt;code&gt;新增&lt;/code&gt;按钮，弹出&lt;code&gt;添加通知渠道&lt;/code&gt;对话框。在通知渠道对话框中，输入相应信息，然后点击&lt;code&gt;确定&lt;/code&gt;按钮，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/bestpractice/periodic_notification/channel_hu5ce7dbab866c4b72b08e502087ed4a08_44296_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;961&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/channel_hu5ce7dbab866c4b72b08e502087ed4a08_44296_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;961&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -80,7 +80,7 @@
 &lt;p&gt;配置通知规则： 从&lt;code&gt;设置 --&amp;gt; 通知规则&lt;/code&gt;进入通知规则管理页面，在通知渠道页面，点击&lt;code&gt;新增&lt;/code&gt;按钮，弹出&lt;code&gt;添加通知规则&lt;/code&gt;对话框。在通知规则对话框中主要包括如下信息：通知接收者信息、关注的优化建议、通知渠道和匹配规则。
 请输入相应信息，然后点击&lt;code&gt;确定&lt;/code&gt;按钮，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/bestpractice/periodic_notification/rule_hu90e42b27ad4d55dfaab4d38611ffaddc_64291_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;924&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/rule_hu90e42b27ad4d55dfaab4d38611ffaddc_64291_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;924&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -99,7 +99,7 @@
 &lt;li&gt;
 &lt;p&gt;完成上述配置后，可通过邮件定时接受相应的邮件，邮件内容如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/bestpractice/periodic_notification/email_hu4c8db2394b8c7180dce0a7cec9555708_55391_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/bestpractice/periodic_notification/email_hu4c8db2394b8c7180dce0a7cec9555708_55391_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -120,9 +120,9 @@
 用户可使用个性化自定义模板，实现个性化的邮件通知。&lt;/p&gt;
 &lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/setup/&#34;&gt;集群优化平台安装部署流程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/&#34;&gt;导入集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/zh-cn/&#34;&gt;云智优本官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/&#34;&gt;集群优化平台安装部署流程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/&#34;&gt;导入集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/&#34;&gt;云智优本官网&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
       </description>
@@ -130,10 +130,10 @@
     
     <item>
       <title>Docs: 最佳实践</title>
-      <link>/zh-cn/docs/bestpractice/</link>
+      <link>//localhost:1313/zh-cn/docs/bestpractice/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/docs/bestpractice/</guid>
+      <guid>//localhost:1313/zh-cn/docs/bestpractice/</guid>
       <description>
         
         

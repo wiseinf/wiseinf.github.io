@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Personal Account Settings</title>
-    <link>/categories/personal-account-settings/</link>
+    <link>//localhost:1313/categories/personal-account-settings/</link>
     <description>Recent content in Personal Account Settings on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/categories/personal-account-settings/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/categories/personal-account-settings/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Personal Account</title>
-      <link>/docs/user-guide/personal-settings/setting/</link>
+      <link>//localhost:1313/docs/user-guide/personal-settings/setting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/personal-settings/setting/</guid>
+      <guid>//localhost:1313/docs/user-guide/personal-settings/setting/</guid>
       <description>
         
         
@@ -37,7 +37,7 @@
 &lt;h2 id=&#34;update-personal-account&#34;&gt;Update Personal Account&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#update-personal-account&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update your personal information, click on your user avatar in the top left navigation bar, as shown below. Then, select &lt;code&gt;Personal Settings&lt;/code&gt; from the expanded menu to access the personal settings page.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 460px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/setting/setting_hu90d38966d4f45361ce2aa6eecae87bc0_23250_450x0_resize_catmullrom_3.png&#34; width=&#34;450&#34; height=&#34;141&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/setting/setting_hu90d38966d4f45361ce2aa6eecae87bc0_23250_450x0_resize_catmullrom_3.png&#34; width=&#34;450&#34; height=&#34;141&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -50,7 +50,7 @@ Personal Settings Menu
 
 &lt;p&gt;On the personal settings page, navigate to the &lt;code&gt;Personal Account&lt;/code&gt; tab to view and update your personal information, as shown in the figure below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/personal-settings/setting/account_hu3ca9497abfa7946562d4d90b64965c2c_139351_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/personal-settings/setting/account_hu3ca9497abfa7946562d4d90b64965c2c_139351_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

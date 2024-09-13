@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Troubleshooting</title>
-    <link>/categories/troubleshooting/</link>
+    <link>//localhost:1313/categories/troubleshooting/</link>
     <description>Recent content in Troubleshooting on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Troubleshooting</title>
-      <link>/docs/troubleshooting/</link>
+      <link>//localhost:1313/docs/troubleshooting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/troubleshooting/</guid>
+      <guid>//localhost:1313/docs/troubleshooting/</guid>
       <description>
         
         

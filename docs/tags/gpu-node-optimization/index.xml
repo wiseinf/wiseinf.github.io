@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – GPU Node Optimization</title>
-    <link>/tags/gpu-node-optimization/</link>
+    <link>//localhost:1313/tags/gpu-node-optimization/</link>
     <description>Recent content in GPU Node Optimization on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tags/gpu-node-optimization/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/tags/gpu-node-optimization/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: GPU Node</title>
-      <link>/docs/user-guide/gpunode/</link>
+      <link>//localhost:1313/docs/user-guide/gpunode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/user-guide/gpunode/</guid>
+      <guid>//localhost:1313/docs/user-guide/gpunode/</guid>
       <description>
         
         
@@ -33,7 +33,7 @@
 &lt;h2 id=&#34;view-gpu-nodes&#34;&gt;View GPU nodes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-gpu-nodes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;GPU Node&lt;/code&gt; menu in the left navigation bar to access the GPU Node page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -52,7 +52,7 @@ GPU Node
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the List Area will show GPU nodes that match the specified criteria within the cluster, as illustrated below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -74,7 +74,7 @@ GPU Node: Cluster Selected
 &lt;h2 id=&#34;adjust-node&#34;&gt;Adjust node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; Column to open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog box, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

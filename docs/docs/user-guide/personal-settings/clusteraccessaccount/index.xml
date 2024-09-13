@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Cluster Access Account</title>
-    <link>/docs/user-guide/personal-settings/clusteraccessaccount/</link>
+    <link>//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/</link>
     <description>Recent content in Cluster Access Account on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/docs/user-guide/personal-settings/clusteraccessaccount/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/index.xml" rel="self" type="application/rss+xml" />
     
     
       
