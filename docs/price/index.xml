@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Pricing</title>
-    <link>//localhost:1313/price/</link>
+    <link>/price/</link>
     <description>Recent content in Pricing on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/price/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/price/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Price: </title>
-      <link>//localhost:1313/price/pricing/</link>
+      <link>/price/pricing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/price/pricing/</guid>
+      <guid>/price/pricing/</guid>
       <description>
         
         
@@ -87,7 +87,7 @@
             &lt;/ul&gt;
           &lt;/div&gt;
           &lt;div class=&#34;pricing-table-cta is-revealing&#34; style=&#34;visibility: visible;&#34;&gt;
-            &lt;a class=&#34;button button-primary button-shadow button-block&#34; href=&#34;//localhost:1313/docs/setup&#34;&gt;Try it free&lt;/a&gt;
+            &lt;a class=&#34;button button-primary button-shadow button-block&#34; href=&#34;/docs/setup&#34;&gt;Try it free&lt;/a&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;

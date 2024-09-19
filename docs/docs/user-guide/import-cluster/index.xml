@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Import Cluster</title>
-    <link>//localhost:1313/docs/user-guide/import-cluster/</link>
+    <link>/docs/user-guide/import-cluster/</link>
     <description>Recent content in Import Cluster on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/docs/user-guide/import-cluster/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/user-guide/import-cluster/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Import Alibaba Cloud Cluster</title>
-      <link>//localhost:1313/docs/user-guide/import-cluster/import-alibaba/</link>
+      <link>/docs/user-guide/import-cluster/import-alibaba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/import-cluster/import-alibaba/</guid>
+      <guid>/docs/user-guide/import-cluster/import-alibaba/</guid>
       <description>
         
         
@@ -199,7 +199,7 @@
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;Settings&lt;/code&gt; menu and select the &lt;code&gt;Cloud Account&lt;/code&gt; tab to enter the cloud account management page. By default, this page will display all cloud accounts managed by the platform in pages, including names and corresponding cloud service providers. It also provides an operation bar to facilitate users to perform corresponding operations, as shown in the figure below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -214,7 +214,7 @@
 &lt;li&gt;
 &lt;p&gt;On the cloud account management page, click the Add button to add a cloud account. The interface is as shown below. In this interface, the user enters the cloud account name, selects the corresponding cloud service provider, enters the Access Key and Access Key Secret, and clicks the OK button to complete adding the cloud account. After adding parameters, users can also click the Test Connectivity button to test whether the cloud account is correct. The platform currently supports Alibaba Cloud, which can be selected from the cloud service provider drop-down box. Access Key and Access Key Secret is the account information for accessing the cloud service. Please obtain it from the corresponding cloud service provider.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cp02_hu99c19586e0a6535f99dd58fb40b73fe9_28035_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -232,7 +232,7 @@
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;Settings&lt;/code&gt; menu and select the cluster tab to enter the cluster management page. By default, this page will display all clusters managed by the platform in pages, including name, cluster ID, cluster region, Access Token name, corresponding cloud service provider and Prometheus address. It also provides an operation bar to facilitate users to perform corresponding operations. As shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -257,7 +257,7 @@ Cluster management main page
 &lt;li&gt;
 &lt;p&gt;The interface for setting Alibaba Cloud access credentials is as shown in the figure below. In the Alibaba Cloud access credentials interface, set the Alibaba Cloud access credentials by using existing credentials. Here, select the Alibaba Cloud account added in &lt;code&gt;Add Alibaba Cloud Account&lt;/code&gt;, as shown in the figure below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster02_hua091243aa094dc1c2f50e2a977f9c069_33806_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -272,7 +272,7 @@ Import cluster interface-set Alibaba Cloud access credentials
 &lt;li&gt;
 &lt;p&gt;After setting the Alibaba Cloud access credentials, click the Next button to enter the page for connecting to the Kubernetes cluster, as shown in the figure below. The platform supports connecting to two types of Kubernetes clusters, including managed clusters and self-built clusters. The Connect Hosting Cluster page is shown in the figure below. Here we choose the managed cluster. The platform automatically obtains the user cluster through the cloud account. The user selects the corresponding cluster through the cluster drop-down box, enters the description field, selects whether to use the API Server private network address, selects whether to automatically refresh KubeConfig and the KubeConfig life cycle. Finally enter the node group label.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster03_hu0d3e99a77564efcf84ee485eafa4e0c3_66164_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;603&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -287,7 +287,7 @@ Import cluster interface-set Alibaba Cloud access credentials
 &lt;li&gt;
 &lt;p&gt;The connection page to Prometheus is as shown in the figure below. After the user enters information on this page, click the Next button to enter the view configuration page. The input information details are shown in the table below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster04_hu0f07a59cea54ffed2550be8db5ab4643_48228_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -337,7 +337,7 @@ The parameter description for connecting to Prometheus is as shown in the table:
 &lt;li&gt;
 &lt;p&gt;View the configuration page as shown in the figure below. This page displays Alibaba Cloud access credentials, detailed parameters for connecting to the Kubernetes cluster and connecting to the Prometheus cluster, which is convenient for users to confirm. When the user completes the confirmation, click the Import button to enter the completion page.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster05_hu66a8f172ee76588fe83c64432f7569b4_100175_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;631&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -352,7 +352,7 @@ View configuration page
 &lt;li&gt;
 &lt;p&gt;The completed page is as shown below, and the submission status will be displayed on the page. Click Finish to complete the cluster import.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-alibaba/cluster06_hud397b74eb32a2a9dc1aa4d258c97199b_45425_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -368,12 +368,12 @@ Complete page
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-steps&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After importing the cluster, wait for a period of time (waiting for the optimization strategy to complete scheduling and execution), and then you can view optimization suggestions for the cluster in multiple dimensions, including:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -381,10 +381,10 @@ Complete page
     
     <item>
       <title>Docs: Import AWS EKS Cluster</title>
-      <link>//localhost:1313/docs/user-guide/import-cluster/import-aws/</link>
+      <link>/docs/user-guide/import-cluster/import-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/import-cluster/import-aws/</guid>
+      <guid>/docs/user-guide/import-cluster/import-aws/</guid>
       <description>
         
         
@@ -490,7 +490,7 @@ Complete page
 &lt;li&gt;
 &lt;p&gt;Enter the cloud account management page from &lt;code&gt;Settings --&amp;gt; Cloud Account&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cp01_huea6efa7a8f8fe052eb6be3c496f9a9ff_61741_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;295&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -505,7 +505,7 @@ Complete page
 &lt;li&gt;
 &lt;p&gt;Click the &lt;code&gt;New&lt;/code&gt; button to add a cloud account. You can enter &lt;code&gt;Name&lt;/code&gt;, select &lt;code&gt;Amazon AWS&lt;/code&gt; as &lt;code&gt;Cloud Provider&lt;/code&gt;, then enter &lt;code&gt;Access Key&lt;/code&gt; and &lt;code&gt;Access Key Secret&lt;/code&gt;, and finally click &lt;code&gt;Confirm&lt;/code&gt;.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cp02_hud87fef13bd345c9648ce469534f5fe27_28084_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -526,7 +526,7 @@ Complete page
 &lt;li&gt;
 &lt;p&gt;Enter the cluster management page from &lt;code&gt;Settings --&amp;gt; Cluster&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster01_hu4ad7856efc247a78cde3fe3831668ee5_62750_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;285&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -551,7 +551,7 @@ Complete page
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect AWS&lt;/code&gt; step, select &lt;code&gt;Use existing credentials&lt;/code&gt; and select the cloud account created in the &lt;code&gt;Add Cloud Account&lt;/code&gt; section, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster02_hud14b9d8e86b48083788dc10ebd59a5cf_31834_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;215&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -567,7 +567,7 @@ Complete page
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Connect kubernetes&lt;/code&gt; step, select &lt;code&gt;Managed cluster&lt;/code&gt;, as shown below.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster03_huaede05d06ebd4715af67a2cc4d16efe0_65191_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -651,7 +651,7 @@ First select &lt;code&gt;Region&lt;/code&gt;, then select &lt;code&gt;Cluster&lt
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster04_hu1d55b1ab6eb4dcdf74815194b18983c1_48046_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;439&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -667,7 +667,7 @@ First select &lt;code&gt;Region&lt;/code&gt;, then select &lt;code&gt;Cluster&lt
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;View Configuration&lt;/code&gt; step, display the configurations for connecting to AWS, connecting to Kubernetes, and connecting to the Metrics service. You can check whether the configuration is as expected.
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster05_hu52d4d6dc9594716aff3c6430809bdb8a_83632_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;528&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -683,7 +683,7 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;li&gt;
 &lt;p&gt;In the &lt;code&gt;Complete&lt;/code&gt; step, the submission status will be displayed, as shown below. When the submission status shows that the cluster has been imported, you can click the &lt;code&gt;Finish&lt;/code&gt; button.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/import-cluster/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/import-cluster/import-aws/cluster06_hudedf721fa512f165b8ccadb4b0dd51f5_40940_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;271&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -699,12 +699,12 @@ After confirming these configurations, you can click the &lt;code&gt;Import&lt;/
 &lt;h2 id=&#34;next-step&#34;&gt;Next step&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next-step&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After importing the cluster, you can view optimization suggestions for multiple aspects of the cluster, including:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/nodegroup/&#34;&gt;Nodegroup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/node/&#34;&gt;Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/gpunode/&#34;&gt;GPU Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/disk/&#34;&gt;Disk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/&#34;&gt;Application&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

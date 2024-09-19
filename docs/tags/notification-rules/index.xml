@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Notification Rules</title>
-    <link>//localhost:1313/tags/notification-rules/</link>
+    <link>/tags/notification-rules/</link>
     <description>Recent content in Notification Rules on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/tags/notification-rules/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/tags/notification-rules/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Notification Rules</title>
-      <link>//localhost:1313/docs/user-guide/management/rule/</link>
+      <link>/docs/user-guide/management/rule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/management/rule/</guid>
+      <guid>/docs/user-guide/management/rule/</guid>
       <description>
         
         
@@ -33,7 +33,7 @@
 &lt;h2 id=&#34;view-notification-rules&#34;&gt;View Notification Rules&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-notification-rules&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To access the notification rule management page, navigate to &lt;code&gt;Settings&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Notification Rules&lt;/code&gt;, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/overview_hu00c99dbacf81e012ed7731ff9b3ac40c_64922_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;265&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/overview_hu00c99dbacf81e012ed7731ff9b3ac40c_64922_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;265&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -55,7 +55,7 @@ Notification rule management page
 &lt;h2 id=&#34;adding-a-notification-rule&#34;&gt;Adding a Notification Rule&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adding-a-notification-rule&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To add a new notification rule, click the &lt;code&gt;Add&lt;/code&gt; button at the top of the notification rule management page. This will open the &lt;code&gt;Add Notification Rule&lt;/code&gt; dialog box, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/addrule_hubf452712888088648131528102c1664c_59524_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/addrule_hubf452712888088648131528102c1664c_59524_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -129,7 +129,7 @@ Add Notification Rule Dialog
 &lt;h2 id=&#34;updating-a-notification-rule&#34;&gt;Updating a Notification Rule&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#updating-a-notification-rule&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To update a notification rule, click the &lt;code&gt;Edit&lt;/code&gt; button in the notification rule management list. This will open the &lt;code&gt;Edit Notification Rule&lt;/code&gt; dialog box, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/editrule_huc4d5dfb901b7502e407e372d14f1ae45_66050_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/editrule_huc4d5dfb901b7502e407e372d14f1ae45_66050_600x0_resize_catmullrom_3.png&#34; width=&#34;600&#34; height=&#34;615&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -140,12 +140,12 @@ Edit Notification Rule Dialog
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;The field names and descriptions are the same as those in the &lt;a href=&#34;//localhost:1313/docs/user-guide/management/rule/#adding-a-notification-rule&#34;&gt;Adding a Notification Rule&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;The field names and descriptions are the same as those in the &lt;a href=&#34;/docs/user-guide/management/rule/#adding-a-notification-rule&#34;&gt;Adding a Notification Rule&lt;/a&gt; section.&lt;/p&gt;
 &lt;p&gt;After entering the required information, click &lt;code&gt;Confirm&lt;/code&gt; button to update the notification rule.&lt;/p&gt;
 &lt;h2 id=&#34;deleting-a-notification-rule&#34;&gt;Deleting a Notification Rule&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#deleting-a-notification-rule&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To delete a notification rule, click the &lt;code&gt;Delete&lt;/code&gt; button in the notification rule management list, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/management/rule/deleterule_hu7188e0b08ec870890cc1c619293ed15b_40498_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;189&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/management/rule/deleterule_hu7188e0b08ec870890cc1c619293ed15b_40498_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;189&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

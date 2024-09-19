@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 任务管理</title>
-    <link>//localhost:1313/zh-cn/categories/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/</link>
+    <link>/zh-cn/categories/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/</link>
     <description>Recent content in 任务管理 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/categories/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/categories/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 任务管理</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/tasks/</link>
+      <link>/zh-cn/docs/user-guide/tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/tasks/</guid>
+      <guid>/zh-cn/docs/user-guide/tasks/</guid>
       <description>
         
         
@@ -37,7 +37,7 @@
 &lt;h2 id=&#34;查看任务&#34;&gt;查看任务&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e4%bb%bb%e5%8a%a1&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击顶部右侧的任务图标，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/tasks/task_hue941aa2b00f74f89c0887a9530c87da4_10823_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;243&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/tasks/task_hue941aa2b00f74f89c0887a9530c87da4_10823_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;243&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -50,7 +50,7 @@
 
 &lt;p&gt;则显示任务管理页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/tasks/overview_hue59ab8e8199a235babcdebf1861aa317_79519_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;376&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/tasks/overview_hue59ab8e8199a235babcdebf1861aa317_79519_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;376&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -78,10 +78,10 @@
 &lt;/ol&gt;
 &lt;p&gt;任务的创建由相应的策略负责，请参见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/#删除Persistent Volume&#34;&gt;未使用PV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/app/#调整资源额度&#34;&gt;应用资源推荐&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/app/#设置应用资源额度&#34;&gt;未使用资源配额&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/app/#调整应用内存大小&#34;&gt;内存溢出&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/pv/#删除Persistent Volume&#34;&gt;未使用PV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/app/#调整资源额度&#34;&gt;应用资源推荐&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/app/#设置应用资源额度&#34;&gt;未使用资源配额&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/app/#调整应用内存大小&#34;&gt;内存溢出&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

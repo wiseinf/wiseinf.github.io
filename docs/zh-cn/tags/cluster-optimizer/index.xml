@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Cluster Optimizer</title>
-    <link>//localhost:1313/zh-cn/tags/cluster-optimizer/</link>
+    <link>/zh-cn/tags/cluster-optimizer/</link>
     <description>Recent content on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/tags/cluster-optimizer/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/tags/cluster-optimizer/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 导入阿里云集群</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/</link>
+      <link>/zh-cn/docs/user-guide/import-cluster/import-alibaba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/</guid>
+      <guid>/zh-cn/docs/user-guide/import-cluster/import-alibaba/</guid>
       <description>
         
         
@@ -199,7 +199,7 @@
 &lt;li&gt;
 &lt;p&gt;选择&lt;code&gt;设置&lt;/code&gt;菜单，选择&lt;code&gt;云账户&lt;/code&gt;标签页即可进入云账户管理页面。默认情况下，该页面将分页展示平台管理的所有云账户，包括名称以及相应的云服务商，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -214,7 +214,7 @@
 &lt;li&gt;
 &lt;p&gt;在云账户管理页面，点击新增按钮，即可添加云账户，其界面如下所示。在此界面中，用户依次输入云账户名称、选择相应的云服务商、输入Access Key和Access Key Secret，点击确定按钮，即可完成云账户添加。添加完参数后，用户也可以点击测试连通性按钮，测试该云账户是否正确。平台目前支持阿里云，可从云服务商下拉框处进行选择。Access Key和Access Key Secret为访问该云服务的账号信息，请从相应的云服务商处获取。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp02_hued1b873e3939167d1f90bbc9956d703f_88202_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cp02_hued1b873e3939167d1f90bbc9956d703f_88202_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;349&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -232,7 +232,7 @@
 &lt;li&gt;
 &lt;p&gt;选择&lt;code&gt;设置&lt;/code&gt;菜单，选择集群标签进入集群管理页面。默认情况下，该页面将分页展示平台管理的所有集群，包括名称、集群ID集群地域、Access Token名称，对应的云服务商以及Prometheus地址，同时也提供了操作栏，方便用户进行相应的操作，如下图所示。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -257,7 +257,7 @@
 &lt;li&gt;
 &lt;p&gt;设置阿里云访问凭据界面如下图所示。在阿里云访问凭据界面，通过使用已有凭据来设置阿里云访问凭据，此处选择&lt;code&gt;添加阿里云账号&lt;/code&gt;中添加的阿里云账号，如下图所示。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster02_hu1c31429098f21b498269d5cb833fbb5a_36097_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;270&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -272,7 +272,7 @@
 &lt;li&gt;
 &lt;p&gt;设置完阿里云访问凭据后，点击下一步按钮，即可进入连接Kubernetes集群页面，如下图所示。平台支持连接2种类型的Kubernetes集群，包括托管集群和自建集群。连接托管集群页面如下图所示。此处我们选择托管集群，平台通过云账户自动获取用户集群，用户通过集群下拉框来选择相应的集群、输入描述字段、选择是否使用API Server私网地址、选择是否自动刷新KubeConfig以及KubeConfig生命周期，最后输入节点组标签即可。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster03_huf967536d5598092106c34f3f82d1cb13_70685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -287,7 +287,7 @@
 &lt;li&gt;
 &lt;p&gt;连接Prometheus页面如下图所示。用户在此页面输入信息后，点击下一步按钮进入查看配置页面。输入信息明细如下表所示。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster04_hu67aa74e912d2dee9d3d5894effdd2bce_55184_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;437&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -337,7 +337,7 @@
 &lt;li&gt;
 &lt;p&gt;查看配置页面如下图所示，该页面显示了阿里云访问凭据、连接Kubernetes集群和连接Prometheus集群的详细参数，方便用户确认。当用户完成确认后，点击导入按钮，即可进入完成页面。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;598&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster05_hu9261c2475cadc8e4d3fff70ff73fec33_104529_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;598&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -352,7 +352,7 @@
 &lt;li&gt;
 &lt;p&gt;完成页面如图下图所示，页面将显示提交情况。点击完成，即完成集群导入。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/cluster06_hue342ed2e8dafaac92ae2ef6445d6fe9a_48286_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -368,12 +368,12 @@
 &lt;h2 id=&#34;下一步操作&#34;&gt;下一步操作&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e6%93%8d%e4%bd%9c&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;导入集群完成后，等待一段时间（等待优化策略完成调度和执行），即可查看该集群多个维度的优化建议，包括：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -381,10 +381,10 @@
     
     <item>
       <title>Docs: 调整节点池</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/operations/adjust-nodegroup/</link>
+      <link>/zh-cn/docs/user-guide/operations/adjust-nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/adjust-nodegroup/</guid>
+      <guid>/zh-cn/docs/user-guide/operations/adjust-nodegroup/</guid>
       <description>
         
         
@@ -419,10 +419,10 @@
     
     <item>
       <title>Docs: 个人账户设置</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/personal-settings/setting/</link>
+      <link>/zh-cn/docs/user-guide/personal-settings/setting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/personal-settings/setting/</guid>
+      <guid>/zh-cn/docs/user-guide/personal-settings/setting/</guid>
       <description>
         
         
@@ -440,7 +440,7 @@
 &lt;h2 id=&#34;更新个人信息&#34;&gt;更新个人信息&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e4%b8%aa%e4%ba%ba%e4%bf%a1%e6%81%af&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击顶部左侧导航栏的用户头像，如下图所示。在展开的菜单上点击&lt;code&gt;个人设置&lt;/code&gt;，即可进入个人设置页面。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/setting/setting_hu68fa0afb4311abf51ff02c92ee6599a9_21289_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;213&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/setting/setting_hu68fa0afb4311abf51ff02c92ee6599a9_21289_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;213&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -453,7 +453,7 @@
 
 &lt;p&gt;在个人设置页面，点击&lt;code&gt;个人账户&lt;/code&gt;标签，即可查看和更新个人信息，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/setting/account_hu5b2976f07b85029ed60b6bc3e067a998_150490_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;504&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/setting/account_hu5b2976f07b85029ed60b6bc3e067a998_150490_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;504&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -518,10 +518,10 @@
     
     <item>
       <title>Docs: 通过kubectl安装</title>
-      <link>//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/</link>
+      <link>/zh-cn/docs/setup/setup-using-kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/</guid>
+      <guid>/zh-cn/docs/setup/setup-using-kubectl/</guid>
       <description>
         
         
@@ -575,7 +575,7 @@
 &lt;p&gt;通过如下命令创建&lt;code&gt;Deployment&lt;/code&gt; &lt;code&gt;optimizer&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;/zh-cn/docs/setup/setup-using-kubectl/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -644,8 +644,8 @@
 &lt;h2 id=&#34;下一步导入集群&#34;&gt;下一步：导入集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;下一步，您可以添加一个集群，查看其相关优化建议。详见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -653,10 +653,10 @@
     
     <item>
       <title>Docs: 用户管理</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/management/user/</link>
+      <link>/zh-cn/docs/user-guide/management/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/management/user/</guid>
+      <guid>/zh-cn/docs/user-guide/management/user/</guid>
       <description>
         
         
@@ -675,7 +675,7 @@
 &lt;h2 id=&#34;查看用户列表&#34;&gt;查看用户列表&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e7%94%a8%e6%88%b7%e5%88%97%e8%a1%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 用户&lt;/code&gt;进入用户管理页面，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;202&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;202&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -698,7 +698,7 @@
 &lt;h2 id=&#34;添加用户&#34;&gt;添加用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击用户管理页面上方的&lt;code&gt;增加&lt;/code&gt;按钮，将弹出添加用户对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -756,7 +756,7 @@
 &lt;h2 id=&#34;更新用户&#34;&gt;更新用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击用户管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将弹出编辑用户对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -767,11 +767,11 @@
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/#添加用户&#34;&gt;添加用户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;/zh-cn/docs/user-guide/management/user/#添加用户&#34;&gt;添加用户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
 &lt;h2 id=&#34;删除用户&#34;&gt;删除用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击用户管理页面的&lt;code&gt;删除&lt;/code&gt;按钮，将删除用户。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -789,10 +789,10 @@
     
     <item>
       <title>Docs: 导入AWS EKS集群</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/</link>
+      <link>/zh-cn/docs/user-guide/import-cluster/import-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/</guid>
+      <guid>/zh-cn/docs/user-guide/import-cluster/import-aws/</guid>
       <description>
         
         
@@ -898,7 +898,7 @@
 &lt;li&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 云账号&lt;/code&gt;进入云账号管理页面，如下图。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cp01_hu03e0d36738a99241f0258c58153cc52a_133032_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;346&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -913,7 +913,7 @@
 &lt;li&gt;
 &lt;p&gt;单击&lt;code&gt;新增&lt;/code&gt;按钮添加云帐户。 可以输入&lt;code&gt;名称&lt;/code&gt;，选择&lt;code&gt;Amazon AWS&lt;/code&gt;作为&lt;code&gt;云提供商&lt;/code&gt;，然后输入&lt;code&gt;Access Key&lt;/code&gt;和&lt;code&gt;Access Key Secret&lt;/code&gt;，最后单击&lt;code&gt;确认&lt;/code&gt;。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;350&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cp02_hua7b8feaf3e61f1e8ae01dace0e07ff3c_89797_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;350&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -934,7 +934,7 @@
 &lt;li&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 集群&lt;/code&gt;进入集群管理页面，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster01_hu9176d6dc9a718231961b0d97170bdd2f_135376_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;345&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -959,7 +959,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;连接AWS&lt;/code&gt;步骤中，选择&lt;code&gt;使用已有凭据&lt;/code&gt;，选择&lt;code&gt;添加云帐户&lt;/code&gt;部分中创建的云帐户，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;276&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster02_hu5da7e645ebdf21daae59978646d3f111_103946_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;276&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -975,7 +975,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;连接kubernetes&lt;/code&gt;步骤中，选择&lt;code&gt;Managed cluster&lt;/code&gt;，如下图。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster03_hud9c96ab7511ddd9c88a1138f6076c603_69941_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;602&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1059,7 +1059,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;447&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster04_hu0112fb4d51d80dd867d083f5cfd596aa_161889_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;447&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1075,7 +1075,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;查看配置&lt;/code&gt;步骤中，显示连接AWS、连接Kubernetes、连接Metrics服务的配置。您可以检查配置是否符合预期。
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;600&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster05_hu40b82eafc01e7c739345cb73b7ef10b6_92895_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;600&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1091,7 +1091,7 @@
 &lt;li&gt;
 &lt;p&gt;在&lt;code&gt;完成&lt;/code&gt;步骤中，会显示提交状态，如下图。 当提交状态显示集群已导入时，您可以点击&lt;code&gt;完成&lt;/code&gt;按钮。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;599&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/cluster06_hu22b48c65ecca83a58588b4e4e27d48ad_92029_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;599&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1107,12 +1107,12 @@
 &lt;h2 id=&#34;下一步&#34;&gt;下一步&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;导入集群后，您可以查看集群多个方面的优化建议，包括：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/nodegroup/&#34;&gt;节点组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/node/&#34;&gt;节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/gpunode/&#34;&gt;GPU节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/disk/&#34;&gt;磁盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/pv/&#34;&gt;Persistent volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/application&#34;&gt;应用&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -1120,10 +1120,10 @@
     
     <item>
       <title>Docs: 导入集群</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/import-cluster/</link>
+      <link>/zh-cn/docs/user-guide/import-cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/import-cluster/</guid>
+      <guid>/zh-cn/docs/user-guide/import-cluster/</guid>
       <description>
         
         
@@ -1133,10 +1133,10 @@
     
     <item>
       <title>Docs: 调整节点</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/operations/adjust-node/</link>
+      <link>/zh-cn/docs/user-guide/operations/adjust-node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/adjust-node/</guid>
+      <guid>/zh-cn/docs/user-guide/operations/adjust-node/</guid>
       <description>
         
         
@@ -1156,10 +1156,10 @@
     
     <item>
       <title>Docs: 集群访问账户</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/</link>
+      <link>/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
+      <guid>/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/</guid>
       <description>
         
         
@@ -1178,7 +1178,7 @@
 &lt;p&gt;点击顶部左侧导航栏的用户头像，如下图所示。在展开的菜单上点击&lt;code&gt;个人设置&lt;/code&gt;，即可进入个人设置页面。&lt;/p&gt;
 &lt;p&gt;在个人设置页面，点击&lt;code&gt;集群访问账户&lt;/code&gt;标签，即可查看和管理集群访问账户，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/list_hua0198f9734c413a4f8b842c8fb46f4a4_68538_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;317&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/list_hua0198f9734c413a4f8b842c8fb46f4a4_68538_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;317&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1220,7 +1220,7 @@
 &lt;h2 id=&#34;添加集群访问账户&#34;&gt;添加集群访问账户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击集群访问账户管理页面上方的&lt;code&gt;增加&lt;/code&gt;按钮，将弹出添加集群访问账户对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/add_huf21aa57c122e21fe2e2bcfef98206792_28637_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;373&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/add_huf21aa57c122e21fe2e2bcfef98206792_28637_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;373&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1265,7 +1265,7 @@
 &lt;h2 id=&#34;更新集群访问账户&#34;&gt;更新集群访问账户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击集群访问账户管理页面列表中的&lt;code&gt;集群访问账户&lt;/code&gt;按钮，将弹出编辑集群访问账户对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu11406b62fdc268b9aee5d5035487af3b_137513_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/edit_hu11406b62fdc268b9aee5d5035487af3b_137513_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;1010&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1276,11 +1276,11 @@
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/#添加集群访问账户&#34;&gt;添加集群访问账户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/#添加集群访问账户&#34;&gt;添加集群访问账户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
 &lt;h2 id=&#34;删除集群访问账户&#34;&gt;删除集群访问账户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e9%9b%86%e7%be%a4%e8%ae%bf%e9%97%ae%e8%b4%a6%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击集群访问账户管理页面的&lt;code&gt;删除&lt;/code&gt;按钮，将删除该集群访问账户。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu4f1eecfa00819d4d933bf71db9f2e8b6_85772_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;185&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/delete_hu4f1eecfa00819d4d933bf71db9f2e8b6_85772_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;185&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1298,10 +1298,10 @@
     
     <item>
       <title>Docs: 通过Helm安装</title>
-      <link>//localhost:1313/zh-cn/docs/setup/setup-using-helm/</link>
+      <link>/zh-cn/docs/setup/setup-using-helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/setup-using-helm/</guid>
+      <guid>/zh-cn/docs/setup/setup-using-helm/</guid>
       <description>
         
         
@@ -1358,7 +1358,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7   1/1     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          108s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;从输出可以看到，Helm部署了两个Pod，其中&lt;code&gt;cluster-optimizer-demo-7bfdfdf954-2cgqb&lt;/code&gt;是 Cluster Optimizer的Pod， &lt;code&gt;cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7&lt;/code&gt;是其依赖的Mysql数据库。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-helm/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;/zh-cn/docs/setup/setup-using-helm/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1452,8 +1452,8 @@
 &lt;h2 id=&#34;下一步导入集群&#34;&gt;下一步：导入集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;下一步，您可以添加一个集群，查看其相关优化建议。详见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -1461,10 +1461,10 @@
     
     <item>
       <title>Docs: 通知渠道</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/management/channel/</link>
+      <link>/zh-cn/docs/user-guide/management/channel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/management/channel/</guid>
+      <guid>/zh-cn/docs/user-guide/management/channel/</guid>
       <description>
         
         
@@ -1478,7 +1478,7 @@
 &lt;h2 id=&#34;查看渠道&#34;&gt;查看渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 通知渠道&lt;/code&gt;进入通知渠道管理页面，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/overview_hucff31aac09e394ec659275683fd563d9_32586_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;184&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/channel/overview_hucff31aac09e394ec659275683fd563d9_32586_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;184&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1500,7 +1500,7 @@
 &lt;h2 id=&#34;添加渠道&#34;&gt;添加渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击通知渠道管理页面上方的&lt;code&gt;新增&lt;/code&gt;按钮，选择通知渠道类型，并填写通知渠道信息，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/addchannel_hu97b2511821a76fc3f758d82b0054f24e_39179_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/channel/addchannel_hu97b2511821a76fc3f758d82b0054f24e_39179_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1565,7 +1565,7 @@
 &lt;h2 id=&#34;更新渠道&#34;&gt;更新渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;更新通知渠道，点击通知渠道管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将更新通知渠道信息，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/editchannel_hu6c88139678d29abc0f34c75f65f2bc6f_45533_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/channel/editchannel_hu6c88139678d29abc0f34c75f65f2bc6f_45533_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;964&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1576,11 +1576,11 @@
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/#添加渠道&#34;&gt;添加渠道&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;/zh-cn/docs/user-guide/management/channel/#添加渠道&#34;&gt;添加渠道&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
 &lt;h2 id=&#34;删除渠道&#34;&gt;删除渠道&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e6%b8%a0%e9%81%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击通知渠道管理页面列表中的的&lt;code&gt;删除&lt;/code&gt;按钮，将删除通知渠道，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/channel/deletechannel_hu600240e395bbeb1ed5b0fe17d416beb2_56557_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;214&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/channel/deletechannel_hu600240e395bbeb1ed5b0fe17d416beb2_56557_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;214&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1601,10 +1601,10 @@
     
     <item>
       <title>Docs: 安装商业版本</title>
-      <link>//localhost:1313/zh-cn/docs/setup/upgrade/</link>
+      <link>/zh-cn/docs/setup/upgrade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/upgrade/</guid>
+      <guid>/zh-cn/docs/setup/upgrade/</guid>
       <description>
         
         
@@ -1617,7 +1617,7 @@
 
 &lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;已部署集群优化平台社区版，具体安装步骤请参考&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/&#34;&gt;通过Kubectl安装&lt;/a&gt;和&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-helm/&#34;&gt;通过Helm安装&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;已部署集群优化平台社区版，具体安装步骤请参考&lt;a href=&#34;/zh-cn/docs/setup/setup-using-kubectl/&#34;&gt;通过Kubectl安装&lt;/a&gt;和&lt;a href=&#34;/zh-cn/docs/setup/setup-using-helm/&#34;&gt;通过Helm安装&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;获取商业版本授权，您可以通过公司官网或者邮件&lt;a href=&#34;mailto:business@wiseinf.com&#34;&gt;联系我们&lt;/a&gt;获取授权。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;配置用户数据库&#34;&gt;配置用户数据库&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e9%85%8d%e7%bd%ae%e7%94%a8%e6%88%b7%e6%95%b0%e6%8d%ae%e5%ba%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -1652,7 +1652,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;注意：
 1、若&lt;code&gt;Deployment&lt;/code&gt; &lt;code&gt;optimizer&lt;/code&gt;的Pod没有重启，请通过&lt;code&gt;kubectl delete pod -l app=optimizer -n wiseinf-system&lt;/code&gt;删除&lt;code&gt;Deployment&lt;/code&gt; &lt;code&gt;optimizer&lt;/code&gt;的Pod，然后重新创建。`
-2、若期望采用已部署的数据库，请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/upgrade/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
+2、若期望采用已部署的数据库，请参见&lt;a href=&#34;/zh-cn/docs/setup/upgrade/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1713,8 +1713,8 @@
 &lt;h2 id=&#34;下一步导入集群&#34;&gt;下一步：导入集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;下一步，您可以添加一个集群，查看其相关优化建议。详见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -1722,10 +1722,10 @@
     
     <item>
       <title>Docs: 调整磁盘</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/operations/adjust-disk/</link>
+      <link>/zh-cn/docs/user-guide/operations/adjust-disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/adjust-disk/</guid>
+      <guid>/zh-cn/docs/user-guide/operations/adjust-disk/</guid>
       <description>
         
         
@@ -1745,10 +1745,10 @@
     
     <item>
       <title>Docs: 集群概览</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/cluster/</link>
+      <link>/zh-cn/docs/user-guide/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/cluster/</guid>
+      <guid>/zh-cn/docs/user-guide/cluster/</guid>
       <description>
         
         
@@ -1762,7 +1762,7 @@
 &lt;h2 id=&#34;查看集群&#34;&gt;查看集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;集群&lt;/code&gt;，显示集群概览页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/cluster/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;397&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/cluster/overview_huc51d5935651b648a35188d358af3790b_63590_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;397&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1776,7 +1776,7 @@
 &lt;p&gt;主展示区将展示平台管理的集群列表。包括集群（集群名称和集群ID）、集群地域、Access Token名称、云服务商、Prometheus地址、健康状态等信息。&lt;/p&gt;
 &lt;p&gt;在商业版本中，额外提供了集群状态和操作栏，如下图所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/cluster/cluster-biz_huec32945de9624f20315c8796979aa7bc_89466_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;263&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/cluster/cluster-biz_huec32945de9624f20315c8796979aa7bc_89466_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;263&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1805,7 +1805,7 @@
 &lt;p&gt;集群休眠通过合理的管理集群中的节点，来降低集群的资源占用，节约成本，假设集群在周一至周五晚上9点开始休眠，周一至周五早上8点开始唤醒（也就是结束休眠），则机器成本节约可高达54.8%。设置集群休眠可以设置集群的&lt;strong&gt;休眠时间&lt;/strong&gt;和&lt;strong&gt;唤醒时间&lt;/strong&gt;。在休眠时间，将集群中的负载的状态进行存储，同时逐步释放集群中的节点资源。在唤醒时间，系统逐步恢复集群中的节点资源，同时恢复负载的原有状态。集群休眠特别适用于开发、测试等线下环境。&lt;/p&gt;
 &lt;p&gt;点击操作栏中的设置集群休眠，弹出对话框如下所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/cluster/set-hibernate-schedule_hubc10ee5423eddc71b603216431c056c2_48356_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/cluster/set-hibernate-schedule_hubc10ee5423eddc71b603216431c056c2_48356_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;299&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1818,7 +1818,7 @@
 
 &lt;p&gt;在&lt;code&gt;是否启用休眠&lt;/code&gt;选项中选择&lt;code&gt;启用&lt;/code&gt;，然后设置具体的&lt;code&gt;休眠时间&lt;/code&gt;和&lt;code&gt;唤醒时间&lt;/code&gt;，点击&lt;code&gt;确定&lt;/code&gt;按钮即可。默认休眠时间是周一至周五晚上9点，默认唤醒时间是周一至周五早上8点。&lt;/p&gt;
 &lt;p&gt;若想取消集群休眠，在&lt;code&gt;是否启用休眠&lt;/code&gt;选项中选择&lt;code&gt;不启用&lt;/code&gt;，点击&lt;code&gt;确定&lt;/code&gt;按钮即可。&lt;/p&gt;
-&lt;p&gt;集群休眠时将使用用户提供的集群访问账号来操作集群。您需要设置集群访问账号，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;集群休眠时将使用用户提供的集群访问账号来操作集群。您需要设置集群访问账号，具体请参见&lt;a href=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：&lt;code&gt;休眠时间&lt;/code&gt;和&lt;code&gt;唤醒时间&lt;/code&gt;间隔必须大于2小时。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1834,10 +1834,10 @@
     
     <item>
       <title>Docs: 通知规则</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/management/rule/</link>
+      <link>/zh-cn/docs/user-guide/management/rule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/management/rule/</guid>
+      <guid>/zh-cn/docs/user-guide/management/rule/</guid>
       <description>
         
         
@@ -1851,7 +1851,7 @@
 &lt;h2 id=&#34;查看通知规则&#34;&gt;查看通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 通知规则&lt;/code&gt;进入通知规则管理页面，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/overview_hud10719c48adf621bd59bc0991cb7dd5e_61084_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;197&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/rule/overview_hud10719c48adf621bd59bc0991cb7dd5e_61084_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;197&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1873,7 +1873,7 @@
 &lt;h2 id=&#34;添加通知规则&#34;&gt;添加通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击通知规则管理页面上方的&lt;code&gt;增加&lt;/code&gt;按钮，将弹出添加通知规则对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/addrule_hu85976e3cbbb33cf256e2735191b00c47_58685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;923&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/rule/addrule_hu85976e3cbbb33cf256e2735191b00c47_58685_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;923&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1947,7 +1947,7 @@
 &lt;h2 id=&#34;更新通知规则&#34;&gt;更新通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;更新通知渠道，点击通知渠道管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将弹出添加通知规则对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/editrule_huf3f8e083d06596a212cbf2e980c5da45_65629_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;928&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/rule/editrule_huf3f8e083d06596a212cbf2e980c5da45_65629_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;928&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1958,11 +1958,11 @@
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/#添加通知规则&#34;&gt;添加通知规则&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;/zh-cn/docs/user-guide/management/rule/#添加通知规则&#34;&gt;添加通知规则&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
 &lt;h2 id=&#34;删除通知规则&#34;&gt;删除通知规则&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e9%80%9a%e7%9f%a5%e8%a7%84%e5%88%99&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击通知渠道管理页面的&lt;code&gt;删除&lt;/code&gt;按钮，将删除通知规则。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/rule/deleterule_hue2d65ed7fb5e30f007de7122a94a917a_43216_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;112&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/rule/deleterule_hue2d65ed7fb5e30f007de7122a94a917a_43216_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;112&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -1980,10 +1980,10 @@
     
     <item>
       <title>Docs: 节点组优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/nodegroup/</link>
+      <link>/zh-cn/docs/user-guide/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/nodegroup/</guid>
+      <guid>/zh-cn/docs/user-guide/nodegroup/</guid>
       <description>
         
         
@@ -2002,7 +2002,7 @@
 &lt;li&gt;&lt;strong&gt;列表区&lt;/strong&gt;：展示节点组的信息、其当前设置和优化设置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/ng1_hu77fb89e3693c9149284b097a85c9bdcc_61241_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;335&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/nodegroup/ng1_hu77fb89e3693c9149284b097a85c9bdcc_61241_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;335&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2022,7 +2022,7 @@
 &lt;li&gt;&lt;strong&gt;操作栏&lt;/strong&gt;：展示对节点组相应的操作。，&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/ng2_hub16f4d365be75272fcf7425dd573ee8d_95095_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;339&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/nodegroup/ng2_hub16f4d365be75272fcf7425dd573ee8d_95095_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;339&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2036,7 +2036,7 @@
 &lt;h2 id=&#34;调整节点组&#34;&gt;调整节点组&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9%e7%bb%84&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击上图中的&lt;code&gt;调整&lt;/code&gt;链接，可打开调整节点组对话框，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/nodegroup/ng3_hu9f9b1a936626968643677fe10b09c15b_67576_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;470&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/nodegroup/ng3_hu9f9b1a936626968643677fe10b09c15b_67576_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;470&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2056,10 +2056,10 @@
     
     <item>
       <title>Docs: 删除Persistent Volume</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/operations/delete-pv/</link>
+      <link>/zh-cn/docs/user-guide/operations/delete-pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/delete-pv/</guid>
+      <guid>/zh-cn/docs/user-guide/operations/delete-pv/</guid>
       <description>
         
         
@@ -2079,10 +2079,10 @@
     
     <item>
       <title>Docs: 节点优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/node/</link>
+      <link>/zh-cn/docs/user-guide/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/node/</guid>
+      <guid>/zh-cn/docs/user-guide/node/</guid>
       <description>
         
         
@@ -2096,7 +2096,7 @@
 &lt;h2 id=&#34;查看节点&#34;&gt;查看节点&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e8%8a%82%e7%82%b9&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;节点&lt;/code&gt;菜单，则显示节点页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/node/node1_hu95bd09445d93ae613c5c9076a96a49cb_58357_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;331&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/node/node1_hu95bd09445d93ae613c5c9076a96a49cb_58357_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;331&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2115,7 +2115,7 @@
 &lt;/ol&gt;
 &lt;p&gt;选择集群的节点页如下所示：
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/node/node2_hu09c3e184ea3ba57694bc714271231b6e_98269_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;337&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/node/node2_hu09c3e184ea3ba57694bc714271231b6e_98269_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;337&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2137,7 +2137,7 @@
 &lt;h2 id=&#34;调整节点&#34;&gt;调整节点&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击&lt;code&gt;调整&lt;/code&gt;链接可打开调整节点对话框，对话框中展示了详细的调整信息和推荐的调整方案，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/node/node3_hu32cfa8a965b9a11abce3b7295de5aeae_82088_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;390&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/node/node3_hu32cfa8a965b9a11abce3b7295de5aeae_82088_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;390&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2157,10 +2157,10 @@
     
     <item>
       <title>Docs: GPU节点优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/gpunode/</link>
+      <link>/zh-cn/docs/user-guide/gpunode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/gpunode/</guid>
+      <guid>/zh-cn/docs/user-guide/gpunode/</guid>
       <description>
         
         
@@ -2174,7 +2174,7 @@
 &lt;h2 id=&#34;查看gpu节点信息&#34;&gt;查看GPU节点信息&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8bgpu%e8%8a%82%e7%82%b9%e4%bf%a1%e6%81%af&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;GPU节点&lt;/code&gt;菜单，则显示GPU节点页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/node1_hu11de7fa6f5792bee46eecd0ff2d6fe59_62611_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;330&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/gpunode/node1_hu11de7fa6f5792bee46eecd0ff2d6fe59_62611_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;330&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2193,7 +2193,7 @@ GPU节点
 &lt;/ol&gt;
 &lt;p&gt;选择集群后，GPU节点列表区将显示该集群下满足条件的GPU节点列表，如下所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/node2_hu8a8870711849f61c2b876059e82bf749_108493_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;379&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/gpunode/node2_hu8a8870711849f61c2b876059e82bf749_108493_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;379&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2216,7 +2216,7 @@ Node: cluster selected
 &lt;h2 id=&#34;调整节点&#34;&gt;调整节点&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e8%8a%82%e7%82%b9&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击&lt;strong&gt;操作栏&lt;/strong&gt;中的&lt;code&gt;调整&lt;/code&gt;链接可打开调整节点对话框，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/gpunode/node3_huaea085118e52e157dc1080a518bf0044_82621_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;385&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/gpunode/node3_huaea085118e52e157dc1080a518bf0044_82621_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;385&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2236,10 +2236,10 @@ Node: Adjust node
     
     <item>
       <title>Docs: 磁盘优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/disk/</link>
+      <link>/zh-cn/docs/user-guide/disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/disk/</guid>
+      <guid>/zh-cn/docs/user-guide/disk/</guid>
       <description>
         
         
@@ -2253,7 +2253,7 @@ Node: Adjust node
 &lt;h2 id=&#34;查看磁盘&#34;&gt;查看磁盘&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e7%a3%81%e7%9b%98&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;磁盘&lt;/code&gt;菜单，则显示磁盘页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/disk1_huf18be61b2bb287986bbfd11e4b8027fb_60558_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;332&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/disk/disk1_huf18be61b2bb287986bbfd11e4b8027fb_60558_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;332&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2272,7 +2272,7 @@ Node: Adjust node
 &lt;/ol&gt;
 &lt;p&gt;选择集群后的磁盘页如下所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/disk2_hu0c2dfbeeb5ff0094a09339f24c00c53f_132924_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/disk/disk2_hu0c2dfbeeb5ff0094a09339f24c00c53f_132924_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2294,7 +2294,7 @@ Node: Adjust node
 &lt;h2 id=&#34;调整磁盘&#34;&gt;调整磁盘&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4%e7%a3%81%e7%9b%98&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击&lt;code&gt;调整&lt;/code&gt;链接可打开调整磁盘大小对话框，其中展示了磁盘详细的调整信息和推荐的调整方案，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/disk/disk3_hude0b7714c8d3009920b709d038ae0d51_90737_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;354&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/disk/disk3_hude0b7714c8d3009920b709d038ae0d51_90737_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;354&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2311,10 +2311,10 @@ Node: Adjust node
     
     <item>
       <title>Docs: Persistent Volume优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/pv/</link>
+      <link>/zh-cn/docs/user-guide/pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/pv/</guid>
+      <guid>/zh-cn/docs/user-guide/pv/</guid>
       <description>
         
         
@@ -2328,7 +2328,7 @@ Node: Adjust node
 &lt;h2 id=&#34;查看persistent-volume&#34;&gt;查看Persistent Volume&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8bpersistent-volume&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;Persistent Volume&lt;/code&gt;菜单，则显示Persistent Volume页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv1_hucb8d24ddb3f2cb76db829cd2ba9e71f7_60051_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv1_hucb8d24ddb3f2cb76db829cd2ba9e71f7_60051_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2347,7 +2347,7 @@ Persistent Volume页
 &lt;/ol&gt;
 &lt;p&gt;选择集群后的Persistent Volume页如下所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv2_hu761a73dea420d55d4cdeb6bb52d12ae4_90091_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv2_hu761a73dea420d55d4cdeb6bb52d12ae4_90091_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2370,7 +2370,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;选择策略名称栏是&lt;code&gt;未使用PV&lt;/code&gt;的行，点击该行操作栏中的&lt;code&gt;删除&lt;/code&gt;链接可打开&lt;code&gt;删除Persistent Volume&lt;/code&gt;对话框，其中展示了Persistent Volume详细信息和推荐方案。&lt;/p&gt;
 &lt;p&gt;在社区版中对话框展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv3_hu20fe78c188fd49807126a8812c694cb4_61344_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv3_hu20fe78c188fd49807126a8812c694cb4_61344_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2383,7 +2383,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中对话框展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv-b3_huc68b717a44e2c08147b279ecfa344ba3_60650_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;300&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv-b3_huc68b717a44e2c08147b279ecfa344ba3_60650_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;300&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2398,7 +2398,7 @@ Persistent Volume页-选择集群
 &lt;h2 id=&#34;调整persistent-volume大小&#34;&gt;调整Persistent Volume大小&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e8%b0%83%e6%95%b4persistent-volume%e5%a4%a7%e5%b0%8f&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;在&lt;strong&gt;查询区&lt;/strong&gt;中的策略名称选择&lt;code&gt;低利用率PV&lt;/code&gt;，系统将仅展示符合&lt;code&gt;低利用率PV&lt;/code&gt;策略的列表项，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv4_hu801588667bd5229fc743e3a25182bd5e_112015_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv4_hu801588667bd5229fc743e3a25182bd5e_112015_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2411,7 +2411,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;点击列表&lt;strong&gt;操作栏&lt;/strong&gt;中的&lt;code&gt;调整&lt;/code&gt;链接可打开&lt;code&gt;调整Persistent Volume大小&lt;/code&gt;对话框，其中展示了Persistent Volume详细信息和推荐的调整方案，展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv5_hufa19166f247a908b1fb34abc41a8d84b_90538_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;401&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv5_hufa19166f247a908b1fb34abc41a8d84b_90538_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;401&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2424,7 +2424,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中，可以设置参数后由后台任务自动调整，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv-b5_huef030b39b52f917f4f18b8235f4418ea_65704_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;454&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv-b5_huef030b39b52f917f4f18b8235f4418ea_65704_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;454&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2438,7 +2438,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;设置&lt;code&gt;目标容量&lt;/code&gt;，&lt;code&gt;是否保持原有PVC名称&lt;/code&gt;，&lt;code&gt;是否删除原有PV&lt;/code&gt;后，点击&lt;code&gt;确定&lt;/code&gt;，即可快速调整Persistent Volume大小。&lt;/p&gt;
 &lt;p&gt;再次点击&lt;strong&gt;操作栏&lt;/strong&gt;中的&lt;code&gt;调整&lt;/code&gt;链接，此时可查看调整Persistent Volume大小的执行日志，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/pv-b6_hua82026309ad0e5fcfb71ee701a46a6d6_121835_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;464&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/pv/pv-b6_hua82026309ad0e5fcfb71ee701a46a6d6_121835_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;464&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2449,7 +2449,7 @@ Persistent Volume页-选择集群
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;调整PV将使用用户提供的集群访问账号来操作集群中的PV。您需要设置集群访问账号，具体请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;调整PV将使用用户提供的集群访问账号来操作集群中的PV。您需要设置集群访问账号，具体请参见&lt;a href=&#34;/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;设置集群访问账号&lt;/a&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：若选择不&lt;code&gt;是否删除原有PV&lt;/code&gt;，您需要自行删除原有PV，否则您仍将承担该PV的费用。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2459,10 +2459,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 应用优化</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/app/</link>
+      <link>/zh-cn/docs/user-guide/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/app/</guid>
+      <guid>/zh-cn/docs/user-guide/app/</guid>
       <description>
         
         
@@ -2476,7 +2476,7 @@ Persistent Volume页-选择集群
 &lt;h2 id=&#34;查看应用&#34;&gt;查看应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击平台左侧菜单栏的&lt;code&gt;应用&lt;/code&gt;菜单，则显示应用页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app1_huff47eda272bf1f12bd55b42f7210d79f_61195_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;332&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app1_huff47eda272bf1f12bd55b42f7210d79f_61195_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;332&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2495,7 +2495,7 @@ Persistent Volume页-选择集群
 &lt;/ol&gt;
 &lt;p&gt;集群选择区选择集群后，平台默认聚合所有策略的结果，以列表方式展示，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app2_hu8d411a6d137d5c100b23f7e12662fd72_122300_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;444&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app2_hu8d411a6d137d5c100b23f7e12662fd72_122300_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;444&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2521,7 +2521,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;点击&lt;code&gt;调整&lt;/code&gt;链接可打开调整资源额度对话框，其中展示应用详情、推荐值及相应调整语句。&lt;/p&gt;
 &lt;p&gt;在社区版中展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app3_hua386211b79d0a0cff25cd1bd8bfaa9bb_100048_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;588&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app3_hua386211b79d0a0cff25cd1bd8bfaa9bb_100048_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;588&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2534,7 +2534,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app-b3_huf3dc9e78259daeb341c82e4495fe8e3a_76204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;492&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app-b3_huf3dc9e78259daeb341c82e4495fe8e3a_76204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;492&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2550,7 +2550,7 @@ Persistent Volume页-选择集群
 &lt;h3 id=&#34;查看未设置资源配额应用&#34;&gt;查看未设置资源配额应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e6%9c%aa%e8%ae%be%e7%bd%ae%e8%b5%84%e6%ba%90%e9%85%8d%e9%a2%9d%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;若策略名称为未设置资源配额，则列表区展示如下图所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app4_huedd6c5fcc600368086f3b49817824d60_125502_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;434&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app4_huedd6c5fcc600368086f3b49817824d60_125502_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;434&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2574,7 +2574,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;点击上图中的&lt;code&gt;调整&lt;/code&gt;链接可打开设置应用资源额度对话框，其中展示应用详情、推荐值及相应调整语句。&lt;/p&gt;
 &lt;p&gt;在社区版中展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app5_hu9b23dcaa40dfff00cc42b0760dae8895_86412_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;529&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app5_hu9b23dcaa40dfff00cc42b0760dae8895_86412_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;529&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2587,7 +2587,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app-b5_hu2fee965e62435eb893586fd7187c86a6_64219_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app-b5_hu2fee965e62435eb893586fd7187c86a6_64219_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2603,7 +2603,7 @@ Persistent Volume页-选择集群
 &lt;h3 id=&#34;查看内存溢出应用&#34;&gt;查看内存溢出应用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e5%86%85%e5%ad%98%e6%ba%a2%e5%87%ba%e5%ba%94%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;若策略名称为内存溢出，则列表区展示如下图所示：&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app6_hucd9ceeb6b97cdd53da819d43576d8806_113328_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app6_hucd9ceeb6b97cdd53da819d43576d8806_113328_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2627,7 +2627,7 @@ Persistent Volume页-选择集群
 &lt;p&gt;点击调整链接可打开调整应用内存大小对话框，其中展示应用详情、推荐内存限制值及相应调整语句。&lt;/p&gt;
 &lt;p&gt;在社区版中展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app7_huc4b543c74a690707313f0191c7446d7e_73869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app7_huc4b543c74a690707313f0191c7446d7e_73869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2640,7 +2640,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;在商业版中展示如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/app/app-b7_hud7c4841b9c160d91e996bd174f81455f_52280_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;316&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/app/app-b7_hud7c4841b9c160d91e996bd174f81455f_52280_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;316&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2658,10 +2658,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 安装</title>
-      <link>//localhost:1313/zh-cn/docs/setup/</link>
+      <link>/zh-cn/docs/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/</guid>
+      <guid>/zh-cn/docs/setup/</guid>
       <description>
         
         
@@ -2671,10 +2671,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 任务管理</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/tasks/</link>
+      <link>/zh-cn/docs/user-guide/tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/tasks/</guid>
+      <guid>/zh-cn/docs/user-guide/tasks/</guid>
       <description>
         
         
@@ -2692,7 +2692,7 @@ Persistent Volume页-选择集群
 &lt;h2 id=&#34;查看任务&#34;&gt;查看任务&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e4%bb%bb%e5%8a%a1&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击顶部右侧的任务图标，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/tasks/task_hue941aa2b00f74f89c0887a9530c87da4_10823_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;243&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/tasks/task_hue941aa2b00f74f89c0887a9530c87da4_10823_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;243&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2705,7 +2705,7 @@ Persistent Volume页-选择集群
 
 &lt;p&gt;则显示任务管理页，如下图所示。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/tasks/overview_hue59ab8e8199a235babcdebf1861aa317_79519_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;376&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/tasks/overview_hue59ab8e8199a235babcdebf1861aa317_79519_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;376&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -2733,10 +2733,10 @@ Persistent Volume页-选择集群
 &lt;/ol&gt;
 &lt;p&gt;任务的创建由相应的策略负责，请参见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/pv/#删除Persistent Volume&#34;&gt;未使用PV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/app/#调整资源额度&#34;&gt;应用资源推荐&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/app/#设置应用资源额度&#34;&gt;未使用资源配额&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/app/#调整应用内存大小&#34;&gt;内存溢出&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/pv/#删除Persistent Volume&#34;&gt;未使用PV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/app/#调整资源额度&#34;&gt;应用资源推荐&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/app/#设置应用资源额度&#34;&gt;未使用资源配额&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/app/#调整应用内存大小&#34;&gt;内存溢出&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -2744,10 +2744,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 个人设置</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/personal-settings/</link>
+      <link>/zh-cn/docs/user-guide/personal-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/personal-settings/</guid>
+      <guid>/zh-cn/docs/user-guide/personal-settings/</guid>
       <description>
         
         
@@ -2757,10 +2757,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 用户手册</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/</link>
+      <link>/zh-cn/docs/user-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/</guid>
+      <guid>/zh-cn/docs/user-guide/</guid>
       <description>
         
         
@@ -2770,10 +2770,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 管理设置</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/management/</link>
+      <link>/zh-cn/docs/user-guide/management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/management/</guid>
+      <guid>/zh-cn/docs/user-guide/management/</guid>
       <description>
         
         
@@ -2783,10 +2783,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 配置</title>
-      <link>//localhost:1313/zh-cn/docs/configuration/</link>
+      <link>/zh-cn/docs/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/configuration/</guid>
+      <guid>/zh-cn/docs/configuration/</guid>
       <description>
         
         
@@ -2803,10 +2803,10 @@ Persistent Volume页-选择集群
     
     <item>
       <title>Docs: 优化操作</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/operations/</link>
+      <link>/zh-cn/docs/user-guide/operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/operations/</guid>
+      <guid>/zh-cn/docs/user-guide/operations/</guid>
       <description>
         
         

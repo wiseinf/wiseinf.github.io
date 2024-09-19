@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 安装</title>
-    <link>//localhost:1313/zh-cn/docs/setup/</link>
+    <link>/zh-cn/docs/setup/</link>
     <description>Recent content in 安装 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/docs/setup/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/docs/setup/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 通过kubectl安装</title>
-      <link>//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/</link>
+      <link>/zh-cn/docs/setup/setup-using-kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/</guid>
+      <guid>/zh-cn/docs/setup/setup-using-kubectl/</guid>
       <description>
         
         
@@ -73,7 +73,7 @@
 &lt;p&gt;通过如下命令创建&lt;code&gt;Deployment&lt;/code&gt; &lt;code&gt;optimizer&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    kubectl apply -f ~/setup/cluster-optimizer/yaml/optimizer.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;/zh-cn/docs/setup/setup-using-kubectl/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -142,8 +142,8 @@
 &lt;h2 id=&#34;下一步导入集群&#34;&gt;下一步：导入集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;下一步，您可以添加一个集群，查看其相关优化建议。详见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -151,10 +151,10 @@
     
     <item>
       <title>Docs: 通过Helm安装</title>
-      <link>//localhost:1313/zh-cn/docs/setup/setup-using-helm/</link>
+      <link>/zh-cn/docs/setup/setup-using-helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/setup-using-helm/</guid>
+      <guid>/zh-cn/docs/setup/setup-using-helm/</guid>
       <description>
         
         
@@ -211,7 +211,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7   1/1     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          108s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;从输出可以看到，Helm部署了两个Pod，其中&lt;code&gt;cluster-optimizer-demo-7bfdfdf954-2cgqb&lt;/code&gt;是 Cluster Optimizer的Pod， &lt;code&gt;cluster-optimizer-demo-optimizerdb-5d6cdb6b9f-94lc7&lt;/code&gt;是其依赖的Mysql数据库。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-helm/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;注意：若期望采用已部署的数据库，请参见&lt;a href=&#34;/zh-cn/docs/setup/setup-using-helm/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -305,8 +305,8 @@
 &lt;h2 id=&#34;下一步导入集群&#34;&gt;下一步：导入集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;下一步，您可以添加一个集群，查看其相关优化建议。详见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -314,10 +314,10 @@
     
     <item>
       <title>Docs: 安装商业版本</title>
-      <link>//localhost:1313/zh-cn/docs/setup/upgrade/</link>
+      <link>/zh-cn/docs/setup/upgrade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/setup/upgrade/</guid>
+      <guid>/zh-cn/docs/setup/upgrade/</guid>
       <description>
         
         
@@ -330,7 +330,7 @@
 
 &lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;已部署集群优化平台社区版，具体安装步骤请参考&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-kubectl/&#34;&gt;通过Kubectl安装&lt;/a&gt;和&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/setup-using-helm/&#34;&gt;通过Helm安装&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;已部署集群优化平台社区版，具体安装步骤请参考&lt;a href=&#34;/zh-cn/docs/setup/setup-using-kubectl/&#34;&gt;通过Kubectl安装&lt;/a&gt;和&lt;a href=&#34;/zh-cn/docs/setup/setup-using-helm/&#34;&gt;通过Helm安装&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;获取商业版本授权，您可以通过公司官网或者邮件&lt;a href=&#34;mailto:business@wiseinf.com&#34;&gt;联系我们&lt;/a&gt;获取授权。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;配置用户数据库&#34;&gt;配置用户数据库&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e9%85%8d%e7%bd%ae%e7%94%a8%e6%88%b7%e6%95%b0%e6%8d%ae%e5%ba%93&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -365,7 +365,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;注意：
 1、若&lt;code&gt;Deployment&lt;/code&gt; &lt;code&gt;optimizer&lt;/code&gt;的Pod没有重启，请通过&lt;code&gt;kubectl delete pod -l app=optimizer -n wiseinf-system&lt;/code&gt;删除&lt;code&gt;Deployment&lt;/code&gt; &lt;code&gt;optimizer&lt;/code&gt;的Pod，然后重新创建。`
-2、若期望采用已部署的数据库，请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/setup/upgrade/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
+2、若期望采用已部署的数据库，请参见&lt;a href=&#34;/zh-cn/docs/setup/upgrade/#使用已部署数据库&#34;&gt;使用已部署数据库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -426,8 +426,8 @@
 &lt;h2 id=&#34;下一步导入集群&#34;&gt;下一步：导入集群&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%af%bc%e5%85%a5%e9%9b%86%e7%be%a4&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;下一步，您可以添加一个集群，查看其相关优化建议。详见：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-aws/&#34;&gt;导入AWS EKS集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/user-guide/import-cluster/import-alibaba/&#34;&gt;导入阿里云集群&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

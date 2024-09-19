@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – User Manual</title>
-    <link>//localhost:1313/docs/user-guide/</link>
+    <link>/docs/user-guide/</link>
     <description>Recent content in User Manual on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/docs/user-guide/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/user-guide/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Import Cluster</title>
-      <link>//localhost:1313/docs/user-guide/import-cluster/</link>
+      <link>/docs/user-guide/import-cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/import-cluster/</guid>
+      <guid>/docs/user-guide/import-cluster/</guid>
       <description>
         
         
@@ -29,10 +29,10 @@
     
     <item>
       <title>Docs: Cluster</title>
-      <link>//localhost:1313/docs/user-guide/cluster/</link>
+      <link>/docs/user-guide/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/cluster/</guid>
+      <guid>/docs/user-guide/cluster/</guid>
       <description>
         
         
@@ -46,7 +46,7 @@
 &lt;h2 id=&#34;view-cluster&#34;&gt;View cluster&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-cluster&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click &lt;code&gt;Cluster&lt;/code&gt; on the left menu bar to display the cluster overview page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/overview_hu412a39f91c157a1ac904bdf2cb862fb5_121350_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;440&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/cluster/overview_hu412a39f91c157a1ac904bdf2cb862fb5_121350_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;440&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -60,7 +60,7 @@ Cluster Overview Page
 &lt;p&gt;The main display area shows the list of managed clusters, including cluster name, cluster ID, region, access token name, cloud provider name, prometheus address, health status, and more.&lt;/p&gt;
 &lt;p&gt;In the commercial version, additional cluster status and actions are provided, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/cluster-biz_hu824e5aa7d52d886fb6d8746936cec905_190264_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/cluster/cluster-biz_hu824e5aa7d52d886fb6d8746936cec905_190264_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -89,7 +89,7 @@ Cluster Overview Page: Commercial Version
 &lt;p&gt;Cluster hibernation helps reduce resource usage and costs by managing cluster nodes efficiently. For instance, if a cluster sleeps from 9 PM to 8 AM from Monday to Friday, machine cost savings can reach up to 54.8%. By setting cluster hibernation, you can specify the &lt;code&gt;sleep time&lt;/code&gt; and &lt;code&gt;wake-up time&lt;/code&gt;. During the sleep period, cluster load status is saved, and node resources are gradually released. During the wake-up period, node resources are restored, and the cluster returns to its previous state. Cluster hibernation is ideal for development and testing environments.&lt;/p&gt;
 &lt;p&gt;Click &lt;code&gt;Set Cluster Hibernation&lt;/code&gt; in the operation bar to open the dialog box as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/cluster/set-hibernate-schedule_hu47036cfb09e157008cbc736129a941bd_109510_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;298&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/cluster/set-hibernate-schedule_hu47036cfb09e157008cbc736129a941bd_109510_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;298&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -111,7 +111,7 @@ Set Cluster Hibernation
 &lt;li&gt;Select &lt;code&gt;Disable&lt;/code&gt; for the Whether to enable hibernation option.&lt;/li&gt;
 &lt;li&gt;Click &lt;code&gt;OK&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;During hibernation, the cluster will use the access account provided by the user. Ensure that a cluster access account is set up. For details, see &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During hibernation, the cluster will use the access account provided by the user. Ensure that a cluster access account is set up. For details, see &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;/p&gt;
 &lt;ol&gt;
@@ -131,10 +131,10 @@ Set Cluster Hibernation
     
     <item>
       <title>Docs: Node Group</title>
-      <link>//localhost:1313/docs/user-guide/nodegroup/</link>
+      <link>/docs/user-guide/nodegroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/nodegroup/</guid>
+      <guid>/docs/user-guide/nodegroup/</guid>
       <description>
         
         
@@ -153,7 +153,7 @@ Set Cluster Hibernation
 &lt;li&gt;&lt;strong&gt;List Area&lt;/strong&gt;: Displays node group information, current settings, and optimization settings.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng1_hu091b83584071ea7502cf64abd0294e46_93625_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;338&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -173,7 +173,7 @@ Set Cluster Hibernation
 &lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: Provides available actions for the node group.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng2_hub067207114429c136c2f6ac726f56640_115713_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;327&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -187,7 +187,7 @@ Node Group Page - After selecting the cluster
 &lt;h2 id=&#34;adjust-node-group&#34;&gt;Adjust Node Group&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node-group&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the image above to open the Adjust Node Group dialog box, as illustrated below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/nodegroup/ng3_hu8b98e96be9842fc2adc5bd1af3ce35e0_74792_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;471&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -207,10 +207,10 @@ Adjust Node Group Dialog
     
     <item>
       <title>Docs: Node</title>
-      <link>//localhost:1313/docs/user-guide/node/</link>
+      <link>/docs/user-guide/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/node/</guid>
+      <guid>/docs/user-guide/node/</guid>
       <description>
         
         
@@ -224,7 +224,7 @@ Adjust Node Group Dialog
 &lt;h2 id=&#34;view-nodes&#34;&gt;View Nodes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-nodes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Node&lt;/code&gt; menu on the platform’s left navigation bar to display the Node page, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/node/node1_hu9395c92acd4261258a440a868d64dab7_71908_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;292&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/node/node1_hu9395c92acd4261258a440a868d64dab7_71908_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;292&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -243,7 +243,7 @@ Node page
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the List Area will show nodes that match the specified criteria within the cluster, as illustrated below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/node/node2_hu79d0c36850ca2a10e2eb2df8c0f6e0d3_153658_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/node/node2_hu79d0c36850ca2a10e2eb2df8c0f6e0d3_153658_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;396&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -266,7 +266,7 @@ Node page - Select Cluster
 &lt;h2 id=&#34;adjust-a-node&#34;&gt;Adjust a Node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-a-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; column to open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog box, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;424&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/node/node3_hu29cdc9b91cbb0d3bd0ca206d860bab44_86212_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;424&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -286,10 +286,10 @@ Node page - Select Cluster
     
     <item>
       <title>Docs: Disk</title>
-      <link>//localhost:1313/docs/user-guide/disk/</link>
+      <link>/docs/user-guide/disk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/disk/</guid>
+      <guid>/docs/user-guide/disk/</guid>
       <description>
         
         
@@ -303,7 +303,7 @@ Node page - Select Cluster
 &lt;h2 id=&#34;view-disks&#34;&gt;View Disks&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-disks&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Disk&lt;/code&gt; menu in the left navigation bar to access the disk management page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/disk/disk1_hu586b962710831052bb190f8f2f84d234_70715_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/disk/disk1_hu586b962710831052bb190f8f2f84d234_70715_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -322,7 +322,7 @@ Disk Page
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the Disk page appears as follows:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/disk/disk2_huc4f6d93e34b39afdead8fc69986df97a_186869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;443&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/disk/disk2_huc4f6d93e34b39afdead8fc69986df97a_186869_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;443&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -344,7 +344,7 @@ Disk Page - Cluster Selected
 &lt;h2 id=&#34;adjust-disk-size&#34;&gt;Adjust Disk Size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-disk-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Disk Size&lt;/code&gt; dialog box. This dialog displays detailed disk adjustment information and recommended adjustment plans, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/disk/disk3_huc497cd330fcd67249832763c798ad846_88237_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;387&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -361,10 +361,10 @@ Adjust Disk Size Dialog
     
     <item>
       <title>Docs: GPU Node</title>
-      <link>//localhost:1313/docs/user-guide/gpunode/</link>
+      <link>/docs/user-guide/gpunode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/gpunode/</guid>
+      <guid>/docs/user-guide/gpunode/</guid>
       <description>
         
         
@@ -378,7 +378,7 @@ Adjust Disk Size Dialog
 &lt;h2 id=&#34;view-gpu-nodes&#34;&gt;View GPU nodes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-gpu-nodes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;GPU Node&lt;/code&gt; menu in the left navigation bar to access the GPU Node page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node1_hu18d28b7b463ef031ab9778071e555c12_123253_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;329&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -397,7 +397,7 @@ GPU Node
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the List Area will show GPU nodes that match the specified criteria within the cluster, as illustrated below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node2_hu613aeaec4c32f7f273889e3dea3c4195_70661_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;291&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -419,7 +419,7 @@ GPU Node: Cluster Selected
 &lt;h2 id=&#34;adjust-node&#34;&gt;Adjust node&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-node&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; Column to open the &lt;code&gt;Adjust Node&lt;/code&gt; dialog box, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/gpunode/node3_hu366fa13c7ae6c01b5a8d791b43a11797_88093_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;419&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -439,10 +439,10 @@ Node: Adjust Node
     
     <item>
       <title>Docs: Persistent Volume</title>
-      <link>//localhost:1313/docs/user-guide/pv/</link>
+      <link>/docs/user-guide/pv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/pv/</guid>
+      <guid>/docs/user-guide/pv/</guid>
       <description>
         
         
@@ -456,7 +456,7 @@ Node: Adjust Node
 &lt;h2 id=&#34;view-persistent-volumes&#34;&gt;View Persistent Volumes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-persistent-volumes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the &lt;code&gt;Persistent Volume&lt;/code&gt; menu on the left sidebar to display the Persistent Volume page, as shown below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv1_hu24db01f2be02a5928ee5616e06248119_86898_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;436&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv1_hu24db01f2be02a5928ee5616e06248119_86898_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;436&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -475,7 +475,7 @@ Persistent Volume page
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster, the Persistent Volume page will look like this:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv2_hue425eb8ed03739d9b17157285a333f1a_136274_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;505&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv2_hue425eb8ed03739d9b17157285a333f1a_136274_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;505&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -498,7 +498,7 @@ Persistent Volume page-select cluster
 &lt;p&gt;Select the row where the strategy name column is &lt;code&gt;Unused PV&lt;/code&gt;, and click the &lt;code&gt;Delete&lt;/code&gt; link in the action column of that row. This will open the &lt;code&gt;Delete Persistent Volume&lt;/code&gt; dialog box, displaying the details of the Persistent Volume and recommended actions.&lt;/p&gt;
 &lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv3_huab26b7ec4eb695da86a41436be4f5126_65855_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;323&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -511,7 +511,7 @@ Delete Persistent Volume Dialog
 
 &lt;p&gt;In the commercial version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv-b3_hu381f4197b01951d70e087b61e1cfa586_63315_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv-b3_hu381f4197b01951d70e087b61e1cfa586_63315_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -526,7 +526,7 @@ Delete Persistent Volume Dialog
 &lt;h2 id=&#34;adjust-persistent-volume-size&#34;&gt;Adjust Persistent Volume Size&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#adjust-persistent-volume-size&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Select &lt;code&gt;Underutilized PV&lt;/code&gt; as the strategy name in the &lt;strong&gt;Query Area&lt;/strong&gt;. The system will then display only the list items that match the &lt;code&gt;Underutilized PV&lt;/code&gt; strategy, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;500&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv4_huf2bd82cfe369e8058e0bad552d9ab492_146004_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;500&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -540,7 +540,7 @@ Filter list items by `Underutilized PV` policy name
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the list’s &lt;code&gt;Action&lt;/code&gt; column to open the &lt;code&gt;Adjust Persistent Volume Size&lt;/code&gt; dialog box. This dialog box displays detailed information about the Persistent Volume and the recommended adjustment plan.&lt;/p&gt;
 &lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv5_hu0f907de8ad41cc128b3c6d8d95db1bf0_95987_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;417&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -553,7 +553,7 @@ Resize Persistent Volume
 
 &lt;p&gt;In the commercial version, you can set parameters and automatically adjust the volume using background tasks, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv-b5_hu452c317069072d2f009fc1a8b16aca39_150263_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;450&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv-b5_hu452c317069072d2f009fc1a8b16aca39_150263_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;450&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -567,7 +567,7 @@ Adjust the Persistent Volume dialog box: Set parameters
 &lt;p&gt;After setting the &lt;code&gt;target capacity&lt;/code&gt;, &lt;code&gt;whether to keep the original PVC name&lt;/code&gt;, and &lt;code&gt;whether to delete the original PV&lt;/code&gt;, click &lt;code&gt;OK&lt;/code&gt; to quickly adjust the persistent volume size.&lt;/p&gt;
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the &lt;code&gt;Action&lt;/code&gt; column again to view the execution log of the persistent volume size adjustment, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/pv/pv-b6_hu6991ea5bc42325c0f3cc1f4d0cf07f2a_260247_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;455&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/pv/pv-b6_hu6991ea5bc42325c0f3cc1f4d0cf07f2a_260247_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;455&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -578,7 +578,7 @@ Adjust Persistent Volume dialog box: View task log
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Adjusting the PV will use the cluster access account provided by the user to manage the PV in the cluster. To set up a cluster access account, refer to &lt;a href=&#34;//localhost:1313/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Adjusting the PV will use the cluster access account provided by the user to manage the PV in the cluster. To set up a cluster access account, refer to &lt;a href=&#34;/docs/user-guide/personal-settings/clusteraccessaccount/&#34;&gt;Setting up a cluster access account&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If you choose not to delete the original persistent volume, you will need to delete it manually, or you will continue to incur costs for the persistent volume.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -588,10 +588,10 @@ Adjust Persistent Volume dialog box: View task log
     
     <item>
       <title>Docs: Application / Workload</title>
-      <link>//localhost:1313/docs/user-guide/app/</link>
+      <link>/docs/user-guide/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/app/</guid>
+      <guid>/docs/user-guide/app/</guid>
       <description>
         
         
@@ -605,7 +605,7 @@ Adjust Persistent Volume dialog box: View task log
 &lt;h2 id=&#34;review-applications--workloads&#34;&gt;Review applications / workloads&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-applications--workloads&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click on the &lt;code&gt;Application&lt;/code&gt; menu on the left menu bar of the platform to reveal the application page, as shown  below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;352&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app1_hu39eabd9e862de08df120dabbcf98d686_91562_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;352&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -624,7 +624,7 @@ application
 &lt;/ol&gt;
 &lt;p&gt;After selecting a cluster in the &lt;strong&gt;Cluster Selection Area&lt;/strong&gt;, the platform aggregates and displays the results of all strategies by default in a list, as shown in the figure below.&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app2_hu052fc5b3eb03bae3ad1c349681c84d92_130948_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;388&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -650,7 +650,7 @@ Application: Select a cluster
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Resource Quota&lt;/code&gt; dialog box, which displays application details, recommended values ​​and corresponding adjustment statements.&lt;/p&gt;
 &lt;p&gt;In the community version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;560&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app3_hu8e623698c76b3dd6136e696052c5996d_101896_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;560&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -663,7 +663,7 @@ Application: Adjust resource quota dialog box
 
 &lt;p&gt;In the commercial version, it appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app-b3_huf2002155a079f505abdfbd5c4f88a8fe_77389_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;491&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b3_huf2002155a079f505abdfbd5c4f88a8fe_77389_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;491&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -679,7 +679,7 @@ Application: Adjust resource quota dialog box
 &lt;h3 id=&#34;review-resource-quota-unset&#34;&gt;Review resource quota unset&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#review-resource-quota-unset&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;When the strategy name is &lt;code&gt;Resource Quota Unset&lt;/code&gt;, the list area appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app4_hu6c148e4c2d42e6030eda415bc43d9aa3_125204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app4_hu6c148e4c2d42e6030eda415bc43d9aa3_125204_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -703,7 +703,7 @@ Application: Select `Resource Quota Unset` strategy
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link in the image above to open the &lt;code&gt;Set Application Resource Quota&lt;/code&gt; dialog box, which displays application details, recommended values, and corresponding adjustment commands.&lt;/p&gt;
 &lt;p&gt;In the community version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app5_hu80dc269157f0934e6e5833c00cd461d5_84676_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;501&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app5_hu80dc269157f0934e6e5833c00cd461d5_84676_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;501&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -716,7 +716,7 @@ Application: Set application resource quota dialog box
 
 &lt;p&gt;In the commercial version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app-b5_hu784ee8109267f2eab7d46c944c7605ee_64257_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b5_hu784ee8109267f2eab7d46c944c7605ee_64257_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;432&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -732,7 +732,7 @@ Application: Set rapplication esource quota dialog box
 &lt;h3 id=&#34;view-memory-overflow-applications&#34;&gt;View memory overflow applications&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-memory-overflow-applications&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;When the strategy name is &lt;code&gt;Out of Memory&lt;/code&gt;, the list area appears as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app6_hubb1e5856ae2e20a0843d5125bd00838a_116310_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app6_hubb1e5856ae2e20a0843d5125bd00838a_116310_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;411&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -756,7 +756,7 @@ Application: Select `Out of Memory` strategy
 &lt;p&gt;Click the &lt;code&gt;Adjust&lt;/code&gt; link to open the &lt;code&gt;Adjust Application Memory Size&lt;/code&gt; dialog box, which displays application details, recommended memory limit values, and corresponding adjustment commands.&lt;/p&gt;
 &lt;p&gt;In the community version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app7_hu253ed517a5b0de63cf78b90da814ac72_72861_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app7_hu253ed517a5b0de63cf78b90da814ac72_72861_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;431&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -769,7 +769,7 @@ Applications: Adjust application memory size dialog box
 
 &lt;p&gt;In the commercial version, it is displayed as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/app/app-b7_hu2c480889fc421f01df4cf685a778ca2f_51682_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/app/app-b7_hu2c480889fc421f01df4cf685a778ca2f_51682_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;315&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -787,10 +787,10 @@ Application: Adjust application memory size dialog box
     
     <item>
       <title>Docs: Task Management</title>
-      <link>//localhost:1313/docs/user-guide/tasks/</link>
+      <link>/docs/user-guide/tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/tasks/</guid>
+      <guid>/docs/user-guide/tasks/</guid>
       <description>
         
         
@@ -808,7 +808,7 @@ Application: Adjust application memory size dialog box
 &lt;h2 id=&#34;view-tasks&#34;&gt;View tasks&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#view-tasks&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Click the task icon in the menu bar on the right side of the platform header, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 510px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/tasks/task_hu5d4266911dca8a1f73385ea1019a5b8e_4744_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;68&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/tasks/task_hu5d4266911dca8a1f73385ea1019a5b8e_4744_500x0_resize_catmullrom_3.png&#34; width=&#34;500&#34; height=&#34;68&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -821,7 +821,7 @@ Task management page
 
 &lt;p&gt;This action will display the task management page, as shown below:&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/docs/user-guide/tasks/overview_hud2b2ac9ca0c0627cdb1a0bd18436cbeb_84824_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;448&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/user-guide/tasks/overview_hud2b2ac9ca0c0627cdb1a0bd18436cbeb_84824_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;448&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -849,10 +849,10 @@ Task management page
 &lt;/ol&gt;
 &lt;p&gt;Task creation is handled by the corresponding strategies. For more details, refer to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/pv/#Delete Persistent Volume&#34;&gt;Unused PV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/#Adjust resource quota&#34;&gt;Application Resource Recommendation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/#Set application resource quota&#34;&gt;Resource Quota Unset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/docs/user-guide/app/#Adjust application memory size&#34;&gt;Out of Memory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/pv/#Delete Persistent Volume&#34;&gt;Unused PV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/#Adjust resource quota&#34;&gt;Application Resource Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/#Set application resource quota&#34;&gt;Resource Quota Unset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/user-guide/app/#Adjust application memory size&#34;&gt;Out of Memory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -860,10 +860,10 @@ Task management page
     
     <item>
       <title>Docs: Personal Settings</title>
-      <link>//localhost:1313/docs/user-guide/personal-settings/</link>
+      <link>/docs/user-guide/personal-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/personal-settings/</guid>
+      <guid>/docs/user-guide/personal-settings/</guid>
       <description>
         
         
@@ -873,10 +873,10 @@ Task management page
     
     <item>
       <title>Docs: Management Settings</title>
-      <link>//localhost:1313/docs/user-guide/management/</link>
+      <link>/docs/user-guide/management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/management/</guid>
+      <guid>/docs/user-guide/management/</guid>
       <description>
         
         
@@ -886,10 +886,10 @@ Task management page
     
     <item>
       <title>Docs: Manual Operation</title>
-      <link>//localhost:1313/docs/user-guide/operations/</link>
+      <link>/docs/user-guide/operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/user-guide/operations/</guid>
+      <guid>/docs/user-guide/operations/</guid>
       <description>
         
         

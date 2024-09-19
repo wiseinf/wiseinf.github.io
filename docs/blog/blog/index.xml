@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Blog</title>
-    <link>//localhost:1313/blog/blog/</link>
+    <link>/blog/blog/</link>
     <description>Recent content in Blog on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/blog/blog/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/blog/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Blog: Evaluate cluster hibernation cost savings</title>
-      <link>//localhost:1313/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</link>
+      <link>/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</link>
       <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</guid>
+      <guid>/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</guid>
       <description>
         
         

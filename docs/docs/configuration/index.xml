@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Configuration</title>
-    <link>//localhost:1313/docs/configuration/</link>
+    <link>/docs/configuration/</link>
     <description>Recent content in Configuration on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/docs/configuration/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/configuration/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Command line parameters</title>
-      <link>//localhost:1313/docs/configuration/command-line/</link>
+      <link>/docs/configuration/command-line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/configuration/command-line/</guid>
+      <guid>/docs/configuration/command-line/</guid>
       <description>
         
         
@@ -53,7 +53,7 @@
 &lt;h3 id=&#34;-f---features&#34;&gt;&lt;code&gt;-f, --features&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#-f---features&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;-f&lt;/code&gt;, &lt;code&gt;--features&lt;/code&gt; flags specify which features of the &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; should be activated. The available features are &lt;code&gt;APIServer&lt;/code&gt;, which enables only the API services, and &lt;code&gt;Optimizer&lt;/code&gt;, which activates the optimization functionalities. By default, both &lt;code&gt;APIServer&lt;/code&gt; and &lt;code&gt;Optimizer&lt;/code&gt; are enabled, allowing for both automatic scaling features and virtual capacity management.&lt;/p&gt;
 &lt;h3 id=&#34;--config&#34;&gt;&lt;code&gt;--config&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--config&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;--config&lt;/code&gt; parameter specifies the path to the configuration file used by the cluster optimization platform. For details on configuring this file, refer to the &lt;a href=&#34;//localhost:1313/docs/configuration/conf/&#34;&gt;Configuration File&lt;/a&gt; documentation.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;--config&lt;/code&gt; parameter specifies the path to the configuration file used by the cluster optimization platform. For details on configuring this file, refer to the &lt;a href=&#34;/docs/configuration/conf/&#34;&gt;Configuration File&lt;/a&gt; documentation.&lt;/p&gt;
 &lt;h3 id=&#34;--log-enable-color&#34;&gt;&lt;code&gt;--log-enable-color&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-color&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;--log-enable-color&lt;/code&gt; flag determines whether to enable color coding in log outputs. Enabling this option can enhance log readability in console interfaces. The default value is &lt;code&gt;false&lt;/code&gt;, meaning color is not enabled by default.&lt;/p&gt;
 &lt;h3 id=&#34;--log-enable-console&#34;&gt;&lt;code&gt;--log-enable-console&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-console&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -68,10 +68,10 @@
     
     <item>
       <title>Docs: Configuration parameters</title>
-      <link>//localhost:1313/docs/configuration/conf/</link>
+      <link>/docs/configuration/conf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/docs/configuration/conf/</guid>
+      <guid>/docs/configuration/conf/</guid>
       <description>
         
         

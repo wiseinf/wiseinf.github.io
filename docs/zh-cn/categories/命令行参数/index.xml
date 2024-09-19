@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 命令行参数</title>
-    <link>//localhost:1313/zh-cn/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+    <link>/zh-cn/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
     <description>Recent content in 命令行参数 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 命令行参数</title>
-      <link>//localhost:1313/zh-cn/docs/configuration/command-line/</link>
+      <link>/zh-cn/docs/configuration/command-line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/configuration/command-line/</guid>
+      <guid>/zh-cn/docs/configuration/command-line/</guid>
       <description>
         
         
@@ -54,7 +54,7 @@ Global Flags:
 &lt;p&gt;参数 &lt;code&gt;-f, --features&lt;/code&gt;指示集群优化平台启动的特性，其中&lt;code&gt;APIServer&lt;/code&gt;表示仅提供API服务，&lt;code&gt;Optimizer&lt;/code&gt;表示启动优化器特性。&lt;/p&gt;
 &lt;p&gt;默认值为&lt;code&gt;APIServer,Optimizer&lt;/code&gt;，表示同时启用自动扩缩容特性和虚拟容量特性。&lt;/p&gt;
 &lt;h3 id=&#34;--config&#34;&gt;&lt;code&gt;--config&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--config&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;参数&lt;code&gt;--config&lt;/code&gt;指示集群优化平台所使用的配置文件路径。其配置请参见&lt;a href=&#34;//localhost:1313/zh-cn/docs/configuration/conf/&#34;&gt;配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参数&lt;code&gt;--config&lt;/code&gt;指示集群优化平台所使用的配置文件路径。其配置请参见&lt;a href=&#34;/zh-cn/docs/configuration/conf/&#34;&gt;配置文件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;--log-enable-color&#34;&gt;&lt;code&gt;--log-enable-color&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-color&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;参数&lt;code&gt;--log-enable-color&lt;/code&gt;指示是否开启日志中的色彩属性，在控制台界面，启用该特性能够提升可读性。默认值是&lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;--log-enable-console&#34;&gt;&lt;code&gt;--log-enable-console&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#--log-enable-console&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;

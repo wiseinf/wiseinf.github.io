@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – 用户管理</title>
-    <link>//localhost:1313/zh-cn/categories/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</link>
+    <link>/zh-cn/categories/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</link>
     <description>Recent content in 用户管理 on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="//localhost:1313/zh-cn/categories/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/zh-cn/categories/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: 用户管理</title>
-      <link>//localhost:1313/zh-cn/docs/user-guide/management/user/</link>
+      <link>/zh-cn/docs/user-guide/management/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zh-cn/docs/user-guide/management/user/</guid>
+      <guid>/zh-cn/docs/user-guide/management/user/</guid>
       <description>
         
         
@@ -38,7 +38,7 @@
 &lt;h2 id=&#34;查看用户列表&#34;&gt;查看用户列表&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e7%94%a8%e6%88%b7%e5%88%97%e8%a1%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;从&lt;code&gt;设置 --&amp;gt; 用户&lt;/code&gt;进入用户管理页面，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;202&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/overview_hu4ec3006362706baedd365e9f21d485eb_74427_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;202&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -61,7 +61,7 @@
 &lt;h2 id=&#34;添加用户&#34;&gt;添加用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击用户管理页面上方的&lt;code&gt;增加&lt;/code&gt;按钮，将弹出添加用户对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/add_hu3fdb64f4596d92fc79bf2bbecdf6936e_31691_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -119,7 +119,7 @@
 &lt;h2 id=&#34;更新用户&#34;&gt;更新用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击用户管理页面列表中的&lt;code&gt;编辑&lt;/code&gt;按钮，将弹出编辑用户对话框，如下图。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/edit_hub2114de3153ef1c23777aeb4f3a790fe_34683_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;562&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 
@@ -130,11 +130,11 @@
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;具体字段名和描述同&lt;a href=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/#添加用户&#34;&gt;添加用户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
+&lt;p&gt;具体字段名和描述同&lt;a href=&#34;/zh-cn/docs/user-guide/management/user/#添加用户&#34;&gt;添加用户&lt;/a&gt;一致，不在赘述。&lt;/p&gt;
 &lt;h2 id=&#34;删除用户&#34;&gt;删除用户&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e7%94%a8%e6%88%b7&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;点击用户管理页面的&lt;code&gt;删除&lt;/code&gt;按钮，将删除用户。&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
-&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/management/user/delete_hu5b03832125bc653e9b4316cc72ebcfc4_82925_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;191&#34;&gt;
 &lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
 &lt;p class=&#34;card-text&#34;&gt;
 

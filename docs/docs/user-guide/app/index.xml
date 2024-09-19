@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster Optimizer – Application / Workload</title>
-    <link>//localhost:1313/docs/user-guide/app/</link>
+    <link>/docs/user-guide/app/</link>
     <description>Recent content in Application / Workload on Cluster Optimizer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/docs/user-guide/app/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/user-guide/app/index.xml" rel="self" type="application/rss+xml" />
     
     
       
