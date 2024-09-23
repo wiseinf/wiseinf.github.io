@@ -1,0 +1,117 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Access Key</title>
+    <link>//localhost:1313/zh-cn/categories/access-key/</link>
+    <description>Recent content in Access Key on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="//localhost:1313/zh-cn/categories/access-key/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Access Key</title>
+      <link>//localhost:1313/zh-cn/docs/user-guide/personal-settings/accesskey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh-cn/docs/user-guide/personal-settings/accesskey/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section describes operations related to to manage access keys.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;preconditions&#34;&gt;Preconditions&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#preconditions&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The features described are available only in the commercial version.&lt;/li&gt;
+&lt;li&gt;v1.3.1 or above.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;viewing-access-keys&#34;&gt;Viewing Access Keys&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#viewing-access-keys&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To view and manage your access keys., follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on your user avatar in the top left navigation bar, as shown below.&lt;/li&gt;
+&lt;li&gt;From the expanded menu, select &lt;code&gt;Personal Settings&lt;/code&gt; to access the personal settings page.&lt;/li&gt;
+&lt;li&gt;On the personal settings page, click the &lt;code&gt;Access Keys&lt;/code&gt; tab to view and manage your access keys, as illustrated below.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;//localhost:1313/zh-cn/docs/user-guide/personal-settings/accesskey/list_hu3df103116875960767137ae442f5ff82_85808_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;301&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+Access Key List
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The table below provides detailed descriptions of the fields available in this section:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Key ID&lt;/td&gt;
+&lt;td&gt;Access Key ID for the access key.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Key Secret&lt;/td&gt;
+&lt;td&gt;Access Key Secret for the access key.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;State&lt;/td&gt;
+&lt;td&gt;The state of access key, such as enabled, disabled, and deleted.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Created At&lt;/td&gt;
+&lt;td&gt;The create time of the access key.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Action&lt;/td&gt;
+&lt;td&gt;Actions available for managing the cluster access account.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;create-a-new-access-key&#34;&gt;Create a New Access Key&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#create-a-new-access-key&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To create a new access key, click the &lt;code&gt;New&lt;/code&gt; button at the top right of the &lt;code&gt;Access Keys&lt;/code&gt; table. It will automatic generate the access key and list it in the table.&lt;/p&gt;
+&lt;h2 id=&#34;disable-an-access-key&#34;&gt;Disable an Access Key&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#disable-an-access-key&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To disable an access key:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;click the &lt;code&gt;Disable&lt;/code&gt; button in the &lt;code&gt;Actions&lt;/code&gt; column.&lt;/li&gt;
+&lt;li&gt;Before disable the access key, a confirmation dialog box will appear. After confirming, the account will be disabled.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Disabling an access key will cause any tasks using that access key to fail.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;enable-an-access-key&#34;&gt;Enable an Access Key&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#enable-an-access-key&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To enable an access key, click the &lt;code&gt;Enable&lt;/code&gt; button in the &lt;code&gt;Actions&lt;/code&gt; column.&lt;/p&gt;
+&lt;h2 id=&#34;delete-an-access-key&#34;&gt;Delete an Access Key&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#delete-an-access-key&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To delete an access key:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the &lt;code&gt;Delete&lt;/code&gt; button in the &lt;code&gt;Actions&lt;/code&gt; column.&lt;/li&gt;
+&lt;li&gt;Before deletion, a confirmation dialog box will appear. After confirming, the account will be deleted.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Deleting an access key will cause any tasks using that access key to fail.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;showhide-access-key-secret&#34;&gt;Show/Hide Access Key Secret&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#showhide-access-key-secret&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To show or hide the access key secret,  click the &lt;code&gt;Show&lt;/code&gt; or &lt;code&gt;Hide&lt;/code&gt; button in the &lt;code&gt;Access Key Secret&lt;/code&gt; column.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

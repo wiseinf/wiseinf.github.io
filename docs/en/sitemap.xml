@@ -80,6 +80,18 @@
                 href="/docs/user-guide/management/user/"
                 />
   </url><url>
+    <loc>/docs/user-guide/personal-settings/accesskey/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/user-guide/personal-settings/accesskey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/user-guide/personal-settings/accesskey/"
+                />
+  </url><url>
     <loc>/docs/user-guide/operations/adjust-node/</loc>
     <lastmod>2024-08-18T17:40:03+08:00</lastmod>
     <xhtml:link
@@ -250,7 +262,7 @@
                 />
   </url><url>
     <loc>/docs/user-guide/node/</loc>
-    <lastmod>2024-08-28T17:54:54+08:00</lastmod>
+    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -327,6 +339,18 @@
                 href="/docs/setup/"
                 />
   </url><url>
+    <loc>/docs/api-references/overview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/overview/"
+                />
+  </url><url>
     <loc>/blog/releases/</loc>
     <lastmod>2024-05-29T15:40:31+08:00</lastmod>
     <xhtml:link
@@ -351,6 +375,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/docs/user-guide/tasks/"
+                />
+  </url><url>
+    <loc>/docs/api-references/authentication/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/authentication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/authentication/"
                 />
   </url><url>
     <loc>/docs/</loc>
@@ -457,6 +493,18 @@
                 href="/docs/configuration/"
                 />
   </url><url>
+    <loc>/docs/api-references/management-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/management-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/management-api/"
+                />
+  </url><url>
     <loc>/price/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
     <xhtml:link
@@ -468,6 +516,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/price/"
+                />
+  </url><url>
+    <loc>/docs/api-references/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/"
                 />
   </url><url>
     <loc>/docs/bestpractice/</loc>
@@ -494,6 +554,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/docs/user-guide/operations/"
+                />
+  </url><url>
+    <loc>/docs/api-references/optimize-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/optimize-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/optimize-api/"
                 />
   </url><url>
     <loc>/docs/troubleshooting/</loc>
@@ -632,6 +704,26 @@
                 href="/about/"
                 />
   </url><url>
+    <loc>/tags/access-key/</loc>
+  </url><url>
+    <loc>/categories/access-key/</loc>
+  </url><url>
+    <loc>/tags/api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/api/"
+                />
+  </url><url>
+    <loc>/tags/api-references/</loc>
+  </url><url>
+    <loc>/categories/api-references/</loc>
+  </url><url>
     <loc>/tags/best-practices/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
   </url><url>
@@ -652,7 +744,7 @@
                 />
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
+    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -677,10 +769,20 @@
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
     <loc>/categories/cluster-optimization/</loc>
-    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
+    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/cluster-optimization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/cluster-optimization/"
+                />
   </url><url>
     <loc>/tags/cluster-optimizer/</loc>
-    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
+    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -729,6 +831,30 @@
     <loc>/tags/gpu-node-optimization/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
+    <loc>/tags/management-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/management-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/management-api/"
+                />
+  </url><url>
+    <loc>/categories/management-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/management-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/management-api/"
+                />
+  </url><url>
     <loc>/tags/management-settings/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
@@ -739,7 +865,7 @@
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
     <loc>/tags/node-optimizer/</loc>
-    <lastmod>2024-08-28T17:54:54+08:00</lastmod>
+    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
   </url><url>
     <loc>/tags/notification-channel/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
@@ -758,6 +884,18 @@
   </url><url>
     <loc>/tags/optimization-operation/</loc>
     <lastmod>2024-08-19T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/tags/optimize-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/optimize-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/optimize-api/"
+                />
   </url><url>
     <loc>/tags/optimizing-application/</loc>
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
@@ -794,7 +932,7 @@
                 />
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2024-09-10T16:29:46+08:00</lastmod>
+    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"

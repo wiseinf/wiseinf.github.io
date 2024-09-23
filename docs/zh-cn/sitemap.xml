@@ -110,6 +110,18 @@
                 href="/zh-cn/docs/user-guide/operations/adjust-node/"
                 />
   </url><url>
+    <loc>/zh-cn/docs/user-guide/personal-settings/accesskey/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/user-guide/personal-settings/accesskey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/user-guide/personal-settings/accesskey/"
+                />
+  </url><url>
     <loc>/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/</loc>
     <xhtml:link
                 rel="alternate"
@@ -303,6 +315,18 @@
                 href="/zh-cn/blog/releases/"
                 />
   </url><url>
+    <loc>/zh-cn/docs/api-references/overview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/overview/"
+                />
+  </url><url>
     <loc>/zh-cn/docs/setup/</loc>
     <xhtml:link
                 rel="alternate"
@@ -350,6 +374,18 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/docs/user-guide/personal-settings/"
+                />
+  </url><url>
+    <loc>/zh-cn/docs/api-references/authentication/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/authentication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/authentication/"
                 />
   </url><url>
     <loc>/zh-cn/docs/</loc>
@@ -413,6 +449,18 @@
                 href="/zh-cn/blog/blog/"
                 />
   </url><url>
+    <loc>/zh-cn/docs/api-references/management-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/management-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/management-api/"
+                />
+  </url><url>
     <loc>/zh-cn/price/</loc>
     <xhtml:link
                 rel="alternate"
@@ -435,6 +483,30 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/docs/configuration/"
+                />
+  </url><url>
+    <loc>/zh-cn/docs/api-references/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/"
+                />
+  </url><url>
+    <loc>/zh-cn/docs/api-references/optimize-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/api-references/optimize-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/docs/api-references/optimize-api/"
                 />
   </url><url>
     <loc>/zh-cn/docs/bestpractice/</loc>
@@ -603,6 +675,24 @@
                 href="/zh-cn/blog/2024/01/08/cluster-optimizer-v1.1.0%E7%89%88%E5%B7%B2%E5%8F%91%E5%B8%83/"
                 />
   </url><url>
+    <loc>/zh-cn/tags/api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/api/"
+                />
+  </url><url>
+    <loc>/zh-cn/tags/api%E5%8F%82%E8%80%83/</loc>
+  </url><url>
+    <loc>/zh-cn/categories/api%E5%8F%82%E8%80%83/</loc>
+  </url><url>
+    <loc>/zh-cn/tags/api%E6%A6%82%E8%A7%88/</loc>
+  </url><url>
     <loc>/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -613,6 +703,18 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/categories/"
+                />
+  </url><url>
+    <loc>/zh-cn/categories/cluster-optimization/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/cluster-optimization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/cluster-optimization/"
                 />
   </url><url>
     <loc>/zh-cn/tags/cluster-optimizer/</loc>
@@ -628,6 +730,42 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/gpu%E8%8A%82%E7%82%B9%E4%BC%98%E5%8C%96/</loc>
+  </url><url>
+    <loc>/zh-cn/tags/management-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/management-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/management-api/"
+                />
+  </url><url>
+    <loc>/zh-cn/categories/management-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/management-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/management-api/"
+                />
+  </url><url>
+    <loc>/zh-cn/tags/optimize-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/optimize-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/optimize-api/"
+                />
   </url><url>
     <loc>/zh-cn/tags/persistent-volume%E4%BC%98%E5%8C%96/</loc>
   </url><url>
@@ -656,6 +794,10 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/%E7%A3%81%E7%9B%98%E4%BC%98%E5%8C%96/</loc>
+  </url><url>
+    <loc>/zh-cn/tags/%E8%AE%BF%E9%97%AE%E7%A7%98%E9%92%A5/</loc>
+  </url><url>
+    <loc>/zh-cn/categories/%E8%AE%BF%E9%97%AE%E7%A7%98%E9%92%A5/</loc>
   </url><url>
     <loc>/zh-cn/tags/%E4%B8%AA%E4%BA%BA%E8%AE%BE%E7%BD%AE/</loc>
   </url><url>
@@ -712,6 +854,8 @@
     <loc>/zh-cn/tags/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</loc>
   </url><url>
     <loc>/zh-cn/categories/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</loc>
+  </url><url>
+    <loc>/zh-cn/tags/%E8%AE%A4%E8%AF%81/</loc>
   </url><url>
     <loc>/zh-cn/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/</loc>
   </url><url>

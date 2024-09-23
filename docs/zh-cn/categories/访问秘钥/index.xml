@@ -1,0 +1,118 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – 访问秘钥</title>
+    <link>/zh-cn/categories/%E8%AE%BF%E9%97%AE%E7%A7%98%E9%92%A5/</link>
+    <description>Recent content in 访问秘钥 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/categories/%E8%AE%BF%E9%97%AE%E7%A7%98%E9%92%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 访问秘钥</title>
+      <link>/zh-cn/docs/user-guide/personal-settings/accesskey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/user-guide/personal-settings/accesskey/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;翻译&lt;/strong&gt;：&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本节介绍了管理访问密钥的相关操作。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;先决条件&#34;&gt;先决条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;描述的功能仅适用于商业版本。&lt;/li&gt;
+&lt;li&gt;版本要求 v1.3.1 或更高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;查看访问密钥&#34;&gt;查看访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要查看和管理您的访问密钥，请按照以下步骤操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击左上导航栏中的用户头像，如下图所示。&lt;/li&gt;
+&lt;li&gt;在展开的菜单中，选择 &lt;code&gt;个人设置&lt;/code&gt; 以进入个人设置页面。&lt;/li&gt;
+&lt;li&gt;在个人设置页面，点击 &lt;code&gt;访问密钥&lt;/code&gt; 标签，查看和管理您的访问密钥，如下所示。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/accesskey/list_hu0ad3f125a275e6838572ac4bc4ec059c_78260_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;275&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+访问密钥列表
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;下表详细描述了该部分可用的字段：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名称&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Key ID&lt;/td&gt;
+&lt;td&gt;访问密钥的 ID。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Key Secret&lt;/td&gt;
+&lt;td&gt;访问密钥的密钥。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;状态&lt;/td&gt;
+&lt;td&gt;访问密钥的状态，如启用、禁用和删除。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;创建时间&lt;/td&gt;
+&lt;td&gt;访问密钥的创建时间。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;操作&lt;/td&gt;
+&lt;td&gt;可用于管理访问密钥的操作。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;创建新访问密钥&#34;&gt;创建新访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%9b%e5%bb%ba%e6%96%b0%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要创建新的访问密钥，请点击 &lt;code&gt;访问密钥&lt;/code&gt; 表格右上角的 &lt;code&gt;新增&lt;/code&gt; 按钮。系统将自动生成访问密钥，并将其列入表中。&lt;/p&gt;
+&lt;h2 id=&#34;禁用访问密钥&#34;&gt;禁用访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%a6%81%e7%94%a8%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;禁用访问密钥：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 &lt;code&gt;操作&lt;/code&gt; 列中的 &lt;code&gt;禁用&lt;/code&gt; 按钮。&lt;/li&gt;
+&lt;li&gt;在禁用访问密钥前，将弹出确认对话框。确认后，账户将被禁用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：禁用访问密钥将导致任何使用该密钥的任务失败。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启用访问密钥&#34;&gt;启用访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%90%af%e7%94%a8%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要启用访问密钥，请点击 &lt;code&gt;操作&lt;/code&gt; 列中的 &lt;code&gt;启用&lt;/code&gt; 按钮。&lt;/p&gt;
+&lt;h2 id=&#34;删除访问密钥&#34;&gt;删除访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;删除访问密钥：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 &lt;code&gt;操作&lt;/code&gt; 列中的 &lt;code&gt;删除&lt;/code&gt; 按钮。&lt;/li&gt;
+&lt;li&gt;在删除前，将弹出确认对话框。确认后，账户将被删除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：删除访问密钥将导致任何使用该密钥的任务失败。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;显示隐藏访问密钥密钥&#34;&gt;显示/隐藏访问密钥密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%98%be%e7%a4%ba%e9%9a%90%e8%97%8f%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要显示或隐藏访问密钥密钥，点击 &lt;code&gt;Access Key Secret&lt;/code&gt; 列中的 &lt;code&gt;显示&lt;/code&gt; 或 &lt;code&gt;隐藏&lt;/code&gt; 按钮。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

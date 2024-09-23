@@ -379,7 +379,26 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>10.2: <a href="#pg-41d71a2b3dcedf8ede0f40a92a4f0523">Cluster Access Account</a></li>
+<li>10.2: <a href="#pg-81c2a51e07067a5ff2fd6a960d949e97">Access Key</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>10.3: <a href="#pg-41d71a2b3dcedf8ede0f40a92a4f0523">Cluster Access Account</a></li>
 
 
     
@@ -1605,8 +1624,7 @@ Node page - Select Cluster
 </figcaption>
 </figure>
 
-<p>The List Area is divided into five columns:</p>
-<p>The List Area is divided into five columns:</p>
+<p>The <code>List Area</code> is divided into five columns:</p>
 <ol>
 <li><strong>Node</strong>: Displays the GPU node name, instance ID, and region.</li>
 <li><strong>Owner</strong>: Shows the department, group, and assigned personnel responsible for the node.</li>
@@ -1622,7 +1640,7 @@ Node page - Select Cluster
 <p class="card-text">
 
 
-`Adjust Node` Dialog
+Adjust Node Dialog
 <small class="text-muted"><br/>Wiseinf Inc.</small>
 </p>
 </figcaption>
@@ -2313,7 +2331,7 @@ Task management page
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-c45f86707c5300923565772c53d3fb61">10 - Personal Settings</h1>
-    <div class="lead">Describe operations related to personal settings.</div>
+    <div class="lead">Describe operations related to personal account.</div>
 	
 </div>
 
@@ -2452,7 +2470,122 @@ Personal Settings Page
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-41d71a2b3dcedf8ede0f40a92a4f0523">10.2 - Cluster Access Account</h1>
+	<h1 id="pg-81c2a51e07067a5ff2fd6a960d949e97">10.2 - Access Key</h1>
+    <div class="lead">Describes operations related to manage access keys.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This section describes operations related to to manage access keys.</p>
+
+</div>
+
+<h2 id="preconditions">Preconditions<a class="td-heading-self-link" href="#preconditions" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>The features described are available only in the commercial version.</li>
+<li>v1.3.1 or above.</li>
+</ul>
+<h2 id="viewing-access-keys">Viewing Access Keys<a class="td-heading-self-link" href="#viewing-access-keys" aria-label="Heading self-link"></a></h2>
+<p>To view and manage your access keys., follow these steps:</p>
+<ol>
+<li>Click on your user avatar in the top left navigation bar, as shown below.</li>
+<li>From the expanded menu, select <code>Personal Settings</code> to access the personal settings page.</li>
+<li>On the personal settings page, click the <code>Access Keys</code> tab to view and manage your access keys, as illustrated below.</li>
+</ol>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/docs/user-guide/personal-settings/accesskey/list_hu3df103116875960767137ae442f5ff82_85808_900x0_resize_catmullrom_3.png" width="900" height="301">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Access Key List
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>The table below provides detailed descriptions of the fields available in this section:</p>
+<table>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access Key ID</td>
+<td>Access Key ID for the access key.</td>
+</tr>
+<tr>
+<td>Access Key Secret</td>
+<td>Access Key Secret for the access key.</td>
+</tr>
+<tr>
+<td>State</td>
+<td>The state of access key, such as enabled, disabled, and deleted.</td>
+</tr>
+<tr>
+<td>Created At</td>
+<td>The create time of the access key.</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Actions available for managing the access key.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-a-new-access-key">Create a New Access Key<a class="td-heading-self-link" href="#create-a-new-access-key" aria-label="Heading self-link"></a></h2>
+<p>To create a new access key, click the <code>New</code> button at the top right of the <code>Access Keys</code> table. It will automatic generate the access key and list it in the table.</p>
+<h2 id="disable-an-access-key">Disable an Access Key<a class="td-heading-self-link" href="#disable-an-access-key" aria-label="Heading self-link"></a></h2>
+<p>To disable an access key:</p>
+<ol>
+<li>click the <code>Disable</code> button in the <code>Actions</code> column.</li>
+<li>Before disable the access key, a confirmation dialog box will appear. After confirming, the account will be disabled.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Disabling an access key will cause any tasks using that access key to fail.</p>
+</blockquote>
+<h2 id="enable-an-access-key">Enable an Access Key<a class="td-heading-self-link" href="#enable-an-access-key" aria-label="Heading self-link"></a></h2>
+<p>To enable an access key, click the <code>Enable</code> button in the <code>Actions</code> column.</p>
+<h2 id="delete-an-access-key">Delete an Access Key<a class="td-heading-self-link" href="#delete-an-access-key" aria-label="Heading self-link"></a></h2>
+<p>To delete an access key:</p>
+<ol>
+<li>Click the <code>Delete</code> button in the <code>Actions</code> column.</li>
+<li>Before deletion, a confirmation dialog box will appear. After confirming, the account will be deleted.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Deleting an access key will cause any tasks using that access key to fail.</p>
+</blockquote>
+<h2 id="showhide-access-key-secret">Show/Hide Access Key Secret<a class="td-heading-self-link" href="#showhide-access-key-secret" aria-label="Heading self-link"></a></h2>
+<p>To show or hide the access key secret,  click the <code>Show</code> or <code>Hide</code> button in the <code>Access Key Secret</code> column.</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-41d71a2b3dcedf8ede0f40a92a4f0523">10.3 - Cluster Access Account</h1>
     <div class="lead">Describes operations related to managing personal cluster access accounts.</div>
 	
 

@@ -1155,6 +1155,106 @@
     </item>
     
     <item>
+      <title>Docs: 访问秘钥</title>
+      <link>/zh-cn/docs/user-guide/personal-settings/accesskey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/user-guide/personal-settings/accesskey/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;翻译&lt;/strong&gt;：&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本节介绍了管理访问密钥的相关操作。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;先决条件&#34;&gt;先决条件&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;描述的功能仅适用于商业版本。&lt;/li&gt;
+&lt;li&gt;版本要求 v1.3.1 或更高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;查看访问密钥&#34;&gt;查看访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%9f%a5%e7%9c%8b%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要查看和管理您的访问密钥，请按照以下步骤操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击左上导航栏中的用户头像，如下图所示。&lt;/li&gt;
+&lt;li&gt;在展开的菜单中，选择 &lt;code&gt;个人设置&lt;/code&gt; 以进入个人设置页面。&lt;/li&gt;
+&lt;li&gt;在个人设置页面，点击 &lt;code&gt;访问密钥&lt;/code&gt; 标签，查看和管理您的访问密钥，如下所示。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+&lt;img class=&#34;card-img-top&#34; src=&#34;/zh-cn/docs/user-guide/personal-settings/accesskey/list_hu0ad3f125a275e6838572ac4bc4ec059c_78260_900x0_resize_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;275&#34;&gt;
+&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+&lt;p class=&#34;card-text&#34;&gt;
+
+
+访问密钥列表
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Wiseinf Inc.&lt;/small&gt;
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;下表详细描述了该部分可用的字段：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段名称&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Key ID&lt;/td&gt;
+&lt;td&gt;访问密钥的 ID。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Key Secret&lt;/td&gt;
+&lt;td&gt;访问密钥的密钥。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;状态&lt;/td&gt;
+&lt;td&gt;访问密钥的状态，如启用、禁用和删除。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;创建时间&lt;/td&gt;
+&lt;td&gt;访问密钥的创建时间。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;操作&lt;/td&gt;
+&lt;td&gt;可用于管理访问密钥的操作。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;创建新访问密钥&#34;&gt;创建新访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%9b%e5%bb%ba%e6%96%b0%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要创建新的访问密钥，请点击 &lt;code&gt;访问密钥&lt;/code&gt; 表格右上角的 &lt;code&gt;新增&lt;/code&gt; 按钮。系统将自动生成访问密钥，并将其列入表中。&lt;/p&gt;
+&lt;h2 id=&#34;禁用访问密钥&#34;&gt;禁用访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%a6%81%e7%94%a8%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;禁用访问密钥：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 &lt;code&gt;操作&lt;/code&gt; 列中的 &lt;code&gt;禁用&lt;/code&gt; 按钮。&lt;/li&gt;
+&lt;li&gt;在禁用访问密钥前，将弹出确认对话框。确认后，账户将被禁用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：禁用访问密钥将导致任何使用该密钥的任务失败。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启用访问密钥&#34;&gt;启用访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%90%af%e7%94%a8%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要启用访问密钥，请点击 &lt;code&gt;操作&lt;/code&gt; 列中的 &lt;code&gt;启用&lt;/code&gt; 按钮。&lt;/p&gt;
+&lt;h2 id=&#34;删除访问密钥&#34;&gt;删除访问密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%88%a0%e9%99%a4%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;删除访问密钥：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 &lt;code&gt;操作&lt;/code&gt; 列中的 &lt;code&gt;删除&lt;/code&gt; 按钮。&lt;/li&gt;
+&lt;li&gt;在删除前，将弹出确认对话框。确认后，账户将被删除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：删除访问密钥将导致任何使用该密钥的任务失败。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;显示隐藏访问密钥密钥&#34;&gt;显示/隐藏访问密钥密钥&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%98%be%e7%a4%ba%e9%9a%90%e8%97%8f%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5%e5%af%86%e9%92%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要显示或隐藏访问密钥密钥，点击 &lt;code&gt;Access Key Secret&lt;/code&gt; 列中的 &lt;code&gt;显示&lt;/code&gt; 或 &lt;code&gt;隐藏&lt;/code&gt; 按钮。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: 集群访问账户</title>
       <link>/zh-cn/docs/user-guide/personal-settings/clusteraccessaccount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2657,6 +2757,64 @@ Persistent Volume页-选择集群
     </item>
     
     <item>
+      <title>Docs: API概览</title>
+      <link>/zh-cn/docs/api-references/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/api-references/overview/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;翻译&lt;/strong&gt;：&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本节提供了集群优化器 API 的参考信息。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%a6%82%e8%bf%b0&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;集群优化器 API&lt;/strong&gt; 是一个强大的工具，允许用户通过编程方式与云原生集群优化流程进行交互和自动化操作。通过提供 RESTful 端点，该 API 使用户能够将集群优化器与第三方应用集成、自动化任务执行，并检索有关资源利用率和成本节约机会的详细报告。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;全面功能访问&lt;/strong&gt;：该 API 赋予用户对集群优化器平台关键功能的完全访问权限，如：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;集群管理&lt;/strong&gt;：用户可以通过 API 导入、更新或删除集群及其关联的云账户。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源优化&lt;/strong&gt;：该 API 提供端点用于分析和优化资源使用情况，如节点组、磁盘和工作负载等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本与节约见解&lt;/strong&gt;：用户可以通过编程方式访问针对特定配置的成本节约和优化机会的详细报告。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灵活性与定制化&lt;/strong&gt;：该 API 高度可定制，允许用户：
+&lt;ul&gt;
+&lt;li&gt;创建基于实时数据的自定义工作流，以自动化资源管理和优化。&lt;/li&gt;
+&lt;li&gt;将优化报告集成到内部仪表盘或财务报告系统中，更好地跟踪云成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持多云平台&lt;/strong&gt;：该 API 支持 AWS、阿里云以及 Kubernetes 集群等多种云原生环境。无论底层云基础设施如何，这种跨平台能力确保了对分布式资源的无缝集成与控制。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;用例&#34;&gt;用例&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%94%a8%e4%be%8b&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;优化任务自动化&lt;/strong&gt;：DevOps 团队可以根据工作负载需求自动应用优化策略（如调整节点组、休眠集群），从而减少人工干预、提高运营效率，并确保持续的资源管理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自定义监控与告警&lt;/strong&gt;：用户可以构建自定义监控系统，查询 API 以获取实时的资源利用率和优化数据。告警可以根据特定的阈值或事件触发，如云成本突然飙升或资源利用不足。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;与财务工具集成&lt;/strong&gt;：财务团队可以使用 API 提取详细的成本节约报告，并将其集成到财务系统中，从而实现对云支出的持续监控，并将优化工作与云管理中的 FinOps 原则保持一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;api-概览&#34;&gt;API 概览&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#api-%e6%a6%82%e8%a7%88&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;REST API 是集群优化器的基础架构。集群优化器提供了一个 REST API，允许您执行以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/api-references/management-api/&#34;&gt;&lt;strong&gt;管理 API&lt;/strong&gt;&lt;/a&gt;：管理集群、集群访问账户、访问密钥、通知渠道、通知规则等。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/api-references/optimize-api/&#34;&gt;&lt;strong&gt;优化 API&lt;/strong&gt;&lt;/a&gt;：提供 Kubernetes 资源（如节点组、持久卷、工作负载等）的推荐和优化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;集群优化器 API 仅在商业版（版本 1.3.1 及以上）中可用。&lt;/li&gt;
+&lt;li&gt;集群优化器 API 处于 alpha 阶段，未来可能会更改接口。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: 安装</title>
       <link>/zh-cn/docs/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2756,6 +2914,114 @@ Persistent Volume页-选择集群
     </item>
     
     <item>
+      <title>Docs: 认证</title>
+      <link>/zh-cn/docs/api-references/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/api-references/authentication/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本节描述了 &lt;strong&gt;Cluster Optimizer&lt;/strong&gt; API 认证的详细步骤。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%a6%82%e8%bf%b0&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;通过 HTTP API 进行身份验证对于保护资源和确保只有授权用户和服务可以访问数据至关重要。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API 身份验证&lt;/strong&gt;：API 使用基于令牌的身份验证机制，确保对集群数据和操作的安全访问。用户首先需要通过集群优化器界面生成 API 令牌，然后在所有 API 请求中使用该令牌进行身份验证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于角色的访问控制 (RBAC)&lt;/strong&gt;：API 与平台的 RBAC 系统集成，确保用户在访问或修改资源时拥有适当的权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cluster Optimizer&lt;/strong&gt; API 通过 HTTP 头 &lt;code&gt;Authorization&lt;/code&gt; 提供身份验证。示例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/resource&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;api.example.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer &amp;lt;Access_Token&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;生成访问令牌access-token&#34;&gt;生成访问令牌Access Token&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%94%9f%e6%88%90%e8%ae%bf%e9%97%ae%e4%bb%a4%e7%89%8caccess-token&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;要使用 &lt;strong&gt;Access Key&lt;/strong&gt; 和 &lt;strong&gt;Access Key Secret&lt;/strong&gt; 生成 &lt;strong&gt;Access Token&lt;/strong&gt;，通常使用签名算法（如 HMAC）来创建唯一的安全密钥，用于 API 请求的身份验证。以下是生成 API 密钥的详细步骤：&lt;/p&gt;
+&lt;h3 id=&#34;1-准备您的-access-key-和-secret&#34;&gt;1. &lt;strong&gt;准备您的 Access Key 和 Secret&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#1-%e5%87%86%e5%a4%87%e6%82%a8%e7%9a%84-access-key-%e5%92%8c-secret&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;您通常会获得 &lt;strong&gt;Access Key&lt;/strong&gt;（公开标识符）和 &lt;strong&gt;Access Key Secret&lt;/strong&gt;（私有标识符）。&lt;strong&gt;Access Key&lt;/strong&gt; 用于标识客户端，&lt;strong&gt;Access Key Secret&lt;/strong&gt; 用于安全地签署和验证 API 请求。&lt;/p&gt;
+&lt;h3 id=&#34;2-生成要签名的消息&#34;&gt;2. &lt;strong&gt;生成要签名的消息&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#2-%e7%94%9f%e6%88%90%e8%a6%81%e7%ad%be%e5%90%8d%e7%9a%84%e6%b6%88%e6%81%af&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;在生成签名的 API 密钥之前，您需要创建一个消息，将几个元素通过 &lt;code&gt;:&lt;/code&gt; 作为分隔符组合：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Access Key&lt;/strong&gt;：客户端的公开标识符。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timestamp&lt;/strong&gt;：为了防止重放攻击，包含一个时间戳（以纳秒为单位）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nonce&lt;/strong&gt;：防止重放攻击的随机字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如（在 Go 语言中）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%s:%d:%s&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;accessKeyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在此示例中，&lt;code&gt;accessKeyID&lt;/code&gt; 是客户端的访问密钥 ID，&lt;code&gt;timestamp&lt;/code&gt; 是以纳秒为单位的时间戳，&lt;code&gt;nonce&lt;/code&gt; 是一个随机字符串。&lt;/p&gt;
+&lt;h3 id=&#34;3-使用-hmac-sha256-签名消息&#34;&gt;3. &lt;strong&gt;使用 HMAC-SHA256 签名消息&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#3-%e4%bd%bf%e7%94%a8-hmac-sha256-%e7%ad%be%e5%90%8d%e6%b6%88%e6%81%af&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;接下来使用 &lt;strong&gt;API key secret&lt;/strong&gt; 通过 HMAC-SHA256 生成签名。此签名确保请求未被篡改，并且客户端是合法的。&lt;/p&gt;
+&lt;p&gt;示例（Go 语言）如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;generateSignature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;int64&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%s:%d:%s&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;hmac&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sha256&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Write&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;([]&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;));&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;signature&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;base64&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;StdEncoding&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;EncodeToString&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sum&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;returnsignature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下是所要求的中文翻译：&lt;/p&gt;
+&lt;p&gt;此函数通过使用 &lt;strong&gt;API Key Secret&lt;/strong&gt; 和 &lt;strong&gt;HMAC-SHA256&lt;/strong&gt; 算法对消息进行哈希处理来生成 &lt;strong&gt;signature&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;4-构建访问令牌&#34;&gt;4. &lt;strong&gt;构建访问令牌&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#4-%e6%9e%84%e5%bb%ba%e8%ae%bf%e9%97%ae%e4%bb%a4%e7%89%8c&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;生成签名后，您可以通过组合 &lt;strong&gt;Access Token&lt;/strong&gt;（公开）和生成的签名（私有）来构建最终的 API 密钥。&lt;/p&gt;
+&lt;p&gt;带有签名 API 密钥的请求示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/resource&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;api.example.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer &amp;lt;accessKey&amp;gt;/&amp;lt;timestamp&amp;gt;/&amp;lt;nonce&amp;gt;/&amp;lt;signature&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;accessKey&lt;/code&gt; 是公共的访问密钥。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;timestamp&lt;/code&gt;：为防止重放攻击，包含一个以纳秒为单位的时间戳。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;nonce&lt;/code&gt;：用于防止重放攻击的随机字符串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;signature&lt;/code&gt; 是使用密钥通过 HMAC-SHA256 签名的消息。&lt;/p&gt;
+&lt;p&gt;示例（Go 语言）如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GenerateAccessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;int64&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Now&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;UTC&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;UnixNano&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;signature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;generateSignature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;utils&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;URLEncode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%s/t%d/t%s/t%s&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;signature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)),&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-构建-http-请求&#34;&gt;5. &lt;strong&gt;构建 HTTP 请求&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#5-%e6%9e%84%e5%bb%ba-http-%e8%af%b7%e6%b1%82&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;您可以使用生成的访问令牌以及 open api 规范提供的方法来构建 HTTP 请求。&lt;/p&gt;
+&lt;p&gt;示例（Go 语言）如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;NewAPIClient&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Configuration&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;BasePath&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://api.example.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;apiKey&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;AKFgGMF3FWWe5mgkz3UWBMgaUgrzBMUV&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;apiSecret&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;******&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NONe5mgkz3GBk&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;accessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GenerateAccessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;apiKey&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;apiSecret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Background&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;WithValue&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ContextAccessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;accessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;rules&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NotificationRuleApi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ListNotificationRules&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NotificationRuleApiListNotificationRulesOpts&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;下一步&#34;&gt;下一步&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%8b%e4%b8%80%e6%ad%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;下面，我们将探讨关注如下API：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/api-references/management-api/&#34;&gt;&lt;strong&gt;管理 API&lt;/strong&gt;&lt;/a&gt;：管理集群、集群访问账户、访问密钥、通知渠道、通知规则等。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/api-references/optimize-api/&#34;&gt;&lt;strong&gt;优化 API&lt;/strong&gt;&lt;/a&gt;：提供针对 Kubernetes 资源（如节点组、持久卷、工作负载等）的推荐和优化。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: 用户手册</title>
       <link>/zh-cn/docs/user-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2782,6 +3048,44 @@ Persistent Volume页-选择集群
     </item>
     
     <item>
+      <title>Docs: Management API</title>
+      <link>/zh-cn/docs/api-references/management-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/api-references/management-api/</guid>
+      <description>
+        
+        
+        
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;ZH-cn&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+  &lt;meta
+    name=&#34;description&#34;
+    content=&#34;Management API of Cluster Optimzier&#34;
+  /&gt;
+  &lt;title&gt;Management API&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&#34; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&#34;management-api-ui&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&#34; crossorigin&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    window.ui = SwaggerUIBundle({
+      url: &#39;/api/v1/management-api.json&#39;,
+      dom_id: &#39;#management-api-ui&#39;,
+    });
+  };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: 配置</title>
       <link>/zh-cn/docs/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2798,6 +3102,57 @@ Persistent Volume页-选择集群
 &lt;/div&gt;
 
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: API参考</title>
+      <link>/zh-cn/docs/api-references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/api-references/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Optimize API</title>
+      <link>/zh-cn/docs/api-references/optimize-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/api-references/optimize-api/</guid>
+      <description>
+        
+        
+        
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;ZH-cn&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+  &lt;meta
+    name=&#34;description&#34;
+    content=&#34;Optimize API of Cluster Optimzier&#34;
+  /&gt;
+  &lt;title&gt;Optimize API&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&#34; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&#34;optimize-api-ui&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&#34; crossorigin&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    window.ui = SwaggerUIBundle({
+      url: &#39;/api/v1/optimize-api.json&#39;,
+      dom_id: &#39;#optimize-api-ui&#39;,
+    });
+  };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
       </description>
     </item>
     

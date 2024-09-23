@@ -1,0 +1,3809 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Wiseinf Optimize API 1.0.0",
+    "description": "Wiseinf Optimize OpenAPI provides a set of API for optimize kubernetes cluster and its workloads.",
+    "termsOfService": "http://www.wiseinf.com/terms/",
+    "contact": {
+      "email": "openapi@wiseinf.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about Wiseinf Optimize API",
+    "url": "http://www.wiseinf.com/docs/wiseinf/optimize-api/"
+  },
+  "servers": [
+    {
+      "url": "https://optimize.wiseinf.com/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "cluster",
+      "description": "Cluster",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://optimize.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "nodegroup",
+      "description": "Node Group",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://optimize.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "node",
+      "description": "Node",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://optimize.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "disk",
+      "description": "Disk",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://optimize.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "pv",
+      "description": "Persistent Volume",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://optimize.wiseinf.com/api/v1"
+      }
+    },
+    {
+      "name": "application",
+      "description": "Application",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://optimize.wiseinf.com/api/v1"
+      }
+    }
+  ],
+  "paths": {
+    "/clusters": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get clusters.",
+        "description": "Get clusters.",
+        "operationId": "getClusters",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cluster"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get cluster detail.",
+        "description": "Get cluster detail.",
+        "operationId": "getCluster",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "get cluster details by clusterId.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/schedule": {
+      "post": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Create a cluster hibernate schedule.",
+        "description": "Create a cluster hibernate schedule.",
+        "operationId": "createHibernateSchedule",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HibernateSchedule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Update a cluster hibernate schedule.",
+        "description": "Update a cluster hibernate schedule.",
+        "operationId": "updateHibernateSchedule",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HibernateSchedule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get a cluster hibernate schedule.",
+        "description": "Get a cluster hibernate schedule.",
+        "operationId": "getHibernateSchedule",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HibernateSchedule"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Delete a cluster hibernate schedule.",
+        "description": "Delete a cluster hibernate schedule.",
+        "operationId": "deleteHibernateSchedule",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/state": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get a cluster hibernate status.",
+        "description": "Get a cluster hibernate status.",
+        "operationId": "getHibernateState",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HibernateState"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/tasks": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "List a cluster hibernate tasks.",
+        "description": "List a cluster hibernate tasks.",
+        "operationId": "listHibernateTasks",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "maximum number of tasks returned in the response.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 5
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HibernateTask"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/tasks/{taskId}/logs": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "List cluster hibernate tasks's logs.",
+        "description": "List cluster hibernate task's logs.",
+        "operationId": "listHibernateTaskLogs",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TaskLog"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/tasks/latest": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get latest hibernate tasks for a cluster.",
+        "description": "Get latest hibernate tasks for a cluster.",
+        "operationId": "listLatestHibernateTask",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HibernateTask"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/tasks/latest/logs": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "List latest cluster hibernate tasks's logs.",
+        "description": "List latest cluster hibernate tasks's logs.",
+        "operationId": "listLatestHibernateTaskLogs",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/HibernateTask"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/startHibernate": {
+      "post": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Hibernate a cluster instantly.",
+        "description": "Hibernate a cluster instantly.",
+        "operationId": "hibernateClusterInstantly",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/hibernate/startAwake": {
+      "post": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Awake a cluster instantly.",
+        "description": "Awake a cluster instantly.",
+        "operationId": "awakeClusterInstantly",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodegroups/recommendations": {
+      "get": {
+        "tags": [
+          "nodegroup"
+        ],
+        "summary": "Get cluster node groups.",
+        "description": "Get cluster node groups.",
+        "operationId": "getNodeGroupRecommendations",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NodeGroupRecommendation"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodegroups/{nodeGroupId}": {
+      "get": {
+        "tags": [
+          "nodegroup"
+        ],
+        "summary": "Get cluster node groups.",
+        "description": "Get cluster node groups.",
+        "operationId": "getNodeGroup",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "nodeGroupId",
+            "in": "path",
+            "description": "node group id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodegroups/{nodeGroupId}/setting": {
+      "put": {
+        "tags": [
+          "nodegroup"
+        ],
+        "summary": "apply cluster node groups setting.",
+        "description": "Get cluster node groups.",
+        "operationId": "putNodeGroupSetting",
+        "parameters": [
+          {
+            "name": "nodeGroupId",
+            "in": "path",
+            "description": "node group id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "get node groups by cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NodeGroupSetting"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodes": {
+      "get": {
+        "tags": [
+          "node"
+        ],
+        "summary": "Get cluster's nodes.",
+        "description": "Get cluster's nodes according to clusterId.",
+        "operationId": "getClusterNodes",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Node"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodes/underutilization": {
+      "get": {
+        "tags": [
+          "node"
+        ],
+        "summary": "Get underutilized nodes.",
+        "description": "Get underutilized nodes.",
+        "operationId": "getUnderutilizedNodes",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "filter by cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnderutilizedNode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodes/recommendations": {
+      "get": {
+        "tags": [
+          "node"
+        ],
+        "summary": "Get nodes with low utilization rate.",
+        "description": "Get  nodes with low utilization rate.",
+        "operationId": "getNodeResourceRecommendations",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NodeRecommendation"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodes/disks/underutilization": {
+      "get": {
+        "tags": [
+          "disk"
+        ],
+        "summary": "Get underutilized disks.",
+        "description": "Get underutilized disks.",
+        "operationId": "getUnderutilizedDisks",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnderutilizedDisk"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/nodes/gpu/underutilization": {
+      "get": {
+        "tags": [
+          "node"
+        ],
+        "summary": "Get underutilization gpu nodes.",
+        "description": "Get underutilization gpu nodes.",
+        "operationId": "getUnderutilizedGPUNodes",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnderutilizedGPUNode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/pvs/unused": {
+      "get": {
+        "tags": [
+          "pv"
+        ],
+        "summary": "Get cluster node groups.",
+        "description": "Get cluster node groups.",
+        "operationId": "getUnusedPersistenceVolumes",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedPV"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/pvs/unused/{itemId}/{pvName}": {
+      "post": {
+        "tags": [
+          "pv"
+        ],
+        "summary": "Create a delete unused pv task.",
+        "description": "Create a delete unused pv task.",
+        "operationId": "deleteUnusedPV",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "description": "item id of the application.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "pvName",
+            "in": "path",
+            "description": "pv name of the pv.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "interval",
+            "in": "query",
+            "description": "how many minutes to wait before deleting the pv, default value is 1 hour.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NamespacedObject"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/pvs/underutilization": {
+      "get": {
+        "tags": [
+          "pv"
+        ],
+        "summary": "Get underutilized PV.",
+        "description": "Get underutilized PV.",
+        "operationId": "getUnderutilizedPV",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnderutilizedPV"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/pvs/underutilization/{itemId}": {
+      "post": {
+        "tags": [
+          "pv"
+        ],
+        "summary": "Create an adjust pv task.",
+        "description": "Create an adjust pv task.",
+        "operationId": "resizePV",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "description": "item id of the record.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "keepOriginalPVCName",
+            "in": "query",
+            "description": "should we keep the original pvc name after resize.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "deleteOriginalPV",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResizePVRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications": {
+      "get": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Get cluster's applications.",
+        "description": "Get cluster's applications according to clusterId.",
+        "operationId": "getClusterApplications",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "window",
+            "in": "query",
+            "description": "window of the time range",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Application"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications/oom": {
+      "get": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Get oom events.",
+        "description": "Get oom events.",
+        "operationId": "getOOMEvents",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "filter oom events by cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OOMEvent"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf",
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications/oom/{itemID}/{namespace}/{kind}/{name}/{containerName}": {
+      "post": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Create a set resource memory quota task.",
+        "description": "Create a set resource memory quota task.",
+        "operationId": "setResourceMemoryQuotas",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "itemID",
+            "in": "path",
+            "description": "item id of the application.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "namespace of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "description": "workload kind of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "description": "workload name of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "containerName",
+            "in": "path",
+            "description": "container name of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "initContainer",
+            "in": "query",
+            "description": "is the container an init container.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryRecommendation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications/noquotas": {
+      "get": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Get resource no quotas.",
+        "description": "Get resource no quotas.",
+        "operationId": "getResourceNoQuotas",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "filter resource no quotas by cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "query",
+            "description": "filter resource no quotas by namespace.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResourceQuotaUnset"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications/noquotas/{itemId}/{namespace}/{kind}/{name}/{containerName}": {
+      "post": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Create a set resource quota task.",
+        "description": "Create a set resource quota task.",
+        "operationId": "setResourceQuotas",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "description": "item id of the application.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "namespace of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "description": "workload kind of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "description": "workload name of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "containerName",
+            "in": "path",
+            "description": "container name of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "initContainer",
+            "in": "query",
+            "description": "is the container an init container.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceQuotaRecommendation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications/recommendations": {
+      "get": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Get resource recommendations.",
+        "description": "Get resource recommendations.",
+        "operationId": "getResourceRecommendations",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "filter resource recommendations by cluster.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "query",
+            "description": "filter resource recommendations by namespace.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceRecommendationResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/clusters/{clusterId}/applications/recommendations/{itemId}/{namespace}/{kind}/{name}/{containerName}": {
+      "post": {
+        "tags": [
+          "application"
+        ],
+        "summary": "Create a set resource quota task.",
+        "description": "Create a set resource quota task.",
+        "operationId": "adjustResourceQuotas",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "description": "item id of the application.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "namespace of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "description": "workload kind of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "description": "workload name of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "containerName",
+            "in": "path",
+            "description": "container name of the application.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "initContainer",
+            "in": "query",
+            "description": "is the container an init container.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceQuotaRecommendation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/tasks": {
+      "post": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Create a task.",
+        "description": "Create a task.",
+        "operationId": "CreateTask",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Task"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Get tasks.",
+        "description": "Get tasks.",
+        "operationId": "getTasks",
+        "parameters": [
+          {
+            "name": "stategyId",
+            "in": "query",
+            "description": "filter tasks by stategyId.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "query",
+            "description": "filter tasks by itemId.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "filter tasks by status.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Task"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/tasks/running": {
+      "get": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Get running task number.",
+        "description": "Get running task number.",
+        "operationId": "getRunningTaskNumber",
+        "parameters": [
+          {
+            "name": "stategyId",
+            "in": "query",
+            "description": "filter task numbers by stategyId.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/tasks/{taskName}": {
+      "get": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Get a task.",
+        "description": "Get a task.",
+        "operationId": "getTask",
+        "parameters": [
+          {
+            "name": "taskName",
+            "in": "path",
+            "description": "get task by taskName.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Task"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Delete a task.",
+        "description": "Delete a task.",
+        "operationId": "deleteTask",
+        "parameters": [
+          {
+            "name": "taskName",
+            "in": "path",
+            "description": "task name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/tasks/{taskName}/rerun": {
+      "post": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Rerun a task.",
+        "description": "Rerun a task.",
+        "operationId": "rerunTask",
+        "parameters": [
+          {
+            "name": "taskName",
+            "in": "path",
+            "description": "task id of the task.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/tasks/{taskName}/cancel": {
+      "post": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Cancel a task.",
+        "description": "Cancel a task.",
+        "operationId": "cancelTask",
+        "parameters": [
+          {
+            "name": "taskName",
+            "in": "path",
+            "description": "task name of the task.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskRef"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "write:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/tasks/{taskName}/logs": {
+      "get": {
+        "tags": [
+          "task"
+        ],
+        "summary": "Get task logs.",
+        "description": "Get task logs.",
+        "operationId": "getTaskLogs",
+        "parameters": [
+          {
+            "name": "taskName",
+            "in": "path",
+            "description": "task name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TaskLog"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "authz": [
+              "read:optimize:wiseinf"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cluster": {
+        "type": "object",
+        "required": [
+          "clusterName",
+          "clusterId",
+          "regionId",
+          "accessTokenName",
+          "cloudProviderType",
+          "metricsServerAddr"
+        ],
+        "properties": {
+          "clusterId": {
+            "type": "string"
+          },
+          "clusterName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "accessTokenName": {
+            "type": "string"
+          },
+          "cloudProviderType": {
+            "type": "string",
+            "readOnly": true
+          },
+          "metricsServerAddr": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "description": "Only available on business version. For community version, it is always \"\" or \"running\"."
+          },
+          "status": {
+            "$ref": "#/components/schemas/ClusterStatus"
+          }
+        }
+      },
+      "ClusterStatus": {
+        "type": "object",
+        "required": [
+          "kubernetesHealth",
+          "metricsServerHealth"
+        ],
+        "properties": {
+          "kubernetesHealth": {
+            "$ref": "#/components/schemas/Health"
+          },
+          "metricsServerHealth": {
+            "$ref": "#/components/schemas/Health"
+          }
+        }
+      },
+      "Health": {
+        "type": "object",
+        "required": [
+          "health"
+        ],
+        "properties": {
+          "health": {
+            "type": "string",
+            "enum": [
+              "health",
+              "unhealth",
+              "unknown"
+            ]
+          },
+          "latestHealthTimeBegin": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          },
+          "latestUnHealthTimeBegin": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Event"
+            }
+          }
+        }
+      },
+      "Event": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          },
+          "event": {
+            "type": "string"
+          }
+        }
+      },
+      "Application": {
+        "type": "object",
+        "required": [
+          "clusterName",
+          "clusterId",
+          "regionId",
+          "clusterType",
+          "status"
+        ],
+        "properties": {
+          "namespace": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "applicationType": {
+            "type": "string"
+          }
+        }
+      },
+      "ClusterDetail": {
+        "type": "object",
+        "required": [
+          "clusterName",
+          "clusterId",
+          "regionId",
+          "clusterType",
+          "status"
+        ],
+        "properties": {
+          "clusterId": {
+            "type": "string"
+          },
+          "clusterName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "clusterType": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "ResourceRecommendationResult": {
+        "type": "object",
+        "required": [
+          "cpuSummary",
+          "memorySummary",
+          "resourceRecommendations"
+        ],
+        "properties": {
+          "cpuSummary": {
+            "$ref": "#/components/schemas/Summary"
+          },
+          "memorySummary": {
+            "$ref": "#/components/schemas/Summary"
+          },
+          "resourceRecommendations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceRecommendation"
+            }
+          }
+        }
+      },
+      "Summary": {
+        "type": "object",
+        "required": [
+          "type",
+          "request",
+          "usage",
+          "underProvisioning",
+          "overProvisioning",
+          "saving"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "int32"
+          },
+          "request": {
+            "type": "number",
+            "format": "float64"
+          },
+          "usage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "underProvisioning": {
+            "type": "number",
+            "format": "float64"
+          },
+          "overProvisioning": {
+            "type": "number",
+            "format": "float64"
+          },
+          "saving": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "ResourceRecommendation": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "namespace",
+          "workloadType",
+          "workloadName",
+          "container",
+          "cpuRequest",
+          "cpuLimit",
+          "cpuAvgUsage",
+          "cpuMaxUsage",
+          "recommendedCPURequest",
+          "recommendedCPULimit",
+          "memoryRequest",
+          "memoryLimit",
+          "memoryAvgUsage",
+          "memoryMaxUsage",
+          "recommendedMemoryRequest",
+          "recommendedMemoryLimit",
+          "efficiency"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "workloadType": {
+            "type": "string"
+          },
+          "workloadName": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          },
+          "cpuRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuAvgUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuMaxUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedCPURequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedCPULimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryAvgUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryMaxUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedMemoryRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedMemoryLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "efficiency": {
+            "type": "number",
+            "format": "float64"
+          },
+          "saving": {
+            "type": "number",
+            "format": "float64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "ResizePVRequest": {
+        "type": "object",
+        "required": [
+          "pvc",
+          "pvName",
+          "targetSize"
+        ],
+        "properties": {
+          "pvc": {
+            "$ref": "#/components/schemas/NamespacedObject"
+          },
+          "pvName": {
+            "type": "string"
+          },
+          "targetSize": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ResourceQuotaUnset": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "namespace",
+          "workloadType",
+          "workloadName",
+          "container",
+          "noCpuRequest",
+          "noCpuLimit",
+          "recommendedCPURequest",
+          "recommendedCPULimit",
+          "noMemoryRequest",
+          "noMemoryLimit",
+          "recommendedMemoryRequest",
+          "recommendedMemoryLimit"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "workloadType": {
+            "type": "string"
+          },
+          "workloadName": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "noCpuRequest": {
+            "type": "boolean"
+          },
+          "noCpuLimit": {
+            "type": "boolean"
+          },
+          "recommendedCPURequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedCPULimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "noMemoryRequest": {
+            "type": "boolean"
+          },
+          "noMemoryLimit": {
+            "type": "boolean"
+          },
+          "recommendedMemoryRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedMemoryLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "UnusedPV": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "name",
+          "pvcNamespace",
+          "pvcName",
+          "regionId",
+          "size",
+          "createAt",
+          "createTime",
+          "updateTime"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "pvcNamespace": {
+            "type": "string"
+          },
+          "pvcName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "size": {
+            "type": "number",
+            "format": "float64"
+          },
+          "createAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "properties": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "UnderutilizedPV": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "name",
+          "instanceId",
+          "regionId",
+          "size",
+          "maxUsage",
+          "avgUsage",
+          "createAt",
+          "createTime",
+          "updateTime"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "pvcNamespace": {
+            "type": "string"
+          },
+          "pvcName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "size": {
+            "type": "number",
+            "format": "float64"
+          },
+          "maxUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "avgUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "createAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "UnderutilizedDisk": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "diskId",
+          "name",
+          "instanceId",
+          "nodeName",
+          "regionId",
+          "size",
+          "maxUsage",
+          "avgUsage",
+          "createAt",
+          "createTime",
+          "updateTime"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "diskId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "nodeName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "maxUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "avgUsage": {
+            "type": "number",
+            "format": "float64"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "properties": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "UnderutilizedNode": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "nodeName",
+          "instanceId",
+          "regionId",
+          "instanceType",
+          "spot",
+          "cpuCores",
+          "cpuAvg",
+          "cpuMax",
+          "memoryBytes",
+          "memoryAvg",
+          "memoryMax",
+          "reasons"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "nodeName": {
+            "type": "string"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "instanceType": {
+            "type": "string"
+          },
+          "spot": {
+            "type": "boolean"
+          },
+          "cpuCores": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstanceTypeRecommendation"
+            }
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnderutilizationReason"
+            }
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "UnderutilizedGPUNode": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "nodeName",
+          "instanceId",
+          "regionId",
+          "instanceType",
+          "spot",
+          "cpuCores",
+          "cpuAvg",
+          "cpuMax",
+          "gpu",
+          "gpuSpec",
+          "gpuAvg",
+          "gpuMax",
+          "memoryBytes",
+          "memoryAvg",
+          "memoryMax",
+          "reasons"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "nodeName": {
+            "type": "string"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "instanceType": {
+            "type": "string"
+          },
+          "spot": {
+            "type": "boolean"
+          },
+          "cpuCores": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpu": {
+            "type": "number",
+            "format": "integer"
+          },
+          "gpuSpec": {
+            "type": "string"
+          },
+          "gpuAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuMemoryBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuMemoryAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "gpuMemoryMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstanceTypeRecommendation"
+            }
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnderutilizationReason"
+            }
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "UnderutilizationReason": {
+        "type": "object",
+        "required": [
+          "category",
+          "threshold"
+        ],
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/UnderutilizationReasonCategory"
+          },
+          "rate": {
+            "type": "number",
+            "format": "float64"
+          },
+          "threshold": {
+            "type": "number",
+            "format": "float64"
+          }
+        }
+      },
+      "UnderutilizationReasonCategory": {
+        "type": "string",
+        "enum": [
+          "CpuAvg",
+          "CpuMax",
+          "MemoryAvg",
+          "MemoryMax",
+          "GpuAvg",
+          "GpuMax",
+          "GpuMemoryAvg",
+          "GpuMemoryMax"
+        ]
+      },
+      "NodeRecommendation": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "nodeName",
+          "instanceId",
+          "regionId"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "nodeName": {
+            "type": "string"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "instanceType": {
+            "type": "string"
+          },
+          "spot": {
+            "type": "boolean"
+          },
+          "cpuCores": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryBytes": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryAvg": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryMax": {
+            "type": "number",
+            "format": "float64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstanceTypeRecommendation"
+            }
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "InstanceTypeRecommendation": {
+        "type": "object",
+        "required": [
+          "instanceType"
+        ],
+        "properties": {
+          "instanceType": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      },
+      "OOMEvent": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "namespace",
+          "workloadType",
+          "workloadName",
+          "pod",
+          "container",
+          "oomTime",
+          "times",
+          "memoryRequest",
+          "memoryLimit"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "workloadType": {
+            "type": "string"
+          },
+          "workloadName": {
+            "type": "string"
+          },
+          "pod": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          },
+          "oomTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "times": {
+            "type": "integer"
+          },
+          "memoryRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "Node": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "format": "string",
+            "example": "iz8vb95bn9x4oa8z85o4awz"
+          }
+        }
+      },
+      "NodeGroupRecommendation": {
+        "type": "object",
+        "required": [
+          "clusterId",
+          "nodeGroupId",
+          "name",
+          "settings"
+        ],
+        "properties": {
+          "clusterId": {
+            "type": "string",
+            "format": "string"
+          },
+          "nodeGroupId": {
+            "type": "string",
+            "format": "string"
+          },
+          "name": {
+            "type": "string",
+            "format": "string"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/NodeGroupSetting"
+          },
+          "recommendedSettings": {
+            "$ref": "#/components/schemas/NodeGroupSetting"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Owner"
+          },
+          "actionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "ResourceQuotaRecommendation": {
+        "type": "object",
+        "required": [
+          "recommendedCPURequest",
+          "recommendedCPULimit",
+          "recommendedMemoryRequest",
+          "recommendedMemoryLimit"
+        ],
+        "properties": {
+          "cpuRequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "cpuLimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedCPURequest": {
+            "type": "number",
+            "format": "float64"
+          },
+          "recommendedCPULimit": {
+            "type": "number",
+            "format": "float64"
+          },
+          "memoryRequest": {
+            "type": "integer",
+            "format": "int64",
+            "description": "memoryRequest in bytes."
+          },
+          "memoryLimit": {
+            "type": "integer",
+            "format": "int64",
+            "description": "memoryLimit in bytes."
+          },
+          "recommendedMemoryRequest": {
+            "type": "integer",
+            "format": "int64",
+            "description": "recommendedMemoryRequest in bytes."
+          },
+          "recommendedMemoryLimit": {
+            "type": "integer",
+            "format": "int64",
+            "description": "recommendedMemoryLimit in bytes."
+          }
+        }
+      },
+      "MemoryRecommendation": {
+        "type": "object",
+        "required": [
+          "recommendedMemoryRequest",
+          "recommendedMemoryLimit"
+        ],
+        "properties": {
+          "memoryRequest": {
+            "type": "integer",
+            "format": "int64",
+            "description": "memoryRequest in bytes."
+          },
+          "memoryLimit": {
+            "type": "integer",
+            "format": "int64",
+            "description": "memoryLimit in bytes."
+          },
+          "recommendedMemoryRequest": {
+            "type": "integer",
+            "format": "int64",
+            "description": "recommendedMemoryRequest in bytes."
+          },
+          "recommendedMemoryLimit": {
+            "type": "integer",
+            "format": "int64",
+            "description": "recommendedMemoryLimit in bytes."
+          }
+        }
+      },
+      "NodeGroupSetting": {
+        "type": "object",
+        "required": [
+          "minNode",
+          "maxNode",
+          "autoscaling",
+          "virtualCapacity",
+          "instanceTypes"
+        ],
+        "properties": {
+          "minNodes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxNodes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "autoscaling": {
+            "type": "boolean"
+          },
+          "virtualCapacity": {
+            "type": "boolean"
+          },
+          "instanceTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "NamespacedObject": {
+        "type": "object",
+        "required": [
+          "namespace",
+          "name"
+        ],
+        "properties": {
+          "namespace": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "Owner": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          }
+        }
+      },
+      "HibernateTask": {
+        "type": "object",
+        "required": [
+          "id",
+          "clusterId",
+          "actionType",
+          "action",
+          "state",
+          "creator",
+          "createTime",
+          "updateTime"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "actionType": {
+            "type": "string",
+            "description": "scheduled | manual"
+          },
+          "action": {
+            "type": "string",
+            "description": "hibernate | awake"
+          },
+          "state": {
+            "type": "string",
+            "description": "running | success | failed"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          },
+          "finishTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "Task": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "strategyId",
+          "creator"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "strategyId": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "actionId": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "creator": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          },
+          "finishTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "TaskRef": {
+        "type": "object",
+        "required": [
+          "taskId",
+          "taskName"
+        ],
+        "properties": {
+          "taskId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "taskName": {
+            "type": "string"
+          }
+        }
+      },
+      "TaskLog": {
+        "type": "object",
+        "required": [
+          "id",
+          "timestamp",
+          "level",
+          "message"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "stage": {
+            "type": "string",
+            "description": "prepare | init | execution"
+          },
+          "level": {
+            "type": "string",
+            "description": "info | warnning | error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "error": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          }
+        }
+      },
+      "HibernateSchedule": {
+        "type": "object",
+        "properties": {
+          "cronHibernate": {
+            "type": "string"
+          },
+          "cronWakeup": {
+            "type": "string"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "updator": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "HibernateState": {
+        "type": "object",
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "type": "string"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Status": {
+        "type": "object",
+        "required": [
+          "success",
+          "code"
+        ],
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "authz": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://optimize.wiseinf.com/oauth/authorize",
+            "scopes": {
+              "write:optimize:wiseinf": "write permission",
+              "read:optimize:wiseinf": "read permission",
+              "admin:optimize:wiseinf": "admin permission"
+            }
+          }
+        }
+      }
+    }
+  }
+}

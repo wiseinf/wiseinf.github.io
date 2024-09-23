@@ -1,0 +1,609 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="/docs/api-references/">
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/api-references/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>API References | Cluster Optimizer</title>
+<meta name="description" content="Describes API of Cluster Optimizer.
+">
+<meta property="og:url" content="/docs/api-references/">
+  <meta property="og:site_name" content="Cluster Optimizer">
+  <meta property="og:title" content="API References">
+  <meta property="og:description" content="Describes API of Cluster Optimizer.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="API References">
+  <meta itemprop="description" content="Describes API of Cluster Optimizer.">
+  <meta itemprop="keywords" content="Cluster Optimizer,API References">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="API References">
+  <meta name="twitter:description" content="Describes API of Cluster Optimizer.">
+
+
+
+
+<link rel="preload" href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" as="style">
+<link href="/scss/main.min.a364992436ebb88275acf67a4edc7788d6f790a31e614fc5a5defa23fb3a62ec.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://www.wiseinf.com/js/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+
+<link href="/css/pricing.css" rel="stylesheet">
+<link href="/css/company.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-STB7S5D1BR"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-STB7S5D1BR');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="60" viewBox="0 0 90 60" enable-background="new 0 0 90 60"><image id="image0" width="90" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAA8CAMAAADR2113AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAA/R8s/ScwAoeci u1UisEwisEwzzGYhsUshsUwisUsAf38hsUshsEsisEwAqlUhsEwhsEshsU0isUoisUwA/wA/SMwA ougisUyZ2er///8l8mu7AAAAFnRSTlMAmUyZD4XZBWzxfQKoqKMDgutMd6EBrgesWwAAAAFiS0dE GnVn5DIAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfmCwIILDYpiAQqAAAAuElEQVRYw+3V yQ7CMAxFUQMZmpZOKQXz/z8KRYLSxrCAFwkJ322ks4jimGhqc5TaTke7kxTNGet4yllDQp/Tvgh8 L5QVkt7zczWO9kuZuWlRdMHrOhBtQkL3HkNbTrMY2gm0w9AsBaGjSMf/pTPedc4XkvFdZ5xGKhN6 QH1PVb2SDyOKJmqWMhGObrt+vudhRNLXdfDYjZ4IS9/mMkZ60bf0m5T+efospbTSSiuttNJKK620 0kpnoC8F20SzlPhKcAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMS0wMlQwODo0NDo1NCswMDow MEh3G+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTEtMDJUMDg6NDQ6NTQrMDA6MDA5KqNRAAAA KHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIyLTExLTAyVDA4OjQ0OjU0KzAwOjAwbj+CjgAAAABJRU5E rkJggg=="/></svg></span><span class="navbar-brand__name">Cluster Optimizer</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/"><span>Blog</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/price/"><span>Pricing</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/docs/api-references/">中文</a></li>
+    </ul>
+</div></li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/api-references/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">API References</h1>
+<div class="lead">Describes API of Cluster Optimizer.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-1458a1432d7910565133f3ec61f4c94d">Overview</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-07e5570127744298ddabb2799994136e">Authenticate</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-65898062ceaf4621bcaf3b395368dd6e">Management API</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-3f38a0595657b9984acb9964a0f1e990">Optimize API</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-1458a1432d7910565133f3ec61f4c94d">1 - Overview</h1>
+    <div class="lead">API References Overview of Cluster Optimizer.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This section provides reference information for the Cluster Optimizer API.</p>
+
+</div>
+
+<h2 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h2>
+<p>The <strong>Cluster Optimizer API</strong> is a powerful tool that allows users to interact with and automate their cloud-native cluster optimization processes programmatically. By exposing the core functionalities of the platform through RESTful endpoints, the API enables users to integrate the Cluster Optimizer with third-party applications, automate tasks, and retrieve detailed reports on resource utilization and cost-saving opportunities.</p>
+<ol>
+<li><strong>Comprehensive Access to Functionality</strong>: The API grants users full access to key features of the Cluster Optimizer platform, such as:
+<ul>
+<li><strong>Cluster Management</strong>: Users can import, update, or delete clusters and associated cloud accounts through the API.</li>
+<li><strong>Resource Optimization</strong>: The API provides endpoints for analyzing and optimizing resource usage, such as node groups, disks, and workloads.</li>
+<li><strong>Cost and Savings Insights</strong>: Users can programmatically access detailed reports on cost savings and optimization opportunities, tailored to their specific configurations.</li>
+</ul>
+</li>
+<li><strong>Flexibility and Customization</strong>: The API is highly customizable, allowing users to:
+<ul>
+<li>Create custom workflows that automate resource management and optimization based on real-time data.</li>
+<li>Integrate optimization reports into internal dashboards or financial reporting systems, enabling better tracking of cloud costs.</li>
+</ul>
+</li>
+<li><strong>Support for Multiple Cloud Platforms</strong>: The API supports cloud-native environments across various platforms, such as AWS, Alibaba Cloud, and Kubernetes clusters. This cross-platform capability ensures seamless integration and control over distributed resources, regardless of the underlying cloud infrastructure.</li>
+</ol>
+<h2 id="use-cases">Use Cases<a class="td-heading-self-link" href="#use-cases" aria-label="Heading self-link"></a></h2>
+<ol>
+<li><strong>Automation of Optimization Tasks</strong>: DevOps teams can automate the application of optimization strategies (e.g., adjusting node groups, hibernating clusters) based on workload demands. This reduces manual intervention, increases operational efficiency, and ensures continuous resource management.</li>
+<li><strong>Custom Monitoring and Alerting</strong>: Users can build custom monitoring systems that query the API for real-time resource utilization and optimization data. Alerts can be triggered based on specific thresholds or events, such as a sudden spike in cloud costs or resource underutilization.</li>
+<li><strong>Integration with Financial Tools</strong>: Finance teams can use the API to pull detailed cost-saving reports and integrate them into their financial systems. This enables continuous monitoring of cloud spending and optimization efforts, which aligns with FinOps principles for financial accountability in cloud management.</li>
+</ol>
+<h2 id="api-overview">API Overview<a class="td-heading-self-link" href="#api-overview" aria-label="Heading self-link"></a></h2>
+<p>The REST API is the fundamental fabric of Cluster Optimizer. Cluster Optimizer provides a REST API that allows you to perform the following operations:</p>
+<ul>
+<li><a href="/docs/api-references/management-api/"><strong>Management API</strong></a>: Manage clusters, cluster access accounts, access keys, notification channels, notification rules and so on.</li>
+<li><a href="/docs/api-references/optimize-api/"><strong>Optimize API</strong></a>: Provider recommendation and optimization for kubernetes resources, such as node group, persistent volume, workload and so on.</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong>:</p>
+<ol>
+<li>Cluster Optimizer API is available in the Commercial Edition with version 1.3.1 and above.</li>
+<li>Cluster Optimizer API is in alpha state. The api interface may be changed in the future.</li>
+</ol>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-07e5570127744298ddabb2799994136e">2 - Authenticate</h1>
+    <div class="lead">Describes the detailed steps to authenticate to <strong>Cluster Optimizer</strong>&rsquo;s API.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>This section describes the detailed steps to authenticate to <strong>Cluster Optimizer</strong>&rsquo;s API.</p>
+
+</div>
+
+<h2 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h2>
+<p>Authentication through an HTTP API is crucial for securing resources and ensuring only authorized users and services can access data.</p>
+<ul>
+<li><strong>API Authentication</strong>: The API utilizes a token-based authentication mechanism to ensure secure access to cluster data and operations. Users must first generate an API token through the Cluster Optimizer interface, which is then used to authenticate all API requests.</li>
+<li><strong>Role-Based Access Control (RBAC)</strong>: The API integrates with the platform&rsquo;s RBAC system, ensuring that users have the appropriate permissions when accessing or modifying resources.</li>
+</ul>
+<p><strong>Cluster Optimizer</strong>&rsquo;s API provides authentication through HTTP Header <code>Authorization</code>. For example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#000">GET</span> <span style="color:#000">/api/resource</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Host</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">api.example.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Authorization</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Bearer &lt;Access_Token&gt;</span>
+</span></span></code></pre></div><h2 id="construct-the-access-token">Construct the Access Token<a class="td-heading-self-link" href="#construct-the-access-token" aria-label="Heading self-link"></a></h2>
+<p>To generate an <strong>Access Token</strong> using an <strong>Access Key</strong> and <strong>Access Key Secret</strong>, you typically use a signing algorithm (like HMAC) to create a unique, secure key that is used for authenticating API requests. Below is a detailed step-by-step process for generating an API key securely:</p>
+<h3 id="1-prepare-your-access-key-and-secret">1. <strong>Prepare Your Access Key and Secret</strong><a class="td-heading-self-link" href="#1-prepare-your-access-key-and-secret" aria-label="Heading self-link"></a></h3>
+<p>You will typically be given an <strong>Access Key</strong> (public identifier) and an <strong>Access Key Secret</strong> (private identifier). The <strong>Access Key</strong> identifies the client, while the <strong>Access Key Secret</strong> is used to sign and verify API requests securely.</p>
+<h3 id="2-generate-a-message-to-sign">2. <strong>Generate a Message to Sign</strong><a class="td-heading-self-link" href="#2-generate-a-message-to-sign" aria-label="Heading self-link"></a></h3>
+<p>Before generating a signed API key, you need a message that combines <strong>Access Key</strong>, <strong>Timestamp</strong> and <strong>Nonce</strong> with <code>:</code> as a separator:</p>
+<ul>
+<li><strong>Access Key</strong> : The public identifier of the client.</li>
+<li><strong>Timestamp</strong>: To prevent replay attacks, include a timestamp (in nanoseconds).</li>
+<li><strong>Nonce</strong>: A random string to prevent replay attacks.</li>
+</ul>
+<p>For example (in Go language):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000">message</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%s:%d:%s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">accessKeyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span></code></pre></div><p>In this example, <code>accessKeyID</code> is the access key ID of the client, <code>timestamp</code> is the timestamp in nanoseconds, and <code>nonce</code> is a random string.</p>
+<h3 id="3-sign-the-message-with-hmac-sha256">3. <strong>Sign the Message with HMAC-SHA256</strong><a class="td-heading-self-link" href="#3-sign-the-message-with-hmac-sha256" aria-label="Heading self-link"></a></h3>
+<p>The next step is to use the <strong>API key secret</strong> to generate a signature using HMAC-SHA256. This signature ensures the request has not been tampered with and that the client is legitimate.</p>
+<p>Example (in Go language) is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">generateSignature</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">keyID</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keySecret</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span> <span style="color:#204a87;font-weight:bold">int64</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">error</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">message</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%s:%d:%s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">h</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">hmac</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">New</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sha256</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">New</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87">byte</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">keySecret</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">h</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Write</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87">byte</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">message</span><span style="color:#000;font-weight:bold">));</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#204a87;font-weight:bold">nil</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">signature</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">base64</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">StdEncoding</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">EncodeToString</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">h</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sum</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">nil</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">returnsignature</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>This function generates a <strong>signature</strong> by hashing the message using the <strong>API key secret</strong> and the <strong>HMAC-SHA256</strong> algorithm.</p>
+<h3 id="4-construct-the-access-token">4. <strong>Construct the Access Token</strong><a class="td-heading-self-link" href="#4-construct-the-access-token" aria-label="Heading self-link"></a></h3>
+<p>After generating the signature, you can construct the final API key by combining the <strong>Access Token</strong> (public) and the generated signature (private).</p>
+<p>Example API request with a signed API key in the header is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#000">GET</span> <span style="color:#000">/api/resource</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Host</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">api.example.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Authorization</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Bearer &lt;accessKey&gt;/&lt;timestamp&gt;/&lt;nonce&gt;/&lt;signature&gt;</span>
+</span></span></code></pre></div><p>In this example:</p>
+<ul>
+<li><code>accessKey</code> is the public access key.</li>
+<li><code>timestamp</code>: To prevent replay attacks, include a timestamp (in nanoseconds).</li>
+<li><code>nonce</code>: A random string to prevent replay attacks.</li>
+<li><code>signature</code> is the HMAC-SHA256 signed message using the secret.</li>
+</ul>
+<p>Example (in Go language) is as follows::</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">GenerateAccessToken</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">keyID</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keySecret</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span> <span style="color:#204a87;font-weight:bold">int64</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">error</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">timestamp</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">time</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Now</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">UTC</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">UnixNano</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">signature</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">generateSignature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">keyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keySecret</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#204a87;font-weight:bold">nil</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">utils</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">URLEncode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%s/t%d/t%s/t%s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">signature</span><span style="color:#000;font-weight:bold">)),</span> <span style="color:#204a87;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="5-construct-http-request">5. <strong>Construct HTTP Request</strong><a class="td-heading-self-link" href="#5-construct-http-request" aria-label="Heading self-link"></a></h3>
+<p>You can construct an HTTP request using the access token generated and access methods provided by generated code using open api specification.</p>
+<p>Example (in Go language) is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">NewAPIClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">BasePath</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://api.example.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">apiKey</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#4e9a06">&#34;AKFgGMF3FWWe5mgkz3UWBMgaUgrzBMUV&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">apiSecret</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#4e9a06">&#34;******&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">nonce</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#4e9a06">&#34;NONe5mgkz3GBk&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">accessToken</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span><span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">GenerateAccessToken</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">apiKey</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">apiSecret</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ctx</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Background</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WithValue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ContextAccessToken</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">accessToken</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">rules</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">NotificationRuleApi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ListNotificationRules</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">NotificationRuleApiListNotificationRulesOpts</span><span style="color:#000;font-weight:bold">{})</span>
+</span></span></code></pre></div><h2 id="next">Next<a class="td-heading-self-link" href="#next" aria-label="Heading self-link"></a></h2>
+<p>In the next section, we will explore following APIs:</p>
+<ul>
+<li><a href="/docs/api-references/management-api/"><strong>Management API</strong></a>: Manage clusters, cluster access accounts, access keys, notification channels, notification rules and so on.</li>
+<li><a href="/docs/api-references/optimize-api/"><strong>Optimize API</strong></a>: Provider recommendation and optimization for kubernetes resources, such as node group, persistent volume, workload and so on.</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-65898062ceaf4621bcaf3b395368dd6e">3 - Management API</h1>
+    <div class="lead">Management API.</div>
+	
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Management API of Cluster Optimzier"
+  />
+  <title>Management API</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+</head>
+<body>
+<div id="management-api-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: '/api/v1/management-api.json',
+      dom_id: '#management-api-ui',
+    });
+  };
+</script>
+</body>
+</html>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3f38a0595657b9984acb9964a0f1e990">4 - Optimize API</h1>
+    <div class="lead">Optimize API。</div>
+	
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Optimize API of Cluster Optimzier"
+  />
+  <title>Optimize API</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+</head>
+<body>
+<div id="optimize-api-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: '/api/v1/optimize-api.json',
+      dom_id: '#optimize-api-ui',
+    });
+  };
+</script>
+</body>
+</html>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div style="display: flex;justify-content: flex-start;">
+    <div style="margin-right: 200px; margin-left:20px; margin-bottom: 40px;">
+      <h4 style="margin-bottom: 10px;">Company</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; justify-content: space-around;">
+        <li><a href="/about" style="color: #ffffff;; text-decoration: none;">About Us</a></li>
+        <li><a href="mailto:business@wiseinf.com?subject=Cluster Optimizer" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
+        <li><a href="/aggrement" style="color: #ffffff; text-decoration: none;">User Agreement</a></li>
+        <li><a href="/privacy" style="color: #ffffff; text-decoration: none;"> Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div  style="margin-right: 200px">
+      <h4 style="margin-bottom: 10px;">Community</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+        <li><a href="https://github.com/wiseinf/cluster-optimizer-issues" style="color: #ffffff; text-decoration: none;">Github Issues</a></li>
+        <li><a href="https://discord.gg/GZAeYxw9" style="color: #ffffff; text-decoration: none;">Discord</a></li>
+        <li><a href="https://www.facebook.com/groups/clusteroptimizer/" style="color: #ffffff; text-decoration: none;">Facebook Group</a></li>
+        
+      </ul>
+    </div>
+    <div>
+      <h4 style="margin-bottom: 10px;">Partner</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+        <li><a href="mailto:business@wiseinf.com?subject=Become a partner" style="color: #ffffff; text-decoration: none;">Become a partner</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Help &amp; Support" aria-label="Help &amp; Support">
+    <a target="_blank" rel="noopener" href="mailto:help@wiseinf.com?subject=Help%20&amp;%20Support" aria-label="Help &amp; Support">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Business Cooperation" aria-label="Business Cooperation">
+    <a target="_blank" rel="noopener" href="mailto:business@wiseinf.com?subject=Business%20Cooperation" aria-label="Business Cooperation">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Github" aria-label="Github">
+    <a target="_blank" rel="noopener" href="https://github.com/wiseinf/wiseinf.github.io" aria-label="Github">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Wiseinf Inc.</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.f4cdb05085fd66172c8fddd6425377aa9c369969f27ee15428b563bed9ad04ee.js" integrity="sha256-9M2wUIX9Zhcsj93WQlN3qpw2mWnyfuFUKLVjvtmtBO4=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

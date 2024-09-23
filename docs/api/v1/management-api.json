@@ -1,0 +1,3169 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Wiseinf Management OpenAPI 1.0.0",
+    "description": "Wiseinf Management OpenAPI provides a set of API for management.",
+    "termsOfService": "http://www.wiseinf.com/terms/",
+    "contact": {
+      "email": "business@wiseinf.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://www.wiseinf.com/docs/management/"
+  },
+  "servers": [
+    {
+      "url": "https://management.wiseinf.com/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "cluster",
+      "description": "Cluster"
+    },
+    {
+      "name": "cloud provider",
+      "description": "Cloud Provider"
+    },
+    {
+      "name": "label",
+      "description": "Label"
+    },
+    {
+      "name": "alicloud",
+      "description": "Operations about alibaba cloud"
+    },
+    {
+      "name": "aws",
+      "description": "Operations about amazon aws cloud"
+    },
+    {
+      "name": "huawei cloud",
+      "description": "Operations about huawei cloud"
+    },
+    {
+      "name": "version",
+      "description": "Operations about version"
+    }
+  ],
+  "paths": {
+    "/management/clusters": {
+      "post": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Create or import a cluster.",
+        "description": "Import a cluster.",
+        "operationId": "importCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get cluster configs.",
+        "description": "Get cluster configs.",
+        "operationId": "getClusterConfigs",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClusterConfig"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/clusters/{clusterId}": {
+      "get": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Get cluster config.",
+        "description": "Multiple status values can be provided with comma separated strings",
+        "operationId": "getClusterConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Create or import a cluster.",
+        "description": "Get cost of clusters.",
+        "operationId": "updateCluster",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "cluster"
+        ],
+        "summary": "Create or import a cluster.",
+        "description": "Get cost of clusters.",
+        "operationId": "deleteClusterConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/labels": {
+      "put": {
+        "tags": [
+          "label"
+        ],
+        "summary": "Update labels.",
+        "description": "Update labels.",
+        "operationId": "updateLabels",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AggregateLabel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "label"
+        ],
+        "summary": "Get labels.",
+        "description": "Get labels.",
+        "operationId": "getLabels",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AggregateLabel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/cloudproviders": {
+      "post": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "Create or import a cloud provider.",
+        "description": "Create or import a cloud provider.",
+        "operationId": "importCloudProvider",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProvider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "Get cloud provider.",
+        "description": "Get cloud provider.",
+        "operationId": "getCloudProviders",
+        "parameters": [
+          {
+            "name": "providerType",
+            "in": "query",
+            "description": "used to to filter cloud provider by this provider type.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CloudProvider"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/cloudproviders/{providerId}": {
+      "get": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "Get a cloud provider.",
+        "description": "Get a cloud provider.",
+        "operationId": "getCloudProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "providerId id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CloudProvider"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "Update a cloud provider.",
+        "description": "Update a cloud provider.",
+        "operationId": "updateCloudProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "provider id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProvider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "Delete a cloud provider.",
+        "description": "Delete a cloud provider.",
+        "operationId": "deleteCloudProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "provider id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "ClusterConfig not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:wiseinf",
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/cloudproviders/{providerId}/connectivity": {
+      "post": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "test a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test  a cloud provider.",
+        "operationId": "testCloudProviderConnectivityOnTheFly",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "providerId id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProvider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "cloud provider"
+        ],
+        "summary": "test a connectivity of a existing cloud provider.",
+        "description": "Get a cloud provider.",
+        "operationId": "testCloudProviderConnectivity",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "description": "providerId id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/aliyun/regions": {
+      "get": {
+        "tags": [
+          "alicloud"
+        ],
+        "summary": "get regions of aliyun.",
+        "description": "get regions of aliyun.",
+        "operationId": "getAliyunRegions",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Region"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/import/aliyun/validateAccessToken": {
+      "post": {
+        "tags": [
+          "alicloud"
+        ],
+        "summary": "validate a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test  a cloud provider.",
+        "operationId": "validateAccessToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/managedClusters": {
+      "post": {
+        "tags": [
+          "alicloud"
+        ],
+        "summary": "get managed kubernetes clusters of alibaba cloud.",
+        "description": "get managed kubernetes clusters of alibaba cloud.",
+        "operationId": "getAliyunManagedClusters",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ManagedCluster"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/kubeconfig": {
+      "post": {
+        "tags": [
+          "alicloud"
+        ],
+        "summary": "get kubeconfig of a managed kubernetes cluster.",
+        "description": "get kubeconfig of a managed kubernetes cluster.",
+        "operationId": "getAliyunKubeConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "query",
+            "description": "cluster id of the kubernetes.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "private",
+            "in": "query",
+            "description": "use kubernetes's private address, default false.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "minutes",
+            "in": "query",
+            "description": "lifecycle of the kube config, default is about 1 year.",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/validateKubeconfig": {
+      "post": {
+        "tags": [
+          "alicloud"
+        ],
+        "summary": "validate kubeconfig of a managed kubernetes cluster.",
+        "description": "validate kubeconfig of a managed kubernetes cluster.",
+        "operationId": "validateAliyunKubeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aliyun/validatePrometheusConfig": {
+      "post": {
+        "tags": [
+          "alicloud"
+        ],
+        "summary": "validate prometheus config of a managed kubernetes cluster.",
+        "description": "validate prometheus config  of a managed kubernetes cluster.",
+        "operationId": "validateAlibabaCloudPrometheusConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrometheusConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/aws/regions": {
+      "get": {
+        "tags": [
+          "aws"
+        ],
+        "summary": "get regions of amazon aws.",
+        "description": "get regions of amazon aws.",
+        "operationId": "getAWSRegions",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Region"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/import/aws/validateAccessToken": {
+      "post": {
+        "tags": [
+          "aws"
+        ],
+        "summary": "validate a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test a cloud provider.",
+        "operationId": "validateAWSAccessToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aws/managedClusters": {
+      "post": {
+        "tags": [
+          "aws"
+        ],
+        "summary": "get managed kubernetes clusters of aws.",
+        "description": "get managed kubernetes clusters of aws.",
+        "operationId": "getAWSManagedClusters",
+        "parameters": [
+          {
+            "name": "region",
+            "in": "query",
+            "description": "region id for the cluster, default value is us-east-1.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ManagedCluster"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aws/kubeconfig": {
+      "post": {
+        "tags": [
+          "aws"
+        ],
+        "summary": "get kubeconfig of a managed kubernetes cluster.",
+        "description": "get kubeconfig of a managed kubernetes cluster.",
+        "operationId": "getAWSKubeConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "query",
+            "description": "cluster id of the kubernetes.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "private",
+            "in": "query",
+            "description": "use kubernetes's private address, default false.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "minutes",
+            "in": "query",
+            "description": "lifecycle of the kube config, default is about 1 year.",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aws/validateKubeconfig": {
+      "post": {
+        "tags": [
+          "aws"
+        ],
+        "summary": "validate kubeconfig of a managed kubernetes cluster.",
+        "description": "validate kubeconfig of a managed kubernetes cluster.",
+        "operationId": "validateAWSKubeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/aws/validatePrometheusConfig": {
+      "post": {
+        "tags": [
+          "aws"
+        ],
+        "summary": "validate prometheus config of a managed kubernetes cluster.",
+        "description": "validate prometheus config  of a managed kubernetes cluster.",
+        "operationId": "validateAWSPrometheusConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrometheusConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/huaweicloud/regions": {
+      "get": {
+        "tags": [
+          "huawei cloud"
+        ],
+        "summary": "get regions of huawei cloud.",
+        "description": "get regions of huawei cloud.",
+        "operationId": "getHuaweiCloudRegions",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Region"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/import/huaweicloud/validateAccessToken": {
+      "post": {
+        "tags": [
+          "huawei cloud"
+        ],
+        "summary": "validate a connectivity of a new cloud provider, the cloud provider's config is not saved.",
+        "description": "Test a cloud provider.",
+        "operationId": "validateHuaweiCloudAccessToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/managedClusters": {
+      "post": {
+        "tags": [
+          "huawei cloud"
+        ],
+        "summary": "get managed kubernetes clusters of huawei cloud.",
+        "description": "get managed kubernetes clusters of huawei cloud.",
+        "operationId": "getHuaweiCloudManagedClusters",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ManagedCluster"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/kubeconfig": {
+      "post": {
+        "tags": [
+          "huawei cloud"
+        ],
+        "summary": "get kubeconfig of a managed kubernetes cluster.",
+        "description": "get kubeconfig of a managed kubernetes cluster.",
+        "operationId": "getHuaweiCloudKubeConfig",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "query",
+            "description": "cluster id of the kubernetes.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "private",
+            "in": "query",
+            "description": "use kubernetes's private address, default false.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "minutes",
+            "in": "query",
+            "description": "lifecycle of the kube config, default is about 1 year.",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeConfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/validateKubeconfig": {
+      "post": {
+        "tags": [
+          "huawei cloud"
+        ],
+        "summary": "validate kubeconfig of a managed kubernetes cluster.",
+        "description": "validate kubeconfig of a managed kubernetes cluster.",
+        "operationId": "validateHuaweiCloudKubeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/import/huaweicloud/validatePrometheusConfig": {
+      "post": {
+        "tags": [
+          "huawei cloud"
+        ],
+        "summary": "validate prometheus config of a managed kubernetes cluster.",
+        "description": "validate prometheus config of a managed kubernetes cluster.",
+        "operationId": "validateHuaweiCloudPrometheusConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrometheusConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      }
+    },
+    "/management/notification/channels": {
+      "post": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "create a new notification channel.",
+        "description": "create a new notification channel.",
+        "operationId": "createNotificationChannel",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationChannel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "list notification channels.",
+        "description": "list notification channels.",
+        "operationId": "listNotificationChannels",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "channel type",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotificationChannel"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/notification/channels/{channelName}": {
+      "put": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "update a existing notification channel.",
+        "description": "update a existing  notification channel.",
+        "operationId": "updateNotificationChannel",
+        "parameters": [
+          {
+            "name": "channelName",
+            "in": "path",
+            "description": "channel name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationChannel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "get notification channel.",
+        "description": "get notification channel.",
+        "operationId": "getNotificationChannel",
+        "parameters": [
+          {
+            "name": "channelName",
+            "in": "path",
+            "description": "channel name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationChannel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "delete notification channel.",
+        "description": "delete notification channel.",
+        "operationId": "deleteNotificationChannel",
+        "parameters": [
+          {
+            "name": "channelName",
+            "in": "path",
+            "description": "channel name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/notification/channels/{channelName}/connectivity": {
+      "put": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "test connectivity of a notification channel according to body content.",
+        "description": "test connectivity of a notification channel according to body content.",
+        "operationId": "testNotificationChannelConnectivity",
+        "parameters": [
+          {
+            "name": "channelName",
+            "in": "path",
+            "description": "channel name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationChannel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "notification channel"
+        ],
+        "summary": "test connectivity of an existing notification channel.",
+        "description": "test connectivity of an existing  notification channel.",
+        "operationId": "testExistingNotificationChannelConnectivity",
+        "parameters": [
+          {
+            "name": "channelName",
+            "in": "path",
+            "description": "channel name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/notification/rules": {
+      "post": {
+        "tags": [
+          "notification rule"
+        ],
+        "summary": "create a new notification rule.",
+        "description": "create a new notification rule.",
+        "operationId": "createNotificationRule",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationRule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "notification rule"
+        ],
+        "summary": "list notification rules.",
+        "description": "list notification rules.",
+        "operationId": "listNotificationRules",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "channel type",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          {
+            "name": "channelName",
+            "in": "query",
+            "description": "channel name",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotificationRule"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/notification/rules/{ruleName}": {
+      "put": {
+        "tags": [
+          "notification rule"
+        ],
+        "summary": "update a existing notification rule.",
+        "description": "update a existing  notification rule.",
+        "operationId": "updateNotificationRule",
+        "parameters": [
+          {
+            "name": "ruleName",
+            "in": "path",
+            "description": "rule name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationRule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "notification rule"
+        ],
+        "summary": "get a notification rule.",
+        "description": "get a notification rule.",
+        "operationId": "getNotificationRule",
+        "parameters": [
+          {
+            "name": "ruleName",
+            "in": "path",
+            "description": "rule name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationRule"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "notification rule"
+        ],
+        "summary": "delete notification rule.",
+        "description": "list notification rule.",
+        "operationId": "deleteNotificationRule",
+        "parameters": [
+          {
+            "name": "ruleName",
+            "in": "path",
+            "description": "rule name.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/cluster/accessAccounts": {
+      "get": {
+        "tags": [
+          "cluster access account"
+        ],
+        "summary": "get cluster access accounts for current user.",
+        "description": "get cluster access accounts for current user.",
+        "operationId": "getClusterAccessAccounts",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClusterAccessAccount"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "cluster access account"
+        ],
+        "summary": "delete current user's cluster access accounts.",
+        "description": "delete current user's cluster access accounts.",
+        "operationId": "deleteClusterAccessAccounts",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/cluster/accessAccounts/{clusterId}": {
+      "post": {
+        "tags": [
+          "cluster access account"
+        ],
+        "summary": "create a cluster access account.",
+        "description": "create a cluster access account.",
+        "operationId": "createClusterAccessAccount",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterAccessAccount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "cluster access account"
+        ],
+        "summary": "update an existing cluster access account.",
+        "description": "update an existing cluster access account.",
+        "operationId": "updateClusterAccessAccount",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterAccessAccount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": [
+              "read:wiseinf"
+            ]
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "cluster access account"
+        ],
+        "summary": "get a cluster access account.",
+        "description": "get a cluster access account.",
+        "operationId": "getClusterAccessAccount",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterAccessAccount"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "cluster access account"
+        ],
+        "summary": "delete a cluster access account.",
+        "description": "delete a cluster access account.",
+        "operationId": "deleteClusterAccessAccount",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "cluster id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/systeminfo": {
+      "get": {
+        "tags": [
+          "systeminfo"
+        ],
+        "description": "获取当前系统信息",
+        "operationId": "getSystemInfo",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemInfo"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/management/accesskeys": {
+      "get": {
+        "tags": [
+          "access key"
+        ],
+        "summary": "List access keys of current user.",
+        "description": "List access keys",
+        "operationId": "listAccessKeys",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccessKey"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "access key"
+        ],
+        "summary": "Create an access key.",
+        "description": "Create an access key.",
+        "operationId": "createAccessKey",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/accesskeys/{keyId}": {
+      "get": {
+        "tags": [
+          "access key"
+        ],
+        "summary": "Get access key.",
+        "description": "Get access key.",
+        "operationId": "getAccessKey",
+        "parameters": [
+          {
+            "name": "keyId",
+            "in": "path",
+            "description": "get access key by keyId.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessKey"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "access key"
+        ],
+        "summary": "Delete an access key.",
+        "description": "Delete an access key.",
+        "operationId": "deleteAccessKey",
+        "parameters": [
+          {
+            "name": "keyId",
+            "in": "path",
+            "description": "delete access key by keyId.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/management/accesskeys/{keyId}/disable": {
+      "put": {
+        "tags": [
+          "access key"
+        ],
+        "summary": "Disable access key.",
+        "description": "Disable access key.",
+        "operationId": "disableAccessKey",
+        "parameters": [
+          {
+            "name": "keyId",
+            "in": "path",
+            "description": "access key by keyId.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        }
+      }
+    },
+    "/management/accesskeys/{keyId}/enable": {
+      "put": {
+        "tags": [
+          "access key"
+        ],
+        "summary": "Enable access key.",
+        "description": "Enable access key.",
+        "operationId": "enableAccessKey",
+        "parameters": [
+          {
+            "name": "keyId",
+            "in": "path",
+            "description": "access key by keyId.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "cluster not found"
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "tags": [
+          "version"
+        ],
+        "description": "获取当前系统版本",
+        "operationId": "getVersion",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Version"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccessToken": {
+        "type": "object",
+        "properties": {
+          "accessAccountName": {
+            "type": "string"
+          },
+          "accessKey": {
+            "type": "string"
+          },
+          "accessKeySecret": {
+            "type": "string"
+          }
+        }
+      },
+      "Status": {
+        "type": "object",
+        "required": [
+          "success",
+          "code"
+        ],
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ManagedCluster": {
+        "type": "object",
+        "required": [
+          "clusterName",
+          "clusterId",
+          "regionId",
+          "clusterType"
+        ],
+        "properties": {
+          "clusterName": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "clusterType": {
+            "type": "string"
+          }
+        }
+      },
+      "KubeConfig": {
+        "type": "object",
+        "required": [
+          "config"
+        ],
+        "properties": {
+          "config": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          }
+        }
+      },
+      "PrometheusConfig": {
+        "type": "object",
+        "required": [
+          "address"
+        ],
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "isThanos": {
+            "type": "boolean"
+          },
+          "enableRateLimit": {
+            "type": "boolean"
+          },
+          "maxBurst": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clusterSelectors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AggregateLabel": {
+        "type": "object",
+        "required": [
+          "environment",
+          "product",
+          "application",
+          "department",
+          "team",
+          "owner"
+        ],
+        "properties": {
+          "environment": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "product": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "application": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "department": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "team": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ClusterAccessAccount": {
+        "type": "object",
+        "required": [
+          "clusterId",
+          "accessKey",
+          "accessKeySecret",
+          "kubeConfig"
+        ],
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "accessKey": {
+            "type": "string"
+          },
+          "accessKeySecret": {
+            "type": "string"
+          },
+          "kubeconfig": {
+            "type": "string"
+          }
+        }
+      },
+      "CloudProvider": {
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "accessKey",
+          "accessKeySecret"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "accessKey": {
+            "type": "string"
+          },
+          "accessKeySecret": {
+            "type": "string"
+          },
+          "parameters": {
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ClusterConfig": {
+        "type": "object",
+        "required": [
+          "regionId",
+          "clusterId",
+          "clusterName",
+          "accessTokenName",
+          "cloudProviderType",
+          "kubeConfig",
+          "prometheus"
+        ],
+        "properties": {
+          "regionId": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "clusterName": {
+            "type": "string"
+          },
+          "isManaged": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "accessTokenName": {
+            "type": "string"
+          },
+          "cloudProviderType": {
+            "type": "string",
+            "readOnly": true
+          },
+          "usePrivateAddress": {
+            "type": "boolean"
+          },
+          "kubeConfig": {
+            "type": "string"
+          },
+          "autoRefreshKubeConfig": {
+            "type": "boolean"
+          },
+          "kubeConfigLifecycle": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nodeGroupLabel": {
+            "type": "string"
+          },
+          "prometheus": {
+            "$ref": "#/components/schemas/PrometheusConfig"
+          }
+        }
+      },
+      "Region": {
+        "type": "object",
+        "required": [
+          "regionName",
+          "regionId"
+        ],
+        "properties": {
+          "regionName": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "string"
+          }
+        }
+      },
+      "NotificationRule": {
+        "type": "object",
+        "required": [
+          "name",
+          "cron",
+          "audience",
+          "templateId"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "strategyId": {
+            "type": "string"
+          },
+          "clusterId": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "cron": {
+            "type": "string"
+          },
+          "notifyChannel": {
+            "type": "string"
+          },
+          "audience": {
+            "type": "string"
+          },
+          "templateId": {
+            "type": "string"
+          },
+          "params": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "updatedBy": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "NotificationChannel": {
+        "type": "object",
+        "required": [
+          "name",
+          "channelType",
+          "connParams"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "channelType": {
+            "$ref": "#/components/schemas/ChannelType"
+          },
+          "subType": {
+            "type": "string"
+          },
+          "connParams": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "extraParams": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "updatedBy": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T01:40:31.0910365Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-15T02:40:31.0910365Z"
+          }
+        }
+      },
+      "ChannelType": {
+        "type": "string",
+        "enum": [
+          "email",
+          "slack"
+        ]
+      },
+      "SystemInfo": {
+        "required": [
+          "isInitialized"
+        ],
+        "properties": {
+          "isInitialized": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AccessKey": {
+        "type": "object",
+        "required": [
+          "id",
+          "userId",
+          "keyId",
+          "keySecret",
+          "validUntil",
+          "state",
+          "createdAt",
+          "deletedAt"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "keySecret": {
+            "type": "string"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "state": {
+            "type": "string",
+            "description": "enabled | disabled | deleted"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deletedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "AccessKeyState": {
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled",
+          "deleted",
+          "expired"
+        ]
+      },
+      "Version": {
+        "type": "object",
+        "required": [
+          "versionType",
+          "version"
+        ],
+        "properties": {
+          "versionType": {
+            "$ref": "#/components/schemas/VersionType"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "VersionType": {
+        "type": "string",
+        "enum": [
+          "community",
+          "business",
+          "enterprise"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "auth": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://www.wiseinf.com/oauth/authorize",
+            "scopes": {
+              "write:wiseinf": "write permission for wiseinf",
+              "read:wiseinf": "read permission for wiseinf",
+              "admin:wiseinf": "admin permission for wiseinf"
+            }
+          }
+        }
+      },
+      "api_key": {
+        "type": "apiKey",
+        "name": "api_key",
+        "in": "header"
+      }
+    }
+  }
+}

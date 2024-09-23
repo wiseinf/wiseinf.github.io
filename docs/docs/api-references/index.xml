@@ -1,0 +1,251 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – API References</title>
+    <link>/docs/api-references/</link>
+    <description>Recent content in API References on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/docs/api-references/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Overview</title>
+      <link>/docs/api-references/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api-references/overview/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section provides reference information for the Cluster Optimizer API.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#overview&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Cluster Optimizer API&lt;/strong&gt; is a powerful tool that allows users to interact with and automate their cloud-native cluster optimization processes programmatically. By exposing the core functionalities of the platform through RESTful endpoints, the API enables users to integrate the Cluster Optimizer with third-party applications, automate tasks, and retrieve detailed reports on resource utilization and cost-saving opportunities.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Comprehensive Access to Functionality&lt;/strong&gt;: The API grants users full access to key features of the Cluster Optimizer platform, such as:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Management&lt;/strong&gt;: Users can import, update, or delete clusters and associated cloud accounts through the API.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resource Optimization&lt;/strong&gt;: The API provides endpoints for analyzing and optimizing resource usage, such as node groups, disks, and workloads.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost and Savings Insights&lt;/strong&gt;: Users can programmatically access detailed reports on cost savings and optimization opportunities, tailored to their specific configurations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flexibility and Customization&lt;/strong&gt;: The API is highly customizable, allowing users to:
+&lt;ul&gt;
+&lt;li&gt;Create custom workflows that automate resource management and optimization based on real-time data.&lt;/li&gt;
+&lt;li&gt;Integrate optimization reports into internal dashboards or financial reporting systems, enabling better tracking of cloud costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support for Multiple Cloud Platforms&lt;/strong&gt;: The API supports cloud-native environments across various platforms, such as AWS, Alibaba Cloud, and Kubernetes clusters. This cross-platform capability ensures seamless integration and control over distributed resources, regardless of the underlying cloud infrastructure.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;Use Cases&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#use-cases&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Automation of Optimization Tasks&lt;/strong&gt;: DevOps teams can automate the application of optimization strategies (e.g., adjusting node groups, hibernating clusters) based on workload demands. This reduces manual intervention, increases operational efficiency, and ensures continuous resource management.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom Monitoring and Alerting&lt;/strong&gt;: Users can build custom monitoring systems that query the API for real-time resource utilization and optimization data. Alerts can be triggered based on specific thresholds or events, such as a sudden spike in cloud costs or resource underutilization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integration with Financial Tools&lt;/strong&gt;: Finance teams can use the API to pull detailed cost-saving reports and integrate them into their financial systems. This enables continuous monitoring of cloud spending and optimization efforts, which aligns with FinOps principles for financial accountability in cloud management.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;api-overview&#34;&gt;API Overview&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#api-overview&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The REST API is the fundamental fabric of Cluster Optimizer. Cluster Optimizer provides a REST API that allows you to perform the following operations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/api-references/management-api/&#34;&gt;&lt;strong&gt;Management API&lt;/strong&gt;&lt;/a&gt;: Manage clusters, cluster access accounts, access keys, notification channels, notification rules and so on.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/api-references/optimize-api/&#34;&gt;&lt;strong&gt;Optimize API&lt;/strong&gt;&lt;/a&gt;: Provider recommendation and optimization for kubernetes resources, such as node group, persistent volume, workload and so on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cluster Optimizer API is available in the Commercial Edition with version 1.3.1 and above.&lt;/li&gt;
+&lt;li&gt;Cluster Optimizer API is in alpha state. The api interface may be changed in the future.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Authenticate</title>
+      <link>/docs/api-references/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api-references/authentication/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This section describes the detailed steps to authenticate to &lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s API.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#overview&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Authentication through an HTTP API is crucial for securing resources and ensuring only authorized users and services can access data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API Authentication&lt;/strong&gt;: The API utilizes a token-based authentication mechanism to ensure secure access to cluster data and operations. Users must first generate an API token through the Cluster Optimizer interface, which is then used to authenticate all API requests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role-Based Access Control (RBAC)&lt;/strong&gt;: The API integrates with the platform&amp;rsquo;s RBAC system, ensuring that users have the appropriate permissions when accessing or modifying resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cluster Optimizer&lt;/strong&gt;&amp;rsquo;s API provides authentication through HTTP Header &lt;code&gt;Authorization&lt;/code&gt;. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/resource&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;api.example.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer &amp;lt;Access_Token&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;construct-the-access-token&#34;&gt;Construct the Access Token&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#construct-the-access-token&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To generate an &lt;strong&gt;Access Token&lt;/strong&gt; using an &lt;strong&gt;Access Key&lt;/strong&gt; and &lt;strong&gt;Access Key Secret&lt;/strong&gt;, you typically use a signing algorithm (like HMAC) to create a unique, secure key that is used for authenticating API requests. Below is a detailed step-by-step process for generating an API key securely:&lt;/p&gt;
+&lt;h3 id=&#34;1-prepare-your-access-key-and-secret&#34;&gt;1. &lt;strong&gt;Prepare Your Access Key and Secret&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#1-prepare-your-access-key-and-secret&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You will typically be given an &lt;strong&gt;Access Key&lt;/strong&gt; (public identifier) and an &lt;strong&gt;Access Key Secret&lt;/strong&gt; (private identifier). The &lt;strong&gt;Access Key&lt;/strong&gt; identifies the client, while the &lt;strong&gt;Access Key Secret&lt;/strong&gt; is used to sign and verify API requests securely.&lt;/p&gt;
+&lt;h3 id=&#34;2-generate-a-message-to-sign&#34;&gt;2. &lt;strong&gt;Generate a Message to Sign&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#2-generate-a-message-to-sign&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Before generating a signed API key, you need a message that combines &lt;strong&gt;Access Key&lt;/strong&gt;, &lt;strong&gt;Timestamp&lt;/strong&gt; and &lt;strong&gt;Nonce&lt;/strong&gt; with &lt;code&gt;:&lt;/code&gt; as a separator:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Access Key&lt;/strong&gt; : The public identifier of the client.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timestamp&lt;/strong&gt;: To prevent replay attacks, include a timestamp (in nanoseconds).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nonce&lt;/strong&gt;: A random string to prevent replay attacks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example (in Go language):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%s:%d:%s&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;accessKeyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this example, &lt;code&gt;accessKeyID&lt;/code&gt; is the access key ID of the client, &lt;code&gt;timestamp&lt;/code&gt; is the timestamp in nanoseconds, and &lt;code&gt;nonce&lt;/code&gt; is a random string.&lt;/p&gt;
+&lt;h3 id=&#34;3-sign-the-message-with-hmac-sha256&#34;&gt;3. &lt;strong&gt;Sign the Message with HMAC-SHA256&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#3-sign-the-message-with-hmac-sha256&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The next step is to use the &lt;strong&gt;API key secret&lt;/strong&gt; to generate a signature using HMAC-SHA256. This signature ensures the request has not been tampered with and that the client is legitimate.&lt;/p&gt;
+&lt;p&gt;Example (in Go language) is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;generateSignature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;int64&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%s:%d:%s&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;hmac&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sha256&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Write&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;([]&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;byte&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;));&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;signature&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;base64&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;StdEncoding&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;EncodeToString&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sum&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;returnsignature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function generates a &lt;strong&gt;signature&lt;/strong&gt; by hashing the message using the &lt;strong&gt;API key secret&lt;/strong&gt; and the &lt;strong&gt;HMAC-SHA256&lt;/strong&gt; algorithm.&lt;/p&gt;
+&lt;h3 id=&#34;4-construct-the-access-token&#34;&gt;4. &lt;strong&gt;Construct the Access Token&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#4-construct-the-access-token&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;After generating the signature, you can construct the final API key by combining the &lt;strong&gt;Access Token&lt;/strong&gt; (public) and the generated signature (private).&lt;/p&gt;
+&lt;p&gt;Example API request with a signed API key in the header is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/resource&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;api.example.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer &amp;lt;accessKey&amp;gt;/&amp;lt;timestamp&amp;gt;/&amp;lt;nonce&amp;gt;/&amp;lt;signature&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;accessKey&lt;/code&gt; is the public access key.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;timestamp&lt;/code&gt;: To prevent replay attacks, include a timestamp (in nanoseconds).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nonce&lt;/code&gt;: A random string to prevent replay attacks.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signature&lt;/code&gt; is the HMAC-SHA256 signed message using the secret.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example (in Go language) is as follows::&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GenerateAccessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;int64&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Now&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;UTC&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;UnixNano&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;signature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;generateSignature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keySecret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;utils&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;URLEncode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Sprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%s/t%d/t%s/t%s&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;keyID&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;timestamp&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;signature&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)),&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;5-construct-http-request&#34;&gt;5. &lt;strong&gt;Construct HTTP Request&lt;/strong&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#5-construct-http-request&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You can construct an HTTP request using the access token generated and access methods provided by generated code using open api specification.&lt;/p&gt;
+&lt;p&gt;Example (in Go language) is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;NewAPIClient&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Configuration&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;BasePath&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://api.example.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;apiKey&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;AKFgGMF3FWWe5mgkz3UWBMgaUgrzBMUV&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;apiSecret&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;******&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NONe5mgkz3GBk&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;accessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GenerateAccessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;apiKey&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;apiSecret&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nonce&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Background&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;WithValue&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ContextAccessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;accessToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;rules&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;err&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NotificationRuleApi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ListNotificationRules&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NotificationRuleApiListNotificationRulesOpts&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;next&#34;&gt;Next&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#next&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the next section, we will explore following APIs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/api-references/management-api/&#34;&gt;&lt;strong&gt;Management API&lt;/strong&gt;&lt;/a&gt;: Manage clusters, cluster access accounts, access keys, notification channels, notification rules and so on.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/api-references/optimize-api/&#34;&gt;&lt;strong&gt;Optimize API&lt;/strong&gt;&lt;/a&gt;: Provider recommendation and optimization for kubernetes resources, such as node group, persistent volume, workload and so on.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Management API</title>
+      <link>/docs/api-references/management-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api-references/management-api/</guid>
+      <description>
+        
+        
+        
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;ZH-cn&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+  &lt;meta
+    name=&#34;description&#34;
+    content=&#34;Management API of Cluster Optimzier&#34;
+  /&gt;
+  &lt;title&gt;Management API&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&#34; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&#34;management-api-ui&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&#34; crossorigin&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    window.ui = SwaggerUIBundle({
+      url: &#39;/api/v1/management-api.json&#39;,
+      dom_id: &#39;#management-api-ui&#39;,
+    });
+  };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Optimize API</title>
+      <link>/docs/api-references/optimize-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api-references/optimize-api/</guid>
+      <description>
+        
+        
+        
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;ZH-cn&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+  &lt;meta
+    name=&#34;description&#34;
+    content=&#34;Optimize API of Cluster Optimzier&#34;
+  /&gt;
+  &lt;title&gt;Optimize API&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&#34; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&#34;optimize-api-ui&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&#34; crossorigin&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    window.ui = SwaggerUIBundle({
+      url: &#39;/api/v1/optimize-api.json&#39;,
+      dom_id: &#39;#optimize-api-ui&#39;,
+    });
+  };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – Optimize API</title>
+    <link>/tags/optimize-api/</link>
+    <description>Recent content in Optimize API on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/tags/optimize-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Optimize API</title>
+      <link>/docs/api-references/optimize-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api-references/optimize-api/</guid>
+      <description>
+        
+        
+        
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;ZH-cn&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+  &lt;meta
+    name=&#34;description&#34;
+    content=&#34;Optimize API of Cluster Optimzier&#34;
+  /&gt;
+  &lt;title&gt;Optimize API&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&#34; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&#34;optimize-api-ui&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&#34; crossorigin&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    window.ui = SwaggerUIBundle({
+      url: &#39;/api/v1/optimize-api.json&#39;,
+      dom_id: &#39;#optimize-api-ui&#39;,
+    });
+  };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

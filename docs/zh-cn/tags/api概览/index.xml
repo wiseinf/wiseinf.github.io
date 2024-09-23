@@ -1,0 +1,76 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Optimizer – API概览</title>
+    <link>/zh-cn/tags/api%E6%A6%82%E8%A7%88/</link>
+    <description>Recent content in API概览 on Cluster Optimizer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="/zh-cn/tags/api%E6%A6%82%E8%A7%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: API概览</title>
+      <link>/zh-cn/docs/api-references/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-cn/docs/api-references/overview/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;翻译&lt;/strong&gt;：&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;本节提供了集群优化器 API 的参考信息。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e6%a6%82%e8%bf%b0&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;集群优化器 API&lt;/strong&gt; 是一个强大的工具，允许用户通过编程方式与云原生集群优化流程进行交互和自动化操作。通过提供 RESTful 端点，该 API 使用户能够将集群优化器与第三方应用集成、自动化任务执行，并检索有关资源利用率和成本节约机会的详细报告。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;全面功能访问&lt;/strong&gt;：该 API 赋予用户对集群优化器平台关键功能的完全访问权限，如：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;集群管理&lt;/strong&gt;：用户可以通过 API 导入、更新或删除集群及其关联的云账户。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源优化&lt;/strong&gt;：该 API 提供端点用于分析和优化资源使用情况，如节点组、磁盘和工作负载等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本与节约见解&lt;/strong&gt;：用户可以通过编程方式访问针对特定配置的成本节约和优化机会的详细报告。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灵活性与定制化&lt;/strong&gt;：该 API 高度可定制，允许用户：
+&lt;ul&gt;
+&lt;li&gt;创建基于实时数据的自定义工作流，以自动化资源管理和优化。&lt;/li&gt;
+&lt;li&gt;将优化报告集成到内部仪表盘或财务报告系统中，更好地跟踪云成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持多云平台&lt;/strong&gt;：该 API 支持 AWS、阿里云以及 Kubernetes 集群等多种云原生环境。无论底层云基础设施如何，这种跨平台能力确保了对分布式资源的无缝集成与控制。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;用例&#34;&gt;用例&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e7%94%a8%e4%be%8b&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;优化任务自动化&lt;/strong&gt;：DevOps 团队可以根据工作负载需求自动应用优化策略（如调整节点组、休眠集群），从而减少人工干预、提高运营效率，并确保持续的资源管理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自定义监控与告警&lt;/strong&gt;：用户可以构建自定义监控系统，查询 API 以获取实时的资源利用率和优化数据。告警可以根据特定的阈值或事件触发，如云成本突然飙升或资源利用不足。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;与财务工具集成&lt;/strong&gt;：财务团队可以使用 API 提取详细的成本节约报告，并将其集成到财务系统中，从而实现对云支出的持续监控，并将优化工作与云管理中的 FinOps 原则保持一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;api-概览&#34;&gt;API 概览&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#api-%e6%a6%82%e8%a7%88&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;REST API 是集群优化器的基础架构。集群优化器提供了一个 REST API，允许您执行以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/api-references/management-api/&#34;&gt;&lt;strong&gt;管理 API&lt;/strong&gt;&lt;/a&gt;：管理集群、集群访问账户、访问密钥、通知渠道、通知规则等。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/zh-cn/docs/api-references/optimize-api/&#34;&gt;&lt;strong&gt;优化 API&lt;/strong&gt;&lt;/a&gt;：提供 Kubernetes 资源（如节点组、持久卷、工作负载等）的推荐和优化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;集群优化器 API 仅在商业版（版本 1.3.1 及以上）中可用。&lt;/li&gt;
+&lt;li&gt;集群优化器 API 处于 alpha 阶段，未来可能会更改接口。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

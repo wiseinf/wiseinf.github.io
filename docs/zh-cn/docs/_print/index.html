@@ -484,7 +484,26 @@ if (!doNotTrack) {
     
     
 	
-<li>2.10.2: <a href="#pg-41d71a2b3dcedf8ede0f40a92a4f0523">集群访问账户</a></li>
+<li>2.10.2: <a href="#pg-81c2a51e07067a5ff2fd6a960d949e97">访问秘钥</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.10.3: <a href="#pg-41d71a2b3dcedf8ede0f40a92a4f0523">集群访问账户</a></li>
 
 
     
@@ -739,7 +758,7 @@ if (!doNotTrack) {
     
     
 	
-<li>4: <a href="#pg-a2eba8888c721b73d576234033590b8a">最佳实践</a></li>
+<li>4: <a href="#pg-3d87584fb682f34dddf9de5dc13a39ef">API参考</a></li>
 
 
     
@@ -754,7 +773,64 @@ if (!doNotTrack) {
     
     
 	
-<li>4.1: <a href="#pg-b42eb316ba0f0e71f3d63fd4dc5880ff">周期性的获取优化建议通知</a></li>
+<li>4.1: <a href="#pg-1458a1432d7910565133f3ec61f4c94d">API概览</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-07e5570127744298ddabb2799994136e">认证</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.3: <a href="#pg-65898062ceaf4621bcaf3b395368dd6e">Management API</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.4: <a href="#pg-3f38a0595657b9984acb9964a0f1e990">Optimize API</a></li>
 
 
     
@@ -777,7 +853,45 @@ if (!doNotTrack) {
     
     
 	
-<li>5: <a href="#pg-cec98a3a5ff74162065d32be41bf560a">故障排查</a></li>
+<li>5: <a href="#pg-a2eba8888c721b73d576234033590b8a">最佳实践</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>5.1: <a href="#pg-b42eb316ba0f0e71f3d63fd4dc5880ff">周期性的获取优化建议通知</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-cec98a3a5ff74162065d32be41bf560a">故障排查</a></li>
 
 
     
@@ -3195,7 +3309,123 @@ Persistent Volume页-选择集群
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-41d71a2b3dcedf8ede0f40a92a4f0523">2.10.2 - 集群访问账户</h1>
+	<h1 id="pg-81c2a51e07067a5ff2fd6a960d949e97">2.10.2 - 访问秘钥</h1>
+    <div class="lead">描述了管理访问密钥的相关操作。</div>
+	<p><strong>翻译</strong>：</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>本节介绍了管理访问密钥的相关操作。</p>
+
+</div>
+
+<h2 id="先决条件">先决条件<a class="td-heading-self-link" href="#%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>描述的功能仅适用于商业版本。</li>
+<li>版本要求 v1.3.1 或更高。</li>
+</ul>
+<h2 id="查看访问密钥">查看访问密钥<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5" aria-label="Heading self-link"></a></h2>
+<p>要查看和管理您的访问密钥，请按照以下步骤操作：</p>
+<ol>
+<li>点击左上导航栏中的用户头像，如下图所示。</li>
+<li>在展开的菜单中，选择 <code>个人设置</code> 以进入个人设置页面。</li>
+<li>在个人设置页面，点击 <code>访问密钥</code> 标签，查看和管理您的访问密钥，如下所示。</li>
+</ol>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+<img class="card-img-top" src="/zh-cn/docs/user-guide/personal-settings/accesskey/list_hu0ad3f125a275e6838572ac4bc4ec059c_78260_900x0_resize_catmullrom_3.png" width="900" height="275">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+访问密钥列表
+<small class="text-muted"><br/>Wiseinf Inc.</small>
+</p>
+</figcaption>
+</figure>
+
+<p>下表详细描述了该部分可用的字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access Key ID</td>
+<td>访问密钥的 ID。</td>
+</tr>
+<tr>
+<td>Access Key Secret</td>
+<td>访问密钥的密钥。</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>访问密钥的状态，如启用、禁用和删除。</td>
+</tr>
+<tr>
+<td>创建时间</td>
+<td>访问密钥的创建时间。</td>
+</tr>
+<tr>
+<td>操作</td>
+<td>可用于管理访问密钥的操作。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="创建新访问密钥">创建新访问密钥<a class="td-heading-self-link" href="#%e5%88%9b%e5%bb%ba%e6%96%b0%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5" aria-label="Heading self-link"></a></h2>
+<p>要创建新的访问密钥，请点击 <code>访问密钥</code> 表格右上角的 <code>新增</code> 按钮。系统将自动生成访问密钥，并将其列入表中。</p>
+<h2 id="禁用访问密钥">禁用访问密钥<a class="td-heading-self-link" href="#%e7%a6%81%e7%94%a8%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5" aria-label="Heading self-link"></a></h2>
+<p>禁用访问密钥：</p>
+<ol>
+<li>点击 <code>操作</code> 列中的 <code>禁用</code> 按钮。</li>
+<li>在禁用访问密钥前，将弹出确认对话框。确认后，账户将被禁用。</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：禁用访问密钥将导致任何使用该密钥的任务失败。</p>
+</blockquote>
+<h2 id="启用访问密钥">启用访问密钥<a class="td-heading-self-link" href="#%e5%90%af%e7%94%a8%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5" aria-label="Heading self-link"></a></h2>
+<p>要启用访问密钥，请点击 <code>操作</code> 列中的 <code>启用</code> 按钮。</p>
+<h2 id="删除访问密钥">删除访问密钥<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5" aria-label="Heading self-link"></a></h2>
+<p>删除访问密钥：</p>
+<ol>
+<li>点击 <code>操作</code> 列中的 <code>删除</code> 按钮。</li>
+<li>在删除前，将弹出确认对话框。确认后，账户将被删除。</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：删除访问密钥将导致任何使用该密钥的任务失败。</p>
+</blockquote>
+<h2 id="显示隐藏访问密钥密钥">显示/隐藏访问密钥密钥<a class="td-heading-self-link" href="#%e6%98%be%e7%a4%ba%e9%9a%90%e8%97%8f%e8%ae%bf%e9%97%ae%e5%af%86%e9%92%a5%e5%af%86%e9%92%a5" aria-label="Heading self-link"></a></h2>
+<p>要显示或隐藏访问密钥密钥，点击 <code>Access Key Secret</code> 列中的 <code>显示</code> 或 <code>隐藏</code> 按钮。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-41d71a2b3dcedf8ede0f40a92a4f0523">2.10.3 - 集群访问账户</h1>
     <div class="lead">描述管理个人集群访问账户的相关操作。</div>
 	
 
@@ -4844,7 +5074,342 @@ Global Flags:
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-a2eba8888c721b73d576234033590b8a">4 - 最佳实践</h1>
+	<h1 id="pg-3d87584fb682f34dddf9de5dc13a39ef">4 - API参考</h1>
+    <div class="lead">描述Cluster Optimizer的API。</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-1458a1432d7910565133f3ec61f4c94d">4.1 - API概览</h1>
+    <div class="lead">Cluster Optimizer API概览。</div>
+	<p><strong>翻译</strong>：</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p>本节提供了集群优化器 API 的参考信息。</p>
+
+</div>
+
+<h2 id="概述">概述<a class="td-heading-self-link" href="#%e6%a6%82%e8%bf%b0" aria-label="Heading self-link"></a></h2>
+<p><strong>集群优化器 API</strong> 是一个强大的工具，允许用户通过编程方式与云原生集群优化流程进行交互和自动化操作。通过提供 RESTful 端点，该 API 使用户能够将集群优化器与第三方应用集成、自动化任务执行，并检索有关资源利用率和成本节约机会的详细报告。</p>
+<ol>
+<li><strong>全面功能访问</strong>：该 API 赋予用户对集群优化器平台关键功能的完全访问权限，如：
+<ul>
+<li><strong>集群管理</strong>：用户可以通过 API 导入、更新或删除集群及其关联的云账户。</li>
+<li><strong>资源优化</strong>：该 API 提供端点用于分析和优化资源使用情况，如节点组、磁盘和工作负载等。</li>
+<li><strong>成本与节约见解</strong>：用户可以通过编程方式访问针对特定配置的成本节约和优化机会的详细报告。</li>
+</ul>
+</li>
+<li><strong>灵活性与定制化</strong>：该 API 高度可定制，允许用户：
+<ul>
+<li>创建基于实时数据的自定义工作流，以自动化资源管理和优化。</li>
+<li>将优化报告集成到内部仪表盘或财务报告系统中，更好地跟踪云成本。</li>
+</ul>
+</li>
+<li><strong>支持多云平台</strong>：该 API 支持 AWS、阿里云以及 Kubernetes 集群等多种云原生环境。无论底层云基础设施如何，这种跨平台能力确保了对分布式资源的无缝集成与控制。</li>
+</ol>
+<h2 id="用例">用例<a class="td-heading-self-link" href="#%e7%94%a8%e4%be%8b" aria-label="Heading self-link"></a></h2>
+<ol>
+<li><strong>优化任务自动化</strong>：DevOps 团队可以根据工作负载需求自动应用优化策略（如调整节点组、休眠集群），从而减少人工干预、提高运营效率，并确保持续的资源管理。</li>
+<li><strong>自定义监控与告警</strong>：用户可以构建自定义监控系统，查询 API 以获取实时的资源利用率和优化数据。告警可以根据特定的阈值或事件触发，如云成本突然飙升或资源利用不足。</li>
+<li><strong>与财务工具集成</strong>：财务团队可以使用 API 提取详细的成本节约报告，并将其集成到财务系统中，从而实现对云支出的持续监控，并将优化工作与云管理中的 FinOps 原则保持一致。</li>
+</ol>
+<h2 id="api-概览">API 概览<a class="td-heading-self-link" href="#api-%e6%a6%82%e8%a7%88" aria-label="Heading self-link"></a></h2>
+<p>REST API 是集群优化器的基础架构。集群优化器提供了一个 REST API，允许您执行以下操作：</p>
+<ul>
+<li><a href="/zh-cn/docs/api-references/management-api/"><strong>管理 API</strong></a>：管理集群、集群访问账户、访问密钥、通知渠道、通知规则等。</li>
+<li><a href="/zh-cn/docs/api-references/optimize-api/"><strong>优化 API</strong></a>：提供 Kubernetes 资源（如节点组、持久卷、工作负载等）的推荐和优化。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<ol>
+<li>集群优化器 API 仅在商业版（版本 1.3.1 及以上）中可用。</li>
+<li>集群优化器 API 处于 alpha 阶段，未来可能会更改接口。</li>
+</ol>
+</blockquote>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-07e5570127744298ddabb2799994136e">4.2 - 认证</h1>
+    <div class="lead">描述了 <strong>Cluster Optimizer</strong> API 认证的详细步骤。</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>本节描述了 <strong>Cluster Optimizer</strong> API 认证的详细步骤。</p>
+
+</div>
+
+<h2 id="概述">概述<a class="td-heading-self-link" href="#%e6%a6%82%e8%bf%b0" aria-label="Heading self-link"></a></h2>
+<p>通过 HTTP API 进行身份验证对于保护资源和确保只有授权用户和服务可以访问数据至关重要。</p>
+<ul>
+<li><strong>API 身份验证</strong>：API 使用基于令牌的身份验证机制，确保对集群数据和操作的安全访问。用户首先需要通过集群优化器界面生成 API 令牌，然后在所有 API 请求中使用该令牌进行身份验证。</li>
+<li><strong>基于角色的访问控制 (RBAC)</strong>：API 与平台的 RBAC 系统集成，确保用户在访问或修改资源时拥有适当的权限。</li>
+</ul>
+<p><strong>Cluster Optimizer</strong> API 通过 HTTP 头 <code>Authorization</code> 提供身份验证。示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#000">GET</span> <span style="color:#000">/api/resource</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Host</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">api.example.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Authorization</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Bearer &lt;Access_Token&gt;</span>
+</span></span></code></pre></div><h2 id="生成访问令牌access-token">生成访问令牌Access Token<a class="td-heading-self-link" href="#%e7%94%9f%e6%88%90%e8%ae%bf%e9%97%ae%e4%bb%a4%e7%89%8caccess-token" aria-label="Heading self-link"></a></h2>
+<p>要使用 <strong>Access Key</strong> 和 <strong>Access Key Secret</strong> 生成 <strong>Access Token</strong>，通常使用签名算法（如 HMAC）来创建唯一的安全密钥，用于 API 请求的身份验证。以下是生成 API 密钥的详细步骤：</p>
+<h3 id="1-准备您的-access-key-和-secret">1. <strong>准备您的 Access Key 和 Secret</strong><a class="td-heading-self-link" href="#1-%e5%87%86%e5%a4%87%e6%82%a8%e7%9a%84-access-key-%e5%92%8c-secret" aria-label="Heading self-link"></a></h3>
+<p>您通常会获得 <strong>Access Key</strong>（公开标识符）和 <strong>Access Key Secret</strong>（私有标识符）。<strong>Access Key</strong> 用于标识客户端，<strong>Access Key Secret</strong> 用于安全地签署和验证 API 请求。</p>
+<h3 id="2-生成要签名的消息">2. <strong>生成要签名的消息</strong><a class="td-heading-self-link" href="#2-%e7%94%9f%e6%88%90%e8%a6%81%e7%ad%be%e5%90%8d%e7%9a%84%e6%b6%88%e6%81%af" aria-label="Heading self-link"></a></h3>
+<p>在生成签名的 API 密钥之前，您需要创建一个消息，将几个元素通过 <code>:</code> 作为分隔符组合：</p>
+<ul>
+<li><strong>Access Key</strong>：客户端的公开标识符。</li>
+<li><strong>Timestamp</strong>：为了防止重放攻击，包含一个时间戳（以纳秒为单位）。</li>
+<li><strong>Nonce</strong>：防止重放攻击的随机字符串。</li>
+</ul>
+<p>例如（在 Go 语言中）：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000">message</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%s:%d:%s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">accessKeyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span></code></pre></div><p>在此示例中，<code>accessKeyID</code> 是客户端的访问密钥 ID，<code>timestamp</code> 是以纳秒为单位的时间戳，<code>nonce</code> 是一个随机字符串。</p>
+<h3 id="3-使用-hmac-sha256-签名消息">3. <strong>使用 HMAC-SHA256 签名消息</strong><a class="td-heading-self-link" href="#3-%e4%bd%bf%e7%94%a8-hmac-sha256-%e7%ad%be%e5%90%8d%e6%b6%88%e6%81%af" aria-label="Heading self-link"></a></h3>
+<p>接下来使用 <strong>API key secret</strong> 通过 HMAC-SHA256 生成签名。此签名确保请求未被篡改，并且客户端是合法的。</p>
+<p>示例（Go 语言）如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">generateSignature</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#000">keyID</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keySecret</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span> <span style="color:#204a87;font-weight:bold">int64</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">error</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">message</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%s:%d:%s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">h</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">hmac</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">New</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sha256</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">New</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87">byte</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">keySecret</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">h</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Write</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87">byte</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">message</span><span style="color:#000;font-weight:bold">));</span> <span style="color:#000">err</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#204a87;font-weight:bold">nil</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">signature</span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#000">base64</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">StdEncoding</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">EncodeToString</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">h</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sum</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">nil</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">returnsignature</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>以下是所要求的中文翻译：</p>
+<p>此函数通过使用 <strong>API Key Secret</strong> 和 <strong>HMAC-SHA256</strong> 算法对消息进行哈希处理来生成 <strong>signature</strong>。</p>
+<h3 id="4-构建访问令牌">4. <strong>构建访问令牌</strong><a class="td-heading-self-link" href="#4-%e6%9e%84%e5%bb%ba%e8%ae%bf%e9%97%ae%e4%bb%a4%e7%89%8c" aria-label="Heading self-link"></a></h3>
+<p>生成签名后，您可以通过组合 <strong>Access Token</strong>（公开）和生成的签名（私有）来构建最终的 API 密钥。</p>
+<p>带有签名 API 密钥的请求示例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#000">GET</span> <span style="color:#000">/api/resource</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Host</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">api.example.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Authorization</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Bearer &lt;accessKey&gt;/&lt;timestamp&gt;/&lt;nonce&gt;/&lt;signature&gt;</span>
+</span></span></code></pre></div><ul>
+<li>
+<p><code>accessKey</code> 是公共的访问密钥。</p>
+</li>
+<li>
+<p><code>timestamp</code>：为防止重放攻击，包含一个以纳秒为单位的时间戳。</p>
+</li>
+<li>
+<p><code>nonce</code>：用于防止重放攻击的随机字符串。</p>
+</li>
+<li>
+<p><code>signature</code> 是使用密钥通过 HMAC-SHA256 签名的消息。</p>
+<p>示例（Go 语言）如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">GenerateAccessToken</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">keyID</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keySecret</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span> <span style="color:#204a87;font-weight:bold">int64</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span> <span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">error</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">timestamp</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">time</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Now</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">UTC</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">UnixNano</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">signature</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">generateSignature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">keyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keySecret</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">err</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#204a87;font-weight:bold">nil</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">utils</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">URLEncode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%s/t%d/t%s/t%s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keyID</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">timestamp</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">signature</span><span style="color:#000;font-weight:bold">)),</span> <span style="color:#204a87;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="5-构建-http-请求">5. <strong>构建 HTTP 请求</strong><a class="td-heading-self-link" href="#5-%e6%9e%84%e5%bb%ba-http-%e8%af%b7%e6%b1%82" aria-label="Heading self-link"></a></h3>
+<p>您可以使用生成的访问令牌以及 open api 规范提供的方法来构建 HTTP 请求。</p>
+<p>示例（Go 语言）如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000">client</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">NewAPIClient</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">Configuration</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">BasePath</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://api.example.com&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">apiKey</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;AKFgGMF3FWWe5mgkz3UWBMgaUgrzBMUV&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">apiSecret</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;******&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">nonce</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;NONe5mgkz3GBk&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">accessToken</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">GenerateAccessToken</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">apiKey</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">apiSecret</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">nonce</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ctx</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">context</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Background</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ctx</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">context</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WithValue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ContextAccessToken</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">accessToken</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">rules</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">_</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">err</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">NotificationRuleApi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ListNotificationRules</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">NotificationRuleApiListNotificationRulesOpts</span><span style="color:#000;font-weight:bold">{})</span>
+</span></span></code></pre></div><h2 id="下一步">下一步<a class="td-heading-self-link" href="#%e4%b8%8b%e4%b8%80%e6%ad%a5" aria-label="Heading self-link"></a></h2>
+<p>下面，我们将探讨关注如下API：</p>
+<ul>
+<li><a href="/zh-cn/docs/api-references/management-api/"><strong>管理 API</strong></a>：管理集群、集群访问账户、访问密钥、通知渠道、通知规则等。</li>
+<li><a href="/zh-cn/docs/api-references/optimize-api/"><strong>优化 API</strong></a>：提供针对 Kubernetes 资源（如节点组、持久卷、工作负载等）的推荐和优化。</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-65898062ceaf4621bcaf3b395368dd6e">4.3 - Management API</h1>
+    <div class="lead">Management API.</div>
+	
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Management API of Cluster Optimzier"
+  />
+  <title>Management API</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+</head>
+<body>
+<div id="management-api-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: '/api/v1/management-api.json',
+      dom_id: '#management-api-ui',
+    });
+  };
+</script>
+</body>
+</html>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3f38a0595657b9984acb9964a0f1e990">4.4 - Optimize API</h1>
+    <div class="lead">Optimize API。</div>
+	
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Optimize API of Cluster Optimzier"
+  />
+  <title>Optimize API</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+</head>
+<body>
+<div id="optimize-api-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: '/api/v1/optimize-api.json',
+      dom_id: '#optimize-api-ui',
+    });
+  };
+</script>
+</body>
+</html>
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a2eba8888c721b73d576234033590b8a">5 - 最佳实践</h1>
     <div class="lead">描述使用Cluster Optimizer的常用场景和最佳实践。</div>
 	
 
@@ -4876,7 +5441,7 @@ Global Flags:
 
 <div class="td-content" style="">
     
-	<h1 id="pg-b42eb316ba0f0e71f3d63fd4dc5880ff">4.1 - 周期性的获取优化建议通知</h1>
+	<h1 id="pg-b42eb316ba0f0e71f3d63fd4dc5880ff">5.1 - 周期性的获取优化建议通知</h1>
     <div class="lead">描述通过Cluster Optimizer设置周期性的优化建议通知机制，方便通过邮件获取相应的优化建议。</div>
 	
 
@@ -5010,7 +5575,7 @@ Global Flags:
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-cec98a3a5ff74162065d32be41bf560a">5 - 故障排查</h1>
+	<h1 id="pg-cec98a3a5ff74162065d32be41bf560a">6 - 故障排查</h1>
     <div class="lead">描述云原生集群优化平台（Cluster Optimizer）常见故障及原因.</div>
 	<h2 id="云服务商相关故障">云服务商相关故障<a class="td-heading-self-link" href="#%e4%ba%91%e6%9c%8d%e5%8a%a1%e5%95%86%e7%9b%b8%e5%85%b3%e6%95%85%e9%9a%9c" aria-label="Heading self-link"></a></h2>
 <h3 id="amazon-aws">Amazon AWS<a class="td-heading-self-link" href="#amazon-aws" aria-label="Heading self-link"></a></h3>
