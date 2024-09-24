@@ -587,6 +587,9 @@
                 href="/docs/troubleshooting/"
                 />
   </url><url>
+    <loc>/blog/2024/09/24/using-cluster-optimziers-api/</loc>
+    <lastmod>2024-09-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/</loc>
     <lastmod>2024-09-11T16:24:31+08:00</lastmod>
     <xhtml:link
@@ -678,7 +681,7 @@
                 href="/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/"
                 />
   </url><url>
-    <loc>/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/</loc>
+    <loc>/blog/2024/01/08/cluster-optimizer-v1.1.0-released/</loc>
     <lastmod>2024-09-11T10:30:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -688,7 +691,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2024/01/08/cluster-optimizer-version-1.1.0-released/"
+                href="/blog/2024/01/08/cluster-optimizer-v1.1.0-released/"
                 />
   </url><url>
     <loc>/community/</loc>

@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="/blog/blog/">
-<link rel="alternate" type="application/rss&#43;xml" href="/blog/blog/index.xml">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -19,21 +17,27 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Blog | Cluster Optimizer</title>
-<meta name="description" content="A cloud native cluster optimzation platform">
-<meta property="og:url" content="/blog/blog/">
+<title>Using Cluster Optimzier&#39;s API | Cluster Optimizer</title>
+<meta name="description" content="This document outlines how to use Cluster Optimzier&#39;s API.
+">
+<meta property="og:url" content="/blog/2024/09/24/using-cluster-optimziers-api/">
   <meta property="og:site_name" content="Cluster Optimizer">
-  <meta property="og:title" content="Blog">
-  <meta property="og:description" content="A cloud native cluster optimzation platform">
+  <meta property="og:title" content="Using Cluster Optimzier&#39;s API">
+  <meta property="og:description" content="This document outlines how to use Cluster Optimzier&#39;s API.">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-09-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-09-24T00:00:00+00:00">
 
-  <meta itemprop="name" content="Blog">
-  <meta itemprop="description" content="A cloud native cluster optimzation platform">
-  <meta itemprop="dateModified" content="2024-09-11T16:24:31+08:00">
+  <meta itemprop="name" content="Using Cluster Optimzier&#39;s API">
+  <meta itemprop="description" content="This document outlines how to use Cluster Optimzier&#39;s API.">
+  <meta itemprop="datePublished" content="2024-09-24T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-09-24T00:00:00+00:00">
+  <meta itemprop="wordCount" content="939">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Blog">
-  <meta name="twitter:description" content="A cloud native cluster optimzation platform">
+  <meta name="twitter:title" content="Using Cluster Optimzier&#39;s API">
+  <meta name="twitter:description" content="This document outlines how to use Cluster Optimzier&#39;s API.">
 
 
 
@@ -67,7 +71,7 @@ if (!doNotTrack) {
 }
 </script>
   </head>
-  <body class="td-section td-blog">
+  <body class="td-page td-blog">
     <header>
       <nav class="td-navbar navbar-dark js-navbar-scroll">
 <div class="container-fluid flex-column flex-md-row">
@@ -90,7 +94,7 @@ if (!doNotTrack) {
         <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/zh-cn/blog/blog/">中文</a></li>
+    <li><a class="dropdown-item" href="/zh-cn/">中文</a></li>
     </ul>
 </div></li>
       </ul>
@@ -107,98 +111,169 @@ if (!doNotTrack) {
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-          </div>
-          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-          </div>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
-            
-
-
-
-
-<div class="td-content">
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-This is the multi-page printable view of this section.
-<a href="#" onclick="print();return false;">Click here to print</a>.
-</p><p>
-<a href="/blog/blog/">Return to the regular view of this page</a>.
-</p>
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
 </div>
-
-
-
-<h1 class="title">Blog</h1>
-
-
-
-
-
-    <ul>
-    
-  
-  
-  
-  
-
-  
-    
-    
-	
-
-    <li><a href="#pg-6f66604d773fcde0a7a0e3b22020c19d">Using Cluster Optimzier&#39;s API</a></li>
-
-
-
-    
-  
-    
-    
-	
-
-    <li><a href="#pg-d42bdcc3391dd8049e8ac545d06df354">Evaluate cluster hibernation cost savings</a></li>
-
-
-
-    
-  
-
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/zh-cn/">中文</a></li>
     </ul>
-
-
-<div class="content">
-      
 </div>
+    </div>
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-blog-li">
+  <a href="/blog/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-blog"><span class="">Blog</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogreleases-li">
+  <a href="/blog/releases/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogreleases"><span class="">Releases</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240910cluster-optimizer-v131-released-li">
+  <a href="/blog/2024/09/10/cluster-optimizer-v1.3.1-released/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240910cluster-optimizer-v131-released"><span class="">Cluster Optimizer v1.3.1 Released</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240710cluster-optimizer-v130-released-li">
+  <a href="/blog/2024/07/10/cluster-optimizer-v1.3.0-released/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240710cluster-optimizer-v130-released"><span class="">Cluster Optimizer v1.3.0 Released</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240530cluster-optimizer-v121-released-li">
+  <a href="/blog/2024/05/30/cluster-optimizer-v1.2.1-released/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240530cluster-optimizer-v121-released"><span class="">Cluster Optimizer v1.2.1 Released</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240520cluster-optimizer-v120-released-li">
+  <a href="/blog/2024/05/20/cluster-optimizer-v1.2.0-released/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240520cluster-optimizer-v120-released"><span class="">Cluster Optimizer v1.2.0 Released</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240409cluster-optimizer-v110-released-li">
+  <a href="/blog/2024/04/09/cluster-optimizer-v1.1.0-released/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240409cluster-optimizer-v110-released"><span class="">Cluster Optimizer v1.1.0 Released</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240108cluster-optimizer-v110-released-li">
+  <a href="/blog/2024/01/08/cluster-optimizer-v1.1.0-released/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240108cluster-optimizer-v110-released"><span class="">Cluster Optimizer v1.1.0 Released</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blognews-li">
+  <a href="/blog/news/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blognews"><span class="">News</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-blog20240401cluster-optimizer-a-cloud-native-cluster-optimization-platform-li">
+  <a href="/blog/2024/04/01/cluster-optimizer-a-cloud-native-cluster-optimization-platform/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240401cluster-optimizer-a-cloud-native-cluster-optimization-platform"><span class="">Cluster Optimizer: A cloud-native cluster optimization platform</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-blogblog-li">
+  <a href="/blog/blog/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-blogblog"><span class="">Blog</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-blog20240924using-cluster-optimziers-api-li">
+  <a href="/blog/2024/09/24/using-cluster-optimziers-api/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-blog20240924using-cluster-optimziers-api"><span class="td-sidebar-nav-active-item">Using Cluster Optimzier&#39;s API</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blog20240911evaluate-cluster-hibernation-cost-savings-li">
+  <a href="/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/" title="Evaluate cluster hibernation cost savings" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-blog20240911evaluate-cluster-hibernation-cost-savings"><span class="">Evaluate kubernetes cluster hibernation cost savings</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
 </div>
 
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/blog/blog/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
-  
-  
-  
-  
+</div>
 
-  
-  
-
-  
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction-to-cluster-optimizer-api">1. Introduction to Cluster Optimizer API</a></li>
+    <li><a href="#2-accessing-cluster-optimizer-api">2. Accessing Cluster Optimizer API</a>
+      <ul>
+        <li><a href="#21-generate-client-code-using-swagger-codegen">2.1. Generate Client Code Using Swagger Codegen</a></li>
+        <li><a href="#22-authentication">2.2. Authentication</a></li>
+        <li><a href="#23-invocation">2.3. Invocation</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-what-is-next">3. What is Next?</a></li>
+    <li><a href="#about-the-cluster-optimizer">About the <strong>Cluster Optimizer</strong></a></li>
+  </ul>
+</nav>
+      </div>
     
-    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tag Cloud</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="/tags/access-key/" data-taxonomy-term="access-key"><span class="taxonomy-label">Access Key</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/api/" data-taxonomy-term="api"><span class="taxonomy-label">API</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/api-references/" data-taxonomy-term="api-references"><span class="taxonomy-label">API References</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-engine/" data-taxonomy-term="cluster-engine"><span class="taxonomy-label">Cluster Engine</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/cluster-optimizer/" data-taxonomy-term="cluster-optimizer"><span class="taxonomy-label">Cluster Optimizer</span><span class="taxonomy-count">35</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/disk-optimizer/" data-taxonomy-term="disk-optimizer"><span class="taxonomy-label">Disk Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/gpu-node-optimization/" data-taxonomy-term="gpu-node-optimization"><span class="taxonomy-label">GPU Node Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/management-api/" data-taxonomy-term="management-api"><span class="taxonomy-label">Management API</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/node-group-optimization/" data-taxonomy-term="node-group-optimization"><span class="taxonomy-label">Node Group Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/node-optimizer/" data-taxonomy-term="node-optimizer"><span class="taxonomy-label">Node Optimizer</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notification-channel/" data-taxonomy-term="notification-channel"><span class="taxonomy-label">Notification Channel</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/notifications/" data-taxonomy-term="notifications"><span class="taxonomy-label">Notifications</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimization-operation/" data-taxonomy-term="optimization-operation"><span class="taxonomy-label">Optimization Operation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimize-api/" data-taxonomy-term="optimize-api"><span class="taxonomy-label">Optimize API</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/optimizing-application/" data-taxonomy-term="optimizing-application"><span class="taxonomy-label">Optimizing Application</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/persistent-volume-optimization/" data-taxonomy-term="persistent-volume-optimization"><span class="taxonomy-label">Persistent Volume Optimization</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/tags/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="/categories/access-key/" data-taxonomy-term="access-key"><span class="taxonomy-label">Access Key</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/api-references/" data-taxonomy-term="api-references"><span class="taxonomy-label">API References</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/best-practices/" data-taxonomy-term="best-practices"><span class="taxonomy-label">Best Practices</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/cluster-access-account/" data-taxonomy-term="cluster-access-account"><span class="taxonomy-label">Cluster Access Account</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/cluster-optimization/" data-taxonomy-term="cluster-optimization"><span class="taxonomy-label">Cluster Optimization</span><span class="taxonomy-count">22</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/command-line-parameters/" data-taxonomy-term="command-line-parameters"><span class="taxonomy-label">Command Line Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/configuration/" data-taxonomy-term="configuration"><span class="taxonomy-label">Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/configuration-parameters/" data-taxonomy-term="configuration-parameters"><span class="taxonomy-label">Configuration Parameters</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/management-api/" data-taxonomy-term="management-api"><span class="taxonomy-label">Management API</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/management-settings/" data-taxonomy-term="management-settings"><span class="taxonomy-label">Management Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/notification-channels/" data-taxonomy-term="notification-channels"><span class="taxonomy-label">Notification Channels</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/notification-rules/" data-taxonomy-term="notification-rules"><span class="taxonomy-label">Notification Rules</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/personal-account-settings/" data-taxonomy-term="personal-account-settings"><span class="taxonomy-label">Personal Account Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/personal-settings/" data-taxonomy-term="personal-settings"><span class="taxonomy-label">Personal Settings</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/task-management/" data-taxonomy-term="task-management"><span class="taxonomy-label">Task Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/troubleshooting/" data-taxonomy-term="troubleshooting"><span class="taxonomy-label">Troubleshooting</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/user-management/" data-taxonomy-term="user-management"><span class="taxonomy-label">User Management</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="/categories/user-manual/" data-taxonomy-term="user-manual"><span class="taxonomy-label">User Manual</span><span class="taxonomy-count">1</span></a></li>
+        </ul>
+    </div>
+  
 	
-    
-
-
-  
-
-<div class="td-content" style="">
-    <h1 id="pg-6f66604d773fcde0a7a0e3b22020c19d">Using Cluster Optimzier&#39;s API</h1>
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+            <a class="td-rss-button" title="RSS" href="/blog/blog/index.xml" target="_blank" rel="noopener">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+            
+<div class="td-content">
+	<h1>Using Cluster Optimzier&#39;s API</h1>
 	<div class="lead">This document outlines how to use Cluster Optimzier&rsquo;s API.</div>
 	<div class="td-byline mb-4">
 		
-        
 		<time datetime="2024-09-24" class="text-muted">2024-09-24</time>
-        
 	</div>
+	<header class="article-meta">
+		
+  </header>
 	<h2 id="1-introduction-to-cluster-optimizer-api">1. Introduction to Cluster Optimizer API<a class="td-heading-self-link" href="#1-introduction-to-cluster-optimizer-api" aria-label="Heading self-link"></a></h2>
 <p>The <strong>Cluster Optimizer API</strong> is a powerful, RESTful interface that enables users to automate and manage cloud-native cluster optimization tasks. It exposes key functionalities such as cluster management, resource optimization, and cost-saving analysis, making it possible to programmatically interact with the platform. Users can integrate the API into their workflows to enhance automation and reduce the need for manual intervention. Supporting multiple cloud platforms like AWS and Kubernetes, the API is designed to scale with modern cloud environments.</p>
 <h2 id="2-accessing-cluster-optimizer-api">2. Accessing Cluster Optimizer API<a class="td-heading-self-link" href="#2-accessing-cluster-optimizer-api" aria-label="Heading self-link"></a></h2>
@@ -329,122 +404,16 @@ This is the multi-page printable view of this section.
 <h2 id="about-the-cluster-optimizer">About the <strong>Cluster Optimizer</strong><a class="td-heading-self-link" href="#about-the-cluster-optimizer" aria-label="Heading self-link"></a></h2>
 <p>The <strong>Cluster Optimizer</strong>, developed by <strong>WiseInf</strong>, is a comprehensive cloud-native optimization solution designed to help organizations reduce costs and enhance operational efficiency. By analyzing cloud resources, application performance, user behavior, and cloud provider&rsquo;s data, it identifies cost-saving opportunities and delivers tailored recommendations. The platform also automates the optimization process, minimizing manual errors and streamlining operations to ensure greater efficiency.</p>
 
-</div>
+	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+  <li>
+    <a href="/blog/2024/09/11/evaluate-cluster-hibernation-cost-savings/" aria-label="Previous - Evaluate cluster hibernation cost savings" class="btn btn-primary"><span class="me-1">←</span>Previous</a>
+  </li>
+  <li>
+    <a class="btn btn-primary disabled">Next<span class="ms-1">→</span></a>
+  </li>
+</ul>
 
-
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-
-  
-
-<div class="td-content" style="page-break-before: always">
-    <h1 id="pg-d42bdcc3391dd8049e8ac545d06df354">Evaluate cluster hibernation cost savings</h1>
-	<div class="lead">This document outlines how to assess the cost savings from cluster hibernation using the provided tool.</div>
-	<div class="td-byline mb-4">
-		
-        
-		<time datetime="2024-09-11" class="text-muted">2024-09-11</time>
-        
 	</div>
-	<h2 id="cluster-hibernation-overview">Cluster Hibernation Overview<a class="td-heading-self-link" href="#cluster-hibernation-overview" aria-label="Heading self-link"></a></h2>
-<p>One of the major challenges when using cloud-native clusters is resource underutilization, which leads to unnecessary costs. For instance, offline clusters such as development, testing, or demo environments often experience low utilization outside of working hours, yet organizations still pay for these idle resources.</p>
-<p><strong>Cluster Hibernation</strong> provides a mechanism to automatically or manually manage the suspension and resumption of clusters. By releasing and restoring nodes, it reduces resource consumption and optimizes resource utilization, ultimately leading to cost savings. For example, by configuring a hibernation strategy that shuts down clusters during off-hours (e.g., nights or weekends), companies can significantly reduce unnecessary resource usage and, consequently, operating costs. This makes Cluster Hibernation an effective cost management strategy, especially for non-production environments.</p>
-<h2 id="cluster-hibernation-strategies">Cluster Hibernation Strategies<a class="td-heading-self-link" href="#cluster-hibernation-strategies" aria-label="Heading self-link"></a></h2>
-<p><strong>Cluster Hibernation</strong> works by gradually releasing nodes during the hibernation period while preserving the state of workloads (e.g., Deployments, Jobs) in the cluster. Upon resumption, the cluster nodes and workloads are restored to their pre-hibernation state. Clusters are typically managed through node groups (also known as node pools), which can consist of different node types such as reserved nodes (e.g., subscription-based) and on-demand nodes (e.g., pay-as-you-go or spot instances). Depending on whether a node group supports autoscaling, different hibernation strategies can be applied.</p>
-<h3 id="non-autoscaling-node-groups">Non-Autoscaling Node Groups<a class="td-heading-self-link" href="#non-autoscaling-node-groups" aria-label="Heading self-link"></a></h3>
-<p>For non-autoscaling node groups, where the number of nodes is fixed and does not dynamically adjust to workload demand, node management must be performed manually. During hibernation, the node count is set to zero, prompting the cloud provider to gradually release the nodes in the group. Upon resumption, the node count is restored to its original value. It is important to note that setting the node count to zero does not necessarily mean all nodes will be released. Reserved nodes, for instance, are typically retained.</p>
-<h3 id="autoscaling-node-groups">Autoscaling Node Groups<a class="td-heading-self-link" href="#autoscaling-node-groups" aria-label="Heading self-link"></a></h3>
-<p>Autoscaling node groups dynamically adjust the number of nodes based on actual workloads, optimizing resource usage. For such groups, the hibernation strategy involves modifying adjustable workloads and relying on the autoscaling strategy to downscale the nodes. For example, setting Deployment replicas to zero or pausing CronJobs triggers the autoscaling mechanism to reduce the number of active nodes.</p>
-<h2 id="cluster-hibernation-benefit-evaluation">Cluster Hibernation Benefit Evaluation<a class="td-heading-self-link" href="#cluster-hibernation-benefit-evaluation" aria-label="Heading self-link"></a></h2>
-<h3 id="hibernation-savings-estimation-tool">Hibernation Savings Estimation Tool<a class="td-heading-self-link" href="#hibernation-savings-estimation-tool" aria-label="Heading self-link"></a></h3>
-<p>We provide the <code>cluster-hibernate-saving-estimate</code> tool to help users assess potential resource savings within a cluster. This tool scans each node group within the cluster and provides an overview, including the maximum potential savings, current savings, recommended actions, and the total sum of resource requests from Deployments in the node group. Key metrics include:</p>
-<ul>
-<li><strong>Max Potential Saving</strong>: The maximum savings achievable by optimizing the node distribution (e.g., adjusting node types to an ideal setup).</li>
-<li><strong>Potential Saving</strong>: The savings attainable under the current configuration of the node group.</li>
-<li><strong>Sum of Deployment Resource Requests</strong>: The total resource requests (CPU, memory) of Pods in the group’s Deployments, serving as a reference for evaluating resource usage. Higher request totals typically indicate greater potential savings in autoscaling node groups.</li>
-</ul>
-<blockquote>
-<p><strong>Note</strong>: The Hibernation Savings Estimation Tool can be downloaded from <code>https://github.com/wiseinf/cluster-hibernate-saving-estimate/tags</code>. It currently supports platforms like Alibaba Cloud and AWS.</p>
-</blockquote>
-<p>Let’s explore two common scenarios to evaluate the benefits of Cluster Hibernation.</p>
-<h4 id="scenario-1-non-autoscaling-node-group-with-reserved-nodes">Scenario 1: Non-Autoscaling Node Group with Reserved Nodes<a class="td-heading-self-link" href="#scenario-1-non-autoscaling-node-group-with-reserved-nodes" aria-label="Heading self-link"></a></h4>
-<p>In non-autoscaling node groups containing only reserved nodes, a typical output is as follows:</p>
-<pre tabindex="0"><code>NodeGroup: cpu-ng(npa324882932487c9777eaa7f6854e4)  Total Nodes: 4  Autoscaling: false
-  OnDemandNodes: 0  
-  SpotNodes: 0  
-  ReservedNodes: 4  cpu: 32 cores, memory: 128 gib
-    Node: cn-beijing.171.19.105.70(i-bp19u4ufadv9niflo1o4) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
-    Node: cn-beijing.171.19.105.74(i-bp19u4ufadv9niflo1o3) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
-    Node: cn-beijing.171.19.105.71(i-bp19u4ufadv9niflo1o5) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
-    Node: cn-beijing.171.19.105.251(i-bp161b0ldoqt1k771t5e) NoSpot, InstanceType: ecs.g7ne.2xlarge, ChargeType: PrePaid
-  Max Potential Saving: CPU: 14125.71 core hours; Memory: 56502.86 gib hours
-  Potential Saving: No saving, no spot or on demand nodes
-  Recommendation: adjust some reserved nodes to on-demand or spot nodes based on its usage
-  Sum of Deployment Resource Requests: CPU 8.63 cores, Memory 18.68 gibs
-</code></pre><p>This node group consists of four reserved nodes, with a total of 32 CPU cores and 128 GiB of memory. Assuming the node group hibernates every evening (9 PM) and resumes in the morning (8 AM) from Monday to Friday, the potential savings are calculated as follows:</p>
-<ul>
-<li>Maximum CPU savings: <strong>14,125.71 core hours</strong><br>
-Calculation: <code>32 (CPU cores) * 720 (hours/month) * 103 (hibernation hours/week) / 168 (hours/week)</code></li>
-</ul>
-<p>Similar calculations apply to memory savings.</p>
-<p>In this case, there are no potential savings, as all nodes are reserved and setting the node count to zero does not release any of them. To achieve savings, some reserved nodes should be converted to on-demand nodes.</p>
-<blockquote>
-<p><strong>Note</strong>: When adjusting node types, consider the cost differences between reserved and on-demand nodes.</p>
-</blockquote>
-<h4 id="scenario-2-autoscaling-node-group-with-on-demand-nodes">Scenario 2: Autoscaling Node Group with On-Demand Nodes<a class="td-heading-self-link" href="#scenario-2-autoscaling-node-group-with-on-demand-nodes" aria-label="Heading self-link"></a></h4>
-<pre tabindex="0"><code>NodeGroup: as-cpu-ng(np151adb107448039712d3a24f0d50a)  Total Nodes: 12  Autoscaling: true
-  OnDemandNodes: 6  cpu: 192 cores, memory: 384 gib
-    Node: cn-beijing.171.18.106.158(i-bp6f7txtyecxuauzgk6m) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
-    Node: cn-beijing.171.18.106.76(i-bp6f7txtyecxuauzgk6o) NoSpot, InstanceType: ecs.hfc7.8xlarge, ChargeType: PrePaid
-  ...
-  Max Potential Saving: CPU: 98880 core hours; Memory: 197760 gib hours
-  Potential Saving: CPU: 84754.29 core hours; Memory: 169508.57 gib hours
-  Recommendation: no recommendation
-  Sum of Deployment Resource Requests: CPU 224.00 cores, Memory 448.00 gibs
-</code></pre><p>For this autoscaling node group, maximum potential CPU savings are calculated as:</p>
-<ul>
-<li>Maximum CPU savings: <strong>98,880 core hours</strong><br>
-Calculation: <code>224 (total CPU cores) * 720 (hours/month) * 103 (hibernation hours/week) / 168 (hours/week)</code></li>
-</ul>
-<p>Similarly, the potential CPU savings amount to:</p>
-<ul>
-<li>Potential CPU savings: <strong>84,754.29 core hours</strong><br>
-Calculation: <code>192 (active CPU cores) * 720 (hours/month) * 103 (hibernation hours/week) / 168 (hours/week)</code></li>
-</ul>
-<p>The potential CPU savings are lower than the maximum savings, as the current configuration does not fully optimize node utilization. Adjusting reserved nodes to on-demand could help achieve maximum savings.</p>
-<h2 id="challenges--solutions">Challenges &amp; Solutions<a class="td-heading-self-link" href="#challenges--solutions" aria-label="Heading self-link"></a></h2>
-<h3 id="workload-state-preservation-and-restoration">Workload State Preservation and Restoration<a class="td-heading-self-link" href="#workload-state-preservation-and-restoration" aria-label="Heading self-link"></a></h3>
-<p>Cluster Hibernation involves suspending and restoring workloads, and users often worry about incomplete restoration leading to workload unavailability. Since Cluster Hibernation mainly operates by adjusting node groups (releasing and restoring nodes), any issue arising during hibernation will likely affect production as well. In cloud-native environments, applications should be resilient. The best approach is to identify and address the root cause of workload unavailability to ensure the application can withstand node failures. This improves both production stability and resilience during hibernation.</p>
-<h3 id="maintaining-workload-availability-during-hibernation">Maintaining Workload Availability During Hibernation<a class="td-heading-self-link" href="#maintaining-workload-availability-during-hibernation" aria-label="Heading self-link"></a></h3>
-<p>To keep workloads running during hibernation, the following conditions must be met:</p>
-<ul>
-<li>The workload should be schedulable on an autoscaling node group.</li>
-<li>The workload should include the label <code>wiseinf.com/reserved</code> with a value of <code>true</code>. The system will skip workloads with this label during hibernation adjustments. Currently, only three workload types are supported: <code>Deployment</code>, <code>DaemonSet</code>, and <code>CronJob</code>.</li>
-</ul>
-<h2 id="conclusion">Conclusion<a class="td-heading-self-link" href="#conclusion" aria-label="Heading self-link"></a></h2>
-<p>Cluster Hibernation is an effective cost management strategy, especially for non-production environments. The Hibernation Savings Estimation Tool enables users to quickly evaluate potential resource savings for each node pool when applying hibernation strategies. By reviewing common scenarios (autoscaling and non-autoscaling node groups), users can better assess their cost-saving opportunities and adjust settings to reduce resource costs.</p>
-<h2 id="about-the-cluster-optimizer-platform">About the <strong>Cluster Optimizer</strong> Platform<a class="td-heading-self-link" href="#about-the-cluster-optimizer-platform" aria-label="Heading self-link"></a></h2>
-<p>The <strong>Cluster Optimizer</strong> platform, developed by <strong>WiseInf</strong>, is a comprehensive cloud-native optimization solution designed to help organizations reduce costs and enhance operational efficiency. By analyzing cloud resources, application performance, user behavior, and cloud vendor data, it identifies cost-saving opportunities and delivers tailored recommendations. The platform also automates the optimization process, minimizing manual errors and streamlining operations to ensure greater efficiency.</p>
-
-</div>
-
-
-
-
-
-    
-	
-  
-
 
 
           </main>
