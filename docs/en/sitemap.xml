@@ -81,6 +81,7 @@
                 />
   </url><url>
     <loc>/docs/user-guide/personal-settings/accesskey/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -340,6 +341,7 @@
                 />
   </url><url>
     <loc>/docs/api-references/overview/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -378,6 +380,7 @@
                 />
   </url><url>
     <loc>/docs/api-references/authentication/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -416,7 +419,7 @@
                 />
   </url><url>
     <loc>/docs/user-guide/personal-settings/</loc>
-    <lastmod>2024-05-29T15:40:31+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -494,6 +497,7 @@
                 />
   </url><url>
     <loc>/docs/api-references/management-api/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -519,6 +523,7 @@
                 />
   </url><url>
     <loc>/docs/api-references/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -557,6 +562,7 @@
                 />
   </url><url>
     <loc>/docs/api-references/optimize-api/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -705,10 +711,13 @@
                 />
   </url><url>
     <loc>/tags/access-key/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
   </url><url>
     <loc>/categories/access-key/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
   </url><url>
     <loc>/tags/api/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -721,8 +730,10 @@
                 />
   </url><url>
     <loc>/tags/api-references/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
   </url><url>
     <loc>/categories/api-references/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
   </url><url>
     <loc>/tags/best-practices/</loc>
     <lastmod>2024-09-02T10:31:45+08:00</lastmod>
@@ -744,7 +755,7 @@
                 />
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -769,7 +780,7 @@
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
     <loc>/categories/cluster-optimization/</loc>
-    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -782,7 +793,7 @@
                 />
   </url><url>
     <loc>/tags/cluster-optimizer/</loc>
-    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -832,6 +843,7 @@
     <lastmod>2024-08-28T17:54:54+08:00</lastmod>
   </url><url>
     <loc>/tags/management-api/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -844,6 +856,7 @@
                 />
   </url><url>
     <loc>/categories/management-api/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -886,6 +899,7 @@
     <lastmod>2024-08-19T11:27:11+08:00</lastmod>
   </url><url>
     <loc>/tags/optimize-api/</loc>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -910,10 +924,10 @@
     <lastmod>2024-08-28T18:02:36+08:00</lastmod>
   </url><url>
     <loc>/tags/personal-settings/</loc>
-    <lastmod>2024-05-29T15:40:31+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
   </url><url>
     <loc>/categories/personal-settings/</loc>
-    <lastmod>2024-05-29T15:40:31+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
   </url><url>
     <loc>/privacy/</loc>
     <lastmod>2024-09-03T11:29:08+08:00</lastmod>
@@ -932,7 +946,7 @@
                 />
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2024-09-23T10:07:42+08:00</lastmod>
+    <lastmod>2024-09-23T21:41:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
