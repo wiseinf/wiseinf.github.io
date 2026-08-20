@@ -1,0 +1,22 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [
+                    "7TK5D4L8B2.com.wiseinf.oneteam"
+                ],
+                "components": [
+                    {
+                        "#": "no_universal_links",
+                        "exclude": true,
+                        "comment": "Matches any URL with a fragment that equals no_universal_links and instructs the system not to open it as a universal link."
+                    },
+                    {
+                        "/": "/apps/wechat/*",
+                        "comment": "Matches any URL with a path that starts with /apps/wechat/."
+                    }
+                ]
+            }
+        ]
+    }
+}
